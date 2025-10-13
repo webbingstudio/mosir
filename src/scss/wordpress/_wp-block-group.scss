@@ -1,0 +1,5 @@
+// Override width
+// See wp-align.scss
+.wp-site-blocks .wp-block-group > * {
+  width: auto;
+}

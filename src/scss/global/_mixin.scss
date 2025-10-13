@@ -1,0 +1,125 @@
+@use "_variables-scss.scss" as *;
+@use "sass:map";
+@use "sass:math";
+
+// ==============================
+// SCSS mixins and functions
+// ==============================
+
+// ------------------------------
+// mq (mediaquery)
+// https://zenn.dev/web_tips/articles/095d7419507ca9
+// 
+// ex1. @include g.mq(pc){};
+// ex2. @include g.mq(default){};
+// ex3. @include g.mq(max-pc){};
+// ------------------------------
+@mixin mq( $breakpoint: "pc", $breakpoints: $breakpoints ) {
+    @media #{map.get( $breakpoints, $breakpoint )} {
+        @content;
+    }
+}
+
+
+// ------------------------------
+// position
+//
+// ex1. @include g.position(11);
+// position:relative;z-index:11;
+//
+// ex2. @include g.position( sticky, 0, 0, n, n, 11 );
+// position:sticky;top:0;left:0;z-index:11;
+// ------------------------------
+@mixin position( $def: relative, $t: n, $r: n, $b: n, $l: n, $z: n ){
+    position: #{$def};
+    @if $t != n { top: $t; }
+    @if $r != n { right: $r };
+    @if $b != n { bottom: $b };
+    @if $l != n { left: $l };
+    @if $z != n { z-index: $z };
+}
+
+
+// ------------------------------
+// flex
+//
+// ex1. @include g.flex();
+// flex-direction:row;flex-wrap:nowrap;justify-content:space-between;align-items:stretch;
+//
+// ex2. @include g.flex(column, wrap, n, center);
+// flex-direction:column;flex-wrap:wrap;justify-content:space-between;align-items:center;
+// ------------------------------
+@mixin flex( $fxDirection: n, $fxWrap: n, $fxJustify: n, $fxAlign: n ) {
+    display: flex;
+    @if $fxDirection != n { flex-direction: $fxDirection; } @else { flex-direction: row;}
+    @if $fxWrap != n { flex-wrap: $fxWrap; } @else { flex-wrap: nowrap;}
+    @if $fxJustify != n { justify-content: $fxJustify; } @else { justify-content: space-between;}
+    @if $fxAlign != n { align-items: $fxAlign; } @else { align-items: stretch;}
+}
+
+
+// ------------------------------
+// arrow( $direction: 'right|left|top|bottom', $color: 'default|inverse' )
+// - Adds an arrow to the link that is proportional to the text size.
+// - Supports hover states.
+// ------------------------------
+@mixin arrow( $direction: 'right', $color: 'default' ) {
+
+  @at-root {
+    #{&} {
+      position: relative;
+      padding-left: 1.5em;
+    }
+
+    #{&}::before,
+    #{&}::after {
+      position: absolute;
+      top: calc( ( var(--mi-nav-line-height) * 1em ) / 2 - 0.275em );
+      left: 0;
+      content: "";
+      width: 0.55em;
+      height: 0.55em;
+      @if $color == 'inverse' {
+        border-top: 0.125em solid var(--mi-ui-inverse-accent-color);
+        border-right: 0.125em solid var(--mi-ui-inverse-accent-color);
+      } @else {
+        border-top: 0.125em solid var(--mi-ui-default-accent-color);
+        border-right: 0.125em solid var(--mi-ui-default-accent-color);
+      }
+      @if $direction == 'left' {
+        rotate: -45deg;
+      } @else if $direction == 'top' {
+        rotate: 0deg;
+      } @else if $direction == 'bottom' {
+        rotate: 90deg;
+      } @else {
+        rotate: 45deg;
+      }
+
+    }
+
+    #{&}::after {
+      opacity: 0;
+    }
+
+  }
+
+}
+
+@mixin arrow-hover( $direction: 'right' ) {
+
+  @at-root {
+
+    #{&}::after {
+      opacity: 1;
+      transition: var(--mi-nav-default-transition);
+      @if $direction == 'left' {
+        transform:  translateX(-75%) translateY(-75%);
+      } @else {
+        transform:  translateX(75%) translateY(-75%);
+      }
+    }
+
+  }
+
+}

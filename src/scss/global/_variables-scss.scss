@@ -1,0 +1,17 @@
+@use "sass:math";
+
+// ==============================
+// SCSS Vars
+// Import this first
+// ==============================
+
+$breakpoints: (
+  "hover": "(any-hover: hover)",
+  "wide": "screen and (min-width: 1280px)",
+  "xga": "screen and (min-width: 1024px)",
+  "default": "screen and (min-width: 768px)",
+  "wide-max": "screen and (max-width: 1279.9px)",
+  "xga-max": "screen and (max-width: 1023.9px)",
+  "default-max": "screen and (max-width: 767.9px)"
+) !default;
+

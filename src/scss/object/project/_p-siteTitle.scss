@@ -1,0 +1,58 @@
+@use "../../global" as g;
+@use "sass:math";
+
+.p-siteTitle {
+  @include g.flex(column, n, center, n);
+  margin: 0;
+  line-height: var(--mi-line-height-none);
+}
+
+.p-siteTitle > * {
+  flex-grow: 0;
+}
+
+.p-siteTitle a {
+  color: var(--mi-color-default-dark);
+  text-decoration: none;
+}
+
+@include g.mq(hover) {
+
+  .p-siteTitle a:hover {
+    color: var(--mi-color-default-dark);
+    text-decoration: none;
+  }
+
+  .p-siteTitle a:hover .p-siteTitle__label {
+    text-decoration-line: underline;
+    text-underline-offset: 0.25em;
+  }
+
+}
+
+.p-siteTitle a:focus {
+  color: var(--mi-color-default-dark);
+}
+
+.p-siteTitle__label {
+  font-size: var(--mi-font-size-x-large);
+  font-weight: bold;
+}
+
+.p-siteTitle__logo > img,
+.p-siteTitle__logo > svg {
+  display: block;
+  width: 100%;
+  max-width: 50vw;
+  max-height: 3rem;
+}
+
+@include g.mq(default) {
+
+  .p-siteTitle__logo > img,
+  .p-siteTitle__logo > svg {
+    max-width: 15rem;
+    max-height: 100%;
+  }
+
+}

@@ -1,0 +1,113 @@
+@use "../../global" as g;
+@use "sass:math";
+
+// ------------------------------
+// project > verticalMenu
+//  - Large vertically aligned menu.
+//  - Aligned vertically regardless of the window width.
+//  - Treats top-level buttons as subheadings.
+//  - Add an arrow to second-level button.
+//  - Assumes a hierarchy of up to 3 levels.
+// ------------------------------
+
+.p-verticalMenu__nav.c-nav {
+  flex-flow: column wrap;
+  align-items: stretch;
+  justify-content: flex-start;
+  gap: var(--mi-spacing-medium);
+}
+
+.p-verticalMenu__nav.c-nav > * {
+  flex: 0;
+}
+
+@include g.mq(default) {
+  .p-verticalMenu__nav.c-nav > * {
+    flex-basis: calc( 50% - ( var(--mi-spacing-medium) / 2 ) );
+  }
+}
+
+@include g.mq(wide) {
+  .p-verticalMenu__nav.c-nav > * {
+    flex-basis: calc( 33.33% - ( ( var(--mi-spacing-medium) * 2 ) / 3 ) );
+  }
+}
+
+// ------------------------------
+// first-level
+// ------------------------------
+
+.p-verticalMenu__nav > .menu-item > a {
+  position: relative;
+  font-size: var(--mi-font-size-x-large);
+  font-weight: 700;
+  text-decoration: none;
+  padding-left: var(--mi-spacing-medium );
+}
+
+.p-verticalMenu__nav > .menu-item > a::before {
+  @include g.position(absolute, calc( 50% - 0.0625rem ), n, n, 0);
+  content: "";
+  width: calc( var(--mi-spacing-medium) - var(--mi-spacing-x-small) );
+  height: 0.125rem;
+  background-color: var(--mi-ui-default-accent-color);
+  opacity: 1;
+  transform: scaleX(1);
+  transform-origin: right top;
+}
+
+@include g.mq(hover) {
+
+  .p-verticalMenu__nav > .menu-item > a:hover::before {
+    opacity: 0.5;
+    transform: scaleX(0.2);
+    transition: var(--mi-nav-cubic-transition);
+  }
+
+}
+
+.p-verticalMenu.p-verticalMenu--inverse .p-verticalMenu__nav > .menu-item > a::before {
+  background-color: var(--mi-ui-inverse-accent-color);
+}
+
+
+// ------------------------------
+// second-level
+// ------------------------------
+
+// 1.25em = left spacing of arrowed link
+.p-verticalMenu__nav > .menu-item > .sub-menu {
+  padding-left: calc( var(--mi-spacing-medium) - 1.25em );
+}
+
+.p-verticalMenu__nav .sub-menu .menu-item {
+  margin-top: 1.25em;
+}
+
+.p-verticalMenu__nav .sub-menu a {
+  @include g.arrow();
+}
+
+@include g.mq(hover) {
+
+  .p-sitemap__nav .sub-menu :not(.current-menu-item) > a:hover {
+    @include g.arrow-hover();
+  }
+
+}
+
+.p-verticalMenu--inverse .p-verticalMenu__nav .sub-menu a {
+  @include g.arrow( $color: 'inverse' );
+}
+
+// ------------------------------
+// third-level
+// ------------------------------
+
+.p-verticalMenu__nav .sub-menu .sub-menu {
+  padding-left: 1.25em;
+}
+
+.p-verticalMenu__nav .sub-menu > .menu-item:not(:last-child) .sub-menu {
+  margin-bottom: 1.5em;
+}

@@ -1,0 +1,14 @@
+@use "../../global" as g;
+@use "sass:math";
+
+@include g.mq(default) {
+  .u-hidden--pc {
+    display: none !important;
+  }
+}
+
+@include g.mq(default-max) {
+  .u-hidden--sp {
+    display: none !important;
+  }
+}

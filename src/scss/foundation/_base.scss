@@ -1,0 +1,38 @@
+@use "../global" as g;
+@use "sass:math";
+
+body {
+  background-color: var(--mi-body-bg);
+  color: var(--mi-body-color);
+  font-size: var(--mi-font-size-medium);
+  font-family: var(--mi-font-family-default);
+  line-height: var(--mi-line-height-md);
+  letter-spacing: var(--mi-letter-spacing-sp);
+}
+
+@include g.mq(default) {
+  body {
+    letter-spacing: var(--mi-letter-spacing-pc);
+  }
+}
+
+a {
+  color: var(--mi-link-color);
+	text-decoration-thickness: 0.0625em !important;
+	text-underline-offset: .1em;
+}
+
+@include g.mq(hover) {
+
+  a:hover {
+    color: var(--mi-link-hover-color);
+    text-decoration-line: underline;
+    text-underline-offset: 0.25em;
+  }
+
+}
+
+a:focus {
+  color: var(--mi-link-hover-color);
+  outline-color: currentColor;
+}

@@ -1,0 +1,101 @@
+@use "../../global" as g;
+@use "sass:math";
+
+// ------------------------------
+// project > sitemap
+//  - Small vertically aligned menu.
+//  - Creates columns for wider windows.
+//  - Treats top-level buttons as subheadings.
+//  - Add an arrow to second-level button.
+//  - Assumes a hierarchy of up to 3 levels.
+// ------------------------------
+
+.p-sitemap {
+}
+
+.p-sitemap__nav.c-nav {
+  @include g.flex(column, wrap, flex-start, n);
+  gap: var(--mi-spacing-medium);
+}
+
+@include g.mq(default) {
+
+  .p-sitemap__nav.c-nav {
+    flex-direction: row;
+    gap: var(--mi-spacing-medium);
+  }
+
+}
+
+@include g.mq(default) {
+  .p-sitemap__nav.c-nav {
+    flex-flow: row wrap;
+  }
+
+}
+
+.p-sitemap__nav.c-nav > * {
+  flex: 0;
+}
+
+@include g.mq(default) {
+  .p-sitemap__nav.c-nav > * {
+    flex-basis: calc( 50% - ( var(--mi-spacing-medium) / 2 ) );
+  }
+}
+
+@include g.mq(wide) {
+  .p-sitemap__nav.c-nav > * {
+    flex-basis: calc( 33.33% - ( ( var(--mi-spacing-medium) * 2 ) / 3 ) );
+  }
+}
+
+.p-sitemap__nav a {
+  @include g.arrow();
+}
+
+@include g.mq(hover) {
+
+  .p-sitemap__nav :not(.current-menu-item) > a:hover {
+    @include g.arrow-hover();
+  }
+
+}
+
+.p-sitemap--inverse .p-sitemap__nav a {
+  @include g.arrow( $color: 'inverse' );
+}
+
+// ------------------------------
+// first-level
+// ------------------------------
+
+.p-sitemap__nav > .menu-item > a {
+  font-weight: 700;
+}
+
+// ------------------------------
+// second-level
+// ------------------------------
+
+.p-sitemap__nav .sub-menu {
+  padding-left: 1.25em;
+  font-size: var(--mi-font-size-small);
+}
+
+.p-sitemap__nav .sub-menu .current-menu-item > a {
+  font-weight: 700;
+}
+
+.p-sitemap__nav .sub-menu .menu-item {
+  margin-top: 1.25em;
+}
+
+// ------------------------------
+// third-level
+// ------------------------------
+
+.p-sitemap__nav .sub-menu > .menu-item:not(:last-child) .sub-menu {
+  margin-bottom: 1.5em;
+}
+

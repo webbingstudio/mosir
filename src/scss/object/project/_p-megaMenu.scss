@@ -1,0 +1,182 @@
+@use "../../global" as g;
+@use "sass:math";
+
+// ------------------------------
+// project > megaMenu
+//  - Large horizontally aligned menu.
+//  - Not compatible with mobile devices.
+//  - Not compatible with focus state, second level and above. (See: functions.php)
+//  - Creates columns for wider windows.
+//  - The second level is displayed as a drop-down list.
+//  - Assumes a hierarchy of up to 2 levels.
+// ------------------------------
+
+.p-megaMenu {
+  position: relative;
+}
+
+// ------------------------------
+// megaMenu > first-level
+// ------------------------------
+
+.p-megaMenu__nav > .menu-item > a {
+  position: relative;
+  justify-content: center;
+  width: 100%;
+  min-height: var(--mi-nav-min-height);
+  padding-inline: var(--mi-spacing-medium);
+  font-size: var(--mi-font-size-large);
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  z-index: 21; // Links overlay submenus on hover or focus.
+}
+
+.p-megaMenu__nav > .menu-item > a::after {
+  content: "";
+  @include g.position(absolute, 100%, 0, n, n);
+  width: 100%;
+  height: 0.125rem;
+  background-color: var(--mi-ui-default-accent-color);
+  transform-origin: center center;
+  transition: var(--mi-nav-cubic-transition);
+  opacity: 1;
+  transform: translateY(0);
+}
+
+// When you hover over a navigation item,
+// it will remove the decorations from all other items (even your current location!).
+.p-megaMenu__nav > .menu-item:not(.current-menu-item):not(:hover) > a::after,
+.p-megaMenu__nav:has(>.menu-item:hover) > .menu-item:not(:hover) > a::after {
+  opacity: 0;
+  transform: translateY(-400%);
+}
+
+
+// ------------------------------
+// megaMenu > second-level
+// ------------------------------
+
+.p-megaMenu__nav .sub-menu {
+  font-size: var(--mi-font-size-small);
+}
+
+.p-megaMenu__nav > .menu-item > .sub-menu {
+  @include g.position(absolute, 100%, n, n, 0, auto);
+  @include g.flex(n, wrap, flex-start, flex-start);
+  gap: var(--mi-spacing-small);
+  width: 100%;
+  padding: var(--mi-spacing-small) var(--mi-spacing-medium);
+  color: var(--mi-ui-default-color);
+  transform: scaleY(0);
+}
+
+.p-megaMenu__nav > .menu-item > .sub-menu::after {
+  content: "";
+  @include g.position(absolute, 0, n, n, 0, 13);
+  width: 100%;
+  height: 100%;
+  background-color: var(--mi-body-bg);
+  border-top: 1px solid var(--mi-border-default-color);
+  box-shadow: var(--mi-shadow--sm);
+  opacity: 0;
+  transform: scaleY(0);
+  transform-origin: top center;
+}
+
+.p-megaMenu__nav > .menu-item > .sub-menu > * {
+  @include g.position(relative, n, n, n, n, 14);
+  overflow: hidden;
+  height: 0;
+  opacity: 0;
+  flex-grow: 0;
+  flex-basis: 15em;
+  transform: translateY(-10%);
+}
+
+@include g.mq(hover) {
+
+  .p-megaMenu__nav > .menu-item:hover > .sub-menu {
+    transform: scaleY(1);
+  }
+
+}
+
+.p-megaMenu__nav > .menu-item:focus-within > .sub-menu {
+  transform: scaleY(1);
+}
+
+// By overlaying a box of the same color as the background,
+// the top edge of the drop shadow is hidden without using overflow:hidden.
+// Therefore, if you don't need a drop shadow for your submenu, this style is also unnecessary.
+@include g.mq(hover) {
+
+  .p-megaMenu__nav > .menu-item:hover::after {
+    content: "";
+    @include g.position(absolute, n, n, 0, 0, 12);
+    width: 100%;
+    height: 1rem; // shadow depth + buffer
+    background-color: var(--mi-body-bg);
+  }
+
+  .p-megaMenu__nav > .menu-item:hover > .sub-menu::after {
+    opacity: 1;
+    transform: scaleY(1);
+    transition: all 1s 0s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .p-megaMenu__nav > .menu-item:hover > .sub-menu > * {
+    overflow: auto;
+    height: auto;
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.5s 0.3s ease-out;
+  }
+
+}
+
+
+// ------------------------------
+// megaMenu > second-level > menu-item
+// ------------------------------
+
+@include g.mq(default) {
+  .p-megaMenu__nav.c-nav > * {
+    flex-basis: calc( 50% - ( var(--mi-spacing-medium) / 2 ) );
+  }
+}
+
+@include g.mq(wide) {
+  .p-megaMenu__nav.c-nav > * {
+    flex-basis: calc( 33.33% - ( ( var(--mi-spacing-medium) * 2 ) / 3 ) );
+  }
+}
+
+.p-megaMenu__nav .sub-menu a {
+  justify-content: flex-start;
+  @include g.arrow();
+}
+
+@include g.mq(hover) {
+
+  .p-megaMenu__nav .sub-menu :not(.current-menu-item) > a:hover {
+    @include g.arrow-hover();
+  }
+
+}
+
+.p-megaMenu__nav .sub-menu :not(.current-menu-item) > a:focus {
+  @include g.arrow-hover();
+}
+
+.p-megaMenu__nav .sub-menu .current-menu-item > a {
+  font-weight: 700;
+}
+
+
+// ------------------------------
+// megaMenu > third-level
+// ------------------------------
+
+.p-megaMenu__nav .sub-menu .sub-menu {
+  display: none;
+}

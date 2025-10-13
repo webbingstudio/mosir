@@ -1,0 +1,163 @@
+@use "_variables-scss.scss" as *;
+@use "_mixin" as *;
+@use "sass:math";
+
+// ==============================
+// CSS Vars
+// ==============================
+
+:root {
+  // ------------------------------
+  // Variables defined in theme.json
+  // ------------------------------
+  // --wp--preset--color--mi-default-dark
+  // --wp--preset--color--mi-default
+  // --wp--preset--color--mi-default-light
+  // --wp--preset--color--mi-default-lighter
+  // --wp--preset--color--mi-default-fade
+  // --wp--preset--color--mi-primary-dark
+  // --wp--preset--color--mi-primary
+  // --wp--preset--color--mi-primary-light
+  // --wp--preset--color--mi-primary-lighter
+  // --wp--preset--color--mi-primary-fade
+  // --wp--preset--color--mi-secondary-dark
+  // --wp--preset--color--mi-secondary
+  // --wp--preset--color--mi-secondary-light
+  // --wp--preset--color--mi-secondary-lighter
+  // --wp--preset--color--mi-secondary-fade
+  // --wp--preset--color--mi-tertiary-dark
+  // --wp--preset--color--mi-tertiary
+  // --wp--preset--color--mi-tertiary-light
+  // --wp--preset--color--mi-tertiary-lighter
+  // --wp--preset--color--mi-tertiary-fade
+  // --wp--preset--color--mi-warning-dark
+  // --wp--preset--color--mi-warning
+  // --wp--preset--color--mi-warning-light
+  // --wp--preset--color--mi-warning-lighter
+  // --wp--preset--color--mi-warning-fade
+  // --wp--preset--color--mi-danger-dark
+  // --wp--preset--color--mi-danger
+  // --wp--preset--color--mi-danger-light
+  // --wp--preset--color--mi-danger-lighter
+  // --wp--preset--color--mi-danger-fade
+  // --wp--preset--color--mi-white
+  // --wp--preset--color--mi-black
+  // --wp--preset--font-size--x-small
+  // --wp--preset--font-size--small
+  // --wp--preset--font-size--medium
+  // --wp--preset--font-size--large
+  // --wp--preset--font-size--x-large
+  // --wp--preset--font-size--2-x-large
+  // --wp--preset--font-size--3-x-large
+  // --wp--preset--font-size--4-x-large
+  // --wp--preset--spacing--x-small
+  // --wp--preset--spacing--small
+  // --wp--preset--spacing--medium
+  // --wp--preset--spacing--large
+  // --wp--preset--spacing--x-large
+  // --wp--style--global--content-size
+  // --wp--style--global--wide-size
+  // --wp--preset--shadow--sm
+  // --wp--preset--shadow--sm-darken
+  // --wp--preset--shadow--md
+  // --wp--preset--shadow--md-darken
+  // --wp--preset--shadow--lg
+  // --wp--preset--shadow--lg-darken
+
+// ------------------------------
+  // Redefining variables
+  // ------------------------------
+  --mi-color-default-dark: var(--wp--preset--color--mi-default-dark);
+  --mi-color-default: var(--wp--preset--color--mi-default);
+  --mi-color-default-light: var(--wp--preset--color--mi-default-light);
+  --mi-color-default-lighter: var(--wp--preset--color--mi-default-lighter);
+  --mi-color-default-fade: var(--wp--preset--color--mi-default-fade);
+  --mi-color-primary-dark: var(--wp--preset--color--mi-primary-dark);
+  --mi-color-primary: var(--wp--preset--color--mi-primary);
+  --mi-color-primary-light: var(--wp--preset--color--mi-primary-light);
+  --mi-color-primary-lighter: var(--wp--preset--color--mi-primary-lighter);
+  --mi-color-primary-fade: var(--wp--preset--color--mi-primary-fade);
+  --mi-color-secondary-dark: var(--wp--preset--color--mi-secondary-dark);
+  --mi-color-secondary: var(--wp--preset--color--mi-secondary);
+  --mi-color-secondary-light: var(--wp--preset--color--mi-secondary-light);
+  --mi-color-secondary-lighter: var(--wp--preset--color--mi-secondary-lighter);
+  --mi-color-secondary-fade: var(--wp--preset--color--mi-secondary-fade);
+  --mi-color-tertiary-dark: var(--wp--preset--color--mi-tertiary-dark);
+  --mi-color-tertiary: var(--wp--preset--color--mi-tertiary);
+  --mi-color-tertiary-light: var(--wp--preset--color--mi-tertiary-light);
+  --mi-color-tertiary-lighter: var(--wp--preset--color--mi-tertiary-lighter);
+  --mi-color-tertiary-fade: var(--wp--preset--color--mi-tertiary-fade);
+  --mi-color-warning-dark: var(--wp--preset--color--mi-warning-dark);
+  --mi-color-warning: var(--wp--preset--color--mi-warning);
+  --mi-color-warning-light: var(--wp--preset--color--mi-warning-light);
+  --mi-color-warning-lighter: var(--wp--preset--color--mi-warning-lighter);
+  --mi-color-warning-fade: var(--wp--preset--color--mi-warning-fade);
+  --mi-color-danger-dark: var(--wp--preset--color--mi-danger-dark);
+  --mi-color-danger: var(--wp--preset--color--mi-danger);
+  --mi-color-danger-light: var(--wp--preset--color--mi-danger-light);
+  --mi-color-danger-lighter: var(--wp--preset--color--mi-danger-lighter);
+  --mi-color-danger-fade: var(--wp--preset--color--mi-danger-fade);
+  --mi-color-white: var(--wp--preset--color--mi-white);
+  --mi-color-black: var(--wp--preset--color--mi-black);
+  --mi-font-size-x-small: var(--wp--preset--font-size--x-small);
+  --mi-font-size-small: var(--wp--preset--font-size--small);
+  --mi-font-size-medium: var(--wp--preset--font-size--medium);
+  --mi-font-size-large: var(--wp--preset--font-size--large);
+  --mi-font-size-x-large: var(--wp--preset--font-size--x-large);
+  --mi-font-size-2-x-large: var(--wp--preset--font-size--2-x-large);
+  --mi-font-size-3-x-large: var(--wp--preset--font-size--3-x-large);
+  --mi-font-size-4-x-large: var(--wp--preset--font-size--4-x-large);
+  --mi-spacing-x-small: var(--wp--preset--spacing--x-small);
+  --mi-spacing-small: var(--wp--preset--spacing--small);
+  --mi-spacing-medium: var(--wp--preset--spacing--medium);
+  --mi-spacing-large: var(--wp--preset--spacing--large);
+  --mi-spacing-x-large: var(--wp--preset--spacing--x-large);
+  --mi-global-content-size: var(--wp--style--global--content-size);
+  --mi-global-wide-size: var(--wp--style--global--wide-size);
+  --mi-shadow--sm: var(--wp--preset--shadow--sm);
+  --mi-shadow--sm-darken: var(--wp--preset--shadow--sm-darken);
+  --mi-shadow--md: var(--wp--preset--shadow--md);
+  --mi-shadow--md-darken: var(--wp--preset--shadow--md-darken);
+  --mi-shadow--lg: var(--wp--preset--shadow--lg);
+  --mi-shadow--lg-darken: var(--wp--preset--shadow--lg-darken);
+
+  // ------------------------------
+  // Variables not related to WordPress
+  // ------------------------------
+  --mi-cover-default-color: rgb( 255 255 255 / 0.7 );
+  --mi-cover-inverse-color: rgb( 0 0 0 / 0.7 );
+  --mi-border-default-color: var(--mi-color-default-lighter);
+  --mi-border-default-light-color: rgb( 0 0 0 / 0.2 );
+  --mi-border-inverse-color: rgb( 255 255 255 / 0.4 );
+  --mi-border-inverse-light-color: rgb( 255 255 255 / 0.2 );
+
+  --mi-font-family-default: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Noto Sans JP", "Yu Gothic", "Meiryo", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  --mi-letter-spacing-sp: 0.02em;
+  --mi-letter-spacing-pc: 0.02em;
+  --mi-line-height-none: 1;
+  --mi-line-height-xs: 1.25;
+  --mi-line-height-sm: 1.5;
+  --mi-line-height-md: 1.75;
+  --mi-line-height-lg: 2;
+
+  --mi-body-color: var(--mi-color-default-dark);
+  --mi-body-bg: var(--mi-color-white);
+  --mi-link-color: var(--mi-color-primary-dark);
+  --mi-link-hover-color: var(--mi-color-primary-dark);
+
+  --mi-ui-default-color: var(--mi-color-default-dark);
+  --mi-ui-inverse-color: var(--mi-color-white);
+  --mi-ui-default-bg: transparent;
+  --mi-ui-inverse-bg: transparent;
+  --mi-ui-default-accent-color: var(--mi-color-primary);
+  --mi-ui-inverse-accent-color: var(--mi-color-white);
+  --mi-ui-default-hover-bg: transparent;
+  --mi-ui-inverse-hover-bg: transparent;
+
+  --mi-body-x-gap: 1rem;
+  --mi-drawer-toggle-width: 2.75rem;
+  --mi-nav-min-height: 2.75rem;
+  --mi-nav-line-height: var(--mi-line-height-sm);
+  --mi-nav-default-transition: all 0.5s;
+  --mi-nav-cubic-transition: all 0.5s 0s cubic-bezier(0.16, 1, 0.3, 1);
+}

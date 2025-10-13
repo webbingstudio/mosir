@@ -1,0 +1,44 @@
+@use "../../global" as g;
+@use "sass:math";
+
+// ------------------------------
+// project > stickyMenu
+//  - Large horizontally aligned menu.
+//  - Always follows the bottom of the window.
+//  - No hierarchical structure is assumed.
+// ------------------------------
+
+.p-stickyMenu {
+  @include g.position(fixed, n, n, 0, 0, 21);
+  width: 100vw;
+  color: var(--mi-ui-default-color);
+  background-color: var(--mi-body-bg);
+  box-shadow: var(--mi-shadow--sm-darken);
+  z-index: 21;
+}
+
+.p-stickyMenu__nav.c-nav {
+  justify-content: center;
+}
+
+.p-stickyMenu__nav a {
+  min-height: var(--mi-nav-min-height);
+}
+
+.p-stickyMenu__nav .current-menu-item > a {
+  font-weight: 700;
+}
+
+@include g.mq(hover) {
+
+  .p-stickyMenu__nav :not(.current-menu-item) > a:hover {
+    text-decoration-line: underline;
+    text-underline-offset: 0.25em;
+  }
+
+}
+
+.p-stickyMenu.p-stickyMenu--inverse {
+  color: var(--mi-ui-inverse-color);
+  background-color: var(--mi-ui-inverse-bg);
+}

@@ -1,0 +1,38 @@
+@use "../global" as g;
+@use "sass:math";
+
+.l-footer {
+  position: relative;
+  @include g.flex(column, nowrap, n, stretch);
+  border-top: 0.0625rem solid var(--mi-border-default-light-color);
+}
+
+.l-footer__contents {
+  @include g.flex(column, nowrap, n, center);
+  gap: var(--mi-spacing-medium);
+}
+
+.l-footer__contents > *:first-child {
+  padding-top: var(--mi-spacing-medium);
+}
+
+// .p-horizontalMenu
+.l-footer__contents__menu01 {
+}
+
+// .p-sitemap
+.l-footer__contents__menu02 {
+}
+
+.l-footer__copyright {
+  // padding-bottom = .p-stickyMenu height
+  padding: var(--mi-spacing-medium) var(--mi-body-x-gap) calc( var(--mi-spacing-medium) + var(--mi-nav-min-height) );
+}
+
+.l-footer__copyright__body {
+  @include g.flex(column, n, center, center);
+  gap: var(--mi-spacing-medium);
+  margin: 0;
+  font-size: var(--mi-font-size-small);
+  line-height: var(--mi-line-height-none);
+}

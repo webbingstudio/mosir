@@ -1,0 +1,184 @@
+<?php
+/**
+ * minimalism functions and definitions
+ *
+ * @package ws-minimalism
+ */
+
+// ==============================
+// Theme setup
+// ==============================
+
+if ( ! function_exists( 'mi_setup' ) ) :
+	function mi_setup() {
+		add_theme_support( 'wp-block-styles' );
+		add_theme_support( 'title-tag' );
+		add_theme_support( 'post-thumbnails' );
+		add_theme_support(
+			'html5',
+			array(
+				'search-form',
+				'comment-form',
+				'comment-list',
+				'gallery',
+				'caption',
+				'style',
+				'script',
+			)
+		);
+		add_theme_support( 'custom-logo' );
+	}
+endif;
+add_action( 'after_setup_theme', 'mi_setup' );
+
+
+// ==============================
+// Enqueues Styles and Scripts
+// ==============================
+
+if ( ! function_exists( 'mi_enqueue_styles' ) ) :
+	/**
+	 * Enqueues theme.css on the front.
+	 *
+	 * @since minimalism 1.0
+	 *
+	 * @return void
+	 */
+	function mi_enqueue_styles() {
+		wp_enqueue_style(
+			'theme-style',
+			get_theme_file_uri( 'assets/css/theme.css' ),
+			array(),
+			wp_get_theme()->get( 'Version' )
+		);
+	}
+endif;
+add_action( 'wp_enqueue_scripts', 'mi_enqueue_styles' );
+
+
+if ( ! function_exists( 'mi_enqueue_scripts' ) ) :
+	/**
+	 * Enqueues theme.css on the front.
+	 *
+	 * @since minimalism 1.0
+	 *
+	 * @return void
+	 */
+	function mi_enqueue_scripts() {
+		wp_enqueue_script(
+			'theme-script',
+			get_theme_file_uri( 'assets/js/theme.js' ),
+			array(),
+			wp_get_theme()->get( 'Version' ),
+			array( 'strategy'  => 'defer' )
+			);
+		}
+	endif;
+add_action( 'wp_enqueue_scripts', 'mi_enqueue_scripts' );
+
+
+if ( ! function_exists( 'mi_editor_style' ) ) :
+	/**
+	 * Enqueues editor-style.css in the editors.
+	 *
+	 * @since minimalism 1.0
+	 *
+	 * @return void
+	 */
+	function mi_editor_style() {
+		add_theme_support( 'editor-styles' );
+		add_editor_style( 'assets/css/editor-style.css' );
+	}
+endif;
+add_action( 'after_setup_theme', 'mi_editor_style' );
+
+
+if ( ! function_exists( 'mi_enqueue_block_editor_assets' ) ) :
+	/**
+	 * Enqueues editor-script.js in the editors.
+	 *
+	 * @since minimalism 1.0
+	 *
+	 * @return void
+	 */
+	function mi_enqueue_block_editor_assets() {
+		wp_enqueue_script(
+			'editor-script',
+			get_theme_file_uri( 'assets/js/editor-script.js' ),
+			array(),
+			wp_get_theme()->get( 'Version' ),
+			true
+		);
+	}
+endif;
+add_action( 'enqueue_block_editor_assets', 'mi_enqueue_block_editor_assets' );
+
+
+// ==============================
+// Define the menus to use within the theme
+// ==============================
+
+if ( ! function_exists( 'mi_redistar_nav_menu' ) ) :
+	/**
+	 * Define the menus to use within the theme
+	 *
+	 * @since minimalism 1.0
+	 *
+	 * @return string
+	 */
+	function mi_redistar_nav_menu() {
+		register_nav_menus([
+			'header_nav_01' => 'Header: Mega nav.',
+			'header_nav_02' => 'Header: Horizontal nav.',
+			'footer_nav_01' => 'Footer: Horizontal nav.',
+			'footer_nav_02' => 'Footer: Sitemap',
+			'drawer_nav_01' => 'drawer: Vertical nav.',
+			'drawer_nav_02' => 'drawer: Sitemap',
+			'sticky_nav' => 'Sticky nav.',
+		]);
+	}
+endif;
+add_action( 'after_setup_theme', 'mi_redistar_nav_menu' );
+
+
+// ==============================
+// Skip Mega menu links
+// ==============================
+
+if ( ! function_exists( 'mi_nav_menu_link_attributes' ) ) :
+	/**
+	 * If the currently displayed menu has the mega menu (.p-megaMenu) class assigned, focus on links from the second level onwards will be skipped.
+	 *
+	 * @since minimalism 1.0
+	 *
+	 * @return void
+	 */
+	function mi_nav_menu_link_attributes( $atts, $item, $args, $depth ) {
+		if ( preg_match( '/p-megaMenu/', $args->menu_class ) && $depth >= 1 ) {
+			$atts['tabindex'] = '-1';
+		}
+		return $atts;
+	}
+endif;
+add_filter( 'nav_menu_link_attributes', 'mi_nav_menu_link_attributes', 10, 4 );
+
+
+// ==============================
+// Echo WordPress BlockEditor(Gutenberg) class name
+// ==============================
+
+if ( ! function_exists( 'mi_wp_block_class' ) ) :
+	/**
+	 * Echo WordPress BlockEditor(Gutenberg) class name
+	 *
+	 * @since minimalism 1.0
+	 *
+	 * @param string $before The string to prepend, such as a space.
+	 * @param string $after The string to append, such as a space.
+	 * @return string
+	 */
+	function mi_wp_block_class( $before = '', $after = '' ) {
+		echo esc_attr( $before ) . 'wp-site-blocks is-layout-constrained has-global-padding' . esc_attr( $after );
+	}
+endif;
+

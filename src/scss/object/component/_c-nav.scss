@@ -1,0 +1,75 @@
+@use "../../global" as g;
+@use "sass:math";
+
+// ------------------------------
+// component > nav
+//  - Arrange block buttons with appropriate paddings.
+//  - Initial state is vertically aligned, and adding a modifier makes it horizontal.
+// ------------------------------
+
+.c-nav {
+  @include g.flex(n, n, n, center);
+  gap: var(--mi-spacing-small);
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.c-nav > * {
+  flex-grow: 0;
+}
+
+.c-nav li,
+.c-nav .menu-item {
+  margin: 0;
+  padding: 0;
+}
+
+ul.c-nav,
+.c-nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.c-nav a {
+  @include g.flex(n, n, n, center);
+  gap: var(--mi-spacing-x-small);
+  line-height: var(--mi-nav-line-height);
+  color: var(--mi-ui-default-color);
+  background-color: var(--mi-ui-default-bg);
+  text-decoration: none;
+}
+
+[class*="--inverse"] .c-nav a {
+  color: var(--mi-ui-inverse-color);
+  background-color: var(--mi-ui-inverse-bg);
+}
+
+@include g.mq(hover) {
+
+  .c-nav :not(.current-menu-item) > a:hover {
+    color: var(--mi-ui-default-color);
+    background-color: var(--mi-ui-default-hover-bg);
+    text-decoration: none;
+  }
+
+  [class*="--inverse"] .c-nav :not(.current-menu-item) > a:hover {
+    color: var(--mi-ui-inverse-color);
+    background-color: var(--mi-ui-inverse-hover-bg);
+  }
+
+}
+
+.c-nav a:focus {
+  color: var(--mi-ui-default-color);
+}
+
+[class*="--inverse"] .c-nav a:focus {
+  color: var(--mi-ui-inverse-color);
+}
+
+.c-nav__item__label {
+  flex-grow: 0;
+  flex-shrink: 1;
+}
