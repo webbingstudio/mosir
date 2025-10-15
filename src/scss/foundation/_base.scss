@@ -1,6 +1,10 @@
 @use "../global" as g;
 @use "sass:math";
 
+:root {
+  interpolate-size: allow-keywords;
+}
+
 body {
   background-color: var(--mi-body-bg);
   color: var(--mi-body-color);

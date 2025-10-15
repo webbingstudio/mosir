@@ -65,9 +65,9 @@
   @include g.flex(n, wrap, flex-start, flex-start);
   gap: var(--mi-spacing-small);
   width: 100%;
-  padding: var(--mi-spacing-small) var(--mi-spacing-medium);
+  padding-inline: var(--mi-spacing-medium);
   color: var(--mi-ui-default-color);
-  transform: scaleY(0);
+  transition: all 0.3s 0.3s linear;
 }
 
 .p-megaMenu__nav > .menu-item > .sub-menu::after {
@@ -81,6 +81,7 @@
   opacity: 0;
   transform: scaleY(0);
   transform-origin: top center;
+  transition: all 0.5s 0.3s ease-in;
 }
 
 .p-megaMenu__nav > .menu-item > .sub-menu > * {
@@ -91,18 +92,14 @@
   flex-grow: 0;
   flex-basis: 15em;
   transform: translateY(-10%);
+  transition: all 0.5s 0s ease-in;
 }
 
 @include g.mq(hover) {
-
   .p-megaMenu__nav > .menu-item:hover > .sub-menu {
-    transform: scaleY(1);
+    padding-block: var(--mi-spacing-small);
+    transition: all 0.3s 0s linear;
   }
-
-}
-
-.p-megaMenu__nav > .menu-item:focus-within > .sub-menu {
-  transform: scaleY(1);
 }
 
 // By overlaying a box of the same color as the background,
@@ -121,15 +118,14 @@
   .p-megaMenu__nav > .menu-item:hover > .sub-menu::after {
     opacity: 1;
     transform: scaleY(1);
-    transition: all 1s 0s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: all 0.5s 0s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
   .p-megaMenu__nav > .menu-item:hover > .sub-menu > * {
-    overflow: auto;
     height: auto;
     opacity: 1;
     transform: translateY(0);
-    transition: all 0.5s 0.3s ease-out;
+    transition: all 0.5s 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
 }
