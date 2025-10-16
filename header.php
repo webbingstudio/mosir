@@ -1,7 +1,6 @@
 <?php
 /**
  * header.php
- * 共通ヘッダ用テンプレート
  *
  * @package ws-minimalism
  */
@@ -16,19 +15,46 @@
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
-<header class="l-header l-header--horizontal">
-	<div class="l-header__contents l-container">
-		<?php get_template_part( 'template-parts/header_title' ); ?>
+<header class="mi-l-header mi-l-header--horizontal">
+	<div class="mi-l-header__contents mi-l-container">
+
+		<?php
+			$mi_custom_logo_id = get_theme_mod( 'custom_logo' );
+			$mi_custom_logo_src = wp_get_attachment_image_src( $mi_custom_logo_id, 'full' );
+			$mi_custom_logo_width = $mi_custom_logo_src[1];
+		?>
+		<?php if( is_front_page() ): ?>
+			<h1 class="l-header__contents__siteTitle p-siteTitle">
+		<?php else: ?>
+			<p class="l-header__contents__siteTitle p-siteTitle">
+				<a href="<?php bloginfo('url'); ?>">
+		<?php endif; ?>
+
+		<?php if( $mi_custom_logo_src && $mi_custom_logo_width === 1 ): ?>
+			<span class="p-siteTitle__logo"><?php echo '<img src="' . esc_url( $mi_custom_logo_src[0] ) . '" alt="'. get_bloginfo('name') .'">'; ?></span>
+		<?php elseif( $mi_custom_logo_src ): ?>
+			<span class="p-siteTitle__logo"><?php echo '<img src="' . esc_url( $mi_custom_logo_src[0] ) . '" alt="'. get_bloginfo('name') .'" width="' . $mi_custom_logo_src[1] . '" height="' . $mi_custom_logo_src[2] . '">'; ?></span>
+		<?php else: ?>
+			<span class="p-siteTitle__label"><?php bloginfo('name'); ?></span>
+		<?php endif; ?>
+
+		<?php if( is_front_page() ): ?>
+			</h1>
+		<?php else: ?>
+				</a>
+			</p>
+		<?php endif; ?>
+
 		<?php
 		if( has_nav_menu('header_nav_02') ) {
 			wp_nav_menu(
 				array(
 					'theme_location' => 'header_nav_02',
 					'container'       => 'div',
-					'container_class' => 'l-header__contents__menu02 p-horizontalMenu p-horizontalMenu--arrowed',
+					'container_class' => 'mi-l-header__contents__menu02 mi-p-horizontalMenu mi-p-horizontalMenu--arrowed',
 					'menu_id' => 'header-nav-02',
-					'menu_class' => 'menu p-horizontalMenu__nav c-nav',
-					'link_before'      => '<span class="menu-label c-nav__item__label">',
+					'menu_class' => 'menu mi-p-horizontalMenu__nav mi-c-nav',
+					'link_before'      => '<span class="menu-label mi-c-nav__item__label">',
 					'link_after'      => '</span>',
 				)
 			);
@@ -41,10 +67,10 @@
 					'theme_location' => 'header_nav_01',
 					'container'       => 'nav',
 					'container_aria_label'       => 'Global navigation',
-					'container_class' => 'l-header__contents__menu01 p-megaMenu',
+					'container_class' => 'mi-l-header__contents__menu01 mi-p-megaMenu',
 					'menu_id' => 'header-nav-01',
-					'menu_class' => 'menu p-megaMenu__nav c-nav',
-					'link_before'      => '<span class="menu-label c-nav__item__label">',
+					'menu_class' => 'menu mi-p-megaMenu__nav mi-c-nav',
+					'link_before'      => '<span class="menu-label mi-c-nav__item__label">',
 					'link_after'      => '</span>',
 				)
 			);
@@ -54,4 +80,4 @@
 </header>
 <?php get_template_part( 'template-parts/drawer' ); ?>
 
-<main class="l-main">
+<main class="mi-l-main">

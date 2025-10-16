@@ -6,25 +6,25 @@
  * @package ws-minimalism
  */
 ?>
-<div class="p-drawerToggle">
-	<button id="drawer-toggle" class="p-drawerToggle__button c-toggleButton" aria-controls="drawer" aria-expanded="false">
-		<span class="c-toggleButton__label">Menu</span>
-		<span class="c-toggleButton__icon"></span>
+<div class="mi-p-drawerToggle">
+	<button id="drawer-toggle" class="mi-p-drawerToggle__button mi-c-toggleButton" aria-controls="drawer" aria-expanded="false">
+		<span class="mi-c-toggleButton__label">Menu</span>
+		<span class="mi-c-toggleButton__icon"></span>
 	</button>
 </div>
-<div id="drawer" class="p-drawer" aria-hidden="true">
-	<div class="p-drawer__contents">
-		<div class="p-drawer__contents__inner l-container l-container--sm">
+<div id="drawer" class="mi-p-drawer" aria-hidden="true">
+	<div class="mi-p-drawer__contents">
+		<div class="mi-p-drawer__contents__inner mi-l-container">
 			<?php
 			if( has_nav_menu('drawer_nav_01') ) {
 				wp_nav_menu(
 					array(
 						'theme_location' => 'drawer_nav_01',
 						'container'       => 'div',
-						'container_class' => 'p-drawer__menu01 p-verticalMenu',
+						'container_class' => 'mi-p-drawer__menu01 mi-p-verticalMenu',
 						'menu_id' => 'drawer-nav-01',
-						'menu_class' => 'menu p-verticalMenu__nav c-nav',
-						'link_before'      => '<span class="menu-label c-nav__item__label">',
+						'menu_class' => 'menu mi-p-verticalMenu__nav mi-c-nav',
+						'link_before'      => '<span class="menu-label mi-c-nav__item__label">',
 						'link_after'      => '</span>',
 					)
 				);
@@ -36,10 +36,10 @@
 					array(
 						'theme_location' => 'drawer_nav_02',
 						'container'       => 'div',
-						'container_class' => 'p-drawer__menu02 p-sitemap',
+						'container_class' => 'mi-p-drawer__menu02 mi-p-sitemap',
 						'menu_id' => 'drawer-nav-02',
-						'menu_class' => 'menu p-sitemap__nav c-nav',
-						'link_before'      => '<span class="menu-label c-nav__item__label">',
+						'menu_class' => 'menu mi-p-sitemap__nav mi-c-nav',
+						'link_before'      => '<span class="menu-label mi-c-nav__item__label">',
 						'link_after'      => '</span>',
 					)
 				);

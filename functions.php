@@ -5,6 +5,18 @@
  * @package ws-minimalism
  */
 
+
+
+function mi($var) {
+	echo '<pre style="padding: 0.25rem; background: #ddd; height: 30em; overflow: auto;">';
+	var_dump($var);
+	echo '</pre>';
+}
+
+
+
+
+
 // ==============================
 // Theme setup
 // ==============================
@@ -115,7 +127,7 @@ add_action( 'enqueue_block_editor_assets', 'mi_enqueue_block_editor_assets' );
 
 
 // ==============================
-// Define the menus to use within the theme
+// Menus
 // ==============================
 
 if ( ! function_exists( 'mi_redistar_nav_menu' ) ) :
@@ -154,7 +166,7 @@ if ( ! function_exists( 'mi_nav_menu_link_attributes' ) ) :
 	 * @return void
 	 */
 	function mi_nav_menu_link_attributes( $atts, $item, $args, $depth ) {
-		if ( preg_match( '/p-megaMenu/', $args->menu_class ) && $depth >= 1 ) {
+		if ( preg_match( '/(p-megaMenu)/', $args->menu_class ) && $depth >= 1 ) {
 			$atts['tabindex'] = '-1';
 		}
 		return $atts;
@@ -164,12 +176,12 @@ add_filter( 'nav_menu_link_attributes', 'mi_nav_menu_link_attributes', 10, 4 );
 
 
 // ==============================
-// Echo WordPress BlockEditor(Gutenberg) class name
+// Compatible WordPress BlockEditor(Gutenberg) to 
 // ==============================
 
 if ( ! function_exists( 'mi_wp_block_class' ) ) :
 	/**
-	 * Echo WordPress BlockEditor(Gutenberg) class name
+	 * Echo WordPress BlockEditor class name
 	 *
 	 * @since minimalism 1.0
 	 *
