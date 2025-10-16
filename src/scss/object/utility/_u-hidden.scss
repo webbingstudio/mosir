@@ -1,14 +1,21 @@
 @use "../../global" as g;
 @use "sass:math";
 
-@include g.mq(default) {
-  .u-hidden--pc {
+@include g.mq(wide-max) {
+  .#{g.$pr}u-wide {
     display: none !important;
   }
 }
 
-@include g.mq(default-max) {
-  .u-hidden--sp {
+@include g.mq(xga-max) {
+  .#{g.$pr}u-xga,
+  .#{g.$pr}u-pc {
+    display: none !important;
+  }
+}
+
+@include g.mq(default) {
+  .#{g.$pr}u-sp {
     display: none !important;
   }
 }
