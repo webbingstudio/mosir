@@ -17,6 +17,9 @@ const miDrawer = function() {
             let mi_queue = null;
             toggle.setAttribute('aria-expanded', 'false');
             nav.setAttribute('aria-hidden', 'true');
+            // inert: Disable all operations within the element
+            // https://developer.mozilla.org/ja/docs/Web/API/HTMLElement/inert
+            nav.setAttribute('inert', 'inert');
 
             toggle.addEventListener('click', ()=> {
                 if(toggle.getAttribute('aria-expanded') === 'false') {
@@ -28,6 +31,7 @@ const miDrawer = function() {
                     const mi_queue = setTimeout(() => {
                         nav.classList.remove('-is-opening');
                         nav.setAttribute('aria-hidden', 'false');
+                        nav.removeAttribute('inert');
                     },duration);
                 } else {
                     toggle.setAttribute('aria-expanded', 'false');
@@ -38,6 +42,7 @@ const miDrawer = function() {
                     const mi_queue = setTimeout(() => {
                         nav.classList.remove('-is-closing');
                         nav.setAttribute('aria-hidden', 'true');
+                        nav.setAttribute('inert', 'inert');
                     },duration);
                 }
             });
@@ -48,6 +53,7 @@ const miDrawer = function() {
                     clearTimeout(mi_queue);
                     toggle.setAttribute('aria-expanded', 'false');
                     nav.setAttribute('aria-hidden', 'true');
+                    nav.setAttribute('inert', 'inert');
                     nav.classList.remove('-is-closing', '-is-open');
                 },50);
             },false);
