@@ -10,25 +10,25 @@
 //  - Assumes a hierarchy of up to 3 levels.
 // ------------------------------
 
-.p-verticalMenu__nav.c-nav {
+.#{g.$pr}p-verticalMenu__nav.#{g.$pr}c-nav {
   flex-flow: column wrap;
   align-items: stretch;
   justify-content: flex-start;
   gap: var(--mi-spacing-medium);
 }
 
-.p-verticalMenu__nav.c-nav > * {
+.#{g.$pr}p-verticalMenu__nav.#{g.$pr}c-nav > * {
   flex: 0;
 }
 
 @include g.mq(default) {
-  .p-verticalMenu__nav.c-nav > * {
+  .#{g.$pr}p-verticalMenu__nav.#{g.$pr}c-nav > * {
     flex-basis: calc( 50% - ( var(--mi-spacing-medium) / 2 ) );
   }
 }
 
 @include g.mq(wide) {
-  .p-verticalMenu__nav.c-nav > * {
+  .#{g.$pr}p-verticalMenu__nav.#{g.$pr}c-nav > * {
     flex-basis: calc( 33.33% - ( ( var(--mi-spacing-medium) * 2 ) / 3 ) );
   }
 }
@@ -37,7 +37,7 @@
 // first-level
 // ------------------------------
 
-.p-verticalMenu__nav > .menu-item > a {
+.#{g.$pr}p-verticalMenu__nav > .menu-item > a {
   position: relative;
   font-size: var(--mi-font-size-x-large);
   font-weight: 700;
@@ -45,7 +45,7 @@
   padding-left: var(--mi-spacing-medium );
 }
 
-.p-verticalMenu__nav > .menu-item > a::before {
+.#{g.$pr}p-verticalMenu__nav > .menu-item > a::before {
   @include g.position(absolute, calc( 50% - 0.0625rem ), n, n, 0);
   content: "";
   width: calc( var(--mi-spacing-medium) - var(--mi-spacing-x-small) );
@@ -58,7 +58,7 @@
 
 @include g.mq(hover) {
 
-  .p-verticalMenu__nav > .menu-item > a:hover::before {
+  .#{g.$pr}p-verticalMenu__nav > .menu-item > a:hover::before {
     opacity: 0.5;
     transform: scaleX(0.2);
     transition: var(--mi-nav-cubic-transition);
@@ -66,7 +66,7 @@
 
 }
 
-.p-verticalMenu.p-verticalMenu--inverse .p-verticalMenu__nav > .menu-item > a::before {
+.#{g.$pr}p-verticalMenu.#{g.$pr}p-verticalMenu--inverse .#{g.$pr}p-verticalMenu__nav > .menu-item > a::before {
   background-color: var(--mi-ui-inverse-accent-color);
 }
 
@@ -76,15 +76,15 @@
 // ------------------------------
 
 // 1.25em = left spacing of arrowed link
-.p-verticalMenu__nav > .menu-item > .sub-menu {
+.#{g.$pr}p-verticalMenu__nav > .menu-item > .sub-menu {
   padding-left: calc( var(--mi-spacing-medium) - 1.25em );
 }
 
-.p-verticalMenu__nav .sub-menu .menu-item {
+.#{g.$pr}p-verticalMenu__nav .sub-menu .menu-item {
   margin-top: 1.25em;
 }
 
-.p-verticalMenu__nav .sub-menu a {
+.#{g.$pr}p-verticalMenu__nav .sub-menu a {
   @include g.arrow();
 }
 
@@ -96,7 +96,7 @@
 
 }
 
-.p-verticalMenu--inverse .p-verticalMenu__nav .sub-menu a {
+.#{g.$pr}p-verticalMenu--inverse .#{g.$pr}p-verticalMenu__nav .sub-menu a {
   @include g.arrow( $color: 'inverse' );
 }
 
@@ -104,10 +104,10 @@
 // third-level
 // ------------------------------
 
-.p-verticalMenu__nav .sub-menu .sub-menu {
+.#{g.$pr}p-verticalMenu__nav .sub-menu .sub-menu {
   padding-left: 1.25em;
 }
 
-.p-verticalMenu__nav .sub-menu > .menu-item:not(:last-child) .sub-menu {
+.#{g.$pr}p-verticalMenu__nav .sub-menu > .menu-item:not(:last-child) .sub-menu {
   margin-bottom: 1.5em;
 }

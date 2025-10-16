@@ -7,7 +7,7 @@
 //  - Initial state is vertically aligned, and adding a modifier makes it horizontal.
 // ------------------------------
 
-.c-nav {
+.#{g.$pr}c-nav {
   @include g.flex(n, n, n, center);
   gap: var(--mi-spacing-small);
   margin: 0;
@@ -15,24 +15,24 @@
   list-style-type: none;
 }
 
-.c-nav > * {
+.#{g.$pr}c-nav > * {
   flex-grow: 0;
 }
 
-.c-nav li,
-.c-nav .menu-item {
+.#{g.$pr}c-nav li,
+.#{g.$pr}c-nav .menu-item {
   margin: 0;
   padding: 0;
 }
 
-ul.c-nav,
-.c-nav ul {
+ul.#{g.$pr}c-nav,
+.#{g.$pr}c-nav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-.c-nav a {
+.#{g.$pr}c-nav a {
   @include g.flex(n, n, n, center);
   gap: var(--mi-spacing-x-small);
   line-height: var(--mi-nav-line-height);
@@ -41,35 +41,35 @@ ul.c-nav,
   text-decoration: none;
 }
 
-[class*="--inverse"] .c-nav a {
+[class*="--inverse"] .#{g.$pr}c-nav a {
   color: var(--mi-ui-inverse-color);
   background-color: var(--mi-ui-inverse-bg);
 }
 
 @include g.mq(hover) {
 
-  .c-nav :not(.current-menu-item) > a:hover {
+  .#{g.$pr}c-nav :not(.current-menu-item) > a:hover {
     color: var(--mi-ui-default-color);
     background-color: var(--mi-ui-default-hover-bg);
     text-decoration: none;
   }
 
-  [class*="--inverse"] .c-nav :not(.current-menu-item) > a:hover {
+  [class*="--inverse"] .#{g.$pr}c-nav :not(.current-menu-item) > a:hover {
     color: var(--mi-ui-inverse-color);
     background-color: var(--mi-ui-inverse-hover-bg);
   }
 
 }
 
-.c-nav a:focus {
+.#{g.$pr}c-nav a:focus {
   color: var(--mi-ui-default-color);
 }
 
-[class*="--inverse"] .c-nav a:focus {
+[class*="--inverse"] .#{g.$pr}c-nav a:focus {
   color: var(--mi-ui-inverse-color);
 }
 
-.c-nav__item__label {
+.#{g.$pr}c-nav__item__label {
   flex-grow: 0;
   flex-shrink: 1;
 }

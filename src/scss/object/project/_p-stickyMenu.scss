@@ -8,7 +8,7 @@
 //  - No hierarchical structure is assumed.
 // ------------------------------
 
-.p-stickyMenu {
+.#{g.$pr}p-stickyMenu {
   @include g.position(fixed, n, n, 0, 0, 21);
   width: 100vw;
   color: var(--mi-ui-default-color);
@@ -17,28 +17,28 @@
   z-index: 21;
 }
 
-.p-stickyMenu__nav.c-nav {
+.#{g.$pr}p-stickyMenu__nav.#{g.$pr}c-nav {
   justify-content: center;
 }
 
-.p-stickyMenu__nav a {
+.#{g.$pr}p-stickyMenu__nav a {
   min-height: var(--mi-nav-min-height);
 }
 
-.p-stickyMenu__nav .current-menu-item > a {
+.#{g.$pr}p-stickyMenu__nav .current-menu-item > a {
   font-weight: 700;
 }
 
 @include g.mq(hover) {
 
-  .p-stickyMenu__nav :not(.current-menu-item) > a:hover {
+  .#{g.$pr}p-stickyMenu__nav :not(.current-menu-item) > a:hover {
     text-decoration-line: underline;
     text-underline-offset: 0.25em;
   }
 
 }
 
-.p-stickyMenu.p-stickyMenu--inverse {
+.#{g.$pr}p-stickyMenu.#{g.$pr}p-stickyMenu--inverse {
   color: var(--mi-ui-inverse-color);
   background-color: var(--mi-ui-inverse-bg);
 }

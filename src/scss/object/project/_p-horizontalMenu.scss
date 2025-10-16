@@ -7,16 +7,16 @@
 //  - No hierarchical structure is assumed.
 // ------------------------------
 
-.p-horizontalMenu__nav.c-nav {
+.#{g.$pr}p-horizontalMenu__nav.#{g.$pr}c-nav {
   justify-content: center;
   column-gap: var(--mi-spacing-medium);
 }
 
-.p-horizontalMenu:not(.p-horizontalMenu--arrowed) .menu-item + .menu-item {
+.#{g.$pr}p-horizontalMenu:not(.#{g.$pr}p-horizontalMenu--arrowed) .menu-item + .menu-item {
   position: relative;
 }
 
-.p-horizontalMenu:not(.p-horizontalMenu--arrowed) .menu-item + .menu-item::after {
+.#{g.$pr}p-horizontalMenu:not(.#{g.$pr}p-horizontalMenu--arrowed) .menu-item + .menu-item::after {
   @include g.position( absolute, #{calc( 50% - 0.5em )}, n, n, #{calc( var(--mi-spacing-medium) / -2 )} );
   content: "";
   width: 0;
@@ -24,40 +24,40 @@
   border-left: 0.0625rem solid var(--mi-border-default-color);
 }
 
-.p-horizontalMenu:not(.p-horizontalMenu--arrowed) a {
+.#{g.$pr}p-horizontalMenu:not(.#{g.$pr}p-horizontalMenu--arrowed) a {
   min-height: var(--mi-nav-min-height);
 }
 
-.p-horizontalMenu .current-menu-item > a {
+.#{g.$pr}p-horizontalMenu .current-menu-item > a {
   font-weight: 700;
 }
 
 @include g.mq(hover) {
 
-  .p-horizontalMenu:not(.p-horizontalMenu--arrowed) :not(.current-menu-item) > a:hover {
+  .#{g.$pr}p-horizontalMenu:not(.#{g.$pr}p-horizontalMenu--arrowed) :not(.current-menu-item) > a:hover {
     text-decoration-line: underline;
     text-underline-offset: 0.25em;
   }
 
 }
 
-.p-horizontalMenu.p-horizontalMenu--inverse {
+.#{g.$pr}p-horizontalMenu.#{g.$pr}p-horizontalMenu--inverse {
   color: var(--mi-ui-inverse-color);
   background-color: var(--mi-ui-inverse-bg);
 }
 
-.p-horizontalMenu.p-horizontalMenu--arrowed a {
+.#{g.$pr}p-horizontalMenu.#{g.$pr}p-horizontalMenu--arrowed a {
   @include g.arrow();
 }
 
 @include g.mq(hover) {
 
-  .p-horizontalMenu.p-horizontalMenu--arrowed :not(.current-menu-item) > a:hover {
+  .#{g.$pr}p-horizontalMenu.#{g.$pr}p-horizontalMenu--arrowed :not(.current-menu-item) > a:hover {
     @include g.arrow-hover();
   }
 
 }
 
-.p-horizontalMenu.p-horizontalMenu--inverse.p-horizontalMenu--arrowed a {
+.#{g.$pr}p-horizontalMenu.#{g.$pr}p-horizontalMenu--inverse.#{g.$pr}p-horizontalMenu--arrowed a {
   @include g.arrow( $color: 'inverse' );
 }

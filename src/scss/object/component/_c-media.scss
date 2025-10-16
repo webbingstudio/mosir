@@ -6,7 +6,7 @@
 //  - Image on the left and content on the right.
 // ------------------------------
 
-.c-media {
+.#{g.$pr}c-media {
   display: grid;
   grid-template-columns: clamp( 20%, 10rem, 33.33% ) 1fr;
   gap: var(--mi-spacing-small);
@@ -16,16 +16,16 @@
 }
 
 @include g.mq(default) {
-  .c-media {
+  .#{g.$pr}c-media {
     grid-template-columns: clamp( 20%, 15rem, 33.33% ) 1fr;
     gap: var(--mi-spacing-medium);
   }
 }
 
-.c-media__image {
-  grid-column: 1 / 2;
+.#{g.$pr}c-media__image {
+  grid-column: 1 / 1;
 }
 
-.c-media__contents {
-  grid-column: 2 / 3;
+.#{g.$pr}c-media__contents {
+  grid-column: 2 / 2;
 }

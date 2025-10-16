@@ -17,7 +17,7 @@
 	</figure>
 	<div class="mi-c-media__contents">
 		<?php if ( $post->post_type !== 'page' ) : ?>
-			<time class="mi-c-date" datetime="<?php the_time('c'); ?>"><?php the_date(); ?></time>
+			<time class="mi-c-date" datetime="<?php the_time('c'); ?>"><?php the_time( get_option( 'date_format' ) ); ?></time>
 
 			<?php
 			if ( $post->post_type === 'post' ) :
@@ -30,7 +30,7 @@
 						$mi_post_terms = array_slice($mi_post_terms, 0, 3);
 						foreach ( $mi_post_terms as $taxonomy ) :
 					?>
-						<li><a href="<?php echo get_term_link( $taxonomy->term_id, $mi_term ); ?>" class="mi-c-label mi-c-label--term-<?php esc_html_e( $taxonomy->slug ); ?>"><?php esc_html_e( $taxonomy->name ); ?></a></li>
+						<li><span class="mi-c-label mi-c-label--term-<?php esc_html_e( $taxonomy->slug ); ?>"><?php esc_html_e( $taxonomy->name ); ?></span></li>
 					<?php endforeach; ?>
 				</ul>
 				<?php endif; ?>

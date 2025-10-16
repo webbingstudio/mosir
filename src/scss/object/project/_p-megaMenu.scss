@@ -11,7 +11,7 @@
 //  - Assumes a hierarchy of up to 2 levels.
 // ------------------------------
 
-.p-megaMenu {
+.#{g.$pr}p-megaMenu {
   position: relative;
 }
 
@@ -19,7 +19,7 @@
 // megaMenu > first-level
 // ------------------------------
 
-.p-megaMenu__nav > .menu-item > a {
+.#{g.$pr}p-megaMenu__nav > .menu-item > a {
   position: relative;
   justify-content: center;
   width: 100%;
@@ -31,7 +31,7 @@
   z-index: 21; // Links overlay submenus on hover or focus.
 }
 
-.p-megaMenu__nav > .menu-item > a::after {
+.#{g.$pr}p-megaMenu__nav > .menu-item > a::after {
   content: "";
   @include g.position(absolute, n, 0, -0.0625rem, n);
   width: 100%;
@@ -45,8 +45,8 @@
 
 // When you hover over a navigation item,
 // it will remove the decorations from all other items (even your current location!).
-.p-megaMenu__nav > .menu-item:not(.current-menu-item):not(:hover) > a::after,
-.p-megaMenu__nav:has(>.menu-item:hover) > .menu-item:not(:hover) > a::after {
+.#{g.$pr}p-megaMenu__nav > .menu-item:not(.current-menu-item):not(:hover) > a::after,
+.#{g.$pr}p-megaMenu__nav:has(>.menu-item:hover) > .menu-item:not(:hover) > a::after {
   opacity: 0;
   transform: translateY(-400%);
 }
@@ -56,11 +56,11 @@
 // megaMenu > second-level
 // ------------------------------
 
-.p-megaMenu__nav .sub-menu {
+.#{g.$pr}p-megaMenu__nav .sub-menu {
   font-size: var(--mi-font-size-small);
 }
 
-.p-megaMenu__nav > .menu-item > .sub-menu {
+.#{g.$pr}p-megaMenu__nav > .menu-item > .sub-menu {
   @include g.position(absolute, 100%, n, n, 0, n);
   @include g.flex(n, wrap, flex-start, flex-start);
   gap: var(--mi-spacing-small);
@@ -70,7 +70,7 @@
   transition: all 0.3s 0.3s linear;
 }
 
-.p-megaMenu__nav > .menu-item > .sub-menu::after {
+.#{g.$pr}p-megaMenu__nav > .menu-item > .sub-menu::after {
   content: "";
   @include g.position(absolute, 0, n, n, 0, 11);
   width: 100%;
@@ -84,7 +84,7 @@
   transition: all 0.5s 0.3s ease-in;
 }
 
-.p-megaMenu__nav > .menu-item > .sub-menu > * {
+.#{g.$pr}p-megaMenu__nav > .menu-item > .sub-menu > * {
   @include g.position(relative, n, n, n, n, 12);
   overflow: hidden;
   height: 0;
@@ -96,7 +96,7 @@
 }
 
 @include g.mq(hover) {
-  .p-megaMenu__nav > .menu-item:hover > .sub-menu {
+  .#{g.$pr}p-megaMenu__nav > .menu-item:hover > .sub-menu {
     padding-block: var(--mi-spacing-small);
     transition: all 0.3s 0s linear;
   }
@@ -107,7 +107,7 @@
 // Therefore, if you don't need a drop shadow for your submenu, this style is also unnecessary.
 @include g.mq(hover) {
 
-  .p-megaMenu__nav > .menu-item:hover::after {
+  .#{g.$pr}p-megaMenu__nav > .menu-item:hover::after {
     content: "";
     @include g.position(absolute, n, n, 0, 0, 13);
     width: 100%;
@@ -115,13 +115,13 @@
     background-color: var(--mi-body-bg);
   }
 
-  .p-megaMenu__nav > .menu-item:hover > .sub-menu::after {
+  .#{g.$pr}p-megaMenu__nav > .menu-item:hover > .sub-menu::after {
     opacity: 1;
     transform: scaleY(1);
     transition: all 0.5s 0s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
-  .p-megaMenu__nav > .menu-item:hover > .sub-menu > * {
+  .#{g.$pr}p-megaMenu__nav > .menu-item:hover > .sub-menu > * {
     height: auto;
     opacity: 1;
     transform: translateY(0);
@@ -136,35 +136,35 @@
 // ------------------------------
 
 @include g.mq(default) {
-  .p-megaMenu__nav.c-nav > * {
+  .#{g.$pr}p-megaMenu__nav.c-nav > * {
     flex-basis: calc( 50% - ( var(--mi-spacing-medium) / 2 ) );
   }
 }
 
 @include g.mq(wide) {
-  .p-megaMenu__nav.c-nav > * {
+  .#{g.$pr}p-megaMenu__nav.c-nav > * {
     flex-basis: calc( 33.33% - ( ( var(--mi-spacing-medium) * 2 ) / 3 ) );
   }
 }
 
-.p-megaMenu__nav .sub-menu a {
+.#{g.$pr}p-megaMenu__nav .sub-menu a {
   justify-content: flex-start;
   @include g.arrow();
 }
 
 @include g.mq(hover) {
 
-  .p-megaMenu__nav .sub-menu :not(.current-menu-item) > a:hover {
+  .#{g.$pr}p-megaMenu__nav .sub-menu :not(.current-menu-item) > a:hover {
     @include g.arrow-hover();
   }
 
 }
 
-.p-megaMenu__nav .sub-menu :not(.current-menu-item) > a:focus {
+.#{g.$pr}p-megaMenu__nav .sub-menu :not(.current-menu-item) > a:focus {
   @include g.arrow-hover();
 }
 
-.p-megaMenu__nav .sub-menu .current-menu-item > a {
+.#{g.$pr}p-megaMenu__nav .sub-menu .current-menu-item > a {
   font-weight: 700;
 }
 
@@ -173,6 +173,6 @@
 // megaMenu > third-level
 // ------------------------------
 
-.p-megaMenu__nav .sub-menu .sub-menu {
+.#{g.$pr}p-megaMenu__nav .sub-menu .sub-menu {
   display: none;
 }

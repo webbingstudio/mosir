@@ -10,17 +10,17 @@
 //  - Assumes a hierarchy of up to 3 levels.
 // ------------------------------
 
-.p-sitemap {
+.#{g.$pr}p-sitemap {
 }
 
-.p-sitemap__nav.c-nav {
+.#{g.$pr}p-sitemap__nav.#{g.$pr}c-nav {
   @include g.flex(column, wrap, flex-start, n);
   gap: var(--mi-spacing-medium);
 }
 
 @include g.mq(default) {
 
-  .p-sitemap__nav.c-nav {
+  .#{g.$pr}p-sitemap__nav.#{g.$pr}c-nav {
     flex-direction: row;
     gap: var(--mi-spacing-medium);
   }
@@ -28,41 +28,41 @@
 }
 
 @include g.mq(default) {
-  .p-sitemap__nav.c-nav {
+  .#{g.$pr}p-sitemap__nav.#{g.$pr}c-nav {
     flex-flow: row wrap;
   }
 
 }
 
-.p-sitemap__nav.c-nav > * {
+.#{g.$pr}p-sitemap__nav.#{g.$pr}c-nav > * {
   flex: 0;
 }
 
 @include g.mq(default) {
-  .p-sitemap__nav.c-nav > * {
+  .#{g.$pr}p-sitemap__nav.#{g.$pr}c-nav > * {
     flex-basis: calc( 50% - ( var(--mi-spacing-medium) / 2 ) );
   }
 }
 
 @include g.mq(wide) {
-  .p-sitemap__nav.c-nav > * {
+  .#{g.$pr}p-sitemap__nav.#{g.$pr}c-nav > * {
     flex-basis: calc( 33.33% - ( ( var(--mi-spacing-medium) * 2 ) / 3 ) );
   }
 }
 
-.p-sitemap__nav a {
+.#{g.$pr}p-sitemap__nav a {
   @include g.arrow();
 }
 
 @include g.mq(hover) {
 
-  .p-sitemap__nav :not(.current-menu-item) > a:hover {
+  .#{g.$pr}p-sitemap__nav :not(.current-menu-item) > a:hover {
     @include g.arrow-hover();
   }
 
 }
 
-.p-sitemap--inverse .p-sitemap__nav a {
+.#{g.$pr}p-sitemap--inverse .#{g.$pr}p-sitemap__nav a {
   @include g.arrow( $color: 'inverse' );
 }
 
@@ -70,7 +70,7 @@
 // first-level
 // ------------------------------
 
-.p-sitemap__nav > .menu-item > a {
+.#{g.$pr}p-sitemap__nav > .menu-item > a {
   font-size: var(--mi-font-size-large);
   font-weight: 700;
 }
@@ -79,15 +79,15 @@
 // second-level
 // ------------------------------
 
-.p-sitemap__nav .sub-menu {
+.#{g.$pr}p-sitemap__nav .sub-menu {
   padding-left: 1.25em;
 }
 
-.p-sitemap__nav .sub-menu .current-menu-item > a {
+.#{g.$pr}p-sitemap__nav .sub-menu .current-menu-item > a {
   font-weight: 700;
 }
 
-.p-sitemap__nav .sub-menu .menu-item {
+.#{g.$pr}p-sitemap__nav .sub-menu .menu-item {
   margin-top: 1.25em;
 }
 
@@ -95,7 +95,7 @@
 // third-level
 // ------------------------------
 
-.p-sitemap__nav .sub-menu > .menu-item:not(:last-child) .sub-menu {
+.#{g.$pr}p-sitemap__nav .sub-menu > .menu-item:not(:last-child) .sub-menu {
   margin-bottom: 1.5em;
 }
 

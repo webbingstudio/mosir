@@ -6,7 +6,7 @@
 //  - It always sticks to the top and right sides of the header.
 // ------------------------------
 
-.p-drawerToggle {
+.#{g.$pr}p-drawerToggle {
   @include g.position( fixed, 0, var(--mi-body-x-gap), n, n, 111 );
   margin-right: 0;
   padding-top: var(--mi-spacing-small); // top padding of header
@@ -14,7 +14,7 @@
 
 @include g.mq(wide) {
 
-  .p-drawerToggle {
+  .#{g.$pr}p-drawerToggle {
     right: 50%; // not `50vw`
     margin-right: calc( var( --mi-global-wide-size ) / -2 );
   }
@@ -22,14 +22,14 @@
 }
 
 // WordPress Admin bar
-.admin-bar .p-drawerToggle {
+.admin-bar .#{g.$pr}p-drawerToggle {
   margin-top: 46px;
 }
 
 @include g.mq(default) {
 
   // WordPress Admin bar
-  .admin-bar .p-drawerToggle {
+  .admin-bar .#{g.$pr}p-drawerToggle {
     margin-top: 32px;
   }
 

@@ -1,11 +1,11 @@
 @use "../global" as g;
 @use "sass:math";
 
-.l-container {
+.#{g.$pr}l-container {
   width: min( calc( 100vw - ( var(--mi-body-x-gap) * 2 ) ), var(--mi-global-wide-size) );
   margin-inline: auto;
 }
 
-.l-container--sm {
+.#{g.$pr}l-container--sm {
   width: min( calc( 100vw - ( var(--mi-body-x-gap) * 2 ) ), var(--mi-global-content-size) );
 }

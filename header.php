@@ -24,18 +24,18 @@
 			$mi_custom_logo_width = $mi_custom_logo_src[1];
 		?>
 		<?php if( is_front_page() ): ?>
-			<h1 class="l-header__contents__siteTitle p-siteTitle">
+			<h1 class="mi-l-header__contents__siteTitle mi-p-siteTitle">
 		<?php else: ?>
-			<p class="l-header__contents__siteTitle p-siteTitle">
+			<p class="mi-l-header__contents__siteTitle mi-p-siteTitle">
 				<a href="<?php bloginfo('url'); ?>">
 		<?php endif; ?>
 
 		<?php if( $mi_custom_logo_src && $mi_custom_logo_width === 1 ): ?>
-			<span class="p-siteTitle__logo"><?php echo '<img src="' . esc_url( $mi_custom_logo_src[0] ) . '" alt="'. get_bloginfo('name') .'">'; ?></span>
+			<span class="mi-p-siteTitle__logo"><?php echo '<img src="' . esc_url( $mi_custom_logo_src[0] ) . '" alt="'. get_bloginfo('name') .'">'; ?></span>
 		<?php elseif( $mi_custom_logo_src ): ?>
-			<span class="p-siteTitle__logo"><?php echo '<img src="' . esc_url( $mi_custom_logo_src[0] ) . '" alt="'. get_bloginfo('name') .'" width="' . $mi_custom_logo_src[1] . '" height="' . $mi_custom_logo_src[2] . '">'; ?></span>
+			<span class="mi-p-siteTitle__logo"><?php echo '<img src="' . esc_url( $mi_custom_logo_src[0] ) . '" alt="'. get_bloginfo('name') .'" width="' . $mi_custom_logo_src[1] . '" height="' . $mi_custom_logo_src[2] . '">'; ?></span>
 		<?php else: ?>
-			<span class="p-siteTitle__label"><?php bloginfo('name'); ?></span>
+			<span class="mi-p-siteTitle__label"><?php bloginfo('name'); ?></span>
 		<?php endif; ?>
 
 		<?php if( is_front_page() ): ?>

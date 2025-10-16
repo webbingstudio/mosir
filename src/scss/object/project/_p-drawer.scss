@@ -9,13 +9,13 @@
 // See: assets/js/theme.js
 // ------------------------------
 
-.p-drawer {
+.#{g.$pr}p-drawer {
   @include g.position( fixed, 0, n, n, 0, 101 );
   width: 100%;
   height: 0;
 }
 
-.p-drawer::after {
+.#{g.$pr}p-drawer::after {
   content: "";
   @include g.position( fixed, 0, n, n, 0, 102 );
   background-color: var(--mi-body-bg);
@@ -25,7 +25,7 @@
   transform-origin: top center;
 }
 
-.p-drawer__contents {
+.#{g.$pr}p-drawer__contents {
   overflow: hidden;
   @include g.position( relative, n, n, n, n, 103 );
   height: 0;
@@ -35,7 +35,7 @@
   transform-origin: center center;
 }
 
-.p-drawer__contents__inner {
+.#{g.$pr}p-drawer__contents__inner {
   @include g.flex(column, n, n, flex-start);
   gap: var(--mi-spacing-medium);
   padding-top: calc( var(--mi-drawer-toggle-width) + var(--mi-spacing-small) );
@@ -47,17 +47,17 @@
 // drawer: opening
 // ------------------------------
 
-.p-drawer.-is-opening {
+.#{g.$pr}p-drawer.-is-opening {
   height: auto;
 }
 
-.p-drawer.-is-opening::after {
+.#{g.$pr}p-drawer.-is-opening::after {
   opacity: 1;
   transform: scaleY(1);
   transition: transform 0.5s 0s ease-out;
 }
 
-.p-drawer.-is-opening .p-drawer__contents {
+.#{g.$pr}p-drawer.-is-opening .#{g.$pr}p-drawer__contents {
   overflow: hidden;
   height: auto;
   opacity: 1;
@@ -71,24 +71,24 @@
 // ------------------------------
 
 // Disable scrolling when the drawer menu is expanded
-body:has(.p-drawer[aria-hidden="false"]),
-body:has(.p-drawer.-is-opening),
-body:has(.p-drawer.-is-closing) {
+body:has(.#{g.$pr}p-drawer[aria-hidden="false"]),
+body:has(.#{g.$pr}p-drawer.-is-opening),
+body:has(.#{g.$pr}p-drawer.-is-closing) {
   overflow: hidden;
   height: 100dvh;
 }
 
 // need `:not(.-is-closing)`
-.p-drawer[aria-hidden="false"]:not(.-is-closing) {
+.#{g.$pr}p-drawer[aria-hidden="false"]:not(.-is-closing) {
   height: auto;
 }
 
-.p-drawer[aria-hidden="false"]:not(.-is-closing)::after {
+.#{g.$pr}p-drawer[aria-hidden="false"]:not(.-is-closing)::after {
   opacity: 1;
   transform: scaleY(1);
 }
 
-.p-drawer[aria-hidden="false"]:not(.-is-closing) .p-drawer__contents {
+.#{g.$pr}p-drawer[aria-hidden="false"]:not(.-is-closing) .#{g.$pr}p-drawer__contents {
   overflow-x: hidden;
   overflow-y: auto;
   height: 100dvh;
@@ -100,13 +100,13 @@ body:has(.p-drawer.-is-closing) {
 // drawer: closing
 // ------------------------------
 
-.p-drawer.-is-closing::after {
+.#{g.$pr}p-drawer.-is-closing::after {
   transform: scaleY(0);
   transition-duration: 0.5s;
   transition-delay: 0.1s;
 }
 
-.p-drawer.-is-closing .p-drawer__contents {
+.#{g.$pr}p-drawer.-is-closing .#{g.$pr}p-drawer__contents {
   overflow: hidden;
   opacity: 0;
   height: auto;
