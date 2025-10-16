@@ -1,0 +1,31 @@
+@use "../../global" as g;
+@use "sass:math";
+
+// ------------------------------
+// component > media
+//  - Image on the left and content on the right.
+// ------------------------------
+
+.c-media {
+  display: grid;
+  grid-template-columns: clamp( 20%, 10rem, 33.33% ) 1fr;
+  gap: var(--mi-spacing-small);
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+@include g.mq(default) {
+  .c-media {
+    grid-template-columns: clamp( 20%, 15rem, 33.33% ) 1fr;
+    gap: var(--mi-spacing-medium);
+  }
+}
+
+.c-media__image {
+  grid-column: 1 / 2;
+}
+
+.c-media__contents {
+  grid-column: 2 / 3;
+}

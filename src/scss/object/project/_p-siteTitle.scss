@@ -2,7 +2,7 @@
 @use "sass:math";
 
 .p-siteTitle {
-  @include g.flex(column, n, center, n);
+  @include g.flex(column, n, center, flex-start);
   margin: 0;
   line-height: var(--mi-line-height-none);
 }
@@ -51,8 +51,7 @@
 
   .p-siteTitle__logo > img,
   .p-siteTitle__logo > svg {
-    max-width: 15rem;
-    max-height: 100%;
+    max-width: 20rem;
   }
 
 }

@@ -4,11 +4,12 @@
 .l-header {
   position: relative;
   padding-top: var(--mi-spacing-small);
+  border-bottom: 0.0625rem solid var(--mi-border-default-light-color);
 }
 
 .l-header__contents {
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: auto auto;
   grid-template-rows: repeat( 2, auto );
   gap: var(--mi-spacing-small) var(--mi-spacing-medium);
 }

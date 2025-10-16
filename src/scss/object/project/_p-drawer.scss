@@ -3,8 +3,10 @@
 
 // ------------------------------
 // project > drawer
-//  - It always covers the entire visible area of ​​the window.
-//  - The menu's expansion changes depending on the aria-hidden attribute value.
+//  - It is normally hidden and covers the entire window when the menu is expanded.
+//  - It's compatible with all devices and can also be operated with a keyboard.
+//  - Opening and closing the menu, ARIA attributes, and disabling operations within the menu are controlled by JavaScript.
+// See: assets/js/theme.js
 // ------------------------------
 
 .p-drawer {
@@ -56,8 +58,7 @@
 }
 
 .p-drawer.-is-opening .p-drawer__contents {
-  overflow-x: hidden;
-  overflow-y: auto;
+  overflow: hidden;
   height: auto;
   opacity: 1;
   transform: translateY(0);
@@ -67,15 +68,17 @@
 
 // ------------------------------
 // drawer: open
-// need `:not(.-is-closing)`
 // ------------------------------
 
 // Disable scrolling when the drawer menu is expanded
-body:has(.p-drawer[aria-hidden="false"]) {
+body:has(.p-drawer[aria-hidden="false"]),
+body:has(.p-drawer.-is-opening),
+body:has(.p-drawer.-is-closing) {
   overflow: hidden;
   height: 100dvh;
 }
 
+// need `:not(.-is-closing)`
 .p-drawer[aria-hidden="false"]:not(.-is-closing) {
   height: auto;
 }

@@ -3,7 +3,7 @@
 
 // ------------------------------
 // project > sitemap
-//  - Small vertically aligned menu.
+//  - Vertically aligned menu.
 //  - Creates columns for wider windows.
 //  - Treats top-level buttons as subheadings.
 //  - Add an arrow to second-level button.
@@ -71,6 +71,7 @@
 // ------------------------------
 
 .p-sitemap__nav > .menu-item > a {
+  font-size: var(--mi-font-size-large);
   font-weight: 700;
 }
 
@@ -80,7 +81,6 @@
 
 .p-sitemap__nav .sub-menu {
   padding-left: 1.25em;
-  font-size: var(--mi-font-size-small);
 }
 
 .p-sitemap__nav .sub-menu .current-menu-item > a {

@@ -306,10 +306,10 @@
       "padding": {
         "top": "0",
         "bottom": "0",
-        "left": "var(--wp--preset--spacing--20)",
-        "right": "var(--wp--preset--spacing--20)"
+        "left": "var(--wp--preset--font-size--medium)",
+        "right": "var(--wp--preset--font-size--medium)"
       },
-			"blockGap": "var(--wp--preset--spacing--20)"
+			"blockGap": "var(--wp--preset--font-size--medium)"
     }
 	},
 	"version": 3,

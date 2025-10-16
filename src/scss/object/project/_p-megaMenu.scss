@@ -33,7 +33,7 @@
 
 .p-megaMenu__nav > .menu-item > a::after {
   content: "";
-  @include g.position(absolute, 100%, 0, n, n);
+  @include g.position(absolute, n, 0, -0.0625rem, n);
   width: 100%;
   height: 0.125rem;
   background-color: var(--mi-ui-default-accent-color);
@@ -61,7 +61,7 @@
 }
 
 .p-megaMenu__nav > .menu-item > .sub-menu {
-  @include g.position(absolute, 100%, n, n, 0, auto);
+  @include g.position(absolute, 100%, n, n, 0, n);
   @include g.flex(n, wrap, flex-start, flex-start);
   gap: var(--mi-spacing-small);
   width: 100%;
@@ -72,7 +72,7 @@
 
 .p-megaMenu__nav > .menu-item > .sub-menu::after {
   content: "";
-  @include g.position(absolute, 0, n, n, 0, 13);
+  @include g.position(absolute, 0, n, n, 0, 11);
   width: 100%;
   height: 100%;
   background-color: var(--mi-body-bg);
@@ -85,7 +85,7 @@
 }
 
 .p-megaMenu__nav > .menu-item > .sub-menu > * {
-  @include g.position(relative, n, n, n, n, 14);
+  @include g.position(relative, n, n, n, n, 12);
   overflow: hidden;
   height: 0;
   opacity: 0;
@@ -109,7 +109,7 @@
 
   .p-megaMenu__nav > .menu-item:hover::after {
     content: "";
-    @include g.position(absolute, n, n, 0, 0, 12);
+    @include g.position(absolute, n, n, 0, 0, 13);
     width: 100%;
     height: 1rem; // shadow depth + buffer
     background-color: var(--mi-body-bg);

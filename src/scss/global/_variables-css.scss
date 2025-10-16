@@ -154,10 +154,11 @@
   --mi-ui-default-hover-bg: transparent;
   --mi-ui-inverse-hover-bg: transparent;
 
-  --mi-body-x-gap: 1rem;
+  --mi-body-x-gap: var(--wp--preset--font-size--medium);
+
   --mi-drawer-toggle-width: 2.75rem;
   --mi-nav-min-height: 2.75rem;
   --mi-nav-line-height: var(--mi-line-height-sm);
   --mi-nav-default-transition: all 0.5s;
-  --mi-nav-cubic-transition: all 0.5s 0s cubic-bezier(0.16, 1, 0.3, 1);
+  --mi-nav-cubic-transition: all 0.5s 0s cubic-bezier(0.65, 0, 0.35, 1);
 }
