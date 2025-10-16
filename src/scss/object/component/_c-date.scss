@@ -1,0 +1,8 @@
+@use "../../global" as g;
+@use "sass:math";
+
+.#{g.$pr}c-date {
+  color: var(--mi-color-default-light);
+  font-size: var(--mi-font-size-small);
+  line-height: var(--mi-line-height-none);
+}

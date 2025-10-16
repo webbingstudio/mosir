@@ -1,0 +1,21 @@
+@use "../../global" as g;
+@use "sass:math";
+
+// ------------------------------
+// project > labels
+// ------------------------------
+
+.#{g.$pr}p-labels {
+  @include g.flex( n, n, flex-start, n );
+  gap: var(--mi-spacing-x-small);
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.#{g.$pr}p-labels > * {
+    flex-grow: 0;
+    flex-shrink: 1;
+    margin: 0;
+    padding: 0;
+}

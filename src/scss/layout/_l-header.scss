@@ -9,7 +9,7 @@
 
 .#{g.$pr}l-header__contents {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: repeat( 2, auto );
   grid-template-rows: repeat( 2, auto );
   gap: var(--mi-spacing-small) var(--mi-spacing-medium);
 }

@@ -25,7 +25,7 @@
 				$mi_post_terms = get_the_terms($post->ID, $mi_term);
 			?>
 				<?php if ( $mi_post_terms ) : ?>
-				<ul class="mi-c-flex">
+				<ul class="mi-p-labels">
 					<?php
 						$mi_post_terms = array_slice($mi_post_terms, 0, 3);
 						foreach ( $mi_post_terms as $taxonomy ) :
@@ -36,6 +36,6 @@
 				<?php endif; ?>
 			<?php endif; ?>
 		<?php endif; ?>
-		<p class="mi-c-title mi-c-title--lv4"><?php the_title(); ?></p>
+		<p class="mi-c-title"><?php the_title(); ?></p>
 	</div>
 </a>

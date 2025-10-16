@@ -1,0 +1,74 @@
+@use "../../global" as g;
+@use "sass:math";
+
+// ------------------------------
+// project > posts
+//  - Repeatedly display posts.
+// ------------------------------
+
+.#{g.$pr}p-posts {
+  @include g.flex(column, n, flex-start, stretch);
+  gap: var(--mi-spacing-small);
+}
+
+
+// ------------------------------
+// list
+// ------------------------------
+
+
+// ------------------------------
+// headline
+// ------------------------------
+
+
+// ------------------------------
+// media
+// ------------------------------
+
+.#{g.$pr}p-posts.#{g.$pr}p-posts--media a.#{g.$pr}c-media {
+  color: inherit;
+  text-decoration: none;
+}
+
+.#{g.$pr}p-posts.#{g.$pr}p-posts--media .#{g.$pr}c-media__image {
+  background-color: var(--mi-color-default-dark);
+}
+
+.#{g.$pr}p-posts.#{g.$pr}p-posts--media .#{g.$pr}c-media__image > * {
+  transition: var(--mi-nav-default-transition);
+}
+
+.#{g.$pr}p-posts.#{g.$pr}p-posts--media .#{g.$pr}c-media__contents {
+  @include g.flex( n, wrap, flex-start, flex-start );
+  gap: var(--mi-spacing-small) var(--mi-spacing-medium);
+}
+
+.#{g.$pr}p-posts.#{g.$pr}p-posts--media > * {
+  flex-grow: 0;
+}
+
+.#{g.$pr}p-posts.#{g.$pr}p-posts--media .#{g.$pr}c-date {
+}
+
+.#{g.$pr}p-posts.#{g.$pr}p-posts--media .#{g.$pr}c-labels {
+}
+
+.#{g.$pr}p-posts.#{g.$pr}p-posts--media .#{g.$pr}c-title {
+  width: 100%;
+  text-decoration: underline;
+}
+
+@include g.mq(hover) {
+
+  .#{g.$pr}p-posts.#{g.$pr}p-posts--media .#{g.$pr}c-media:hover .#{g.$pr}c-media__image > * {
+    opacity: 0.7;
+  }
+
+}
+
+
+// ------------------------------
+// summary
+// ------------------------------
+

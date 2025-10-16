@@ -15,13 +15,6 @@
   list-style-type: none;
 }
 
-@include g.mq(default) {
-  .#{g.$pr}c-media {
-    grid-template-columns: clamp( 20%, 15rem, 33.33% ) 1fr;
-    gap: var(--mi-spacing-medium);
-  }
-}
-
 .#{g.$pr}c-media__image {
   grid-column: 1 / 1;
 }

@@ -1,0 +1,48 @@
+@use "../../global" as g;
+@use "sass:math";
+
+// ------------------------------
+// component > title
+//  - A heading that assumes a string.
+//  - The default is the same as the current font size.
+//  - Adding the `lv-**` class will add decoration according to the heading level.
+// ------------------------------
+
+.#{g.$pr}c-title {
+  font-weight: bold;
+  color: inherit;
+  font-family: var(--mi-font-family-default);
+  line-height: var(--mi-line-height-sm);
+}
+
+.#{g.$pr}c-title a {
+  color: currentColor;
+}
+
+.#{g.$pr}c-title.#{g.$pr}c-title--center {
+  text-align: center;
+}
+
+.#{g.$pr}c-title.#{g.$pr}c-title--lv1 {
+  font-size: var(--mi-font-size-3-x-large);
+}
+
+.#{g.$pr}c-title.#{g.$pr}c-title--lv2 {
+  font-size: var(--mi-font-size-2-x-large);
+}
+
+.#{g.$pr}c-title.#{g.$pr}c-title--lv3 {
+  font-size: var(--mi-font-size-x-large);
+}
+
+.#{g.$pr}c-title.#{g.$pr}c-title--lv4 {
+  font-size: var(--mi-font-size-large);
+}
+
+.#{g.$pr}c-title.#{g.$pr}c-title--lv5 {
+  font-size: var(--mi-font-size-medium);
+}
+
+.#{g.$pr}c-title.#{g.$pr}c-title--lv6 {
+  font-size: var(--mi-font-size-small);
+}

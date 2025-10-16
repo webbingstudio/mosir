@@ -1,0 +1,31 @@
+@use "../../global" as g;
+@use "sass:math";
+
+// ------------------------------
+// component > label
+//  - A small label that indicates classification, instructions, or other information.
+// ------------------------------
+
+.#{g.$pr}c-label {
+  @include g.flex(n, n, n, center);
+  padding: 0.25em 0.5em;
+  background-color: var(--mi-color-default-light);
+  border: 0.0625rem solid var(--mi-color-default-light);
+  color: var(--mi-ui-inverse-color);
+  font-size: var(--mi-font-size-x-small);
+  line-height: var(--mi-line-height-none);
+  border-radius: var(--mi-border-radius-sm);
+}
+
+@include g.mq(hover) {
+
+  a.#{g.$pr}c-label:hover {
+    color: var(--mi-ui-default-color);
+    background-color: var(--mi-ui-default-hover-bg);
+  }
+
+}
+
+a.#{g.$pr}c-label:focus {
+  color: var(--mi-ui-default-color);
+}

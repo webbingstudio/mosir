@@ -27,8 +27,8 @@ $mi_query_args = array(
 $mi_q = new WP_Query( $mi_query_args );
 ?>
 <?php if( $mi_q->have_posts() ): ?>
-<div class="mi-p-posts mi-p-posts--media mi-p-home-recent">
-	<div class="mi-p-posts__container mi-l-container mi-l-container--sm">
+<div class="mi-p-home-recent">
+	<div class="mi-p-home-recent__posts mi-p-posts mi-p-posts--media mi-l-container mi-l-container--sm">
 		<?php while( $mi_q->have_posts() ) : $mi_q->the_post(); ?>
 			<?php get_template_part( 'template-parts/loop', 'media' ); ?>
 		<?php endwhile; ?>
