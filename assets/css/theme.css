@@ -130,7 +130,8 @@
  */
 :where(html) {
   -webkit-text-size-adjust: none;
-  text-size-adjust: none;
+  -moz-text-size-adjust: none;
+       text-size-adjust: none;
 }
 
 /**
@@ -331,6 +332,9 @@
  *
  * See https://rtlstyling.com/posts/rtl-styling#form-inputs
  */
+:where([type=tel], [type=url], [type=email], [type=number]):not(:-moz-placeholder) {
+  direction: ltr;
+}
 :where([type=tel], [type=url], [type=email], [type=number]):not(:placeholder-shown) {
   direction: ltr;
 }
@@ -665,13 +669,16 @@ ul.mi-c-nav,
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
 }
 
 .mi-c-toggleButton {
   -webkit-appearance: none;
-  appearance: none;
+  -moz-appearance: none;
+       appearance: none;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -693,7 +700,6 @@ ul.mi-c-nav,
 .mi-c-toggleButton__label {
   position: absolute;
   clip: rect(1px, 1px, 1px, 1px);
-  -webkit-clip-path: inset(0px 0px 99.9% 99.9%);
   clip-path: inset(0px 0px 99.9% 99.9%);
   overflow: hidden;
   height: 1px;
@@ -999,7 +1005,8 @@ body:has(.mi-p-drawer.-is-closing) {
 }
 .mi-p-horizontalMenu__nav.mi-c-nav {
   justify-content: center;
-  column-gap: var(--mi-spacing-medium);
+  -moz-column-gap: var(--mi-spacing-medium);
+       column-gap: var(--mi-spacing-medium);
 }
 
 .mi-p-horizontalMenu:not(.mi-p-horizontalMenu--arrowed) .menu-item + .menu-item {
@@ -2192,4 +2199,4 @@ body:has(.mi-p-drawer.-is-closing) {
 
 .wp-site-blocks .wp-block-button {
   width: auto;
-}
+}/*# sourceMappingURL=theme.css.map */
