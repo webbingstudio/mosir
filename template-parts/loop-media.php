@@ -12,7 +12,7 @@
 		<?php if ( has_post_thumbnail() ) : ?>
 			<?php the_post_thumbnail( 'thumbnail' ); ?>
 		<?php else : ?>
-			<img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/noimage_thumbnail.jpg' ) ); ?>" alt="">
+			<img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/common/noimage.jpg' ) ); ?>" alt="">
 		<?php endif; ?>
 	</figure>
 	<div class="mi-c-media__contents">
