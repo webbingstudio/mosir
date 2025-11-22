@@ -2,6 +2,7 @@
 @use "sass:math";
 
 .#{g.$pr}c-date {
+  display: block;
   color: var(--mi-color-default-light);
   font-size: var(--mi-font-size-small);
   line-height: var(--mi-line-height-none);

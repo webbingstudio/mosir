@@ -14,7 +14,6 @@
   color: var(--mi-ui-inverse-color);
   font-size: var(--mi-font-size-x-small);
   line-height: var(--mi-line-height-none);
-  border-radius: var(--mi-border-radius-sm);
 }
 
 @include g.mq(hover) {
@@ -28,4 +27,9 @@
 
 a.#{g.$pr}c-label:focus {
   color: var(--mi-ui-default-color);
+}
+
+.#{g.$pr}c-label.#{g.$pr}c-label--primary {
+  background-color: var(--mi-color-primary);
+  border-color: var(--mi-color-primary);
 }

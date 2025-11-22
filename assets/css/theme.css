@@ -543,6 +543,7 @@ a:focus {
 }
 
 .mi-c-date {
+  display: block;
   color: var(--mi-color-default-light);
   font-size: var(--mi-font-size-small);
   line-height: var(--mi-line-height-none);
@@ -577,7 +578,6 @@ a:focus {
   color: var(--mi-ui-inverse-color);
   font-size: var(--mi-font-size-x-small);
   line-height: var(--mi-line-height-none);
-  border-radius: var(--mi-border-radius-sm);
 }
 
 @media (any-hover: hover) {
@@ -588,6 +588,11 @@ a:focus {
 }
 a.mi-c-label:focus {
   color: var(--mi-ui-default-color);
+}
+
+.mi-c-label.mi-c-label--primary {
+  background-color: var(--mi-color-primary);
+  border-color: var(--mi-color-primary);
 }
 
 .mi-c-nav {
