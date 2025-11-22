@@ -8,7 +8,7 @@
  */
 ?>
 <a class="mi-p-posts__item mi-c-media" href="<?php the_permalink(); ?>">
-	<figure class="mi-c-media__image mi-c-thumbnail">
+	<figure class="mi-c-media__image mi-c-picture">
 		<?php if ( has_post_thumbnail() ) : ?>
 			<?php the_post_thumbnail( 'thumbnail' ); ?>
 		<?php else : ?>
@@ -22,15 +22,15 @@
 			<?php
 			if ( $post->post_type === 'post' ) :
 				$mi_term = 'category';
-				$mi_post_terms = get_the_terms($post->ID, $mi_term);
+				$mi_post_terms = get_the_terms( $post->ID, $mi_term );
 			?>
 				<?php if ( $mi_post_terms ) : ?>
 				<ul class="mi-p-labels">
 					<?php
-						$mi_post_terms = array_slice($mi_post_terms, 0, 3);
+						$mi_post_terms = array_slice( $mi_post_terms, 0, 3 );
 						foreach ( $mi_post_terms as $taxonomy ) :
 					?>
-						<li><span class="mi-c-label mi-c-label--term-<?php esc_html_e( $taxonomy->slug ); ?>"><?php esc_html_e( $taxonomy->name ); ?></span></li>
+						<li><span class="mi-c-label mi-c-label--primary mi-c-label--term-<?php esc_html_e( $taxonomy->slug ); ?>"><?php esc_html_e( $taxonomy->name ); ?></span></li>
 					<?php endforeach; ?>
 				</ul>
 				<?php endif; ?>

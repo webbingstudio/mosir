@@ -666,11 +666,11 @@ ul.mi-c-nav,
   flex-shrink: 1;
 }
 
-.mi-c-thumbnail {
+.mi-c-picture {
   margin: 0;
 }
 
-.mi-c-thumbnail img {
+.mi-c-picture img {
   display: block;
   width: 100%;
   height: 100%;

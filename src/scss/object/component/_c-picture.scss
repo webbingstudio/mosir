@@ -2,15 +2,15 @@
 @use "sass:math";
 
 // ------------------------------
-// component > thumbnail
+// component > picture
 //  - Position the image so that it covers the center of the element.
 // ------------------------------
 
-.#{g.$pr}c-thumbnail {
+.#{g.$pr}c-picture {
   margin: 0;
 }
 
-.#{g.$pr}c-thumbnail img {
+.#{g.$pr}c-picture img {
   display: block;
   width: 100%;
   height: 100%;
