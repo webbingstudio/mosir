@@ -1,0 +1,20 @@
+@use "../../global" as g;
+@use "sass:math";
+
+// ------------------------------
+// project > sectionHeader
+//  - The header part of a section, intended to contain a heading and caption.
+// ------------------------------
+
+.#{g.$pr}p-sectionHeader {
+  @include g.flex(column, n, flex-start, center);
+  row-gap: var(--mi-spacing-x-small);
+}
+
+.#{g.$pr}p-sectionHeader__title {
+    margin: 0;
+}
+
+.#{g.$pr}p-sectionHeader__subTitle {
+    margin: 0;
+}

@@ -1,0 +1,64 @@
+@use "../../../global" as g;
+@use "sass:math";
+
+// ------------------------------
+// project > home-mainVisual
+// ------------------------------
+
+.#{g.$pr}p-home-mainVisual {
+    position: relative;
+}
+
+// .#{g.$pr}p-home-mainVisual__image {
+// }
+
+.#{g.$pr}p-home-mainVisual__image img {
+    background-color: #f4f4f4;
+    object-position: bottom center;
+
+    @include g.mq(wide) {
+        max-height: 768px;
+    }
+
+    @media screen and (min-width:1920px) {
+        object-fit: contain;
+    }
+
+}
+
+.#{g.$pr}p-home-mainVisual__contents {
+    width: 100%;
+    @include g.position( absolute, 30%, n, n, 50%, n );
+    transform: translateX( -50% );
+
+    @include g.mq(default-max) {
+        padding-left: 5vw;
+    }
+
+    @include g.mq(default) {
+        width: 50vw;
+        max-width: 960px;
+        top: var(--mi-spacing-large);
+    }
+
+}
+
+.#{g.$pr}p-home-mainVisual__title {
+    margin: 0;
+    font-size: ( 40 / 390 * 100vw );
+    line-height: var(--mi-line-height-none);
+
+    @include g.mq(default) {
+        font-size: clamp( 40px, ( 40 / 1280 * 100vw ), 60px );
+    }
+}
+
+.#{g.$pr}p-home-mainVisual__tagline {
+    margin: 2em 0 0;
+    font-size: ( 16 / 390 * 100vw );
+    line-height: var(--mi-line-height-sm);
+
+    @include g.mq(default) {
+        font-size: clamp( 16px, ( 16 / 1280 * 100vw ), 24px );
+    }
+}
