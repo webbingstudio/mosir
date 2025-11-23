@@ -8,7 +8,44 @@
 
 .#{g.$pr}p-posts {
   @include g.flex(column, n, flex-start, stretch);
-  gap: var(--mi-spacing-small);
+  gap: var(--mi-spacing-medium) var(--mi-spacing-small);
+}
+
+
+// ------------------------------
+// card
+// ------------------------------
+
+.#{g.$pr}p-posts.#{g.$pr}p-posts--card {
+
+  @include g.mq(default) {
+    @include g.flex( n, wrap, n, n );
+  }
+
+}
+
+.#{g.$pr}p-posts.#{g.$pr}p-posts--card > * {
+
+  @include g.mq(default-max) {
+    max-width: ( 480 / 16 * 1rem );
+    margin-inline: auto;
+  }
+
+  @include g.mq(default) {
+    flex-grow: 0;
+    width: calc( 33.3333% - ( var(--mi-spacing-medium) * 2 / 3 ) );
+  }
+
+}
+
+.#{g.$pr}p-posts.#{g.$pr}p-posts--card a.#{g.$pr}p-card__inner {
+  color: inherit;
+  text-decoration: none;
+}
+
+.#{g.$pr}p-posts.#{g.$pr}p-posts--card .#{g.$pr}c-title {
+  width: 100%;
+  text-decoration: underline;
 }
 
 
@@ -31,19 +68,7 @@
   text-decoration: none;
 }
 
-// .#{g.$pr}p-posts.#{g.$pr}p-posts--media .#{g.$pr}c-date {
-// }
-
-// .#{g.$pr}p-posts.#{g.$pr}p-posts--media .#{g.$pr}c-labels {
-// }
-
 .#{g.$pr}p-posts.#{g.$pr}p-posts--media .#{g.$pr}c-title {
   width: 100%;
   text-decoration: underline;
 }
-
-
-// ------------------------------
-// summary
-// ------------------------------
-
