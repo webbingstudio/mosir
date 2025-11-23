@@ -1,0 +1,50 @@
+@use "../../global" as g;
+@use "sass:math";
+
+// ------------------------------
+// project > card
+// ------------------------------
+
+// .#{g.$pr}p-card {
+// }
+
+.#{g.$pr}p-card__inner {
+  @include g.flex( column, n, flex-start, stretch );
+  gap: var(--mi-spacing-x-small);
+}
+
+a.#{g.$pr}p-card__inner {
+    color: currentColor;
+    text-decoration: none;
+}
+
+@include g.mq(hover) {
+
+  a.#{g.$pr}p-card__inner:hover {
+    color: var(--mi-body-color);
+  }
+
+  a.#{g.$pr}p-card__inner:hover .#{g.$pr}p-card__image {
+    opacity: 0.7;
+    transition: var(--mi-nav-default-transition);
+  }
+
+}
+
+.#{g.$pr}p-card__image {
+}
+
+.#{g.$pr}p-card__contents {
+  @include g.flex( column, n, flex-start, stretch );
+  gap: var(--mi-spacing-x-small);
+}
+
+.#{g.$pr}p-card__contents > * {
+  margin: 0;
+}
+
+// .#{g.$pr}p-card__title {
+// }
+
+// .#{g.$pr}p-card__body {
+// }
