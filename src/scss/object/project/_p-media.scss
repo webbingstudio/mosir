@@ -28,13 +28,13 @@
 
 .#{g.$pr}p-media__contents {
   grid-column: 2 / 2;
-  @include g.flex( n, wrap, flex-start, flex-start );
+  @include g.flex( column, n, flex-start, flex-start );
   gap: var(--mi-spacing-small) var(--mi-spacing-medium);
 }
 
 .#{g.$pr}p-media__meta {
-  @include g.flex( n, wrap, flex-start, flex-start );
-  gap: var(--mi-spacing-small) var(--mi-spacing-medium);
+  @include g.flex( n, wrap, flex-start, center );
+  gap: var(--mi-spacing-small);
 }
 
 .#{g.$pr}p-media__meta > * {
@@ -48,4 +48,8 @@
     transform: scale( 1.1 );
   }
 
+}
+
+.#{g.$pr}p-media__title {
+  margin: 0;
 }

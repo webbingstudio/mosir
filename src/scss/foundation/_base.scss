@@ -23,7 +23,10 @@ body {
 a {
   color: var(--mi-link-color);
 	text-decoration-thickness: 0.0625em !important;
-	text-underline-offset: .1em;
+  // Asian languages ​​do not have the concept of a "baseline,"
+  // so if you leave the underline at the default position,
+  // the text and the underline will overlap.
+	text-underline-offset: .2em;
 }
 
 @include g.mq(hover) {
@@ -31,7 +34,7 @@ a {
   a:hover {
     color: var(--mi-link-hover-color);
     text-decoration-line: underline;
-    text-underline-offset: 0.25em;
+    text-underline-offset: 0.3em;
   }
 
 }

@@ -9,7 +9,7 @@
 ?>
 <article class="mi-p-posts__item mi-p-media">
 	<a class="mi-p-media__inner" href="<?php the_permalink(); ?>">
-		<figure class="mi-p-media__image mi-c-picture">
+		<figure class="mi-p-media__image mi-c-picture mi-c-picture--1to1">
 			<?php if ( has_post_thumbnail() ) : ?>
 				<?php the_post_thumbnail( 'thumbnail' ); ?>
 			<?php else : ?>
@@ -18,6 +18,7 @@
 		</figure>
 		<div class="mi-p-media__contents">
 			<?php if ( $post->post_type !== 'page' ) : ?>
+			<div class="mi-p-media__meta">
 				<time class="mi-c-date" datetime="<?php the_time('c'); ?>"><?php the_time( get_option( 'date_format' ) ); ?></time>
 
 				<?php
@@ -36,8 +37,9 @@
 					</ul>
 					<?php endif; ?>
 				<?php endif; ?>
+			</div>
 			<?php endif; ?>
-			<p class="mi-c-title"><?php the_title(); ?></p>
+			<p class="mi-p-media__title mi-c-title"><?php the_title(); ?></p>
 		</div>
 	</a>
 </article>
