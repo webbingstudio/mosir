@@ -1,0 +1,51 @@
+@use "../../global" as g;
+@use "sass:math";
+
+// ------------------------------
+// project > media
+//  - Image on the left and content on the right.
+// ------------------------------
+
+.#{g.$pr}p-media {
+}
+
+.#{g.$pr}p-media__inner {
+  display: grid;
+  grid-template-columns: clamp( 20%, 10rem, 33.33% ) 1fr;
+  gap: var(--mi-spacing-small);
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.#{g.$pr}p-media__image {
+  grid-column: 1 / 1;
+}
+
+.#{g.$pr}p-media__image img {
+  transition: var(--mi-nav-default-transition);
+}
+
+.#{g.$pr}p-media__contents {
+  grid-column: 2 / 2;
+  @include g.flex( n, wrap, flex-start, flex-start );
+  gap: var(--mi-spacing-small) var(--mi-spacing-medium);
+}
+
+.#{g.$pr}p-media__meta {
+  @include g.flex( n, wrap, flex-start, flex-start );
+  gap: var(--mi-spacing-small) var(--mi-spacing-medium);
+}
+
+.#{g.$pr}p-media__meta > * {
+  flex-grow: 0;
+}
+
+@include g.mq(hover) {
+
+  a.#{g.$pr}p-media__inner:hover .#{g.$pr}p-media__image img {
+    opacity: 0.8;
+    transform: scale( 1.1 );
+  }
+
+}

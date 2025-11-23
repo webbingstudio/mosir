@@ -7,9 +7,11 @@
 // ------------------------------
 
 .#{g.$pr}c-picture {
+  overflow: hidden;
   display: block;
   width: 100%;
   margin: 0;
+  background-color: var(--mi-color-white);
 }
 
 .#{g.$pr}c-picture img {
