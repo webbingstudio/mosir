@@ -1,0 +1,14 @@
+@use "../../../global" as g;
+@use "sass:math";
+
+// ------------------------------
+// project > home-recent
+// ------------------------------
+
+.#{g.$pr}p-home-recent {
+    padding-block: var(--mi-spacing-x-large);
+}
+
+.#{g.$pr}p-home-recent__contents {
+    margin-top: var(--mi-spacing-large);
+}
