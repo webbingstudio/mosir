@@ -16,20 +16,39 @@
   line-height: var(--mi-line-height-none);
 }
 
+a.#{g.$pr}c-label {
+  text-decoration: none;
+}
+
 @include g.mq(hover) {
 
   a.#{g.$pr}c-label:hover {
     color: var(--mi-ui-default-color);
-    background-color: var(--mi-ui-default-hover-bg);
+    background-color: var(--mi-color-white);
   }
 
 }
 
 a.#{g.$pr}c-label:focus {
   color: var(--mi-ui-default-color);
+  background-color: var(--mi-color-white);
 }
 
 .#{g.$pr}c-label.#{g.$pr}c-label--primary {
   background-color: var(--mi-color-primary);
   border-color: var(--mi-color-primary);
+}
+
+@include g.mq(hover) {
+
+  a.#{g.$pr}c-label.#{g.$pr}c-label--primary:hover {
+    color: var(--mi-color-primary);
+    background-color: var(--mi-color-white);
+  }
+
+}
+
+a.#{g.$pr}c-label.#{g.$pr}c-label--primary:focus {
+  color: var(--mi-color-primary);
+  background-color: var(--mi-color-white);
 }
