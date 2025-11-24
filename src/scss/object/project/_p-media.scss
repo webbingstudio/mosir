@@ -11,7 +11,7 @@
 
 .#{g.$pr}p-media__inner {
   display: grid;
-  grid-template-columns: clamp( 20%, 10rem, 33.33% ) 1fr;
+  grid-template-columns: min( 15rem, 33.33% ) 1fr;
   gap: var(--mi-spacing-small);
   margin: 0;
   padding: 0;
@@ -29,7 +29,7 @@
 .#{g.$pr}p-media__contents {
   grid-column: 2 / 2;
   @include g.flex( column, n, flex-start, flex-start );
-  gap: var(--mi-spacing-small) var(--mi-spacing-medium);
+  gap: var(--mi-spacing-x-small);
 }
 
 .#{g.$pr}p-media__meta {
@@ -50,6 +50,11 @@
 
 }
 
-.#{g.$pr}p-media__title {
-  margin: 0;
-}
+// .#{g.$pr}p-media__title {
+// }
+
+// .#{g.$pr}p-media__date {
+// }
+
+// .#{g.$pr}p-media__summary {
+// }
