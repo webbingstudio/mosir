@@ -7,13 +7,14 @@
 // ------------------------------
 
 .#{g.$pr}c-label {
-  @include g.flex(n, n, n, center);
+  @include g.flex(n, n, center, center);
   padding: 0.25em 0.5em;
   background-color: var(--mi-color-default-light);
   border: 0.0625rem solid var(--mi-color-default-light);
   color: var(--mi-ui-inverse-color);
-  font-size: var(--mi-font-size-x-small);
-  line-height: var(--mi-line-height-none);
+  font-size: var(--mi-font-size-2-x-small);
+  line-height: var(--mi-line-height-xs);
+  text-align: center;
 }
 
 a.#{g.$pr}c-label {
