@@ -9,6 +9,8 @@
 // ------------------------------
 
 .#{g.$pr}c-title {
+  display: block;
+  margin: 0;
   font-weight: bold;
   color: inherit;
   font-family: var(--mi-font-family-default);

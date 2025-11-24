@@ -1,0 +1,10 @@
+@use "../../global" as g;
+@use "sass:math";
+
+.#{g.$pr}c-summary {
+  display: block;
+  margin: 0;
+  color: var(--mi-color-default);
+  font-size: var(--mi-font-size-small);
+  line-height: var(--mi-line-height-sm);
+}
