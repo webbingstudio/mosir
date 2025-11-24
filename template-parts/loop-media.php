@@ -9,7 +9,7 @@
 ?>
 <article class="mi-p-posts__item mi-p-media">
 	<a class="mi-p-media__inner" href="<?php the_permalink(); ?>">
-		<figure class="mi-p-media__image mi-c-picture mi-c-picture--1to1">
+		<figure class="mi-p-media__image mi-c-picture mi-c-picture--3to2">
 			<?php if ( has_post_thumbnail() ) : ?>
 				<?php the_post_thumbnail( 'thumbnail' ); ?>
 			<?php else : ?>
