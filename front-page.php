@@ -28,7 +28,70 @@ get_header();
 
 	<?php
 	// ==============================
-	// Recent pages(card)
+	// Recent posts(headline)
+	// ==============================
+
+	$mi_args = array(
+		'post_type'  => 'post',
+		'posts_per_page'  => 5,
+		'orderby' => 'date',
+		'order' => 'DESC'
+	);
+	$mi_q = new WP_Query( $mi_args );
+	?>
+	<?php if( $mi_q->have_posts() ): ?>
+	<section class="mi-p-home-headline">
+		<div class="mi-p-home-headline__inner mi-l-container">
+			<div class="mi-p-home-headline__header mi-p-sectionHeader">
+				<p class="mi-p-sectionHeader__title mi-c-title mi-c-title--lv2">投稿_ヘッドライン</p>
+				<p lang="en" class="mi-p-sectionHeader__subTitle mi-c-title mi-c-title--lv5">headline</p>
+			</div>
+			<div class="mi-p-home-headline__contents">
+				<div class="mi-p-home-headline__posts mi-p-posts mi-p-posts--headline">
+				<?php while( $mi_q->have_posts() ) : $mi_q->the_post(); ?>
+					<?php get_template_part( 'template-parts/loop', 'headline' ); ?>
+				<?php endwhile; ?>
+				</div>
+			</div>
+		</div>
+	</section>
+	<?php endif; wp_reset_query(); unset( $mi_q, $mi_args ); ?>
+
+	<?php
+	// ==============================
+	// Recent posts(headline-no-meta)
+	// ==============================
+
+	$mi_args = array(
+		'post_type'  => 'post',
+		'posts_per_page'  => 5,
+		'orderby' => 'date',
+		'order' => 'ASC'
+	);
+	$mi_q = new WP_Query( $mi_args );
+	?>
+	<?php if( $mi_q->have_posts() ): ?>
+	<section class="mi-p-home-headline">
+		<div class="mi-p-home-headline__inner mi-l-container">
+			<div class="mi-p-home-headline__header mi-p-sectionHeader">
+				<p class="mi-p-sectionHeader__title mi-c-title mi-c-title--lv2">投稿_ヘッドラインメタなし</p>
+				<p lang="en" class="mi-p-sectionHeader__subTitle mi-c-title mi-c-title--lv5">headline-no-meta</p>
+			</div>
+			<div class="mi-p-home-headline__contents">
+				<div class="mi-p-home-recent__posts mi-p-posts mi-p-posts--headline">
+				<?php while( $mi_q->have_posts() ) : $mi_q->the_post(); ?>
+					<?php get_template_part( 'template-parts/loop', 'headline-no-meta' ); ?>
+				<?php endwhile; ?>
+				</div>
+			</div>
+		</div>
+	</section>
+	<?php endif; wp_reset_query(); unset( $mi_q, $mi_args ); ?>
+
+
+	<?php
+	// ==============================
+	// Recent posts(card)
 	// ==============================
 
 	$mi_args = array(
@@ -61,7 +124,7 @@ get_header();
 
 	<?php
 	// ==============================
-	// Recent pages(card-no-date)
+	// Recent posts(card-no-meta)
 	// ==============================
 
 	$mi_args = array(
