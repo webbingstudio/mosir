@@ -12,23 +12,6 @@ get_header();
 
 	<?php
 	// ==============================
-	// Main visual
-	// ==============================
-	?>
-	<div class="mi-p-home-mainVisual">
-		<picture class="mi-p-home-mainVisual__image mi-c-picture">
-			<source media="(min-width:1200px)" srcset="<?php echo esc_attr( get_theme_file_uri( 'assets/images/home/mainvisual_25to10.jpg' ) ); ?> 1920w" sizes="(max-width:1919px) 100vw, 1920px">
-			<source media="(min-width:768px)" srcset="<?php echo esc_attr( get_theme_file_uri( 'assets/images/home/mainvisual_16to9.jpg' ) ); ?> 1200w" sizes="(max-width:1023px) 100vw, 1200px">
-			<img src="<?php echo esc_attr( get_theme_file_uri( 'assets/images/home/mainvisual_2to3.jpg' ) ); ?>" width="800" height="1200" alt="">
-		</picture>
-		<div class="mi-p-home-mainVisual__contents">
-			<p lang="en" class="mi-p-home-mainVisual__title">minimalism</p>
-			<p class="mi-p-home-mainVisual__tagline">WordPress scaffold theme</p>
-		</div>
-	</div>
-
-	<?php
-	// ==============================
 	// Contents of front page
 	// ==============================
 	if( have_posts() ) :

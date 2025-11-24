@@ -5,6 +5,7 @@
 // project > home
 // ------------------------------
 
-// .#{g.$pr}p-home {
-// }
+.#{g.$pr}p-home > *:nth-child(2n) {
+    background-color: var(--mi-color-default-fade);
+}
 
