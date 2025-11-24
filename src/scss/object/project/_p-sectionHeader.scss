@@ -7,12 +7,22 @@
 // ------------------------------
 
 .#{g.$pr}p-sectionHeader {
-  @include g.flex(column, n, flex-start, center);
-  row-gap: var(--mi-spacing-x-small);
 }
 
-// .#{g.$pr}p-sectionHeader__title {
-// }
+.#{g.$pr}p-sectionHeader__title {
+}
 
-// .#{g.$pr}p-sectionHeader__subTitle {
-// }
+.#{g.$pr}p-sectionHeader__subTitle {
+  color: var(--mi-color-primary);
+  margin-top: var(--mi-spacing-x-small);
+}
+
+.#{g.$pr}p-sectionHeader__lead {
+  margin-top: var(--mi-spacing-small);
+  line-height: var(--mi-line-height-sm);
+}
+
+// If the heading is centered, the lead should also be centered.
+.#{g.$pr}p-sectionHeader:has(.#{g.$pr}c-title--center) .#{g.$pr}p-sectionHeader__lead {
+  text-align: center;
+}
