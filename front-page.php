@@ -77,39 +77,129 @@ get_header();
 		</div>
 	</section>
 
-
-
 	<?php
 	// ==============================
-	// Recent posts
+	// Recent pages(card)
 	// ==============================
 
 	$mi_args = array(
-		'post_type'  => 'post',
+		'post_type'  => 'page',
 		'posts_per_page'  => 3,
-		'orderby' => 'date',
-		'order' => 'DESC'
+		'orderby' => 'menu_order',
+		'order' => 'ASC'
 	);
 	$mi_q = new WP_Query( $mi_args );
 	?>
 	<?php if( $mi_q->have_posts() ): ?>
 	<section class="mi-p-home-recent">
 		<div class="mi-p-home-recent__header mi-p-sectionHeader">
-			<p class="mi-p-sectionHeader__title mi-c-title mi-c-title--lv2 mi-c-title--center">ブログ</p>
-			<p lang="en" class="mi-p-sectionHeader__subTitle mi-c-title mi-c-title--lv5 mi-c-title--center">Blog</p>
+			<p class="mi-p-sectionHeader__title mi-c-title mi-c-title--lv2 mi-c-title--center">ページ_カード</p>
+			<p lang="en" class="mi-p-sectionHeader__subTitle mi-c-title mi-c-title--lv5 mi-c-title--center">Pages_card</p>
 		</div>
 		<div class="mi-p-home-recent__contents">
-			<div class="mi-l-container mi-l-container--sm">
-				<div class="mi-p-home-recent__posts mi-p-posts mi-p-posts--media">
-				<?php while( $mi_q->have_posts() ) : $mi_q->the_post(); ?>
-					<?php get_template_part( 'template-parts/loop', 'media' ); ?>
-				<?php endwhile; ?>
-				</div>
+			<div class="mi-p-home-recent__posts mi-p-posts mi-p-posts--card">
+			<?php while( $mi_q->have_posts() ) : $mi_q->the_post(); ?>
+				<?php get_template_part( 'template-parts/loop', 'card' ); ?>
+			<?php endwhile; ?>
 			</div>
 		</div>
 	</section>
 	<?php endif; wp_reset_query(); unset( $mi_q, $mi_args ); ?>
 
+	<?php
+	// ==============================
+	// Recent pages(card-no-date)
+	// ==============================
+
+	$mi_args = array(
+		'post_type'  => 'page',
+		'posts_per_page'  => 3,
+		'orderby' => 'menu_order',
+		'order' => 'ASC'
+	);
+	$mi_q = new WP_Query( $mi_args );
+	?>
+	<?php if( $mi_q->have_posts() ): ?>
+	<section class="mi-p-home-recent">
+		<div class="mi-p-home-recent__header mi-p-sectionHeader">
+			<p class="mi-p-sectionHeader__title mi-c-title mi-c-title--lv2 mi-c-title--center">ページ_カードメタなし</p>
+			<p lang="en" class="mi-p-sectionHeader__subTitle mi-c-title mi-c-title--lv5 mi-c-title--center">Pages_card-no-meta</p>
+		</div>
+		<div class="mi-p-home-recent__contents">
+			<div class="mi-p-home-recent__posts mi-p-posts mi-p-posts--card">
+			<?php while( $mi_q->have_posts() ) : $mi_q->the_post(); ?>
+				<?php get_template_part( 'template-parts/loop', 'card-no-meta' ); ?>
+			<?php endwhile; ?>
+			</div>
+		</div>
+	</section>
+	<?php endif; wp_reset_query(); unset( $mi_q, $mi_args ); ?>
+
+
+	<div class="mi-p-home-group">
+		<div class="mi-p-home-group__inner">
+
+			<?php
+			// ==============================
+			// Recent posts(media)
+			// ==============================
+
+			$mi_args = array(
+				'post_type'  => 'post',
+				'posts_per_page'  => 3,
+				'orderby' => 'date',
+				'order' => 'DESC'
+			);
+			$mi_q = new WP_Query( $mi_args );
+			?>
+			<?php if( $mi_q->have_posts() ): ?>
+			<section class="mi-p-home-recent">
+				<div class="mi-p-home-recent__header mi-p-sectionHeader">
+					<p class="mi-p-sectionHeader__title mi-c-title mi-c-title--lv2 mi-c-title--center">投稿_メディア</p>
+					<p lang="en" class="mi-p-sectionHeader__subTitle mi-c-title mi-c-title--lv5 mi-c-title--center">Posts_media</p>
+				</div>
+				<div class="mi-p-home-recent__contents">
+					<div class="mi-p-home-recent__posts mi-p-posts mi-p-posts--media">
+					<?php while( $mi_q->have_posts() ) : $mi_q->the_post(); ?>
+						<?php get_template_part( 'template-parts/loop', 'media' ); ?>
+					<?php endwhile; ?>
+					</div>
+				</div>
+			</section>
+			<?php endif; wp_reset_query(); unset( $mi_q, $mi_args ); ?>
+
+
+			<?php
+			// ==============================
+			// Recent posts(media-no-meta)
+			// ==============================
+
+			$mi_args = array(
+				'post_type'  => 'post',
+				'posts_per_page'  => 3,
+				'orderby' => 'date',
+				'order' => 'DESC'
+			);
+			$mi_q = new WP_Query( $mi_args );
+			?>
+			<?php if( $mi_q->have_posts() ): ?>
+			<section class="mi-p-home-recent">
+				<div class="mi-p-home-recent__header mi-p-sectionHeader">
+					<p class="mi-p-sectionHeader__title mi-c-title mi-c-title--lv2 mi-c-title--center">投稿_メディアメタなし</p>
+					<p lang="en" class="mi-p-sectionHeader__subTitle mi-c-title mi-c-title--lv5 mi-c-title--center">Posts_media-no-meta</p>
+				</div>
+				<div class="mi-p-home-recent__contents">
+					<div class="mi-p-home-recent__posts mi-p-posts mi-p-posts--media">
+					<?php while( $mi_q->have_posts() ) : $mi_q->the_post(); ?>
+						<?php get_template_part( 'template-parts/loop', 'media-no-meta' ); ?>
+					<?php endwhile; ?>
+					</div>
+				</div>
+			</section>
+			<?php endif; wp_reset_query(); unset( $mi_q, $mi_args ); ?>
+
+		</div>
+	</div>
 
 </div>
 <?php
