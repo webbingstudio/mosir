@@ -11,7 +11,9 @@
 .#{g.$pr}p-home-group__inner {
     display: grid;
     gap: var(--mi-spacing-medium);
-    width: min( calc( 100vw - ( var(--mi-body-x-gap) * 2 ) ), var(--mi-global-wide-size) );
+    width: 100%;
+    max-width: var(--mi-global-wide-size);
+    padding-inline: var(--mi-body-x-gap);
     margin-inline: auto;
 
     @include g.mq(xga) {
