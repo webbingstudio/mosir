@@ -27,7 +27,7 @@
 .#{g.$pr}p-posts.#{g.$pr}p-posts--card > * {
 
   @include g.mq(default-max) {
-    max-width: ( 480 / 16 * 1rem );
+    max-width: ( math.div( 480, 16 ) * 1rem );
     margin-inline: auto;
   }
 
@@ -42,21 +42,6 @@
   height: 100%;
 }
 
-.#{g.$pr}p-posts.#{g.$pr}p-posts--card a.#{g.$pr}p-card__inner {
-  color: inherit;
-  text-decoration: none;
-}
-
-.#{g.$pr}p-posts.#{g.$pr}p-posts--card .#{g.$pr}c-title {
-  width: 100%;
-  text-decoration: underline;
-}
-
-
-// ------------------------------
-// list
-// ------------------------------
-
 
 // ------------------------------
 // headline
@@ -66,13 +51,3 @@
 // ------------------------------
 // media
 // ------------------------------
-
-.#{g.$pr}p-posts.#{g.$pr}p-posts--media a.#{g.$pr}p-media__inner {
-  color: inherit;
-  text-decoration: none;
-}
-
-.#{g.$pr}p-posts.#{g.$pr}p-posts--media .#{g.$pr}c-title {
-  width: 100%;
-  text-decoration: underline;
-}

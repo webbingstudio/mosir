@@ -13,9 +13,16 @@
   display: grid;
   grid-template-columns: min( 10rem, 20% ) 1fr;
   gap: var(--mi-spacing-small);
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
+}
+
+a.#{g.$pr}p-media__inner {
+    color: currentColor;
+    text-decoration: none;
+}
+
+a.#{g.$pr}p-media__inner .#{g.$pr}p-media__title {
+  width: 100%;
+  text-decoration: underline;
 }
 
 .#{g.$pr}p-media__image {
