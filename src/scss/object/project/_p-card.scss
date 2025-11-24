@@ -43,6 +43,7 @@ a.#{g.$pr}p-card__inner .#{g.$pr}p-card__title {
 .#{g.$pr}p-card__meta {
   @include g.flex( n, wrap, flex-start, center );
   gap: var(--mi-spacing-x-small) var(--mi-spacing-small);
+  font-size: var(--mi-font-size-small);
 }
 
 .#{g.$pr}p-card__meta > * {

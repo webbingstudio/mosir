@@ -42,6 +42,7 @@ a.#{g.$pr}p-media__inner .#{g.$pr}p-media__title {
 .#{g.$pr}p-media__meta {
   @include g.flex( n, wrap, flex-start, center );
   gap: var(--mi-spacing-small);
+  font-size: var(--mi-font-size-small);
 }
 
 .#{g.$pr}p-media__meta > * {
