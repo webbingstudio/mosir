@@ -1,0 +1,25 @@
+@use "../../../global" as g;
+@use "sass:math";
+
+// ------------------------------
+// project > home-group
+// ------------------------------
+
+// .#{g.$pr}p-home-group {
+// }
+
+.#{g.$pr}p-home-group__inner {
+    display: grid;
+    gap: var(--mi-spacing-medium);
+    width: min( calc( 100vw - ( var(--mi-body-x-gap) * 2 ) ), var(--mi-global-wide-size) );
+    margin-inline: auto;
+
+    @include g.mq(xga) {
+        grid-template-columns: repeat( 2, 1fr );
+    }
+
+    @include g.mq(wide) {
+        gap: var(--mi-spacing-large);
+    }
+
+}
