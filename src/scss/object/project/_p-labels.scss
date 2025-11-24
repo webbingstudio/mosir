@@ -6,7 +6,7 @@
 // ------------------------------
 
 .#{g.$pr}p-labels {
-  @include g.flex( n, n, flex-start, n );
+  @include g.flex( n, wrap, flex-start, n );
   gap: var(--mi-spacing-x-small);
   list-style-type: none;
   margin: 0;

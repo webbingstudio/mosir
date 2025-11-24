@@ -35,11 +35,14 @@ a.#{g.$pr}p-card__inner {
   margin: 0;
 }
 
-// .#{g.$pr}p-card__title {
-// }
+.#{g.$pr}p-card__meta {
+  @include g.flex( n, wrap, flex-start, center );
+  gap: var(--mi-spacing-x-small) var(--mi-spacing-small);
+}
 
-// .#{g.$pr}p-card__body {
-// }
+.#{g.$pr}p-card__meta > * {
+  flex-grow: 0;
+}
 
 @include g.mq(hover) {
 
@@ -49,3 +52,12 @@ a.#{g.$pr}p-card__inner {
   }
 
 }
+
+// .#{g.$pr}p-card__title {
+// }
+
+// .#{g.$pr}p-card__date {
+// }
+
+// .#{g.$pr}p-card__summary {
+// }
