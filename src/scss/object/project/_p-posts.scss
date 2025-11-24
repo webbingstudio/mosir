@@ -38,6 +38,10 @@
 
 }
 
+.#{g.$pr}p-posts.#{g.$pr}p-posts--card .#{g.$pr}p-card__inner {
+  height: 100%;
+}
+
 .#{g.$pr}p-posts.#{g.$pr}p-posts--card a.#{g.$pr}p-card__inner {
   color: inherit;
   text-decoration: none;
