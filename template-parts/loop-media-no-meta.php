@@ -1,15 +1,17 @@
 <?php
 /**
- * loop-media.php
+ * loop-media-no-meta.php
  * Repeated sections of a post, with featured image on the left and content on the right.
  * The entire loop is enclosed in a link.
+ * Post meta information such as date, term, etc. is not displayed.
+ * Show an excerpt of the content.
  *
  * @package ws-minimalism
  */
 ?>
 <article class="mi-p-posts__item mi-p-media">
 	<a class="mi-p-media__inner" href="<?php the_permalink(); ?>">
-		<figure class="mi-p-media__image mi-c-picture mi-c-picture--3to2">
+		<figure class="mi-p-media__image mi-c-picture mi-c-picture--1to1">
 			<?php if ( has_post_thumbnail() ) : ?>
 				<?php the_post_thumbnail( 'thumbnail' ); ?>
 			<?php else : ?>

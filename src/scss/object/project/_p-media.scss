@@ -11,7 +11,7 @@
 
 .#{g.$pr}p-media__inner {
   display: grid;
-  grid-template-columns: min( 15rem, 33.33% ) 1fr;
+  grid-template-columns: min( 10rem, 20% ) 1fr;
   gap: var(--mi-spacing-small);
   margin: 0;
   padding: 0;
