@@ -43,7 +43,7 @@ get_header();
 	<section class="mi-p-home-headline">
 		<div class="mi-p-home-headline__inner mi-l-container">
 			<div class="mi-p-home-headline__header mi-p-sectionHeader">
-				<p class="mi-p-sectionHeader__title mi-c-title mi-c-title--lv2">投稿_ヘッドライン</p>
+				<p class="mi-p-sectionHeader__title mi-c-title mi-c-title--lv2">投稿_一列</p>
 				<p lang="en" class="mi-p-sectionHeader__subTitle mi-c-title mi-c-title--lv5">headline</p>
 			</div>
 			<div class="mi-p-home-headline__contents">
@@ -66,7 +66,7 @@ get_header();
 		'post_type'  => 'post',
 		'posts_per_page'  => 5,
 		'orderby' => 'date',
-		'order' => 'ASC'
+		'order' => 'DESC'
 	);
 	$mi_q = new WP_Query( $mi_args );
 	?>
@@ -74,7 +74,7 @@ get_header();
 	<section class="mi-p-home-headline">
 		<div class="mi-p-home-headline__inner mi-l-container">
 			<div class="mi-p-home-headline__header mi-p-sectionHeader">
-				<p class="mi-p-sectionHeader__title mi-c-title mi-c-title--lv2">投稿_ヘッドラインメタなし</p>
+				<p class="mi-p-sectionHeader__title mi-c-title mi-c-title--lv2">投稿_一列メタなし</p>
 				<p lang="en" class="mi-p-sectionHeader__subTitle mi-c-title mi-c-title--lv5">headline-no-meta</p>
 			</div>
 			<div class="mi-p-home-headline__contents">

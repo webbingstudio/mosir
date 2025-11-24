@@ -8,7 +8,6 @@
 
 .#{g.$pr}p-posts {
   @include g.flex(column, n, flex-start, stretch);
-  gap: var(--mi-spacing-medium) var(--mi-spacing-small);
 }
 
 
@@ -17,6 +16,7 @@
 // ------------------------------
 
 .#{g.$pr}p-posts.#{g.$pr}p-posts--card {
+  gap: var(--mi-spacing-medium);
 
   @include g.mq(default) {
     @include g.flex( n, wrap, n, n );
@@ -47,7 +47,26 @@
 // headline
 // ------------------------------
 
+.#{g.$pr}p-posts.#{g.$pr}p-posts--headline {
+  border-top: 0.0625rem solid var(--mi-border-default-light-color);
+}
+
+.#{g.$pr}p-posts.#{g.$pr}p-posts--headline > * {
+  padding-block: var(--mi-spacing-small);
+  border-bottom: 0.0625rem solid var(--mi-border-default-light-color);
+
+  @include g.mq(default) {
+    padding-block: var(--mi-spacing-x-small);
+  }
+
+}
+
+
 
 // ------------------------------
 // media
 // ------------------------------
+
+.#{g.$pr}p-posts.#{g.$pr}p-posts--media {
+  gap: var(--mi-spacing-medium);
+}

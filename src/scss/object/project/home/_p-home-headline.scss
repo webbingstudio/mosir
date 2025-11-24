@@ -1,0 +1,32 @@
+@use "../../../global" as g;
+@use "sass:math";
+
+// ------------------------------
+// project > home-headline
+// ------------------------------
+
+.#{g.$pr}p-home-headline {
+    padding-block: var(--mi-spacing-large);
+}
+
+.#{g.$pr}p-home-headline__inner {
+  display: grid;
+  gap: var(--mi-spacing-medium);
+
+  @include g.mq(xga) {
+    grid-template-columns: max-content 1fr;
+    gap: var(--mi-spacing-large);
+  }
+
+}
+
+.#{g.$pr}p-home-headline__header {
+
+  @include g.mq(xga) {
+    text-align: right;
+  }
+
+}
+
+// .#{g.$pr}p-home-headline__contents {
+// }
