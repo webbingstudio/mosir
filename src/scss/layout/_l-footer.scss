@@ -8,7 +8,7 @@
 }
 
 .#{g.$pr}l-footer__contents {
-  @include g.flex(column, nowrap, n, center);
+  @include g.flex(column, nowrap, n, stretch);
   gap: var(--mi-spacing-medium);
 }
 
