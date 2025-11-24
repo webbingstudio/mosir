@@ -1,6 +1,11 @@
 @use "../../global" as g;
 @use "sass:math";
 
+// ------------------------------
+// component > summary
+//  - Display a modest length of text of about two or three lines, with the line spacing somewhat tight.
+// ------------------------------
+
 .#{g.$pr}c-summary {
   display: block;
   margin: 0;
