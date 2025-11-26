@@ -59,11 +59,11 @@
 
 
 // ------------------------------
-// arrow( $direction: 'right|left|top|bottom', $color: 'default|inverse' )
+// arrow( $direction: 'right|left|top|bottom' )
 // - Adds an arrow to the link that is proportional to the text size.
 // - Supports hover states.
 // ------------------------------
-@mixin arrow( $direction: 'right', $color: 'default' ) {
+@mixin arrow( $direction: 'right' ) {
 
   @at-root {
     #{&} {
@@ -79,13 +79,8 @@
       content: "";
       width: 0.55em;
       height: 0.55em;
-      @if $color == 'inverse' {
-        border-top: 0.125em solid var(--ui-inverse-accent-color);
-        border-right: 0.125em solid var(--ui-inverse-accent-color);
-      } @else {
-        border-top: 0.125em solid var(--ui-default-accent-color);
-        border-right: 0.125em solid var(--ui-default-accent-color);
-      }
+      border-top: 0.125em solid var(--ui-default-accent-color);
+      border-right: 0.125em solid var(--ui-default-accent-color);
       @if $direction == 'left' {
         rotate: -45deg;
       } @else if $direction == 'top' {

@@ -71,10 +71,6 @@
   background-color: currentColor;
 }
 
-.#{g.$pr}p-verticalMenu.#{g.$pr}p-verticalMenu--inverse .#{g.$pr}p-verticalMenu__nav > .menu-item > a::before {
-  background-color: var(--ui-inverse-accent-color);
-}
-
 
 // ------------------------------
 // second-level
@@ -103,10 +99,6 @@
 
 .#{g.$pr}p-verticalMenu__nav .sub-menu .current-menu-item > a {
   @include g.arrow-current();
-}
-
-.#{g.$pr}p-verticalMenu--inverse .#{g.$pr}p-verticalMenu__nav .sub-menu a {
-  @include g.arrow( $color: 'inverse' );
 }
 
 // ------------------------------

@@ -41,11 +41,6 @@ ul.#{g.$pr}c-nav,
   text-decoration: none;
 }
 
-[class*="--inverse"] .#{g.$pr}c-nav a {
-  color: var(--ui-inverse-color);
-  background-color: var(--ui-inverse-bg);
-}
-
 @include g.mq(hover) {
 
   .#{g.$pr}c-nav :not(.current-menu-item) > a:hover {
@@ -54,19 +49,10 @@ ul.#{g.$pr}c-nav,
     text-decoration: none;
   }
 
-  [class*="--inverse"] .#{g.$pr}c-nav :not(.current-menu-item) > a:hover {
-    color: var(--ui-inverse-color);
-    background-color: var(--ui-inverse-hover-bg);
-  }
-
 }
 
 .#{g.$pr}c-nav a:focus {
   color: var(--ui-default-color);
-}
-
-[class*="--inverse"] .#{g.$pr}c-nav a:focus {
-  color: var(--ui-inverse-color);
 }
 
 .#{g.$pr}c-nav__item__label {

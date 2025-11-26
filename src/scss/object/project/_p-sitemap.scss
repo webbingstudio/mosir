@@ -66,10 +66,6 @@
   @include g.arrow-current();
 }
 
-.#{g.$pr}p-sitemap--inverse .#{g.$pr}p-sitemap__nav a {
-  @include g.arrow( $color: 'inverse' );
-}
-
 // ------------------------------
 // first-level
 // ------------------------------
