@@ -58,12 +58,17 @@
 
 @include g.mq(hover) {
 
-  .#{g.$pr}p-verticalMenu__nav > .menu-item > a:hover::before {
+  .#{g.$pr}p-verticalMenu__nav > :not(.current-menu-item) > a:hover::before {
     opacity: 0.5;
     transform: scaleX(0.2);
     transition: var(--nav-cubic-transition);
   }
 
+}
+
+.#{g.$pr}p-verticalMenu__nav > .current-menu-item > a::before {
+  opacity: 0.5;
+  background-color: currentColor;
 }
 
 .#{g.$pr}p-verticalMenu.#{g.$pr}p-verticalMenu--inverse .#{g.$pr}p-verticalMenu__nav > .menu-item > a::before {
@@ -90,10 +95,14 @@
 
 @include g.mq(hover) {
 
-  .p-sitemap__nav .sub-menu :not(.current-menu-item) > a:hover {
+  .#{g.$pr}p-verticalMenu__nav .sub-menu :not(.current-menu-item) > a:hover {
     @include g.arrow-hover();
   }
 
+}
+
+.#{g.$pr}p-verticalMenu__nav .sub-menu .current-menu-item > a {
+  @include g.arrow-current();
 }
 
 .#{g.$pr}p-verticalMenu--inverse .#{g.$pr}p-verticalMenu__nav .sub-menu a {

@@ -62,6 +62,10 @@
 
 }
 
+.#{g.$pr}p-sitemap__nav .current-menu-item > a {
+  @include g.arrow-current();
+}
+
 .#{g.$pr}p-sitemap--inverse .#{g.$pr}p-sitemap__nav a {
   @include g.arrow( $color: 'inverse' );
 }
@@ -71,7 +75,6 @@
 // ------------------------------
 
 .#{g.$pr}p-sitemap__nav > .menu-item > a {
-  font-size: var(--fontSize-lg);
   font-weight: 700;
 }
 
@@ -81,10 +84,7 @@
 
 .#{g.$pr}p-sitemap__nav .sub-menu {
   padding-left: 1.25em;
-}
-
-.#{g.$pr}p-sitemap__nav .sub-menu .current-menu-item > a {
-  font-weight: 700;
+  font-size: var(--fontSize-sm);
 }
 
 .#{g.$pr}p-sitemap__nav .sub-menu .menu-item {
@@ -97,5 +97,6 @@
 
 .#{g.$pr}p-sitemap__nav .sub-menu > .menu-item:not(:last-child) .sub-menu {
   margin-bottom: 1.5em;
+  font-size: var(--fontSize-xs);
 }
 

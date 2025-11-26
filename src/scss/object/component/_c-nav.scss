@@ -35,7 +35,7 @@ ul.#{g.$pr}c-nav,
 .#{g.$pr}c-nav a {
   @include g.flex(n, n, n, center);
   gap: var(--spacing-xs);
-  line-height: var(--lineHeight-sm);
+  line-height: var(--lineHeight-xs);
   color: var(--ui-default-color);
   background-color: var(--ui-default-bg);
   text-decoration: none;

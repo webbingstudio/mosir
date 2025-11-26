@@ -45,7 +45,7 @@
 
 // When you hover over a navigation item,
 // it will remove the decorations from all other items (even your current location!).
-.#{g.$pr}p-megaMenu__nav > .menu-item:not(.current-menu-item):not(:hover) > a::after,
+.#{g.$pr}p-megaMenu__nav > .menu-item:not([class*="current-menu-"]):not(:hover) > a::after,
 .#{g.$pr}p-megaMenu__nav:has(>.menu-item:hover) > .menu-item:not(:hover) > a::after {
   opacity: 0;
   transform: translateY(-400%);
@@ -165,7 +165,7 @@
 }
 
 .#{g.$pr}p-megaMenu__nav .sub-menu .current-menu-item > a {
-  font-weight: 700;
+  @include g.arrow-current();
 }
 
 
