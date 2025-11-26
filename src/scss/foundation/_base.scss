@@ -27,8 +27,7 @@ a {
 
   a:hover {
     color: var(--link-hover-color);
-    text-decoration-line: underline;
-    text-underline-offset: 0.3em;
+    text-decoration-line: none;
   }
 
 }

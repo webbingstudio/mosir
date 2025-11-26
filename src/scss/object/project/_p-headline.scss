@@ -20,21 +20,17 @@
 
 }
 
-.#{g.$pr}p-headline__inner > * {
-    flex-grow: 0;
-}
-
 a.#{g.$pr}p-headline__inner {
     color: currentColor;
     text-decoration: none;
 }
 
-a.#{g.$pr}p-headline__inner .#{g.$pr}p-headline__title {
-    width: 100%;
+a.#{g.$pr}p-headline__inner:not(:hover) .#{g.$pr}p-headline__title {
     text-decoration: underline;
 }
 
 .#{g.$pr}p-headline__header {
+    flex-grow: 0;
     @include g.flex( n, n, n, center );
     gap: var(--spacing-xs);
     font-size: var(--fontSize-sm);
@@ -48,15 +44,14 @@ a.#{g.$pr}p-headline__inner .#{g.$pr}p-headline__title {
     min-width: 9em;
 }
 
-// .#{g.$pr}p-headline__category {
-// }
-
 .#{g.$pr}p-headline__category .#{g.$pr}c-label {
     width: 7rem;
 }
 
-// .#{g.$pr}p-headline__contents {
-// }
+.#{g.$pr}p-headline__contents {
+    flex-grow: 1;
+}
 
-// .#{g.$pr}p-headline__title {
-// }
+.#{g.$pr}p-headline__title a {
+    display: block;
+}
