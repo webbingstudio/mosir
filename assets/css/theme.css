@@ -1240,8 +1240,11 @@ a.mi-p-media__inner {
   text-decoration: none;
 }
 
-a.mi-p-media__inner .mi-p-media__title {
+a.mi-p-media__inner {
   width: 100%;
+}
+
+a.mi-p-media__inner:not(:hover) .mi-p-media__title {
   text-decoration: underline;
 }
 
