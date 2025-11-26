@@ -10,10 +10,10 @@
 
 .#{g.$pr}p-home-group__inner {
     display: grid;
-    gap: var(--mi-spacing-md);
+    gap: var(--spacing-md);
     width: 100%;
-    max-width: var(--mi-container-wide-width);
-    padding-inline: var(--mi-screen-x-spacing);
+    max-width: var(--container-wide-width);
+    padding-inline: var(--screen-x-spacing);
     margin-inline: auto;
 
     @include g.mq(xga) {
@@ -21,7 +21,7 @@
     }
 
     @include g.mq(wide) {
-        gap: var(--mi-spacing-lg);
+        gap: var(--spacing-lg);
     }
 
 }

@@ -9,11 +9,11 @@
 .#{g.$pr}c-label {
   @include g.flex(n, n, center, center);
   padding: 0.25em 0.5em;
-  background-color: var(--mi-color-default-light);
-  border: 0.0625rem solid var(--mi-color-default-light);
-  color: var(--mi-ui-inverse-color);
-  font-size: var(--mi-fontSize-2xs);
-  line-height: var(--mi-lineHeight-xs);
+  background-color: var(--color-default-light);
+  border: 0.0625rem solid var(--color-default-light);
+  color: var(--ui-inverse-color);
+  font-size: var(--fontSize-2xs);
+  line-height: var(--lineHeight-xs);
   text-align: center;
 }
 
@@ -24,32 +24,32 @@ a.#{g.$pr}c-label {
 @include g.mq(hover) {
 
   a.#{g.$pr}c-label:hover {
-    color: var(--mi-ui-default-color);
-    background-color: var(--mi-color-white);
+    color: var(--ui-default-color);
+    background-color: var(--color-white);
   }
 
 }
 
 a.#{g.$pr}c-label:focus {
-  color: var(--mi-ui-default-color);
-  background-color: var(--mi-color-white);
+  color: var(--ui-default-color);
+  background-color: var(--color-white);
 }
 
 .#{g.$pr}c-label.#{g.$pr}c-label--primary {
-  background-color: var(--mi-color-primary);
-  border-color: var(--mi-color-primary);
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
 }
 
 @include g.mq(hover) {
 
   a.#{g.$pr}c-label.#{g.$pr}c-label--primary:hover {
-    color: var(--mi-color-primary);
-    background-color: var(--mi-color-white);
+    color: var(--color-primary);
+    background-color: var(--color-white);
   }
 
 }
 
 a.#{g.$pr}c-label.#{g.$pr}c-label--primary:focus {
-  color: var(--mi-color-primary);
-  background-color: var(--mi-color-white);
+  color: var(--color-primary);
+  background-color: var(--color-white);
 }

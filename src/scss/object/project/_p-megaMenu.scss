@@ -23,9 +23,9 @@
   position: relative;
   justify-content: center;
   width: 100%;
-  min-height: var(--mi-nav-height);
-  padding-inline: var(--mi-spacing-md);
-  font-size: var(--mi-fontSize-lg);
+  min-height: var(--nav-height);
+  padding-inline: var(--spacing-md);
+  font-size: var(--fontSize-lg);
   font-weight: 700;
   letter-spacing: 0.15em;
   z-index: 21; // Links overlay submenus on hover or focus.
@@ -36,9 +36,9 @@
   @include g.position(absolute, n, 0, -0.0625rem, n);
   width: 100%;
   height: 0.125rem;
-  background-color: var(--mi-ui-default-accent-color);
+  background-color: var(--ui-default-accent-color);
   transform-origin: center center;
-  transition: var(--mi-nav-cubic-transition);
+  transition: var(--nav-cubic-transition);
   opacity: 1;
   transform: translateY(0);
 }
@@ -57,16 +57,16 @@
 // ------------------------------
 
 .#{g.$pr}p-megaMenu__nav .sub-menu {
-  font-size: var(--mi-fontSize-sm);
+  font-size: var(--fontSize-sm);
 }
 
 .#{g.$pr}p-megaMenu__nav > .menu-item > .sub-menu {
   @include g.position(absolute, 100%, n, n, 0, n);
   @include g.flex(n, wrap, flex-start, flex-start);
-  gap: var(--mi-spacing-sm);
+  gap: var(--spacing-sm);
   width: 100%;
-  padding-inline: var(--mi-spacing-md);
-  color: var(--mi-ui-default-color);
+  padding-inline: var(--spacing-md);
+  color: var(--ui-default-color);
   transition: all 0.3s 0.3s linear;
 }
 
@@ -75,9 +75,9 @@
   @include g.position(absolute, 0, n, n, 0, 11);
   width: 100%;
   height: 100%;
-  background-color: var(--mi-body-bg);
-  border-top: 1px solid var(--mi-border-default-color);
-  box-shadow: var(--mi-shadow--sm);
+  background-color: var(--body-bg);
+  border-top: 1px solid var(--border-default-color);
+  box-shadow: var(--shadow--sm);
   opacity: 0;
   transform: scaleY(0);
   transform-origin: top center;
@@ -97,7 +97,7 @@
 
 @include g.mq(hover) {
   .#{g.$pr}p-megaMenu__nav > .menu-item:hover > .sub-menu {
-    padding-block: var(--mi-spacing-sm);
+    padding-block: var(--spacing-sm);
     transition: all 0.3s 0s linear;
   }
 }
@@ -112,7 +112,7 @@
     @include g.position(absolute, n, n, 0, 0, 13);
     width: 100%;
     height: 1rem; // shadow depth + buffer
-    background-color: var(--mi-body-bg);
+    background-color: var(--body-bg);
   }
 
   .#{g.$pr}p-megaMenu__nav > .menu-item:hover > .sub-menu::after {
@@ -137,13 +137,13 @@
 
 @include g.mq(default) {
   .#{g.$pr}p-megaMenu__nav.c-nav > * {
-    flex-basis: calc( 50% - ( var(--mi-spacing-md) / 2 ) );
+    flex-basis: calc( 50% - ( var(--spacing-md) / 2 ) );
   }
 }
 
 @include g.mq(wide) {
   .#{g.$pr}p-megaMenu__nav.c-nav > * {
-    flex-basis: calc( 33.33% - ( ( var(--mi-spacing-md) * 2 ) / 3 ) );
+    flex-basis: calc( 33.33% - ( ( var(--spacing-md) * 2 ) / 3 ) );
   }
 }
 

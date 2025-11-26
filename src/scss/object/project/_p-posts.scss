@@ -16,7 +16,7 @@
 // ------------------------------
 
 .#{g.$pr}p-posts.#{g.$pr}p-posts--card {
-  gap: var(--mi-spacing-md);
+  gap: var(--spacing-md);
 
   @include g.mq(default) {
     @include g.flex( n, wrap, n, n );
@@ -33,7 +33,7 @@
 
   @include g.mq(default) {
     flex-grow: 0;
-    width: calc( 33.3333% - ( var(--mi-spacing-md) * 2 / 3 ) );
+    width: calc( 33.3333% - ( var(--spacing-md) * 2 / 3 ) );
   }
 
 }
@@ -48,15 +48,15 @@
 // ------------------------------
 
 .#{g.$pr}p-posts.#{g.$pr}p-posts--headline {
-  border-top: 0.0625rem solid var(--mi-border-default-light-color);
+  border-top: 0.0625rem solid var(--border-default-light-color);
 }
 
 .#{g.$pr}p-posts.#{g.$pr}p-posts--headline > * {
-  padding-block: var(--mi-spacing-sm);
-  border-bottom: 0.0625rem solid var(--mi-border-default-light-color);
+  padding-block: var(--spacing-sm);
+  border-bottom: 0.0625rem solid var(--border-default-light-color);
 
   @include g.mq(default) {
-    padding-block: var(--mi-spacing-xs);
+    padding-block: var(--spacing-xs);
   }
 
 }
@@ -68,5 +68,5 @@
 // ------------------------------
 
 .#{g.$pr}p-posts.#{g.$pr}p-posts--media {
-  gap: var(--mi-spacing-md);
+  gap: var(--spacing-md);
 }

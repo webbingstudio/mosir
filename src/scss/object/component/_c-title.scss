@@ -12,8 +12,8 @@
   display: block;
   margin: 0;
   font-weight: bold;
-  font-family: var(--mi-fontFamily-default);
-  line-height: var(--mi-lineHeight-sm);
+  font-family: var(--fontFamily-default);
+  line-height: var(--lineHeight-sm);
 }
 
 .#{g.$pr}c-title a {
@@ -25,25 +25,25 @@
 }
 
 .#{g.$pr}c-title.#{g.$pr}c-title--lv1 {
-  font-size: var(--mi-fontSize-3xl);
+  font-size: var(--fontSize-3xl);
 }
 
 .#{g.$pr}c-title.#{g.$pr}c-title--lv2 {
-  font-size: var(--mi-fontSize-2xl);
+  font-size: var(--fontSize-2xl);
 }
 
 .#{g.$pr}c-title.#{g.$pr}c-title--lv3 {
-  font-size: var(--mi-fontSize-xl);
+  font-size: var(--fontSize-xl);
 }
 
 .#{g.$pr}c-title.#{g.$pr}c-title--lv4 {
-  font-size: var(--mi-fontSize-lg);
+  font-size: var(--fontSize-lg);
 }
 
 .#{g.$pr}c-title.#{g.$pr}c-title--lv5 {
-  font-size: var(--mi-fontSize-md);
+  font-size: var(--fontSize-md);
 }
 
 .#{g.$pr}c-title.#{g.$pr}c-title--lv6 {
-  font-size: var(--mi-fontSize-sm);
+  font-size: var(--fontSize-sm);
 }

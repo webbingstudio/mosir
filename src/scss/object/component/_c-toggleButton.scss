@@ -12,8 +12,8 @@
   -webkit-appearance: none;
   appearance: none;
   @include g.flex( n, n, center, center );
-  width: var(--mi-nav-height);
-  height: var(--mi-nav-height);
+  width: var(--nav-height);
+  height: var(--nav-height);
   padding: 0;
   border: 0 none;
   background-color: transparent;
@@ -41,7 +41,7 @@
   height: 0.125rem;
   background-color: currentColor;
   transform-origin: center center;
-  transition: var(--mi-nav-default-transition);
+  transition: var(--nav-default-transition);
 }
 
 @include g.mq(default) {
@@ -58,7 +58,7 @@
   width: 100%;
   height: 0.125rem;
   background-color: currentColor;
-  transition: var(--mi-nav-cubic-transition);
+  transition: var(--nav-cubic-transition);
 }
 
 .#{g.$pr}c-toggleButton__icon::before {

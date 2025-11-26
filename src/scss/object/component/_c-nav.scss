@@ -9,7 +9,7 @@
 
 .#{g.$pr}c-nav {
   @include g.flex(n, n, n, center);
-  gap: var(--mi-spacing-sm);
+  gap: var(--spacing-sm);
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -34,39 +34,39 @@ ul.#{g.$pr}c-nav,
 
 .#{g.$pr}c-nav a {
   @include g.flex(n, n, n, center);
-  gap: var(--mi-spacing-xs);
-  line-height: var(--mi-lineHeight-sm);
-  color: var(--mi-ui-default-color);
-  background-color: var(--mi-ui-default-bg);
+  gap: var(--spacing-xs);
+  line-height: var(--lineHeight-sm);
+  color: var(--ui-default-color);
+  background-color: var(--ui-default-bg);
   text-decoration: none;
 }
 
 [class*="--inverse"] .#{g.$pr}c-nav a {
-  color: var(--mi-ui-inverse-color);
-  background-color: var(--mi-ui-inverse-bg);
+  color: var(--ui-inverse-color);
+  background-color: var(--ui-inverse-bg);
 }
 
 @include g.mq(hover) {
 
   .#{g.$pr}c-nav :not(.current-menu-item) > a:hover {
-    color: var(--mi-ui-default-color);
-    background-color: var(--mi-ui-default-hover-bg);
+    color: var(--ui-default-color);
+    background-color: var(--ui-default-hover-bg);
     text-decoration: none;
   }
 
   [class*="--inverse"] .#{g.$pr}c-nav :not(.current-menu-item) > a:hover {
-    color: var(--mi-ui-inverse-color);
-    background-color: var(--mi-ui-inverse-hover-bg);
+    color: var(--ui-inverse-color);
+    background-color: var(--ui-inverse-hover-bg);
   }
 
 }
 
 .#{g.$pr}c-nav a:focus {
-  color: var(--mi-ui-default-color);
+  color: var(--ui-default-color);
 }
 
 [class*="--inverse"] .#{g.$pr}c-nav a:focus {
-  color: var(--mi-ui-inverse-color);
+  color: var(--ui-inverse-color);
 }
 
 .#{g.$pr}c-nav__item__label {

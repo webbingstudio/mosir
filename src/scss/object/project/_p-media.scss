@@ -12,7 +12,7 @@
 .#{g.$pr}p-media__inner {
   display: grid;
   grid-template-columns: min( 10rem, 20% ) 1fr;
-  gap: var(--mi-spacing-sm);
+  gap: var(--spacing-sm);
 }
 
 a.#{g.$pr}p-media__inner {
@@ -30,19 +30,19 @@ a.#{g.$pr}p-media__inner .#{g.$pr}p-media__title {
 }
 
 .#{g.$pr}p-media__image img {
-  transition: var(--mi-nav-default-transition);
+  transition: var(--nav-default-transition);
 }
 
 .#{g.$pr}p-media__contents {
   grid-column: 2 / 2;
   @include g.flex( column, n, flex-start, flex-start );
-  gap: var(--mi-spacing-xs);
+  gap: var(--spacing-xs);
 }
 
 .#{g.$pr}p-media__meta {
   @include g.flex( n, wrap, flex-start, center );
-  gap: var(--mi-spacing-sm);
-  font-size: var(--mi-fontSize-sm);
+  gap: var(--spacing-sm);
+  font-size: var(--fontSize-sm);
 }
 
 .#{g.$pr}p-media__meta > * {

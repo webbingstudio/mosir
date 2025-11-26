@@ -13,13 +13,13 @@
 }
 
 .#{g.$pr}p-sectionHeader__subTitle {
-  color: var(--mi-color-primary);
-  margin-top: var(--mi-spacing-xs);
+  color: var(--color-primary);
+  margin-top: var(--spacing-xs);
 }
 
 .#{g.$pr}p-sectionHeader__lead {
-  margin-top: var(--mi-spacing-sm);
-  line-height: var(--mi-lineHeight-sm);
+  margin-top: var(--spacing-sm);
+  line-height: var(--lineHeight-sm);
 }
 
 // If the heading is centered, the lead should also be centered.

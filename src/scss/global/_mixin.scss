@@ -74,17 +74,17 @@
     #{&}::before,
     #{&}::after {
       position: absolute;
-      top: calc( ( var(--mi-nav-line-height) * 1em ) / 2 - 0.275em );
+      top: calc( ( var(--nav-line-height) * 1em ) / 2 - 0.275em );
       left: 0;
       content: "";
       width: 0.55em;
       height: 0.55em;
       @if $color == 'inverse' {
-        border-top: 0.125em solid var(--mi-ui-inverse-accent-color);
-        border-right: 0.125em solid var(--mi-ui-inverse-accent-color);
+        border-top: 0.125em solid var(--ui-inverse-accent-color);
+        border-right: 0.125em solid var(--ui-inverse-accent-color);
       } @else {
-        border-top: 0.125em solid var(--mi-ui-default-accent-color);
-        border-right: 0.125em solid var(--mi-ui-default-accent-color);
+        border-top: 0.125em solid var(--ui-default-accent-color);
+        border-right: 0.125em solid var(--ui-default-accent-color);
       }
       @if $direction == 'left' {
         rotate: -45deg;
@@ -112,7 +112,7 @@
 
     #{&}::after {
       opacity: 1;
-      transition: var(--mi-nav-default-transition);
+      transition: var(--nav-default-transition);
       @if $direction == 'left' {
         transform:  translateX(-75%) translateY(-75%);
       } @else {

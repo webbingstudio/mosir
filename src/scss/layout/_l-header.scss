@@ -3,20 +3,20 @@
 
 .#{g.$pr}l-header {
   position: relative;
-  padding-top: var(--mi-spacing-sm);
-  border-bottom: 0.0625rem solid var(--mi-border-default-light-color);
+  padding-top: var(--spacing-sm);
+  border-bottom: 0.0625rem solid var(--border-default-light-color);
 }
 
 .#{g.$pr}l-header__contents {
   display: grid;
   grid-template-columns: repeat( 2, auto );
   grid-template-rows: repeat( 2, auto );
-  gap: var(--mi-spacing-sm) var(--mi-spacing-md);
+  gap: var(--spacing-sm) var(--spacing-md);
 }
 
 .#{g.$pr}l-header__contents__siteTitle {
   grid-area: 1 / 1 / 2 / 2;
-  height: var(--mi-nav-height);
+  height: var(--nav-height);
 }
 
 // .p-megaMenu
@@ -35,7 +35,7 @@
   grid-area: 1 / 2 / 2 / 3;
   align-self: center;
   justify-self: flex-end;
-  padding-right: calc( var(--mi-drawer-toggle-width) + var(--mi-spacing-md) );
+  padding-right: calc( var(--drawer-toggle-width) + var(--spacing-md) );
 }
 
 @include g.mq(xga-max) {

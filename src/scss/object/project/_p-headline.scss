@@ -12,7 +12,7 @@
 
 .#{g.$pr}p-headline__inner {
     @include g.flex( column, n, flex-start, baseline );
-    gap: var(--mi-spacing-xs) var(--mi-spacing-sm);
+    gap: var(--spacing-xs) var(--spacing-sm);
 
     @include g.mq(default) {
         flex-direction: row;
@@ -36,8 +36,8 @@ a.#{g.$pr}p-headline__inner .#{g.$pr}p-headline__title {
 
 .#{g.$pr}p-headline__header {
     @include g.flex( n, n, n, center );
-    gap: var(--mi-spacing-xs);
-    font-size: var(--mi-fontSize-sm);
+    gap: var(--spacing-xs);
+    font-size: var(--fontSize-sm);
 }
 
 .#{g.$pr}p-headline__header > * {

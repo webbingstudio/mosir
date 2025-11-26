@@ -4,7 +4,7 @@
 .#{g.$pr}p-siteTitle {
   @include g.flex(column, n, center, flex-start);
   margin: 0;
-  line-height: var(--mi-lineHeight-none);
+  line-height: var(--lineHeight-none);
 }
 
 .#{g.$pr}p-siteTitle > * {
@@ -12,14 +12,14 @@
 }
 
 .#{g.$pr}p-siteTitle a {
-  color: var(--mi-color-default-dark);
+  color: var(--color-default-dark);
   text-decoration: none;
 }
 
 @include g.mq(hover) {
 
   .#{g.$pr}p-siteTitle a:hover {
-    color: var(--mi-color-default-dark);
+    color: var(--color-default-dark);
     text-decoration: none;
   }
 
@@ -31,11 +31,11 @@
 }
 
 .#{g.$pr}p-siteTitle a:focus {
-  color: var(--mi-color-default-dark);
+  color: var(--color-default-dark);
 }
 
 .#{g.$pr}p-siteTitle__label {
-  font-size: var(--mi-fontSize-xl);
+  font-size: var(--fontSize-xl);
   font-weight: bold;
 }
 

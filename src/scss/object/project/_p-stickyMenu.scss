@@ -11,9 +11,9 @@
 .#{g.$pr}p-stickyMenu {
   @include g.position(fixed, n, n, 0, 0, 21);
   width: 100vw;
-  color: var(--mi-ui-default-color);
-  background-color: var(--mi-body-bg);
-  box-shadow: var(--mi-shadow--sm-darken);
+  color: var(--ui-default-color);
+  background-color: var(--body-bg);
+  box-shadow: var(--shadow--sm-darken);
   z-index: 21;
 }
 
@@ -22,7 +22,7 @@
 }
 
 .#{g.$pr}p-stickyMenu__nav a {
-  min-height: var(--mi-nav-height);
+  min-height: var(--nav-height);
 }
 
 .#{g.$pr}p-stickyMenu__nav .current-menu-item > a {
@@ -39,6 +39,6 @@
 }
 
 .#{g.$pr}p-stickyMenu.#{g.$pr}p-stickyMenu--inverse {
-  color: var(--mi-ui-inverse-color);
-  background-color: var(--mi-ui-inverse-bg);
+  color: var(--ui-inverse-color);
+  background-color: var(--ui-inverse-bg);
 }

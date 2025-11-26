@@ -18,7 +18,7 @@
 .#{g.$pr}p-drawer::after {
   content: "";
   @include g.position( fixed, 0, n, n, 0, 102 );
-  background-color: var(--mi-body-bg);
+  background-color: var(--body-bg);
   width: 100dvw;
   height: 100dvh;
   transform: scaleY(0);
@@ -29,7 +29,7 @@
   overflow: hidden;
   @include g.position( relative, n, n, n, n, 103 );
   height: 0;
-  background-color: var(--mi-body-bg);
+  background-color: var(--body-bg);
   opacity: 0;
   transform: translateY(-1rem);
   transform-origin: center center;
@@ -37,9 +37,9 @@
 
 .#{g.$pr}p-drawer__contents__inner {
   @include g.flex(column, n, n, flex-start);
-  gap: var(--mi-spacing-md);
-  padding-top: calc( var(--mi-drawer-toggle-width) + var(--mi-spacing-sm) );
-  padding-bottom: calc( var(--mi-drawer-toggle-width) + var(--mi-spacing-sm) );
+  gap: var(--spacing-md);
+  padding-top: calc( var(--drawer-toggle-width) + var(--spacing-sm) );
+  padding-bottom: calc( var(--drawer-toggle-width) + var(--spacing-sm) );
 }
 
 
