@@ -9,7 +9,7 @@
 
 .#{g.$pr}c-nav {
   @include g.flex(n, n, n, center);
-  gap: var(--mi-spacing-small);
+  gap: var(--mi-spacing-sm);
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -34,8 +34,8 @@ ul.#{g.$pr}c-nav,
 
 .#{g.$pr}c-nav a {
   @include g.flex(n, n, n, center);
-  gap: var(--mi-spacing-x-small);
-  line-height: var(--mi-nav-line-height);
+  gap: var(--mi-spacing-xs);
+  line-height: var(--mi-lineHeight-sm);
   color: var(--mi-ui-default-color);
   background-color: var(--mi-ui-default-bg);
   text-decoration: none;

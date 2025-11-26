@@ -12,7 +12,7 @@
 .#{g.$pr}p-media__inner {
   display: grid;
   grid-template-columns: min( 10rem, 20% ) 1fr;
-  gap: var(--mi-spacing-small);
+  gap: var(--mi-spacing-sm);
 }
 
 a.#{g.$pr}p-media__inner {
@@ -36,13 +36,13 @@ a.#{g.$pr}p-media__inner .#{g.$pr}p-media__title {
 .#{g.$pr}p-media__contents {
   grid-column: 2 / 2;
   @include g.flex( column, n, flex-start, flex-start );
-  gap: var(--mi-spacing-x-small);
+  gap: var(--mi-spacing-xs);
 }
 
 .#{g.$pr}p-media__meta {
   @include g.flex( n, wrap, flex-start, center );
-  gap: var(--mi-spacing-small);
-  font-size: var(--mi-font-size-small);
+  gap: var(--mi-spacing-sm);
+  font-size: var(--mi-fontSize-sm);
 }
 
 .#{g.$pr}p-media__meta > * {

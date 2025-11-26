@@ -37,9 +37,9 @@
 
 .#{g.$pr}p-drawer__contents__inner {
   @include g.flex(column, n, n, flex-start);
-  gap: var(--mi-spacing-medium);
-  padding-top: calc( var(--mi-drawer-toggle-width) + var(--mi-spacing-small) );
-  padding-bottom: calc( var(--mi-drawer-toggle-width) + var(--mi-spacing-small) );
+  gap: var(--mi-spacing-md);
+  padding-top: calc( var(--mi-drawer-toggle-width) + var(--mi-spacing-sm) );
+  padding-bottom: calc( var(--mi-drawer-toggle-width) + var(--mi-spacing-sm) );
 }
 
 

@@ -8,20 +8,14 @@
 body {
   background-color: var(--mi-body-bg);
   color: var(--mi-body-color);
-  font-size: var(--mi-font-size-medium);
-  font-family: var(--mi-font-family-default);
-  line-height: var(--mi-line-height-md);
-  letter-spacing: var(--mi-letter-spacing-sp);
-}
-
-@include g.mq(default) {
-  body {
-    letter-spacing: var(--mi-letter-spacing-pc);
-  }
+  font-size: var(--mi-fontSize-md);
+  font-family: var(--mi-fontFamily-default);
+  line-height: var(--mi-lineHeight-md);
+  letter-spacing: var(--mi-body-letterSpacing);
 }
 
 a {
-  color: var(--mi-link-color);
+  color: var(--mi-link-default-color);
 	text-decoration-thickness: 0.0625em !important;
   // Asian languages ​​do not have the concept of a "baseline,"
   // so if you leave the underline at the default position,

@@ -23,9 +23,9 @@
   position: relative;
   justify-content: center;
   width: 100%;
-  min-height: var(--mi-nav-min-height);
-  padding-inline: var(--mi-spacing-medium);
-  font-size: var(--mi-font-size-large);
+  min-height: var(--mi-nav-height);
+  padding-inline: var(--mi-spacing-md);
+  font-size: var(--mi-fontSize-lg);
   font-weight: 700;
   letter-spacing: 0.15em;
   z-index: 21; // Links overlay submenus on hover or focus.
@@ -57,15 +57,15 @@
 // ------------------------------
 
 .#{g.$pr}p-megaMenu__nav .sub-menu {
-  font-size: var(--mi-font-size-small);
+  font-size: var(--mi-fontSize-sm);
 }
 
 .#{g.$pr}p-megaMenu__nav > .menu-item > .sub-menu {
   @include g.position(absolute, 100%, n, n, 0, n);
   @include g.flex(n, wrap, flex-start, flex-start);
-  gap: var(--mi-spacing-small);
+  gap: var(--mi-spacing-sm);
   width: 100%;
-  padding-inline: var(--mi-spacing-medium);
+  padding-inline: var(--mi-spacing-md);
   color: var(--mi-ui-default-color);
   transition: all 0.3s 0.3s linear;
 }
@@ -97,7 +97,7 @@
 
 @include g.mq(hover) {
   .#{g.$pr}p-megaMenu__nav > .menu-item:hover > .sub-menu {
-    padding-block: var(--mi-spacing-small);
+    padding-block: var(--mi-spacing-sm);
     transition: all 0.3s 0s linear;
   }
 }
@@ -137,13 +137,13 @@
 
 @include g.mq(default) {
   .#{g.$pr}p-megaMenu__nav.c-nav > * {
-    flex-basis: calc( 50% - ( var(--mi-spacing-medium) / 2 ) );
+    flex-basis: calc( 50% - ( var(--mi-spacing-md) / 2 ) );
   }
 }
 
 @include g.mq(wide) {
   .#{g.$pr}p-megaMenu__nav.c-nav > * {
-    flex-basis: calc( 33.33% - ( ( var(--mi-spacing-medium) * 2 ) / 3 ) );
+    flex-basis: calc( 33.33% - ( ( var(--mi-spacing-md) * 2 ) / 3 ) );
   }
 }
 

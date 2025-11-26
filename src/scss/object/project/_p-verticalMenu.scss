@@ -14,7 +14,7 @@
   flex-flow: column wrap;
   align-items: stretch;
   justify-content: flex-start;
-  gap: var(--mi-spacing-medium);
+  gap: var(--mi-spacing-md);
 }
 
 .#{g.$pr}p-verticalMenu__nav.#{g.$pr}c-nav > * {
@@ -23,13 +23,13 @@
 
 @include g.mq(default) {
   .#{g.$pr}p-verticalMenu__nav.#{g.$pr}c-nav > * {
-    flex-basis: calc( 50% - ( var(--mi-spacing-medium) / 2 ) );
+    flex-basis: calc( 50% - ( var(--mi-spacing-md) / 2 ) );
   }
 }
 
 @include g.mq(wide) {
   .#{g.$pr}p-verticalMenu__nav.#{g.$pr}c-nav > * {
-    flex-basis: calc( 33.33% - ( ( var(--mi-spacing-medium) * 2 ) / 3 ) );
+    flex-basis: calc( 33.33% - ( ( var(--mi-spacing-md) * 2 ) / 3 ) );
   }
 }
 
@@ -39,16 +39,16 @@
 
 .#{g.$pr}p-verticalMenu__nav > .menu-item > a {
   position: relative;
-  font-size: var(--mi-font-size-x-large);
+  font-size: var(--mi-fontSize-xl);
   font-weight: 700;
   text-decoration: none;
-  padding-left: var(--mi-spacing-medium );
+  padding-left: var(--mi-spacing-md );
 }
 
 .#{g.$pr}p-verticalMenu__nav > .menu-item > a::before {
   @include g.position(absolute, calc( 50% - 0.0625rem ), n, n, 0);
   content: "";
-  width: calc( var(--mi-spacing-medium) - var(--mi-spacing-x-small) );
+  width: calc( var(--mi-spacing-md) - var(--mi-spacing-xs) );
   height: 0.125rem;
   background-color: var(--mi-ui-default-accent-color);
   opacity: 1;
@@ -77,7 +77,7 @@
 
 // 1.25em = left spacing of arrowed link
 .#{g.$pr}p-verticalMenu__nav > .menu-item > .sub-menu {
-  padding-left: calc( var(--mi-spacing-medium) - 1.25em );
+  padding-left: calc( var(--mi-spacing-md) - 1.25em );
 }
 
 .#{g.$pr}p-verticalMenu__nav .sub-menu .menu-item {

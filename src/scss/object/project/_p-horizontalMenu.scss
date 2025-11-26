@@ -9,7 +9,7 @@
 
 .#{g.$pr}p-horizontalMenu__nav.#{g.$pr}c-nav {
   justify-content: center;
-  column-gap: var(--mi-spacing-medium);
+  column-gap: var(--mi-spacing-md);
 }
 
 .#{g.$pr}p-horizontalMenu:not(.#{g.$pr}p-horizontalMenu--arrowed) .menu-item + .menu-item {
@@ -17,7 +17,7 @@
 }
 
 .#{g.$pr}p-horizontalMenu:not(.#{g.$pr}p-horizontalMenu--arrowed) .menu-item + .menu-item::after {
-  @include g.position( absolute, #{calc( 50% - 0.5em )}, n, n, #{calc( var(--mi-spacing-medium) / -2 )} );
+  @include g.position( absolute, #{calc( 50% - 0.5em )}, n, n, #{calc( var(--mi-spacing-md) / -2 )} );
   content: "";
   width: 0;
   height: 1em;
@@ -25,7 +25,7 @@
 }
 
 .#{g.$pr}p-horizontalMenu:not(.#{g.$pr}p-horizontalMenu--arrowed) a {
-  min-height: var(--mi-nav-min-height);
+  min-height: var(--mi-nav-height);
 }
 
 .#{g.$pr}p-horizontalMenu .current-menu-item > a {

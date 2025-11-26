@@ -3,11 +3,11 @@
 
 .#{g.$pr}l-container {
   width: 100%;
-  max-width: var(--mi-global-wide-size);
-  padding-inline: var(--mi-body-x-gap);
+  max-width: var(--mi-container-wide-width);
+  padding-inline: var(--mi-screen-x-spacing);
   margin-inline: auto;
 }
 
 .#{g.$pr}l-container--sm {
-  max-width: var(--mi-global-content-size);
+  max-width: var(--mi-container-default-width);
 }

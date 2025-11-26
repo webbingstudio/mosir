@@ -6,16 +6,16 @@
 // ------------------------------
 
 .#{g.$pr}p-home-headline {
-    padding-block: var(--mi-spacing-large);
+    padding-block: var(--mi-spacing-lg);
 }
 
 .#{g.$pr}p-home-headline__inner {
   display: grid;
-  gap: var(--mi-spacing-medium);
+  gap: var(--mi-spacing-md);
 
   @include g.mq(xga) {
     grid-template-columns: max-content 1fr;
-    gap: var(--mi-spacing-large);
+    gap: var(--mi-spacing-lg);
   }
 
 }

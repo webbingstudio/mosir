@@ -12,8 +12,8 @@
   display: block;
   margin: 0;
   font-weight: bold;
-  font-family: var(--mi-font-family-default);
-  line-height: var(--mi-line-height-sm);
+  font-family: var(--mi-fontFamily-default);
+  line-height: var(--mi-lineHeight-sm);
 }
 
 .#{g.$pr}c-title a {
@@ -25,25 +25,25 @@
 }
 
 .#{g.$pr}c-title.#{g.$pr}c-title--lv1 {
-  font-size: var(--mi-font-size-3-x-large);
+  font-size: var(--mi-fontSize-3xl);
 }
 
 .#{g.$pr}c-title.#{g.$pr}c-title--lv2 {
-  font-size: var(--mi-font-size-2-x-large);
+  font-size: var(--mi-fontSize-2xl);
 }
 
 .#{g.$pr}c-title.#{g.$pr}c-title--lv3 {
-  font-size: var(--mi-font-size-x-large);
+  font-size: var(--mi-fontSize-xl);
 }
 
 .#{g.$pr}c-title.#{g.$pr}c-title--lv4 {
-  font-size: var(--mi-font-size-large);
+  font-size: var(--mi-fontSize-lg);
 }
 
 .#{g.$pr}c-title.#{g.$pr}c-title--lv5 {
-  font-size: var(--mi-font-size-medium);
+  font-size: var(--mi-fontSize-md);
 }
 
 .#{g.$pr}c-title.#{g.$pr}c-title--lv6 {
-  font-size: var(--mi-font-size-small);
+  font-size: var(--mi-fontSize-sm);
 }

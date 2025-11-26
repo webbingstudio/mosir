@@ -11,7 +11,7 @@
 
 .#{g.$pr}p-card__inner {
   @include g.flex( column, n, flex-start, stretch );
-  gap: var(--mi-spacing-x-small);
+  gap: var(--mi-spacing-xs);
 }
 
 a.#{g.$pr}p-card__inner {
@@ -33,7 +33,7 @@ a.#{g.$pr}p-card__inner .#{g.$pr}p-card__title {
 
 .#{g.$pr}p-card__contents {
   @include g.flex( column, n, flex-start, stretch );
-  gap: var(--mi-spacing-x-small);
+  gap: var(--mi-spacing-xs);
 }
 
 .#{g.$pr}p-card__contents > * {
@@ -42,8 +42,8 @@ a.#{g.$pr}p-card__inner .#{g.$pr}p-card__title {
 
 .#{g.$pr}p-card__meta {
   @include g.flex( n, wrap, flex-start, center );
-  gap: var(--mi-spacing-x-small) var(--mi-spacing-small);
-  font-size: var(--mi-font-size-small);
+  gap: var(--mi-spacing-xs) var(--mi-spacing-sm);
+  font-size: var(--mi-fontSize-sm);
 }
 
 .#{g.$pr}p-card__meta > * {

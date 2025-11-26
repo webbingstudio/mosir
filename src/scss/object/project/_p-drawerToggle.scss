@@ -7,16 +7,16 @@
 // ------------------------------
 
 .#{g.$pr}p-drawerToggle {
-  @include g.position( fixed, 0, var(--mi-body-x-gap), n, n, 111 );
+  @include g.position( fixed, 0, var(--mi-screen-x-spacing), n, n, 111 );
   margin-right: 0;
-  padding-top: var(--mi-spacing-small); // top padding of header
+  padding-top: var(--mi-spacing-sm); // top padding of header
 }
 
 @include g.mq(wide) {
 
   .#{g.$pr}p-drawerToggle {
     right: 50%; // not `50vw`
-    margin-right: calc( var( --mi-global-wide-size ) / -2 );
+    margin-right: calc( var( --mi-container-wide-width ) / -2 );
   }
 
 }

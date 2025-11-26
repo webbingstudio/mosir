@@ -4,7 +4,7 @@
 .#{g.$pr}p-siteTitle {
   @include g.flex(column, n, center, flex-start);
   margin: 0;
-  line-height: var(--mi-line-height-none);
+  line-height: var(--mi-lineHeight-none);
 }
 
 .#{g.$pr}p-siteTitle > * {
@@ -35,7 +35,7 @@
 }
 
 .#{g.$pr}p-siteTitle__label {
-  font-size: var(--mi-font-size-x-large);
+  font-size: var(--mi-fontSize-xl);
   font-weight: bold;
 }
 

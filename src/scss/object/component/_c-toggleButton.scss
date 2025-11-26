@@ -12,8 +12,8 @@
   -webkit-appearance: none;
   appearance: none;
   @include g.flex( n, n, center, center );
-  width: var(--mi-nav-min-height);
-  height: var(--mi-nav-min-height);
+  width: var(--mi-nav-height);
+  height: var(--mi-nav-height);
   padding: 0;
   border: 0 none;
   background-color: transparent;

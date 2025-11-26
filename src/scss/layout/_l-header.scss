@@ -3,7 +3,7 @@
 
 .#{g.$pr}l-header {
   position: relative;
-  padding-top: var(--mi-spacing-small);
+  padding-top: var(--mi-spacing-sm);
   border-bottom: 0.0625rem solid var(--mi-border-default-light-color);
 }
 
@@ -11,12 +11,12 @@
   display: grid;
   grid-template-columns: repeat( 2, auto );
   grid-template-rows: repeat( 2, auto );
-  gap: var(--mi-spacing-small) var(--mi-spacing-medium);
+  gap: var(--mi-spacing-sm) var(--mi-spacing-md);
 }
 
 .#{g.$pr}l-header__contents__siteTitle {
   grid-area: 1 / 1 / 2 / 2;
-  height: var(--mi-nav-min-height);
+  height: var(--mi-nav-height);
 }
 
 // .p-megaMenu
@@ -35,7 +35,7 @@
   grid-area: 1 / 2 / 2 / 3;
   align-self: center;
   justify-self: flex-end;
-  padding-right: calc( var(--mi-drawer-toggle-width) + var(--mi-spacing-medium) );
+  padding-right: calc( var(--mi-drawer-toggle-width) + var(--mi-spacing-md) );
 }
 
 @include g.mq(xga-max) {
