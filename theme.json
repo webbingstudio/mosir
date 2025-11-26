@@ -8,161 +8,161 @@
 						"#4A4540",
 						"#EFEDEB"
 					],
-					"name": "mi-default",
-					"slug": "mi-default"
+					"name": "default",
+					"slug": "default"
 				},
 				{
 					"colors": [
 						"#1079BD",
 						"#D9EFFC"
 					],
-					"name": "mi-primary",
-					"slug": "mi-primary"
+					"name": "primary",
+					"slug": "primary"
 				},
 				{
 					"colors": [
 						"#407C26",
 						"#B2D19E"
 					],
-					"name": "mi-secondary",
-					"slug": "mi-secondary"
+					"name": "secondary",
+					"slug": "secondary"
 				}
 			],
 			"palette": [
 				{
 					"color": "#261C19",
-					"name": "mi-default-dark",
-					"slug": "mi-default-dark"
+					"name": "default-dark",
+					"slug": "default-dark"
 				},
 				{
 					"color": "#393630",
-					"name": "mi-default",
-					"slug": "mi-default"
+					"name": "default",
+					"slug": "default"
 				},
 				{
 					"color": "#7A7672",
-					"name": "mi-default-light",
-					"slug": "mi-default-light"
+					"name": "default-light",
+					"slug": "default-light"
 				},
 				{
 					"color": "#B6B0AC",
-					"name": "mi-default-lighter",
-					"slug": "mi-default-lighter"
+					"name": "default-lighter",
+					"slug": "default-lighter"
 				},
 				{
 					"color": "#EFEDEB",
-					"name": "mi-default-fade",
-					"slug": "mi-default-fade"
+					"name": "default-fade",
+					"slug": "default-fade"
 				},
 				{
 					"color": "#0B5684",
-					"name": "mi-primary-dark",
-					"slug": "mi-primary-dark"
+					"name": "primary-dark",
+					"slug": "primary-dark"
 				},
 				{
 					"color": "#1073BC",
-					"name": "mi-primary",
-					"slug": "mi-primary"
+					"name": "primary",
+					"slug": "primary"
 				},
 				{
 					"color": "#239CE0",
-					"name": "mi-primary-light",
-					"slug": "mi-primary-light"
+					"name": "primary-light",
+					"slug": "primary-light"
 				},
 				{
 					"color": "#68BEF3",
-					"name": "mi-primary-lighter",
-					"slug": "mi-primary-lighter"
+					"name": "primary-lighter",
+					"slug": "primary-lighter"
 				},
 				{
 					"color": "#D9EFFC",
-					"name": "mi-primary-fade",
-					"slug": "mi-primary-fade"
+					"name": "primary-fade",
+					"slug": "primary-fade"
 				},
 				{
 					"color": "#33601C",
-					"name": "mi-secondary-dark",
-					"slug": "mi-secondary-dark"
+					"name": "secondary-dark",
+					"slug": "secondary-dark"
 				},
 				{
 					"color": "#407C26",
-					"name": "mi-secondary",
-					"slug": "mi-secondary"
+					"name": "secondary",
+					"slug": "secondary"
 				},
 				{
 					"color": "#50902C",
-					"name": "mi-secondary-light",
-					"slug": "mi-secondary-light"
+					"name": "secondary-light",
+					"slug": "secondary-light"
 				},
 				{
 					"color": "#75AC50",
-					"name": "mi-secondary-lighter",
-					"slug": "mi-secondary-lighter"
+					"name": "secondary-lighter",
+					"slug": "secondary-lighter"
 				},
 				{
 					"color": "#B2D19E",
-					"name": "mi-secondary-fade",
-					"slug": "mi-secondary-fade"
+					"name": "secondary-fade",
+					"slug": "secondary-fade"
 				},
 				{
 					"color": "#BC9310",
-					"name": "mi-warning-dark",
-					"slug": "mi-warning-dark"
+					"name": "warning-dark",
+					"slug": "warning-dark"
 				},
 				{
 					"color": "#D6AC26",
-					"name": "mi-warning",
-					"slug": "mi-warning"
+					"name": "warning",
+					"slug": "warning"
 				},
 				{
 					"color": "#edc845",
-					"name": "mi-warning-light",
-					"slug": "mi-warning-light"
+					"name": "warning-light",
+					"slug": "warning-light"
 				},
 				{
 					"color": "#F4DE80",
-					"name": "mi-warning-lighter",
-					"slug": "mi-warning-lighter"
+					"name": "warning-lighter",
+					"slug": "warning-lighter"
 				},
 				{
 					"color": "#F9F0C3",
-					"name": "mi-warning-fade",
-					"slug": "mi-warning-fade"
+					"name": "warning-fade",
+					"slug": "warning-fade"
 				},
 				{
 					"color": "#AC2620",
-					"name": "mi-danger-dark",
-					"slug": "mi-danger-dark"
+					"name": "danger-dark",
+					"slug": "danger-dark"
 				},
 				{
 					"color": "#D03029",
-					"name": "mi-danger",
-					"slug": "mi-danger"
+					"name": "danger",
+					"slug": "danger"
 				},
 				{
 					"color": "#E35650",
-					"name": "mi-danger-light",
-					"slug": "mi-danger-light"
+					"name": "danger-light",
+					"slug": "danger-light"
 				},
 				{
 					"color": "#F08480",
-					"name": "mi-danger-lighter",
-					"slug": "mi-danger-lighter"
+					"name": "danger-lighter",
+					"slug": "danger-lighter"
 				},
 				{
 					"color": "#F9CCC9",
-					"name": "mi-danger-fade",
-					"slug": "mi-danger-fade"
+					"name": "danger-fade",
+					"slug": "danger-fade"
 				},
 				{
 					"color": "#FFFFFF",
-					"name": "mi-white",
-					"slug": "mi-white"
+					"name": "white",
+					"slug": "white"
 				},
 				{
 					"color": "#000000",
-					"name": "mi-black",
-					"slug": "mi-black"
+					"name": "black",
+					"slug": "black"
 				}
 			]
 		},
