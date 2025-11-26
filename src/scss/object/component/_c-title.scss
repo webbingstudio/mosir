@@ -11,7 +11,7 @@
 .#{g.$pr}c-title {
   display: block;
   margin: 0;
-  font-weight: bold;
+  font-weight: var(--fontWeight-bold);
   font-family: var(--fontFamily-default);
   line-height: var(--lineHeight-sm);
 }

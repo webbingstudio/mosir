@@ -26,7 +26,7 @@
 }
 
 .#{g.$pr}p-stickyMenu__nav .current-menu-item > a {
-  font-weight: 700;
+  font-weight: var(--fontWeight-bold);
 }
 
 @include g.mq(hover) {

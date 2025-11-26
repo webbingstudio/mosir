@@ -40,7 +40,7 @@
 .#{g.$pr}p-verticalMenu__nav > .menu-item > a {
   position: relative;
   font-size: var(--fontSize-xl);
-  font-weight: 700;
+  font-weight: var(--fontWeight-bold);
   text-decoration: none;
   padding-left: var(--spacing-md );
 }

@@ -26,7 +26,7 @@
   min-height: var(--nav-height);
   padding-inline: var(--spacing-md);
   font-size: var(--fontSize-lg);
-  font-weight: 700;
+  font-weight: var(--fontWeight-bold);
   letter-spacing: 0.15em;
   z-index: 21; // Links overlay submenus on hover or focus.
 }

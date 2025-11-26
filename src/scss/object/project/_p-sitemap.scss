@@ -75,7 +75,7 @@
 // ------------------------------
 
 .#{g.$pr}p-sitemap__nav > .menu-item > a {
-  font-weight: 700;
+  font-weight: var(--fontWeight-bold);
 }
 
 // ------------------------------

@@ -36,7 +36,7 @@
 
 .#{g.$pr}p-siteTitle__label {
   font-size: var(--fontSize-xl);
-  font-weight: bold;
+  font-weight: var(--fontWeight-bold);
 }
 
 .#{g.$pr}p-siteTitle__logo > img,

@@ -63,6 +63,8 @@
   --border-radius-sm: 0.25rem;
   --border-radius-md: 0.375rem;
   --fontFamily-default: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", "Meiryo", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  --fontWeight-normal: 400;
+  --fontWeight-bold: 700;
   --lineHeight-none: 1;
   --lineHeight-xs: 1.25;
   --lineHeight-sm: 1.5;
@@ -400,6 +402,7 @@ body {
   background-color: var(--body-bg);
   color: var(--body-color);
   font-size: var(--fontSize-md);
+  font-weight: var(--fontWeight-normal);
   font-family: var(--fontFamily-default);
   line-height: var(--lineHeight-md);
   letter-spacing: var(--body-letterSpacing);
@@ -796,7 +799,7 @@ ul.mi-c-nav,
 .mi-c-title {
   display: block;
   margin: 0;
-  font-weight: bold;
+  font-weight: var(--fontWeight-bold);
   font-family: var(--fontFamily-default);
   line-height: var(--lineHeight-sm);
 }
@@ -1068,7 +1071,7 @@ body:has(.mi-p-drawer.-is-closing) {
 
 .mi-p-siteTitle__label {
   font-size: var(--fontSize-xl);
-  font-weight: bold;
+  font-weight: var(--fontWeight-bold);
 }
 
 .mi-p-siteTitle__logo > img,
@@ -1164,7 +1167,7 @@ a.mi-p-headline__inner:not(:hover) .mi-p-headline__title {
 }
 
 .mi-p-horizontalMenu .current-menu-item > a {
-  font-weight: 700;
+  font-weight: var(--fontWeight-bold);
 }
 
 @media (any-hover: hover) {
@@ -1297,7 +1300,7 @@ a.mi-p-media__inner:not(:hover) .mi-p-media__title {
   min-height: var(--nav-height);
   padding-inline: var(--spacing-md);
   font-size: var(--fontSize-lg);
-  font-weight: 700;
+  font-weight: var(--fontWeight-bold);
   letter-spacing: 0.15em;
   z-index: 21;
 }
@@ -1632,7 +1635,7 @@ a.mi-p-media__inner:not(:hover) .mi-p-media__title {
 }
 
 .mi-p-sitemap__nav > .menu-item > a {
-  font-weight: 700;
+  font-weight: var(--fontWeight-bold);
 }
 
 .mi-p-sitemap__nav .sub-menu {
@@ -1670,7 +1673,7 @@ a.mi-p-media__inner:not(:hover) .mi-p-media__title {
 }
 
 .mi-p-stickyMenu__nav .current-menu-item > a {
-  font-weight: 700;
+  font-weight: var(--fontWeight-bold);
 }
 
 @media (any-hover: hover) {
@@ -1708,7 +1711,7 @@ a.mi-p-media__inner:not(:hover) .mi-p-media__title {
 .mi-p-verticalMenu__nav > .menu-item > a {
   position: relative;
   font-size: var(--fontSize-xl);
-  font-weight: 700;
+  font-weight: var(--fontWeight-bold);
   text-decoration: none;
   padding-left: var(--spacing-md);
 }
