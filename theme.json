@@ -14,7 +14,7 @@
 				{
 					"colors": [
 						"#1079BD",
-						"#D9EFFC"
+						"#E0F0FC"
 					],
 					"name": "primary",
 					"slug": "primary"
@@ -75,7 +75,7 @@
 					"slug": "primary-lighter"
 				},
 				{
-					"color": "#D9EFFC",
+					"color": "#E0F0FC",
 					"name": "primary-fade",
 					"slug": "primary-fade"
 				},
@@ -236,6 +236,11 @@
           "name": "XL(64-96)",
           "size": "clamp(4rem, 3.171rem + 3.536vw, 6rem)",
           "slug": "x-large"
+        },
+        {
+          "name": "2XL(64-128)",
+          "size": "calc(clamp(4rem, 2.343rem + 7.072vw, 8rem))",
+          "slug": "2-x-large"
         }
       ]
 		},

@@ -52,13 +52,7 @@
 }
 
 .#{g.$pr}p-posts.#{g.$pr}p-posts--headline > * {
-  padding-block: var(--spacing-sm);
   border-bottom: 0.0625rem solid var(--border-default-light-color);
-
-  @include g.mq(default) {
-    padding-block: var(--spacing-xs);
-  }
-
 }
 
 

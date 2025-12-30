@@ -56,6 +56,7 @@
   // --wp--preset--spacing--medium
   // --wp--preset--spacing--large
   // --wp--preset--spacing--x-large
+  // --wp--preset--spacing--2-x-large
   // --wp--style--global--content-size
   // --wp--style--global--wide-size
   // --wp--preset--shadow--sm
@@ -120,6 +121,7 @@
   --spacing-md: var(--wp--preset--spacing--medium);
   --spacing-lg: var(--wp--preset--spacing--large);
   --spacing-xl: var(--wp--preset--spacing--x-large);
+  --spacing-2xl: var(--wp--preset--spacing--2-x-large);
 
   // container width
   --container-default-width: var(--wp--style--global--content-size);
@@ -161,15 +163,21 @@
 
   --ui-default-color: var(--color-default-dark);
   --ui-inverse-color: var(--color-white);
-  --ui-default-bg: transparent;
   --ui-default-accent-color: var(--color-primary);
-  --ui-default-hover-bg: transparent;
 
   --screen-x-spacing: var(--wp--preset--font-size--medium);
 
   --drawer-toggle-width: 2.75rem;
 
   --nav-height: 2.75rem;
-  --nav-default-transition: all 0.5s;
-  --nav-cubic-transition: all 0.5s 0s cubic-bezier(0.65, 0, 0.35, 1);
+
+  --headline-hover-bg: rgba(16 116 188 / 0.08); // primary color
+
+  --card-bg: var(--body-bg);
+
+  --media-bg: var(--body-bg);
+
+  --transition-fast: all 0.25s;
+  --transition-slow: all 0.5s;
+  --transition-cubic: all 0.5s 0s cubic-bezier(0.65, 0, 0.35, 1);
 }

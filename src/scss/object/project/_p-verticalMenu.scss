@@ -59,15 +59,14 @@
 @include g.mq(hover) {
 
   .#{g.$pr}p-verticalMenu__nav > :not(.current-menu-item) > a:hover::before {
-    opacity: 0.5;
     transform: scaleX(0.2);
-    transition: var(--nav-cubic-transition);
+    transition: var(--transition-cubic);
   }
 
 }
 
 .#{g.$pr}p-verticalMenu__nav > .current-menu-item > a::before {
-  opacity: 0.5;
+  opacity: 0.3;
   background-color: currentColor;
 }
 

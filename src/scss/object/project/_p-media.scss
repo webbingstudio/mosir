@@ -7,25 +7,45 @@
 // ------------------------------
 
 .#{g.$pr}p-media {
+  background-color: var(--body-bg);
+  box-shadow: var(--shadow--sm);
+
+  @include g.mq(default) {
+    box-shadow: none;
+    background-color: transparent;
+  }
+
 }
 
 .#{g.$pr}p-media__inner {
   display: grid;
   grid-template-columns: min( 10rem, 20% ) 1fr;
-  gap: var(--spacing-sm);
 }
 
 a.#{g.$pr}p-media__inner {
     color: currentColor;
-    text-decoration: none;
 }
 
 a.#{g.$pr}p-media__inner {
   width: 100%;
 }
 
-a.#{g.$pr}p-media__inner:not(:hover) .#{g.$pr}p-media__title {
-  text-decoration: underline;
+@include g.mq(hover) {
+
+  .#{g.$pr}p-media:has(a.#{g.$pr}p-media__inner:hover) {
+    background-color: var(--media-bg);
+    box-shadow: var(--shadow--sm);
+    transition: var(--transition-slow);
+  }
+
+  a.#{g.$pr}p-media__inner:hover {
+    text-decoration: none;
+  }
+
+  a.#{g.$pr}p-media__inner:hover .#{g.$pr}p-media__title {
+    text-decoration: underline;
+  }
+
 }
 
 .#{g.$pr}p-media__image {
@@ -33,13 +53,14 @@ a.#{g.$pr}p-media__inner:not(:hover) .#{g.$pr}p-media__title {
 }
 
 .#{g.$pr}p-media__image img {
-  transition: var(--nav-default-transition);
+  transition: var(--transition-slow);
 }
 
 .#{g.$pr}p-media__contents {
   grid-column: 2 / 2;
   @include g.flex( column, n, flex-start, flex-start );
   gap: var(--spacing-xs);
+  padding: var(--spacing-xs) var(--spacing-sm);
 }
 
 .#{g.$pr}p-media__meta {

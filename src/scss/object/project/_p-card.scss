@@ -6,34 +6,59 @@
 //  - Image on the top and content on the bottom.
 // ------------------------------
 
-// .#{g.$pr}p-card {
-// }
+.#{g.$pr}p-card {
+  background-color: var(--body-bg);
+  box-shadow: var(--shadow--sm);
+
+  @include g.mq(default) {
+    box-shadow: none;
+    background-color: transparent;
+  }
+
+}
 
 .#{g.$pr}p-card__inner {
-  @include g.flex( column, n, flex-start, stretch );
-  gap: var(--spacing-xs);
+  display: block;
 }
 
 a.#{g.$pr}p-card__inner {
     color: currentColor;
+}
+
+@include g.mq(hover) {
+
+  .#{g.$pr}p-card:has(a.#{g.$pr}p-card__inner:hover) {
+    background-color: var(--card-bg);
+    box-shadow: var(--shadow--sm);
+    transition: var(--transition-slow);
+  }
+
+  a.#{g.$pr}p-card__inner:hover {
     text-decoration: none;
+  }
+
+  a.#{g.$pr}p-card__inner:hover .#{g.$pr}p-card__title,
+  a.#{g.$pr}p-card__title:hover {
+    text-decoration: underline;
+  }
+
 }
 
 a.#{g.$pr}p-card__inner .#{g.$pr}p-card__title {
   width: 100%;
-  text-decoration: underline;
 }
 
 // .#{g.$pr}p-card__image {
 // }
 
 .#{g.$pr}p-card__image img {
-  transition: var(--nav-default-transition);
+  transition: var(--transition-slow);
 }
 
 .#{g.$pr}p-card__contents {
   @include g.flex( column, n, flex-start, stretch );
   gap: var(--spacing-xs);
+  padding: var(--spacing-sm) var(--spacing-xs);
 }
 
 .#{g.$pr}p-card__contents > * {
@@ -52,8 +77,8 @@ a.#{g.$pr}p-card__inner .#{g.$pr}p-card__title {
 
 @include g.mq(hover) {
 
-  a.#{g.$pr}p-card__inner:hover .#{g.$pr}p-card__image img {
-    opacity: 0.8;
+  a.#{g.$pr}p-card__inner:hover .#{g.$pr}p-card__image img,
+  a.#{g.$pr}p-card__image:hover img {
     transform: scale( 1.1 );
   }
 

@@ -13,20 +13,35 @@
 .#{g.$pr}p-headline__inner {
     @include g.flex( column, n, flex-start, baseline );
     gap: var(--spacing-xs) var(--spacing-sm);
+    padding-block: var(--spacing-sm);
 
     @include g.mq(default) {
         flex-direction: row;
+        padding-block: var(--spacing-xs);
     }
 
 }
 
 a.#{g.$pr}p-headline__inner {
     color: currentColor;
-    text-decoration: none;
 }
 
-a.#{g.$pr}p-headline__inner:not(:hover) .#{g.$pr}p-headline__title {
+@include g.mq(hover) {
+
+  .#{g.$pr}p-headline:has(a.#{g.$pr}p-headline__inner:hover) {
+    background-color: var(--headline-hover-bg);
+    transition: var(--transition-slow);
+  }
+
+  a.#{g.$pr}p-headline__inner:hover {
+    text-decoration: none;
+  }
+
+  a.#{g.$pr}p-headline__inner:hover .#{g.$pr}p-headline__title,
+  a.#{g.$pr}p-headline__title:hover {
     text-decoration: underline;
+  }
+
 }
 
 .#{g.$pr}p-headline__header {

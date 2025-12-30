@@ -38,17 +38,24 @@
   height: 0.125rem;
   background-color: var(--ui-default-accent-color);
   transform-origin: center center;
-  transition: var(--nav-cubic-transition);
+  transition: var(--transition-cubic);
   opacity: 1;
   transform: translateY(0);
 }
 
-// When you hover over a navigation item,
-// it will remove the decorations from all other items (even your current location!).
-.#{g.$pr}p-megaMenu__nav > .menu-item:not([class*="current-menu-"]):not(:hover) > a::after,
-.#{g.$pr}p-megaMenu__nav:has(>.menu-item:hover) > .menu-item:not(:hover) > a::after {
-  opacity: 0;
-  transform: translateY(-400%);
+@include g.mq(hover) {
+  .#{g.$pr}p-megaMenu__nav > .menu-item > a:hover {
+    text-decoration: none;
+  }
+
+  // When you hover over a navigation item,
+  // it will remove the decorations from all other items (even your current location!).
+  .#{g.$pr}p-megaMenu__nav > .menu-item:not([class*="current-menu-"]):not(:hover) > a::after,
+  .#{g.$pr}p-megaMenu__nav:has(>.menu-item:hover) > .menu-item:not(:hover) > a::after {
+    opacity: 0;
+    transform: translateY(-400%);
+  }
+
 }
 
 
@@ -57,7 +64,7 @@
 // ------------------------------
 
 .#{g.$pr}p-megaMenu__nav .sub-menu {
-  font-size: var(--fontSize-sm);
+  font-size: var(--fontSize-md);
 }
 
 .#{g.$pr}p-megaMenu__nav > .menu-item > .sub-menu {
@@ -67,7 +74,7 @@
   width: 100%;
   padding-inline: var(--spacing-md);
   color: var(--ui-default-color);
-  transition: all 0.3s 0.3s linear;
+  transition: var(--transition-cubic);
 }
 
 .#{g.$pr}p-megaMenu__nav > .menu-item > .sub-menu::after {
@@ -97,8 +104,8 @@
 
 @include g.mq(hover) {
   .#{g.$pr}p-megaMenu__nav > .menu-item:hover > .sub-menu {
-    padding-block: var(--spacing-sm);
-    transition: all 0.3s 0s linear;
+    padding-block: var(--spacing-md);
+    transition: var(--transition-cubic);
   }
 }
 
@@ -118,14 +125,14 @@
   .#{g.$pr}p-megaMenu__nav > .menu-item:hover > .sub-menu::after {
     opacity: 1;
     transform: scaleY(1);
-    transition: all 0.5s 0s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: var(--transition-cubic);
   }
 
   .#{g.$pr}p-megaMenu__nav > .menu-item:hover > .sub-menu > * {
     height: auto;
     opacity: 1;
     transform: translateY(0);
-    transition: all 0.5s 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: var(--transition-cubic);
   }
 
 }

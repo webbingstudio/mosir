@@ -17,15 +17,12 @@
   text-align: center;
 }
 
-a.#{g.$pr}c-label {
-  text-decoration: none;
-}
-
 @include g.mq(hover) {
 
   a.#{g.$pr}c-label:hover {
     color: var(--ui-default-color);
     background-color: var(--color-white);
+    text-decoration: none;
   }
 
 }

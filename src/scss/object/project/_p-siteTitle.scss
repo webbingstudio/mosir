@@ -13,7 +13,6 @@
 
 .#{g.$pr}p-siteTitle a {
   color: var(--color-default-dark);
-  text-decoration: none;
 }
 
 @include g.mq(hover) {
@@ -25,7 +24,6 @@
 
   .#{g.$pr}p-siteTitle a:hover .#{g.$pr}p-siteTitle__label {
     text-decoration-line: underline;
-    text-underline-offset: 0.25em;
   }
 
 }

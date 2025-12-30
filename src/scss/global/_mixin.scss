@@ -71,8 +71,7 @@
       padding-left: 1.5em;
     }
 
-    #{&}::before,
-    #{&}::after {
+    #{&}::before {
       position: absolute;
       top: calc( ( var(--nav-line-height) * 1em ) / 2 - 0.275em );
       left: 0;
@@ -93,10 +92,6 @@
 
     }
 
-    #{&}::after {
-      opacity: 0;
-    }
-
   }
 
 }
@@ -105,14 +100,9 @@
 
   @at-root {
 
-    #{&}::after {
+    #{&}::before {
       opacity: 1;
-      transition: var(--nav-default-transition);
-      @if $direction == 'left' {
-        transform:  translateX(-75%) translateY(-75%);
-      } @else {
-        transform:  translateX(75%) translateY(-75%);
-      }
+      transition: var(--transition-slow);
     }
 
   }
@@ -123,19 +113,8 @@
 
   @at-root {
     #{&}::before {
-      opacity: 0.5;
+      opacity: 0.3;
       border-color: currentColor;
-    }
-
-    #{&}::after {
-      opacity: 0.5;
-      border-color: currentColor;
-      transition: var(--nav-default-transition);
-      @if $direction == 'left' {
-        transform:  translateX(-75%) translateY(-75%);
-      } @else {
-        transform:  translateX(75%) translateY(-75%);
-      }
     }
 
   }
