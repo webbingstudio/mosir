@@ -1,0 +1,39 @@
+@use "../../global" as g;
+@use "sass:math";
+
+// ------------------------------
+// project > buttonMenu
+//  - Horizontal menu in the shape of a button.
+//  - No hierarchical structure is assumed.
+// ------------------------------
+
+.#{g.$pr}p-buttonMenu__nav.#{g.$pr}c-nav {
+  justify-content: center;
+  column-gap: var(--spacing-xs);
+}
+
+.#{g.$pr}p-buttonMenu a {
+  @include g.flex( n, n, center, center );
+  min-width: 8em;
+  min-height: 2.5em;
+  background-color: var(--ui-default-accent-color);
+  border: 0.0625rem solid var(--ui-default-accent-color);
+  border-radius: 99em;
+  color: var(--color-white);
+  font-size: var(--fontSize-sm);
+  font-weight: var(--fontWeight-bold);
+  line-height: var(--lineHeight-none);
+  transition: var(--transition-fast);
+  text-align: center;
+}
+
+.#{g.$pr}p-buttonMenu a:hover,
+.#{g.$pr}p-buttonMenu a:focus {
+  background-color: var(--color-white);
+  text-decoration: none;
+  box-shadow: var(--shadow--sm);
+}
+
+.#{g.$pr}p-buttonMenu a:focus {
+    outline: none;
+}

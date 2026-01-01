@@ -1,0 +1,57 @@
+@use "../../global" as g;
+@use "sass:math";
+
+// ------------------------------
+// component > button
+//  - Displays a user interface with button functionality.
+// ------------------------------
+
+.#{g.$pr}c-button {
+    @include g.iFlex( n, n, center, center );
+    gap: var(--spacing-xs);
+    width: 15rem;
+    min-height: var(--nav-height);
+    padding-inline: var(--spacing-sm);
+    background-color: var(--color-white);
+    border: 0.0625rem solid var(--border-default-light-color);
+    border-radius: 99em;
+    color: var(---ui-default-color);
+    font-size: var(--fontSize-md);
+    letter-spacing: 0.1em;
+    font-weight: var(--fontWeight-bold);
+    line-height: var(--lineHeight-none);
+    transition: var(--transition-fast);
+    text-align: center;
+    cursor: pointer;
+}
+
+.#{g.$pr}c-button:hover,
+.#{g.$pr}c-button:focus {
+    border-color: var(--border-default-color);
+    text-decoration: none;
+    box-shadow: var(--shadow--sm);
+}
+
+.#{g.$pr}c-button:focus {
+    outline: none;
+}
+
+.#{g.$pr}c-button.#{g.$pr}c-button--disabled {
+    background-color: var(--color-default-fade);
+    border-color: var(--border-default-light-color);
+    opacity: 0.7;
+    pointer-events: none;
+    cursor: default;
+}
+
+.#{g.$pr}c-button.#{g.$pr}c-button--primary {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.#{g.$pr}c-button.#{g.$pr}c-button--primary:hover,
+.#{g.$pr}c-button.#{g.$pr}c-button--primary:focus {
+    background-color: var(--color-white);
+    color: var(--color-primary);
+}
