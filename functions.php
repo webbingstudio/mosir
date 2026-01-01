@@ -68,6 +68,18 @@ endif;
 add_action( 'wp_enqueue_scripts', 'mi_enqueue_styles' );
 
 
+if ( !function_exists( 'mi_head' ) ){
+	function mi_head() {
+?>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+<?php
+	}
+	add_action( 'wp_head', 'mi_head', 10 );
+}
+
+
 if ( ! function_exists( 'mi_enqueue_scripts' ) ) :
 	/**
 	 * Enqueues theme.css on the front.
@@ -178,7 +190,7 @@ add_filter( 'nav_menu_link_attributes', 'mi_nav_menu_link_attributes', 10, 4 );
 
 
 // ==============================
-// Compatible WordPress BlockEditor(Gutenberg) to 
+// Compatible WordPress BlockEditor(Gutenberg)
 // ==============================
 
 if ( ! function_exists( 'mi_wp_block_class' ) ) :
@@ -196,3 +208,59 @@ if ( ! function_exists( 'mi_wp_block_class' ) ) :
 	}
 endif;
 
+
+// ==============================
+// Theme customizer
+// ==============================
+
+if ( ! function_exists( 'mi_sanitize_checkbox' ) ){
+	function mi_sanitize_checkbox( $checked ) {
+		return ( ( isset( $checked ) && true === $checked ) ? true : false );
+	}
+}
+
+if ( ! function_exists( 'mi_sanitize_select' ) ){
+	function mi_sanitize_select( $input, $setting ) {
+		$input = sanitize_key( $input );
+		$choices = $setting->manager->get_control( $setting->id )->choices;
+		return ( array_key_exists( $input, $choices ) ? $input : $setting->default );
+	}
+}
+
+if ( ! function_exists( 'mi_customize_register' ) ){
+	function mi_customize_register( $wp_customize ) {
+
+		$wp_customize->add_section( 'mi_config', array(
+			'title'     => '"mosir" theme settings',
+			'priority'  => 191,
+		));
+
+		$wp_customize->add_setting('mi_options_header', array(
+			'default'           => 'large',
+			'sanitize_callback' => 'wp_filter_post_kses',
+		));
+		$wp_customize->add_control('mi_options_control_header', array(
+				'settings'  => 'mi_options_header',
+				'label'     => 'Header layout',
+				'section'   => 'mi_config',
+				'type'      => 'select',
+				'choices' => array(
+					'small' => 'small (minimal)',
+					'medium' => 'medium (one rows)',
+					'large' => 'large (two rows)',
+				)
+		));
+
+		$wp_customize->add_setting('mi_options_copyright', array(
+			'default'           => '&copy;2026 samplesite.com',
+			'sanitize_callback' => 'wp_filter_post_kses',
+		));
+		$wp_customize->add_control('mi_options_control_copyright', array(
+				'settings'  => 'mi_options_copyright',
+				'label'     => 'コピーライト',
+				'section'   => 'mi_config',
+				'type'      => 'text',
+		));
+	}
+	add_action( 'customize_register', 'mi_customize_register' );
+}

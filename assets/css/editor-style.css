@@ -62,7 +62,7 @@
   --border-radius-md: 0.375rem;
   --fontFamily-default: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", "Meiryo", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   --fontWeight-normal: 400;
-  --fontWeight-bold: 700;
+  --fontWeight-bold: 600;
   --lineHeight-none: 1;
   --lineHeight-xs: 1.25;
   --lineHeight-sm: 1.5;
@@ -474,24 +474,31 @@ a:focus {
 }
 
 .mi-l-header {
+  position: relative;
+  padding-top: var(--spacing-xl);
+  padding-bottom: var(--spacing-lg);
+}
+
+.mi-l-header:not(.mi-l-header--small) {
   position: fixed;
   top: 0;
   right: 0;
   left: 0;
-  z-index: 111;
+  z-index: 91;
   background-color: var(--body-bg);
   padding-block: var(--spacing-xs);
 }
 
-.mi-l-header__contents.mi-l-container {
+.mi-l-header:not(.mi-l-header--small) .mi-l-header__contents.mi-l-container {
   display: grid;
   grid-template-columns: auto 1fr auto var(--drawer-toggle-size);
   grid-template-rows: var(--drawer-toggle-size);
   align-content: space-between;
   gap: var(--spacing-xs) var(--spacing-sm);
 }
+
 @media screen and (min-width: 1280px) {
-  .mi-l-header__contents.mi-l-container {
+  .mi-l-header.mi-l-header--large .mi-l-header__contents.mi-l-container {
     grid-template-columns: auto 1fr var(--drawer-toggle-size);
     grid-template-rows: repeat(2, var(--drawer-toggle-size));
     -moz-column-gap: var(--spacing-md);
@@ -507,6 +514,10 @@ a:focus {
   .mi-l-header__contents__siteTitle {
     padding-right: var(--spacing-md);
   }
+}
+
+.mi-l-header.mi-l-header--small .mi-l-header__contents__siteTitle {
+  align-items: center;
 }
 
 .mi-l-header__top {
@@ -553,7 +564,7 @@ a:focus {
   }
 }
 
-@media screen and (max-width: 1023.9px) {
+@media screen and (max-width: 1279.9px) {
   .mi-l-header__contents__menu02 {
     display: none;
   }
@@ -576,11 +587,15 @@ a:focus {
   }
 }
 
-.mi-l-main > *:first-child {
+body:has(.mi-l-header--medium) .mi-l-main > *:first-child {
+  padding-top: calc(var(--spacing-xs) * 2 + var(--drawer-toggle-size));
+}
+
+body:has(.mi-l-header--large) .mi-l-main > *:first-child {
   padding-top: calc(var(--spacing-xs) * 2 + var(--drawer-toggle-size));
 }
 @media screen and (min-width: 1280px) {
-  .mi-l-main > *:first-child {
+  body:has(.mi-l-header--large) .mi-l-main > *:first-child {
     padding-top: calc(var(--spacing-xs) * 3 + var(--drawer-toggle-size) * 2);
   }
 }
@@ -1081,13 +1096,8 @@ a.mi-p-card__inner .mi-p-card__title {
   justify-content: space-between;
   align-items: flex-start;
   gap: var(--spacing-md);
-  padding-top: 6rem;
-  padding-bottom: calc(var(--drawer-toggle-size) + var(--spacing-sm));
-}
-@media screen and (min-width: 1280px) {
-  .mi-p-drawer__contents__inner {
-    padding-top: 12rem;
-  }
+  padding-top: calc(var(--drawer-toggle-size) + var(--spacing-sm));
+  padding-bottom: var(--spacing-xl);
 }
 
 .mi-p-drawer.-is-opening {
@@ -1592,7 +1602,6 @@ a.mi-p-media__inner {
 .mi-p-megaMenu__nav > .menu-item > .sub-menu > * {
   position: relative;
   z-index: 12;
-  overflow: hidden;
   height: 0;
   opacity: 0;
   flex-grow: 0;

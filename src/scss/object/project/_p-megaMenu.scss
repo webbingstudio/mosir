@@ -96,7 +96,6 @@
 
 .#{g.$pr}p-megaMenu__nav > .menu-item > .sub-menu > * {
   @include g.position(relative, n, n, n, n, 12);
-  overflow: hidden;
   height: 0;
   opacity: 0;
   flex-grow: 0;

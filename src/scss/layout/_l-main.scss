@@ -2,7 +2,11 @@
 @use "sass:math";
 
 // Top spacing = header height
-.#{g.$pr}l-main > *:first-child {
+body:has(.#{g.$pr}l-header--medium) .#{g.$pr}l-main > *:first-child {
+    padding-top: calc( ( var(--spacing-xs) * 2 ) + var(--drawer-toggle-size) );
+}
+
+body:has(.#{g.$pr}l-header--large) .#{g.$pr}l-main > *:first-child {
     padding-top: calc( ( var(--spacing-xs) * 2 ) + var(--drawer-toggle-size) );
 
     @include g.mq(wide) {

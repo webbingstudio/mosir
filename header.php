@@ -4,6 +4,8 @@
  *
  * @package ws-minimalism
  */
+
+$mi_options_header = get_theme_mod( 'mi_options_header', 'large' );
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
@@ -15,7 +17,7 @@
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
-<header class="mi-l-header mi-l-header--horizontal">
+<header class="mi-l-header mi-l-header--<?php echo esc_attr($mi_options_header); ?>">
 	<div class="mi-l-header__contents mi-l-container">
 
 		<?php
@@ -45,10 +47,28 @@
 			</p>
 		<?php endif; ?>
 
+		<?php if( $mi_options_header !== 'small' ): ?>
 		<div class="mi-l-header__top">
 
 			<?php
-			if( has_nav_menu('header_nav_02') ) {
+			if( has_nav_menu('header_nav_01') && $mi_options_header !== 'large' ) {
+				wp_nav_menu(
+					array(
+						'theme_location' => 'header_nav_01',
+						'container'       => 'nav',
+						'container_aria_label'       => 'Global navigation',
+						'container_class' => 'mi-l-header__contents__menu01 mi-p-megaMenu',
+						'menu_id' => 'header-nav-01',
+						'menu_class' => 'menu mi-p-megaMenu__nav mi-c-nav',
+						'link_before'      => '<span class="menu-label mi-c-nav__item__label">',
+						'link_after'      => '</span>',
+					)
+				);
+			}
+			?>
+
+			<?php
+			if( has_nav_menu('header_nav_02') && $mi_options_header === 'large' ) {
 				wp_nav_menu(
 					array(
 						'theme_location' => 'header_nav_02',
@@ -79,7 +99,9 @@
 			?>
 
 		</div>
+		<?php endif; ?>
 
+		<?php if( $mi_options_header === 'large' ): ?>
 		<div class="mi-l-header__bottom">
 
 			<?php
@@ -115,6 +137,7 @@
 			?>
 
 		</div>
+		<?php endif; ?>
 	</div>
 </header>
 <?php get_template_part( 'template-parts/drawer' ); ?>
