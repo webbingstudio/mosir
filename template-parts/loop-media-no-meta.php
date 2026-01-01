@@ -4,7 +4,6 @@
  * Repeated sections of a post, with featured image on the left and content on the right.
  * The entire loop is enclosed in a link.
  * Post meta information such as date, term, etc. is not displayed.
- * Show an excerpt of the content.
  *
  * @package ws-minimalism
  */
@@ -20,7 +19,6 @@
 		</figure>
 		<div class="mi-p-media__contents">
 			<p class="mi-p-media__title mi-c-title"><?php the_title(); ?></p>
-			<p class="mi-p-media__summary mi-c-summary"><?php echo esc_html( get_the_excerpt() ); ?></p>
 		</div>
 	</a>
 </article>
