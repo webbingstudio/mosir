@@ -19,7 +19,7 @@
 
 .#{g.$pr}p-media__inner {
   display: grid;
-  grid-template-columns: min( 10rem, 20% ) 1fr;
+  grid-template-columns: min( 10rem, 25% ) 1fr;
 }
 
 a.#{g.$pr}p-media__inner {
@@ -58,9 +58,15 @@ a.#{g.$pr}p-media__inner {
 
 .#{g.$pr}p-media__contents {
   grid-column: 2 / 2;
-  @include g.flex( column, n, flex-start, flex-start );
+  @include g.flex( column, n, center, flex-start );
   gap: var(--spacing-xs);
-  padding: var(--spacing-xs) var(--spacing-sm);
+  padding-inline: var(--spacing-sm);
+}
+
+// If meta is included, it is aligned top.
+.#{g.$pr}p-media__contents:has(.#{g.$pr}p-media__meta) {
+  justify-content: flex-start;
+  padding-top: var(--spacing-xs);
 }
 
 .#{g.$pr}p-media__meta {
@@ -73,11 +79,38 @@ a.#{g.$pr}p-media__inner {
   flex-grow: 0;
 }
 
+.#{g.$pr}p-media__title.#{g.$pr}c-title {
+  overflow: hidden;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  max-height: 3em;
+}
+
 @include g.mq(hover) {
 
   a.#{g.$pr}p-media__inner:hover .#{g.$pr}p-media__image img {
     opacity: 0.8;
     transform: scale( 1.1 );
+  }
+
+}
+
+// If the content width is narrow, the font size will be reduced.
+.#{g.$pr}p-media__contents {
+  container-type: inline-size;
+}
+
+@container ( width <= 30rem ) {
+
+  .#{g.$pr}p-media__contents .#{g.$pr}c-date {
+    font-size: var(--fontSize-xs);
+  }
+
+  .#{g.$pr}p-media__contents .#{g.$pr}p-media__title.#{g.$pr}c-title {
+    font-size: var(--fontSize-sm);
   }
 
 }
