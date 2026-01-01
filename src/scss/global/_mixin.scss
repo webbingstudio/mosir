@@ -59,6 +59,25 @@
 
 
 // ------------------------------
+// iFlex
+//
+// ex1. @include g.iFlex();
+// flex-direction:row;flex-wrap:nowrap;justify-content:space-between;align-items:stretch;
+//
+// ex2. @include g.iFlex(column, wrap, n, center);
+// flex-direction:column;flex-wrap:wrap;justify-content:space-between;align-items:center;
+// ------------------------------
+@mixin iFlex( $fxDirection: n, $fxWrap: n, $fxJustify: n, $fxAlign: n ) {
+    display: inline-flex;
+    @if $fxDirection != n { flex-direction: $fxDirection; } @else { flex-direction: row;}
+    @if $fxWrap != n { flex-wrap: $fxWrap; } @else { flex-wrap: nowrap;}
+    @if $fxJustify != n { justify-content: $fxJustify; } @else { justify-content: space-between;}
+    @if $fxAlign != n { align-items: $fxAlign; } @else { align-items: stretch;}
+    vertical-align: middle;
+}
+
+
+// ------------------------------
 // arrow( $direction: 'right|left|top|bottom' )
 // - Adds an arrow to the link that is proportional to the text size.
 // - Supports hover states.
@@ -68,7 +87,7 @@
   @at-root {
     #{&} {
       position: relative;
-      padding-left: 1.5em;
+      padding-left: 1.25em;
     }
 
     #{&}::before {
