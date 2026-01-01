@@ -7,10 +7,12 @@
  */
 ?>
 <div class="mi-p-drawerToggle">
-	<button id="drawer-toggle" class="mi-p-drawerToggle__button mi-c-toggleButton" aria-controls="drawer" aria-expanded="false">
-		<span class="mi-c-toggleButton__label">Menu</span>
-		<span class="mi-c-toggleButton__icon"></span>
-	</button>
+	<div class="mi-p-drawerToggle__contents mi-l-container">
+		<button id="drawer-toggle" class="mi-p-drawerToggle__button mi-c-toggleButton" aria-controls="drawer" aria-expanded="false">
+			<span class="mi-c-toggleButton__label">Menu</span>
+			<span class="mi-c-toggleButton__icon"></span>
+		</button>
+	</div>
 </div>
 <div id="drawer" class="mi-p-drawer" aria-hidden="true">
 	<div class="mi-p-drawer__contents">

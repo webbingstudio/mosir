@@ -165,13 +165,13 @@
   --ui-inverse-color: var(--color-white);
   --ui-default-accent-color: var(--color-primary);
 
-  --screen-x-spacing: var(--wp--preset--font-size--medium);
+  --screen-x-spacing: 1rem; // not responsive spacing
 
   --drawer-toggle-width: 2.75rem;
 
   --nav-height: 2.75rem;
 
-  --headline-hover-bg: rgba(16 116 188 / 0.08); // primary color
+  --headline-hover-bg: rgba(0 0 0 / 0.05);
 
   --card-bg: var(--body-bg);
 

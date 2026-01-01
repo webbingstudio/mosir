@@ -4,21 +4,19 @@
 // ------------------------------
 // project > drawerToggle
 //  - It always sticks to the top and right sides of the header.
+//  - It is not intended to contain any child elements other than buttons.
 // ------------------------------
 
 .#{g.$pr}p-drawerToggle {
-  @include g.position( fixed, 0, var(--screen-x-spacing), n, n, 111 );
-  margin-right: 0;
-  padding-top: var(--spacing-sm); // top padding of header
+  @include g.position( fixed, 0, 0, n, 0, 112 );
 }
 
-@include g.mq(wide) {
+.#{g.$pr}p-drawerToggle__contents.#{g.$pr}l-container {
+  position: relative;
+}
 
-  .#{g.$pr}p-drawerToggle {
-    right: 50%; // not `50vw`
-    margin-right: calc( var(--container-wide-width) / -2 );
-  }
-
+.#{g.$pr}p-drawerToggle__button {
+  @include g.position( absolute, var(--spacing-xs), var(--screen-x-spacing), n, n, 11 ); // top: padding-top of header
 }
 
 // WordPress Admin bar
