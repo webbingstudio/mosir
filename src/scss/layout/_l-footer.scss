@@ -11,12 +11,17 @@
 }
 
 .#{g.$pr}l-footer__contents > * {
+  padding-bottom: var(--spacing-md);
+  border-bottom: 0.0625rem solid var(--border-default-light-color);
+}
+
+.#{g.$pr}l-footer__contents > *:first-child {
   padding-top: var(--spacing-md);
+  border-top: 0.0625rem solid var(--border-default-light-color);
 }
 
 .#{g.$pr}l-footer__contents > * + * {
   margin-top: var(--spacing-md);
-  border-top: 0.0625rem solid var(--border-default-light-color);
 }
 
 .#{g.$pr}l-footer__copyright {
