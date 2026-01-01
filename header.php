@@ -45,37 +45,76 @@
 			</p>
 		<?php endif; ?>
 
-		<?php
-		if( has_nav_menu('header_nav_02') ) {
-			wp_nav_menu(
-				array(
-					'theme_location' => 'header_nav_02',
-					'container'       => 'div',
-					'container_class' => 'mi-l-header__contents__menu02 mi-p-horizontalMenu mi-p-horizontalMenu--arrowed',
-					'menu_id' => 'header-nav-02',
-					'menu_class' => 'menu mi-p-horizontalMenu__nav mi-c-nav',
-					'link_before'      => '<span class="menu-label mi-c-nav__item__label">',
-					'link_after'      => '</span>',
-				)
-			);
-		}
-		?>
-		<?php
-		if( has_nav_menu('header_nav_01') ) {
-			wp_nav_menu(
-				array(
-					'theme_location' => 'header_nav_01',
-					'container'       => 'nav',
-					'container_aria_label'       => 'Global navigation',
-					'container_class' => 'mi-l-header__contents__menu01 mi-p-megaMenu',
-					'menu_id' => 'header-nav-01',
-					'menu_class' => 'menu mi-p-megaMenu__nav mi-c-nav',
-					'link_before'      => '<span class="menu-label mi-c-nav__item__label">',
-					'link_after'      => '</span>',
-				)
-			);
-		}
-		?>
+		<div class="mi-l-header__top">
+
+			<?php
+			if( has_nav_menu('header_nav_02') ) {
+				wp_nav_menu(
+					array(
+						'theme_location' => 'header_nav_02',
+						'container'       => 'div',
+						'container_class' => 'mi-l-header__contents__menu02 mi-p-horizontalMenu mi-p-horizontalMenu--arrowed',
+						'menu_id' => 'header-nav-02',
+						'menu_class' => 'menu mi-p-horizontalMenu__nav mi-c-nav',
+						'link_before'      => '<span class="menu-label mi-c-nav__item__label">',
+						'link_after'      => '</span>',
+					)
+				);
+			}
+			?>
+			<?php
+			if( has_nav_menu('header_nav_03') ) {
+				wp_nav_menu(
+					array(
+						'theme_location' => 'header_nav_03',
+						'container'       => 'div',
+						'container_class' => 'mi-l-header__contents__menu03 mi-p-horizontalMenu',
+						'menu_id' => 'header-nav-03',
+						'menu_class' => 'menu mi-p-horizontalMenu__nav mi-c-nav',
+						'link_before'      => '<span class="menu-label mi-c-nav__item__label">',
+						'link_after'      => '</span>',
+					)
+				);
+			}
+			?>
+
+		</div>
+
+		<div class="mi-l-header__bottom">
+
+			<?php
+			if( has_nav_menu('header_nav_01') ) {
+				wp_nav_menu(
+					array(
+						'theme_location' => 'header_nav_01',
+						'container'       => 'nav',
+						'container_aria_label'       => 'Global navigation',
+						'container_class' => 'mi-l-header__contents__menu01 mi-p-megaMenu',
+						'menu_id' => 'header-nav-01',
+						'menu_class' => 'menu mi-p-megaMenu__nav mi-c-nav',
+						'link_before'      => '<span class="menu-label mi-c-nav__item__label">',
+						'link_after'      => '</span>',
+					)
+				);
+			}
+			?>
+			<?php
+			if( has_nav_menu('header_nav_04') ) {
+				wp_nav_menu(
+					array(
+						'theme_location' => 'header_nav_04',
+						'container'       => 'div',
+						'container_class' => 'mi-l-header__contents__menu04 mi-p-buttonMenu',
+						'menu_id' => 'header-nav-04',
+						'menu_class' => 'menu mi-p-buttonMenu__nav mi-c-nav',
+						'link_before'      => '<span class="menu-label mi-c-nav__item__label">',
+						'link_after'      => '</span>',
+					)
+				);
+			}
+			?>
+
+		</div>
 	</div>
 </header>
 <?php get_template_part( 'template-parts/drawer' ); ?>

@@ -142,6 +142,8 @@ if ( ! function_exists( 'mi_redistar_nav_menu' ) ) :
 		register_nav_menus([
 			'header_nav_01' => 'Header: Mega nav.',
 			'header_nav_02' => 'Header: Horizontal nav.',
+			'header_nav_03' => 'Header: Piped nav.',
+			'header_nav_04' => 'Header: Buttons.',
 			'footer_nav_01' => 'Footer: Horizontal nav.',
 			'footer_nav_02' => 'Footer: Sitemap',
 			'drawer_nav_01' => 'drawer: Vertical nav.',

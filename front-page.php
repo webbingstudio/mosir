@@ -25,7 +25,6 @@ get_header();
 	</section>
 	<?php endif; ?>
 
-
 	<?php
 	// ==============================
 	// Recent posts(headline)
