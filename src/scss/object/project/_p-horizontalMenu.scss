@@ -3,14 +3,21 @@
 
 // ------------------------------
 // project > horizontalMenu
-//  - Large horizontally aligned menu.
+//  - Small horizontally aligned menu.
 //  - No hierarchical structure is assumed.
+//  - Clickable area fits to text size.
 // ------------------------------
 
 .#{g.$pr}p-horizontalMenu__nav.#{g.$pr}c-nav {
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: flex-start;
   column-gap: var(--spacing-md);
   font-size: var(--fontSize-sm);
+
+  @include g.mq(default) {
+    justify-content: center;
+  }
+
 }
 
 .#{g.$pr}p-horizontalMenu:not(.#{g.$pr}p-horizontalMenu--arrowed) .menu-item + .menu-item {
@@ -23,10 +30,6 @@
   width: 0;
   height: 1em;
   border-left: 0.0625rem solid var(--border-default-color);
-}
-
-.#{g.$pr}p-horizontalMenu:not(.#{g.$pr}p-horizontalMenu--arrowed) a {
-  min-height: var(--nav-height);
 }
 
 .#{g.$pr}p-horizontalMenu .current-menu-item > a {

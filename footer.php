@@ -10,22 +10,6 @@
 <footer class="mi-l-footer">
 	<div class="mi-l-footer__contents mi-l-container">
 		<?php
-		if( has_nav_menu('footer_nav_01') ) {
-			wp_nav_menu(
-				array(
-					'theme_location' => 'footer_nav_01',
-					'container'       => 'nav',
-					'container_aria_label'       => 'Footer navigation',
-					'container_class' => 'mi-l-footer__contents__menu01 mi-p-horizontalMenu',
-					'menu_id' => 'footer-nav-01',
-					'menu_class' => 'menu mi-p-horizontalMenu__nav mi-c-nav',
-					'link_before'      => '<span class="menu-label mi-c-nav__item__label">',
-					'link_after'      => '</span>',
-				)
-			);
-		}
-		?>
-		<?php
 		if( has_nav_menu('footer_nav_02') ) {
 			wp_nav_menu(
 				array(
@@ -35,6 +19,22 @@
 					'container_class' => 'mi-l-footer__contents__menu02 mi-p-sitemap',
 					'menu_id' => 'footer-nav-02',
 					'menu_class' => 'menu mi-p-sitemap__nav mi-c-nav',
+					'link_before'      => '<span class="menu-label mi-c-nav__item__label">',
+					'link_after'      => '</span>',
+				)
+			);
+		}
+		?>
+		<?php
+		if( has_nav_menu('footer_nav_01') ) {
+			wp_nav_menu(
+				array(
+					'theme_location' => 'footer_nav_01',
+					'container'       => 'nav',
+					'container_aria_label'       => 'Footer navigation',
+					'container_class' => 'mi-l-footer__contents__menu01 mi-p-horizontalMenu',
+					'menu_id' => 'footer-nav-01',
+					'menu_class' => 'menu mi-p-horizontalMenu__nav mi-c-nav',
 					'link_before'      => '<span class="menu-label mi-c-nav__item__label">',
 					'link_after'      => '</span>',
 				)

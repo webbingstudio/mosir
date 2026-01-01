@@ -4,16 +4,19 @@
 .#{g.$pr}l-footer {
   position: relative;
   @include g.flex(column, nowrap, n, stretch);
-  border-top: 0.0625rem solid var(--border-default-light-color);
 }
 
-.#{g.$pr}l-footer__contents {
+.#{g.$pr}l-footer__contents.#{g.$pr}l-container {
   @include g.flex(column, nowrap, n, stretch);
-  gap: var(--spacing-md);
 }
 
-.#{g.$pr}l-footer__contents > *:first-child {
+.#{g.$pr}l-footer__contents > * {
   padding-top: var(--spacing-md);
+}
+
+.#{g.$pr}l-footer__contents > * + * {
+  margin-top: var(--spacing-md);
+  border-top: 0.0625rem solid var(--border-default-light-color);
 }
 
 .#{g.$pr}l-footer__copyright {
