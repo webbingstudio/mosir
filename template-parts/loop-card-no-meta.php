@@ -20,7 +20,7 @@
 		</figure>
 		<div class="mi-p-card__contents">
 			<p class="mi-p-card__title mi-c-title"><?php the_title(); ?></p>
-			<p class="mi-p-card__summary mi-c-summary"><?php echo esc_html( get_the_excerpt() ); ?></p>
+			<p class="mi-c-summary"><?php echo esc_html( get_the_excerpt() ); ?></p>
 		</div>
 	</a>
 </article>
