@@ -10,6 +10,7 @@
 .#{g.$pr}p-horizontalMenu__nav.#{g.$pr}c-nav {
   justify-content: center;
   column-gap: var(--spacing-md);
+  font-size: var(--fontSize-sm);
 }
 
 .#{g.$pr}p-horizontalMenu:not(.#{g.$pr}p-horizontalMenu--arrowed) .menu-item + .menu-item {
