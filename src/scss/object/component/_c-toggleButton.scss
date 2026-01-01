@@ -12,12 +12,12 @@
   -webkit-appearance: none;
   appearance: none;
   @include g.flex( n, n, center, center );
-  width: var(--nav-height);
-  height: var(--nav-height);
+  width: var(--drawer-toggle-size);
+  height: var(--drawer-toggle-size);
   padding: 0;
   border: 0 none;
   background-color: transparent;
-  color: var(--color-text-default);
+  color: var(--body-color);
   cursor: pointer;
 }
 

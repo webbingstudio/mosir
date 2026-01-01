@@ -9,13 +9,14 @@
 
 .#{g.$pr}l-header__contents.#{g.$pr}l-container {
   display: grid;
-  grid-template-columns: auto 1fr auto var(--drawer-toggle-width);
-  grid-template-rows: var(--drawer-toggle-width);
+  grid-template-columns: auto 1fr auto var(--drawer-toggle-size);
+  grid-template-rows: var(--drawer-toggle-size);
+  align-content: space-between;
   gap: var(--spacing-xs) var(--spacing-sm);
 
   @include g.mq(wide) {
-    grid-template-columns: auto 1fr var(--drawer-toggle-width);
-    grid-template-rows: var(--drawer-toggle-width) auto;
+    grid-template-columns: auto 1fr var(--drawer-toggle-size);
+    grid-template-rows: repeat(2, var(--drawer-toggle-size));
     column-gap: var(--spacing-md);
   }
 

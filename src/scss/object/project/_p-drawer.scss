@@ -42,7 +42,7 @@
   // The approximate height of the header plus a spacing.
   // However, it may not necessarily be exactly this size.
   padding-top: 6rem;
-  padding-bottom: calc( var(--drawer-toggle-width) + var(--spacing-sm) );
+  padding-bottom: calc( var(--drawer-toggle-size) + var(--spacing-sm) );
 
   @include g.mq(wide) {
     padding-top: 12rem;

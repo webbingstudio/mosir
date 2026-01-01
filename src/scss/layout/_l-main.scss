@@ -1,3 +1,11 @@
 @use "../global" as g;
 @use "sass:math";
 
+// Top spacing = header height
+.#{g.$pr}l-main > *:first-child {
+    padding-top: calc( ( var(--spacing-xs) * 2 ) + var(--drawer-toggle-size) );
+
+    @include g.mq(wide) {
+        padding-top: calc( ( var(--spacing-xs) * 3 ) + ( var(--drawer-toggle-size) * 2 ) );
+    }
+}
