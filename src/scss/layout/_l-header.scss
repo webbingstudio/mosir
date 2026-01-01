@@ -2,44 +2,100 @@
 @use "sass:math";
 
 .#{g.$pr}l-header {
-  position: relative;
-  padding-top: var(--spacing-sm);
-  border-bottom: 0.0625rem solid var(--border-default-light-color);
+  @include g.position( fixed, 0, 0, n, 0, 111 );
+  background-color: var(--body-bg);
+  padding-block: var(--spacing-xs);
+
+  @include g.mq(wide) {
+    padding-bottom: var(--spacing-sm);
+  }
+
 }
 
-.#{g.$pr}l-header__contents {
+.#{g.$pr}l-header__contents.#{g.$pr}l-container {
   display: grid;
-  grid-template-columns: repeat( 2, auto );
-  grid-template-rows: repeat( 2, auto );
-  gap: var(--spacing-sm) var(--spacing-md);
+  grid-template-columns: auto 1fr auto var(--drawer-toggle-width);
+  grid-template-rows: auto;
+  gap: var(--spacing-xs) var(--spacing-sm);
+
+  @include g.mq(wide) {
+    grid-template-columns: auto 1fr var(--drawer-toggle-width);
+    grid-template-rows: repeat(2, auto);
+    column-gap: var(--spacing-md);
+  }
+
 }
 
 .#{g.$pr}l-header__contents__siteTitle {
-  grid-area: 1 / 1 / 2 / 2;
-  height: var(--nav-height);
+  grid-column: 1 / 2;
+  grid-row: 1 / -1;
+
+  @include g.mq(default) {
+    padding-right: var(--spacing-md);
+  }
+
 }
 
-// .p-megaMenu
+.#{g.$pr}l-header__top {
+  grid-column: 2 / 3;
+  grid-row: 1 / -1;
+
+  // On smartphones, `.l-header__bottom` is hidden, leaving an unnecessary gap on the right.
+  // For this reason, I offset this with a negative margin.
+  @include g.mq(default-max) {
+    margin-right: calc( var(--spacing-sm) * -1 );
+  }
+
+  @include g.mq(wide) {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
+
+}
+
+.#{g.$pr}l-header__bottom {
+  grid-column: 3 / 4;
+  grid-row: 1 / -1;
+
+  @include g.mq(wide) {
+    grid-column: 2 / -1;
+    grid-row: 2 / -1;
+  }
+}
+
+.#{g.$pr}l-header__top,
+.#{g.$pr}l-header__bottom {
+  @include g.flex(n, n, flex-end, center);
+  column-gap: var(--spacing-md);
+}
+
+// bottom: megaMenu
 .#{g.$pr}l-header__contents__menu01 {
-  grid-area: 2 / 1 / 3 / 3;
-}
 
-@include g.mq(xga-max) {
-  .#{g.$pr}l-header__contents__menu01 {
+  @include g.mq(wide-max) {
     display: none;
   }
+
 }
 
-// .p-horizontalMenu
+// top: horizontalMenu(arrowed)
 .#{g.$pr}l-header__contents__menu02 {
-  grid-area: 1 / 2 / 2 / 3;
-  align-self: center;
-  justify-self: flex-end;
-  padding-right: calc( var(--drawer-toggle-width) + var(--spacing-md) );
-}
 
-@include g.mq(xga-max) {
-  .#{g.$pr}l-header__contents__menu02 {
+  @include g.mq(xga-max) {
     display: none;
   }
+
+}
+
+// top: horizontalMenu(piped)
+.#{g.$pr}l-header__contents__menu03 {
+}
+
+// bottom: horizontalMenu(button)
+.#{g.$pr}l-header__contents__menu04 {
+
+  @include g.mq(default-max) {
+    display: none;
+  }
+
 }
