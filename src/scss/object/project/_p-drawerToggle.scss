@@ -21,14 +21,11 @@
 
 // WordPress Admin bar
 .admin-bar .#{g.$pr}p-drawerToggle {
-  margin-top: 46px;
-}
-
-@include g.mq(default) {
-
-  // WordPress Admin bar
-  .admin-bar .#{g.$pr}p-drawerToggle {
-    margin-top: 32px;
+  @include g.mq(default) {
+    margin-top: 46px;
   }
 
+  @include g.mq(xga) {
+    margin-top: 32px;
+  }
 }

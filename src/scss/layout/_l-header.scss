@@ -5,22 +5,17 @@
   @include g.position( fixed, 0, 0, n, 0, 111 );
   background-color: var(--body-bg);
   padding-block: var(--spacing-xs);
-
-  @include g.mq(wide) {
-    padding-bottom: var(--spacing-sm);
-  }
-
 }
 
 .#{g.$pr}l-header__contents.#{g.$pr}l-container {
   display: grid;
   grid-template-columns: auto 1fr auto var(--drawer-toggle-width);
-  grid-template-rows: auto;
+  grid-template-rows: var(--drawer-toggle-width);
   gap: var(--spacing-xs) var(--spacing-sm);
 
   @include g.mq(wide) {
     grid-template-columns: auto 1fr var(--drawer-toggle-width);
-    grid-template-rows: repeat(2, auto);
+    grid-template-rows: var(--drawer-toggle-width) auto;
     column-gap: var(--spacing-md);
   }
 
@@ -98,4 +93,15 @@
     display: none;
   }
 
+}
+
+// WordPress Admin bar
+.admin-bar .#{g.$pr}l-header {
+  @include g.mq(default) {
+    margin-top: 46px;
+  }
+
+  @include g.mq(xga) {
+    margin-top: 32px;
+  }
 }
