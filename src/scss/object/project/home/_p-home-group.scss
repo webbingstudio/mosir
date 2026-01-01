@@ -10,14 +10,14 @@
 
 .#{g.$pr}p-home-group__inner {
     display: grid;
-    gap: var(--spacing-md);
     width: 100%;
     max-width: var(--container-wide-width);
     padding-inline: var(--screen-x-spacing);
     margin-inline: auto;
 
-    @include g.mq(xga) {
+    @include g.mq(default) {
         grid-template-columns: repeat( 2, 1fr );
+        gap: var(--spacing-md);
     }
 
     @include g.mq(wide) {

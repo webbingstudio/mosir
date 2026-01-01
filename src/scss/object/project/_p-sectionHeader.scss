@@ -6,13 +6,13 @@
 //  - The header part of a section, intended to contain a heading and caption.
 // ------------------------------
 
-.#{g.$pr}p-sectionHeader {
-}
+// .#{g.$pr}p-sectionHeader {
+// }
 
-.#{g.$pr}p-sectionHeader__title {
-}
+// .#{g.$pr}p-sectionHeader__title.#{g.$pr}c-title {
+// }
 
-.#{g.$pr}p-sectionHeader__subTitle {
+.#{g.$pr}p-sectionHeader__subTitle.#{g.$pr}c-title {
   color: var(--color-primary);
   margin-top: var(--spacing-xs);
 }

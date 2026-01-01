@@ -12,3 +12,38 @@
 .#{g.$pr}p-home-recent__contents {
     margin-top: var(--spacing-lg);
 }
+
+
+// If the content width is narrow, the gap will be reduced.
+.#{g.$pr}p-home-recent {
+  container-type: inline-size;
+}
+
+@container ( width <= 28rem ) {
+
+  .#{g.$pr}p-home-recent__contents {
+    margin-top: var(--spacing-md);
+  }
+
+}
+
+// If the content width is narrow, the font size will be reduced.
+.#{g.$pr}p-home-recent__header.#{g.$pr}p-sectionHeader {
+  container-type: inline-size;
+}
+
+@container ( width <= 28rem ) {
+
+  .#{g.$pr}p-home-recent__header.#{g.$pr}p-sectionHeader .#{g.$pr}p-sectionHeader__subTitle.#{g.$pr}c-title {
+    font-size: var(--fontSize-sm);
+  }
+
+  .#{g.$pr}p-home-recent__header.#{g.$pr}p-sectionHeader .#{g.$pr}p-sectionHeader__lead {
+    font-size: var(--fontSize-sm);
+  }
+
+  .#{g.$pr}p-home-recent__header.#{g.$pr}p-sectionHeader .#{g.$pr}p-sectionHeader__title.#{g.$pr}c-title {
+    font-size: var(--fontSize-xl);
+  }
+
+}
