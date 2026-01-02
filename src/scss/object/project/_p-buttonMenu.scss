@@ -16,8 +16,8 @@
   @include g.flex( n, n, center, center );
   min-width: 8em;
   min-height: 2.5em;
-  background-color: var(--ui-default-accent-color);
-  border: 0.0625rem solid var(--ui-default-accent-color);
+  background-color: var(--ui-accent-color);
+  border: 0.0625rem solid var(--ui-accent-color);
   border-radius: 99em;
   color: var(--ui-inverse-color);
   font-size: var(--fontSize-sm);

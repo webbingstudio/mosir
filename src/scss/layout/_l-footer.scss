@@ -10,14 +10,13 @@
   @include g.flex(column, nowrap, n, stretch);
 }
 
-.#{g.$pr}l-footer__contents > * {
-  padding-bottom: var(--spacing-md);
+.#{g.$pr}l-footer__contents > *::after {
+  display: block;
+  content: "";
+  max-width: var(--container-wide-width);
+  margin-top: var(--spacing-md);
+  margin-inline: calc( var(--screen-x-spacing) * -2 );
   border-bottom: 0.0625rem solid var(--border-default-light-color);
-}
-
-.#{g.$pr}l-footer__contents > *:first-child {
-  padding-top: var(--spacing-md);
-  border-top: 0.0625rem solid var(--border-default-light-color);
 }
 
 .#{g.$pr}l-footer__contents > * + * {

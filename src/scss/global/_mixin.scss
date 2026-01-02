@@ -97,8 +97,8 @@
       content: "";
       width: 0.55em;
       height: 0.55em;
-      border-top: 0.125em solid var(--ui-default-accent-color);
-      border-right: 0.125em solid var(--ui-default-accent-color);
+      border-top: 0.125em solid var(--ui-accent-color);
+      border-right: 0.125em solid var(--ui-accent-color);
       @if $direction == 'left' {
         rotate: -45deg;
       } @else if $direction == 'top' {

@@ -8,7 +8,7 @@
 // ------------------------------
 
 .#{g.$pr}c-nav {
-  @include g.flex(n, n, n, center);
+  @include g.flex(n, wrap, flex-start, center);
   gap: var(--spacing-sm);
   margin: 0;
   padding: 0;

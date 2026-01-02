@@ -20,10 +20,12 @@
 
 }
 
+.#{g.$pr}p-horizontalMenu:not(.#{g.$pr}p-horizontalMenu--arrowed) .#{g.$pr}c-nav__item + .#{g.$pr}c-nav__item,
 .#{g.$pr}p-horizontalMenu:not(.#{g.$pr}p-horizontalMenu--arrowed) .menu-item + .menu-item {
   position: relative;
 }
 
+.#{g.$pr}p-horizontalMenu:not(.#{g.$pr}p-horizontalMenu--arrowed) .#{g.$pr}c-nav__item + .#{g.$pr}c-nav__item::after,
 .#{g.$pr}p-horizontalMenu:not(.#{g.$pr}p-horizontalMenu--arrowed) .menu-item + .menu-item::after {
   @include g.position( absolute, #{calc( 50% - 0.5em )}, n, n, #{calc( var(--spacing-md) / -2 )} );
   content: "";

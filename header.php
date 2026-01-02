@@ -144,3 +144,8 @@ $mi_options_drawer = get_theme_mod( 'mi_options_drawer', 'always' );
 <?php get_template_part( 'template-parts/drawer' ); ?>
 
 <main class="mi-l-main">
+	<?php
+		if( !is_front_page() ){
+			get_template_part( 'template-parts/pageHeader' );
+		}
+	?>

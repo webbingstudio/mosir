@@ -1,0 +1,106 @@
+@use "../../global" as g;
+@use "sass:math";
+
+// ------------------------------
+// project > post
+//  - Display single post.
+// ------------------------------
+
+.#{g.$pr}p-post__title,
+.#{g.$pr}p-post__content {
+    word-wrap: break-word;
+}
+
+.#{g.$pr}p-post__footer__link .#{g.$pr}c-nav__item {
+    word-break: break-all;
+}
+
+.#{g.$pr}p-post__header {
+    margin-bottom: var(--spacing-md);
+}
+
+.#{g.$pr}p-post__header::after {
+  display: block;
+  content: "";
+  width: 100%;
+  margin-top: var(--spacing-md);
+  max-width: var(--container-default-width);
+  margin-inline: auto;
+  border-bottom: 0.0625rem solid var(--border-default-light-color);
+}
+
+.#{g.$pr}p-post__header__meta {
+  @include g.flex( n, wrap, flex-start, center );
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-xs);
+  font-size: var(--fontSize-sm);
+}
+
+.#{g.$pr}p-post__header__meta > * {
+    margin: 0;
+}
+
+.#{g.$pr}p-post__category {
+  @include g.flex( n, wrap, flex-start, center );
+  gap: var(--spacing-xs);
+}
+
+.#{g.$pr}p-post__footer {
+    margin-top: var(--spacing-md);
+}
+
+.#{g.$pr}p-post__footer::before {
+  display: block;
+  content: "";
+  width: 100%;
+  margin-bottom: var(--spacing-md);
+  max-width: var(--container-default-width);
+  margin-inline: auto;
+  border-top: 0.0625rem solid var(--border-default-light-color);
+}
+
+.#{g.$pr}p-post__footer__contents > * + * {
+    margin-top: var(--spacing-md);
+}
+
+.#{g.$pr}p-post__footer__tags {
+    font-size: var(--fontSize-sm);
+}
+
+.#{g.$pr}p-post__footer__tags .#{g.$pr}c-nav {
+    row-gap: var(--spacing-xs);
+}
+
+.#{g.$pr}p-post__footer__tags .#{g.$pr}c-nav__item {
+    position: relative;
+    padding-left: 1em;
+}
+
+.#{g.$pr}p-post__footer__tags .#{g.$pr}c-nav__item:before {
+    @include g.position( absolute, 0.1em, n, n, 0, n );
+    content: "#";
+    font-weight: var(--fontWeight-bold);
+    color: var(--ui-accent-color);
+    line-height: var(--lineHeight-none);
+}
+
+.#{g.$pr}p-post__footer__link .#{g.$pr}c-nav__item {
+    max-width: 33.33%;
+}
+
+.#{g.$pr}p-post__footer__link .#{g.$pr}c-nav__item:not(.#{g.$pr}p-post__footer__back) {
+    flex-grow: 1;
+}
+
+.#{g.$pr}p-post__footer__link .#{g.$pr}c-nav__item.#{g.$pr}p-post__footer__prev a {
+    justify-content: flex-end;
+}
+
+
+// ------------------------------
+// post(blog)
+// ------------------------------
+
+.#{g.$pr}p-post.#{g.$pr}p-post--post {
+    padding-block: var(--spacing-xl);
+}

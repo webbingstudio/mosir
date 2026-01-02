@@ -11,10 +11,17 @@ get_header();
 
 <?php if( have_posts() ): ?>
 <div class="mi-p-posts">
-    <div class="mi-p-posts__container mi-l-container--sm">
+    <?php if( get_the_archive_title() !== __( 'Archives' ) ): ?>
+    <div class="mi-p-posts__header">
+        <p class="mi-p-posts__title mi-c-title mi-c-title--lv3 mi-c-title--center"><?php echo esc_html(get_the_archive_title()); ?></p>
+    </div>
+    <?php endif; ?>
+    <div class="mi-p-posts__contents mi-l-container mi-l-container--sm">
+        <div class="mi-p-posts mi-p-posts--media">
         <?php while( have_posts() ) : the_post(); ?>
-            <?php get_template_part( 'template-parts/loop' ); ?>
+            <?php get_template_part( 'template-parts/loop', 'media' ); ?>
         <?php endwhile; ?>
+        </div>
     </div>
 </div>
 

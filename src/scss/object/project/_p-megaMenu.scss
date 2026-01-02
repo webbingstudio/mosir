@@ -20,6 +20,7 @@
 // ------------------------------
 
 .#{g.$pr}p-megaMenu__nav {
+  flex-wrap: nowrap;
   column-gap: var(--spacing-md);
 }
 
@@ -38,7 +39,7 @@
   @include g.position(absolute, n, 0, -0.125rem, n);
   width: 100%;
   height: 0.125rem;
-  background-color: var(--ui-default-accent-color);
+  background-color: var(--ui-accent-color);
   transform-origin: center center;
   transition: var(--transition-cubic);
   opacity: 1;
@@ -70,10 +71,10 @@
 }
 
 .#{g.$pr}p-megaMenu__nav > .menu-item > .sub-menu {
-  @include g.position(fixed, n, n, n, calc( 50dvw - ( var(--container-wide-width) / 2 ) ), n);
+  @include g.position(fixed, n, n, n, calc( 50% - ( var(--container-wide-width) / 2 ) ), n);
   @include g.flex(n, wrap, flex-start, flex-start);
   gap: var(--spacing-sm);
-  width: 100dvw;
+  width: 100%;
   max-width: var(--container-wide-width);
   padding-inline: var(--spacing-md);
   color: var(--ui-default-color);
@@ -86,7 +87,7 @@
   width: 100%;
   height: 100%;
   background-color: var(--body-bg);
-  border-top: 0.125rem solid var(--ui-default-accent-color);
+  border-top: 0.125rem solid var(--ui-accent-color);
   box-shadow: var(--shadow--sm);
   opacity: 0;
   transform: scaleY(0);

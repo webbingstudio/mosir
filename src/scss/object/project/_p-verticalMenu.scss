@@ -11,7 +11,7 @@
 // ------------------------------
 
 .#{g.$pr}p-verticalMenu__nav.#{g.$pr}c-nav {
-  flex-flow: column wrap;
+  flex-direction: column;
   align-items: stretch;
   justify-content: flex-start;
   gap: var(--spacing-md);
@@ -50,7 +50,7 @@
   content: "";
   width: calc( var(--spacing-md) - var(--spacing-xs) );
   height: 0.125rem;
-  background-color: var(--ui-default-accent-color);
+  background-color: var(--ui-accent-color);
   opacity: 1;
   transform: scaleX(1);
   transform-origin: right top;

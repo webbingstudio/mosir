@@ -14,13 +14,14 @@
 }
 
 .#{g.$pr}p-sitemap__nav.#{g.$pr}c-nav {
-  @include g.flex(column, wrap, flex-start, n);
+  align-items: flex-start;
+  flex-direction: column;
   gap: var(--spacing-md);
 }
 
 .#{g.$pr}p-sitemap.#{g.$pr}p-sitemap--wide .#{g.$pr}p-sitemap__nav.#{g.$pr}c-nav {
   @include g.mq(default) {
-    flex-flow: row wrap;
+    flex-direction: row;
   }
 }
 
@@ -33,8 +34,12 @@
     flex-basis: calc( 50% - ( var(--spacing-md) / 2 ) );
   }
 
-  @include g.mq(wide) {
+  @include g.mq(xga) {
     flex-basis: calc( 33.33% - ( ( var(--spacing-md) * 2 ) / 3 ) );
+  }
+
+  @include g.mq(wide) {
+    flex-basis: calc( 25% - ( ( var(--spacing-md) * 3 ) / 4 ) );
   }
 }
 
