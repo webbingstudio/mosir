@@ -156,8 +156,8 @@ if ( ! function_exists( 'mi_redistar_nav_menu' ) ) :
 			'header_nav_02' => 'Header: Horizontal nav.',
 			'header_nav_03' => 'Header: Piped nav.',
 			'header_nav_04' => 'Header: Buttons.',
-			'footer_nav_01' => 'Footer: Horizontal nav.',
-			'footer_nav_02' => 'Footer: Sitemap',
+			'footer_nav_01' => 'Footer: Sitemap',
+			'footer_nav_02' => 'Footer: Horizontal nav.',
 			'drawer_nav_01' => 'drawer: Vertical nav.',
 			'drawer_nav_02' => 'drawer: Sitemap',
 			'sticky_nav' => 'Sticky nav.',
@@ -267,8 +267,23 @@ if ( ! function_exists( 'mi_customize_register' ) ){
 				)
 		));
 
+		$wp_customize->add_setting('mi_options_drawer_size', array(
+			'default'           => 'slim',
+			'sanitize_callback' => 'wp_filter_post_kses',
+		));
+		$wp_customize->add_control('mi_options_control_drawer_size', array(
+				'settings'  => 'mi_options_drawer_size',
+				'label'     => 'Drawer displaying',
+				'section'   => 'mi_config',
+				'type'      => 'select',
+				'choices' => array(
+					'slim' => 'Slim',
+					'wide' => 'Wide',
+				)
+		));
+
 		$wp_customize->add_setting('mi_options_copyright', array(
-			'default'           => '&copy;2026 samplesite.com',
+			'default'           => '',
 			'sanitize_callback' => 'wp_filter_post_kses',
 		));
 		$wp_customize->add_control('mi_options_control_copyright', array(

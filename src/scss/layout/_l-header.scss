@@ -124,7 +124,7 @@
 
 // If `.l-header__bottom` is hidden, leaving an unnecessary gap on the right.
 // For this reason, I offset this with a negative margin.
-.#{g.$pr}l-header.#{g.$pr}l-header--large .#{g.$pr}l-header__top {
+.#{g.$pr}l-header.#{g.$pr}l-header--large:not(.#{g.$pr}l-header--drawer-mobile) .#{g.$pr}l-header__top {
   @include g.mq(default-max) {
     margin-right: calc( var(--spacing-sm) * -1 );
   }

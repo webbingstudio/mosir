@@ -18,37 +18,26 @@
   gap: var(--spacing-md);
 }
 
-@include g.mq(default) {
-
-  .#{g.$pr}p-sitemap__nav.#{g.$pr}c-nav {
-    flex-direction: row;
-    gap: var(--spacing-md);
-  }
-
-}
-
-@include g.mq(default) {
-  .#{g.$pr}p-sitemap__nav.#{g.$pr}c-nav {
+.#{g.$pr}p-sitemap.#{g.$pr}p-sitemap--wide .#{g.$pr}p-sitemap__nav.#{g.$pr}c-nav {
+  @include g.mq(default) {
     flex-flow: row wrap;
   }
-
 }
 
 .#{g.$pr}p-sitemap__nav.#{g.$pr}c-nav > * {
   flex: 0;
 }
 
-@include g.mq(default) {
-  .#{g.$pr}p-sitemap__nav.#{g.$pr}c-nav > * {
+.#{g.$pr}p-sitemap.#{g.$pr}p-sitemap--wide .#{g.$pr}p-sitemap__nav.#{g.$pr}c-nav > * {
+  @include g.mq(default) {
     flex-basis: calc( 50% - ( var(--spacing-md) / 2 ) );
   }
-}
 
-@include g.mq(wide) {
-  .#{g.$pr}p-sitemap__nav.#{g.$pr}c-nav > * {
+  @include g.mq(wide) {
     flex-basis: calc( 33.33% - ( ( var(--spacing-md) * 2 ) / 3 ) );
   }
 }
+
 
 .#{g.$pr}p-sitemap__nav a {
   @include g.arrow();

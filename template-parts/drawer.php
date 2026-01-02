@@ -7,6 +7,7 @@
  */
 
 $mi_options_drawer = get_theme_mod( 'mi_options_drawer', 'always' );
+$mi_options_drawer_size = get_theme_mod( 'mi_options_drawer_size', 'slim' );
 ?>
 <?php if( $mi_options_drawer !== 'none' ): ?>
 <div class="mi-p-drawerToggle mi-p-drawerToggle--<?php echo esc_attr($mi_options_drawer); ?>">
@@ -17,7 +18,7 @@ $mi_options_drawer = get_theme_mod( 'mi_options_drawer', 'always' );
 		</button>
 	</div>
 </div>
-<div id="drawer" class="mi-p-drawer mi-p-drawer--<?php echo esc_attr($mi_options_drawer); ?>" aria-hidden="true">
+<div id="drawer" class="mi-p-drawer mi-p-drawer--<?php echo esc_attr($mi_options_drawer); ?> mi-p-drawer--size-<?php echo esc_attr($mi_options_drawer_size); ?>" aria-hidden="true">
 	<div class="mi-p-drawer__contents">
 		<div class="mi-p-drawer__contents__inner mi-l-container">
 			<?php
@@ -41,7 +42,7 @@ $mi_options_drawer = get_theme_mod( 'mi_options_drawer', 'always' );
 					array(
 						'theme_location' => 'drawer_nav_02',
 						'container'       => 'div',
-						'container_class' => 'mi-p-drawer__menu02 mi-p-sitemap',
+						'container_class' => 'mi-p-drawer__menu02 mi-p-sitemap mi-p-sitemap--' . esc_attr($mi_options_drawer_size),
 						'menu_id' => 'drawer-nav-02',
 						'menu_class' => 'menu mi-p-sitemap__nav mi-c-nav',
 						'link_before'      => '<span class="menu-label mi-c-nav__item__label">',
