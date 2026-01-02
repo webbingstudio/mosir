@@ -19,7 +19,7 @@
   background-color: var(--ui-default-accent-color);
   border: 0.0625rem solid var(--ui-default-accent-color);
   border-radius: 99em;
-  color: var(--color-white);
+  color: var(--ui-inverse-color);
   font-size: var(--fontSize-sm);
   font-weight: var(--fontWeight-bold);
   line-height: var(--lineHeight-none);
@@ -29,7 +29,7 @@
 
 .#{g.$pr}p-buttonMenu a:hover,
 .#{g.$pr}p-buttonMenu a:focus {
-  background-color: var(--color-white);
+  background-color: var(--ui-inverse-color);
   text-decoration: none;
   box-shadow: var(--shadow--sm);
 }

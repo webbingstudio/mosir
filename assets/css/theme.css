@@ -696,7 +696,7 @@ body:has(.mi-l-header--large) .mi-l-main > *:first-child {
   width: 15rem;
   min-height: var(--nav-height);
   padding-inline: var(--spacing-sm);
-  background-color: var(--color-white);
+  background-color: var(--ui-inverse-color);
   border: 0.0625rem solid var(--border-default-light-color);
   border-radius: 99em;
   color: var(---ui-default-color);
@@ -731,12 +731,12 @@ body:has(.mi-l-header--large) .mi-l-main > *:first-child {
 .mi-c-button.mi-c-button--primary {
   background-color: var(--color-primary);
   border-color: var(--color-primary);
-  color: var(--color-white);
+  color: var(--ui-inverse-color);
 }
 
 .mi-c-button.mi-c-button--primary:hover,
 .mi-c-button.mi-c-button--primary:focus {
-  background-color: var(--color-white);
+  background-color: var(--ui-inverse-color);
   color: var(--color-primary);
 }
 
@@ -766,13 +766,13 @@ body:has(.mi-l-header--large) .mi-l-main > *:first-child {
 @media (any-hover: hover) {
   a.mi-c-label:hover {
     color: var(--ui-default-color);
-    background-color: var(--color-white);
+    background-color: var(--ui-inverse-color);
     text-decoration: none;
   }
 }
 a.mi-c-label:focus {
   color: var(--ui-default-color);
-  background-color: var(--color-white);
+  background-color: var(--ui-inverse-color);
 }
 
 .mi-c-label.mi-c-label--primary {
@@ -783,12 +783,12 @@ a.mi-c-label:focus {
 @media (any-hover: hover) {
   a.mi-c-label.mi-c-label--primary:hover {
     color: var(--color-primary);
-    background-color: var(--color-white);
+    background-color: var(--ui-inverse-color);
   }
 }
 a.mi-c-label.mi-c-label--primary:focus {
   color: var(--color-primary);
-  background-color: var(--color-white);
+  background-color: var(--ui-inverse-color);
 }
 
 .mi-c-nav {
@@ -850,7 +850,7 @@ ul.mi-c-nav,
   display: block;
   width: 100%;
   margin: 0;
-  background-color: var(--color-white);
+  background-color: var(--body-bg);
 }
 
 .mi-c-picture img {
@@ -1544,7 +1544,7 @@ a.mi-p-headline__inner {
   background-color: var(--ui-default-accent-color);
   border: 0.0625rem solid var(--ui-default-accent-color);
   border-radius: 99em;
-  color: var(--color-white);
+  color: var(--ui-inverse-color);
   font-size: var(--fontSize-sm);
   font-weight: var(--fontWeight-bold);
   line-height: var(--lineHeight-none);
@@ -1554,7 +1554,7 @@ a.mi-p-headline__inner {
 
 .mi-p-buttonMenu a:hover,
 .mi-p-buttonMenu a:focus {
-  background-color: var(--color-white);
+  background-color: var(--ui-inverse-color);
   text-decoration: none;
   box-shadow: var(--shadow--sm);
 }
@@ -1972,9 +1972,9 @@ a.mi-p-media__inner {
   left: 0;
   z-index: 21;
   width: 100vw;
-  color: var(--ui-default-color);
-  background-color: var(--body-bg);
-  box-shadow: var(--shadow--sm-darken);
+  color: var(--ui-inverse-color);
+  background-color: var(--cover-inverse-color);
+  padding-block: var(--spacing-xs);
   z-index: 21;
 }
 
@@ -1982,20 +1982,36 @@ a.mi-p-media__inner {
   justify-content: center;
 }
 
-.mi-p-stickyMenu__nav a {
-  min-height: var(--nav-height);
-}
-
-.mi-p-stickyMenu__nav .current-menu-item > a {
+.mi-p-stickyMenu a {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  min-width: 8em;
+  min-height: 2.5em;
+  background-color: var(--ui-default-accent-color);
+  border: 0.0625rem solid var(--ui-default-accent-color);
+  border-radius: 99em;
+  color: var(--ui-inverse-color);
+  font-size: var(--fontSize-md);
   font-weight: var(--fontWeight-bold);
+  line-height: var(--lineHeight-none);
+  transition: var(--transition-fast);
+  text-align: center;
 }
 
-@media (any-hover: hover) {
-  .mi-p-stickyMenu__nav :not(.current-menu-item) > a:hover {
-    text-decoration-line: underline;
-    text-underline-offset: 0.25em;
-  }
+.mi-p-stickyMenu a:hover,
+.mi-p-stickyMenu a:focus {
+  background-color: var(--ui-inverse-color);
+  text-decoration: none;
+  box-shadow: var(--shadow--sm);
 }
+
+.mi-p-stickyMenu a:focus {
+  outline: none;
+}
+
 .mi-p-verticalMenu__nav.mi-c-nav {
   flex-flow: column wrap;
   align-items: stretch;

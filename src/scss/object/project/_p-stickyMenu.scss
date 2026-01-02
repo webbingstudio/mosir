@@ -11,9 +11,9 @@
 .#{g.$pr}p-stickyMenu {
   @include g.position(fixed, n, n, 0, 0, 21);
   width: 100vw;
-  color: var(--ui-default-color);
-  background-color: var(--body-bg);
-  box-shadow: var(--shadow--sm-darken);
+  color: var(--ui-inverse-color);
+  background-color: var(--cover-inverse-color);
+  padding-block: var(--spacing-xs);
   z-index: 21;
 }
 
@@ -21,19 +21,28 @@
   justify-content: center;
 }
 
-.#{g.$pr}p-stickyMenu__nav a {
-  min-height: var(--nav-height);
-}
-
-.#{g.$pr}p-stickyMenu__nav .current-menu-item > a {
+.#{g.$pr}p-stickyMenu a {
+  @include g.flex( n, n, center, center );
+  min-width: 8em;
+  min-height: 2.5em;
+  background-color: var(--ui-default-accent-color);
+  border: 0.0625rem solid var(--ui-default-accent-color);
+  border-radius: 99em;
+  color: var(--ui-inverse-color);
+  font-size: var(--fontSize-md);
   font-weight: var(--fontWeight-bold);
+  line-height: var(--lineHeight-none);
+  transition: var(--transition-fast);
+  text-align: center;
 }
 
-@include g.mq(hover) {
+.#{g.$pr}p-stickyMenu a:hover,
+.#{g.$pr}p-stickyMenu a:focus {
+  background-color: var(--ui-inverse-color);
+  text-decoration: none;
+  box-shadow: var(--shadow--sm);
+}
 
-  .#{g.$pr}p-stickyMenu__nav :not(.current-menu-item) > a:hover {
-    text-decoration-line: underline;
-    text-underline-offset: 0.25em;
-  }
-
+.#{g.$pr}p-stickyMenu a:focus {
+    outline: none;
 }

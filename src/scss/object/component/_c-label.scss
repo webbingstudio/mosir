@@ -21,7 +21,7 @@
 
   a.#{g.$pr}c-label:hover {
     color: var(--ui-default-color);
-    background-color: var(--color-white);
+    background-color: var(--ui-inverse-color);
     text-decoration: none;
   }
 
@@ -29,7 +29,7 @@
 
 a.#{g.$pr}c-label:focus {
   color: var(--ui-default-color);
-  background-color: var(--color-white);
+  background-color: var(--ui-inverse-color);
 }
 
 .#{g.$pr}c-label.#{g.$pr}c-label--primary {
@@ -41,12 +41,12 @@ a.#{g.$pr}c-label:focus {
 
   a.#{g.$pr}c-label.#{g.$pr}c-label--primary:hover {
     color: var(--color-primary);
-    background-color: var(--color-white);
+    background-color: var(--ui-inverse-color);
   }
 
 }
 
 a.#{g.$pr}c-label.#{g.$pr}c-label--primary:focus {
   color: var(--color-primary);
-  background-color: var(--color-white);
+  background-color: var(--ui-inverse-color);
 }
