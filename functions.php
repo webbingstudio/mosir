@@ -251,13 +251,29 @@ if ( ! function_exists( 'mi_customize_register' ) ){
 				)
 		));
 
+		$wp_customize->add_setting('mi_options_drawer', array(
+			'default'           => 'always',
+			'sanitize_callback' => 'wp_filter_post_kses',
+		));
+		$wp_customize->add_control('mi_options_control_drawer', array(
+				'settings'  => 'mi_options_drawer',
+				'label'     => 'Drawer displaying',
+				'section'   => 'mi_config',
+				'type'      => 'select',
+				'choices' => array(
+					'always' => 'Always show',
+					'mobile' => 'Mobile only',
+					'none' => 'None',
+				)
+		));
+
 		$wp_customize->add_setting('mi_options_copyright', array(
 			'default'           => '&copy;2026 samplesite.com',
 			'sanitize_callback' => 'wp_filter_post_kses',
 		));
 		$wp_customize->add_control('mi_options_control_copyright', array(
 				'settings'  => 'mi_options_copyright',
-				'label'     => 'コピーライト',
+				'label'     => 'Footer copyright',
 				'section'   => 'mi_config',
 				'type'      => 'text',
 		));

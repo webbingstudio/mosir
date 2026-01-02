@@ -1,12 +1,24 @@
 @use "../global" as g;
 @use "sass:math";
 
-.#{g.$pr}l-header {
-  position: relative;
+// ------------------------------
+// project > header
+//  - The styles reflected vary depending on the layout and drawer settings.
+// See: functions.php > mo_customize_register
+// ------------------------------
+
+// ------------------------------
+// small
+// ------------------------------
+.#{g.$pr}l-header.#{g.$pr}l-header--small {
   padding-top: var(--spacing-xl);
   padding-bottom: var(--spacing-lg);
 }
 
+
+// ------------------------------
+// medium, large
+// ------------------------------
 .#{g.$pr}l-header:not(.#{g.$pr}l-header--small) {
   @include g.position( fixed, 0, 0, n, 0, 91 );
   background-color: var(--body-bg);
@@ -15,19 +27,75 @@
 
 .#{g.$pr}l-header:not(.#{g.$pr}l-header--small) .#{g.$pr}l-header__contents.#{g.$pr}l-container {
   display: grid;
-  grid-template-columns: auto 1fr auto var(--drawer-toggle-size);
   grid-template-rows: var(--drawer-toggle-size);
-  align-content: space-between;
   gap: var(--spacing-xs) var(--spacing-sm);
 }
 
-.#{g.$pr}l-header.#{g.$pr}l-header--large .#{g.$pr}l-header__contents.#{g.$pr}l-container {
+
+// ------------------------------
+// medium
+// ------------------------------
+
+.#{g.$pr}l-header.#{g.$pr}l-header--medium .#{g.$pr}l-header__contents.#{g.$pr}l-container {
+  grid-template-columns: auto 1fr var(--drawer-toggle-size);
+
   @include g.mq(wide) {
-    grid-template-columns: auto 1fr var(--drawer-toggle-size);
-    grid-template-rows: repeat(2, var(--drawer-toggle-size));
     column-gap: var(--spacing-md);
   }
 }
+
+.#{g.$pr}l-header.#{g.$pr}l-header--medium.#{g.$pr}l-header--drawer-none .#{g.$pr}l-header__contents.#{g.$pr}l-container {
+  grid-template-columns: auto 1fr;
+}
+
+.#{g.$pr}l-header.#{g.$pr}l-header--medium.#{g.$pr}l-header--drawer-mobile .#{g.$pr}l-header__contents.#{g.$pr}l-container {
+  @include g.mq(xga) {
+    grid-template-columns: auto 1fr;
+  }
+}
+
+
+// ------------------------------
+// large
+// ------------------------------
+
+.#{g.$pr}l-header.#{g.$pr}l-header--large .#{g.$pr}l-header__contents.#{g.$pr}l-container {
+  grid-template-columns: auto 1fr auto var(--drawer-toggle-size);
+
+  @include g.mq(wide) {
+    grid-template-columns: auto 1fr var(--drawer-toggle-size);
+    grid-template-rows: repeat(2, var(--drawer-toggle-size));
+  }
+}
+
+.#{g.$pr}l-header.#{g.$pr}l-header--large.#{g.$pr}l-header--drawer-none .#{g.$pr}l-header__contents.#{g.$pr}l-container {
+  grid-template-columns: auto 1fr auto;
+
+  @include g.mq(wide) {
+    grid-template-columns: auto 1fr;
+  }
+}
+
+.#{g.$pr}l-header.#{g.$pr}l-header--large.#{g.$pr}l-header--drawer-mobile .#{g.$pr}l-header__contents.#{g.$pr}l-container {
+  grid-template-columns: auto 1fr var(--drawer-toggle-size);
+
+  @include g.mq(default) {
+    grid-template-columns: auto 1fr auto var(--drawer-toggle-size);
+  }
+
+  @include g.mq(xga) {
+    grid-template-columns: auto 1fr auto;
+  }
+
+  @include g.mq(wide) {
+    grid-template-columns: auto 1fr;
+  }
+}
+
+
+// ------------------------------
+// areas
+// ------------------------------
 
 .#{g.$pr}l-header__contents__siteTitle {
   grid-column: 1 / 2;
@@ -47,17 +115,19 @@
   grid-column: 2 / 3;
   grid-row: 1 / -1;
 
-  // On smartphones, `.l-header__bottom` is hidden, leaving an unnecessary gap on the right.
-  // For this reason, I offset this with a negative margin.
-  @include g.mq(default-max) {
-    margin-right: calc( var(--spacing-sm) * -1 );
-  }
-
   @include g.mq(wide) {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
   }
 
+}
+
+// If `.l-header__bottom` is hidden, leaving an unnecessary gap on the right.
+// For this reason, I offset this with a negative margin.
+.#{g.$pr}l-header.#{g.$pr}l-header--large .#{g.$pr}l-header__top {
+  @include g.mq(default-max) {
+    margin-right: calc( var(--spacing-sm) * -1 );
+  }
 }
 
 .#{g.$pr}l-header__bottom {

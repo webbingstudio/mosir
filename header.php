@@ -6,6 +6,7 @@
  */
 
 $mi_options_header = get_theme_mod( 'mi_options_header', 'large' );
+$mi_options_drawer = get_theme_mod( 'mi_options_drawer', 'always' );
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
@@ -17,7 +18,7 @@ $mi_options_header = get_theme_mod( 'mi_options_header', 'large' );
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
-<header class="mi-l-header mi-l-header--<?php echo esc_attr($mi_options_header); ?>">
+<header class="mi-l-header mi-l-header--<?php echo esc_attr($mi_options_header); ?> mi-l-header--drawer-<?php echo esc_attr($mi_options_drawer); ?>">
 	<div class="mi-l-header__contents mi-l-container">
 
 		<?php

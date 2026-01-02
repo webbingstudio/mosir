@@ -15,6 +15,12 @@
   height: 0;
 }
 
+.#{g.$pr}p-drawer.#{g.$pr}p-drawer--mobile {
+  @include g.mq(xga) {
+    display: none;
+  }
+}
+
 .#{g.$pr}p-drawer::after {
   content: "";
   @include g.position( fixed, 0, n, n, 0, 102 );
