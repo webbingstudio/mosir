@@ -21,7 +21,11 @@
 
 .#{g.$pr}p-megaMenu__nav {
   flex-wrap: nowrap;
-  column-gap: var(--spacing-md);
+  column-gap: 0;
+}
+
+.#{g.$pr}p-megaMenu__nav > .menu-item {
+  padding-inline: var(--spacing-sm);
 }
 
 .#{g.$pr}p-megaMenu__nav > .menu-item > a {

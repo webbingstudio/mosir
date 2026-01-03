@@ -13,3 +13,8 @@ body:has(.#{g.$pr}l-header--large) .#{g.$pr}l-main > *:first-child {
         padding-top: calc( ( var(--spacing-xs) * 3 ) + ( var(--drawer-toggle-size) * 2 ) );
     }
 }
+
+// In the home, the header overlaps the main contents.
+body.home .#{g.$pr}l-main > *:first-child {
+    padding-top: 0;
+}

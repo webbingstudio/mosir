@@ -55,7 +55,7 @@
   --shadow--md-darken: var(--wp--preset--shadow--md-darken);
   --shadow--lg: var(--wp--preset--shadow--lg);
   --shadow--lg-darken: var(--wp--preset--shadow--lg-darken);
-  --cover-default-color: rgb( 255 255 255 / 0.7 );
+  --cover-default-color: rgb( 255 255 255 / 0.8 );
   --cover-inverse-color: rgb( 0 0 0 / 0.5 );
   --border-default-color: var(--color-default-lighter);
   --border-default-light-color: rgb( 0 0 0 / 0.2 );
@@ -489,8 +489,10 @@ body:has(.mi-p-stickyMenu) .mi-l-footer__copyright {
   right: 0;
   left: 0;
   z-index: 91;
-  background-color: var(--body-bg);
+  background-color: var(--cover-default-color);
   padding-block: var(--spacing-xs);
+  -webkit-backdrop-filter: blur(1rem);
+          backdrop-filter: blur(1rem);
 }
 
 .mi-l-header:not(.mi-l-header--small) .mi-l-header__contents.mi-l-container {
@@ -650,6 +652,10 @@ body:has(.mi-l-header--large) .mi-l-main > *:first-child {
   body:has(.mi-l-header--large) .mi-l-main > *:first-child {
     padding-top: calc(var(--spacing-xs) * 3 + var(--drawer-toggle-size) * 2);
   }
+}
+
+body.home .mi-l-main > *:first-child {
+  padding-top: 0;
 }
 
 .mi-l-container {
@@ -1190,9 +1196,9 @@ a.mi-p-card__inner .mi-p-card__title {
   position: fixed;
   top: 0;
   right: 0;
+  bottom: 0;
   z-index: 103;
   background-color: var(--body-bg);
-  height: 100dvh;
   box-shadow: var(--shadow--lg-darken);
 }
 
@@ -1209,7 +1215,7 @@ a.mi-p-card__inner .mi-p-card__title {
 }
 
 .mi-p-drawer.mi-p-drawer--size-wide::before {
-  width: 100dvw;
+  left: 0;
   transform: scaleY(0);
   transform-origin: top center;
 }
@@ -1219,6 +1225,7 @@ a.mi-p-card__inner .mi-p-card__title {
   position: fixed;
   top: 0;
   right: 0;
+  left: 0;
   z-index: 102;
   background-color: var(--cover-inverse-color);
   width: 100dvw;
@@ -1674,8 +1681,12 @@ a.mi-p-media__inner {
 
 .mi-p-megaMenu__nav {
   flex-wrap: nowrap;
-  -moz-column-gap: var(--spacing-md);
-       column-gap: var(--spacing-md);
+  -moz-column-gap: 0;
+       column-gap: 0;
+}
+
+.mi-p-megaMenu__nav > .menu-item {
+  padding-inline: var(--spacing-sm);
 }
 
 .mi-p-megaMenu__nav > .menu-item > a {
@@ -2139,9 +2150,11 @@ a.mi-p-media__inner {
   left: 0;
   z-index: 21;
   width: 100vw;
-  color: var(--ui-inverse-color);
-  background-color: var(--cover-inverse-color);
   padding-block: var(--spacing-xs);
+  background-color: var(--cover-inverse-color);
+  color: var(--ui-inverse-color);
+  -webkit-backdrop-filter: blur(1rem);
+          backdrop-filter: blur(1rem);
   z-index: 21;
 }
 @media screen and (max-height: 767.9px) {

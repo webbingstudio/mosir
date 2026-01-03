@@ -11,9 +11,10 @@
 .#{g.$pr}p-stickyMenu {
   @include g.position(fixed, n, n, 0, 0, 21);
   width: 100vw;
-  color: var(--ui-inverse-color);
-  background-color: var(--cover-inverse-color);
   padding-block: var(--spacing-xs);
+  background-color: var(--cover-inverse-color);
+  color: var(--ui-inverse-color);
+  backdrop-filter: blur(1rem);
   z-index: 21;
 
   @media screen and ( max-height: 767.9px ) {

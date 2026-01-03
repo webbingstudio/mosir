@@ -23,9 +23,8 @@
 
 .#{g.$pr}p-drawer::before {
   content: "";
-  @include g.position( fixed, 0, 0, n, n, 103 );
+  @include g.position( fixed, 0, 0, 0, n, 103 );
   background-color: var(--body-bg);
-  height: 100dvh;
   box-shadow: var(--shadow--lg-darken);
 }
 
@@ -41,14 +40,14 @@
 }
 
 .#{g.$pr}p-drawer.#{g.$pr}p-drawer--size-wide::before {
-  width: 100dvw;
+  left: 0;
   transform: scaleY(0);
   transform-origin: top center;
 }
 
 .#{g.$pr}p-drawer::after {
   content: "";
-  @include g.position( fixed, 0, 0, n, n, 102 );
+  @include g.position( fixed, 0, 0, n, 0, 102 );
   background-color: var(--cover-inverse-color);
   width: 100dvw;
   opacity: 0;

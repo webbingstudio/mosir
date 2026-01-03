@@ -21,8 +21,9 @@
 // ------------------------------
 .#{g.$pr}l-header:not(.#{g.$pr}l-header--small) {
   @include g.position( fixed, 0, 0, n, 0, 91 );
-  background-color: var(--body-bg);
+  background-color: var(--cover-default-color);
   padding-block: var(--spacing-xs);
+  backdrop-filter: blur(1rem);
 }
 
 .#{g.$pr}l-header:not(.#{g.$pr}l-header--small) .#{g.$pr}l-header__contents.#{g.$pr}l-container {
