@@ -28,6 +28,14 @@
   padding-inline: var(--spacing-sm);
 }
 
+.#{g.$pr}p-megaMenu__nav > .menu-item:first-child {
+  padding-left: 0;
+}
+
+.#{g.$pr}p-megaMenu__nav > .menu-item:last-child {
+  padding-right: 0;
+}
+
 .#{g.$pr}p-megaMenu__nav > .menu-item > a {
   position: relative;
   justify-content: center;

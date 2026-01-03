@@ -101,11 +101,6 @@
 .#{g.$pr}l-header__contents__siteTitle {
   grid-column: 1 / 2;
   grid-row: 1 / -1;
-
-  @include g.mq(default) {
-    padding-right: var(--spacing-md);
-  }
-
 }
 
 .#{g.$pr}l-header.#{g.$pr}l-header--small .#{g.$pr}l-header__contents__siteTitle {
