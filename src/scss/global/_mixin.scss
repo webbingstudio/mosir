@@ -10,11 +10,11 @@
 // mq (mediaquery)
 // https://zenn.dev/web_tips/articles/095d7419507ca9
 // 
-// ex1. @include g.mq(pc){};
-// ex2. @include g.mq(default){};
-// ex3. @include g.mq(max-pc){};
+// ex1. @include g.mq(){};
+// ex2. @include g.mq(xga){};
+// ex3. @include g.mq(max-default){};
 // ------------------------------
-@mixin mq( $breakpoint: "pc", $breakpoints: $breakpoints ) {
+@mixin mq( $breakpoint: "default", $breakpoints: $breakpoints ) {
     @media #{map.get( $breakpoints, $breakpoint )} {
         @content;
     }
@@ -87,41 +87,25 @@
   @at-root {
     #{&} {
       position: relative;
-      padding-left: 1.25em;
     }
 
     #{&}::before {
       position: absolute;
-      top: calc( ( var(--nav-line-height) * 1em ) / 2 - 0.275em );
-      left: 0;
       content: "";
       width: 0.55em;
       height: 0.55em;
       border-top: 0.125em solid var(--ui-accent-color);
       border-right: 0.125em solid var(--ui-accent-color);
       @if $direction == 'left' {
-        rotate: -45deg;
+        rotate: -135deg;
       } @else if $direction == 'top' {
-        rotate: 0deg;
+        rotate: -45deg;
       } @else if $direction == 'bottom' {
-        rotate: 90deg;
+        rotate: 135deg;
       } @else {
         rotate: 45deg;
       }
 
-    }
-
-  }
-
-}
-
-@mixin arrow-hover( $direction: 'right' ) {
-
-  @at-root {
-
-    #{&}::before {
-      opacity: 1;
-      transition: var(--transition-slow);
     }
 
   }
@@ -138,4 +122,23 @@
 
   }
 
+}
+
+
+// ------------------------------
+// sr-only
+// Generate invisible styles that are recognizable by screen readers.
+//
+// ex. @include g.sr-only();
+// ------------------------------
+@mixin sr-only(){
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
 }

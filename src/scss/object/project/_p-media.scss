@@ -7,19 +7,22 @@
 // ------------------------------
 
 .#{g.$pr}p-media {
-  background-color: var(--body-bg);
-  box-shadow: var(--shadow--sm);
+  position: relative;
+}
 
-  @include g.mq(default) {
-    box-shadow: none;
-    background-color: transparent;
-  }
-
+.#{g.$pr}p-media::after {
+  content: "";
+  @include g.position( absolute, -0.25rem, -0.25rem, -0.25rem, -0.25rem, 11 );
+  border: 0.125rem solid var(--ui-accent-color);
+  border-radius: var(--border-radius-sm);
+  opacity: 0;
 }
 
 .#{g.$pr}p-media__inner {
+  position: relative;
   display: grid;
   grid-template-columns: min( 10rem, 25% ) 1fr;
+  z-index: 12;
 }
 
 a.#{g.$pr}p-media__inner {
@@ -32,10 +35,10 @@ a.#{g.$pr}p-media__inner {
 
 @include g.mq(hover) {
 
-  .#{g.$pr}p-media:has(a.#{g.$pr}p-media__inner:hover) {
-    background-color: var(--media-bg);
-    box-shadow: var(--shadow--sm);
+  .#{g.$pr}p-media:has(a.#{g.$pr}p-media__inner:hover)::after {
+    opacity: 1;
     transition: var(--transition-slow);
+    outline: none;
   }
 
   a.#{g.$pr}p-media__inner:hover {

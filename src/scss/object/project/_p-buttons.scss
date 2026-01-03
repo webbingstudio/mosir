@@ -1,0 +1,17 @@
+@use "../../global" as g;
+@use "sass:math";
+
+// ------------------------------
+// project > buttons
+//  - Navigation that assumes one or more buttons are arranged in an aligned fashion.
+//  - It will be horizontal on screen widths of tablets and above.
+// ------------------------------
+
+.#{g.$pr}p-buttons {
+    @include g.flex(column, n, center, center);
+    gap: var(--spacing-sm);
+
+    @include g.mq(default) {
+        flex-direction: row;
+    }
+}

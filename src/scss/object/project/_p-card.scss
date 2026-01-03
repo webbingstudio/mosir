@@ -7,18 +7,21 @@
 // ------------------------------
 
 .#{g.$pr}p-card {
-  background-color: var(--body-bg);
-  box-shadow: var(--shadow--sm);
+  position: relative;
+}
 
-  @include g.mq(default) {
-    box-shadow: none;
-    background-color: transparent;
-  }
-
+.#{g.$pr}p-card::after {
+  content: "";
+  @include g.position( absolute, -0.25rem, -0.25rem, -0.25rem, -0.25rem, 11 );
+  border: 0.125rem solid var(--ui-accent-color);
+  border-radius: var(--border-radius-sm);
+  opacity: 0;
 }
 
 .#{g.$pr}p-card__inner {
   display: block;
+  position: relative;
+  z-index: 12;
 }
 
 a.#{g.$pr}p-card__inner {
@@ -27,10 +30,10 @@ a.#{g.$pr}p-card__inner {
 
 @include g.mq(hover) {
 
-  .#{g.$pr}p-card:has(a.#{g.$pr}p-card__inner:hover) {
-    background-color: var(--card-bg);
-    box-shadow: var(--shadow--sm);
+  .#{g.$pr}p-card:has(a.#{g.$pr}p-card__inner:hover)::after {
+    opacity: 1;
     transition: var(--transition-slow);
+    outline: none;
   }
 
   a.#{g.$pr}p-card__inner:hover {

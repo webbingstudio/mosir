@@ -60,7 +60,7 @@ a.#{g.$pr}p-headline__inner {
 }
 
 .#{g.$pr}p-headline__category .#{g.$pr}c-label {
-    width: 7rem;
+    min-width: 10em;
 }
 
 .#{g.$pr}p-headline__contents {

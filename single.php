@@ -43,7 +43,7 @@ if( have_posts() ) :
 			<h1 class="mi-p-post__title mi-c-title mi-c-title--lv3"><?php echo get_the_title() ? get_the_title() : '(タイトルなし)'; ?></h1>
 		</div>
 	</div>
-	<div class="mi-p-post__content <?php mi_wp_block_class(); ?>">
+	<div class="mi-p-post__contents <?php mi_wp_block_class(); ?>">
 	<?php while( have_posts() ) : the_post(); ?>
 		<?php the_content(); ?>
 	<?php endwhile; ?>

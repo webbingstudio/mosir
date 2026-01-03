@@ -12,7 +12,7 @@ $mi_options_drawer_size = get_theme_mod( 'mi_options_drawer_size', 'slim' );
 <?php if( $mi_options_drawer !== 'none' ): ?>
 <div class="mi-p-drawerToggle mi-p-drawerToggle--<?php echo esc_attr($mi_options_drawer); ?>">
 	<div class="mi-p-drawerToggle__contents mi-l-container">
-		<button id="drawer-toggle" class="mi-p-drawerToggle__button mi-c-toggleButton" aria-controls="drawer" aria-expanded="false">
+		<button id="mo-drawer-toggle" class="mi-p-drawerToggle__button mi-c-toggleButton" aria-controls="drawer" aria-expanded="false">
 			<span class="mi-c-toggleButton__label">Menu</span>
 			<span class="mi-c-toggleButton__icon"></span>
 		</button>
@@ -51,6 +51,11 @@ $mi_options_drawer_size = get_theme_mod( 'mi_options_drawer_size', 'slim' );
 				);
 			}
 			?>
+			<div class="mi-p-drawer__footer">
+				<button id="mo-drawer-close" class="mi-p-drawer__footer__button mi-c-button" aria-controls="drawer">
+					✕ メニューを閉じる
+				</button>
+			</div>
 		</div>
 	</div>
 </div>

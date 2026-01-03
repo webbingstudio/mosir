@@ -16,7 +16,7 @@ page.php =============
 <?php while( have_posts() ) : the_post(); ?>
 
 <p>自由文ここから =============</p>
-<div class="p-post__content <?php mi_wp_block_class(); ?>">
+<div class="p-post__contents <?php mi_wp_block_class(); ?>">
 	<?php the_content(); ?>
 </div>
 <p>自由文終了 =============</p>

@@ -7,7 +7,7 @@
 // ------------------------------
 
 .#{g.$pr}p-post__title,
-.#{g.$pr}p-post__content {
+.#{g.$pr}p-post__contents {
     word-wrap: break-word;
 }
 
@@ -15,9 +15,8 @@
     word-break: break-all;
 }
 
-.#{g.$pr}p-post__header {
-    margin-bottom: var(--spacing-md);
-}
+// .#{g.$pr}p-post__header {
+// }
 
 .#{g.$pr}p-post__header::after {
   display: block;
@@ -27,6 +26,10 @@
   max-width: var(--container-default-width);
   margin-inline: auto;
   border-bottom: 0.0625rem solid var(--border-default-light-color);
+}
+
+.#{g.$pr}p-post__header__contents {
+    padding-top: var(--spacing-lg);
 }
 
 .#{g.$pr}p-post__header__meta {
@@ -40,14 +43,16 @@
     margin: 0;
 }
 
+// .#{g.$pr}p-post__contents {
+// }
+
 .#{g.$pr}p-post__category {
   @include g.flex( n, wrap, flex-start, center );
   gap: var(--spacing-xs);
 }
 
-.#{g.$pr}p-post__footer {
-    margin-top: var(--spacing-md);
-}
+// .#{g.$pr}p-post__footer {
+// }
 
 .#{g.$pr}p-post__footer::before {
   display: block;
@@ -57,6 +62,10 @@
   max-width: var(--container-default-width);
   margin-inline: auto;
   border-top: 0.0625rem solid var(--border-default-light-color);
+}
+
+.#{g.$pr}p-post__footer__contents {
+    padding-bottom: var(--spacing-lg);
 }
 
 .#{g.$pr}p-post__footer__contents > * + * {
@@ -101,6 +110,6 @@
 // post(blog)
 // ------------------------------
 
-.#{g.$pr}p-post.#{g.$pr}p-post--post {
-    padding-block: var(--spacing-xl);
+.#{g.$pr}p-post.#{g.$pr}p-post--post .#{g.$pr}p-post__contents {
+    padding-block: var(--spacing-lg);
 }

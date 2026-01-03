@@ -7,14 +7,17 @@
 // ------------------------------
 
 .#{g.$pr}c-label {
-  @include g.flex(n, n, center, center);
-  padding: 0.25em 0.5em;
+  @include g.iFlex(n, n, center, center);
+  padding-inline: 0.25em;
+  min-width: 8em;
+  min-height: calc( var(--lineHeight-md) * 1em );
   background-color: var(--color-default-light);
-  border: 0.0625rem solid var(--color-default-light);
+  border: 0.125rem solid var(--color-default-light);
   color: var(--ui-inverse-color);
   font-size: var(--fontSize-2xs);
   line-height: var(--lineHeight-xs);
   text-align: center;
+  vertical-align: middle;
 }
 
 @include g.mq(hover) {

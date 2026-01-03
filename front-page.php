@@ -15,7 +15,7 @@ get_header();
 if( have_posts() ) :
 ?>
 <section class="mi-p-home-contents mi-p-post mi-p-post--page">
-	<div class="mi-p-post__content <?php mi_wp_block_class(); ?>">
+	<div class="mi-p-post__contents <?php mi_wp_block_class(); ?>">
 	<?php while( have_posts() ) : the_post(); ?>
 		<?php the_content(); ?>
 	<?php endwhile; ?>

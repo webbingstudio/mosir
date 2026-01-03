@@ -85,15 +85,13 @@
 }
 
 .#{g.$pr}p-verticalMenu__nav .sub-menu a {
+  padding-left: 1.25em;
   @include g.arrow();
 }
 
-@include g.mq(hover) {
-
-  .#{g.$pr}p-verticalMenu__nav .sub-menu :not(.current-menu-item) > a:hover {
-    @include g.arrow-hover();
-  }
-
+.#{g.$pr}p-verticalMenu__nav .sub-menu a::before {
+  top: calc( ( var(--nav-line-height) * 1em ) / 2 - 0.275em );
+  left: 0;
 }
 
 .#{g.$pr}p-verticalMenu__nav .sub-menu .current-menu-item > a {

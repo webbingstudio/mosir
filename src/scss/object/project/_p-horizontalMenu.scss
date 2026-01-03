@@ -48,13 +48,11 @@
 }
 
 .#{g.$pr}p-horizontalMenu.#{g.$pr}p-horizontalMenu--arrowed a {
+  padding-left: 1.25em;
   @include g.arrow();
 }
 
-@include g.mq(hover) {
-
-  .#{g.$pr}p-horizontalMenu.#{g.$pr}p-horizontalMenu--arrowed :not(.current-menu-item) > a:hover {
-    @include g.arrow-hover();
-  }
-
+.#{g.$pr}p-horizontalMenu.#{g.$pr}p-horizontalMenu--arrowed a::before {
+  top: calc( ( var(--nav-line-height) * 1em ) / 2 - 0.275em );
+  left: 0;
 }

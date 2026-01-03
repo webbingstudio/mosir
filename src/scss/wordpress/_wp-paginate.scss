@@ -1,0 +1,80 @@
+@use "../global" as g;
+@use "sass:math";
+
+.wp-paginate {
+    @include g.flex(n, n, center, center);
+    column-gap: var(--spacing-sm);
+}
+
+.wp-paginate .page-numbers {
+    @include g.flex(n, n, center, center);
+    width: var(--nav-height);
+    height: var(--nav-height);
+    color: var(--ui-default-color);
+    background-color: var(--ui-inverse-color);
+    border: 0.125rem solid var(--ui-accent-color);
+    border-radius: 99em;
+    font-size: var(--fontSize-md);
+    font-weight: var(--fontWeight-bold);
+    text-decoration: none;
+}
+
+.wp-paginate a.page-numbers:hover,
+.wp-paginate a.page-numbers:focus {
+  color: var(--ui-inverse-color);
+  background-color: var(--ui-accent-color);
+  text-decoration: none;
+}
+
+.wp-paginate .page-numbers:focus {
+    outline: none;
+}
+
+.wp-paginate .page-numbers.current {
+    background: transparent;
+    border-color: transparent;
+    cursor: default;
+}
+
+.wp-paginate .prev,
+.wp-paginate .next {
+    background: transparent;
+    border-color: transparent;
+}
+
+.wp-paginate .prev {
+  @include g.arrow('left');
+}
+
+.wp-paginate .next {
+  @include g.arrow();
+}
+
+.wp-paginate .prev::before,
+.wp-paginate .next::before {
+    top: calc( 50% - 0.275em );
+    border-top-color: currentColor;
+    border-right-color: currentColor;
+}
+
+.wp-paginate .prev::before {
+    left: calc( 50% - 0.125em );
+}
+
+.wp-paginate .next::before {
+    left: calc( 50% - 0.375em );
+}
+
+.wp-paginate .prev .wp-paginate-label,
+.wp-paginate .next .wp-paginate-label {
+    background: transparent;
+    border-color: transparent;
+    @include g.sr-only();
+}
+
+.wp-paginate a.prev:hover,
+.wp-paginate a.prev:focus,
+.wp-paginate a.next:hover,
+.wp-paginate a.next:focus {
+    color: var(--ui-inverse-color);
+}

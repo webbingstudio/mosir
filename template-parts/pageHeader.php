@@ -6,8 +6,8 @@
  * @package ws-minimalism
  */
 
-$mi_post_type = get_post_type();
-$mi_post_type_obj = get_post_type_object( $post_type );
+$mi_post_type = get_query_var( 'post_type' );
+$mi_post_type_obj = get_post_type_object( $mi_post_type );
 ?>
 <?php
     if ( is_single() && $mi_post_type === 'post' ):
@@ -22,7 +22,7 @@ $mi_post_type_obj = get_post_type_object( $post_type );
 ?>
 <div class="mi-p-pageHeader mi-p-pageHeader--<?php esc_html($mi_post_type); ?>">
     <div class="mi-p-pageHeader__contents mi-l-container">
-        <p class="mi-p-pageHeader__title mi-c-title mi-c-title--lv2"><?php esc_html($mi_post_type_obj->labels->name); ?></p>
+        <p class="mi-p-pageHeader__title mi-c-title mi-c-title--lv2"><?php esc_html_e($mi_post_type_obj->labels->name); ?></p>
     </div>
 </div>
 <?php
@@ -38,7 +38,7 @@ $mi_post_type_obj = get_post_type_object( $post_type );
 ?>
 <div class="mi-p-pageHeader mi-p-pageHeader--<?php esc_html($mi_post_type); ?>">
     <div class="mi-p-pageHeader__contents mi-l-container">
-        <h1 class="mi-p-pageHeader__title mi-c-title mi-c-title--lv2"><?php esc_html($mi_post_type_obj->labels->name); ?></h1>
+        <h1 class="mi-p-pageHeader__title mi-c-title mi-c-title--lv2"><?php esc_html_e($mi_post_type_obj->labels->name); ?></h1>
     </div>
 </div>
 <?php

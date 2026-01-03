@@ -3,11 +3,11 @@
  *
  * since minimalism 1.0
  */
-const miDrawer = function() {
+const miDrawerToggle = function() {
     // drawer duration - see: src/scss/global/_variables-css.scss
     const duration = 600;
     // drawer button ID - see: header.php
-    const toggle = document.getElementById('drawer-toggle');
+    const toggle = document.getElementById('mo-drawer-toggle');
 
     if( toggle != undefined ) {
         const controls = toggle.getAttribute('aria-controls');
@@ -61,4 +61,39 @@ const miDrawer = function() {
     }
 };
 
-window.addEventListener('DOMContentLoaded', miDrawer );
+const miDrawerClose = function() {
+    // drawer duration - see: src/scss/global/_variables-css.scss
+    const duration = 600;
+    // close button ID - see: header.php
+    const button = document.getElementById('mo-drawer-close');
+    const toggle = document.getElementById('mo-drawer-toggle');
+
+    if( button != undefined ) {
+        const controls = button.getAttribute('aria-controls');
+        const nav = document.getElementById(controls);
+
+        if(nav != undefined) {
+            let mi_queue = null;
+            nav.setAttribute('aria-hidden', 'true');
+            // inert: Disable all operations within the element
+            // https://developer.mozilla.org/ja/docs/Web/API/HTMLElement/inert
+            nav.setAttribute('inert', 'inert');
+
+            button.addEventListener('click', ()=> {
+                toggle.setAttribute('aria-expanded', 'false');
+                nav.classList.add('-is-closing');
+                nav.classList.remove('-is-opening');
+
+                // To allow for detailed CSS animations, the `.-is-closing` class is only added while the menu is closing.
+                const mi_queue = setTimeout(() => {
+                    nav.classList.remove('-is-closing');
+                    nav.setAttribute('aria-hidden', 'true');
+                    nav.setAttribute('inert', 'inert');
+                },duration);
+            });
+        }
+    }
+};
+
+window.addEventListener('DOMContentLoaded', miDrawerToggle );
+window.addEventListener('DOMContentLoaded', miDrawerClose );

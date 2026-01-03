@@ -10,6 +10,20 @@
   @include g.flex(column, n, flex-start, stretch);
 }
 
+// .#{g.$pr}p-posts__header {
+// }
+
+.#{g.$pr}p-posts__header__contents {
+    padding-block: var(--spacing-lg);
+}
+
+// .#{g.$pr}p-posts__footer {
+// }
+
+.#{g.$pr}p-posts__footer__contents {
+    padding-block: var(--spacing-lg);
+}
+
 
 // ------------------------------
 // card
@@ -62,5 +76,5 @@
 // ------------------------------
 
 .#{g.$pr}p-posts.#{g.$pr}p-posts--media {
-  gap: var(--spacing-md);
+  gap: var(--spacing-sm);
 }

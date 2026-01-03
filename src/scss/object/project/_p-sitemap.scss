@@ -45,15 +45,13 @@
 
 
 .#{g.$pr}p-sitemap__nav a {
+  padding-left: 1.25em;
   @include g.arrow();
 }
 
-@include g.mq(hover) {
-
-  .#{g.$pr}p-sitemap__nav :not(.current-menu-item) > a:hover {
-    @include g.arrow-hover();
-  }
-
+.#{g.$pr}p-sitemap__nav a::before {
+  top: calc( ( var(--nav-line-height) * 1em ) / 2 - 0.275em );
+  left: 0;
 }
 
 .#{g.$pr}p-sitemap__nav .current-menu-item > a {

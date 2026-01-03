@@ -13,7 +13,7 @@
     min-height: var(--nav-height);
     padding-inline: var(--spacing-sm);
     background-color: var(--ui-inverse-color);
-    border: 0.0625rem solid var(--border-default-light-color);
+    border: 0.125rem solid var(--ui-accent-color);
     border-radius: 99em;
     color: var(---ui-default-color);
     font-size: var(--fontSize-md);
@@ -27,9 +27,10 @@
 
 .#{g.$pr}c-button:hover,
 .#{g.$pr}c-button:focus {
-    border-color: var(--border-default-color);
+    color: var(--ui-inverse-color);
+    background-color: var(--ui-accent-color);
+    border-color: var(--ui-accent-color);
     text-decoration: none;
-    box-shadow: var(--shadow--sm);
 }
 
 .#{g.$pr}c-button:focus {
