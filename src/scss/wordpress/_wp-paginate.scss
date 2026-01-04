@@ -30,6 +30,11 @@
     outline: none;
 }
 
+.wp-paginate .page-numbers.dots {
+    background: transparent;
+    border-color: transparent;
+}
+
 .wp-paginate .page-numbers.current {
     background: transparent;
     border-color: transparent;
