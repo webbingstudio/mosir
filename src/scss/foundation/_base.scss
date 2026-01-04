@@ -15,14 +15,16 @@ body {
   letter-spacing: var(--body-letterSpacing);
 }
 
-// Asian languages ​​do not have the concept of a "baseline,"
-// so if you leave the underline at the default position,
-// the text and the underline will overlap.
 a {
   color: var(--link-default-color);
   text-decoration: none;
   text-decoration-thickness: 0.0625em !important;
-  text-underline-offset: .1em;
+  text-underline-offset: -0.1em;
+
+  // Asian languages ​​do not have the concept of a "baseline,"
+  // so if you leave the underline at the default position,
+  // the text and the underline will overlap.
+  text-underline-position: from-font;
 }
 
 @include g.mq(hover) {
@@ -30,7 +32,7 @@ a {
   a:hover {
     color: var(--link-hover-color);
     text-decoration: underline;
-    text-underline-offset: .2em;
+    text-underline-offset: 0;
     transition: var(--transition-fast);
   }
 

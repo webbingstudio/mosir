@@ -20,6 +20,15 @@
 
 }
 
+.#{g.$pr}p-horizontalMenu a {
+  overflow: hidden;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  max-height: 3em;
+}
+
 .#{g.$pr}p-horizontalMenu:not(.#{g.$pr}p-horizontalMenu--arrowed) .#{g.$pr}c-nav__item + .#{g.$pr}c-nav__item,
 .#{g.$pr}p-horizontalMenu:not(.#{g.$pr}p-horizontalMenu--arrowed) .menu-item + .menu-item {
   position: relative;
@@ -42,7 +51,6 @@
 
   .#{g.$pr}p-horizontalMenu:not(.#{g.$pr}p-horizontalMenu--arrowed) :not(.current-menu-item) > a:hover {
     text-decoration-line: underline;
-    text-underline-offset: 0.25em;
   }
 
 }
@@ -53,6 +61,6 @@
 }
 
 .#{g.$pr}p-horizontalMenu.#{g.$pr}p-horizontalMenu--arrowed a::before {
-  top: calc( ( var(--nav-line-height) * 1em ) / 2 - 0.275em );
+  top: calc( ( var(--lineHeight-xs) * 1em ) / 2 - 0.275em );
   left: 0;
 }
