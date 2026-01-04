@@ -87,8 +87,23 @@ a.#{g.$pr}p-card__inner .#{g.$pr}p-card__title {
 
 }
 
-// .#{g.$pr}p-card__title {
-// }
+.#{g.$pr}p-card__title.#{g.$pr}c-title {
+    overflow: hidden;
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    max-height: calc( ( var(--lineHeight-md) * 3em ) );
+}
+
+.#{g.$pr}p-card__contents .#{g.$pr}c-summary {
+    overflow: hidden;
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    max-height: calc( ( var(--lineHeight-md) * 3em ) );
+}
 
 // If the content width is narrow, the font size will be reduced.
 .#{g.$pr}p-card__contents {

@@ -67,6 +67,15 @@ a.#{g.$pr}p-headline__inner {
     flex-grow: 1;
 }
 
+.#{g.$pr}p-headline__title.#{g.$pr}c-title {
+    overflow: hidden;
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    max-height: calc( ( var(--lineHeight-md) * 3em ) );
+}
+
 .#{g.$pr}p-headline__title a {
     display: block;
 }

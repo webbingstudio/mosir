@@ -63,7 +63,7 @@ a.#{g.$pr}p-media__inner {
   grid-column: 2 / 2;
   @include g.flex( column, n, center, flex-start );
   gap: var(--spacing-xs);
-  padding-inline: var(--spacing-sm);
+  padding-left: var(--spacing-sm);
 }
 
 // If meta is included, it is aligned top.
@@ -86,10 +86,9 @@ a.#{g.$pr}p-media__inner {
   overflow: hidden;
   display: -webkit-box;
   text-overflow: ellipsis;
-  line-clamp: 2;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-  max-height: 3em;
+  -webkit-line-clamp: 3;
+  max-height: calc( ( var(--lineHeight-md) * 3em ) );
 }
 
 @include g.mq(hover) {

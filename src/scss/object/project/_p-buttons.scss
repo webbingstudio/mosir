@@ -10,6 +10,7 @@
 .#{g.$pr}p-buttons {
     @include g.flex(column, n, center, center);
     gap: var(--spacing-sm);
+    line-height: var(--lineHeight-none);
 
     @include g.mq(default) {
         flex-direction: row;
