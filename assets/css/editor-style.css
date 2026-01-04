@@ -649,7 +649,7 @@ body:has(.mi-l-header--large) .mi-l-main > *:first-child {
   }
 }
 
-body.home .mi-l-main > *:first-child {
+body.home.page .mi-l-main > *:first-child {
   padding-top: 0;
 }
 
