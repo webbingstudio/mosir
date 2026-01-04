@@ -3,7 +3,7 @@
  * pager-single.php
  * ページネーション用テンプレート（固定ページ・フロントページ）
  *
- * @package ws-minimalism
+ * @package mosir
  */
 ?>
 <p>ページネーション =============</p>

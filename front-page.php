@@ -3,7 +3,7 @@
  * front-page.php
  * Website home template
  *
- * @package ws-minimalism
+ * @package mosir
  */
 
 get_header();

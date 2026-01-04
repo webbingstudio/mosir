@@ -3,7 +3,7 @@
  * single.php
  * 投稿詳細ページ用テンプレート
  *
- * @package ws-minimalism
+ * @package mosir
  */
 
 get_header();

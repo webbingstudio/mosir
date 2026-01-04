@@ -3,7 +3,7 @@
  * pageHeader.php
  * ページヘッダ
  *
- * @package ws-minimalism
+ * @package mosir
  */
 
 $mi_post_type = get_query_var( 'post_type' );

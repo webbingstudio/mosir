@@ -4,7 +4,7 @@
  * Repeated sections of a posts only title.
  * The entire loop is enclosed in a link.
  *
- * @package ws-minimalism
+ * @package mosir
  */
 ?>
 <article class="mi-p-posts__item mi-p-headline">

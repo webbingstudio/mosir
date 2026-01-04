@@ -1,4 +1,4 @@
-=== minimalism ===
+=== mosir ===
 Contributors: webbingstudio
 Requires at least: 6.7
 Tested up to: 6.8.2
@@ -12,7 +12,7 @@ Tags: custom-colors, featured-images, sticky-post, wide-blocks, blog
 A minimalist Scaffold Classic theme suitable for those who manage websites in an organized team. It is primarily built for Japanese business sites.
 
 == Installation ==
-1. Upload the theme files to the `/wp-content/themes/ws-minimalism` directory, or install the theme through the WordPress themes screen directly.
+1. Upload the theme files to the `/wp-content/themes/ws-mosir` directory, or install the theme through the WordPress themes screen directly.
 2. Activate the theme through the 'Themes' screen in WordPress.
 3. Customize it from the Appearance > Customize menu.
 
@@ -25,6 +25,6 @@ Yes, this theme is child-theme ready.
 * Initial release.
 
 == License ==
-This theme, *minimalism*, is licensed under the GNU General Public License v2 or later.
+This theme, *mosir*, is licensed under the GNU General Public License v2 or later.
 You should have received a copy of the GNU General Public License along with this theme.
 If not, see <https://www.gnu.org/licenses/>.

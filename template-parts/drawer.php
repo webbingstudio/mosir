@@ -3,7 +3,7 @@
  * drawer.php
  * ドロワーメニュー用テンプレート
  *
- * @package ws-minimalism
+ * @package mosir
  */
 
 $mi_options_drawer = get_theme_mod( 'mi_options_drawer', 'always' );

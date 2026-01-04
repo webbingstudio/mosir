@@ -6,7 +6,7 @@
  * Post meta information such as date, term, etc. is not displayed.
  * Show an excerpt of the content.
  *
- * @package ws-minimalism
+ * @package mosir
  */
 ?>
 <article class="mi-p-posts__item mi-p-card">

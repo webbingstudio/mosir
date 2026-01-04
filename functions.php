@@ -1,8 +1,8 @@
 <?php
 /**
- * minimalism functions and definitions
+ * mosir functions and definitions
  *
- * @package ws-minimalism
+ * @package mosir
  */
 
 
@@ -52,7 +52,7 @@ if ( ! function_exists( 'mi_enqueue_styles' ) ) :
 	/**
 	 * Enqueues theme.css on the front.
 	 *
-	 * @since minimalism 1.0
+	 * @since mosir 1.0
 	 *
 	 * @return void
 	 */
@@ -84,7 +84,7 @@ if ( ! function_exists( 'mi_enqueue_scripts' ) ) :
 	/**
 	 * Enqueues theme.css on the front.
 	 *
-	 * @since minimalism 1.0
+	 * @since mosir 1.0
 	 *
 	 * @return void
 	 */
@@ -105,7 +105,7 @@ if ( ! function_exists( 'mi_editor_style' ) ) :
 	/**
 	 * Enqueues editor-style.css in the editors.
 	 *
-	 * @since minimalism 1.0
+	 * @since mosir 1.0
 	 *
 	 * @return void
 	 */
@@ -121,7 +121,7 @@ if ( ! function_exists( 'mi_enqueue_block_editor_assets' ) ) :
 	/**
 	 * Enqueues editor-script.js in the editors.
 	 *
-	 * @since minimalism 1.0
+	 * @since mosir 1.0
 	 *
 	 * @return void
 	 */
@@ -146,7 +146,7 @@ if ( ! function_exists( 'mi_redistar_nav_menu' ) ) :
 	/**
 	 * Define the menus to use within the theme
 	 *
-	 * @since minimalism 1.0
+	 * @since mosir 1.0
 	 *
 	 * @return string
 	 */
@@ -175,7 +175,7 @@ if ( ! function_exists( 'mi_nav_menu_link_attributes' ) ) :
 	/**
 	 * If the currently displayed menu has the mega menu (.p-megaMenu) class assigned, focus on links from the second level onwards will be skipped.
 	 *
-	 * @since minimalism 1.0
+	 * @since mosir 1.0
 	 *
 	 * @return void
 	 */
@@ -197,7 +197,7 @@ if ( ! function_exists( 'mi_wp_block_class' ) ) :
 	/**
 	 * Echo WordPress BlockEditor class name
 	 *
-	 * @since minimalism 1.0
+	 * @since mosir 1.0
 	 *
 	 * @param string $before The string to prepend, such as a space.
 	 * @param string $after The string to append, such as a space.

@@ -5,7 +5,7 @@
  * The entire loop is enclosed in a link.
  * Post meta information such as date, term, etc. is not displayed.
  *
- * @package ws-minimalism
+ * @package mosir
  */
 ?>
 <article class="mi-p-posts__item mi-p-media">

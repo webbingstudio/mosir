@@ -2,7 +2,7 @@
 /**
  * footer.php
  *
- * @package ws-minimalism
+ * @package mosir
  */
 
 $mi_options_copyright = get_theme_mod( 'mi_options_copyright', (bool)false );

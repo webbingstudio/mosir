@@ -1,7 +1,7 @@
 /**
  * Drawer toggle button
  *
- * since minimalism 1.0
+ * since mosir 1.0
  */
 const miDrawerToggle = function() {
     // drawer duration - see: src/scss/global/_variables-css.scss

@@ -6,7 +6,7 @@
  * Only the first term label in a post is displayed.
  * Post meta will be aligned in a single line if the window width is wide.
  *
- * @package ws-minimalism
+ * @package mosir
  */
 ?>
 <article class="mi-p-posts__item mi-p-headline">

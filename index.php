@@ -3,7 +3,7 @@
  * index.php
  * 一覧ページ用テンプレート
  *
- * @package ws-minimalism
+ * @package mosir
  */
 
 get_header();

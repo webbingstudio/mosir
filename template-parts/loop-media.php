@@ -4,7 +4,7 @@
  * Repeated sections of a post, with featured image on the left and content on the right.
  * The entire loop is enclosed in a link.
  *
- * @package ws-minimalism
+ * @package mosir
  */
 ?>
 <article class="mi-p-posts__item mi-p-media">

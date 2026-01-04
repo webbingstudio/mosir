@@ -2,7 +2,7 @@
 /**
  * header.php
  *
- * @package ws-minimalism
+ * @package mosir
  */
 
 $mi_options_header = get_theme_mod( 'mi_options_header', 'large' );

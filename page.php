@@ -3,7 +3,7 @@
  * page.php
  * 固定ページ用テンプレート
  *
- * @package ws-minimalism
+ * @package mosir
  */
 
 get_header();

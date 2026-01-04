@@ -3,7 +3,7 @@
  * pager.php
  * ページネーション用テンプレート（通常）
  *
- * @package ws-minimalism
+ * @package mosir
  */
 ?>
 <?php
