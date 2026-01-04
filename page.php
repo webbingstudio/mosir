@@ -7,22 +7,16 @@
  */
 
 get_header();
+$mi_post_type = get_post_type();
 ?>
-
-page.php =============
-
-<p>投稿本文 =============</p>
 <?php if( have_posts() ) : ?>
-<?php while( have_posts() ) : the_post(); ?>
-
-<p>自由文ここから =============</p>
-<div class="p-post__contents <?php mi_wp_block_class(); ?>">
-	<?php the_content(); ?>
+<div class="mi-p-<?php echo esc_attr($mi_post_type); ?>-contents mi-p-post mi-p-post--<?php echo esc_attr($mi_post_type); ?>">
+	<div class="mi-p-post__contents <?php mi_wp_block_class(); ?>">
+	<?php while( have_posts() ) : the_post(); ?>
+		<?php the_content(); ?>
+	<?php endwhile; ?>
+	</div>
 </div>
-<p>自由文終了 =============</p>
-
-<?php endwhile; ?>
 <?php endif; ?>
-
 <?php
 get_footer();

@@ -19,12 +19,7 @@ $mi_time_format = get_option('time_format');
 $mi_prev_link = get_previous_post_link( '%link', '前: %title' );
 $mi_next_link = get_next_post_link( '%link', '次: %title' );
 ?>
-<?php
-// ==============================
-// Contents of front page
-// ==============================
-if( have_posts() ) :
-?>
+<?php if( have_posts() ) : ?>
 <article class="mi-p-<?php echo esc_attr($mi_post_type); ?>-contents mi-p-post mi-p-post--<?php echo esc_attr($mi_post_type); ?>">
 	<div class="mi-p-post__header">
 		<div class="mi-p-post__header__contents mi-l-container mi-l-container--sm">
