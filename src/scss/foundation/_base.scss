@@ -43,3 +43,8 @@ a:focus {
   outline-color: currentColor;
   text-decoration: none;
 }
+
+pre {
+  max-width: 100%;
+  overflow-x: auto;
+}

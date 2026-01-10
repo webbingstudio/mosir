@@ -1,5 +1,36 @@
-// Override width
-// See wp-align.scss
-.wp-site-blocks .wp-block-button {
-  width: auto;
+@use "../global" as g;
+@use "sass:math";
+
+:root :where(.wp-element-button, .wp-block-button__link) {
+    min-height: var(--nav-height);
+    padding: 0 var(--spacing-sm);
+    background-color: var(--ui-accent-color);
+    border: 0.125rem solid var(--ui-accent-color);
+    border-radius: 99em;
+    color: var(--ui-inverse-color);
+    font-size: var(--fontSize-md);
+    letter-spacing: 0.1em;
+    font-weight: var(--fontWeight-bold);
+    line-height: var(--lineHeight-none);
+    transition: var(--transition-fast);
+}
+
+:root :where(.wp-element-button, .wp-block-button__link):hover,
+:root :where(.wp-element-button, .wp-block-button__link):focus {
+    color: var(--ui-default-color);
+    background-color: var(--ui-inverse-color);
+    text-decoration: none;
+}
+
+
+:root :where(.wp-element-button.is-style-outline, .is-style-outline > .wp-block-button__link) {
+    background-color: var(--ui-inverse-color);
+    color: var(--ui-default-color);
+}
+
+:root :where(.wp-element-button.is-style-outline, .is-style-outline > .wp-block-button__link):hover,
+:root :where(.wp-element-button.is-style-outline, .is-style-outline > .wp-block-button__link):focus {
+    color: var(--ui-inverse-color);
+    background-color: var(--ui-accent-color);
+    text-decoration: none;
 }

@@ -6,9 +6,10 @@
 //  - Display single post.
 // ------------------------------
 
-.#{g.$pr}p-post__title,
-.#{g.$pr}p-post__contents {
-    word-wrap: break-word;
+.#{g.$pr}p-post__title {
+  overflow-wrap: anywhere;
+  word-break: normal;
+  line-break: strict;
 }
 
 .#{g.$pr}p-post__footer__link .#{g.$pr}c-nav__item {

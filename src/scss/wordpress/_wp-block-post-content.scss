@@ -1,0 +1,118 @@
+@use "../global" as g;
+@use "sass:math";
+
+.wp-block-post-content {
+    overflow-wrap: anywhere;
+    word-break: normal;
+    line-break: strict;
+
+    h1 {
+        font-size: var(--fontSize-3xl);
+    }
+
+    h2 {
+        font-size: var(--fontSize-2xl);
+    }
+
+    h3 {
+        font-size: var(--fontSize-xl);
+    }
+
+    h4 {
+        font-size: var(--fontSize-lg);
+    }
+
+    h5 {
+        font-size: var(--fontSize-md);
+    }
+
+    h6 {
+        font-size: var(--fontSize-md);
+        font-weight: var(--fontWeight-normal);
+    }
+
+    ul {
+    list-style-type: disc;
+    padding-left: 1.25em;
+    }
+
+    li > ul {
+    list-style-type: circle;
+    }
+
+    li li > ul {
+    list-style-type: square;
+    }
+
+    ol {
+    list-style-type: decimal;
+    padding-left: 1.25em;
+    }
+
+    li > ol {
+    list-style-type: lower-alpha;
+    }
+
+    li li > ol {
+    list-style-type: lower-roman;
+    }
+
+    li + *,
+    li ul,
+    li ol {
+    margin-block-start: var(--spacing-xs);
+    }
+
+
+
+    // If the heading block is not grouped together, such as in a blog post,
+    // decoration and top margin are added.
+
+    > p,
+    > ul,
+    > ol {
+
+        + h2 {
+            margin-block-start: var(--spacing-lg);
+        }
+
+        + h3 {
+            margin-block-start: var(--spacing-md);
+        }
+
+    }
+
+    > blockquote,
+    > table,
+    > dl,
+    > pre {
+        margin-block-end: var(--spacing-md);
+    }
+
+    > blockquote {
+        font-size: var(--fontSize-sm);
+        padding-left: 2em;
+        border-left: 0.25rem solid var(--color-default-lighter);
+    }
+
+    > pre {
+        font-size: var(--fontSize-sm);
+        padding: var(--spacing-xs);
+        border: 0.0625rem solid var(--color-default-lighter);
+        line-height: var(--lineHeight-none);
+    }
+
+    > table {
+        max-width: 100%;
+    }
+
+    > table th {
+        white-space: nowrap;
+    }
+
+    > table th,
+    > table td {
+        border-color: var(--color-default-lighter);
+    }
+
+}

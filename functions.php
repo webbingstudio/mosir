@@ -204,7 +204,7 @@ if ( ! function_exists( 'mi_wp_block_class' ) ) :
 	 * @return string
 	 */
 	function mi_wp_block_class( $before = '', $after = '' ) {
-		echo esc_attr( $before ) . 'wp-site-blocks is-layout-constrained has-global-padding' . esc_attr( $after );
+		echo esc_attr( $before ) . 'wp-block-post-content is-layout-constrained has-global-padding' . esc_attr( $after );
 	}
 endif;
 
