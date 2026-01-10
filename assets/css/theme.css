@@ -485,10 +485,21 @@ body:has(.mi-p-stickyMenu) .mi-l-footer__copyright {
 }
 
 .mi-l-header.mi-l-header--small {
-  padding-top: var(--spacing-xl);
-  padding-bottom: var(--spacing-lg);
+  padding-block: var(--spacing-lg);
 }
 
+.mi-l-header.mi-l-header--small .mi-p-siteTitle__logo > img,
+.mi-l-header.mi-l-header--small .mi-p-siteTitle__logo > svg {
+  max-height: 5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .mi-l-header.mi-l-header--small .mi-p-siteTitle__logo > img,
+  .mi-l-header.mi-l-header--small .mi-p-siteTitle__logo > svg {
+    max-width: 30rem;
+    max-height: 8rem;
+  }
+}
 .mi-l-header:not(.mi-l-header--small) {
   position: fixed;
   top: 0;
@@ -565,12 +576,12 @@ body:has(.mi-p-stickyMenu) .mi-l-footer__copyright {
   }
 }
 
-.mi-l-header__contents__siteTitle {
+.mi-l-header__siteTitle {
   grid-column: 1/2;
   grid-row: 1/-1;
 }
 
-.mi-l-header.mi-l-header--small .mi-l-header__contents__siteTitle {
+.mi-l-header.mi-l-header--small .mi-l-header__siteTitle {
   align-items: center;
 }
 
@@ -614,30 +625,30 @@ body:has(.mi-p-stickyMenu) .mi-l-footer__copyright {
 }
 
 @media screen and (max-width: 1279.9px) {
-  .mi-l-header__contents__menu01 {
+  .mi-l-header__menu01 {
     display: none;
   }
 }
 
 @media screen and (max-width: 1279.9px) {
-  .mi-l-header__contents__menu02 {
+  .mi-l-header__menu02 {
     display: none;
   }
 }
 
 @media screen and (max-width: 767.9px) {
-  .mi-l-header__contents__menu04 {
+  .mi-l-header__menu04 {
     display: none;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .admin-bar .mi-l-header {
+  .admin-bar .mi-l-header:not(.mi-l-header--small) {
     margin-top: 46px;
   }
 }
 @media screen and (min-width: 1024px) {
-  .admin-bar .mi-l-header {
+  .admin-bar .mi-l-header:not(.mi-l-header--small) {
     margin-top: 32px;
   }
 }
@@ -2252,13 +2263,13 @@ a.mi-p-media__inner {
   display: block;
   width: 100%;
   max-width: 50vw;
-  max-height: 2.25rem;
+  max-height: 2.5rem;
 }
 
 @media screen and (min-width: 768px) {
   .mi-p-siteTitle__logo > img,
   .mi-p-siteTitle__logo > svg {
-    max-width: 20rem;
+    max-width: 15rem;
   }
 }
 .mi-p-stickyMenu {

@@ -27,9 +27,9 @@ $mi_options_drawer = get_theme_mod( 'mi_options_drawer', 'always' );
 			$mi_custom_logo_width = isset($mi_custom_logo_src[1]) ? $mi_custom_logo_src[1] : (bool)false;
 		?>
 		<?php if( is_front_page() ): ?>
-			<h1 class="mi-l-header__contents__siteTitle mi-p-siteTitle">
+			<h1 class="mi-l-header__siteTitle mi-p-siteTitle">
 		<?php else: ?>
-			<p class="mi-l-header__contents__siteTitle mi-p-siteTitle">
+			<p class="mi-l-header__siteTitle mi-p-siteTitle">
 				<a href="<?php bloginfo('url'); ?>">
 		<?php endif; ?>
 
@@ -58,7 +58,7 @@ $mi_options_drawer = get_theme_mod( 'mi_options_drawer', 'always' );
 						'theme_location' => 'header_nav_01',
 						'container'       => 'nav',
 						'container_aria_label'       => 'Global navigation',
-						'container_class' => 'mi-l-header__contents__menu01 mi-p-megaMenu',
+						'container_class' => 'mi-l-header__menu01 mi-p-megaMenu',
 						'menu_id' => 'header-nav-01',
 						'menu_class' => 'menu mi-p-megaMenu__nav mi-c-nav',
 						'link_before'      => '<span class="menu-label mi-c-nav__item__label">',
@@ -74,7 +74,7 @@ $mi_options_drawer = get_theme_mod( 'mi_options_drawer', 'always' );
 					array(
 						'theme_location' => 'header_nav_02',
 						'container'       => 'div',
-						'container_class' => 'mi-l-header__contents__menu02 mi-p-horizontalMenu mi-p-horizontalMenu--arrowed',
+						'container_class' => 'mi-l-header__menu02 mi-p-horizontalMenu mi-p-horizontalMenu--arrowed',
 						'menu_id' => 'header-nav-02',
 						'menu_class' => 'menu mi-p-horizontalMenu__nav mi-c-nav',
 						'link_before'      => '<span class="menu-label mi-c-nav__item__label">',
@@ -89,7 +89,7 @@ $mi_options_drawer = get_theme_mod( 'mi_options_drawer', 'always' );
 					array(
 						'theme_location' => 'header_nav_03',
 						'container'       => 'div',
-						'container_class' => 'mi-l-header__contents__menu03 mi-p-horizontalMenu',
+						'container_class' => 'mi-l-header__menu03 mi-p-horizontalMenu',
 						'menu_id' => 'header-nav-03',
 						'menu_class' => 'menu mi-p-horizontalMenu__nav mi-c-nav',
 						'link_before'      => '<span class="menu-label mi-c-nav__item__label">',
@@ -112,7 +112,7 @@ $mi_options_drawer = get_theme_mod( 'mi_options_drawer', 'always' );
 						'theme_location' => 'header_nav_01',
 						'container'       => 'nav',
 						'container_aria_label'       => 'Global navigation',
-						'container_class' => 'mi-l-header__contents__menu01 mi-p-megaMenu',
+						'container_class' => 'mi-l-header__menu01 mi-p-megaMenu',
 						'menu_id' => 'header-nav-01',
 						'menu_class' => 'menu mi-p-megaMenu__nav mi-c-nav',
 						'link_before'      => '<span class="menu-label mi-c-nav__item__label">',
@@ -127,7 +127,7 @@ $mi_options_drawer = get_theme_mod( 'mi_options_drawer', 'always' );
 					array(
 						'theme_location' => 'header_nav_04',
 						'container'       => 'div',
-						'container_class' => 'mi-l-header__contents__menu04 mi-p-buttonMenu',
+						'container_class' => 'mi-l-header__menu04 mi-p-buttonMenu',
 						'menu_id' => 'header-nav-04',
 						'menu_class' => 'menu mi-p-buttonMenu__nav mi-c-nav',
 						'link_before'      => '<span class="menu-label mi-c-nav__item__label">',
