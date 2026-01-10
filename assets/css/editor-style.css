@@ -41,6 +41,7 @@
   --fontSize-2xl: var(--wp--preset--font-size--2-x-large);
   --fontSize-3xl: var(--wp--preset--font-size--3-x-large);
   --fontSize-4xl: var(--wp--preset--font-size--4-x-large);
+  --fontSize-5xl: var(--wp--preset--font-size--5-x-large);
   --spacing-xs: var(--wp--preset--spacing--x-small);
   --spacing-sm: var(--wp--preset--spacing--small);
   --spacing-md: var(--wp--preset--spacing--medium);
@@ -3095,21 +3096,13 @@ a.mi-p-media__inner {
 .wp-block-post-content li ol {
   margin-block-start: var(--spacing-xs);
 }
-.wp-block-post-content > p + h2,
-.wp-block-post-content > ul + h2,
-.wp-block-post-content > ol + h2 {
-  margin-block-start: var(--spacing-lg);
-}
-.wp-block-post-content > p + h3,
-.wp-block-post-content > ul + h3,
-.wp-block-post-content > ol + h3 {
+.wp-block-post-content > blockquote + *,
+.wp-block-post-content > table + *,
+.wp-block-post-content > ul + *,
+.wp-block-post-content > ol + *,
+.wp-block-post-content > dl + *,
+.wp-block-post-content > pre + * {
   margin-block-start: var(--spacing-md);
-}
-.wp-block-post-content > blockquote,
-.wp-block-post-content > table,
-.wp-block-post-content > dl,
-.wp-block-post-content > pre {
-  margin-block-end: var(--spacing-md);
 }
 .wp-block-post-content > blockquote {
   font-size: var(--fontSize-sm);
