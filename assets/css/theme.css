@@ -1054,6 +1054,7 @@ ul.mi-c-nav,
 
 .mi-p-buttonMenu a:hover,
 .mi-p-buttonMenu a:focus {
+  color: var(--ui-default-color);
   background-color: var(--ui-inverse-color);
   text-decoration: none;
 }
@@ -2012,6 +2013,10 @@ a.mi-p-media__inner {
   padding-block: var(--spacing-lg);
 }
 
+.mi-p-posts__contents > * + * {
+  margin-top: var(--spacing-md);
+}
+
 .mi-p-posts__footer__contents {
   padding-block: var(--spacing-lg);
 }
@@ -2244,6 +2249,7 @@ a.mi-p-media__inner {
 
 .mi-p-stickyMenu a:hover,
 .mi-p-stickyMenu a:focus {
+  color: var(--ui-default-color);
   background-color: var(--ui-inverse-color);
   text-decoration: none;
 }
@@ -3174,4 +3180,72 @@ a.mi-p-media__inner {
 .wp-paginate a.next:hover,
 .wp-paginate a.next:focus {
   color: var(--ui-inverse-color);
+}
+
+.search-form {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr auto;
+  -moz-column-gap: var(--spacing-xs);
+       column-gap: var(--spacing-xs);
+}
+
+.search-submit {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  padding-inline: var(--spacing-xs);
+  background-color: var(--ui-inverse-color);
+  border: 0.125rem solid var(--ui-accent-color);
+  border-radius: var(--border-radius-sm);
+  color: var(---ui-default-color);
+  font-size: var(--fontSize-md);
+  letter-spacing: 0.1em;
+  font-weight: var(--fontWeight-bold);
+  line-height: var(--lineHeight-none);
+  transition: var(--transition-fast);
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+}
+
+.search-submit:hover,
+.search-submit:focus {
+  color: var(--ui-inverse-color);
+  background-color: var(--ui-accent-color);
+  border-color: var(--ui-accent-color);
+  text-decoration: none;
+}
+
+.search-field {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  padding: 0 var(--spacing-xs);
+  min-height: var(--nav-height);
+  background-color: var(--body-bg);
+  border: 0.0625rem solid var(--border-default-color);
+  border-radius: var(--border-radius-sm);
+  color: var(--body-color);
+  font-size: var(--fontSize-md);
+  line-height: var(--lineHeight-none);
+}
+
+.search-field::-moz-placeholder {
+  color: var(--color-default-light);
+}
+
+.search-field::placeholder {
+  color: var(--color-default-light);
+}
+
+.search-field:focus {
+  border-color: var(--color-border-primary);
+  color: var(--color-text-default);
 }/*# sourceMappingURL=theme.css.map */

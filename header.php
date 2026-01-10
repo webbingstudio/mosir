@@ -24,7 +24,7 @@ $mi_options_drawer = get_theme_mod( 'mi_options_drawer', 'always' );
 		<?php
 			$mi_custom_logo_id = get_theme_mod( 'custom_logo' );
 			$mi_custom_logo_src = wp_get_attachment_image_src( $mi_custom_logo_id, 'full' );
-			$mi_custom_logo_width = $mi_custom_logo_src[1];
+			$mi_custom_logo_width = isset($mi_custom_logo_src[1]) ? $mi_custom_logo_src[1] : (bool)false;
 		?>
 		<?php if( is_front_page() ): ?>
 			<h1 class="mi-l-header__contents__siteTitle mi-p-siteTitle">
@@ -33,10 +33,10 @@ $mi_options_drawer = get_theme_mod( 'mi_options_drawer', 'always' );
 				<a href="<?php bloginfo('url'); ?>">
 		<?php endif; ?>
 
-		<?php if( $mi_custom_logo_src && $mi_custom_logo_width === 1 ): ?>
-			<span class="mi-p-siteTitle__logo"><?php echo '<img src="' . esc_url( $mi_custom_logo_src[0] ) . '" alt="'. get_bloginfo('name') .'">'; ?></span>
-		<?php elseif( $mi_custom_logo_src ): ?>
+		<?php if( $mi_custom_logo_src && $mi_custom_logo_width ): ?>
 			<span class="mi-p-siteTitle__logo"><?php echo '<img src="' . esc_url( $mi_custom_logo_src[0] ) . '" alt="'. get_bloginfo('name') .'" width="' . $mi_custom_logo_src[1] . '" height="' . $mi_custom_logo_src[2] . '">'; ?></span>
+		<?php elseif( $mi_custom_logo_src ): ?>
+			<span class="mi-p-siteTitle__logo"><?php echo '<img src="' . esc_url( $mi_custom_logo_src[0] ) . '" alt="'. get_bloginfo('name') .'">'; ?></span>
 		<?php else: ?>
 			<span class="mi-p-siteTitle__label"><?php bloginfo('name'); ?></span>
 		<?php endif; ?>
