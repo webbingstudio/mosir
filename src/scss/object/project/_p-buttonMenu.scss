@@ -29,6 +29,7 @@
 
 .#{g.$pr}p-buttonMenu a:hover,
 .#{g.$pr}p-buttonMenu a:focus {
+  color: var(--ui-default-color);
   background-color: var(--ui-inverse-color);
   text-decoration: none;
 }
