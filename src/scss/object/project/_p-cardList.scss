@@ -1,0 +1,35 @@
+@use "../../global" as g;
+@use "sass:math";
+
+// ------------------------------
+// project > cardList
+//  - Repeatedly display .p-card.
+// ------------------------------
+
+.#{g.$pr}p-cardList {
+  @include g.flex(column, n, flex-start, stretch);
+  gap: var(--spacing-md);
+
+  @include g.mq(default) {
+    @include g.flex( n, wrap, n, n );
+  }
+
+}
+
+.#{g.$pr}p-cardList > * {
+
+  @include g.mq(default-max) {
+    max-width: ( math.div( 480, 16 ) * 1rem );
+    margin-inline: auto;
+  }
+
+  @include g.mq(default) {
+    flex-grow: 0;
+    width: calc( 33.3333% - ( var(--spacing-md) * 2 / 3 ) );
+  }
+
+}
+
+.#{g.$pr}p-cardList .#{g.$pr}p-card__inner {
+  height: 100%;
+}

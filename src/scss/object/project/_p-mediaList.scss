@@ -1,0 +1,12 @@
+@use "../../global" as g;
+@use "sass:math";
+
+// ------------------------------
+// project > mediaList
+//  - Repeatedly display .p-media.
+// ------------------------------
+
+.#{g.$pr}p-mediaList {
+  @include g.flex(column, n, flex-start, stretch);
+  gap: var(--spacing-sm);
+}

@@ -32,7 +32,7 @@ get_header();
             <?php get_search_form(); ?>
         <?php endif; ?>
 
-        <div class="mi-p-posts mi-p-posts--media">
+        <div class="mi-p-mediaList">
         <?php while( have_posts() ) : the_post(); ?>
             <?php get_template_part( 'template-parts/loop', 'media' ); ?>
         <?php endwhile; ?>
