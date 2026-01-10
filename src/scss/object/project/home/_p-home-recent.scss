@@ -5,24 +5,18 @@
 // project > home-recent
 // ------------------------------
 
-.#{g.$pr}p-home-recent {
-    padding-block: var(--spacing-xl);
-}
-
-.#{g.$pr}p-home-recent__contents {
-    margin-top: var(--spacing-lg);
-}
-
-
 // If the content width is narrow, the gap will be reduced.
 .#{g.$pr}p-home-recent {
   container-type: inline-size;
 }
 
-@container ( width <= 28rem ) {
+.#{g.$pr}p-home-recent__header {
+  margin-bottom: var(--spacing-lg);
+}
 
-  .#{g.$pr}p-home-recent__contents {
-    margin-top: var(--spacing-md);
+@container ( width <= 64rem ) {
+  .#{g.$pr}p-home-recent__header {
+    margin-bottom: var(--spacing-md);
   }
 
 }
@@ -32,18 +26,20 @@
   container-type: inline-size;
 }
 
-@container ( width <= 28rem ) {
+@include g.mq(default) {
+  @container ( width <= 32rem ) {
 
-  .#{g.$pr}p-home-recent__header.#{g.$pr}p-sectionHeader .#{g.$pr}p-sectionHeader__subTitle.#{g.$pr}c-title {
-    font-size: var(--fontSize-sm);
+    .#{g.$pr}p-home-recent__header.#{g.$pr}p-sectionHeader .#{g.$pr}p-sectionHeader__subTitle.#{g.$pr}c-title {
+      font-size: var(--fontSize-sm);
+    }
+
+    .#{g.$pr}p-home-recent__header.#{g.$pr}p-sectionHeader .#{g.$pr}p-sectionHeader__lead {
+      font-size: var(--fontSize-sm);
+    }
+
+    .#{g.$pr}p-home-recent__header.#{g.$pr}p-sectionHeader .#{g.$pr}p-sectionHeader__title.#{g.$pr}c-title {
+      font-size: var(--fontSize-xl);
+    }
+
   }
-
-  .#{g.$pr}p-home-recent__header.#{g.$pr}p-sectionHeader .#{g.$pr}p-sectionHeader__lead {
-    font-size: var(--fontSize-sm);
-  }
-
-  .#{g.$pr}p-home-recent__header.#{g.$pr}p-sectionHeader .#{g.$pr}p-sectionHeader__title.#{g.$pr}c-title {
-    font-size: var(--fontSize-xl);
-  }
-
 }
