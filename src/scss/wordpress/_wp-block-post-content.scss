@@ -63,30 +63,15 @@
     margin-block-start: var(--spacing-xs);
     }
 
-
-
-    // If the heading block is not grouped together, such as in a blog post,
-    // decoration and top margin are added.
-
-    > p,
-    > ul,
-    > ol {
-
-        + h2 {
-            margin-block-start: var(--spacing-lg);
-        }
-
-        + h3 {
-            margin-block-start: var(--spacing-md);
-        }
-
-    }
-
     > blockquote,
     > table,
+    > ul,
+    > ol,
     > dl,
     > pre {
-        margin-block-end: var(--spacing-md);
+        & + * {
+            margin-block-start: var(--spacing-md);
+        }
     }
 
     > blockquote {
