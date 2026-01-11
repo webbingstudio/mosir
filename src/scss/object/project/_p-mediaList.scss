@@ -10,3 +10,7 @@
   @include g.flex(column, n, flex-start, stretch);
   gap: var(--spacing-sm);
 }
+
+.p-sectionHeader + .p-mediaList {
+  margin-top: var(--spacing-md);
+}

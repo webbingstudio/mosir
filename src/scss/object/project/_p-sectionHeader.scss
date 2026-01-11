@@ -13,16 +13,5 @@
 // }
 
 .p-sectionHeader__subTitle.c-title {
-  color: var(--color-primary);
   margin-top: var(--spacing-xs);
-}
-
-.p-sectionHeader__lead {
-  margin-top: var(--spacing-sm);
-  line-height: var(--lineHeight-sm);
-}
-
-// If the heading is centered, the lead should also be centered.
-.p-sectionHeader:has(.c-title--center) .p-sectionHeader__lead {
-  text-align: center;
 }

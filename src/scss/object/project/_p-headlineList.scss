@@ -11,6 +11,10 @@
   border-top: 0.0625rem solid var(--border-default-light-color);
 }
 
+.p-sectionHeader + .p-headlineList {
+  margin-top: var(--spacing-md);
+}
+
 .p-headlineList > * {
   border-bottom: 0.0625rem solid var(--border-default-light-color);
 }

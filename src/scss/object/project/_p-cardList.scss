@@ -16,6 +16,10 @@
 
 }
 
+.p-sectionHeader + .p-cardList {
+  margin-top: var(--spacing-md);
+}
+
 .p-cardList > * {
 
   @include g.mq(default-max) {
