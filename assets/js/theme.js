@@ -3,9 +3,10 @@
  *
  * since mosir 1.0
  */
-const miDrawerToggle = function() {
-    // drawer duration - see: src/scss/global/_variables-css.scss
-    const duration = 600;
+
+const moDrawerToggle = function() {
+    // drawer duration - see: src/scss/global/_variables-css.scss > --transition-cubic
+    const duration = 500;
     // drawer button ID - see: header.php
     const toggle = document.getElementById('mo-drawer-toggle');
 
@@ -14,7 +15,7 @@ const miDrawerToggle = function() {
         const nav = document.getElementById(controls);
 
         if(nav != undefined) {
-            let mi_queue = null;
+            let mo_queue = null;
             toggle.setAttribute('aria-expanded', 'false');
             nav.setAttribute('aria-hidden', 'true');
             // inert: Disable all operations within the element
@@ -28,7 +29,7 @@ const miDrawerToggle = function() {
                     nav.classList.remove('-is-closing');
 
                     // To allow for detailed CSS animations, the `.-is-opening` class is only added while the menu is opening.
-                    const mi_queue = setTimeout(() => {
+                    const mo_queue = setTimeout(() => {
                         nav.classList.remove('-is-opening');
                         nav.setAttribute('aria-hidden', 'false');
                         nav.removeAttribute('inert');
@@ -39,7 +40,7 @@ const miDrawerToggle = function() {
                     nav.classList.remove('-is-opening');
 
                     // To allow for detailed CSS animations, the `.-is-closing` class is only added while the menu is closing.
-                    const mi_queue = setTimeout(() => {
+                    const mo_queue = setTimeout(() => {
                         nav.classList.remove('-is-closing');
                         nav.setAttribute('aria-hidden', 'true');
                         nav.setAttribute('inert', 'inert');
@@ -49,7 +50,7 @@ const miDrawerToggle = function() {
 
             // If the window is resized, close the drawer.
             window.addEventListener('resize', () => {
-                mi_queue = setTimeout(() => {
+                mo_queue = setTimeout(() => {
                     clearTimeout(mi_queue);
                     toggle.setAttribute('aria-expanded', 'false');
                     nav.setAttribute('aria-hidden', 'true');
@@ -61,9 +62,9 @@ const miDrawerToggle = function() {
     }
 };
 
-const miDrawerClose = function() {
-    // drawer duration - see: src/scss/global/_variables-css.scss
-    const duration = 600;
+const moDrawerClose = function() {
+    // drawer duration - see: src/scss/global/_variables-css.scss > --transition-cubic
+    const duration = 500;
     // close button ID - see: header.php
     const button = document.getElementById('mo-drawer-close');
     const toggle = document.getElementById('mo-drawer-toggle');
@@ -73,7 +74,7 @@ const miDrawerClose = function() {
         const nav = document.getElementById(controls);
 
         if(nav != undefined) {
-            let mi_queue = null;
+            let mo_queue = null;
             nav.setAttribute('aria-hidden', 'true');
             // inert: Disable all operations within the element
             // https://developer.mozilla.org/ja/docs/Web/API/HTMLElement/inert
@@ -85,7 +86,7 @@ const miDrawerClose = function() {
                 nav.classList.remove('-is-opening');
 
                 // To allow for detailed CSS animations, the `.-is-closing` class is only added while the menu is closing.
-                const mi_queue = setTimeout(() => {
+                const mo_queue = setTimeout(() => {
                     nav.classList.remove('-is-closing');
                     nav.setAttribute('aria-hidden', 'true');
                     nav.setAttribute('inert', 'inert');
@@ -95,5 +96,5 @@ const miDrawerClose = function() {
     }
 };
 
-window.addEventListener('DOMContentLoaded', miDrawerToggle );
-window.addEventListener('DOMContentLoaded', miDrawerClose );
+window.addEventListener('DOMContentLoaded', moDrawerToggle );
+window.addEventListener('DOMContentLoaded', moDrawerClose );
