@@ -19,6 +19,7 @@ $mo_time_format = get_option('time_format');
 $mo_prev_link = get_previous_post_link( '%link', '前: %title' );
 $mo_next_link = get_next_post_link( '%link', '次: %title' );
 ?>
+<?php get_template_part( 'template-parts/pageHeader' ); ?>
 <?php if( have_posts() ) : ?>
 <article class="p-<?php echo esc_attr($mo_post_type); ?>-contents p-post p-post--<?php echo esc_attr($mo_post_type); ?>">
 	<div class="p-post__header">

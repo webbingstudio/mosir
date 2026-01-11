@@ -144,8 +144,3 @@ $mo_options_drawer = get_theme_mod( 'mo_options_drawer', 'always' );
 <?php get_template_part( 'template-parts/drawer' ); ?>
 
 <main class="l-main">
-	<?php
-		if( !is_front_page() ){
-			get_template_part( 'template-parts/pageHeader' );
-		}
-	?>

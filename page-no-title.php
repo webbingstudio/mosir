@@ -3,13 +3,14 @@
  * page.php
  * 固定ページ用テンプレート
  *
+ * Template Name: Page no title
+ *
  * @package mosir
  */
 
 get_header();
 $mo_post_type = get_post_type();
 ?>
-<?php get_template_part( 'template-parts/pageHeader' ); ?>
 <?php if( have_posts() ) : ?>
 <div class="p-<?php echo esc_attr($mo_post_type); ?>-contents p-post p-post--<?php echo esc_attr($mo_post_type); ?>">
 	<div class="p-post__contents <?php mo_wp_block_class(); ?>">

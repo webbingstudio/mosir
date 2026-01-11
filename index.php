@@ -8,6 +8,7 @@
 
 get_header();
 ?>
+<?php get_template_part( 'template-parts/pageHeader' ); ?>
 <?php if( have_posts() ): ?>
 <div class="p-posts">
     <?php

@@ -9,6 +9,7 @@
 
 get_header();
 ?>
+<?php get_template_part( 'template-parts/pageHeader' ); ?>
 <section class="p-error p-error--404">
     <div class="p--error__header">
         <div class="p--error__header__contents l-container l-container--sm">
