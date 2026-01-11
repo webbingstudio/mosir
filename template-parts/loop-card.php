@@ -9,7 +9,7 @@
 ?>
 <article class="p-posts__item p-card">
 	<a class="p-card__inner" href="<?php the_permalink(); ?>">
-		<figure class="p-card__image c-picture c-picture--3to2">
+		<figure class="p-card__image c-picture c-picture--16to9">
 			<?php if ( has_post_thumbnail() ) : ?>
 				<?php the_post_thumbnail( 'thumbnail' ); ?>
 			<?php else : ?>
@@ -26,9 +26,9 @@
 					$mo_post_terms = get_the_terms( $post->ID, $mo_term );
 				?>
 					<?php if ( $mo_post_terms ) : ?>
-					<ul class="p-labels">
+					<ul class="p-card__terms p-labels">
 						<?php
-							$mo_post_terms = array_slice( $mo_post_terms, 0, 3 );
+							$mo_post_terms = array_slice( $mo_post_terms, 0, 1 );
 							foreach ( $mo_post_terms as $taxonomy ) :
 						?>
 							<li><span class="c-label c-label--primary c-label--term-<?php esc_html_e( $taxonomy->slug ); ?>"><?php esc_html_e( $taxonomy->name ); ?></span></li>

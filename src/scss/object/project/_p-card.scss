@@ -59,9 +59,11 @@ a.p-card__inner .p-card__title {
 }
 
 .p-card__contents {
+  position: relative;
   @include g.flex( column, n, flex-start, stretch );
   gap: var(--spacing-xs);
-  padding: var(--spacing-sm) var(--spacing-xs);
+  padding: var(--spacing-sm) var(--spacing-xs) var(--spacing-xs);
+  container-type: inline-size;
 }
 
 .p-card__contents > * {
@@ -76,6 +78,14 @@ a.p-card__inner .p-card__title {
 
 .p-card__meta > * {
   flex-grow: 0;
+}
+
+.p-card__terms {
+  @include g.position( absolute, n, n, 100%, 0, 12 );
+}
+
+.p-card__terms .c-label {
+  font-size: var(--fontSize-xs);
 }
 
 @include g.mq(hover) {
@@ -106,10 +116,6 @@ a.p-card__inner .p-card__title {
 }
 
 // If the content width is narrow, the font size will be reduced.
-.p-card__contents {
-  container-type: inline-size;
-}
-
 @container ( width <= 18rem ) {
 
   .p-card__contents .c-date,

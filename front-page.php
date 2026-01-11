@@ -24,10 +24,11 @@ if( have_posts() ) :
 <?php endif; ?>
 
 <?php get_template_part( 'template-parts/recent', 'headline' ); ?>
+<?php get_template_part( 'template-parts/recent', 'headline-2col' ); ?>
 <?php get_template_part( 'template-parts/recent', 'headline-no-meta' ); ?>
-<?php get_template_part( 'template-parts/recent', 'media-1col' ); ?>
+<?php get_template_part( 'template-parts/recent', 'media' ); ?>
 <?php get_template_part( 'template-parts/recent', 'media-2col' ); ?>
-<?php get_template_part( 'template-parts/recent', 'card-1col' ); ?>
+<?php get_template_part( 'template-parts/recent', 'card' ); ?>
 <?php get_template_part( 'template-parts/recent', 'card-2col' ); ?>
 
 <?php

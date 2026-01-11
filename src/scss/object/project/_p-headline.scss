@@ -4,22 +4,17 @@
 // ------------------------------
 // project > headline
 //  - Display content given a date and title.
-//  - header and contents will be aligned in a single line if the window width is wide.
+//  - If the width is wider, the header and content will be aligned in a single line.
 // ------------------------------
 
-// .p-headline {
-// }
+.p-headline {
+    container-type: inline-size;
+}
 
 .p-headline__inner {
     @include g.flex( column, n, flex-start, baseline );
-    gap: var(--spacing-xs) var(--spacing-sm);
+    row-gap: var(--spacing-xs);
     padding-block: var(--spacing-sm);
-
-    @include g.mq(default) {
-        flex-direction: row;
-        padding-block: var(--spacing-xs);
-    }
-
 }
 
 a.p-headline__inner {
@@ -47,8 +42,8 @@ a.p-headline__inner {
 .p-headline__header {
     flex-grow: 0;
     @include g.flex( n, n, n, center );
-    gap: var(--spacing-xs);
     font-size: var(--fontSize-sm);
+    padding-right: var(--spacing-sm);
 }
 
 .p-headline__header > * {
@@ -57,10 +52,6 @@ a.p-headline__inner {
 
 .p-headline__date {
     min-width: 9em;
-}
-
-.p-headline__category .c-label {
-    min-width: 10em;
 }
 
 .p-headline__contents {
@@ -78,4 +69,17 @@ a.p-headline__inner {
 
 .p-headline__title a {
     display: block;
+}
+
+@container ( width > 40rem ) {
+
+    .p-headline__inner {
+        flex-direction: row;
+        padding-block: var(--spacing-xs);
+    }
+
+    .p-headline__category .c-label {
+        min-width: 10em;
+    }
+
 }

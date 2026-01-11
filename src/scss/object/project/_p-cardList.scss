@@ -9,6 +9,7 @@
 .p-cardList {
   @include g.flex(column, n, flex-start, stretch);
   gap: var(--spacing-md);
+  container-type: inline-size;
 
   @include g.mq(default) {
     @include g.flex( n, wrap, n, n );
@@ -36,4 +37,11 @@
 
 .p-cardList .p-card__inner {
   height: 100%;
+}
+
+@container ( width <= 40rem ) {
+  .p-cardList > * {
+    flex-grow: 1;
+    width: auto;
+  }
 }

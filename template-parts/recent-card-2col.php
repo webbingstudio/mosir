@@ -1,6 +1,6 @@
 <?php
 /**
- * recent-media-2col.php
+ * recent-card-2col.php
  *
  * @package mosir
  */
@@ -10,7 +10,7 @@
     <?php
     $mo_args = array(
         'post_type'  => 'post',
-        'posts_per_page'  => 5,
+        'posts_per_page'  => 3,
         'orderby' => 'date',
         'order' => 'DESC'
     );
@@ -19,12 +19,12 @@
     <?php if( $mo_q->have_posts() ): ?>
     <section class="p-section">
         <div class="p-section__header">
-            <p class="p-section__title c-title c-title--center c-title--lv2 <?php language_attributes(); ?>">画像とテキスト</p>
-            <p class="p-section__subTitle c-title c-title--center c-title--lv5 u-color--primary" lang="en-US">Media</p>
+            <p class="p-section__title c-title c-title--center c-title--lv2 <?php language_attributes(); ?>">カード</p>
+            <p class="p-section__subTitle c-title c-title--center c-title--lv5 u-color--primary" lang="en-US">Card</p>
         </div>
-        <div class="p-mediaList">
+        <div class="p-cardList">
         <?php while( $mo_q->have_posts() ) : $mo_q->the_post(); ?>
-            <?php get_template_part( 'template-parts/loop', 'media' ); ?>
+            <?php get_template_part( 'template-parts/loop', 'card' ); ?>
         <?php endwhile; ?>
         </div>
     </section>
@@ -33,7 +33,7 @@
     <?php
     $mo_args = array(
         'post_type'  => 'post',
-        'posts_per_page'  => 5,
+        'posts_per_page'  => 3,
         'orderby' => 'date',
         'order' => 'DESC'
     );
@@ -42,12 +42,12 @@
     <?php if( $mo_q->have_posts() ): ?>
     <section class="p-section">
         <div class="p-section__header">
-            <p class="p-section__title c-title c-title--center c-title--lv2 <?php language_attributes(); ?>">画像とテキスト</p>
-            <p class="p-section__subTitle c-title c-title--center c-title--lv5 u-color--primary" lang="en-US">Media</p>
+            <p class="p-section__title c-title c-title--center c-title--lv2 <?php language_attributes(); ?>">カード</p>
+            <p class="p-section__subTitle c-title c-title--center c-title--lv5 u-color--primary" lang="en-US">Card</p>
         </div>
-        <div class="p-mediaList">
+        <div class="p-cardList">
         <?php while( $mo_q->have_posts() ) : $mo_q->the_post(); ?>
-            <?php get_template_part( 'template-parts/loop', 'media' ); ?>
+            <?php get_template_part( 'template-parts/loop', 'card' ); ?>
         <?php endwhile; ?>
         </div>
     </section>

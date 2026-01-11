@@ -11,7 +11,7 @@
 ?>
 <article class="p-posts__item p-card">
 	<a class="p-card__inner" href="<?php the_permalink(); ?>">
-		<figure class="p-card__image c-picture c-picture--3to2">
+		<figure class="p-card__image c-picture c-picture--16to9">
 			<?php if ( has_post_thumbnail() ) : ?>
 				<?php the_post_thumbnail( 'thumbnail' ); ?>
 			<?php else : ?>
