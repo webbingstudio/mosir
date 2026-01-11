@@ -92,7 +92,7 @@
 					"slug": "primary-lighter"
 				},
 				{
-					"color": "#E0F0FC",
+					"color": "#E3ECFC",
 					"name": "primary-fade",
 					"slug": "primary-fade"
 				},
@@ -117,7 +117,7 @@
 					"slug": "secondary-lighter"
 				},
 				{
-					"color": "#B2D19E",
+					"color": "#BCDCA6",
 					"name": "secondary-fade",
 					"slug": "secondary-fade"
 				},
@@ -132,17 +132,17 @@
 					"slug": "tertiary"
 				},
 				{
-					"color": "#edc845",
+					"color": "#EDCC46",
 					"name": "tertiary-light",
 					"slug": "tertiary-light"
 				},
 				{
-					"color": "#F4DE80",
+					"color": "#F4DE79",
 					"name": "tertiary-lighter",
 					"slug": "tertiary-lighter"
 				},
 				{
-					"color": "#F9F0C3",
+					"color": "#F9F0B3",
 					"name": "tertiary-fade",
 					"slug": "tertiary-fade"
 				},
