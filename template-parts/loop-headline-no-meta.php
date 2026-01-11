@@ -7,10 +7,10 @@
  * @package mosir
  */
 ?>
-<article class="mi-p-posts__item mi-p-headline">
-	<a class="mi-p-headline__inner" href="<?php the_permalink(); ?>">
-		<div class="mi-p-headline__contents">
-			<p class="mi-p-headline__title mi-c-title"><?php the_title(); ?></p>
+<article class="p-posts__item p-headline">
+	<a class="p-headline__inner" href="<?php the_permalink(); ?>">
+		<div class="p-headline__contents">
+			<p class="p-headline__title c-title"><?php the_title(); ?></p>
 		</div>
 	</a>
 </article>

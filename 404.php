@@ -9,21 +9,21 @@
 
 get_header();
 ?>
-<section class="mi-p-error mi-p-error--404">
-    <div class="mi-p--error__header">
-        <div class="mi-p--error__header__contents mi-l-container mi-l-container--sm">
-            <h2 class="mi-p--error__title mi-c-title mi-c-title--lv3">ページが見つかりません</h2>
+<section class="p-error p-error--404">
+    <div class="p--error__header">
+        <div class="p--error__header__contents l-container l-container--sm">
+            <h2 class="p--error__title c-title c-title--lv3">ページが見つかりません</h2>
         </div>
     </div>
-    <div class="mi-p-error__contents <?php mi_wp_block_class(); ?>">
+    <div class="p-error__contents <?php mo_wp_block_class(); ?>">
         <p>お探しのURLには、コンテンツがありません。<br>
         コンテンツが移動したか、削除された可能性があります。</p>
         <p>お手数ですが、<a href="<?php echo esc_url( home_url() ); ?>">トップページ</a>から目的のコンテンツをお探しください。</p>
     </div>
-    <div class="mi-p--error__footer">
-        <div class="mi-p--error__footer__contents mi-l-container mi-l-container--sm">
-            <div class="mi-p-buttons">
-                <a class="mi-c-button" href="<?php echo esc_url( home_url() ); ?>">トップページへもどる</a>
+    <div class="p--error__footer">
+        <div class="p--error__footer__contents l-container l-container--sm">
+            <div class="p-buttons">
+                <a class="c-button" href="<?php echo esc_url( home_url() ); ?>">トップページへもどる</a>
             </div>
         </div>
     </div>

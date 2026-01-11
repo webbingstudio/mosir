@@ -5,8 +5,8 @@
  * @package mosir
  */
 
-$mi_options_header = get_theme_mod( 'mi_options_header', 'large' );
-$mi_options_drawer = get_theme_mod( 'mi_options_drawer', 'always' );
+$mo_options_header = get_theme_mod( 'mo_options_header', 'large' );
+$mo_options_drawer = get_theme_mod( 'mo_options_drawer', 'always' );
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
@@ -18,27 +18,27 @@ $mi_options_drawer = get_theme_mod( 'mi_options_drawer', 'always' );
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
-<header class="mi-l-header mi-l-header--<?php echo esc_attr($mi_options_header); ?> mi-l-header--drawer-<?php echo esc_attr($mi_options_drawer); ?>">
-	<div class="mi-l-header__contents mi-l-container">
+<header class="l-header l-header--<?php echo esc_attr($mo_options_header); ?> l-header--drawer-<?php echo esc_attr($mo_options_drawer); ?>">
+	<div class="l-header__contents l-container">
 
 		<?php
-			$mi_custom_logo_id = get_theme_mod( 'custom_logo' );
-			$mi_custom_logo_src = wp_get_attachment_image_src( $mi_custom_logo_id, 'full' );
-			$mi_custom_logo_width = isset($mi_custom_logo_src[1]) ? $mi_custom_logo_src[1] : (bool)false;
+			$mo_custom_logo_id = get_theme_mod( 'custom_logo' );
+			$mo_custom_logo_src = wp_get_attachment_image_src( $mo_custom_logo_id, 'full' );
+			$mo_custom_logo_width = isset($mo_custom_logo_src[1]) ? $mo_custom_logo_src[1] : (bool)false;
 		?>
 		<?php if( is_front_page() ): ?>
-			<h1 class="mi-l-header__siteTitle mi-p-siteTitle">
+			<h1 class="l-header__siteTitle p-siteTitle">
 		<?php else: ?>
-			<p class="mi-l-header__siteTitle mi-p-siteTitle">
+			<p class="l-header__siteTitle p-siteTitle">
 				<a href="<?php bloginfo('url'); ?>">
 		<?php endif; ?>
 
-		<?php if( $mi_custom_logo_src && $mi_custom_logo_width ): ?>
-			<span class="mi-p-siteTitle__logo"><?php echo '<img src="' . esc_url( $mi_custom_logo_src[0] ) . '" alt="'. get_bloginfo('name') .'" width="' . $mi_custom_logo_src[1] . '" height="' . $mi_custom_logo_src[2] . '">'; ?></span>
-		<?php elseif( $mi_custom_logo_src ): ?>
-			<span class="mi-p-siteTitle__logo"><?php echo '<img src="' . esc_url( $mi_custom_logo_src[0] ) . '" alt="'. get_bloginfo('name') .'">'; ?></span>
+		<?php if( $mo_custom_logo_src && $mo_custom_logo_width ): ?>
+			<span class="p-siteTitle__logo"><?php echo '<img src="' . esc_url( $mo_custom_logo_src[0] ) . '" alt="'. get_bloginfo('name') .'" width="' . $mo_custom_logo_src[1] . '" height="' . $mo_custom_logo_src[2] . '">'; ?></span>
+		<?php elseif( $mo_custom_logo_src ): ?>
+			<span class="p-siteTitle__logo"><?php echo '<img src="' . esc_url( $mo_custom_logo_src[0] ) . '" alt="'. get_bloginfo('name') .'">'; ?></span>
 		<?php else: ?>
-			<span class="mi-p-siteTitle__label"><?php bloginfo('name'); ?></span>
+			<span class="p-siteTitle__label"><?php bloginfo('name'); ?></span>
 		<?php endif; ?>
 
 		<?php if( is_front_page() ): ?>
@@ -48,20 +48,20 @@ $mi_options_drawer = get_theme_mod( 'mi_options_drawer', 'always' );
 			</p>
 		<?php endif; ?>
 
-		<?php if( $mi_options_header !== 'small' ): ?>
-		<div class="mi-l-header__top">
+		<?php if( $mo_options_header !== 'small' ): ?>
+		<div class="l-header__top">
 
 			<?php
-			if( has_nav_menu('header_nav_01') && $mi_options_header !== 'large' ) {
+			if( has_nav_menu('header_nav_01') && $mo_options_header !== 'large' ) {
 				wp_nav_menu(
 					array(
 						'theme_location' => 'header_nav_01',
 						'container'       => 'nav',
 						'container_aria_label'       => 'Global navigation',
-						'container_class' => 'mi-l-header__menu01 mi-p-megaMenu',
+						'container_class' => 'l-header__menu01 p-megaMenu',
 						'menu_id' => 'header-nav-01',
-						'menu_class' => 'menu mi-p-megaMenu__nav mi-c-nav',
-						'link_before'      => '<span class="menu-label mi-c-nav__item__label">',
+						'menu_class' => 'menu p-megaMenu__nav c-nav',
+						'link_before'      => '<span class="menu-label c-nav__item__label">',
 						'link_after'      => '</span>',
 					)
 				);
@@ -69,15 +69,15 @@ $mi_options_drawer = get_theme_mod( 'mi_options_drawer', 'always' );
 			?>
 
 			<?php
-			if( has_nav_menu('header_nav_02') && $mi_options_header === 'large' ) {
+			if( has_nav_menu('header_nav_02') && $mo_options_header === 'large' ) {
 				wp_nav_menu(
 					array(
 						'theme_location' => 'header_nav_02',
 						'container'       => 'div',
-						'container_class' => 'mi-l-header__menu02 mi-p-horizontalMenu mi-p-horizontalMenu--arrowed',
+						'container_class' => 'l-header__menu02 p-horizontalMenu p-horizontalMenu--arrowed',
 						'menu_id' => 'header-nav-02',
-						'menu_class' => 'menu mi-p-horizontalMenu__nav mi-c-nav',
-						'link_before'      => '<span class="menu-label mi-c-nav__item__label">',
+						'menu_class' => 'menu p-horizontalMenu__nav c-nav',
+						'link_before'      => '<span class="menu-label c-nav__item__label">',
 						'link_after'      => '</span>',
 					)
 				);
@@ -89,10 +89,10 @@ $mi_options_drawer = get_theme_mod( 'mi_options_drawer', 'always' );
 					array(
 						'theme_location' => 'header_nav_03',
 						'container'       => 'div',
-						'container_class' => 'mi-l-header__menu03 mi-p-horizontalMenu',
+						'container_class' => 'l-header__menu03 p-horizontalMenu',
 						'menu_id' => 'header-nav-03',
-						'menu_class' => 'menu mi-p-horizontalMenu__nav mi-c-nav',
-						'link_before'      => '<span class="menu-label mi-c-nav__item__label">',
+						'menu_class' => 'menu p-horizontalMenu__nav c-nav',
+						'link_before'      => '<span class="menu-label c-nav__item__label">',
 						'link_after'      => '</span>',
 					)
 				);
@@ -102,8 +102,8 @@ $mi_options_drawer = get_theme_mod( 'mi_options_drawer', 'always' );
 		</div>
 		<?php endif; ?>
 
-		<?php if( $mi_options_header === 'large' ): ?>
-		<div class="mi-l-header__bottom">
+		<?php if( $mo_options_header === 'large' ): ?>
+		<div class="l-header__bottom">
 
 			<?php
 			if( has_nav_menu('header_nav_01') ) {
@@ -112,10 +112,10 @@ $mi_options_drawer = get_theme_mod( 'mi_options_drawer', 'always' );
 						'theme_location' => 'header_nav_01',
 						'container'       => 'nav',
 						'container_aria_label'       => 'Global navigation',
-						'container_class' => 'mi-l-header__menu01 mi-p-megaMenu',
+						'container_class' => 'l-header__menu01 p-megaMenu',
 						'menu_id' => 'header-nav-01',
-						'menu_class' => 'menu mi-p-megaMenu__nav mi-c-nav',
-						'link_before'      => '<span class="menu-label mi-c-nav__item__label">',
+						'menu_class' => 'menu p-megaMenu__nav c-nav',
+						'link_before'      => '<span class="menu-label c-nav__item__label">',
 						'link_after'      => '</span>',
 					)
 				);
@@ -127,10 +127,10 @@ $mi_options_drawer = get_theme_mod( 'mi_options_drawer', 'always' );
 					array(
 						'theme_location' => 'header_nav_04',
 						'container'       => 'div',
-						'container_class' => 'mi-l-header__menu04 mi-p-buttonMenu',
+						'container_class' => 'l-header__menu04 p-buttonMenu',
 						'menu_id' => 'header-nav-04',
-						'menu_class' => 'menu mi-p-buttonMenu__nav mi-c-nav',
-						'link_before'      => '<span class="menu-label mi-c-nav__item__label">',
+						'menu_class' => 'menu p-buttonMenu__nav c-nav',
+						'link_before'      => '<span class="menu-label c-nav__item__label">',
 						'link_after'      => '</span>',
 					)
 				);
@@ -143,7 +143,7 @@ $mi_options_drawer = get_theme_mod( 'mi_options_drawer', 'always' );
 </header>
 <?php get_template_part( 'template-parts/drawer' ); ?>
 
-<main class="mi-l-main">
+<main class="l-main">
 	<?php
 		if( !is_front_page() ){
 			get_template_part( 'template-parts/pageHeader' );

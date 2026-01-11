@@ -1,9 +1,24 @@
 @use "../../global" as g;
 @use "sass:math";
 
+// .p-pageHeader {
+// }
+
 // Do not specify a height directly on the page header wrapper element.
 // (as this will leave space above the header)
 .p-pageHeader__contents.l-container {
-  @include g.flex( n, n, center, center );
-  min-height: 10rem;
+  @include g.flex( column, n, center, center );
+  row-gap: var(--spacing-sm);
+  padding-block: var(--spacing-md);
+}
+
+// .p-pageHeader__title.c-title {
+// }
+
+.p-pageHeader__caption {
+  margin-block: 0;
+  text-align: center;
+  font-size: var(--fontSize-lg);
+  font-weight: var(--fontWeight-bold);
+  line-height: var(--lineHeight-none);
 }

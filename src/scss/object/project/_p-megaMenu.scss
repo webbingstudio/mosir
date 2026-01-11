@@ -43,6 +43,7 @@
   min-height: var(--nav-height);
   font-weight: var(--fontWeight-bold);
   letter-spacing: 0.1em;
+  white-space: nowrap;
   z-index: 21; // Links overlay submenus on hover or focus.
 }
 

@@ -7,11 +7,11 @@
  */
 
 get_header();
-$mi_post_type = get_post_type();
+$mo_post_type = get_post_type();
 ?>
 <?php if( have_posts() ) : ?>
-<div class="mi-p-<?php echo esc_attr($mi_post_type); ?>-contents mi-p-post mi-p-post--<?php echo esc_attr($mi_post_type); ?>">
-	<div class="mi-p-post__contents <?php mi_wp_block_class(); ?>">
+<div class="p-<?php echo esc_attr($mo_post_type); ?>-contents p-post p-post--<?php echo esc_attr($mo_post_type); ?>">
+	<div class="p-post__contents <?php mo_wp_block_class(); ?>">
 	<?php while( have_posts() ) : the_post(); ?>
 		<?php the_content(); ?>
 	<?php endwhile; ?>

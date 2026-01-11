@@ -9,30 +9,30 @@
  * @package mosir
  */
 ?>
-<article class="mi-p-posts__item mi-p-headline">
-	<a href="<?php the_permalink(); ?>" class="mi-p-headline__inner">
-		<div class="mi-p-headline__header">
-            <time class="mi-p-headline__date mi-c-date" datetime="<?php the_time('c'); ?>"><?php the_time( get_option( 'date_format' ) ); ?></time>
+<article class="p-posts__item p-headline">
+	<a href="<?php the_permalink(); ?>" class="p-headline__inner">
+		<div class="p-headline__header">
+            <time class="p-headline__date c-date" datetime="<?php the_time('c'); ?>"><?php the_time( get_option( 'date_format' ) ); ?></time>
 
             <?php
             if ( $post->post_type === 'post' ) :
-                $mi_term = 'category';
-                $mi_post_terms = get_the_terms( $post->ID, $mi_term );
+                $mo_term = 'category';
+                $mo_post_terms = get_the_terms( $post->ID, $mo_term );
             ?>
-                <?php if ( $mi_post_terms ) : ?>
-                <ul class="mi-p-headline__category mi-p-labels">
+                <?php if ( $mo_post_terms ) : ?>
+                <ul class="p-headline__category p-labels">
                     <?php
-                        $mi_post_terms = array_slice( $mi_post_terms, 0, 1 );
-                        foreach ( $mi_post_terms as $taxonomy ) :
+                        $mo_post_terms = array_slice( $mo_post_terms, 0, 1 );
+                        foreach ( $mo_post_terms as $taxonomy ) :
                     ?>
-                        <li><span class="mi-c-label mi-c-label--primary mi-c-label--term-<?php esc_html_e( $taxonomy->slug ); ?>"><?php esc_html_e( $taxonomy->name ); ?></span></li>
+                        <li><span class="c-label c-label--primary c-label--term-<?php esc_html_e( $taxonomy->slug ); ?>"><?php esc_html_e( $taxonomy->name ); ?></span></li>
                     <?php endforeach; ?>
                 </ul>
                 <?php endif; ?>
             <?php endif; ?>
         </div>
-		<div class="mi-p-headline__contents">
-			<p class="mi-p-headline__title mi-c-title"><?php the_title(); ?></p>
+		<div class="p-headline__contents">
+			<p class="p-headline__title c-title"><?php the_title(); ?></p>
 		</div>
     </a>
 </article>

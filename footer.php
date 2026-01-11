@@ -5,12 +5,12 @@
  * @package mosir
  */
 
-$mi_options_copyright = get_theme_mod( 'mi_options_copyright', (bool)false );
+$mo_options_copyright = get_theme_mod( 'mo_options_copyright', (bool)false );
 ?>
 </main>
 
-<footer class="mi-l-footer">
-	<div class="mi-l-footer__contents mi-l-container">
+<footer class="l-footer">
+	<div class="l-footer__contents l-container">
 		<?php
 		if( has_nav_menu('footer_nav_01') ) {
 			wp_nav_menu(
@@ -18,10 +18,10 @@ $mi_options_copyright = get_theme_mod( 'mi_options_copyright', (bool)false );
 					'theme_location' => 'footer_nav_01',
 					'container'       => 'nav',
 					'container_aria_label'       => 'Footer sitemap',
-					'container_class' => 'mi-l-footer__menu01 mi-p-sitemap mi-p-sitemap--wide',
+					'container_class' => 'l-footer__menu01 p-sitemap p-sitemap--wide',
 					'menu_id' => 'footer-nav-01',
-					'menu_class' => 'menu mi-p-sitemap__nav mi-c-nav',
-					'link_before'      => '<span class="menu-label mi-c-nav__item__label">',
+					'menu_class' => 'menu p-sitemap__nav c-nav',
+					'link_before'      => '<span class="menu-label c-nav__item__label">',
 					'link_after'      => '</span>',
 				)
 			);
@@ -34,20 +34,20 @@ $mi_options_copyright = get_theme_mod( 'mi_options_copyright', (bool)false );
 					'theme_location' => 'footer_nav_02',
 					'container'       => 'nav',
 					'container_aria_label'       => 'Footer navigation',
-					'container_class' => 'mi-l-footer__menu02 mi-p-horizontalMenu',
+					'container_class' => 'l-footer__menu02 p-horizontalMenu',
 					'menu_id' => 'footer-nav-02',
-					'menu_class' => 'menu mi-p-horizontalMenu__nav mi-c-nav',
-					'link_before'      => '<span class="menu-label mi-c-nav__item__label">',
+					'menu_class' => 'menu p-horizontalMenu__nav c-nav',
+					'link_before'      => '<span class="menu-label c-nav__item__label">',
 					'link_after'      => '</span>',
 				)
 			);
 		}
 		?>
 	</div>
-	<div class="mi-l-footer__copyright">
-		<p class="mi-l-footer__copyright__body">
-			<?php if($mi_options_copyright): ?>
-				<?php esc_html_e($mi_options_copyright); ?>
+	<div class="l-footer__copyright">
+		<p class="l-footer__copyright__body">
+			<?php if($mo_options_copyright): ?>
+				<?php esc_html_e($mo_options_copyright); ?>
 			<?php else: ?>
 				&copy; <?php bloginfo('name'); ?>
 			<?php endif; ?>
@@ -61,11 +61,11 @@ if( has_nav_menu('sticky_nav') ) {
 		array(
 			'theme_location' => 'sticky_nav',
 			'container'       => 'div',
-			'container_class' => 'mi-p-stickyMenu',
+			'container_class' => 'p-stickyMenu',
 			'menu_id' => 'sticky-nav',
-			'menu_class' => 'menu mi-p-stickyMenu__nav mi-c-nav',
+			'menu_class' => 'menu p-stickyMenu__nav c-nav',
 			'items_wrap'      => '<ul class="%2$s">%3$s</ul>',
-			'link_before'      => '<span class="menu-label mi-c-nav__item__label">',
+			'link_before'      => '<span class="menu-label c-nav__item__label">',
 			'link_after'      => '</span>',
 		)
 	);
