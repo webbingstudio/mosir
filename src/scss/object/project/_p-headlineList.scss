@@ -6,11 +6,11 @@
 //  - Repeatedly display .p-headline.
 // ------------------------------
 
-.#{g.$pr}p-headlineList {
+.p-headlineList {
   @include g.flex(column, n, flex-start, stretch);
   border-top: 0.0625rem solid var(--border-default-light-color);
 }
 
-.#{g.$pr}p-headlineList > * {
+.p-headlineList > * {
   border-bottom: 0.0625rem solid var(--border-default-light-color);
 }

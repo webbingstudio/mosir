@@ -6,7 +6,7 @@
 //  - Position the image so that it covers the center of the element.
 // ------------------------------
 
-.#{g.$pr}c-picture {
+.c-picture {
   overflow: hidden;
   display: block;
   width: 100%;
@@ -14,7 +14,7 @@
   background-color: var(--body-bg);
 }
 
-.#{g.$pr}c-picture img {
+.c-picture img {
   display: block;
   width: 100%;
   height: 100%;
@@ -22,14 +22,14 @@
   object-position: center center;
 }
 
-.#{g.$pr}c-picture.#{g.$pr}c-picture--1to1 {
+.c-picture.c-picture--1to1 {
   aspect-ratio: 1 / 1;
 }
 
-.#{g.$pr}c-picture.#{g.$pr}c-picture--3to2 {
+.c-picture.c-picture--3to2 {
   aspect-ratio: 3 / 2;
 }
 
-.#{g.$pr}c-picture.#{g.$pr}c-picture--16to9 {
+.c-picture.c-picture--16to9 {
   aspect-ratio: 16 / 9;
 }

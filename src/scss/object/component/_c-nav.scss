@@ -7,7 +7,7 @@
 //  - Initial state is vertically aligned, and adding a modifier makes it horizontal.
 // ------------------------------
 
-.#{g.$pr}c-nav {
+.c-nav {
   @include g.flex(n, wrap, flex-start, center);
   gap: var(--spacing-sm);
   margin: 0;
@@ -15,24 +15,24 @@
   list-style-type: none;
 }
 
-.#{g.$pr}c-nav > * {
+.c-nav > * {
   flex-grow: 0;
 }
 
-.#{g.$pr}c-nav li,
-.#{g.$pr}c-nav .menu-item {
+.c-nav li,
+.c-nav .menu-item {
   margin: 0;
   padding: 0;
 }
 
-ul.#{g.$pr}c-nav,
-.#{g.$pr}c-nav ul {
+ul.c-nav,
+.c-nav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-.#{g.$pr}c-nav a {
+.c-nav a {
   @include g.flex(n, n, n, center);
   gap: var(--spacing-xs);
   line-height: var(--lineHeight-xs);
@@ -41,17 +41,17 @@ ul.#{g.$pr}c-nav,
 
 @include g.mq(hover) {
 
-  .#{g.$pr}c-nav :not(.current-menu-item) > a:hover {
+  .c-nav :not(.current-menu-item) > a:hover {
     color: var(--ui-default-color);
   }
 
 }
 
-.#{g.$pr}c-nav a:focus {
+.c-nav a:focus {
   color: var(--ui-default-color);
 }
 
-.#{g.$pr}c-nav__item__label {
+.c-nav__item__label {
   flex-grow: 0;
   flex-shrink: 1;
 }

@@ -6,7 +6,7 @@
 //  - Repeatedly display .p-media.
 // ------------------------------
 
-.#{g.$pr}p-mediaList {
+.p-mediaList {
   @include g.flex(column, n, flex-start, stretch);
   gap: var(--spacing-sm);
 }

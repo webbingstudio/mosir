@@ -8,7 +8,7 @@
 //  - Clickable area fits to text size.
 // ------------------------------
 
-.#{g.$pr}p-horizontalMenu__nav.#{g.$pr}c-nav {
+.p-horizontalMenu__nav.c-nav {
   flex-wrap: wrap;
   justify-content: flex-start;
   column-gap: var(--spacing-md);
@@ -20,7 +20,7 @@
 
 }
 
-.#{g.$pr}p-horizontalMenu a {
+.p-horizontalMenu a {
   overflow: hidden;
   display: -webkit-box;
   text-overflow: ellipsis;
@@ -29,13 +29,13 @@
   max-height: calc( ( var(--lineHeight-xs) * 3em ) );
 }
 
-.#{g.$pr}p-horizontalMenu:not(.#{g.$pr}p-horizontalMenu--arrowed) .#{g.$pr}c-nav__item + .#{g.$pr}c-nav__item,
-.#{g.$pr}p-horizontalMenu:not(.#{g.$pr}p-horizontalMenu--arrowed) .menu-item + .menu-item {
+.p-horizontalMenu:not(.p-horizontalMenu--arrowed) .c-nav__item + .c-nav__item,
+.p-horizontalMenu:not(.p-horizontalMenu--arrowed) .menu-item + .menu-item {
   position: relative;
 }
 
-.#{g.$pr}p-horizontalMenu:not(.#{g.$pr}p-horizontalMenu--arrowed) .#{g.$pr}c-nav__item + .#{g.$pr}c-nav__item::after,
-.#{g.$pr}p-horizontalMenu:not(.#{g.$pr}p-horizontalMenu--arrowed) .menu-item + .menu-item::after {
+.p-horizontalMenu:not(.p-horizontalMenu--arrowed) .c-nav__item + .c-nav__item::after,
+.p-horizontalMenu:not(.p-horizontalMenu--arrowed) .menu-item + .menu-item::after {
   @include g.position( absolute, #{calc( 50% - 0.5em )}, n, n, #{calc( var(--spacing-md) / -2 )} );
   content: "";
   width: 0;
@@ -43,24 +43,24 @@
   border-left: 0.0625rem solid var(--border-default-color);
 }
 
-.#{g.$pr}p-horizontalMenu .current-menu-item > a {
+.p-horizontalMenu .current-menu-item > a {
   font-weight: var(--fontWeight-bold);
 }
 
 @include g.mq(hover) {
 
-  .#{g.$pr}p-horizontalMenu:not(.#{g.$pr}p-horizontalMenu--arrowed) :not(.current-menu-item) > a:hover {
+  .p-horizontalMenu:not(.p-horizontalMenu--arrowed) :not(.current-menu-item) > a:hover {
     text-decoration-line: underline;
   }
 
 }
 
-.#{g.$pr}p-horizontalMenu.#{g.$pr}p-horizontalMenu--arrowed a {
+.p-horizontalMenu.p-horizontalMenu--arrowed a {
   padding-left: 1.25em;
   @include g.arrow();
 }
 
-.#{g.$pr}p-horizontalMenu.#{g.$pr}p-horizontalMenu--arrowed a::before {
+.p-horizontalMenu.p-horizontalMenu--arrowed a::before {
   top: calc( ( var(--lineHeight-xs) * 1em ) / 2 - 0.275em );
   left: 0;
 }

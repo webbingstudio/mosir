@@ -7,10 +7,10 @@
 //  - header and contents will be aligned in a single line if the window width is wide.
 // ------------------------------
 
-// .#{g.$pr}p-headline {
+// .p-headline {
 // }
 
-.#{g.$pr}p-headline__inner {
+.p-headline__inner {
     @include g.flex( column, n, flex-start, baseline );
     gap: var(--spacing-xs) var(--spacing-sm);
     padding-block: var(--spacing-sm);
@@ -22,52 +22,52 @@
 
 }
 
-a.#{g.$pr}p-headline__inner {
+a.p-headline__inner {
     color: currentColor;
 }
 
 @include g.mq(hover) {
 
-  .#{g.$pr}p-headline:has(a.#{g.$pr}p-headline__inner:hover) {
+  .p-headline:has(a.p-headline__inner:hover) {
     background-color: var(--headline-hover-bg);
     transition: var(--transition-slow);
   }
 
-  a.#{g.$pr}p-headline__inner:hover {
+  a.p-headline__inner:hover {
     text-decoration: none;
   }
 
-  a.#{g.$pr}p-headline__inner:hover .#{g.$pr}p-headline__title,
-  a.#{g.$pr}p-headline__title:hover {
+  a.p-headline__inner:hover .p-headline__title,
+  a.p-headline__title:hover {
     text-decoration: underline;
   }
 
 }
 
-.#{g.$pr}p-headline__header {
+.p-headline__header {
     flex-grow: 0;
     @include g.flex( n, n, n, center );
     gap: var(--spacing-xs);
     font-size: var(--fontSize-sm);
 }
 
-.#{g.$pr}p-headline__header > * {
+.p-headline__header > * {
     margin: 0;
 }
 
-.#{g.$pr}p-headline__date {
+.p-headline__date {
     min-width: 9em;
 }
 
-.#{g.$pr}p-headline__category .#{g.$pr}c-label {
+.p-headline__category .c-label {
     min-width: 10em;
 }
 
-.#{g.$pr}p-headline__contents {
+.p-headline__contents {
     flex-grow: 1;
 }
 
-.#{g.$pr}p-headline__title.#{g.$pr}c-title {
+.p-headline__title.c-title {
     overflow: hidden;
     display: -webkit-box;
     text-overflow: ellipsis;
@@ -76,6 +76,6 @@ a.#{g.$pr}p-headline__inner {
     max-height: calc( ( var(--lineHeight-md) * 3em ) );
 }
 
-.#{g.$pr}p-headline__title a {
+.p-headline__title a {
     display: block;
 }

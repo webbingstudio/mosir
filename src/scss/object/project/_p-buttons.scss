@@ -7,7 +7,7 @@
 //  - It will be horizontal on screen widths of tablets and above.
 // ------------------------------
 
-.#{g.$pr}p-buttons {
+.p-buttons {
     @include g.flex(column, n, center, center);
     gap: var(--spacing-sm);
     line-height: var(--lineHeight-none);

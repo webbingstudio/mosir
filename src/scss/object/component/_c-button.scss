@@ -6,7 +6,7 @@
 //  - Displays a user interface with button functionality.
 // ------------------------------
 
-.#{g.$pr}c-button {
+.c-button {
     @include g.iFlex( n, n, center, center );
     gap: var(--spacing-xs);
     width: 15rem;
@@ -25,19 +25,19 @@
     cursor: pointer;
 }
 
-.#{g.$pr}c-button:hover,
-.#{g.$pr}c-button:focus {
+.c-button:hover,
+.c-button:focus {
     color: var(--ui-inverse-color);
     background-color: var(--ui-accent-color);
     border-color: var(--ui-accent-color);
     text-decoration: none;
 }
 
-.#{g.$pr}c-button:focus {
+.c-button:focus {
     outline: none;
 }
 
-.#{g.$pr}c-button.#{g.$pr}c-button--disabled {
+.c-button.c-button--disabled {
     background-color: var(--color-default-fade);
     border-color: var(--border-default-light-color);
     opacity: 0.7;
@@ -45,14 +45,14 @@
     cursor: default;
 }
 
-.#{g.$pr}c-button.#{g.$pr}c-button--primary {
+.c-button.c-button--primary {
     background-color: var(--color-primary);
     border-color: var(--color-primary);
     color: var(--ui-inverse-color);
 }
 
-.#{g.$pr}c-button.#{g.$pr}c-button--primary:hover,
-.#{g.$pr}c-button.#{g.$pr}c-button--primary:focus {
+.c-button.c-button--primary:hover,
+.c-button.c-button--primary:focus {
     background-color: var(--ui-inverse-color);
     color: var(--color-primary);
 }

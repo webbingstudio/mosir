@@ -10,26 +10,26 @@
 //  - Assumes a hierarchy of up to 3 levels.
 // ------------------------------
 
-.#{g.$pr}p-sitemap {
+.p-sitemap {
 }
 
-.#{g.$pr}p-sitemap__nav.#{g.$pr}c-nav {
+.p-sitemap__nav.c-nav {
   align-items: flex-start;
   flex-direction: column;
   gap: var(--spacing-md);
 }
 
-.#{g.$pr}p-sitemap.#{g.$pr}p-sitemap--wide .#{g.$pr}p-sitemap__nav.#{g.$pr}c-nav {
+.p-sitemap.p-sitemap--wide .p-sitemap__nav.c-nav {
   @include g.mq(default) {
     flex-direction: row;
   }
 }
 
-.#{g.$pr}p-sitemap__nav.#{g.$pr}c-nav > * {
+.p-sitemap__nav.c-nav > * {
   flex: 0;
 }
 
-.#{g.$pr}p-sitemap.#{g.$pr}p-sitemap--wide .#{g.$pr}p-sitemap__nav.#{g.$pr}c-nav > * {
+.p-sitemap.p-sitemap--wide .p-sitemap__nav.c-nav > * {
   @include g.mq(default) {
     flex-basis: calc( 50% - ( var(--spacing-md) / 2 ) );
   }
@@ -44,17 +44,17 @@
 }
 
 
-.#{g.$pr}p-sitemap__nav a {
+.p-sitemap__nav a {
   padding-left: 1.25em;
   @include g.arrow();
 }
 
-.#{g.$pr}p-sitemap__nav a::before {
+.p-sitemap__nav a::before {
   top: calc( ( var(--nav-line-height) * 1em ) / 2 - 0.275em );
   left: 0;
 }
 
-.#{g.$pr}p-sitemap__nav .current-menu-item > a {
+.p-sitemap__nav .current-menu-item > a {
   @include g.arrow-current();
 }
 
@@ -62,7 +62,7 @@
 // first-level
 // ------------------------------
 
-.#{g.$pr}p-sitemap__nav > .menu-item > a {
+.p-sitemap__nav > .menu-item > a {
   font-weight: var(--fontWeight-bold);
 }
 
@@ -70,12 +70,12 @@
 // second-level
 // ------------------------------
 
-.#{g.$pr}p-sitemap__nav .sub-menu {
+.p-sitemap__nav .sub-menu {
   padding-left: 1.25em;
   font-size: var(--fontSize-sm);
 }
 
-.#{g.$pr}p-sitemap__nav .sub-menu .menu-item {
+.p-sitemap__nav .sub-menu .menu-item {
   margin-top: 1.25em;
 }
 
@@ -83,7 +83,7 @@
 // third-level
 // ------------------------------
 
-.#{g.$pr}p-sitemap__nav .sub-menu > .menu-item:not(:last-child) .sub-menu {
+.p-sitemap__nav .sub-menu > .menu-item:not(:last-child) .sub-menu {
   margin-bottom: 1.5em;
   font-size: var(--fontSize-xs);
 }

@@ -6,7 +6,7 @@
 //  - A small label that indicates classification, instructions, or other information.
 // ------------------------------
 
-.#{g.$pr}c-label {
+.c-label {
   @include g.iFlex(n, n, center, center);
   padding-inline: 0.25em;
   min-width: 8em;
@@ -22,7 +22,7 @@
 
 @include g.mq(hover) {
 
-  a.#{g.$pr}c-label:hover {
+  a.c-label:hover {
     color: var(--ui-default-color);
     background-color: var(--ui-inverse-color);
     text-decoration: none;
@@ -30,26 +30,26 @@
 
 }
 
-a.#{g.$pr}c-label:focus {
+a.c-label:focus {
   color: var(--ui-default-color);
   background-color: var(--ui-inverse-color);
 }
 
-.#{g.$pr}c-label.#{g.$pr}c-label--primary {
+.c-label.c-label--primary {
   background-color: var(--color-primary);
   border-color: var(--color-primary);
 }
 
 @include g.mq(hover) {
 
-  a.#{g.$pr}c-label.#{g.$pr}c-label--primary:hover {
+  a.c-label.c-label--primary:hover {
     color: var(--color-primary);
     background-color: var(--ui-inverse-color);
   }
 
 }
 
-a.#{g.$pr}c-label.#{g.$pr}c-label--primary:focus {
+a.c-label.c-label--primary:focus {
   color: var(--color-primary);
   background-color: var(--ui-inverse-color);
 }

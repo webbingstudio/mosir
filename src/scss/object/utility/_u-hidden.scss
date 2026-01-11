@@ -2,20 +2,20 @@
 @use "sass:math";
 
 @include g.mq(wide-max) {
-  .#{g.$pr}u-wide {
+  .u-wide {
     display: none !important;
   }
 }
 
 @include g.mq(xga-max) {
-  .#{g.$pr}u-xga,
-  .#{g.$pr}u-pc {
+  .u-xga,
+  .u-pc {
     display: none !important;
   }
 }
 
 @include g.mq(default) {
-  .#{g.$pr}u-sp {
+  .u-sp {
     display: none !important;
   }
 }

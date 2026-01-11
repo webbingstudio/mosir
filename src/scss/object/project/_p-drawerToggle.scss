@@ -7,26 +7,26 @@
 //  - It is not intended to contain any child elements other than buttons.
 // ------------------------------
 
-.#{g.$pr}p-drawerToggle {
+.p-drawerToggle {
   @include g.position( fixed, 0, 0, n, 0, 112 );
 }
 
-.#{g.$pr}p-drawerToggle.#{g.$pr}p-drawerToggle--mobile {
+.p-drawerToggle.p-drawerToggle--mobile {
   @include g.mq(xga) {
     display: none;
   }
 }
 
-.#{g.$pr}p-drawerToggle__contents.#{g.$pr}l-container {
+.p-drawerToggle__contents.l-container {
   position: relative;
 }
 
-.#{g.$pr}p-drawerToggle__button {
+.p-drawerToggle__button {
   @include g.position( absolute, var(--spacing-xs), var(--screen-x-spacing), n, n, 11 ); // top: padding-top of header
 }
 
 // WordPress Admin bar
-.admin-bar .#{g.$pr}p-drawerToggle {
+.admin-bar .p-drawerToggle {
   @include g.mq(default) {
     margin-top: 46px;
   }

@@ -6,7 +6,7 @@
 //  - Repeatedly display .p-card.
 // ------------------------------
 
-.#{g.$pr}p-cardList {
+.p-cardList {
   @include g.flex(column, n, flex-start, stretch);
   gap: var(--spacing-md);
 
@@ -16,7 +16,7 @@
 
 }
 
-.#{g.$pr}p-cardList > * {
+.p-cardList > * {
 
   @include g.mq(default-max) {
     max-width: ( math.div( 480, 16 ) * 1rem );
@@ -30,6 +30,6 @@
 
 }
 
-.#{g.$pr}p-cardList .#{g.$pr}p-card__inner {
+.p-cardList .p-card__inner {
   height: 100%;
 }

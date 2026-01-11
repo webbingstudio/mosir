@@ -1,17 +1,17 @@
 @use "../global" as g;
 @use "sass:math";
 
-.#{g.$pr}l-footer {
+.l-footer {
   position: relative;
   @include g.flex(column, nowrap, n, stretch);
 }
 
-.#{g.$pr}l-footer__contents.#{g.$pr}l-container {
+.l-footer__contents.l-container {
   @include g.flex(column, nowrap, n, stretch);
   padding-top: var(--spacing-lg);
 }
 
-.#{g.$pr}l-footer__contents > *::after {
+.l-footer__contents > *::after {
   display: block;
   content: "";
   max-width: var(--container-wide-width);
@@ -20,21 +20,21 @@
   border-bottom: 0.0625rem solid var(--border-default-light-color);
 }
 
-.#{g.$pr}l-footer__contents > * + * {
+.l-footer__contents > * + * {
   margin-top: var(--spacing-md);
 }
 
-.#{g.$pr}l-footer__copyright {
+.l-footer__copyright {
   // padding-bottom = .p-stickyMenu height
   padding: var(--spacing-md) var(--screen-x-spacing) var(--spacing-lg);
 }
 
 // If screen have sticky navigation, increase the bottom margin.
-body:has(.#{g.$pr}p-stickyMenu) .#{g.$pr}l-footer__copyright {
+body:has(.p-stickyMenu) .l-footer__copyright {
   padding-bottom: calc( var(--spacing-md) + var(--nav-height) + ( var(--spacing-xs) * 2 ) );
 }
 
-.#{g.$pr}l-footer__copyright__body {
+.l-footer__copyright__body {
   @include g.flex(column, n, center, center);
   gap: var(--spacing-md);
   margin: 0;

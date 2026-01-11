@@ -6,20 +6,20 @@
 //  - Repeatedly display posts.
 // ------------------------------
 
-.#{g.$pr}p-posts {
+.p-posts {
   @include g.flex(column, n, flex-start, stretch);
   row-gap: var(--spacing-md);
   padding-block: var(--spacing-lg);
 }
 
-// .#{g.$pr}p-posts__header {
+// .p-posts__header {
 // }
 
-.#{g.$pr}p-posts__contents > * + * {
+.p-posts__contents > * + * {
   margin-top: var(--spacing-md);
 }
 
-// .#{g.$pr}p-posts__footer {
+// .p-posts__footer {
 // }
 
 
@@ -27,7 +27,7 @@
 // card
 // ------------------------------
 
-.#{g.$pr}p-posts.#{g.$pr}p-posts--card {
+.p-posts.p-posts--card {
   gap: var(--spacing-md);
 
   @include g.mq(default) {
@@ -36,7 +36,7 @@
 
 }
 
-.#{g.$pr}p-posts.#{g.$pr}p-posts--card > * {
+.p-posts.p-posts--card > * {
 
   @include g.mq(default-max) {
     max-width: ( math.div( 480, 16 ) * 1rem );
@@ -50,7 +50,7 @@
 
 }
 
-.#{g.$pr}p-posts.#{g.$pr}p-posts--card .#{g.$pr}p-card__inner {
+.p-posts.p-posts--card .p-card__inner {
   height: 100%;
 }
 
@@ -59,11 +59,11 @@
 // headline
 // ------------------------------
 
-.#{g.$pr}p-posts.#{g.$pr}p-posts--headline {
+.p-posts.p-posts--headline {
   border-top: 0.0625rem solid var(--border-default-light-color);
 }
 
-.#{g.$pr}p-posts.#{g.$pr}p-posts--headline > * {
+.p-posts.p-posts--headline > * {
   border-bottom: 0.0625rem solid var(--border-default-light-color);
 }
 
@@ -73,6 +73,6 @@
 // media
 // ------------------------------
 
-.#{g.$pr}p-posts.#{g.$pr}p-posts--media {
+.p-posts.p-posts--media {
   gap: var(--spacing-sm);
 }

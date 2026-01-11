@@ -5,10 +5,10 @@
 // project > home-headline
 // ------------------------------
 
-// .#{g.$pr}p-home-headline {
+// .p-home-headline {
 // }
 
-.#{g.$pr}p-home-headline__inner {
+.p-home-headline__inner {
   display: grid;
   gap: var(--spacing-md);
 
@@ -19,7 +19,7 @@
 
 }
 
-.#{g.$pr}p-home-headline__header {
+.p-home-headline__header {
 
   @include g.mq(xga) {
     text-align: right;
@@ -27,5 +27,5 @@
 
 }
 
-// .#{g.$pr}p-home-headline__contents {
+// .p-home-headline__contents {
 // }

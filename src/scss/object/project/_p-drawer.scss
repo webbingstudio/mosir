@@ -9,26 +9,26 @@
 // See: assets/js/theme.js
 // ------------------------------
 
-.#{g.$pr}p-drawer {
+.p-drawer {
   @include g.position( fixed, 0, n, n, 0, 101 );
   width: 100%;
   height: 0;
 }
 
-.#{g.$pr}p-drawer.#{g.$pr}p-drawer--mobile {
+.p-drawer.p-drawer--mobile {
   @include g.mq(xga) {
     display: none;
   }
 }
 
-.#{g.$pr}p-drawer::before {
+.p-drawer::before {
   content: "";
   @include g.position( fixed, 0, 0, 0, n, 103 );
   background-color: var(--body-bg);
   box-shadow: var(--shadow--lg-darken);
 }
 
-.#{g.$pr}p-drawer:not(.#{g.$pr}p-drawer--size-wide)::before {
+.p-drawer:not(.p-drawer--size-wide)::before {
   width: 30rem;
   max-width: 80dvw;
   transform: scaleX(0);
@@ -39,13 +39,13 @@
   }
 }
 
-.#{g.$pr}p-drawer.#{g.$pr}p-drawer--size-wide::before {
+.p-drawer.p-drawer--size-wide::before {
   left: 0;
   transform: scaleY(0);
   transform-origin: top center;
 }
 
-.#{g.$pr}p-drawer::after {
+.p-drawer::after {
   content: "";
   @include g.position( fixed, 0, 0, n, 0, 102 );
   background-color: var(--cover-inverse-color);
@@ -53,7 +53,7 @@
   opacity: 0;
 }
 
-.#{g.$pr}p-drawer__contents {
+.p-drawer__contents {
   overflow-x: hidden;
   overflow-y: auto;
   @include g.position( relative, n, n, n, n, 103 );
@@ -64,7 +64,7 @@
   transform-origin: center center;
 }
 
-.#{g.$pr}p-drawer:not(.#{g.$pr}p-drawer--size-wide) .#{g.$pr}p-drawer__contents {
+.p-drawer:not(.p-drawer--size-wide) .p-drawer__contents {
   width: 30rem;
   max-width: 80dvw;
   margin-left: auto;
@@ -79,11 +79,11 @@
   }
 }
 
-.#{g.$pr}p-drawer.#{g.$pr}p-drawer--size-wide .#{g.$pr}p-drawer__contents {
+.p-drawer.p-drawer--size-wide .p-drawer__contents {
   transform: translateY(-1rem);
 }
 
-.#{g.$pr}p-drawer__contents__inner {
+.p-drawer__contents__inner {
   @include g.flex(column, n, n, flex-start);
   gap: var(--spacing-md);
   padding-top: calc( var(--drawer-toggle-size) + var(--spacing-sm) );
@@ -95,27 +95,27 @@
 // drawer: opening
 // ------------------------------
 
-.#{g.$pr}p-drawer.-is-opening {
+.p-drawer.-is-opening {
   height: auto;
 }
 
-.#{g.$pr}p-drawer.-is-opening::before {
+.p-drawer.-is-opening::before {
   opacity: 1;
   transform: scaleX(1);
   transition: transform 0.5s 0s ease-out;
 }
 
-.#{g.$pr}p-drawer.-is-opening::after {
+.p-drawer.-is-opening::after {
   bottom: 0;
   opacity: 1;
   transition: opacity 0.25s 0s ease-out;
 }
 
-.#{g.$pr}p-drawer.#{g.$pr}p-drawer--size-wide.-is-opening::before {
+.p-drawer.p-drawer--size-wide.-is-opening::before {
   transform: scaleY(1);
 }
 
-.#{g.$pr}p-drawer.-is-opening .#{g.$pr}p-drawer__contents {
+.p-drawer.-is-opening .p-drawer__contents {
   overflow: hidden;
   height: auto;
   opacity: 1;
@@ -123,7 +123,7 @@
   transition: all 0.3s 0.3s ease-out;
 }
 
-.#{g.$pr}p-drawer.#{g.$pr}p-drawer--size-wide.-is-opening .#{g.$pr}p-drawer__contents {
+.p-drawer.p-drawer--size-wide.-is-opening .p-drawer__contents {
   transform: translateY(0);
 }
 
@@ -133,39 +133,39 @@
 // ------------------------------
 
 // Disable scrolling when the drawer menu is expanded
-body:has(.#{g.$pr}p-drawer[aria-hidden="false"]),
-body:has(.#{g.$pr}p-drawer.-is-opening),
-body:has(.#{g.$pr}p-drawer.-is-closing) {
+body:has(.p-drawer[aria-hidden="false"]),
+body:has(.p-drawer.-is-opening),
+body:has(.p-drawer.-is-closing) {
   overflow: hidden;
   height: 100dvh;
 }
 
 // need `:not(.-is-closing)`
-.#{g.$pr}p-drawer[aria-hidden="false"]:not(.-is-closing) {
+.p-drawer[aria-hidden="false"]:not(.-is-closing) {
   height: auto;
 }
 
-.#{g.$pr}p-drawer[aria-hidden="false"]:not(.-is-closing)::before {
+.p-drawer[aria-hidden="false"]:not(.-is-closing)::before {
   opacity: 1;
   transform: scaleX(1);
 }
 
-.#{g.$pr}p-drawer[aria-hidden="false"]:not(.-is-closing)::after {
+.p-drawer[aria-hidden="false"]:not(.-is-closing)::after {
   opacity: 1;
   bottom: 0;
 }
 
-.#{g.$pr}p-drawer.#{g.$pr}p-drawer--size-wide[aria-hidden="false"]:not(.-is-closing)::before {
+.p-drawer.p-drawer--size-wide[aria-hidden="false"]:not(.-is-closing)::before {
   transform: scaleY(1);
 }
 
-.#{g.$pr}p-drawer[aria-hidden="false"]:not(.-is-closing) .#{g.$pr}p-drawer__contents {
+.p-drawer[aria-hidden="false"]:not(.-is-closing) .p-drawer__contents {
   height: 100dvh;
   opacity: 1;
   transform: translateX(0);
 }
 
-.#{g.$pr}p-drawer.#{g.$pr}p-drawer--size-wide[aria-hidden="false"]:not(.-is-closing) .#{g.$pr}p-drawer__contents {
+.p-drawer.p-drawer--size-wide[aria-hidden="false"]:not(.-is-closing) .p-drawer__contents {
   transform: translateY(0);
 }
 
@@ -173,23 +173,23 @@ body:has(.#{g.$pr}p-drawer.-is-closing) {
 // drawer: closing
 // ------------------------------
 
-.#{g.$pr}p-drawer.-is-closing::before {
+.p-drawer.-is-closing::before {
   transform: scaleX(0);
   transition-duration: 0.5s;
   transition-delay: 0.1s;
 }
 
-.#{g.$pr}p-drawer.#{g.$pr}p-drawer--size-wide.-is-closing::before {
+.p-drawer.p-drawer--size-wide.-is-closing::before {
   transform: scaleY(0);
 }
 
-.#{g.$pr}p-drawer.-is-closing::after {
+.p-drawer.-is-closing::after {
   bottom: 0;
   opacity: 0;
   transition: opacity 0.25s 0.25s ease-out;
 }
 
-.#{g.$pr}p-drawer.-is-closing .#{g.$pr}p-drawer__contents {
+.p-drawer.-is-closing .p-drawer__contents {
   opacity: 0;
   height: auto;
   transform: translateX(1rem);
@@ -197,6 +197,6 @@ body:has(.#{g.$pr}p-drawer.-is-closing) {
   transition-delay: 0s;
 }
 
-.#{g.$pr}p-drawer.#{g.$pr}p-drawer--size-wide.-is-closing .#{g.$pr}p-drawer__contents {
+.p-drawer.p-drawer--size-wide.-is-closing .p-drawer__contents {
   transform: translateY(-1rem);
 }

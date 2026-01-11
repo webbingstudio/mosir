@@ -5,7 +5,7 @@
 // project > labels
 // ------------------------------
 
-.#{g.$pr}p-labels {
+.p-labels {
   @include g.flex( n, wrap, flex-start, n );
   gap: var(--spacing-xs);
   list-style-type: none;
@@ -14,7 +14,7 @@
   line-height: var(--lineHeight-none);
 }
 
-.#{g.$pr}p-labels > * {
+.p-labels > * {
     flex-grow: 0;
     flex-shrink: 1;
     margin: 0;

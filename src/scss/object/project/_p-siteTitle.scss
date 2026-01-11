@@ -1,44 +1,44 @@
 @use "../../global" as g;
 @use "sass:math";
 
-.#{g.$pr}p-siteTitle {
+.p-siteTitle {
   @include g.flex(column, n, center, flex-start);
   margin: 0;
   line-height: var(--lineHeight-none);
 }
 
-.#{g.$pr}p-siteTitle > * {
+.p-siteTitle > * {
   flex-grow: 0;
 }
 
-.#{g.$pr}p-siteTitle a {
+.p-siteTitle a {
   color: var(--color-default-dark);
 }
 
 @include g.mq(hover) {
 
-  .#{g.$pr}p-siteTitle a:hover {
+  .p-siteTitle a:hover {
     color: var(--color-default-dark);
     text-decoration: none;
   }
 
-  .#{g.$pr}p-siteTitle a:hover .#{g.$pr}p-siteTitle__label {
+  .p-siteTitle a:hover .p-siteTitle__label {
     text-decoration-line: underline;
   }
 
 }
 
-.#{g.$pr}p-siteTitle a:focus {
+.p-siteTitle a:focus {
   color: var(--color-default-dark);
 }
 
-.#{g.$pr}p-siteTitle__label {
+.p-siteTitle__label {
   font-size: var(--fontSize-xl);
   font-weight: var(--fontWeight-bold);
 }
 
-.#{g.$pr}p-siteTitle__logo > img,
-.#{g.$pr}p-siteTitle__logo > svg {
+.p-siteTitle__logo > img,
+.p-siteTitle__logo > svg {
   display: block;
   width: 100%;
   max-width: 50vw;
@@ -47,8 +47,8 @@
 
 @include g.mq(default) {
 
-  .#{g.$pr}p-siteTitle__logo > img,
-  .#{g.$pr}p-siteTitle__logo > svg {
+  .p-siteTitle__logo > img,
+  .p-siteTitle__logo > svg {
     max-width: 15rem;
   }
 

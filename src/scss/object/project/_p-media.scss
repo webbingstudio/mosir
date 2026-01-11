@@ -6,11 +6,11 @@
 //  - Image on the left and content on the right.
 // ------------------------------
 
-.#{g.$pr}p-media {
+.p-media {
   position: relative;
 }
 
-.#{g.$pr}p-media::after {
+.p-media::after {
   content: "";
   @include g.position( absolute, -0.25rem, -0.25rem, -0.25rem, -0.25rem, 11 );
   border: 0.125rem solid var(--ui-accent-color);
@@ -18,48 +18,48 @@
   opacity: 0;
 }
 
-.#{g.$pr}p-media__inner {
+.p-media__inner {
   position: relative;
   display: grid;
   grid-template-columns: min( 10rem, 25% ) 1fr;
   z-index: 12;
 }
 
-a.#{g.$pr}p-media__inner {
+a.p-media__inner {
     color: currentColor;
 }
 
-a.#{g.$pr}p-media__inner {
+a.p-media__inner {
   width: 100%;
 }
 
 @include g.mq(hover) {
 
-  .#{g.$pr}p-media:has(a.#{g.$pr}p-media__inner:hover)::after {
+  .p-media:has(a.p-media__inner:hover)::after {
     opacity: 1;
     transition: var(--transition-slow);
     outline: none;
   }
 
-  a.#{g.$pr}p-media__inner:hover {
+  a.p-media__inner:hover {
     text-decoration: none;
   }
 
-  a.#{g.$pr}p-media__inner:hover .#{g.$pr}p-media__title {
+  a.p-media__inner:hover .p-media__title {
     text-decoration: underline;
   }
 
 }
 
-.#{g.$pr}p-media__image {
+.p-media__image {
   grid-column: 1 / 1;
 }
 
-.#{g.$pr}p-media__image img {
+.p-media__image img {
   transition: var(--transition-slow);
 }
 
-.#{g.$pr}p-media__contents {
+.p-media__contents {
   grid-column: 2 / 2;
   @include g.flex( column, n, center, flex-start );
   gap: var(--spacing-xs);
@@ -67,22 +67,22 @@ a.#{g.$pr}p-media__inner {
 }
 
 // If meta is included, it is aligned top.
-.#{g.$pr}p-media__contents:has(.#{g.$pr}p-media__meta) {
+.p-media__contents:has(.p-media__meta) {
   justify-content: flex-start;
   padding-top: var(--spacing-xs);
 }
 
-.#{g.$pr}p-media__meta {
+.p-media__meta {
   @include g.flex( n, wrap, flex-start, center );
   gap: var(--spacing-sm);
   font-size: var(--fontSize-sm);
 }
 
-.#{g.$pr}p-media__meta > * {
+.p-media__meta > * {
   flex-grow: 0;
 }
 
-.#{g.$pr}p-media__title.#{g.$pr}c-title {
+.p-media__title.c-title {
   overflow: hidden;
   display: -webkit-box;
   text-overflow: ellipsis;
@@ -93,7 +93,7 @@ a.#{g.$pr}p-media__inner {
 
 @include g.mq(hover) {
 
-  a.#{g.$pr}p-media__inner:hover .#{g.$pr}p-media__image img {
+  a.p-media__inner:hover .p-media__image img {
     opacity: 0.8;
     transform: scale( 1.1 );
   }
@@ -101,17 +101,17 @@ a.#{g.$pr}p-media__inner {
 }
 
 // If the content width is narrow, the font size will be reduced.
-.#{g.$pr}p-media__contents {
+.p-media__contents {
   container-type: inline-size;
 }
 
 @container ( width <= 30rem ) {
 
-  .#{g.$pr}p-media__contents .#{g.$pr}c-date {
+  .p-media__contents .c-date {
     font-size: var(--fontSize-xs);
   }
 
-  .#{g.$pr}p-media__contents .#{g.$pr}p-media__title.#{g.$pr}c-title {
+  .p-media__contents .p-media__title.c-title {
     font-size: var(--fontSize-sm);
   }
 

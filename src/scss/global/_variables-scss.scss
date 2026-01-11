@@ -5,11 +5,6 @@
 // Import this first
 // ==============================
 
-// ------------------------------
-// Prefix. Prevents class name conflicts with editor plugins. If it is unnecessary or you do not want to use `mi-`, change it.
-// ------------------------------
-$pr: "mi-";
-
 $breakpoints: (
   "hover": "(any-hover: hover)",
   "wide": "screen and (min-width: 1280px)",

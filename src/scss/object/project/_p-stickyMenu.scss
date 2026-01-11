@@ -8,7 +8,7 @@
 //  - No hierarchical structure is assumed.
 // ------------------------------
 
-.#{g.$pr}p-stickyMenu {
+.p-stickyMenu {
   @include g.position(fixed, n, n, 0, 0, 21);
   width: 100vw;
   padding-block: var(--spacing-xs);
@@ -22,12 +22,12 @@
   }
 }
 
-.#{g.$pr}p-stickyMenu__nav.#{g.$pr}c-nav {
+.p-stickyMenu__nav.c-nav {
   flex-wrap: nowrap;
   justify-content: center;
 }
 
-.#{g.$pr}p-stickyMenu a {
+.p-stickyMenu a {
   @include g.flex( n, n, center, center );
   min-width: 8em;
   min-height: var(--nav-height);
@@ -42,13 +42,13 @@
   text-align: center;
 }
 
-.#{g.$pr}p-stickyMenu a:hover,
-.#{g.$pr}p-stickyMenu a:focus {
+.p-stickyMenu a:hover,
+.p-stickyMenu a:focus {
   color: var(--ui-default-color);
   background-color: var(--ui-inverse-color);
   text-decoration: none;
 }
 
-.#{g.$pr}p-stickyMenu a:focus {
+.p-stickyMenu a:focus {
     outline: none;
 }

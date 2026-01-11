@@ -1,26 +1,26 @@
 @use "../global" as g;
 @use "sass:math";
 
-.#{g.$pr}l-flex {
+.l-flex {
     @include g.flex( n, n, flex-start, n );
 }
 
-.#{g.$pr}l-flex > * {
+.l-flex > * {
     flex-grow: 0;
     flex-shrink: 1;
 }
 
 
-.#{g.$pr}l-flex.#{g.$pr}l-flex--grow {
+.l-flex.l-flex--grow {
     width: 100%;
 }
 
-.#{g.$pr}l-flex.#{g.$pr}l-flex--grow > * {
+.l-flex.l-flex--grow > * {
     flex-grow: 1;
 }
 
 
-.#{g.$pr}l-flex.#{g.$pr}l-flex--center {
+.l-flex.l-flex--center {
     justify-content: center;
     align-items: center;
 }

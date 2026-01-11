@@ -7,12 +7,12 @@
 //  - No hierarchical structure is assumed.
 // ------------------------------
 
-.#{g.$pr}p-buttonMenu__nav.#{g.$pr}c-nav {
+.p-buttonMenu__nav.c-nav {
   justify-content: center;
   column-gap: var(--spacing-xs);
 }
 
-.#{g.$pr}p-buttonMenu a {
+.p-buttonMenu a {
   @include g.flex( n, n, center, center );
   min-width: 8em;
   min-height: 2.5em;
@@ -27,13 +27,13 @@
   text-align: center;
 }
 
-.#{g.$pr}p-buttonMenu a:hover,
-.#{g.$pr}p-buttonMenu a:focus {
+.p-buttonMenu a:hover,
+.p-buttonMenu a:focus {
   color: var(--ui-default-color);
   background-color: var(--ui-inverse-color);
   text-decoration: none;
 }
 
-.#{g.$pr}p-buttonMenu a:focus {
+.p-buttonMenu a:focus {
     outline: none;
 }

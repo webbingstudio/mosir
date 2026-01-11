@@ -10,25 +10,25 @@
 //  - Assumes a hierarchy of up to 3 levels.
 // ------------------------------
 
-.#{g.$pr}p-verticalMenu__nav.#{g.$pr}c-nav {
+.p-verticalMenu__nav.c-nav {
   flex-direction: column;
   align-items: stretch;
   justify-content: flex-start;
   gap: var(--spacing-md);
 }
 
-.#{g.$pr}p-verticalMenu__nav.#{g.$pr}c-nav > * {
+.p-verticalMenu__nav.c-nav > * {
   flex: 0;
 }
 
 @include g.mq(default) {
-  .#{g.$pr}p-verticalMenu__nav.#{g.$pr}c-nav > * {
+  .p-verticalMenu__nav.c-nav > * {
     flex-basis: calc( 50% - ( var(--spacing-md) / 2 ) );
   }
 }
 
 @include g.mq(wide) {
-  .#{g.$pr}p-verticalMenu__nav.#{g.$pr}c-nav > * {
+  .p-verticalMenu__nav.c-nav > * {
     flex-basis: calc( 33.33% - ( ( var(--spacing-md) * 2 ) / 3 ) );
   }
 }
@@ -37,7 +37,7 @@
 // first-level
 // ------------------------------
 
-.#{g.$pr}p-verticalMenu__nav > .menu-item > a {
+.p-verticalMenu__nav > .menu-item > a {
   position: relative;
   font-size: var(--fontSize-xl);
   font-weight: var(--fontWeight-bold);
@@ -45,7 +45,7 @@
   padding-left: var(--spacing-md );
 }
 
-.#{g.$pr}p-verticalMenu__nav > .menu-item > a::before {
+.p-verticalMenu__nav > .menu-item > a::before {
   @include g.position(absolute, calc( 50% - 0.0625rem ), n, n, 0);
   content: "";
   width: calc( var(--spacing-md) - var(--spacing-xs) );
@@ -58,14 +58,14 @@
 
 @include g.mq(hover) {
 
-  .#{g.$pr}p-verticalMenu__nav > :not(.current-menu-item) > a:hover::before {
+  .p-verticalMenu__nav > :not(.current-menu-item) > a:hover::before {
     transform: scaleX(0.2);
     transition: var(--transition-cubic);
   }
 
 }
 
-.#{g.$pr}p-verticalMenu__nav > .current-menu-item > a::before {
+.p-verticalMenu__nav > .current-menu-item > a::before {
   opacity: 0.3;
   background-color: currentColor;
 }
@@ -76,25 +76,25 @@
 // ------------------------------
 
 // 1.25em = left spacing of arrowed link
-.#{g.$pr}p-verticalMenu__nav > .menu-item > .sub-menu {
+.p-verticalMenu__nav > .menu-item > .sub-menu {
   padding-left: calc( var(--spacing-md) - 1.25em );
 }
 
-.#{g.$pr}p-verticalMenu__nav .sub-menu .menu-item {
+.p-verticalMenu__nav .sub-menu .menu-item {
   margin-top: 1.25em;
 }
 
-.#{g.$pr}p-verticalMenu__nav .sub-menu a {
+.p-verticalMenu__nav .sub-menu a {
   padding-left: 1.25em;
   @include g.arrow();
 }
 
-.#{g.$pr}p-verticalMenu__nav .sub-menu a::before {
+.p-verticalMenu__nav .sub-menu a::before {
   top: calc( ( var(--nav-line-height) * 1em ) / 2 - 0.275em );
   left: 0;
 }
 
-.#{g.$pr}p-verticalMenu__nav .sub-menu .current-menu-item > a {
+.p-verticalMenu__nav .sub-menu .current-menu-item > a {
   @include g.arrow-current();
 }
 
@@ -102,10 +102,10 @@
 // third-level
 // ------------------------------
 
-.#{g.$pr}p-verticalMenu__nav .sub-menu .sub-menu {
+.p-verticalMenu__nav .sub-menu .sub-menu {
   padding-left: 1.25em;
 }
 
-.#{g.$pr}p-verticalMenu__nav .sub-menu > .menu-item:not(:last-child) .sub-menu {
+.p-verticalMenu__nav .sub-menu > .menu-item:not(:last-child) .sub-menu {
   margin-bottom: 1.5em;
 }

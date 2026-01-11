@@ -6,24 +6,24 @@
 //  - 404 page styles.
 // ------------------------------
 
-.#{g.$pr}p-error__title,
-.#{g.$pr}p-error__contents {
+.p-error__title,
+.p-error__contents {
     word-wrap: break-word;
 }
 
-.#{g.$pr}p-error {
+.p-error {
     padding-block: var(--spacing-lg);
 }
 
-.#{g.$pr}p-error > * + * {
+.p-error > * + * {
     margin-top: var(--spacing-md);
 }
 
-// .#{g.$pr}p-error__header {
+// .p-error__header {
 // }
 
-// .#{g.$pr}p-error__title {
+// .p-error__title {
 // }
 
-// .#{g.$pr}p-error__footer {
+// .p-error__footer {
 // }

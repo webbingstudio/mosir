@@ -6,11 +6,11 @@
 //  - Image on the top and content on the bottom.
 // ------------------------------
 
-.#{g.$pr}p-card {
+.p-card {
   position: relative;
 }
 
-.#{g.$pr}p-card::after {
+.p-card::after {
   content: "";
   @include g.position( absolute, -0.25rem, -0.25rem, -0.25rem, -0.25rem, 11 );
   border: 0.125rem solid var(--ui-accent-color);
@@ -18,76 +18,76 @@
   opacity: 0;
 }
 
-.#{g.$pr}p-card__inner {
+.p-card__inner {
   display: block;
   position: relative;
   z-index: 12;
 }
 
-a.#{g.$pr}p-card__inner {
+a.p-card__inner {
     color: currentColor;
 }
 
 @include g.mq(hover) {
 
-  .#{g.$pr}p-card:has(a.#{g.$pr}p-card__inner:hover)::after {
+  .p-card:has(a.p-card__inner:hover)::after {
     opacity: 1;
     transition: var(--transition-slow);
     outline: none;
   }
 
-  a.#{g.$pr}p-card__inner:hover {
+  a.p-card__inner:hover {
     text-decoration: none;
   }
 
-  a.#{g.$pr}p-card__inner:hover .#{g.$pr}p-card__title,
-  a.#{g.$pr}p-card__title:hover {
+  a.p-card__inner:hover .p-card__title,
+  a.p-card__title:hover {
     text-decoration: underline;
   }
 
 }
 
-a.#{g.$pr}p-card__inner .#{g.$pr}p-card__title {
+a.p-card__inner .p-card__title {
   width: 100%;
 }
 
-// .#{g.$pr}p-card__image {
+// .p-card__image {
 // }
 
-.#{g.$pr}p-card__image img {
+.p-card__image img {
   transition: var(--transition-slow);
 }
 
-.#{g.$pr}p-card__contents {
+.p-card__contents {
   @include g.flex( column, n, flex-start, stretch );
   gap: var(--spacing-xs);
   padding: var(--spacing-sm) var(--spacing-xs);
 }
 
-.#{g.$pr}p-card__contents > * {
+.p-card__contents > * {
   margin: 0;
 }
 
-.#{g.$pr}p-card__meta {
+.p-card__meta {
   @include g.flex( n, wrap, flex-start, center );
   gap: var(--spacing-xs) var(--spacing-sm);
   font-size: var(--fontSize-sm);
 }
 
-.#{g.$pr}p-card__meta > * {
+.p-card__meta > * {
   flex-grow: 0;
 }
 
 @include g.mq(hover) {
 
-  a.#{g.$pr}p-card__inner:hover .#{g.$pr}p-card__image img,
-  a.#{g.$pr}p-card__image:hover img {
+  a.p-card__inner:hover .p-card__image img,
+  a.p-card__image:hover img {
     transform: scale( 1.1 );
   }
 
 }
 
-.#{g.$pr}p-card__title.#{g.$pr}c-title {
+.p-card__title.c-title {
     overflow: hidden;
     display: -webkit-box;
     text-overflow: ellipsis;
@@ -96,7 +96,7 @@ a.#{g.$pr}p-card__inner .#{g.$pr}p-card__title {
     max-height: calc( ( var(--lineHeight-md) * 3em ) );
 }
 
-.#{g.$pr}p-card__contents .#{g.$pr}c-summary {
+.p-card__contents .c-summary {
     overflow: hidden;
     display: -webkit-box;
     text-overflow: ellipsis;
@@ -106,18 +106,18 @@ a.#{g.$pr}p-card__inner .#{g.$pr}p-card__title {
 }
 
 // If the content width is narrow, the font size will be reduced.
-.#{g.$pr}p-card__contents {
+.p-card__contents {
   container-type: inline-size;
 }
 
 @container ( width <= 18rem ) {
 
-  .#{g.$pr}p-card__contents .#{g.$pr}c-date,
-  .#{g.$pr}p-card__contents .#{g.$pr}c-summary {
+  .p-card__contents .c-date,
+  .p-card__contents .c-summary {
     font-size: var(--fontSize-xs);
   }
 
-  .#{g.$pr}p-card__contents .#{g.$pr}p-card__title.#{g.$pr}c-title {
+  .p-card__contents .p-card__title.c-title {
     font-size: var(--fontSize-sm);
   }
 

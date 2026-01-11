@@ -3,7 +3,7 @@
 
 // Do not specify a height directly on the page header wrapper element.
 // (as this will leave space above the header)
-.#{g.$pr}p-pageHeader__contents.#{g.$pr}l-container {
+.p-pageHeader__contents.l-container {
   @include g.flex( n, n, center, center );
   min-height: 10rem;
 }
