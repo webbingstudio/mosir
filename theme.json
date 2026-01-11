@@ -2,9 +2,16 @@
 	"$schema": "https://schemas.wp.org/wp/6.7/theme.json",
 	"version": 3,
 	"settings": {
-		"useRootPaddingAwareAlignments": true,
 		"color": {
 			"duotone": [
+				{
+					"colors": [
+						"#333333",
+						"#EEEEEE"
+					],
+					"name": "monochrome",
+					"slug": "monochrome"
+				},
 				{
 					"colors": [
 						"#4A4540",
@@ -28,6 +35,14 @@
 					],
 					"name": "secondary",
 					"slug": "secondary"
+				},
+				{
+					"colors": [
+						"#BC9310",
+						"#F9F0C3"
+					],
+					"name": "tertiary",
+					"slug": "tertiary"
 				}
 			],
 			"palette": [
@@ -108,53 +123,53 @@
 				},
 				{
 					"color": "#BC9310",
-					"name": "warning-dark",
-					"slug": "warning-dark"
+					"name": "tertiary-dark",
+					"slug": "tertiary-dark"
 				},
 				{
 					"color": "#D6AC26",
-					"name": "warning",
-					"slug": "warning"
+					"name": "tertiary",
+					"slug": "tertiary"
 				},
 				{
 					"color": "#edc845",
-					"name": "warning-light",
-					"slug": "warning-light"
+					"name": "tertiary-light",
+					"slug": "tertiary-light"
 				},
 				{
 					"color": "#F4DE80",
-					"name": "warning-lighter",
-					"slug": "warning-lighter"
+					"name": "tertiary-lighter",
+					"slug": "tertiary-lighter"
 				},
 				{
 					"color": "#F9F0C3",
-					"name": "warning-fade",
-					"slug": "warning-fade"
+					"name": "tertiary-fade",
+					"slug": "tertiary-fade"
 				},
 				{
 					"color": "#AC2620",
-					"name": "danger-dark",
-					"slug": "danger-dark"
+					"name": "important-dark",
+					"slug": "important-dark"
 				},
 				{
 					"color": "#D03029",
-					"name": "danger",
-					"slug": "danger"
+					"name": "important",
+					"slug": "important"
 				},
 				{
 					"color": "#E35650",
-					"name": "danger-light",
-					"slug": "danger-light"
+					"name": "important-light",
+					"slug": "important-light"
 				},
 				{
 					"color": "#F08480",
-					"name": "danger-lighter",
-					"slug": "danger-lighter"
+					"name": "important-lighter",
+					"slug": "important-lighter"
 				},
 				{
 					"color": "#F9CCC9",
-					"name": "danger-fade",
-					"slug": "danger-fade"
+					"name": "important-fade",
+					"slug": "important-fade"
 				},
 				{
 					"color": "#FFFFFF",
@@ -322,21 +337,18 @@
 					"slug": "em-large"
 				}
 			]
-		}
+		},
+		"useRootPaddingAwareAlignments": true
 	},
 	"styles": {
-		"color": {
-			"background": "var(--wp--preset--color--mi-white)",
-			"text": "var(--wp--preset--color--mi-default-dark)"
-		},
 		"spacing": {
 			"padding": {
 				"top": "0",
 				"bottom": "0",
-				"left": "var(--wp--preset--font-size--medium)",
-				"right": "var(--wp--preset--font-size--medium)"
+				"left": "calc(clamp(1rem, 0.884vw + 0.793rem, 1.5rem))",
+				"right": "calc(clamp(1rem, 0.884vw + 0.793rem, 1.5rem))"
 			},
-			"blockGap": "var(--wp--preset--font-size--medium)"
+			"blockGap": "calc(clamp(1rem, 0.884vw + 0.793rem, 1.5rem))"
 		}
 	}
 }
