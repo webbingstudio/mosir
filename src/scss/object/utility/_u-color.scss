@@ -1,0 +1,131 @@
+@use "../../global" as g;
+@use "sass:math";
+
+.u-color--default-dark {
+    color: var(--color-default-dark) !important;
+}
+
+.u-color--default {
+    color: var(--color-default) !important;
+}
+
+.u-color--default-light {
+    color: var(--color-default-light) !important;
+}
+
+.u-color--default-lighter {
+    color: var(--color-default-lighter) !important;
+}
+
+.u-color--default-fade {
+    color: var(--color-default-fade) !important;
+}
+
+.u-color--primary-dark {
+    color: var(--color-primary-dark) !important;
+}
+
+.u-color--primary {
+    color: var(--color-primary) !important;
+}
+
+.u-color--primary-light {
+    color: var(--color-primary-light) !important;
+}
+
+.u-color--primary-lighter {
+    color: var(--color-primary-lighter) !important;
+}
+
+.u-color--primary-fade {
+    color: var(--color-primary-fade) !important;
+}
+
+.u-color--secondary-dark {
+    color: var(--color-secondary-dark) !important;
+}
+
+.u-color--secondary {
+    color: var(--color-secondary) !important;
+}
+
+.u-color--secondary-light {
+    color: var(--color-secondary-light) !important;
+}
+
+.u-color--secondary-lighter {
+    color: var(--color-secondary-lighter) !important;
+}
+
+.u-color--secondary-fade {
+    color: var(--color-secondary-fade) !important;
+}
+
+.u-color--tertiary-dark {
+    color: var(--color-tertiary-dark) !important;
+}
+
+.u-color--tertiary {
+    color: var(--color-tertiary) !important;
+}
+
+.u-color--tertiary-light {
+    color: var(--color-tertiary-light) !important;
+}
+
+.u-color--tertiary-lighter {
+    color: var(--color-tertiary-lighter) !important;
+}
+
+.u-color--tertiary-fade {
+    color: var(--color-tertiary-fade) !important;
+}
+
+.u-color--warning-dark {
+    color: var(--color-warning-dark) !important;
+}
+
+.u-color--warning {
+    color: var(--color-warning) !important;
+}
+
+.u-color--warning-light {
+    color: var(--color-warning-light) !important;
+}
+
+.u-color--warning-lighter {
+    color: var(--color-warning-lighter) !important;
+}
+
+.u-color--warning-fade {
+    color: var(--color-warning-fade) !important;
+}
+
+.u-color--danger-dark {
+    color: var(--color-danger-dark) !important;
+}
+
+.u-color--danger {
+    color: var(--color-danger) !important;
+}
+
+.u-color--danger-light {
+    color: var(--color-danger-light) !important;
+}
+
+.u-color--danger-lighter {
+    color: var(--color-danger-lighter) !important;
+}
+
+.u-color--danger-fade {
+    color: var(--color-danger-fade) !important;
+}
+
+.u-color--white {
+    color: var(--color-white) !important;
+}
+
+.u-color--black {
+    color: var(--color-black) !important;
+}
+
