@@ -14,7 +14,7 @@ get_header();
 // ==============================
 if( have_posts() ) :
 ?>
-<section class="p-home-contents p-post p-post--page">
+<section class="p-post p-post--page">
 	<div class="p-post__contents <?php mo_wp_block_class(); ?>">
 	<?php while( have_posts() ) : the_post(); ?>
 		<?php the_content(); ?>
