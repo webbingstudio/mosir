@@ -5,6 +5,10 @@
  * @package mosir
  */
 
+if ( ! defined( '_S_VERSION' ) ) {
+	define( '_S_VERSION', '1.0.0' );
+}
+
 // ==============================
 // Theme setup
 // ==============================
@@ -284,3 +288,29 @@ if ( ! function_exists( 'mo_customize_register' ) ){
 	add_action( 'customize_register', 'mo_customize_register' );
 }
 
+if ( !function_exists( 'mo_widgets_init' ) ) {
+	function mo_widgets_init() {
+		register_sidebar( array(
+			'name' => 'Sidebar (Post)',
+			'id' => 'widget-sidebar-post',
+			'before_widget' => '<div class="p-widget %2$s">',
+			'after_widget' => '</div>',
+		) );
+
+		register_sidebar( array(
+			'name' => 'Bottom of content',
+			'id' => 'widget-main',
+			'before_widget' => '<div class="p-widget %2$s">',
+			'after_widget' => '</div>',
+		) );
+
+		register_sidebar( array(
+			'name' => 'Bottom of drawer',
+			'id' => 'widget-drawer',
+			'before_widget' => '<div class="p-widget %2$s">',
+			'after_widget' => '</div>',
+		) );
+
+	}
+	add_action( 'widgets_init', 'mo_widgets_init' );
+}

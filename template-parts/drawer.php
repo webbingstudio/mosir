@@ -51,6 +51,13 @@ $mo_options_drawer_size = get_theme_mod( 'mo_options_drawer_size', 'slim' );
 				);
 			}
 			?>
+
+			<?php if ( is_active_sidebar( 'widget-drawer' ) ) : ?>
+			<div class="p-widgetArea p-widgetArea--drawer">
+				<?php dynamic_sidebar( 'widget-drawer' ); ?>
+			</div>
+			<?php endif; ?>
+
 			<div class="p-drawer__footer">
 				<button id="mo-drawer-close" class="p-drawer__footer__button c-button" aria-controls="drawer">
 					✕ メニューを閉じる

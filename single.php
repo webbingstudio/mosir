@@ -80,5 +80,12 @@ $mo_next_link = get_next_post_link( '%link', '次: %title' );
 	</div>
 </article>
 <?php endif; ?>
+
+<?php if ( is_active_sidebar( 'widget-sidebar-post' ) ) : ?>
+<div class="p-widgetArea p-widgetArea--sidebar p-widgetArea--sidebar-post">
+	<?php dynamic_sidebar( 'widget-sidebar-post' ); ?>
+</div>
+<?php endif; ?>
+
 <?php
 get_footer();
