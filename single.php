@@ -38,7 +38,7 @@ $mo_next_link = get_next_post_link( '%link', '次: %title' );
 					</p>
 					<?php endif; ?>
 				</div>
-				<h1 class="p-post__title c-title c-title--lv3"><?php echo get_the_title() ? get_the_title() : '(タイトルなし)'; ?></h1>
+				<h1 class="p-post__title c-title c-title--lv2"><?php echo get_the_title() ? get_the_title() : '(タイトルなし)'; ?></h1>
 			</div>
 		</div>
 		<div class="p-post__contents <?php mo_wp_block_class(); ?>">

@@ -63,17 +63,6 @@
     margin-block-start: var(--spacing-xs);
     }
 
-    > blockquote,
-    > table,
-    > ul,
-    > ol,
-    > dl,
-    > pre {
-        & + * {
-            margin-block-start: var(--spacing-md);
-        }
-    }
-
     > blockquote {
         font-size: var(--fontSize-sm);
         padding-left: 2em;
@@ -98,6 +87,54 @@
     > table th,
     > table td {
         border-color: var(--color-default-lighter);
+    }
+
+}
+
+
+// ------------------------------
+// post(blog)
+// ------------------------------
+
+.p-post.p-post--post .wp-block-post-content {
+
+    h2 {
+        font-size: var(--fontSize-xl);
+        padding-bottom: 0.25em;
+        border-bottom: 0.0625rem solid var(--color-primary);
+    }
+
+    h3 {
+        font-size: var(--fontSize-lg);
+        padding-left: 0.5em;
+        border-left: 0.125rem solid var(--color-primary);
+    }
+
+    h4 {
+        font-size: var(--fontSize-lg);
+    }
+
+    > * {
+        + h2 {
+            margin-block-start: var(--spacing-lg);
+        }
+    }
+
+    > * {
+        + h3 {
+            margin-block-start: var(--spacing-md);
+        }
+    }
+
+    > blockquote,
+    > table,
+    > ul,
+    > ol,
+    > dl,
+    > pre {
+        & + * {
+            margin-block-start: var(--spacing-md);
+        }
     }
 
 }

@@ -36,7 +36,6 @@
   @include g.flex( n, wrap, flex-start, center );
   gap: var(--spacing-sm);
   margin-bottom: var(--spacing-xs);
-  font-size: var(--fontSize-sm);
 }
 
 .p-post__header__meta > * {
@@ -71,9 +70,8 @@
     margin-top: var(--spacing-md);
 }
 
-.p-post__footer__tags {
-    font-size: var(--fontSize-sm);
-}
+// .p-post__footer__tags {
+// }
 
 .p-post__footer__tags .c-nav {
     row-gap: var(--spacing-xs);
@@ -119,11 +117,14 @@
     justify-content: flex-end;
 }
 
+.p-post__footer__back {
+    font-size: var(--fontSize-md);
+}
+
 
 // ------------------------------
 // post(blog)
 // ------------------------------
-
 
 .p-post.p-post--post .p-post__header::after {
   border-bottom: 0.0625rem solid var(--border-default-light-color);
