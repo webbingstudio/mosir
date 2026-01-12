@@ -5,7 +5,6 @@
  *
  * @package mosir
  */
-
 $mo_post_type = get_post_type() ? get_post_type() : get_query_var( 'post_type' );
 $mo_post_type_obj = $mo_post_type ? get_post_type_object( $mo_post_type ) : (bool)false;
 
@@ -26,14 +25,18 @@ if( $mo_p4p && $mo_p4p->post_status === 'publish' ){
 <div class="p-pageHeader p-pageHeader--<?php echo esc_attr($mo_p4p_slug); ?>">
     <div class="p-pageHeader__contents l-container">
         <p class="p-pageHeader__title c-title c-title--lv2" <?php language_attributes(); ?>><?php echo esc_attr($mo_p4p_title); ?></p>
-        <p class="p-pageHeader__caption u-color--primary" lang="en-US"><?php echo ucfirst( esc_html($mo_p4p_slug) ); ?></p>
+        <?php if( !preg_match('/^en_/', get_locale() ) ): ?>
+            <p class="p-pageHeader__caption u-color--primary" lang="en-US"><?php echo ucfirst( esc_html($mo_p4p_slug) ); ?></p>
+        <?php endif; ?>
     </div>
 </div>
 <?php elseif ( $mo_post_type_obj && !is_page() && is_single() ): ?>
 <div class="p-pageHeader p-pageHeader--<?php echo esc_attr($mo_post_type_obj->name) ?>">
     <div class="p-pageHeader__contents l-container">
         <p class="p-pageHeader__title c-title c-title--lv2" <?php language_attributes(); ?>><?php esc_html_e($mo_post_type_obj->labels->name); ?></p>
-        <p class="p-pageHeader__caption u-color--primary" lang="en-US"><?php echo ucfirst( esc_html($mo_post_type_obj->name) ); ?></p>
+        <?php if( !preg_match('/^en_/', get_locale() ) ): ?>
+            <p class="p-pageHeader__caption u-color--primary" lang="en-US"><?php echo ucfirst( esc_html($mo_post_type_obj->name) ); ?></p>
+        <?php endif; ?>
     </div>
 </div>
 <?php elseif (
@@ -43,35 +46,42 @@ if( $mo_p4p && $mo_p4p->post_status === 'publish' ){
 <div class="p-pageHeader p-pageHeader--<?php echo esc_attr($mo_p4p_slug); ?>">
     <div class="p-pageHeader__contents l-container">
         <p class="p-pageHeader__title c-title c-title--lv2" <?php language_attributes(); ?>><?php echo esc_attr($mo_p4p_title); ?></p>
-        <p class="p-pageHeader__caption u-color--primary" lang="en-US"><?php echo ucfirst( esc_html($mo_p4p_slug) ); ?></p>
+        <?php if( !preg_match('/^en_/', get_locale() ) ): ?>
+            <p class="p-pageHeader__caption u-color--primary" lang="en-US"><?php echo ucfirst( esc_html($mo_p4p_slug) ); ?></p>
+        <?php endif; ?>
     </div>
 </div>
 <?php elseif ( $mo_post_type_obj && is_archive() ): ?>
 <div class="p-pageHeader p-pageHeader--<?php echo esc_attr($mo_post_type_obj->name) ?>">
     <div class="p-pageHeader__contents l-container">
         <h1 class="p-pageHeader__title c-title c-title--lv2" <?php language_attributes(); ?>><?php esc_html_e($mo_post_type_obj->labels->name); ?></h1>
-        <p class="p-pageHeader__caption u-color--primary" lang="en-US"><?php echo ucfirst( esc_html($mo_post_type_obj->name) ); ?></p>
+        <?php if( !preg_match('/^en_/', get_locale() ) ): ?>
+            <p class="p-pageHeader__caption u-color--primary" lang="en-US"><?php echo ucfirst( esc_html($mo_post_type_obj->name) ); ?></p>
+        <?php endif; ?>
     </div>
 </div>
 <?php elseif ( is_search() ): ?>
 <div class="p-pageHeader p-pageHeader--search">
     <div class="p-pageHeader__contents l-container">
         <h1 class="p-pageHeader__title c-title c-title--lv2" <?php language_attributes(); ?>>検索結果</h1>
-        <p class="p-pageHeader__caption u-color--primary" lang="en-US">Search result</p>
+        <?php if( !preg_match('/^en_/', get_locale() ) ): ?>
+            <p class="p-pageHeader__caption u-color--primary" lang="en-US">Search result</p>
+        <?php endif; ?>
     </div>
 </div>
 <?php elseif ( is_404() ): ?>
 <div class="p-pageHeader p-pageHeader--error">
     <div class="p-pageHeader__contents l-container">
-        <h1 class="p-pageHeader__title c-title c-title--lv2" <?php language_attributes(); ?>>Not found</h1>
-        <p class="p-pageHeader__caption u-color--primary" lang="en-US">404 not found</p>
+        <h1 class="p-pageHeader__title c-title c-title--lv2" <?php language_attributes(); ?>>404 Not found</h1>
     </div>
 </div>
 <?php elseif ( !is_front_page() && is_page() ): ?>
 <div class="p-pageHeader p-pageHeader--page">
     <div class="p-pageHeader__contents l-container">
         <h1 class="p-pageHeader__title c-title c-title--lv2" <?php language_attributes(); ?>><?php the_title(); ?></h1>
-        <p class="p-pageHeader__caption u-color--primary" lang="en-US"><?php echo ucfirst( esc_html($post->post_name) ); ?></p>
+        <?php if( !preg_match('/^en/', get_locale() ) ): ?>
+            <p class="p-pageHeader__caption u-color--primary" lang="en-US"><?php echo ucfirst( esc_html($post->post_name) ); ?></p>
+        <?php endif; ?>
     </div>
 </div>
 <?php endif; ?>
