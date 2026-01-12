@@ -18,7 +18,7 @@
 			<?php endif; ?>
 		</figure>
 		<div class="p-media__contents">
-			<p class="p-media__title c-title"><?php the_title(); ?></p>
+			<p class="p-media__title c-title"><?php echo get_the_title() ? esc_html( get_the_title() ) : '(タイトルなし)'; ?></p>
 		</div>
 	</a>
 </article>

@@ -11,7 +11,7 @@
 	<a class="p-media__inner" href="<?php the_permalink(); ?>">
 		<figure class="p-media__image c-picture c-picture--1to1">
 			<?php if ( has_post_thumbnail() ) : ?>
-				<?php the_post_thumbnail( 'thumbnail' ); ?>
+				<?php the_post_thumbnail( 'medium' ); ?>
 			<?php else : ?>
 				<img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/common/noimage.jpg' ) ); ?>" alt="">
 			<?php endif; ?>
@@ -37,7 +37,7 @@
 					<?php endif; ?>
 				<?php endif; ?>
 			</div>
-			<p class="p-media__title c-title"><?php the_title(); ?></p>
+			<p class="p-media__title c-title"><?php echo get_the_title() ? esc_html( get_the_title() ) : '(タイトルなし)'; ?></p>
 		</div>
 	</a>
 </article>

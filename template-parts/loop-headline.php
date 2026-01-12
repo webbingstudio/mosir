@@ -32,7 +32,7 @@
             <?php endif; ?>
         </div>
 		<div class="p-headline__contents">
-			<p class="p-headline__title c-title"><?php the_title(); ?></p>
+			<p class="p-headline__title c-title"><?php echo get_the_title() ? esc_html( get_the_title() ) : '(タイトルなし)'; ?></p>
 		</div>
     </a>
 </article>

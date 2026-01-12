@@ -19,7 +19,7 @@
 			<?php endif; ?>
 		</figure>
 		<div class="p-card__contents">
-			<p class="p-card__title c-title"><?php the_title(); ?></p>
+			<p class="p-card__title c-title"><?php echo get_the_title() ? esc_html( get_the_title() ) : '(タイトルなし)'; ?></p>
 			<p class="c-summary"><?php echo esc_html( get_the_excerpt() ); ?></p>
 		</div>
 	</a>
