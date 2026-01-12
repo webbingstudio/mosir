@@ -73,8 +73,8 @@
   --body-color: var(--color-default-dark);
   --body-bg: var(--color-white);
   --body-letterSpacing: 0.02em;
-  --link-default-color: var(--color-primary-dark);
-  --link-hover-color: var(--color-primary-dark);
+  --link-default-color: var(--color-primary);
+  --link-hover-color: var(--color-primary);
   --ui-default-color: var(--color-default-dark);
   --ui-inverse-color: var(--color-white);
   --ui-accent-color: var(--color-primary);
@@ -1292,7 +1292,7 @@ a.p-card__inner .p-card__title {
 @container ( width <= 40rem ) {
   .p-cardList > * {
     flex-grow: 1;
-    width: auto;
+    width: 100%;
   }
 }
 .p-drawer {
@@ -3561,6 +3561,54 @@ a.p-media__inner {
   left: 0;
 }
 
+:root :where(.wp-element-button, .wp-block-button__link) {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  min-height: var(--nav-height);
+  padding: 0 var(--spacing-sm);
+  background-color: var(--ui-accent-color);
+  border: 0.125rem solid var(--ui-accent-color);
+  border-radius: 99em;
+  color: var(--ui-inverse-color);
+  font-size: var(--fontSize-md);
+  letter-spacing: 0.1em;
+  font-weight: var(--fontWeight-bold);
+  line-height: var(--lineHeight-none);
+  transition: var(--transition-fast);
+  white-space: nowrap;
+}
+
+:root :where(.wp-element-button, .wp-block-button__link):hover,
+:root :where(.wp-element-button, .wp-block-button__link):focus {
+  color: var(--ui-default-color);
+  background-color: var(--ui-inverse-color);
+  text-decoration: none;
+}
+
+:root :where(.wp-element-button.is-style-outline, .is-style-outline > .wp-block-button__link) {
+  background-color: var(--ui-inverse-color);
+  color: var(--ui-default-color);
+}
+
+:root :where(.wp-element-button.is-style-outline, .is-style-outline > .wp-block-button__link):hover,
+:root :where(.wp-element-button.is-style-outline, .is-style-outline > .wp-block-button__link):focus {
+  color: var(--ui-inverse-color);
+  background-color: var(--ui-accent-color);
+  text-decoration: none;
+}
+
+.wp-block-file:not(.wp-element-button) {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
 .wp-block-post-content {
   overflow-wrap: anywhere;
   word-break: normal;
@@ -3640,38 +3688,9 @@ a.p-media__inner {
   border-color: var(--color-default-lighter);
 }
 
-:root :where(.wp-element-button, .wp-block-button__link) {
-  min-height: var(--nav-height);
-  padding: 0 var(--spacing-sm);
-  background-color: var(--ui-accent-color);
-  border: 0.125rem solid var(--ui-accent-color);
-  border-radius: 99em;
-  color: var(--ui-inverse-color);
-  font-size: var(--fontSize-md);
-  letter-spacing: 0.1em;
-  font-weight: var(--fontWeight-bold);
-  line-height: var(--lineHeight-none);
-  transition: var(--transition-fast);
-  white-space: nowrap;
-}
-
-:root :where(.wp-element-button, .wp-block-button__link):hover,
-:root :where(.wp-element-button, .wp-block-button__link):focus {
-  color: var(--ui-default-color);
-  background-color: var(--ui-inverse-color);
-  text-decoration: none;
-}
-
-:root :where(.wp-element-button.is-style-outline, .is-style-outline > .wp-block-button__link) {
-  background-color: var(--ui-inverse-color);
-  color: var(--ui-default-color);
-}
-
-:root :where(.wp-element-button.is-style-outline, .is-style-outline > .wp-block-button__link):hover,
-:root :where(.wp-element-button.is-style-outline, .is-style-outline > .wp-block-button__link):focus {
-  color: var(--ui-inverse-color);
-  background-color: var(--ui-accent-color);
-  text-decoration: none;
+.wp-block-query ul {
+  list-style-type: none;
+  padding-left: 0;
 }
 
 .wp-paginate {

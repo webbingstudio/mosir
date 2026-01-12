@@ -1,0 +1,7 @@
+@use "../global" as g;
+@use "sass:math";
+
+.wp-block-file:not(.wp-element-button) {
+    @include g.flex( n, n, flex-start, center );
+    gap: var(--spacing-xs);
+}

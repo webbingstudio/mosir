@@ -2,6 +2,7 @@
 @use "sass:math";
 
 :root :where(.wp-element-button, .wp-block-button__link) {
+    @include g.flex( n, n, center, center );
     min-height: var(--nav-height);
     padding: 0 var(--spacing-sm);
     background-color: var(--ui-accent-color);

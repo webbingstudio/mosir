@@ -1,0 +1,7 @@
+@use "../global" as g;
+@use "sass:math";
+
+.wp-block-query ul {
+    list-style-type: none;
+    padding-left: 0;
+}

@@ -42,6 +42,6 @@
 @container ( width <= 40rem ) {
   .p-cardList > * {
     flex-grow: 1;
-    width: auto;
+    width: 100%;
   }
 }
