@@ -2056,7 +2056,6 @@ a.p-media__inner {
   align-items: center;
   gap: var(--spacing-sm);
   margin-bottom: var(--spacing-xs);
-  font-size: var(--fontSize-sm);
 }
 
 .p-post__header__meta > * {
@@ -2087,10 +2086,6 @@ a.p-media__inner {
 
 .p-post__footer__contents > * + * {
   margin-top: var(--spacing-md);
-}
-
-.p-post__footer__tags {
-  font-size: var(--fontSize-sm);
 }
 
 .p-post__footer__tags .c-nav {
@@ -2137,6 +2132,10 @@ a.p-media__inner {
 
 .p-post__footer__link .c-nav__item.p-post__footer__prev a {
   justify-content: flex-end;
+}
+
+.p-post__footer__back {
+  font-size: var(--fontSize-md);
 }
 
 .p-post.p-post--post .p-post__header::after {
@@ -3658,14 +3657,6 @@ a.p-media__inner {
 .wp-block-post-content li ol {
   margin-block-start: var(--spacing-xs);
 }
-.wp-block-post-content > blockquote + *,
-.wp-block-post-content > table + *,
-.wp-block-post-content > ul + *,
-.wp-block-post-content > ol + *,
-.wp-block-post-content > dl + *,
-.wp-block-post-content > pre + * {
-  margin-block-start: var(--spacing-md);
-}
 .wp-block-post-content > blockquote {
   font-size: var(--fontSize-sm);
   padding-left: 2em;
@@ -3686,6 +3677,34 @@ a.p-media__inner {
 .wp-block-post-content > table th,
 .wp-block-post-content > table td {
   border-color: var(--color-default-lighter);
+}
+
+.p-post.p-post--post .wp-block-post-content h2 {
+  font-size: var(--fontSize-xl);
+  padding-bottom: 0.25em;
+  border-bottom: 0.0625rem solid var(--color-primary);
+}
+.p-post.p-post--post .wp-block-post-content h3 {
+  font-size: var(--fontSize-lg);
+  padding-left: 0.5em;
+  border-left: 0.125rem solid var(--color-primary);
+}
+.p-post.p-post--post .wp-block-post-content h4 {
+  font-size: var(--fontSize-lg);
+}
+.p-post.p-post--post .wp-block-post-content > * + h2 {
+  margin-block-start: var(--spacing-lg);
+}
+.p-post.p-post--post .wp-block-post-content > * + h3 {
+  margin-block-start: var(--spacing-md);
+}
+.p-post.p-post--post .wp-block-post-content > blockquote + *,
+.p-post.p-post--post .wp-block-post-content > table + *,
+.p-post.p-post--post .wp-block-post-content > ul + *,
+.p-post.p-post--post .wp-block-post-content > ol + *,
+.p-post.p-post--post .wp-block-post-content > dl + *,
+.p-post.p-post--post .wp-block-post-content > pre + * {
+  margin-block-start: var(--spacing-md);
 }
 
 .wp-block-query ul {
