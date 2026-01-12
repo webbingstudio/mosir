@@ -51,7 +51,7 @@ const moDrawerToggle = function() {
             // If the window is resized, close the drawer.
             window.addEventListener('resize', () => {
                 mo_queue = setTimeout(() => {
-                    clearTimeout(mi_queue);
+                    clearTimeout(mo_queue);
                     toggle.setAttribute('aria-expanded', 'false');
                     nav.setAttribute('aria-hidden', 'true');
                     nav.setAttribute('inert', 'inert');

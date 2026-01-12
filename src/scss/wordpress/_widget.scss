@@ -1,0 +1,65 @@
+@use "../global" as g;
+@use "sass:math";
+
+.widget > .wp-block-group > p:first-child,
+.widget > .wp-block-group > h2:first-child,
+.widget > .wp-block-group > h3:first-child,
+.widget > .wp-block-group > h4:first-child {
+    font-size: var(--fontSize-lg);
+    font-weight: var(--fontWeight-bold);
+    margin-bottom: 1em;
+}
+
+.widget [class*="wp-block-latest-"] {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.widget [class*="wp-block-latest-"] li {
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.widget [class*="wp-block-latest-"] li + li {
+    margin-top: var(--spacing-xs);
+    padding-top: var(--spacing-xs);
+    border-top: 0.0625rem solid var(--border-default-light-color);
+}
+
+.widget .wp-block-categories-list {
+    padding-left: 0;
+    list-style-type: none;
+    line-height: var(--lineHeight-sm);
+}
+
+.widget .wp-block-categories-list ul {
+    padding-left: 1.5em;
+    list-style-type: none;
+}
+
+.widget .wp-block-categories-list li + li {
+    margin-top: 0.5em;
+}
+
+.widget .wp-block-categories-list li ul {
+    margin-block: 0.5em;
+}
+
+.widget .wp-block-categories-list a {
+    color: var(--ui-default-color);
+    padding-left: 1.25em;
+    @include g.arrow();
+}
+
+@include g.mq(hover) {
+
+    .widget .wp-block-categories-list a:hover {
+        text-decoration-line: underline;
+    }
+
+}
+
+.widget .wp-block-categories-list a::before {
+    top: calc( ( var(--lineHeight-sm) * 1em ) / 2 - 0.275em );
+    left: 0;
+}

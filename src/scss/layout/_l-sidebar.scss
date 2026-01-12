@@ -1,3 +1,6 @@
 @use "../global" as g;
 @use "sass:math";
 
+.l-sidebar {
+    padding-top: var(--spacing-lg);
+}

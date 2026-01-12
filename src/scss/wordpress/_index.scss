@@ -1,4 +1,6 @@
+@use "_post-password-form";
+@use "_search-form";
+@use "_widget";
 @use "_wp-block-post-content";
 @use "_wp-block-button";
 @use "_wp-paginate";
-@use "_search-form";

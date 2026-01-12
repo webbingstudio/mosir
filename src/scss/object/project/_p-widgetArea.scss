@@ -1,0 +1,45 @@
+@use "../../global" as g;
+@use "sass:math";
+
+// ------------------------------
+// project > widgetArea
+//  - Repeatedly displaying an unspecified number of widgets.
+//  - When the window size increases, .p-widgetArea--main becomes a multi-column layout.
+// ------------------------------
+
+.p-widgetArea {
+    container-type: inline-size;
+    container-name: widget-area;
+}
+
+.p-widgetArea__inner {
+    @include g.flex( row, wrap, flex-start, n );
+    gap: var(--spacing-xl) var(--spacing-md);
+    width: 100%;
+    max-width: calc( var(--container-wide-width) + ( var(--screen-x-spacing) * 2 ) );
+    padding-inline: var(--screen-x-spacing);
+    margin-inline: auto;
+}
+
+.p-widgetArea__inner > * {
+    flex-grow: 0;
+    flex-basis: 100%;
+}
+
+@container widget-area ( width >= 47rem ) {
+    .p-widgetArea.p-widgetArea--sidebar .p-widgetArea__inner > * {
+        flex-basis: calc( 50% - ( var(--spacing-md) / 2 ) );
+    }
+}
+
+@container widget-area ( width >= 63rem ) {
+    .p-widgetArea.p-widgetArea--sidebar .p-widgetArea__inner > * {
+        flex-basis: calc( 33.33% - ( var(--spacing-md) * 2 / 3 ) );
+    }
+}
+
+@container widget-area ( width >= 96rem ) {
+    .p-widgetArea.p-widgetArea--sidebar .p-widgetArea__inner > * {
+        flex-basis: calc( 25% - ( var(--spacing-md) * 3 / 4 ) );
+    }
+}

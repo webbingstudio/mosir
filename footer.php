@@ -7,9 +7,12 @@
 
 $mo_options_copyright = get_theme_mod( 'mo_options_copyright', (bool)false );
 ?>
+
 <?php if ( is_active_sidebar( 'widget-main' ) ) : ?>
-<div class="p-widgetArea p-widgetArea--main">
-	<?php dynamic_sidebar( 'widget-main' ); ?>
+<div class="u-p--t-xl u-p--b-xl p-widgetArea p-widgetArea--main">
+	<div class="p-widgetArea__inner">
+		<?php dynamic_sidebar( 'widget-main' ); ?>
+	</div>
 </div>
 <?php endif; ?>
 

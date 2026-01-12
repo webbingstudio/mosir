@@ -11,13 +11,22 @@
   padding-top: var(--spacing-lg);
 }
 
+.l-footer__contents::before {
+  display: block;
+  content: "";
+  max-width: var(--container-wide-width);
+  margin-inline: calc( var(--screen-x-spacing) * -1 );
+  border-bottom: 0.0625rem solid var(--border-default-light-color);
+  margin-bottom: var(--spacing-md);
+}
+
 .l-footer__contents > *::after {
   display: block;
   content: "";
   max-width: var(--container-wide-width);
-  margin-top: var(--spacing-md);
   margin-inline: calc( var(--screen-x-spacing) * -1 );
   border-bottom: 0.0625rem solid var(--border-default-light-color);
+  margin-top: var(--spacing-md);
 }
 
 .l-footer__contents > * + * {

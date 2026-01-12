@@ -53,8 +53,10 @@ $mo_options_drawer_size = get_theme_mod( 'mo_options_drawer_size', 'slim' );
 			?>
 
 			<?php if ( is_active_sidebar( 'widget-drawer' ) ) : ?>
-			<div class="p-widgetArea p-widgetArea--drawer">
-				<?php dynamic_sidebar( 'widget-drawer' ); ?>
+			<div class="u-p--t-xl p-widgetArea p-widgetArea--drawer">
+				<div class="p-widgetArea__inner">
+					<?php dynamic_sidebar( 'widget-drawer' ); ?>
+				</div>
 			</div>
 			<?php endif; ?>
 
