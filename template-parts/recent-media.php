@@ -18,7 +18,9 @@ $mo_q = new WP_Query( $mo_args );
 <section class="u-p--t-xl u-p--b-xl p-section">
     <div class="p-section__header">
         <p class="p-section__title c-title c-title--center c-title--lv2 <?php language_attributes(); ?>">画像とテキスト</p>
-        <p class="p-section__subTitle c-title c-title--center c-title--lv5 u-color--primary" lang="en-US">Media</p>
+        <?php if( !preg_match('/^en_/', get_locale() ) ): ?>
+            <p class="p-section__subTitle c-title c-title--center c-title--lv5 u-color--primary" lang="en-US">Media</p>
+        <?php endif; ?>
     </div>
     <div class="p-section__contents l-container l-container--sm">
         <div class="p-mediaList">
