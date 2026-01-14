@@ -22,7 +22,8 @@ $mos_next_link = get_next_post_link( '%link', '次: %title' );
 <?php get_template_part( 'template-parts/pageHeader' ); ?>
 <div class="l-content">
 
-	<?php if( have_posts() ) : ?>
+<?php if( have_posts() ) : ?>
+<?php while( have_posts() ) : the_post(); ?>
 	<article class="p-<?php echo esc_attr($mos_post_type); ?>-contents p-post p-post--<?php echo esc_attr($mos_post_type); ?>">
 		<div class="p-post__header">
 			<div class="p-post__header__contents l-container l-container--sm">
@@ -42,9 +43,7 @@ $mos_next_link = get_next_post_link( '%link', '次: %title' );
 			</div>
 		</div>
 		<div class="p-post__contents <?php mos_wp_block_class(); ?>">
-		<?php while( have_posts() ) : the_post(); ?>
 			<?php the_content(); ?>
-		<?php endwhile; ?>
 		</div>
 		<div class="p-post__footer">
 			<div class="p-post__footer__contents l-container l-container--sm">
@@ -81,15 +80,21 @@ $mos_next_link = get_next_post_link( '%link', '次: %title' );
 			</div>
 		</div>
 	</article>
+
+	<?php if ( comments_open() || get_comments_number() ) : ?>
+		<?php comments_template(); ?>
 	<?php endif; ?>
 
-	<?php if ( is_active_sidebar( 'widget-main-post' ) ) : ?>
+<?php endwhile; ?>
+<?php endif; ?>
+
+<?php if ( is_active_sidebar( 'widget-main-post' ) ) : ?>
 	<div class="u-p--b-xl p-widgetArea p-widgetArea--main p-widgetArea--main-post">
 		<div class="p-widgetArea__inner">
 			<?php dynamic_sidebar( 'widget-main-post' ); ?>
 		</div>
 	</div>
-	<?php endif; ?>
+<?php endif; ?>
 
 </div>
 <?php get_sidebar(); ?>

@@ -14,13 +14,18 @@ get_header();
 // ==============================
 if( have_posts() ) :
 ?>
-<section class="p-post p-post--page">
-	<div class="p-post__contents <?php mos_wp_block_class(); ?>">
-	<?php while( have_posts() ) : the_post(); ?>
-		<?php the_content(); ?>
-	<?php endwhile; ?>
-	</div>
-</section>
+<?php while( have_posts() ) : the_post(); ?>
+	<section class="p-post p-post--page">
+		<div class="p-post__contents <?php mos_wp_block_class(); ?>">
+			<?php the_content(); ?>
+		</div>
+	</section>
+
+	<?php if ( comments_open() || get_comments_number() ) : ?>
+		<?php comments_template(); ?>
+	<?php endif; ?>
+
+<?php endwhile; ?>
 <?php endif; ?>
 
 <?php get_template_part( 'template-parts/recent', 'headline' ); ?>

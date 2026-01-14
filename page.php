@@ -11,15 +11,20 @@ $mos_post_type = get_post_type();
 ?>
 <?php get_template_part( 'template-parts/pageHeader' ); ?>
 <div class="l-content">
-	<?php if( have_posts() ) : ?>
+<?php if( have_posts() ) : ?>
+<?php while( have_posts() ) : the_post(); ?>
 	<div class="p-<?php echo esc_attr($mos_post_type); ?>-contents p-post p-post--<?php echo esc_attr($mos_post_type); ?>">
 		<div class="p-post__contents <?php mos_wp_block_class(); ?>">
-		<?php while( have_posts() ) : the_post(); ?>
 			<?php the_content(); ?>
-		<?php endwhile; ?>
 		</div>
 	</div>
+
+	<?php if ( comments_open() || get_comments_number() ) : ?>
+		<?php comments_template(); ?>
 	<?php endif; ?>
+
+<?php endwhile; ?>
+<?php endif; ?>
 </div>
 <?php
 get_footer();
