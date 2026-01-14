@@ -73,7 +73,6 @@ a.p-card__inner .p-card__title {
 .p-card__meta {
   @include g.flex( n, wrap, flex-start, center );
   gap: var(--spacing-xs) var(--spacing-sm);
-  font-size: var(--fontSize-sm);
 }
 
 .p-card__meta > * {
@@ -85,7 +84,7 @@ a.p-card__inner .p-card__title {
 }
 
 .p-card__terms .c-label {
-  font-size: var(--fontSize-xs);
+  font-size: var(--fontSize-sm);
 }
 
 @include g.mq(hover) {
@@ -120,7 +119,7 @@ a.p-card__inner .p-card__title {
 
   .p-card__contents .c-date,
   .p-card__contents .c-summary {
-    font-size: var(--fontSize-xs);
+    font-size: var(--fontSize-sm);
   }
 
   .p-card__contents .p-card__title.c-title {

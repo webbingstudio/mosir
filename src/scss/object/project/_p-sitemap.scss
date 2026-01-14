@@ -63,6 +63,7 @@
 // ------------------------------
 
 .p-sitemap__nav > .menu-item > a {
+  font-size: var(--fontSize-lg);
   font-weight: var(--fontWeight-bold);
 }
 
@@ -72,7 +73,7 @@
 
 .p-sitemap__nav .sub-menu {
   padding-left: 1.25em;
-  font-size: var(--fontSize-sm);
+  font-size: var(--fontSize-md);
 }
 
 .p-sitemap__nav .sub-menu .menu-item {
@@ -85,6 +86,6 @@
 
 .p-sitemap__nav .sub-menu > .menu-item:not(:last-child) .sub-menu {
   margin-bottom: 1.5em;
-  font-size: var(--fontSize-xs);
+  font-size: var(--fontSize-sm);
 }
 

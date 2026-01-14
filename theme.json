@@ -277,11 +277,6 @@
 			"writingMode": false,
 			"fontSizes": [
 				{
-					"name": "2XS (10-11)",
-					"size": "calc(clamp(0.625rem, 0.11vw + 0.599rem, 0.688rem))",
-					"slug": "2-x-small"
-				},
-				{
 					"name": "XS (10-12)",
 					"size": "calc(clamp(0.625rem, 0.221vw + 0.573rem, 0.75rem))",
 					"slug": "x-small"

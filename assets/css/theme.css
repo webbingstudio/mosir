@@ -32,7 +32,6 @@
   --color-important-fade: var(--wp--preset--color--important-fade);
   --color-white: var(--wp--preset--color--white);
   --color-black: var(--wp--preset--color--black);
-  --fontSize-2xs: var(--wp--preset--font-size--2-x-small);
   --fontSize-xs: var(--wp--preset--font-size--x-small);
   --fontSize-sm: var(--wp--preset--font-size--small);
   --fontSize-md: var(--wp--preset--font-size--medium);
@@ -811,12 +810,12 @@ body.home.page .l-main > *:first-child {
   align-items: center;
   vertical-align: middle;
   padding-inline: 0.25em;
-  min-width: 8em;
+  min-width: 7em;
   min-height: calc(var(--lineHeight-md) * 1em);
   background-color: var(--color-default-light);
   border: 0.125rem solid var(--color-default-light);
   color: var(--ui-inverse-color);
-  font-size: var(--fontSize-2xs);
+  font-size: var(--fontSize-xs);
   line-height: var(--lineHeight-xs);
   text-align: center;
   vertical-align: middle;
@@ -1198,7 +1197,6 @@ a.p-card__inner .p-card__title {
   justify-content: flex-start;
   align-items: center;
   gap: var(--spacing-xs) var(--spacing-sm);
-  font-size: var(--fontSize-sm);
 }
 
 .p-card__meta > * {
@@ -1213,7 +1211,7 @@ a.p-card__inner .p-card__title {
 }
 
 .p-card__terms .c-label {
-  font-size: var(--fontSize-xs);
+  font-size: var(--fontSize-sm);
 }
 
 @media (any-hover: hover) {
@@ -1243,7 +1241,7 @@ a.p-card__inner .p-card__title {
 @container ( width <= 18rem ) {
   .p-card__contents .c-date,
   .p-card__contents .c-summary {
-    font-size: var(--fontSize-xs);
+    font-size: var(--fontSize-sm);
   }
   .p-card__contents .p-card__title.c-title {
     font-size: var(--fontSize-sm);
@@ -1637,7 +1635,6 @@ a.p-headline__inner {
   justify-content: flex-start;
   -moz-column-gap: var(--spacing-md);
        column-gap: var(--spacing-md);
-  font-size: var(--fontSize-sm);
 }
 @media screen and (min-width: 768px) {
   .p-horizontalMenu__nav.c-nav {
@@ -1741,7 +1738,7 @@ a.p-headline__inner {
 .p-media__inner {
   position: relative;
   display: grid;
-  grid-template-columns: min(10rem, 25%) 1fr;
+  grid-template-columns: clamp(5rem, 25%, 30rem) 1fr;
   z-index: 12;
 }
 
@@ -1788,7 +1785,6 @@ a.p-media__inner {
 
 .p-media__contents:has(.p-media__meta) {
   justify-content: flex-start;
-  padding-top: var(--spacing-xs);
 }
 
 .p-media__meta {
@@ -1797,7 +1793,7 @@ a.p-media__inner {
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
-  gap: var(--spacing-sm);
+  gap: var(--spacing-xs) var(--spacing-sm);
   font-size: var(--fontSize-sm);
 }
 
@@ -1806,12 +1802,16 @@ a.p-media__inner {
 }
 
 .p-media__title.c-title {
+  overflow-wrap: anywhere;
+  word-break: normal;
+  line-break: strict;
   overflow: hidden;
   display: -webkit-box;
   text-overflow: ellipsis;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
-  max-height: calc(var(--lineHeight-md) * 3em);
+  -webkit-line-clamp: 5;
+  max-height: calc(var(--lineHeight-md) * 5em);
+  font-size: var(--fontSize-lg);
 }
 
 @media (any-hover: hover) {
@@ -1821,11 +1821,10 @@ a.p-media__inner {
   }
 }
 @container ( width <= 30rem ) {
-  .p-media__contents .c-date {
-    font-size: var(--fontSize-xs);
-  }
   .p-media__contents .p-media__title.c-title {
-    font-size: var(--fontSize-sm);
+    -webkit-line-clamp: 3;
+    max-height: calc(var(--lineHeight-md) * 3em);
+    font-size: var(--fontSize-md);
   }
 }
 .p-mediaList {
@@ -1834,7 +1833,7 @@ a.p-media__inner {
   flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: stretch;
-  gap: var(--spacing-sm);
+  gap: var(--spacing-md);
 }
 
 .p-sectionHeader + .p-mediaList {
@@ -2309,12 +2308,13 @@ a.p-media__inner {
 }
 
 .p-sitemap__nav > .menu-item > a {
+  font-size: var(--fontSize-lg);
   font-weight: var(--fontWeight-bold);
 }
 
 .p-sitemap__nav .sub-menu {
   padding-left: 1.25em;
-  font-size: var(--fontSize-sm);
+  font-size: var(--fontSize-md);
 }
 
 .p-sitemap__nav .sub-menu .menu-item {
@@ -2323,7 +2323,7 @@ a.p-media__inner {
 
 .p-sitemap__nav .sub-menu > .menu-item:not(:last-child) .sub-menu {
   margin-bottom: 1.5em;
-  font-size: var(--fontSize-xs);
+  font-size: var(--fontSize-sm);
 }
 
 .p-siteTitle {

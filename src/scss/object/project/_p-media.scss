@@ -21,7 +21,7 @@
 .p-media__inner {
   position: relative;
   display: grid;
-  grid-template-columns: min( 10rem, 25% ) 1fr;
+  grid-template-columns: clamp( 5rem, 25%, 30rem ) 1fr;
   z-index: 12;
 }
 
@@ -70,12 +70,11 @@ a.p-media__inner {
 // If meta is included, it is aligned top.
 .p-media__contents:has(.p-media__meta) {
   justify-content: flex-start;
-  padding-top: var(--spacing-xs);
 }
 
 .p-media__meta {
   @include g.flex( n, wrap, flex-start, center );
-  gap: var(--spacing-sm);
+  gap: var(--spacing-xs) var(--spacing-sm);
   font-size: var(--fontSize-sm);
 }
 
@@ -84,12 +83,16 @@ a.p-media__inner {
 }
 
 .p-media__title.c-title {
+  overflow-wrap: anywhere;
+  word-break: normal;
+  line-break: strict;
   overflow: hidden;
   display: -webkit-box;
   text-overflow: ellipsis;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
-  max-height: calc( ( var(--lineHeight-md) * 3em ) );
+  -webkit-line-clamp: 5;
+  max-height: calc( ( var(--lineHeight-md) * 5em ) );
+  font-size: var(--fontSize-lg);
 }
 
 @include g.mq(hover) {
@@ -104,12 +107,10 @@ a.p-media__inner {
 // If the content width is narrow, the font size will be reduced.
 @container ( width <= 30rem ) {
 
-  .p-media__contents .c-date {
-    font-size: var(--fontSize-xs);
-  }
-
   .p-media__contents .p-media__title.c-title {
-    font-size: var(--fontSize-sm);
+    -webkit-line-clamp: 3;
+    max-height: calc( ( var(--lineHeight-md) * 3em ) );
+    font-size: var(--fontSize-md);
   }
 
 }

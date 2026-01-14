@@ -12,7 +12,6 @@
   flex-wrap: wrap;
   justify-content: flex-start;
   column-gap: var(--spacing-md);
-  font-size: var(--fontSize-sm);
 
   @include g.mq(default) {
     justify-content: center;
