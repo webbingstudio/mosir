@@ -60,18 +60,6 @@ endif;
 add_action( 'wp_enqueue_scripts', 'mo_enqueue_styles' );
 
 
-if ( !function_exists( 'mo_head' ) ){
-	function mo_head() {
-?>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
-<?php
-	}
-	add_action( 'wp_head', 'mo_head', 10 );
-}
-
-
 if ( ! function_exists( 'mo_enqueue_scripts' ) ) :
 	/**
 	 * Enqueues theme.css on the front.

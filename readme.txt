@@ -1,12 +1,12 @@
 === mosir ===
 Contributors: webbingstudio
 Requires at least: 6.7
-Tested up to: 6.8.2
+Tested up to: 6.9
 Requires PHP: 8.1
 Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
-Tags: custom-colors, featured-images, sticky-post, wide-blocks, blog
+Tags: accessibility-ready, custom-colors, custom-logo, custom-menu, featured-images, one-column, sticky-post, wide-blocks, theme-options, editor-style, blog, news
 
 == Description ==
 "mosir" (mo-shi-ri) is a hybrid theme suitable for website management by organized teams. Main features: Coding with long-term operation in mind / High accessibility / Block editor support / Various navigation patterns / CSS variable management linked to "theme.json".
