@@ -1,0 +1,131 @@
+@use "../../global" as g;
+@use "sass:math";
+
+.u-bg--default-dark {
+    background-color: var(--color-default-dark) !important;
+}
+
+.u-bg--default {
+    background-color: var(--color-default) !important;
+}
+
+.u-bg--default-light {
+    background-color: var(--color-default-light) !important;
+}
+
+.u-bg--default-lighter {
+    background-color: var(--color-default-lighter) !important;
+}
+
+.u-bg--default-fade {
+    background-color: var(--color-default-fade) !important;
+}
+
+.u-bg--primary-dark {
+    background-color: var(--color-primary-dark) !important;
+}
+
+.u-bg--primary {
+    background-color: var(--color-primary) !important;
+}
+
+.u-bg--primary-light {
+    background-color: var(--color-primary-light) !important;
+}
+
+.u-bg--primary-lighter {
+    background-color: var(--color-primary-lighter) !important;
+}
+
+.u-bg--primary-fade {
+    background-color: var(--color-primary-fade) !important;
+}
+
+.u-bg--secondary-dark {
+    background-color: var(--color-secondary-dark) !important;
+}
+
+.u-bg--secondary {
+    background-color: var(--color-secondary) !important;
+}
+
+.u-bg--secondary-light {
+    background-color: var(--color-secondary-light) !important;
+}
+
+.u-bg--secondary-lighter {
+    background-color: var(--color-secondary-lighter) !important;
+}
+
+.u-bg--secondary-fade {
+    background-color: var(--color-secondary-fade) !important;
+}
+
+.u-bg--tertiary-dark {
+    background-color: var(--color-tertiary-dark) !important;
+}
+
+.u-bg--tertiary {
+    background-color: var(--color-tertiary) !important;
+}
+
+.u-bg--tertiary-light {
+    background-color: var(--color-tertiary-light) !important;
+}
+
+.u-bg--tertiary-lighter {
+    background-color: var(--color-tertiary-lighter) !important;
+}
+
+.u-bg--tertiary-fade {
+    background-color: var(--color-tertiary-fade) !important;
+}
+
+.u-bg--tertiary-dark {
+    background-color: var(--color-tertiary-dark) !important;
+}
+
+.u-bg--tertiary {
+    background-color: var(--color-tertiary) !important;
+}
+
+.u-bg--tertiary-light {
+    background-color: var(--color-tertiary-light) !important;
+}
+
+.u-bg--tertiary-lighter {
+    background-color: var(--color-tertiary-lighter) !important;
+}
+
+.u-bg--tertiary-fade {
+    background-color: var(--color-tertiary-fade) !important;
+}
+
+.u-bg--important-dark {
+    background-color: var(--color-important-dark) !important;
+}
+
+.u-bg--important {
+    background-color: var(--color-important) !important;
+}
+
+.u-bg--important-light {
+    background-color: var(--color-important-light) !important;
+}
+
+.u-bg--important-lighter {
+    background-color: var(--color-important-lighter) !important;
+}
+
+.u-bg--important-fade {
+    background-color: var(--color-important-fade) !important;
+}
+
+.u-bg--white {
+    background-color: var(--color-white) !important;
+}
+
+.u-bg--black {
+    background-color: var(--color-black) !important;
+}
+

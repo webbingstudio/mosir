@@ -2565,6 +2565,262 @@ a.p-media__inner {
     flex-basis: calc(25% - var(--spacing-md) * 3 / 4);
   }
 }
+.u-bg--default-dark {
+  background-color: var(--color-default-dark) !important;
+}
+
+.u-bg--default {
+  background-color: var(--color-default) !important;
+}
+
+.u-bg--default-light {
+  background-color: var(--color-default-light) !important;
+}
+
+.u-bg--default-lighter {
+  background-color: var(--color-default-lighter) !important;
+}
+
+.u-bg--default-fade {
+  background-color: var(--color-default-fade) !important;
+}
+
+.u-bg--primary-dark {
+  background-color: var(--color-primary-dark) !important;
+}
+
+.u-bg--primary {
+  background-color: var(--color-primary) !important;
+}
+
+.u-bg--primary-light {
+  background-color: var(--color-primary-light) !important;
+}
+
+.u-bg--primary-lighter {
+  background-color: var(--color-primary-lighter) !important;
+}
+
+.u-bg--primary-fade {
+  background-color: var(--color-primary-fade) !important;
+}
+
+.u-bg--secondary-dark {
+  background-color: var(--color-secondary-dark) !important;
+}
+
+.u-bg--secondary {
+  background-color: var(--color-secondary) !important;
+}
+
+.u-bg--secondary-light {
+  background-color: var(--color-secondary-light) !important;
+}
+
+.u-bg--secondary-lighter {
+  background-color: var(--color-secondary-lighter) !important;
+}
+
+.u-bg--secondary-fade {
+  background-color: var(--color-secondary-fade) !important;
+}
+
+.u-bg--tertiary-dark {
+  background-color: var(--color-tertiary-dark) !important;
+}
+
+.u-bg--tertiary {
+  background-color: var(--color-tertiary) !important;
+}
+
+.u-bg--tertiary-light {
+  background-color: var(--color-tertiary-light) !important;
+}
+
+.u-bg--tertiary-lighter {
+  background-color: var(--color-tertiary-lighter) !important;
+}
+
+.u-bg--tertiary-fade {
+  background-color: var(--color-tertiary-fade) !important;
+}
+
+.u-bg--tertiary-dark {
+  background-color: var(--color-tertiary-dark) !important;
+}
+
+.u-bg--tertiary {
+  background-color: var(--color-tertiary) !important;
+}
+
+.u-bg--tertiary-light {
+  background-color: var(--color-tertiary-light) !important;
+}
+
+.u-bg--tertiary-lighter {
+  background-color: var(--color-tertiary-lighter) !important;
+}
+
+.u-bg--tertiary-fade {
+  background-color: var(--color-tertiary-fade) !important;
+}
+
+.u-bg--important-dark {
+  background-color: var(--color-important-dark) !important;
+}
+
+.u-bg--important {
+  background-color: var(--color-important) !important;
+}
+
+.u-bg--important-light {
+  background-color: var(--color-important-light) !important;
+}
+
+.u-bg--important-lighter {
+  background-color: var(--color-important-lighter) !important;
+}
+
+.u-bg--important-fade {
+  background-color: var(--color-important-fade) !important;
+}
+
+.u-bg--white {
+  background-color: var(--color-white) !important;
+}
+
+.u-bg--black {
+  background-color: var(--color-black) !important;
+}
+
+.u-color--default-dark {
+  color: var(--color-default-dark) !important;
+}
+
+.u-color--default {
+  color: var(--color-default) !important;
+}
+
+.u-color--default-light {
+  color: var(--color-default-light) !important;
+}
+
+.u-color--default-lighter {
+  color: var(--color-default-lighter) !important;
+}
+
+.u-color--default-fade {
+  color: var(--color-default-fade) !important;
+}
+
+.u-color--primary-dark {
+  color: var(--color-primary-dark) !important;
+}
+
+.u-color--primary {
+  color: var(--color-primary) !important;
+}
+
+.u-color--primary-light {
+  color: var(--color-primary-light) !important;
+}
+
+.u-color--primary-lighter {
+  color: var(--color-primary-lighter) !important;
+}
+
+.u-color--primary-fade {
+  color: var(--color-primary-fade) !important;
+}
+
+.u-color--secondary-dark {
+  color: var(--color-secondary-dark) !important;
+}
+
+.u-color--secondary {
+  color: var(--color-secondary) !important;
+}
+
+.u-color--secondary-light {
+  color: var(--color-secondary-light) !important;
+}
+
+.u-color--secondary-lighter {
+  color: var(--color-secondary-lighter) !important;
+}
+
+.u-color--secondary-fade {
+  color: var(--color-secondary-fade) !important;
+}
+
+.u-color--tertiary-dark {
+  color: var(--color-tertiary-dark) !important;
+}
+
+.u-color--tertiary {
+  color: var(--color-tertiary) !important;
+}
+
+.u-color--tertiary-light {
+  color: var(--color-tertiary-light) !important;
+}
+
+.u-color--tertiary-lighter {
+  color: var(--color-tertiary-lighter) !important;
+}
+
+.u-color--tertiary-fade {
+  color: var(--color-tertiary-fade) !important;
+}
+
+.u-color--tertiary-dark {
+  color: var(--color-tertiary-dark) !important;
+}
+
+.u-color--tertiary {
+  color: var(--color-tertiary) !important;
+}
+
+.u-color--tertiary-light {
+  color: var(--color-tertiary-light) !important;
+}
+
+.u-color--tertiary-lighter {
+  color: var(--color-tertiary-lighter) !important;
+}
+
+.u-color--tertiary-fade {
+  color: var(--color-tertiary-fade) !important;
+}
+
+.u-color--important-dark {
+  color: var(--color-important-dark) !important;
+}
+
+.u-color--important {
+  color: var(--color-important) !important;
+}
+
+.u-color--important-light {
+  color: var(--color-important-light) !important;
+}
+
+.u-color--important-lighter {
+  color: var(--color-important-lighter) !important;
+}
+
+.u-color--important-fade {
+  color: var(--color-important-fade) !important;
+}
+
+.u-color--white {
+  color: var(--color-white) !important;
+}
+
+.u-color--black {
+  color: var(--color-black) !important;
+}
+
 @media screen and (max-width: 1279.9px) {
   .u-wide {
     display: none !important;
@@ -3189,134 +3445,6 @@ a.p-media__inner {
     padding-right: var(--spacing-xl) !important;
   }
 }
-.u-color--default-dark {
-  color: var(--color-default-dark) !important;
-}
-
-.u-color--default {
-  color: var(--color-default) !important;
-}
-
-.u-color--default-light {
-  color: var(--color-default-light) !important;
-}
-
-.u-color--default-lighter {
-  color: var(--color-default-lighter) !important;
-}
-
-.u-color--default-fade {
-  color: var(--color-default-fade) !important;
-}
-
-.u-color--primary-dark {
-  color: var(--color-primary-dark) !important;
-}
-
-.u-color--primary {
-  color: var(--color-primary) !important;
-}
-
-.u-color--primary-light {
-  color: var(--color-primary-light) !important;
-}
-
-.u-color--primary-lighter {
-  color: var(--color-primary-lighter) !important;
-}
-
-.u-color--primary-fade {
-  color: var(--color-primary-fade) !important;
-}
-
-.u-color--secondary-dark {
-  color: var(--color-secondary-dark) !important;
-}
-
-.u-color--secondary {
-  color: var(--color-secondary) !important;
-}
-
-.u-color--secondary-light {
-  color: var(--color-secondary-light) !important;
-}
-
-.u-color--secondary-lighter {
-  color: var(--color-secondary-lighter) !important;
-}
-
-.u-color--secondary-fade {
-  color: var(--color-secondary-fade) !important;
-}
-
-.u-color--tertiary-dark {
-  color: var(--color-tertiary-dark) !important;
-}
-
-.u-color--tertiary {
-  color: var(--color-tertiary) !important;
-}
-
-.u-color--tertiary-light {
-  color: var(--color-tertiary-light) !important;
-}
-
-.u-color--tertiary-lighter {
-  color: var(--color-tertiary-lighter) !important;
-}
-
-.u-color--tertiary-fade {
-  color: var(--color-tertiary-fade) !important;
-}
-
-.u-color--tertiary-dark {
-  color: var(--color-tertiary-dark) !important;
-}
-
-.u-color--tertiary {
-  color: var(--color-tertiary) !important;
-}
-
-.u-color--tertiary-light {
-  color: var(--color-tertiary-light) !important;
-}
-
-.u-color--tertiary-lighter {
-  color: var(--color-tertiary-lighter) !important;
-}
-
-.u-color--tertiary-fade {
-  color: var(--color-tertiary-fade) !important;
-}
-
-.u-color--important-dark {
-  color: var(--color-important-dark) !important;
-}
-
-.u-color--important {
-  color: var(--color-important) !important;
-}
-
-.u-color--important-light {
-  color: var(--color-important-light) !important;
-}
-
-.u-color--important-lighter {
-  color: var(--color-important-lighter) !important;
-}
-
-.u-color--important-fade {
-  color: var(--color-important-fade) !important;
-}
-
-.u-color--white {
-  color: var(--color-white) !important;
-}
-
-.u-color--black {
-  color: var(--color-black) !important;
-}
-
 .post-password-form > *:has(label[for*=pwbox]) {
   display: flex;
   flex-direction: row;
