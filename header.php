@@ -17,6 +17,7 @@ $mo_options_drawer = get_theme_mod( 'mo_options_drawer', 'always' );
 </head>
 
 <body <?php body_class(); ?>>
+<a class="skip-link screen-reader-text" id="wp-skip-link" href="#wp--skip-link--target">内容をスキップ</a>
 <?php wp_body_open(); ?>
 <header class="l-header l-header--<?php echo esc_attr($mo_options_header); ?> l-header--drawer-<?php echo esc_attr($mo_options_drawer); ?>">
 	<div class="l-header__contents l-container">
@@ -143,4 +144,4 @@ $mo_options_drawer = get_theme_mod( 'mo_options_drawer', 'always' );
 </header>
 <?php get_template_part( 'template-parts/drawer' ); ?>
 
-<main class="l-main">
+<main id="wp--skip-link--target" class="l-main">
