@@ -6,15 +6,15 @@
  */
 ?>
 <?php
-$mo_args = array(
+$mos_args = array(
     'post_type'  => 'post',
     'posts_per_page'  => 5,
     'orderby' => 'date',
     'order' => 'DESC'
 );
-$mo_q = new WP_Query( $mo_args );
+$mos_q = new WP_Query( $mos_args );
 ?>
-<?php if( $mo_q->have_posts() ): ?>
+<?php if( $mos_q->have_posts() ): ?>
 <section class="u-p--t-xl u-p--b-xl p-section">
     <div class="p-section__header">
         <p class="p-section__title c-title c-title--center c-title--lv2" <?php language_attributes(); ?>>画像とテキスト</p>
@@ -24,10 +24,10 @@ $mo_q = new WP_Query( $mo_args );
     </div>
     <div class="p-section__contents l-container l-container--sm">
         <div class="p-mediaList">
-        <?php while( $mo_q->have_posts() ) : $mo_q->the_post(); ?>
+        <?php while( $mos_q->have_posts() ) : $mos_q->the_post(); ?>
             <?php get_template_part( 'template-parts/loop', 'media' ); ?>
         <?php endwhile; ?>
         </div>
     </div>
 </section>
-<?php endif; wp_reset_query(); unset( $mo_q, $mo_args ); ?>
+<?php endif; wp_reset_query(); unset( $mos_q, $mos_args ); ?>

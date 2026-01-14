@@ -6,11 +6,11 @@
  * @package mosir
  */
 
-$mo_options_drawer = get_theme_mod( 'mo_options_drawer', 'always' );
-$mo_options_drawer_size = get_theme_mod( 'mo_options_drawer_size', 'slim' );
+$mos_options_drawer = get_theme_mod( 'mos_options_drawer', 'always' );
+$mos_options_drawer_size = get_theme_mod( 'mos_options_drawer_size', 'slim' );
 ?>
-<?php if( $mo_options_drawer !== 'none' ): ?>
-<div class="p-drawerToggle p-drawerToggle--<?php echo esc_attr($mo_options_drawer); ?>">
+<?php if( $mos_options_drawer !== 'none' ): ?>
+<div class="p-drawerToggle p-drawerToggle--<?php echo esc_attr($mos_options_drawer); ?>">
 	<div class="p-drawerToggle__contents l-container">
 		<button id="mo-drawer-toggle" class="p-drawerToggle__button c-toggleButton" aria-label="メニューを開く" aria-controls="drawer" aria-expanded="false">
 			<span class="c-toggleButton__label">Menu</span>
@@ -18,7 +18,7 @@ $mo_options_drawer_size = get_theme_mod( 'mo_options_drawer_size', 'slim' );
 		</button>
 	</div>
 </div>
-<div id="drawer" class="p-drawer p-drawer--<?php echo esc_attr($mo_options_drawer); ?> p-drawer--size-<?php echo esc_attr($mo_options_drawer_size); ?>" aria-hidden="true">
+<div id="drawer" class="p-drawer p-drawer--<?php echo esc_attr($mos_options_drawer); ?> p-drawer--size-<?php echo esc_attr($mos_options_drawer_size); ?>" aria-hidden="true">
 	<div class="p-drawer__contents">
 		<div class="p-drawer__contents__inner l-container">
 			<?php
@@ -42,7 +42,7 @@ $mo_options_drawer_size = get_theme_mod( 'mo_options_drawer_size', 'slim' );
 					array(
 						'theme_location' => 'drawer_nav_02',
 						'container'       => 'div',
-						'container_class' => 'p-drawer__menu02 p-sitemap p-sitemap--' . esc_attr($mo_options_drawer_size),
+						'container_class' => 'p-drawer__menu02 p-sitemap p-sitemap--' . esc_attr($mos_options_drawer_size),
 						'menu_id' => 'drawer-nav-02',
 						'menu_class' => 'menu p-sitemap__nav c-nav',
 						'link_before'      => '<span class="menu-label c-nav__item__label">',

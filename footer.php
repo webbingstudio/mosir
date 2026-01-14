@@ -5,7 +5,7 @@
  * @package mosir
  */
 
-$mo_options_copyright = get_theme_mod( 'mo_options_copyright', (bool)false );
+$mos_options_copyright = get_theme_mod( 'mos_options_copyright', (bool)false );
 ?>
 
 <?php if ( is_active_sidebar( 'widget-main' ) ) : ?>
@@ -55,8 +55,8 @@ $mo_options_copyright = get_theme_mod( 'mo_options_copyright', (bool)false );
 	</div>
 	<div class="l-footer__copyright">
 		<p class="l-footer__copyright__body">
-			<?php if($mo_options_copyright): ?>
-				<?php esc_html_e($mo_options_copyright); ?>
+			<?php if($mos_options_copyright): ?>
+				<?php esc_html_e($mos_options_copyright); ?>
 			<?php else: ?>
 				&copy; <?php bloginfo('name'); ?>
 			<?php endif; ?>

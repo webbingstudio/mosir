@@ -15,7 +15,7 @@ const moDrawerToggle = function() {
         const nav = document.getElementById(controls);
 
         if(nav != undefined) {
-            let mo_queue = null;
+            let mos_queue = null;
             toggle.setAttribute('aria-expanded', 'false');
             nav.setAttribute('aria-hidden', 'true');
             // inert: Disable all operations within the element
@@ -29,7 +29,7 @@ const moDrawerToggle = function() {
                     nav.classList.remove('-is-closing');
 
                     // To allow for detailed CSS animations, the `.-is-opening` class is only added while the menu is opening.
-                    const mo_queue = setTimeout(() => {
+                    const mos_queue = setTimeout(() => {
                         nav.classList.remove('-is-opening');
                         nav.setAttribute('aria-hidden', 'false');
                         nav.removeAttribute('inert');
@@ -40,7 +40,7 @@ const moDrawerToggle = function() {
                     nav.classList.remove('-is-opening');
 
                     // To allow for detailed CSS animations, the `.-is-closing` class is only added while the menu is closing.
-                    const mo_queue = setTimeout(() => {
+                    const mos_queue = setTimeout(() => {
                         nav.classList.remove('-is-closing');
                         nav.setAttribute('aria-hidden', 'true');
                         nav.setAttribute('inert', 'inert');
@@ -50,8 +50,8 @@ const moDrawerToggle = function() {
 
             // If the window is resized, close the drawer.
             window.addEventListener('resize', () => {
-                mo_queue = setTimeout(() => {
-                    clearTimeout(mo_queue);
+                mos_queue = setTimeout(() => {
+                    clearTimeout(mos_queue);
                     toggle.setAttribute('aria-expanded', 'false');
                     nav.setAttribute('aria-hidden', 'true');
                     nav.setAttribute('inert', 'inert');
@@ -74,7 +74,7 @@ const moDrawerClose = function() {
         const nav = document.getElementById(controls);
 
         if(nav != undefined) {
-            let mo_queue = null;
+            let mos_queue = null;
             nav.setAttribute('aria-hidden', 'true');
             // inert: Disable all operations within the element
             // https://developer.mozilla.org/ja/docs/Web/API/HTMLElement/inert
@@ -86,7 +86,7 @@ const moDrawerClose = function() {
                 nav.classList.remove('-is-opening');
 
                 // To allow for detailed CSS animations, the `.-is-closing` class is only added while the menu is closing.
-                const mo_queue = setTimeout(() => {
+                const mos_queue = setTimeout(() => {
                     nav.classList.remove('-is-closing');
                     nav.setAttribute('aria-hidden', 'true');
                     nav.setAttribute('inert', 'inert');

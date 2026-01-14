@@ -5,8 +5,8 @@
  * @package mosir
  */
 
-$mo_options_header = get_theme_mod( 'mo_options_header', 'large' );
-$mo_options_drawer = get_theme_mod( 'mo_options_drawer', 'always' );
+$mos_options_header = get_theme_mod( 'mos_options_header', 'large' );
+$mos_options_drawer = get_theme_mod( 'mos_options_drawer', 'always' );
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
@@ -19,13 +19,13 @@ $mo_options_drawer = get_theme_mod( 'mo_options_drawer', 'always' );
 <body <?php body_class(); ?>>
 <a class="skip-link screen-reader-text" id="wp-skip-link" href="#wp--skip-link--target">内容をスキップ</a>
 <?php wp_body_open(); ?>
-<header class="l-header l-header--<?php echo esc_attr($mo_options_header); ?> l-header--drawer-<?php echo esc_attr($mo_options_drawer); ?>">
+<header class="l-header l-header--<?php echo esc_attr($mos_options_header); ?> l-header--drawer-<?php echo esc_attr($mos_options_drawer); ?>">
 	<div class="l-header__contents l-container">
 
 		<?php
-			$mo_custom_logo_id = get_theme_mod( 'custom_logo' );
-			$mo_custom_logo_src = wp_get_attachment_image_src( $mo_custom_logo_id, 'full' );
-			$mo_custom_logo_width = isset($mo_custom_logo_src[1]) ? $mo_custom_logo_src[1] : (bool)false;
+			$mos_custom_logo_id = get_theme_mod( 'custom_logo' );
+			$mos_custom_logo_src = wp_get_attachment_image_src( $mos_custom_logo_id, 'full' );
+			$mos_custom_logo_width = isset($mos_custom_logo_src[1]) ? $mos_custom_logo_src[1] : (bool)false;
 		?>
 		<?php if( is_front_page() ): ?>
 			<h1 class="l-header__siteTitle p-siteTitle">
@@ -34,10 +34,10 @@ $mo_options_drawer = get_theme_mod( 'mo_options_drawer', 'always' );
 				<a href="<?php bloginfo('url'); ?>">
 		<?php endif; ?>
 
-		<?php if( $mo_custom_logo_src && $mo_custom_logo_width ): ?>
-			<span class="p-siteTitle__logo"><?php echo '<img src="' . esc_url( $mo_custom_logo_src[0] ) . '" alt="'. get_bloginfo('name') .'" width="' . $mo_custom_logo_src[1] . '" height="' . $mo_custom_logo_src[2] . '">'; ?></span>
-		<?php elseif( $mo_custom_logo_src ): ?>
-			<span class="p-siteTitle__logo"><?php echo '<img src="' . esc_url( $mo_custom_logo_src[0] ) . '" alt="'. get_bloginfo('name') .'">'; ?></span>
+		<?php if( $mos_custom_logo_src && $mos_custom_logo_width ): ?>
+			<span class="p-siteTitle__logo"><?php echo '<img src="' . esc_url( $mos_custom_logo_src[0] ) . '" alt="'. get_bloginfo('name') .'" width="' . $mos_custom_logo_src[1] . '" height="' . $mos_custom_logo_src[2] . '">'; ?></span>
+		<?php elseif( $mos_custom_logo_src ): ?>
+			<span class="p-siteTitle__logo"><?php echo '<img src="' . esc_url( $mos_custom_logo_src[0] ) . '" alt="'. get_bloginfo('name') .'">'; ?></span>
 		<?php else: ?>
 			<span class="p-siteTitle__label"><?php bloginfo('name'); ?></span>
 		<?php endif; ?>
@@ -49,11 +49,11 @@ $mo_options_drawer = get_theme_mod( 'mo_options_drawer', 'always' );
 			</p>
 		<?php endif; ?>
 
-		<?php if( $mo_options_header !== 'small' ): ?>
+		<?php if( $mos_options_header !== 'small' ): ?>
 		<div class="l-header__top">
 
 			<?php
-			if( has_nav_menu('header_nav_01') && $mo_options_header !== 'large' ) {
+			if( has_nav_menu('header_nav_01') && $mos_options_header !== 'large' ) {
 				wp_nav_menu(
 					array(
 						'theme_location' => 'header_nav_01',
@@ -70,7 +70,7 @@ $mo_options_drawer = get_theme_mod( 'mo_options_drawer', 'always' );
 			?>
 
 			<?php
-			if( has_nav_menu('header_nav_02') && $mo_options_header === 'large' ) {
+			if( has_nav_menu('header_nav_02') && $mos_options_header === 'large' ) {
 				wp_nav_menu(
 					array(
 						'theme_location' => 'header_nav_02',
@@ -103,7 +103,7 @@ $mo_options_drawer = get_theme_mod( 'mo_options_drawer', 'always' );
 		</div>
 		<?php endif; ?>
 
-		<?php if( $mo_options_header === 'large' ): ?>
+		<?php if( $mos_options_header === 'large' ): ?>
 		<div class="l-header__bottom">
 
 			<?php

@@ -22,16 +22,16 @@
 
 				<?php
 				if ( $post->post_type === 'post' ) :
-					$mo_term = 'category';
-					$mo_post_terms = get_the_terms( $post->ID, $mo_term );
+					$mos_term = 'category';
+					$mos_post_terms = get_the_terms( $post->ID, $mos_term );
 				?>
-					<?php if ( $mo_post_terms ) : ?>
+					<?php if ( $mos_post_terms ) : ?>
 					<ul class="p-card__terms p-labels">
 						<?php
 							// If you want to get multiple or all terms, change the second argument of array_slice.
 							// (CSS needs to be modified)
-							$mo_post_terms = array_slice( $mo_post_terms, 0, 1 );
-							foreach ( $mo_post_terms as $taxonomy ) :
+							$mos_post_terms = array_slice( $mos_post_terms, 0, 1 );
+							foreach ( $mos_post_terms as $taxonomy ) :
 						?>
 							<li><span class="c-label c-label--primary c-label--term-<?php esc_html_e( $taxonomy->slug ); ?>"><?php esc_html_e( $taxonomy->name ); ?></span></li>
 						<?php endforeach; ?>

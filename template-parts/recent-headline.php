@@ -6,15 +6,15 @@
  */
 ?>
 <?php
-$mo_args = array(
+$mos_args = array(
     'post_type'  => 'post',
     'posts_per_page'  => 5,
     'orderby' => 'date',
     'order' => 'DESC'
 );
-$mo_q = new WP_Query( $mo_args );
+$mos_q = new WP_Query( $mos_args );
 ?>
-<?php if( $mo_q->have_posts() ): ?>
+<?php if( $mos_q->have_posts() ): ?>
 <div class="u-p--t-xl u-p--b-xl p-section p-section--horizontal">
     <div class="p-section__header">
         <p class="p-section__title c-title c-title--center c-title--lv2" <?php language_attributes(); ?>>日付とテキスト</p>
@@ -24,10 +24,10 @@ $mo_q = new WP_Query( $mo_args );
     </div>
     <div class="p-section__contents">
         <div class="p-headlineList">
-        <?php while( $mo_q->have_posts() ) : $mo_q->the_post(); ?>
+        <?php while( $mos_q->have_posts() ) : $mos_q->the_post(); ?>
             <?php get_template_part( 'template-parts/loop', 'headline' ); ?>
         <?php endwhile; ?>
         </div>
     </div>
 </div>
-<?php endif; wp_reset_query(); unset( $mo_q, $mo_args ); ?>
+<?php endif; wp_reset_query(); unset( $mos_q, $mos_args ); ?>
