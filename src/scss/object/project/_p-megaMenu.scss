@@ -172,8 +172,8 @@
 }
 
 .p-megaMenu__nav .sub-menu .current-menu-item > a {
-  @include g.arrow-current();
   text-decoration: underline;
+  @include g.arrow-current();
 }
 
 

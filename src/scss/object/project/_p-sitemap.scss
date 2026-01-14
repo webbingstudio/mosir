@@ -55,8 +55,8 @@
 }
 
 .p-sitemap__nav .current-menu-item > a {
-  @include g.arrow-current();
   text-decoration: underline;
+  @include g.arrow-current();
 }
 
 // ------------------------------

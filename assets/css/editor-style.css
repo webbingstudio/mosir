@@ -3705,7 +3705,7 @@ a.p-media__inner:focus {
 .widget .wp-block-categories-list {
   padding-left: 0;
   list-style-type: none;
-  line-height: var(--lineHeight-sm);
+  line-height: var(--lineHeight-xs);
 }
 
 .widget .wp-block-categories-list ul {
@@ -3714,23 +3714,23 @@ a.p-media__inner:focus {
 }
 
 .widget .wp-block-categories-list li + li {
-  margin-top: 0.5em;
+  margin-top: 1em;
 }
 
 .widget .wp-block-categories-list li ul {
-  margin-block: 0.5em;
+  margin-block: 1em;
 }
 
-.widget .wp-block-categories-list a {
-  color: var(--ui-default-color);
+.widget .wp-block-categories-list li a {
   padding-left: 1.25em;
+  color: var(--ui-default-color);
   text-decoration: none;
 }
-.widget .wp-block-categories-list a {
+.widget .wp-block-categories-list li a {
   position: relative;
 }
 
-.widget .wp-block-categories-list a::before {
+.widget .wp-block-categories-list li a::before {
   position: absolute;
   content: "";
   width: 0.55em;
@@ -3738,6 +3738,11 @@ a.p-media__inner:focus {
   border-top: 0.125em solid var(--ui-accent-color);
   border-right: 0.125em solid var(--ui-accent-color);
   rotate: 45deg;
+}
+
+.widget .wp-block-categories-list li a::before {
+  top: 0.45em;
+  left: 0;
 }
 
 @media (any-hover: hover) {
