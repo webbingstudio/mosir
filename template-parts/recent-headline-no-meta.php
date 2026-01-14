@@ -17,7 +17,7 @@ $mo_q = new WP_Query( $mo_args );
 <?php if( $mo_q->have_posts() ): ?>
 <div class="u-p--t-xl u-p--b-xl p-section p-section--horizontal">
     <div class="p-section__header">
-        <p class="p-section__title c-title c-title--center c-title--lv2 <?php language_attributes(); ?>">リスト</p>
+        <p class="p-section__title c-title c-title--center c-title--lv2" <?php language_attributes(); ?>>リスト</p>
         <?php if( !preg_match('/^en_/', get_locale() ) ): ?>
             <p class="p-section__subTitle c-title c-title--center c-title--lv5 u-color--primary" lang="en-US">List</p>
         <?php endif; ?>
