@@ -3890,9 +3890,6 @@ a.p-media__inner:focus {
   font-size: var(--fontSize-lg);
 }
 .p-post.p-post--post .wp-block-post-content > * + h2 {
-  margin-block-start: var(--spacing-lg);
-}
-.p-post.p-post--post .wp-block-post-content > * + h3 {
   margin-block-start: var(--spacing-md);
 }
 .p-post.p-post--post .wp-block-post-content > blockquote + *,
