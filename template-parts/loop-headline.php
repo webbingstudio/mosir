@@ -22,6 +22,7 @@
                 <?php if ( $mo_post_terms ) : ?>
                 <ul class="p-headline__category p-labels">
                     <?php
+                        // If you want to get multiple or all terms, change the second argument of array_slice.
                         $mo_post_terms = array_slice( $mo_post_terms, 0, 1 );
                         foreach ( $mo_post_terms as $taxonomy ) :
                     ?>

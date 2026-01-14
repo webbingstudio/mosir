@@ -543,7 +543,6 @@ body:has(.p-stickyMenu) .l-footer__copyright {
   align-items: center;
   gap: var(--spacing-md);
   margin: 0;
-  font-size: var(--fontSize-sm);
   line-height: var(--lineHeight-none);
 }
 
@@ -815,7 +814,7 @@ body.home.page .l-main > *:first-child {
   background-color: var(--color-default-light);
   border: 0.125rem solid var(--color-default-light);
   color: var(--ui-inverse-color);
-  font-size: var(--fontSize-xs);
+  font-size: var(--fontSize-sm);
   line-height: var(--lineHeight-xs);
   text-align: center;
   vertical-align: middle;
@@ -1609,9 +1608,6 @@ a.p-headline__inner {
     flex-direction: row;
     padding-block: var(--spacing-xs);
   }
-  .p-headline__category .c-label {
-    min-width: 10em;
-  }
 }
 .p-headlineList {
   display: flex;
@@ -1799,6 +1795,12 @@ a.p-media__inner {
 
 .p-media__meta > * {
   flex-grow: 0;
+}
+
+.p-media__meta .p-labels li {
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
 .p-media__title.c-title {
@@ -3786,12 +3788,10 @@ a.p-media__inner {
   margin-block-start: var(--spacing-xs);
 }
 .wp-block-post-content > blockquote {
-  font-size: var(--fontSize-sm);
   padding-left: 2em;
   border-left: 0.25rem solid var(--color-default-lighter);
 }
 .wp-block-post-content > pre {
-  font-size: var(--fontSize-sm);
   padding: var(--spacing-xs);
   border: 0.0625rem solid var(--color-default-lighter);
   line-height: var(--lineHeight-none);

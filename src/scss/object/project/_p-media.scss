@@ -82,6 +82,10 @@ a.p-media__inner {
   flex-grow: 0;
 }
 
+.p-media__meta .p-labels li {
+  @include g.position(absolute, n, n, 0, 0, n);
+}
+
 .p-media__title.c-title {
   overflow-wrap: anywhere;
   word-break: normal;

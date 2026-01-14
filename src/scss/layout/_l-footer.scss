@@ -47,6 +47,5 @@ body:has(.p-stickyMenu) .l-footer__copyright {
   @include g.flex(column, n, center, center);
   gap: var(--spacing-md);
   margin: 0;
-  font-size: var(--fontSize-sm);
   line-height: var(--lineHeight-none);
 }

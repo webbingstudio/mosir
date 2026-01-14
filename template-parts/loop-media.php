@@ -28,7 +28,9 @@
 					<?php if ( $mo_post_terms ) : ?>
 					<ul class="p-labels">
 						<?php
-							$mo_post_terms = array_slice( $mo_post_terms, 0, 3 );
+							// If you want to get multiple or all terms, change the second argument of array_slice.
+							// (CSS needs to be modified)
+							$mo_post_terms = array_slice( $mo_post_terms, 0, 1 );
 							foreach ( $mo_post_terms as $taxonomy ) :
 						?>
 							<li><span class="c-label c-label--primary c-label--term-<?php esc_html_e( $taxonomy->slug ); ?>"><?php esc_html_e( $taxonomy->name ); ?></span></li>

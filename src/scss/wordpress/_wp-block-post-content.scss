@@ -64,13 +64,11 @@
     }
 
     > blockquote {
-        font-size: var(--fontSize-sm);
         padding-left: 2em;
         border-left: 0.25rem solid var(--color-default-lighter);
     }
 
     > pre {
-        font-size: var(--fontSize-sm);
         padding: var(--spacing-xs);
         border: 0.0625rem solid var(--color-default-lighter);
         line-height: var(--lineHeight-none);
