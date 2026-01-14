@@ -26,7 +26,8 @@
 }
 
 a.p-media__inner {
-    color: currentColor;
+  color: currentColor;
+  text-decoration: none;
 }
 
 a.p-media__inner {
@@ -45,10 +46,10 @@ a.p-media__inner {
     text-decoration: none;
   }
 
-  a.p-media__inner:hover .p-media__title {
-    text-decoration: underline;
-  }
+}
 
+a.p-media__inner:focus {
+  text-decoration: none;
 }
 
 .p-media__image {

@@ -20,6 +20,10 @@
   vertical-align: middle;
 }
 
+a.c-label {
+  text-decoration: none;
+}
+
 @include g.mq(hover) {
 
   a.c-label:hover {
@@ -33,6 +37,7 @@
 a.c-label:focus {
   color: var(--ui-default-color);
   background-color: var(--ui-inverse-color);
+  text-decoration: none;
 }
 
 .c-label.c-label--primary {

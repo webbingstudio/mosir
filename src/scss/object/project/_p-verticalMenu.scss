@@ -33,6 +33,10 @@
   }
 }
 
+.p-verticalMenu .current-menu-item > a {
+  text-decoration: underline;
+}
+
 // ------------------------------
 // first-level
 // ------------------------------
@@ -41,7 +45,6 @@
   position: relative;
   font-size: var(--fontSize-xl);
   font-weight: var(--fontWeight-bold);
-  text-decoration: none;
   padding-left: var(--spacing-md );
 }
 
@@ -90,7 +93,7 @@
 }
 
 .p-verticalMenu__nav .sub-menu a::before {
-  top: calc( ( var(--nav-line-height) * 1em ) / 2 - 0.275em );
+  top: 0.4em;
   left: 0;
 }
 

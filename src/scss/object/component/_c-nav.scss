@@ -37,18 +37,21 @@ ul.c-nav,
   gap: var(--spacing-xs);
   line-height: var(--lineHeight-xs);
   color: var(--ui-default-color);
+  text-decoration: none;
 }
 
 @include g.mq(hover) {
 
-  .c-nav :not(.current-menu-item) > a:hover {
+  .c-nav a:hover {
     color: var(--ui-default-color);
+    text-decoration: underline;
   }
 
 }
 
 .c-nav a:focus {
   color: var(--ui-default-color);
+  text-decoration: underline;
 }
 
 .c-nav__item__label {

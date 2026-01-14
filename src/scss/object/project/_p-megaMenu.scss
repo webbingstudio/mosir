@@ -25,7 +25,8 @@
 }
 
 .p-megaMenu__nav > .menu-item {
-  padding-inline: var(--spacing-sm);
+  font-size: var(--fontSize-lg);
+  padding-inline: 1.5em;
 }
 
 .p-megaMenu__nav > .menu-item:first-child {
@@ -166,12 +167,13 @@
 }
 
 .p-megaMenu__nav .sub-menu a::before {
-  top: calc( ( var(--nav-line-height) * 1em ) / 2 - 0.275em );
+  top: 0.4em;
   left: 0;
 }
 
 .p-megaMenu__nav .sub-menu .current-menu-item > a {
   @include g.arrow-current();
+  text-decoration: underline;
 }
 
 

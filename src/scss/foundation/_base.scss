@@ -17,9 +17,8 @@ body {
 
 a {
   color: var(--link-default-color);
-  text-decoration: none;
+  text-decoration: underline;
   text-decoration-thickness: 0.0625em !important;
-  text-underline-offset: -0.1em;
 
   // Asian languages ​​do not have the concept of a "baseline,"
   // so if you leave the underline at the default position,
@@ -31,8 +30,7 @@ a {
 
   a:hover {
     color: var(--link-hover-color);
-    text-decoration: underline;
-    text-underline-offset: 0;
+    text-decoration: none;
     transition: var(--transition-fast);
   }
 

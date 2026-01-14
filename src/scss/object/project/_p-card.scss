@@ -25,7 +25,8 @@
 }
 
 a.p-card__inner {
-    color: currentColor;
+  color: currentColor;
+  text-decoration: none;
 }
 
 @include g.mq(hover) {
@@ -40,11 +41,10 @@ a.p-card__inner {
     text-decoration: none;
   }
 
-  a.p-card__inner:hover .p-card__title,
-  a.p-card__title:hover {
-    text-decoration: underline;
-  }
+}
 
+a.p-card__inner:focus {
+  text-decoration: none;
 }
 
 a.p-card__inner .p-card__title {

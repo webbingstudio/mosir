@@ -43,7 +43,7 @@
 }
 
 .p-horizontalMenu .current-menu-item > a {
-  font-weight: var(--fontWeight-bold);
+  text-decoration: underline;
 }
 
 @include g.mq(hover) {

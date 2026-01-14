@@ -8,17 +8,23 @@
 // ------------------------------
 
 .p-headline {
-    container-type: inline-size;
+  container-type: inline-size;
 }
 
 .p-headline__inner {
-    @include g.flex( column, n, flex-start, baseline );
-    row-gap: var(--spacing-xs);
-    padding-block: var(--spacing-sm);
+  @include g.flex( column, n, flex-start, baseline );
+  row-gap: var(--spacing-xs);
+  padding-block: var(--spacing-sm);
 }
 
 a.p-headline__inner {
-    color: currentColor;
+  color: currentColor;
+  text-decoration: none;
+}
+
+a.p-headline__inner .p-headline__title,
+a.p-headline__title {
+  text-decoration: underline;
 }
 
 @include g.mq(hover) {
@@ -34,48 +40,52 @@ a.p-headline__inner {
 
   a.p-headline__inner:hover .p-headline__title,
   a.p-headline__title:hover {
-    text-decoration: underline;
+    text-decoration: none;
   }
 
 }
 
+a.p-headline__inner:focus {
+  text-decoration: none;
+}
+
 .p-headline__header {
-    flex-grow: 0;
-    @include g.flex( n, n, n, center );
-    font-size: var(--fontSize-sm);
-    padding-right: var(--spacing-sm);
+  flex-grow: 0;
+  @include g.flex( n, n, n, center );
+  font-size: var(--fontSize-sm);
+  padding-right: var(--spacing-sm);
 }
 
 .p-headline__header > * {
-    margin: 0;
+  margin: 0;
 }
 
 .p-headline__date {
-    min-width: 9em;
+  min-width: 9em;
 }
 
 .p-headline__contents {
-    flex-grow: 1;
+  flex-grow: 1;
 }
 
 .p-headline__title.c-title {
-    overflow: hidden;
-    display: -webkit-box;
-    text-overflow: ellipsis;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;
-    max-height: calc( ( var(--lineHeight-md) * 3em ) );
+  overflow: hidden;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  max-height: calc( ( var(--lineHeight-md) * 3em ) );
 }
 
 .p-headline__title a {
-    display: block;
+  display: block;
 }
 
 @container ( width > 40rem ) {
 
-    .p-headline__inner {
-        flex-direction: row;
-        padding-block: var(--spacing-xs);
-    }
+  .p-headline__inner {
+    flex-direction: row;
+    padding-block: var(--spacing-xs);
+  }
 
 }

@@ -50,12 +50,13 @@
 }
 
 .p-sitemap__nav a::before {
-  top: calc( ( var(--nav-line-height) * 1em ) / 2 - 0.275em );
+  top: 0.4em;
   left: 0;
 }
 
 .p-sitemap__nav .current-menu-item > a {
   @include g.arrow-current();
+  text-decoration: underline;
 }
 
 // ------------------------------

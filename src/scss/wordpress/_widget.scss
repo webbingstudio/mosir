@@ -49,6 +49,7 @@
     color: var(--ui-default-color);
     padding-left: 1.25em;
     @include g.arrow();
+    text-decoration: none;
 }
 
 @include g.mq(hover) {
@@ -57,6 +58,10 @@
         text-decoration-line: underline;
     }
 
+}
+
+.widget .wp-block-categories-list a:focus {
+    text-decoration-line: underline;
 }
 
 .widget .wp-block-categories-list a::before {
