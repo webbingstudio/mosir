@@ -12,7 +12,7 @@ $mo_options_drawer_size = get_theme_mod( 'mo_options_drawer_size', 'slim' );
 <?php if( $mo_options_drawer !== 'none' ): ?>
 <div class="p-drawerToggle p-drawerToggle--<?php echo esc_attr($mo_options_drawer); ?>">
 	<div class="p-drawerToggle__contents l-container">
-		<button id="mo-drawer-toggle" class="p-drawerToggle__button c-toggleButton" aria-controls="drawer" aria-expanded="false">
+		<button id="mo-drawer-toggle" class="p-drawerToggle__button c-toggleButton" aria-label="メニューを開く" aria-controls="drawer" aria-expanded="false">
 			<span class="c-toggleButton__label">Menu</span>
 			<span class="c-toggleButton__icon"></span>
 		</button>
