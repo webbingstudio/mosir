@@ -5,6 +5,7 @@
  * @package mosir
  */
 
+$mos_options_drawer = get_theme_mod( 'mos_options_drawer', 'always' );
 $mos_options_copyright = get_theme_mod( 'mos_options_copyright', (bool)false );
 ?>
 
@@ -81,5 +82,10 @@ if( has_nav_menu('sticky_nav') ) {
 }
 ?>
 <?php wp_footer(); ?>
+
+</div>
+<?php if( $mos_options_drawer !== 'none' ): ?>
+<?php get_template_part( 'template-parts/drawer' ); ?>
+<?php endif; ?>
 </body>
 </html>

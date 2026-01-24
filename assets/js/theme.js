@@ -1,100 +1,100 @@
 /**
- * Drawer toggle button
+ * Drawer Open/close buttons
  *
  * since mosir 1.0
  */
 
-const moDrawerToggle = function() {
-    // drawer duration - see: src/scss/global/_variables-css.scss > --transition-cubic
-    const duration = 500;
-    // drawer button ID - see: header.php
-    const toggle = document.getElementById('mo-drawer-toggle');
+const mosiDrawerInit = function(toggle, nav) {
+    toggle.setAttribute('aria-expanded', 'false');
+    nav.setAttribute('aria-hidden', 'true');
+    // inert: Disable all operations within the element
+    // https://developer.mozilla.org/ja/docs/Web/API/HTMLElement/inert
+    nav.setAttribute('inert', 'inert');
+};
 
-    if( toggle != undefined ) {
-        const controls = toggle.getAttribute('aria-controls');
-        const nav = document.getElementById(controls);
+const mosiDrawerOpen = function(toggles, nav, duration, open_focus) {
+    toggles.forEach(toggle => {
+        toggle.setAttribute('aria-expanded', 'true');
+    });
+    nav.classList.add('-is-opening');
+    nav.classList.remove('-is-closing');
+
+    // To allow for detailed CSS animations, the `.-is-opening` class is only added while the menu is opening.
+    let queue = setTimeout(() => {
+        nav.classList.remove('-is-opening');
+        nav.setAttribute('aria-hidden', 'false');
+        nav.removeAttribute('inert');
+        open_focus.focus();
+    },duration);
+};
+
+const mosiDrawerClose = function(toggles, nav, duration, close_focus) {
+    toggles.forEach(toggle => {
+        toggle.setAttribute('aria-expanded', 'false');
+    });
+    nav.classList.add('-is-closing');
+    nav.classList.remove('-is-opening');
+
+    // To allow for detailed CSS animations, the `.-is-closing` class is only added while the menu is closing.
+    let queue = setTimeout(() => {
+        nav.classList.remove('-is-closing');
+        nav.setAttribute('aria-hidden', 'true');
+        nav.setAttribute('inert', 'inert');
+        close_focus.focus();
+    },duration);
+};
+
+const mosiDrawerWindowResized = function(toggles, nav) {
+    let queue = setTimeout(() => {
+        clearTimeout(queue);
+        toggles.forEach(toggle => {
+            toggle.setAttribute('aria-expanded', 'false');
+        });
+        nav.setAttribute('aria-hidden', 'true');
+        nav.setAttribute('inert', 'inert');
+        nav.classList.remove('-is-closing', '-is-open');
+    },50);
+};
+
+const mosiDrawerControls = function() {
+    const action_default = 'toggle';
+    const duration_default = 500;
+    // drawer buttons - see: header.php, template-parts/drawer.php
+    const toggles = document.querySelectorAll('.js-mosi-drawer');
+
+    if( toggles.length ) {
+        const nav = document.getElementById(toggles[0].getAttribute('aria-controls'));
+        const contents = document.getElementById('mosi-drawer-contents');
+        const close_focus = toggles[0];
 
         if(nav != undefined) {
-            let mos_queue = null;
-            toggle.setAttribute('aria-expanded', 'false');
-            nav.setAttribute('aria-hidden', 'true');
-            // inert: Disable all operations within the element
-            // https://developer.mozilla.org/ja/docs/Web/API/HTMLElement/inert
-            nav.setAttribute('inert', 'inert');
-
-            toggle.addEventListener('click', ()=> {
-                if(toggle.getAttribute('aria-expanded') === 'false') {
-                    toggle.setAttribute('aria-expanded', 'true');
-                    nav.classList.add('-is-opening');
-                    nav.classList.remove('-is-closing');
-
-                    // To allow for detailed CSS animations, the `.-is-opening` class is only added while the menu is opening.
-                    const mos_queue = setTimeout(() => {
-                        nav.classList.remove('-is-opening');
-                        nav.setAttribute('aria-hidden', 'false');
-                        nav.removeAttribute('inert');
-                    },duration);
-                } else {
-                    toggle.setAttribute('aria-expanded', 'false');
-                    nav.classList.add('-is-closing');
-                    nav.classList.remove('-is-opening');
-
-                    // To allow for detailed CSS animations, the `.-is-closing` class is only added while the menu is closing.
-                    const mos_queue = setTimeout(() => {
-                        nav.classList.remove('-is-closing');
-                        nav.setAttribute('aria-hidden', 'true');
-                        nav.setAttribute('inert', 'inert');
-                    },duration);
-                }
-            });
+            const open_focus = nav.querySelector('a, button, input');
 
             // If the window is resized, close the drawer.
-            window.addEventListener('resize', () => {
-                mos_queue = setTimeout(() => {
-                    clearTimeout(mos_queue);
-                    toggle.setAttribute('aria-expanded', 'false');
-                    nav.setAttribute('aria-hidden', 'true');
-                    nav.setAttribute('inert', 'inert');
-                    nav.classList.remove('-is-closing', '-is-open');
-                },50);
-            },false);
-        }
-    }
-};
+            window.addEventListener('resize', function() {
+                mosiDrawerWindowResized(toggles, nav);
+                contents.removeAttribute('inert', 'inert');
+            }, false);
 
-const moDrawerClose = function() {
-    // drawer duration - see: src/scss/global/_variables-css.scss > --transition-cubic
-    const duration = 500;
-    // close button ID - see: header.php
-    const button = document.getElementById('mo-drawer-close');
-    const toggle = document.getElementById('mo-drawer-toggle');
+            toggles.forEach(toggle => {
+                const action = toggle.dataset.mosiDrawerAction ? toggle.dataset.mosiDrawerAction : action_default;
+                const duration = toggle.dataset.mosiDrawerDuration ? parseFloat(toggle.dataset.mosiDrawerDuration) : duration_default;
+                mosiDrawerInit(toggle, nav);
+                contents.removeAttribute('inert', 'inert');
 
-    if( button != undefined ) {
-        const controls = button.getAttribute('aria-controls');
-        const nav = document.getElementById(controls);
+                toggle.addEventListener('click', ()=> {
+                    if( ( action === 'toggle' ) && ( toggle.getAttribute('aria-expanded') === 'false') ) {
+                        mosiDrawerOpen(toggles, nav, duration, open_focus);
+                        contents.setAttribute('inert', 'inert');
+                    } else {
+                        mosiDrawerClose(toggles, nav, duration, close_focus);
+                        contents.removeAttribute('inert', 'inert');
+                    }
+                });
 
-        if(nav != undefined) {
-            let mos_queue = null;
-            nav.setAttribute('aria-hidden', 'true');
-            // inert: Disable all operations within the element
-            // https://developer.mozilla.org/ja/docs/Web/API/HTMLElement/inert
-            nav.setAttribute('inert', 'inert');
-
-            button.addEventListener('click', ()=> {
-                toggle.setAttribute('aria-expanded', 'false');
-                nav.classList.add('-is-closing');
-                nav.classList.remove('-is-opening');
-
-                // To allow for detailed CSS animations, the `.-is-closing` class is only added while the menu is closing.
-                const mos_queue = setTimeout(() => {
-                    nav.classList.remove('-is-closing');
-                    nav.setAttribute('aria-hidden', 'true');
-                    nav.setAttribute('inert', 'inert');
-                },duration);
             });
         }
     }
 };
 
-window.addEventListener('DOMContentLoaded', moDrawerToggle );
-window.addEventListener('DOMContentLoaded', moDrawerClose );
+window.addEventListener('DOMContentLoaded', mosiDrawerControls );

@@ -9,18 +9,18 @@
 $mos_options_drawer = get_theme_mod( 'mos_options_drawer', 'always' );
 $mos_options_drawer_size = get_theme_mod( 'mos_options_drawer_size', 'slim' );
 ?>
-<?php if( $mos_options_drawer !== 'none' ): ?>
-<div class="p-drawerToggle p-drawerToggle--<?php echo esc_attr($mos_options_drawer); ?>">
-	<div class="p-drawerToggle__contents l-container">
-		<button id="mo-drawer-toggle" class="p-drawerToggle__button c-toggleButton" aria-label="メニューを開く" aria-controls="drawer" aria-expanded="false">
-			<span class="c-toggleButton__label">Menu</span>
-			<span class="c-toggleButton__icon"></span>
-		</button>
+<div aria-label="Drawer menu" id="drawer" class="p-drawer p-drawer--<?php echo esc_attr($mos_options_drawer); ?> p-drawer--size-<?php echo esc_attr($mos_options_drawer_size); ?>" aria-hidden="true">
+	<div class="p-drawer__close">
+		<div class="p-drawer__close__contents l-container">
+			<button aria-label="Open/close this menu" id="mosi-drawer-close-top" class="js-mosi-drawer p-drawer__close__button c-toggleButton" data-mosi-drawer-action="toggle" data-mosi-drawer-duration="500" aria-controls="drawer" aria-expanded="false">
+				<span class="c-toggleButton__label">Menu</span>
+				<span class="c-toggleButton__icon"></span>
+			</button>
+		</div>
 	</div>
-</div>
-<div id="drawer" class="p-drawer p-drawer--<?php echo esc_attr($mos_options_drawer); ?> p-drawer--size-<?php echo esc_attr($mos_options_drawer_size); ?>" aria-hidden="true">
 	<div class="p-drawer__contents">
 		<div class="p-drawer__contents__inner l-container">
+
 			<?php
 			if( has_nav_menu('drawer_nav_01') ) {
 				wp_nav_menu(
@@ -61,11 +61,10 @@ $mos_options_drawer_size = get_theme_mod( 'mos_options_drawer_size', 'slim' );
 			<?php endif; ?>
 
 			<div class="p-drawer__footer">
-				<button id="mo-drawer-close" class="p-drawer__footer__button c-button" aria-controls="drawer">
-					✕ メニューを閉じる
+				<button aria-label="Close this menu" id="mosi-drawer-close-bottom" class="js-mosi-drawer p-drawer__footer__button c-button" data-mosi-drawer-action="close" data-mosi-drawer-duration="500" aria-controls="drawer">
+					✕ Close menu
 				</button>
 			</div>
 		</div>
 	</div>
 </div>
-<?php endif; ?>

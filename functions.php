@@ -148,28 +148,6 @@ add_action( 'after_setup_theme', 'mos_redistar_nav_menu' );
 
 
 // ==============================
-// Skip Mega menu links
-// ==============================
-
-if ( ! function_exists( 'mos_nav_menu_link_attributes' ) ) :
-	/**
-	 * If the currently displayed menu has the mega menu (.p-megaMenu) class assigned, focus on links from the second level onwards will be skipped.
-	 *
-	 * @since mosir 1.0
-	 *
-	 * @return void
-	 */
-	function mos_nav_menu_link_attributes( $atts, $item, $args, $depth ) {
-		if ( preg_match( '/(p-megaMenu)/', $args->menu_class ) && $depth >= 1 ) {
-			$atts['tabindex'] = '-1';
-		}
-		return $atts;
-	}
-endif;
-add_filter( 'nav_menu_link_attributes', 'mos_nav_menu_link_attributes', 10, 4 );
-
-
-// ==============================
 // Compatible WordPress BlockEditor(Gutenberg)
 // ==============================
 

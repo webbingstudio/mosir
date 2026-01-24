@@ -17,7 +17,9 @@ $mos_options_drawer = get_theme_mod( 'mos_options_drawer', 'always' );
 </head>
 
 <body <?php body_class(); ?>>
+<div id="mosi-drawer-contents" class="l-document">
 <a class="skip-link screen-reader-text" id="wp-skip-link" href="#wp--skip-link--target">内容をスキップ</a>
+
 <?php wp_body_open(); ?>
 <header class="l-header l-header--<?php echo esc_attr($mos_options_header); ?> l-header--drawer-<?php echo esc_attr($mos_options_drawer); ?>">
 	<div class="l-header__contents l-container">
@@ -103,6 +105,17 @@ $mos_options_drawer = get_theme_mod( 'mos_options_drawer', 'always' );
 		</div>
 		<?php endif; ?>
 
+		<?php if( $mos_options_drawer !== 'none' ): ?>
+		<div class="p-drawerToggle p-drawerToggle--<?php echo esc_attr($mos_options_drawer); ?>">
+			<div class="p-drawerToggle__contents l-container">
+				<button aria-label="Open/close drawer menu" id="mosi-drawer-toggle" class="js-mosi-drawer p-drawerToggle__button c-toggleButton" data-mosi-drawer-action="toggle" data-mosi-drawer-duration="500" aria-controls="drawer" aria-expanded="false">
+					<span class="c-toggleButton__label">Menu</span>
+					<span class="c-toggleButton__icon"></span>
+				</button>
+			</div>
+		</div>
+		<?php endif; ?>
+
 		<?php if( $mos_options_header === 'large' ): ?>
 		<div class="l-header__bottom">
 
@@ -142,6 +155,4 @@ $mos_options_drawer = get_theme_mod( 'mos_options_drawer', 'always' );
 		<?php endif; ?>
 	</div>
 </header>
-<?php get_template_part( 'template-parts/drawer' ); ?>
-
 <main id="wp--skip-link--target" class="l-main">

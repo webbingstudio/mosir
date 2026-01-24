@@ -83,6 +83,20 @@
   transform: translateY(-1rem);
 }
 
+.p-drawer__close {
+  overflow: hidden;
+  @include g.position( absolute, 0, 0, n, 0, 104 );
+  height: 0;
+}
+
+.p-drawer__close__contents.l-container {
+  position: relative;
+}
+
+.p-drawer__close__button {
+  @include g.position( absolute, var(--spacing-xs), var(--screen-x-spacing), n, n, 11 ); // top: padding-top of header
+}
+
 .p-drawer__contents__inner {
   @include g.flex(column, n, n, flex-start);
   gap: var(--spacing-md);
@@ -115,11 +129,10 @@
   transform: scaleY(1);
 }
 
-.p-drawer.-is-opening .p-drawer__contents {
-  overflow: hidden;
+.p-drawer.-is-opening .p-drawer__close {
+  overflow: visible;
   height: auto;
   opacity: 1;
-  transform: translateX(0);
   transition: all 0.3s 0.3s ease-out;
 }
 
@@ -165,6 +178,12 @@ body:has(.p-drawer.-is-closing) {
   transform: translateX(0);
 }
 
+.p-drawer[aria-hidden="false"]:not(.-is-closing) .p-drawer__close {
+  overflow: visible;
+  height: auto;
+  opacity: 1;
+}
+
 .p-drawer.p-drawer--size-wide[aria-hidden="false"]:not(.-is-closing) .p-drawer__contents {
   transform: translateY(0);
 }
@@ -194,6 +213,14 @@ body:has(.p-drawer.-is-closing) {
   height: auto;
   transform: translateX(1rem);
   transition-duration: 0.3s;
+  transition-delay: 0s;
+}
+
+.p-drawer.-is-closing .p-drawer__close {
+  overflow: visible;
+  height: auto;
+  opacity: 0;
+  transition-duration: 0.6s;
   transition-delay: 0s;
 }
 
