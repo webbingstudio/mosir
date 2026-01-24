@@ -37,9 +37,3 @@
         flex-basis: calc( 33.33% - ( var(--spacing-md) * 2 / 3 ) );
     }
 }
-
-@container widget-area ( width >= 96rem ) {
-    .p-widgetArea.p-widgetArea--sidebar .p-widgetArea__inner > * {
-        flex-basis: calc( 25% - ( var(--spacing-md) * 3 / 4 ) );
-    }
-}
