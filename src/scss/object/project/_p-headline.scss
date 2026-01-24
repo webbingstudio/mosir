@@ -8,13 +8,24 @@
 // ------------------------------
 
 .p-headline {
+  position: relative;
   container-type: inline-size;
 }
 
+.p-headline::after {
+  content: "";
+  @include g.position( absolute, -0.25rem, -0.25rem, -0.25rem, -0.25rem, 11 );
+  border: 0.125rem solid var(--ui-accent-color);
+  border-radius: var(--border-radius-sm);
+  opacity: 0;
+}
+
 .p-headline__inner {
+  position: relative;
   @include g.flex( column, n, flex-start, baseline );
   row-gap: var(--spacing-xs);
   padding-block: var(--spacing-sm);
+  z-index: 12;
 }
 
 a.p-headline__inner {
@@ -22,16 +33,12 @@ a.p-headline__inner {
   text-decoration: none;
 }
 
-a.p-headline__inner .p-headline__title,
-a.p-headline__title {
-  text-decoration: underline;
-}
-
 @include g.mq(hover) {
 
-  .p-headline:has(a.p-headline__inner:hover) {
-    background-color: var(--headline-hover-bg);
+  .p-headline:has(a.p-headline__inner:hover)::after {
+    opacity: 1;
     transition: var(--transition-slow);
+    outline: none;
   }
 
   a.p-headline__inner:hover {
