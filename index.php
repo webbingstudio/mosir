@@ -6,6 +6,7 @@
  * @package mosir
  */
 
+$mos_post_type = get_post_type() ? get_post_type() : get_query_var( 'post_type' );
 get_header();
 ?>
 <?php get_template_part( 'template-parts/pageHeader' ); ?>
@@ -81,6 +82,21 @@ get_header();
         </div>
     </div>
     <?php endif; ?>
+
+    <?php if ( $mos_post_type === 'post' ) : ?>
+        <?php if ( is_active_sidebar( 'widget-main-post' ) ) : ?>
+            <div class="u-p--b-xl p-widgetArea p-widgetArea--main p-widgetArea--main-post">
+                <div class="p-widgetArea__inner">
+                    <?php dynamic_sidebar( 'widget-main-post' ); ?>
+                </div>
+            </div>
+        <?php endif; ?>
+    <?php endif; ?>
+
 </div>
+<?php if ( $mos_post_type === 'post' ) : ?>
+<?php get_sidebar(); ?>
+<?php endif; ?>
+
 <?php
 get_footer();

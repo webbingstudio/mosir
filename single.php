@@ -28,11 +28,11 @@ $mos_next_link = get_next_post_link( '%link', '次: %title' );
 		<div class="p-post__header">
 			<div class="p-post__header__contents l-container l-container--sm">
 				<div class="p-post__header__meta">
-					<time class="c-date" datetime="<?php the_time('c'); ?>"><?php the_time( $mos_date_format . ' ' . $mos_time_format ); ?></time>
+					<time class="c-date" datetime="<?php the_time('c'); ?>"><?php the_time( $mos_date_format ); ?></time>
 					<?php if($mos_categories) : ?>
 					<p class="p-post__category">
 						<?php foreach( $mos_categories as $category ): ?>
-						<a href="<?php echo get_category_link($category->term_id); ?>" class="c-label c-label--primary">
+						<a href="<?php echo get_category_link($category->term_id); ?>" class="c-label">
 							<?php echo esc_html($category->name); ?>
 						</a>
 						<?php endforeach; ?>
@@ -47,6 +47,9 @@ $mos_next_link = get_next_post_link( '%link', '次: %title' );
 		</div>
 		<div class="p-post__footer">
 			<div class="p-post__footer__contents l-container l-container--sm">
+				<div class="p-post__footer__meta">
+					<time class="c-date" datetime="<?php the_time('c'); ?>"><?php the_time( $mos_date_format . ' ' . $mos_time_format ); ?></time>
+				</div>
 				<?php if( $mos_tags ): ?>
 				<div class="p-post__footer__tags">
 					<ul class="c-nav">
