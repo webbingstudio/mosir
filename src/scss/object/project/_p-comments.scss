@@ -1,0 +1,112 @@
+@use "../../global" as g;
+@use "sass:math";
+
+// ------------------------------
+// project > comments
+//  - Comment list and comment post form.
+// ------------------------------
+
+.p-comments {
+  margin-top: var(--spacing-lg);
+}
+
+.p-comments > * + * {
+  margin-top: var(--spacing-md);
+}
+
+.p-comments__list > * {
+  margin-top: var(--spacing-sm);
+  padding-top: var(--spacing-sm);
+  border-top: 0.0625rem solid var(--border-default-light-color);
+}
+
+.p-comments .comment .comment {
+  position: relative;
+  padding-top: var(--spacing-md);
+  padding-left: 1rem;
+}
+
+.p-comments .comment .comment::before {
+  content: "";
+  @include g.position(absolute, var(--spacing-xs), n, n, 0);
+  width: 0.5rem;
+  height: var(--spacing-md);
+  border-left: 0.125rem dotted var(--border-default-color);
+  border-bottom: 0.125rem dotted var(--border-default-color);
+}
+
+.p-comments .comment-meta > * + * {
+  margin-top: var(--spacing-xs);
+}
+
+.p-comments .comment-author {
+  @include g.flex( n, n, flex-start, center );
+}
+
+.p-comments .comment-author .avatar {
+  margin-right: var(--spacing-sm);
+}
+
+.p-comments .comment-metadata {
+  font-size: var(--fontSize-sm);
+}
+
+.p-comments .comment-metadata a {
+  color: currentColor;
+}
+
+.p-comments .comment-form > * + * {
+  margin-top: var(--spacing-sm);
+  margin-bottom: 0;
+}
+
+.p-comments .comment-form-comment {
+  margin-bottom: 0;
+  @include g.flex( column, n, flex-start, n );
+  gap: var(--spacing-xs);
+}
+
+.p-comments .comment-form-comment textarea {
+  background-color: var(--body-bg);
+  color: var(--body-color);
+  font-size: var(--fontSize-md);
+  padding: 0.5em;
+  border: 0.0625rem solid var(--border-default-color);
+  border-radius: var(--border-radius-sm);
+}
+
+.p-comments .form-submit {
+  text-align: center;
+}
+
+.p-comments .form-submit .submit {
+    @include g.iFlex( n, n, center, center );
+    gap: var(--spacing-xs);
+    width: 15rem;
+    min-height: var(--nav-height);
+    padding-inline: var(--spacing-sm);
+    background-color: var(--ui-inverse-color);
+    border: 0.125rem solid var(--ui-accent-color);
+    border-radius: 99em;
+    color: var(---ui-default-color);
+    font-size: var(--fontSize-md);
+    letter-spacing: 0.1em;
+    font-weight: var(--fontWeight-bold);
+    line-height: var(--lineHeight-none);
+    transition: var(--transition-fast);
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.p-comments .form-submit .submit:hover,
+.p-comments .form-submit .submit:focus {
+    color: var(--ui-inverse-color);
+    background-color: var(--ui-accent-color);
+    border-color: var(--ui-accent-color);
+    text-decoration: none;
+}
+
+.p-comments .form-submit .submit:focus {
+    outline: none;
+}
