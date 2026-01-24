@@ -1,10 +1,18 @@
 @use "../global" as g;
 @use "sass:math";
 
-.wp-block-post-content {
+.wp-block-post-content,
+.comment-content {
     overflow-wrap: anywhere;
     word-break: normal;
     line-break: strict;
+
+    img,
+    svg,
+    iframe,
+    video {
+        max-width: 100%;
+    }
 
     h1 {
         font-size: var(--fontSize-3xl);
@@ -32,46 +40,49 @@
     }
 
     ul {
-    list-style-type: disc;
-    padding-left: 1.25em;
+        list-style-type: disc;
+        padding-left: 1.25em;
     }
 
     li > ul {
-    list-style-type: circle;
+        list-style-type: circle;
     }
 
     li li > ul {
-    list-style-type: square;
+        list-style-type: square;
     }
 
     ol {
-    list-style-type: decimal;
-    padding-left: 1.25em;
+        list-style-type: decimal;
+        padding-left: 1.25em;
     }
 
     li > ol {
-    list-style-type: lower-alpha;
+        list-style-type: lower-alpha;
     }
 
     li li > ol {
-    list-style-type: lower-roman;
+        list-style-type: lower-roman;
     }
 
     li + *,
     li ul,
     li ol {
-    margin-block-start: var(--spacing-xs);
+        margin-block-start: var(--spacing-xs);
     }
 
     > blockquote {
-        padding-left: 2em;
+        margin-inline: 0;
+        padding-left: var(--spacing-sm);
         border-left: 0.25rem solid var(--color-default-lighter);
     }
 
     > pre {
+        font-size: var(--fontSize-sm);
         padding: var(--spacing-xs);
         border: 0.0625rem solid var(--color-default-lighter);
-        line-height: var(--lineHeight-none);
+        background-color: var(--color-default-fade);
+        line-height: var(--lineHeight-xs);
     }
 
     > table {

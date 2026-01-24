@@ -11,9 +11,8 @@
   padding-inline: 0.25em;
   min-width: 7em;
   min-height: calc( var(--lineHeight-md) * 1em );
-  background-color: var(--color-default-light);
-  border: 0.125rem solid var(--color-default-light);
-  color: var(--ui-inverse-color);
+  background-color: var(--color-default-fade);
+  color: var(--color-default-dark);
   font-size: var(--fontSize-sm);
   line-height: var(--lineHeight-xs);
   text-align: center;
@@ -27,34 +26,32 @@ a.c-label {
 @include g.mq(hover) {
 
   a.c-label:hover {
-    color: var(--ui-default-color);
-    background-color: var(--ui-inverse-color);
-    text-decoration: none;
+    color: var(--ui-inverse-color);
+    background-color: var(--color-default-dark);
   }
 
 }
 
 a.c-label:focus {
-  color: var(--ui-default-color);
-  background-color: var(--ui-inverse-color);
-  text-decoration: none;
+  color: var(--ui-inverse-color);
+  background-color: var(--color-default-dark);
 }
 
 .c-label.c-label--primary {
-  background-color: var(--color-primary);
+  background-color: var(--color-primary-fade);
   border-color: var(--color-primary);
 }
 
 @include g.mq(hover) {
 
   a.c-label.c-label--primary:hover {
-    color: var(--color-primary);
-    background-color: var(--ui-inverse-color);
+    color: var(--ui-inverse-color);
+    background-color: var(--color-primary);
   }
 
 }
 
 a.c-label.c-label--primary:focus {
-  color: var(--color-primary);
-  background-color: var(--ui-inverse-color);
+  color: var(--ui-inverse-color);
+  background-color: var(--color-primary);
 }
