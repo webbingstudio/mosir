@@ -15,7 +15,7 @@
 .p-buttonMenu a {
   @include g.flex( n, n, center, center );
   min-width: 8em;
-  min-height: 2.5em;
+  min-height: var(--nav-height-sm);
   background-color: var(--ui-accent-color);
   border: 0.125rem solid var(--ui-accent-color);
   border-radius: 99em;

@@ -30,7 +30,7 @@
 .p-stickyMenu a {
   @include g.flex( n, n, center, center );
   min-width: 8em;
-  min-height: var(--nav-height);
+  min-height: var(--nav-height-md);
   background-color: var(--ui-accent-color);
   border: 0.125rem solid var(--ui-accent-color);
   border-radius: 99em;

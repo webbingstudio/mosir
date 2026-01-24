@@ -3,7 +3,7 @@
 
 :root :where(.wp-element-button, .wp-block-button__link) {
     @include g.flex( n, n, center, center );
-    min-height: var(--nav-height);
+    min-height: var(--nav-height-md);
     padding: 0 var(--spacing-sm);
     background-color: var(--ui-accent-color);
     border: 0.125rem solid var(--ui-accent-color);

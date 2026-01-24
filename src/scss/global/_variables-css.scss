@@ -169,8 +169,9 @@
 
   --screen-x-spacing: 1rem; // not responsive spacing
 
-  --nav-height: 2.75rem;
-  --drawer-toggle-size: var(--nav-height);
+  --nav-height-md: 2.75rem;
+  --nav-height-sm: 2rem;
+  --drawer-toggle-size: var(--nav-height-md);
 
   --headline-hover-bg: rgba(0 0 0 / 0.05);
 

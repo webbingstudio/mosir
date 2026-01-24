@@ -8,8 +8,8 @@
 
 .wp-paginate .page-numbers {
     @include g.flex(n, n, center, center);
-    width: var(--nav-height);
-    height: var(--nav-height);
+    width: var(--nav-height-md);
+    height: var(--nav-height-md);
     color: var(--ui-default-color);
     background-color: var(--ui-inverse-color);
     border: 0.125rem solid var(--ui-accent-color);
@@ -41,12 +41,6 @@
     cursor: default;
 }
 
-.wp-paginate .prev,
-.wp-paginate .next {
-    background: transparent;
-    border-color: transparent;
-}
-
 .wp-paginate .prev {
   @include g.arrow('left');
 }
@@ -57,7 +51,8 @@
 
 .wp-paginate .prev::before,
 .wp-paginate .next::before {
-    top: calc( 50% - 0.275em );
+    top: calc( var(--nav-height) / 2 );
+    left: 0;
     border-top-color: currentColor;
     border-right-color: currentColor;
 }

@@ -46,12 +46,16 @@
 
 .p-sitemap__nav a {
   padding-left: 1.25em;
+  align-items: flex-start;
+  justify-content: flex-start;
   @include g.arrow();
 }
 
 .p-sitemap__nav a::before {
-  top: 0.4em;
+  // Since the arrow was rotated with rotate, it needs to move diagonally.
+  top: calc( var(--lineHeight-xs) * 1em / 2 );
   left: 0;
+  transform: translateX(-33%) translateY(-33%);
 }
 
 .p-sitemap__nav .current-menu-item > a {

@@ -57,8 +57,10 @@
 }
 
 .widget .wp-block-categories-list li a::before {
-    top: 0.45em;
-    left: 0;
+  top: calc( var(--nav-height-xs) / 2 );
+  left: 0;
+  // Since the arrow was rotated with rotate, it needs to move diagonally.
+  transform: translateX(-33%) translateY(-33%);
 }
 
 @include g.mq(hover) {
@@ -87,7 +89,7 @@
 .widget .wp-block-archives-dropdown select {
     padding-inline: 0.5em;
     width: 100%;
-    min-height: var(--nav-height);
+    min-height: var(--nav-height-md);
     background-color: var(--body-bg);
     border: 0.0625rem solid var(--border-default-color);
     border-radius: var(--border-radius-sm);

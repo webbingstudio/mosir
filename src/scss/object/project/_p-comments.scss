@@ -83,7 +83,7 @@
     @include g.iFlex( n, n, center, center );
     gap: var(--spacing-xs);
     width: 15rem;
-    min-height: var(--nav-height);
+    min-height: var(--nav-height-md);
     padding-inline: var(--spacing-sm);
     background-color: var(--ui-inverse-color);
     border: 0.125rem solid var(--ui-accent-color);

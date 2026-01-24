@@ -51,6 +51,9 @@ ul.c-nav,
 
 .c-nav a:focus {
   color: var(--ui-default-color);
+}
+
+.c-nav .current-menu-item > a {
   text-decoration: underline;
 }
 

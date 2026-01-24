@@ -40,7 +40,7 @@
 
 // If screen have sticky navigation, increase the bottom margin.
 body:has(.p-stickyMenu) .l-footer__copyright {
-  padding-bottom: calc( var(--spacing-md) + var(--nav-height) + ( var(--spacing-xs) * 2 ) );
+  padding-bottom: calc( var(--spacing-md) + var(--nav-height-md) + ( var(--spacing-xs) * 2 ) );
 }
 
 .l-footer__copyright__body {
