@@ -12,7 +12,7 @@
   container-type: inline-size;
 
   @include g.mq(default) {
-    @include g.flex( n, wrap, n, n );
+    @include g.flex( n, wrap, flex-start, n );
   }
 
 }
