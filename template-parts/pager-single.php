@@ -1,15 +1,14 @@
 <?php
 /**
  * pager-single.php
- * ページネーション用テンプレート（固定ページ・フロントページ）
+ * ページネーション用テンプレート（クエリを上書きした場合）
  *
  * @package mosir
  */
 ?>
-<p>ページネーション =============</p>
 <?php
-global $q;
-if( $q->max_num_pages > 1) {
+if( $mos_q->max_num_pages > 1) {
+    // https://developer.wordpress.org/reference/functions/paginate_links/#comment-418
     $_big = 999999999; // need an unlikely integer
 
     echo '<nav class="wp-paginate">';
@@ -18,8 +17,8 @@ if( $q->max_num_pages > 1) {
         'type' => 'plain',
         'base' => str_replace( $_big, '%#%', esc_url( get_pagenum_link( $_big ) ) ),
         'format' => 'page/%#%/',
-        'current' => max( 1, get_query_var('page') ),
-        'total' => $q->max_num_pages,
+        'current' => max( 1, get_query_var('paged') ),
+        'total' => $mos_q->max_num_pages,
         'mid_size' => 2,
         'end_size' => 0,
         'prev_next' => true,
