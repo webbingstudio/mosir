@@ -67,7 +67,7 @@
 }
 
 .p-post__footer__contents > * + * {
-    margin-top: var(--spacing-md);
+    margin-top: var(--spacing-sm);
 }
 
 // .p-post__footer__tags {
@@ -88,6 +88,10 @@
     font-weight: var(--fontWeight-bold);
     color: var(--ui-accent-color);
     line-height: var(--lineHeight-none);
+}
+
+.p-post__footer__link {
+    margin-top: var(--spacing-md);
 }
 
 .p-post__footer__link.p-horizontalMenu .c-nav {
