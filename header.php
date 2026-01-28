@@ -51,7 +51,7 @@ $mos_options_drawer = get_theme_mod( 'mos_options_drawer', 'always' );
 			</p>
 		<?php endif; ?>
 
-		<?php if( $mos_options_header !== 'small' ): ?>
+		<?php if( $mos_options_header !== 'minimal' ): ?>
 		<div class="l-header__top">
 
 			<?php

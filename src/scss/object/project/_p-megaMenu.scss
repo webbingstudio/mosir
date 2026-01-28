@@ -54,9 +54,9 @@
 
 .p-megaMenu__nav > .menu-item > a::after {
   content: "";
-  @include g.position(absolute, n, 0, -0.125rem, n);
+  @include g.position(absolute, n, 0, 0, n);
   width: 100%;
-  height: 0.125rem;
+  height: 0.1875rem;
   background-color: var(--ui-accent-color);
   transform-origin: center center;
   transition: var(--transition-cubic);
