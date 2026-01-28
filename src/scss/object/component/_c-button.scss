@@ -15,7 +15,7 @@
     background-color: var(--ui-inverse-color);
     border: 0.125rem solid var(--ui-accent-color);
     border-radius: 99em;
-    color: var(---ui-default-color);
+    color: var(--ui-default-color);
     font-size: var(--fontSize-md);
     letter-spacing: 0.1em;
     font-weight: var(--fontWeight-bold);
@@ -40,7 +40,7 @@
 
 .c-button.c-button--disabled {
     background-color: var(--color-default-fade);
-    border-color: var(--border-default-light-color);
+    border-color: var(--ui-border-light-color);
     opacity: 0.7;
     pointer-events: none;
     cursor: default;

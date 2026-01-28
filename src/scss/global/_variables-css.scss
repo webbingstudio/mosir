@@ -139,12 +139,12 @@
   // ------------------------------
   // Variables not related to WordPress
   // ------------------------------
-  --cover-default-color: rgb( 255 255 255 / 0.8 );
-  --cover-inverse-color: rgb( 0 0 0 / 0.5 );
-  --border-default-color: var(--color-default-lighter);
-  --border-default-light-color: rgb( 0 0 0 / 0.2 );
-  --border-radius-sm: 0.25rem;
-  --border-radius-md: 0.375rem;
+
+  --screen-x-spacing: 1rem; // not responsive spacing
+
+  --nav-height-md: 2.75rem;
+  --nav-height-sm: 2rem;
+  --drawer-toggle-size: var(--nav-height-md);
 
   --fontFamily-default: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Noto Sans JP", sans-serif;
   --fontWeight-normal: 400;
@@ -163,21 +163,21 @@
   --link-default-color: var(--color-primary);
   --link-hover-color: var(--color-primary);
 
-  --ui-default-color: var(--color-default-dark);
+  --ui-default-color: var(--body-color);
   --ui-inverse-color: var(--color-white);
-  --ui-accent-color: var(--color-primary);
+  --ui-accent-color: var(--link-default-color);
+  --ui-mute-color: var(--color-default-light);
+  --ui-fade-color: var(--color-default-fade);
+  --ui-border-color: var(--color-default-lighter);
+  --ui-border-light-color: rgb( 0 0 0 / 0.2 );
+  --ui-cover-default-color: rgb( 255 255 255 / 0.8 );
+  --ui-cover-inverse-color: rgb( 0 0 0 / 0.5 );
 
-  --screen-x-spacing: 1rem; // not responsive spacing
+  --label-color: var(--ui-default-color);
+  --label-bg: var(--ui-fade-color);
 
-  --nav-height-md: 2.75rem;
-  --nav-height-sm: 2rem;
-  --drawer-toggle-size: var(--nav-height-md);
-
-  --headline-hover-bg: rgba(0 0 0 / 0.05);
-
-  --card-bg: var(--body-bg);
-
-  --media-bg: var(--body-bg);
+  --border-radius-sm: 0.25rem;
+  --border-radius-md: 0.375rem;
 
   --transition-fast: all 0.25s;
   --transition-slow: all 0.5s;

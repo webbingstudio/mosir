@@ -17,7 +17,7 @@
 .p-comments__list > * {
   margin-top: var(--spacing-sm);
   padding-top: var(--spacing-sm);
-  border-top: 0.0625rem solid var(--border-default-light-color);
+  border-top: 0.0625rem solid var(--ui-border-light-color);
 }
 
 .p-comments .comment .comment {
@@ -31,8 +31,8 @@
   @include g.position(absolute, var(--spacing-xs), n, n, 0);
   width: 0.5rem;
   height: var(--spacing-md);
-  border-left: 0.125rem dotted var(--border-default-color);
-  border-bottom: 0.125rem dotted var(--border-default-color);
+  border-left: 0.125rem dotted var(--ui-border-color);
+  border-bottom: 0.125rem dotted var(--ui-border-color);
 }
 
 .p-comments .comment-meta > * + * {
@@ -74,7 +74,7 @@
   color: var(--body-color);
   font-size: var(--fontSize-md);
   padding: 0.5em;
-  border: 0.0625rem solid var(--border-default-color);
+  border: 0.0625rem solid var(--ui-border-color);
   border-radius: var(--border-radius-sm);
 }
 
@@ -97,7 +97,7 @@
     background-color: var(--ui-inverse-color);
     border: 0.125rem solid var(--ui-accent-color);
     border-radius: 99em;
-    color: var(---ui-default-color);
+    color: var(--ui-default-color);
     font-size: var(--fontSize-md);
     letter-spacing: 0.1em;
     font-weight: var(--fontWeight-bold);

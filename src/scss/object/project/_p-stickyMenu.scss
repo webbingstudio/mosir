@@ -12,7 +12,7 @@
   @include g.position(fixed, n, n, 0, 0, 21);
   width: 100vw;
   padding-block: var(--spacing-xs);
-  background-color: var(--cover-inverse-color);
+  background-color: var(--ui-cover-inverse-color);
   color: var(--ui-inverse-color);
   backdrop-filter: blur(1rem);
   z-index: 21;

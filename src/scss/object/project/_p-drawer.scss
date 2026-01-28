@@ -48,7 +48,7 @@
 .p-drawer::after {
   content: "";
   @include g.position( fixed, 0, 0, n, 0, 102 );
-  background-color: var(--cover-inverse-color);
+  background-color: var(--ui-cover-inverse-color);
   width: 100dvw;
   opacity: 0;
 }

@@ -23,7 +23,7 @@
 .widget [class*="wp-block-latest-"] li + li {
     margin-top: var(--spacing-xs);
     padding-top: var(--spacing-xs);
-    border-top: 0.0625rem solid var(--border-default-light-color);
+    border-top: 0.0625rem solid var(--ui-border-light-color);
 }
 
 .widget [class*="wp-block-latest-"] a {
@@ -93,7 +93,7 @@
     width: 100%;
     min-height: var(--nav-height-md);
     background-color: var(--body-bg);
-    border: 0.0625rem solid var(--border-default-color);
+    border: 0.0625rem solid var(--ui-border-color);
     border-radius: var(--border-radius-sm);
     color: var(--body-color);
     line-height: var(--lineHeight-none);

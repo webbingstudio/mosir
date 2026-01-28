@@ -11,8 +11,8 @@
   padding-inline: 0.25em;
   min-width: 7em;
   min-height: calc( var(--lineHeight-md) * 1em );
-  background-color: var(--color-default-fade);
-  color: var(--color-default-dark);
+  background-color: var(--label-bg);
+  color: var(--label-color);
   font-size: var(--fontSize-sm);
   line-height: var(--lineHeight-xs);
   text-align: center;
@@ -27,14 +27,14 @@ a.c-label {
 
   a.c-label:hover {
     color: var(--ui-inverse-color);
-    background-color: var(--color-default-dark);
+    background-color: var(--label-color);
   }
 
 }
 
 a.c-label:focus {
   color: var(--ui-inverse-color);
-  background-color: var(--color-default-dark);
+  background-color: var(--label-color);
 }
 
 .c-label.c-label--primary {

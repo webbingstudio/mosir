@@ -14,7 +14,7 @@
     border-radius: var(--border-radius-sm);
     background-color: var(--ui-inverse-color);
     border: 0.125rem solid var(--ui-accent-color);
-    color: var(---ui-default-color);
+    color: var(--ui-default-color);
     font-size: var(--fontSize-md);
     letter-spacing: 0.1em;
     font-weight: var(--fontWeight-bold);
@@ -31,7 +31,7 @@
     border-radius: var(--border-radius-sm);
     background-color: var(--ui-inverse-color);
     border: 0.125rem solid var(--ui-accent-color);
-    color: var(---ui-default-color);
+    color: var(--ui-default-color);
 }
 
 .search-submit:hover,
@@ -51,7 +51,7 @@
     padding: 0 var(--spacing-xs);
     min-height: var(--nav-height-md);
     background-color: var(--body-bg);
-    border: 0.0625rem solid var(--border-default-color);
+    border: 0.0625rem solid var(--ui-border-color);
     border-radius: var(--border-radius-sm);
     color: var(--body-color);
     font-size: var(--fontSize-md);

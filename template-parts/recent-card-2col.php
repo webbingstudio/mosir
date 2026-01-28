@@ -21,7 +21,7 @@
         <div class="p-section__header">
             <p class="p-section__title c-title c-title--center c-title--lv2" <?php language_attributes(); ?>>カード</p>
             <?php if( !preg_match('/^en_/', get_locale() ) ): ?>
-                <p class="p-section__subTitle c-title c-title--center c-title--lv5 u-color--primary" lang="en-US">Card</p>
+                <p class="p-section__subTitle c-title c-title--center c-title--lv5" lang="en-US">Card</p>
             <?php endif; ?>
         </div>
         <div class="p-cardList">
@@ -46,7 +46,7 @@
         <div class="p-section__header">
             <p class="p-section__title c-title c-title--center c-title--lv2" <?php language_attributes(); ?>>カード</p>
             <?php if( !preg_match('/^en_/', get_locale() ) ): ?>
-                <p class="p-section__subTitle c-title c-title--center c-title--lv5 u-color--primary" lang="en-US">Card</p>
+                <p class="p-section__subTitle c-title c-title--center c-title--lv5" lang="en-US">Card</p>
             <?php endif; ?>
         </div>
         <div class="p-cardList">

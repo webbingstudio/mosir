@@ -131,7 +131,7 @@
 // ------------------------------
 
 .p-post.p-post--post .p-post__header::after {
-  border-bottom: 0.0625rem solid var(--border-default-light-color);
+  border-bottom: 0.0625rem solid var(--ui-border-light-color);
 }
 
 .p-post.p-post--post .p-post__contents {
@@ -139,5 +139,5 @@
 }
 
 .p-post.p-post--post .p-post__footer::before {
-  border-top: 0.0625rem solid var(--border-default-light-color);
+  border-top: 0.0625rem solid var(--ui-border-light-color);
 }

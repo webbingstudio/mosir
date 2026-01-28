@@ -28,7 +28,7 @@ if( $mosi_p4p && $mosi_p4p->post_status === 'publish' ){
     <div class="p-pageHeader__contents l-container">
         <p class="p-pageHeader__title c-title c-title--lv2" <?php language_attributes(); ?>><?php echo esc_attr($mosi_p4p_title); ?></p>
         <?php if( !preg_match('/^en_/', get_locale() ) ): ?>
-            <p class="p-pageHeader__caption u-color--primary" lang="en-US"><?php echo ucfirst( esc_html($mosi_p4p_slug) ); ?></p>
+            <p class="p-pageHeader__caption" lang="en-US"><?php echo ucfirst( esc_html($mosi_p4p_slug) ); ?></p>
         <?php endif; ?>
     </div>
 </div>
@@ -37,7 +37,7 @@ if( $mosi_p4p && $mosi_p4p->post_status === 'publish' ){
     <div class="p-pageHeader__contents l-container">
         <p class="p-pageHeader__title c-title c-title--lv2" <?php language_attributes(); ?>><?php esc_html_e($mosi_post_type_obj->labels->name); ?></p>
         <?php if( !preg_match('/^en_/', get_locale() ) ): ?>
-            <p class="p-pageHeader__caption u-color--primary" lang="en-US"><?php echo ucfirst( esc_html($mosi_post_type_obj->name) ); ?></p>
+            <p class="p-pageHeader__caption" lang="en-US"><?php echo ucfirst( esc_html($mosi_post_type_obj->name) ); ?></p>
         <?php endif; ?>
     </div>
 </div>
@@ -49,7 +49,7 @@ if( $mosi_p4p && $mosi_p4p->post_status === 'publish' ){
     <div class="p-pageHeader__contents l-container">
         <p class="p-pageHeader__title c-title c-title--lv2" <?php language_attributes(); ?>><?php echo esc_attr($mosi_p4p_title); ?></p>
         <?php if( !preg_match('/^en_/', get_locale() ) ): ?>
-            <p class="p-pageHeader__caption u-color--primary" lang="en-US"><?php echo ucfirst( esc_html($mosi_p4p_slug) ); ?></p>
+            <p class="p-pageHeader__caption" lang="en-US"><?php echo ucfirst( esc_html($mosi_p4p_slug) ); ?></p>
         <?php endif; ?>
     </div>
 </div>
@@ -58,7 +58,7 @@ if( $mosi_p4p && $mosi_p4p->post_status === 'publish' ){
     <div class="p-pageHeader__contents l-container">
         <h1 class="p-pageHeader__title c-title c-title--lv2" <?php language_attributes(); ?>><?php esc_html_e($mosi_post_type_obj->labels->name); ?></h1>
         <?php if( !preg_match('/^en_/', get_locale() ) ): ?>
-            <p class="p-pageHeader__caption u-color--primary" lang="en-US"><?php echo ucfirst( esc_html($mosi_post_type_obj->name) ); ?></p>
+            <p class="p-pageHeader__caption" lang="en-US"><?php echo ucfirst( esc_html($mosi_post_type_obj->name) ); ?></p>
         <?php endif; ?>
     </div>
 </div>
@@ -67,7 +67,7 @@ if( $mosi_p4p && $mosi_p4p->post_status === 'publish' ){
     <div class="p-pageHeader__contents l-container">
         <h1 class="p-pageHeader__title c-title c-title--lv2" <?php language_attributes(); ?>>検索結果</h1>
         <?php if( !preg_match('/^en_/', get_locale() ) ): ?>
-            <p class="p-pageHeader__caption u-color--primary" lang="en-US">Search result</p>
+            <p class="p-pageHeader__caption" lang="en-US">Search result</p>
         <?php endif; ?>
     </div>
 </div>
@@ -82,7 +82,7 @@ if( $mosi_p4p && $mosi_p4p->post_status === 'publish' ){
     <div class="p-pageHeader__contents l-container">
         <h1 class="p-pageHeader__title c-title c-title--lv2" <?php language_attributes(); ?>><?php the_title(); ?></h1>
         <?php if( !preg_match('/^en/', get_locale() ) ): ?>
-            <p class="p-pageHeader__caption u-color--primary" lang="en-US"><?php echo ucfirst( esc_html($post->post_name) ); ?></p>
+            <p class="p-pageHeader__caption" lang="en-US"><?php echo ucfirst( esc_html($post->post_name) ); ?></p>
         <?php endif; ?>
     </div>
 </div>
