@@ -2,7 +2,9 @@
 @use "sass:math";
 
 .wp-paginate {
+    position: relative;
     @include g.flex(n, n, center, center);
+    container-type: inline-size;
     column-gap: var(--spacing-sm);
 }
 
@@ -31,6 +33,7 @@
 }
 
 .wp-paginate .page-numbers.dots {
+    width: auto;
     background: transparent;
     border-color: transparent;
 }
@@ -77,4 +80,17 @@
 .wp-paginate a.next:hover,
 .wp-paginate a.next:focus {
     color: var(--ui-inverse-color);
+}
+
+.wp-paginate-screen-reader-text {
+    @include g.sr-only();
+}
+
+// If the content width is narrow, the appearance of the pagination changes.
+@container ( width <= 40rem ) {
+
+    .wp-paginate .page-numbers:not(.prev):not(.next):not(.current) {
+        display: none;
+    }
+
 }

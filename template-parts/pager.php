@@ -1,31 +1,51 @@
 <?php
 /**
  * pager.php
- * ページネーション用テンプレート（通常）
+ * Pagination that supports custom query, voice reading and RTL languages.
  *
  * @package mosir
+ *
+ * @param array $args { query: $wp_query }
+ *
  */
-?>
-<?php
-global $wp_query;
-if( $wp_query->max_num_pages > 1) {
-    $_big = 999999999; // need an unlikely integer
 
-    echo '<nav class="wp-paginate">';
-    echo paginate_links(
-        array(
-        'type' => 'plain',
-        'base' => str_replace( $_big, '%#%', esc_url( get_pagenum_link( $_big ) ) ),
-        'format' => 'page/%#%/',
-        'current' => max( 1, get_query_var('paged') ),
-        'total' => $wp_query->max_num_pages,
-        'mid_size' => 2,
-        'end_size' => 0,
-        'prev_next' => true,
-        'prev_text' => '<span class="wp-paginate-label">前のページ</span>',
-        'next_text' => '<span class="wp-paginate-label">次のページ</span>',
-        )
-    );
-    echo '</nav>';
+global $wp_query;
+if( !isset( $args['query'] ) ) {
+	$args = array( 'query' => $wp_query );
+}
+
+$mosi_max_num_pages = isset( $args['query']->max_num_pages ) ? $args['query']->max_num_pages : (int)0;
+
+// https://developer.wordpress.org/reference/functions/paginate_links/#comment-418
+$mosi_pager_big = 999999999; // need an unlikely integer
+
+$mosi_pager_sr_label = '';
+$mosi_pager_sr_label .= '<span class="wp-paginate-screen-reader-text">';
+$mosi_pager_sr_label .= is_rtl() ? ' ' : '';
+$mosi_pager_sr_label .= __( 'Page' );
+$mosi_pager_sr_label .= !is_rtl() ? ' ' : '';
+$mosi_pager_sr_label .= '</span>';
+
+$mosi_pager_args = array(
+	'type'               => 'plain',
+	'base'               => str_replace( $mosi_pager_big, '%#%', esc_url( get_pagenum_link( $mosi_pager_big ) ) ),
+	'total'              => $mosi_max_num_pages,
+	'mid_size'           => 1,
+	'end_size'           => 0,
+	'prev_next'          => true,
+	'prev_text'          => '<span class="wp-paginate-label">' . __( '&laquo; Previous' ) . '</span>',
+	'next_text'          => '<span class="wp-paginate-label">' . __( 'Next &raquo;' ) . '</span>',
+	'before_page_number' => $mosi_pager_sr_label,
+);
+
+if( is_rtl() ) {
+	$mosi_pager_args['before_page_number'] = '';
+	$mosi_pager_args['after_page_number'] = $mosi_pager_sr_label;
+}
+
+if( $mosi_max_num_pages > 1 ) {
+	echo '<nav class="wp-paginate">';
+	echo paginate_links( $mosi_pager_args );
+	echo '</nav>';
 }
 ?>

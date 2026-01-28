@@ -3909,11 +3909,13 @@ a.p-media__inner:focus {
 }
 
 .wp-paginate {
+  position: relative;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
+  container-type: inline-size;
   -moz-column-gap: var(--spacing-sm);
        column-gap: var(--spacing-sm);
 }
@@ -3947,6 +3949,7 @@ a.p-media__inner:focus {
 }
 
 .wp-paginate .page-numbers.dots {
+  width: auto;
   background: transparent;
   border-color: transparent;
 }
@@ -4021,4 +4024,22 @@ a.p-media__inner:focus {
 .wp-paginate a.next:hover,
 .wp-paginate a.next:focus {
   color: var(--ui-inverse-color);
+}
+
+.wp-paginate-screen-reader-text {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+@container ( width <= 40rem ) {
+  .wp-paginate .page-numbers:not(.prev):not(.next):not(.current) {
+    display: none;
+  }
 }/*# sourceMappingURL=theme.css.map */
