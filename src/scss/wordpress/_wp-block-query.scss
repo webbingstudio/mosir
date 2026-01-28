@@ -5,3 +5,19 @@
     list-style-type: none;
     padding-left: 0;
 }
+
+.wp-block-query .wp-block-post-template a,
+.wp-block-query-pagination a {
+  color: currentColor;
+  text-decoration: underline;
+}
+
+@include g.mq(hover) {
+
+    .wp-block-query .wp-block-post-template a:hover,
+    .wp-block-query-pagination a:hover {
+        text-decoration: none;
+    }
+
+}
+

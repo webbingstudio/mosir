@@ -3908,6 +3908,18 @@ a.p-media__inner:focus {
   padding-left: 0;
 }
 
+.wp-block-query .wp-block-post-template a,
+.wp-block-query-pagination a {
+  color: currentColor;
+  text-decoration: underline;
+}
+
+@media (any-hover: hover) {
+  .wp-block-query .wp-block-post-template a:hover,
+  .wp-block-query-pagination a:hover {
+    text-decoration: none;
+  }
+}
 .wp-paginate {
   position: relative;
   display: flex;
