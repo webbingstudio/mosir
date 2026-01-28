@@ -30,7 +30,7 @@ $mosi_pager_args = array(
 	'type'               => 'plain',
 	'base'               => str_replace( $mosi_pager_big, '%#%', esc_url( get_pagenum_link( $mosi_pager_big ) ) ),
 	'total'              => $mosi_max_num_pages,
-	'mid_size'           => 1,
+	'mid_size'           => 2,
 	'end_size'           => 0,
 	'prev_next'          => true,
 	'prev_text'          => '<span class="wp-paginate-label">' . __( '&laquo; Previous' ) . '</span>',
@@ -48,4 +48,3 @@ if( $mosi_max_num_pages > 1 ) {
 	echo paginate_links( $mosi_pager_args );
 	echo '</nav>';
 }
-?>
