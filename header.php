@@ -5,9 +5,9 @@
  * @package mosir
  */
 
-$mos_options_header_markup = get_theme_mod( 'mos_options_header_markup', 'h1' );
-$mos_options_header_layout = get_theme_mod( 'mos_options_header_layout', 'large' );
-$mos_options_drawer_displaying = get_theme_mod( 'mos_options_drawer_displaying', 'always' );
+$mosi_options_header_markup = get_theme_mod( 'mosi_options_header_markup', 'h1' );
+$mosi_options_header_layout = get_theme_mod( 'mosi_options_header_layout', 'large' );
+$mosi_options_drawer_displaying = get_theme_mod( 'mosi_options_drawer_displaying', 'always' );
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
@@ -22,15 +22,15 @@ $mos_options_drawer_displaying = get_theme_mod( 'mos_options_drawer_displaying',
 <a class="skip-link screen-reader-text" id="wp-skip-link" href="#wp--skip-link--target">内容をスキップ</a>
 
 <?php wp_body_open(); ?>
-<header class="l-header l-header--<?php echo esc_attr($mos_options_header_layout); ?> l-header--drawer-<?php echo esc_attr($mos_options_drawer_displaying); ?>">
+<header class="l-header l-header--<?php echo esc_attr($mosi_options_header_layout); ?> l-header--drawer-<?php echo esc_attr($mosi_options_drawer_displaying); ?>">
 	<div class="l-header__contents l-container">
 
 		<?php
-			$mos_custom_logo_id = get_theme_mod( 'custom_logo' );
-			$mos_custom_logo_src = wp_get_attachment_image_src( $mos_custom_logo_id, 'full' );
-			$mos_custom_logo_width = isset($mos_custom_logo_src[1]) ? $mos_custom_logo_src[1] : (bool)false;
+			$mosi_custom_logo_id = get_theme_mod( 'custom_logo' );
+			$mosi_custom_logo_src = wp_get_attachment_image_src( $mosi_custom_logo_id, 'full' );
+			$mosi_custom_logo_width = isset($mosi_custom_logo_src[1]) ? $mosi_custom_logo_src[1] : (bool)false;
 		?>
-		<?php if( is_front_page() && $mos_options_header_markup === 'h1' ): ?>
+		<?php if( is_front_page() && $mosi_options_header_markup === 'h1' ): ?>
 			<h1 class="l-header__siteTitle p-siteTitle">
 		<?php elseif( is_front_page() ): ?>
 			<p class="l-header__siteTitle p-siteTitle">
@@ -39,15 +39,15 @@ $mos_options_drawer_displaying = get_theme_mod( 'mos_options_drawer_displaying',
 				<a href="<?php bloginfo('url'); ?>">
 		<?php endif; ?>
 
-		<?php if( $mos_custom_logo_src && $mos_custom_logo_width ): ?>
-			<span class="p-siteTitle__logo"><?php echo '<img src="' . esc_url( $mos_custom_logo_src[0] ) . '" alt="'. get_bloginfo('name') .'" width="' . $mos_custom_logo_src[1] . '" height="' . $mos_custom_logo_src[2] . '">'; ?></span>
-		<?php elseif( $mos_custom_logo_src ): ?>
-			<span class="p-siteTitle__logo"><?php echo '<img src="' . esc_url( $mos_custom_logo_src[0] ) . '" alt="'. get_bloginfo('name') .'">'; ?></span>
+		<?php if( $mosi_custom_logo_src && $mosi_custom_logo_width ): ?>
+			<span class="p-siteTitle__logo"><?php echo '<img src="' . esc_url( $mosi_custom_logo_src[0] ) . '" alt="'. get_bloginfo('name') .'" width="' . $mosi_custom_logo_src[1] . '" height="' . $mosi_custom_logo_src[2] . '">'; ?></span>
+		<?php elseif( $mosi_custom_logo_src ): ?>
+			<span class="p-siteTitle__logo"><?php echo '<img src="' . esc_url( $mosi_custom_logo_src[0] ) . '" alt="'. get_bloginfo('name') .'">'; ?></span>
 		<?php else: ?>
 			<span class="p-siteTitle__label"><?php bloginfo('name'); ?></span>
 		<?php endif; ?>
 
-		<?php if( is_front_page() && $mos_options_header_markup === 'h1' ): ?>
+		<?php if( is_front_page() && $mosi_options_header_markup === 'h1' ): ?>
 			</h1>
 		<?php elseif( is_front_page() ): ?>
 			</p>
@@ -56,11 +56,11 @@ $mos_options_drawer_displaying = get_theme_mod( 'mos_options_drawer_displaying',
 			</p>
 		<?php endif; ?>
 
-		<?php if( $mos_options_header_layout !== 'simple' ): ?>
+		<?php if( $mosi_options_header_layout !== 'simple' ): ?>
 		<div class="l-header__top">
 
 			<?php
-			if( has_nav_menu('header_nav_01') && $mos_options_header_layout !== 'large' ) {
+			if( has_nav_menu('header_nav_01') && $mosi_options_header_layout !== 'large' ) {
 				wp_nav_menu(
 					array(
 						'theme_location' => 'header_nav_01',
@@ -77,7 +77,7 @@ $mos_options_drawer_displaying = get_theme_mod( 'mos_options_drawer_displaying',
 			?>
 
 			<?php
-			if( has_nav_menu('header_nav_02') && $mos_options_header_layout === 'large' ) {
+			if( has_nav_menu('header_nav_02') && $mosi_options_header_layout === 'large' ) {
 				wp_nav_menu(
 					array(
 						'theme_location' => 'header_nav_02',
@@ -110,10 +110,10 @@ $mos_options_drawer_displaying = get_theme_mod( 'mos_options_drawer_displaying',
 		</div>
 		<?php endif; ?>
 
-		<?php if( $mos_options_drawer_displaying !== 'none' ): ?>
-		<div class="l-header__drawerToggle p-drawerToggle p-drawerToggle--<?php echo esc_attr($mos_options_drawer_displaying); ?>">
+		<?php if( $mosi_options_drawer_displaying !== 'none' ): ?>
+		<div class="l-header__drawerToggle p-drawerToggle p-drawerToggle--<?php echo esc_attr($mosi_options_drawer_displaying); ?>">
 			<div class="p-drawerToggle__contents l-container">
-				<button aria-label="Open/close drawer menu" id="mosi-drawer-toggle" class="js-mosi-drawer p-drawerToggle__button c-toggleButton<?php echo $mos_options_header_layout !== 'small' ? ' c-toggleButton--lg' : ''; ?>" data-mosi-drawer-action="toggle" data-mosi-drawer-duration="500" aria-controls="drawer" aria-expanded="false">
+				<button aria-label="Open/close drawer menu" id="mosi-drawer-toggle" class="js-mosi-drawer p-drawerToggle__button c-toggleButton<?php echo $mosi_options_header_layout !== 'small' ? ' c-toggleButton--lg' : ''; ?>" data-mosi-drawer-action="toggle" data-mosi-drawer-duration="500" aria-controls="drawer" aria-expanded="false">
 					<span class="c-toggleButton__label">Menu</span>
 					<span class="c-toggleButton__icon"></span>
 				</button>
@@ -121,7 +121,7 @@ $mos_options_drawer_displaying = get_theme_mod( 'mos_options_drawer_displaying',
 		</div>
 		<?php endif; ?>
 
-		<?php if( $mos_options_header_layout === 'large' ): ?>
+		<?php if( $mosi_options_header_layout === 'large' ): ?>
 		<div class="l-header__bottom">
 
 			<?php

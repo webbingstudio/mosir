@@ -7,31 +7,31 @@
  */
 
 get_header();
-$mos_post_type = get_post_type();
+$mosi_post_type = get_post_type();
 
-$mos_categories = get_the_terms( $post->ID, 'category' );
+$mosi_categories = get_the_terms( $post->ID, 'category' );
 
-$mos_tags = get_the_tags();
+$mosi_tags = get_the_tags();
 
-$mos_date_format = get_option('date_format');
-$mos_time_format = get_option('time_format');
+$mosi_date_format = get_option('date_format');
+$mosi_time_format = get_option('time_format');
 
-$mos_prev_link = get_previous_post_link( '%link', '前: %title' );
-$mos_next_link = get_next_post_link( '%link', '次: %title' );
+$mosi_prev_link = get_previous_post_link( '%link', '前: %title' );
+$mosi_next_link = get_next_post_link( '%link', '次: %title' );
 ?>
 <?php get_template_part( 'template-parts/pageHeader' ); ?>
 <div class="l-content">
 
 <?php if( have_posts() ) : ?>
 <?php while( have_posts() ) : the_post(); ?>
-	<article class="p-<?php echo esc_attr($mos_post_type); ?>-contents p-post p-post--<?php echo esc_attr($mos_post_type); ?>">
+	<article class="p-<?php echo esc_attr($mosi_post_type); ?>-contents p-post p-post--<?php echo esc_attr($mosi_post_type); ?>">
 		<div class="p-post__header">
 			<div class="p-post__header__contents l-container l-container--sm">
 				<div class="p-post__header__meta">
-					<time class="c-date" datetime="<?php the_time('c'); ?>"><?php the_time( $mos_date_format ); ?></time>
-					<?php if($mos_categories) : ?>
+					<time class="c-date" datetime="<?php the_time('c'); ?>"><?php the_time( $mosi_date_format ); ?></time>
+					<?php if($mosi_categories) : ?>
 					<p class="p-post__category">
-						<?php foreach( $mos_categories as $category ): ?>
+						<?php foreach( $mosi_categories as $category ): ?>
 						<a href="<?php echo get_category_link($category->term_id); ?>" class="c-label">
 							<?php echo esc_html($category->name); ?>
 						</a>
@@ -42,18 +42,18 @@ $mos_next_link = get_next_post_link( '%link', '次: %title' );
 				<h1 class="p-post__title c-title c-title--lv2"><?php echo get_the_title() ? get_the_title() : '(タイトルなし)'; ?></h1>
 			</div>
 		</div>
-		<div class="p-post__contents <?php mos_wp_block_class(); ?>">
+		<div class="p-post__contents <?php mosi_wp_block_class(); ?>">
 			<?php the_content(); ?>
 		</div>
 		<div class="p-post__footer">
 			<div class="p-post__footer__contents l-container l-container--sm">
 				<div class="p-post__footer__meta">
-					<time class="c-date" datetime="<?php the_time('c'); ?>"><?php the_time( $mos_date_format . ' ' . $mos_time_format ); ?></time>
+					<time class="c-date" datetime="<?php the_time('c'); ?>"><?php the_time( $mosi_date_format . ' ' . $mosi_time_format ); ?></time>
 				</div>
-				<?php if( $mos_tags ): ?>
+				<?php if( $mosi_tags ): ?>
 				<div class="p-post__footer__tags">
 					<ul class="c-nav">
-						<?php foreach( $mos_tags as $tag ): ?>
+						<?php foreach( $mosi_tags as $tag ): ?>
 						<li class="c-nav__item">
 							<a href="<?php echo get_tag_link( $tag->term_id ); ?>"><?php echo $tag->name; ?></a>
 						</li>
@@ -61,20 +61,20 @@ $mos_next_link = get_next_post_link( '%link', '次: %title' );
 					</ul>
 				</div>
 				<?php endif; ?>
-				<?php if( $mos_prev_link || $mos_next_link ): ?>
+				<?php if( $mosi_prev_link || $mosi_next_link ): ?>
 				<div class="p-post__footer__link p-horizontalMenu">
 					<ul class="p-horizontalMenu__nav c-nav">
 						<li class="p-post__footer__prev c-nav__item">
-							<?php if( $mos_prev_link ): ?>
-								<?php echo $mos_prev_link; ?>
+							<?php if( $mosi_prev_link ): ?>
+								<?php echo $mosi_prev_link; ?>
 							<?php endif; ?>
 						</li>
 						<li class="p-post__footer__back c-nav__item">
-							<a href="<?php echo esc_url( get_post_type_archive_link($mos_post_type) ); ?>">一覧へもどる</a>
+							<a href="<?php echo esc_url( get_post_type_archive_link($mosi_post_type) ); ?>">一覧へもどる</a>
 						</li>
 						<li class="p-post__footer__next c-nav__item">
-							<?php if( $mos_next_link ): ?>
-								<?php echo $mos_next_link; ?>
+							<?php if( $mosi_next_link ): ?>
+								<?php echo $mosi_next_link; ?>
 							<?php endif; ?>
 						</li>
 					</ul>

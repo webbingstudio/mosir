@@ -6,7 +6,7 @@
  * @package mosir
  */
 
-$mos_post_type = get_post_type() ? get_post_type() : get_query_var( 'post_type' );
+$mosi_post_type = get_post_type() ? get_post_type() : get_query_var( 'post_type' );
 get_header();
 ?>
 <?php get_template_part( 'template-parts/pageHeader' ); ?>
@@ -15,11 +15,11 @@ get_header();
     <div class="p-posts">
         <?php
             if( is_search() ):
-                $mos_s = get_query_var('s') ? get_query_var('s') : '(なし)';
+                $mosi_s = get_query_var('s') ? get_query_var('s') : '(なし)';
         ?>
         <div class="p-posts__header">
             <div class="p-posts__header__contents l-container l-container--sm">
-                <p class="p-posts__title c-title c-title--lv3 c-title--center">キーワード: <?php esc_html_e($mos_s); ?></p>
+                <p class="p-posts__title c-title c-title--lv3 c-title--center">キーワード: <?php esc_html_e($mosi_s); ?></p>
             </div>
         </div>
         <?php elseif( !is_home() && !is_post_type_archive() ): ?>
@@ -51,11 +51,11 @@ get_header();
     <div class="p-posts">
         <?php
             if( is_search() ):
-                $mos_s = get_query_var('s') ? get_query_var('s') : '(なし)';
+                $mosi_s = get_query_var('s') ? get_query_var('s') : '(なし)';
         ?>
         <div class="p-posts__header">
             <div class="p-posts__header__contents l-container l-container--sm">
-                <p class="p-posts__title c-title c-title--lv3 c-title--center">キーワード: <?php esc_html_e($mos_s); ?></p>
+                <p class="p-posts__title c-title c-title--lv3 c-title--center">キーワード: <?php esc_html_e($mosi_s); ?></p>
             </div>
         </div>
         <div class="p-posts__contents l-container l-container--sm u-p--t-lg u-p--b-lg">
@@ -83,7 +83,7 @@ get_header();
     </div>
     <?php endif; ?>
 
-    <?php if ( $mos_post_type === 'post' ) : ?>
+    <?php if ( $mosi_post_type === 'post' ) : ?>
         <?php if ( is_active_sidebar( 'widget-main-post' ) ) : ?>
             <div class="u-p--b-xl p-widgetArea p-widgetArea--main p-widgetArea--main-post">
                 <div class="p-widgetArea__inner">
@@ -94,7 +94,7 @@ get_header();
     <?php endif; ?>
 
 </div>
-<?php if ( $mos_post_type === 'post' ) : ?>
+<?php if ( $mosi_post_type === 'post' ) : ?>
 <?php get_sidebar(); ?>
 <?php endif; ?>
 

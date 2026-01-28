@@ -13,8 +13,8 @@ if ( ! defined( '_S_VERSION' ) ) {
 // Theme setup
 // ==============================
 
-if ( ! function_exists( 'mos_setup' ) ) :
-	function mos_setup() {
+if ( ! function_exists( 'mosi_setup' ) ) :
+	function mosi_setup() {
 		add_theme_support( 'wp-block-styles' );
 		add_theme_support( 'title-tag' );
 		add_theme_support( 'post-thumbnails' );
@@ -33,14 +33,14 @@ if ( ! function_exists( 'mos_setup' ) ) :
 		add_theme_support( 'custom-logo' );
 	}
 endif;
-add_action( 'after_setup_theme', 'mos_setup' );
+add_action( 'after_setup_theme', 'mosi_setup' );
 
 
 // ==============================
 // Enqueues Styles and Scripts
 // ==============================
 
-if ( ! function_exists( 'mos_enqueue_styles' ) ) :
+if ( ! function_exists( 'mosi_enqueue_styles' ) ) :
 	/**
 	 * Enqueues theme.css on the front.
 	 *
@@ -48,7 +48,7 @@ if ( ! function_exists( 'mos_enqueue_styles' ) ) :
 	 *
 	 * @return void
 	 */
-	function mos_enqueue_styles() {
+	function mosi_enqueue_styles() {
 		wp_enqueue_style(
 			'theme-style',
 			get_theme_file_uri( 'assets/css/theme.css' ),
@@ -57,10 +57,10 @@ if ( ! function_exists( 'mos_enqueue_styles' ) ) :
 		);
 	}
 endif;
-add_action( 'wp_enqueue_scripts', 'mos_enqueue_styles' );
+add_action( 'wp_enqueue_scripts', 'mosi_enqueue_styles' );
 
 
-if ( ! function_exists( 'mos_enqueue_scripts' ) ) :
+if ( ! function_exists( 'mosi_enqueue_scripts' ) ) :
 	/**
 	 * Enqueues theme.css on the front.
 	 *
@@ -68,7 +68,7 @@ if ( ! function_exists( 'mos_enqueue_scripts' ) ) :
 	 *
 	 * @return void
 	 */
-	function mos_enqueue_scripts() {
+	function mosi_enqueue_scripts() {
 		wp_enqueue_script(
 			'theme-script',
 			get_theme_file_uri( 'assets/js/theme.js' ),
@@ -78,10 +78,10 @@ if ( ! function_exists( 'mos_enqueue_scripts' ) ) :
 			);
 		}
 	endif;
-add_action( 'wp_enqueue_scripts', 'mos_enqueue_scripts' );
+add_action( 'wp_enqueue_scripts', 'mosi_enqueue_scripts' );
 
 
-if ( ! function_exists( 'mos_editor_style' ) ) :
+if ( ! function_exists( 'mosi_editor_style' ) ) :
 	/**
 	 * Enqueues editor-style.css in the editors.
 	 *
@@ -89,15 +89,15 @@ if ( ! function_exists( 'mos_editor_style' ) ) :
 	 *
 	 * @return void
 	 */
-	function mos_editor_style() {
+	function mosi_editor_style() {
 		add_theme_support( 'editor-styles' );
 		add_editor_style( 'assets/css/editor-style.css' );
 	}
 endif;
-add_action( 'after_setup_theme', 'mos_editor_style' );
+add_action( 'after_setup_theme', 'mosi_editor_style' );
 
 
-if ( ! function_exists( 'mos_enqueue_block_editor_assets' ) ) :
+if ( ! function_exists( 'mosi_enqueue_block_editor_assets' ) ) :
 	/**
 	 * Enqueues editor-script.js in the editors.
 	 *
@@ -105,7 +105,7 @@ if ( ! function_exists( 'mos_enqueue_block_editor_assets' ) ) :
 	 *
 	 * @return void
 	 */
-	function mos_enqueue_block_editor_assets() {
+	function mosi_enqueue_block_editor_assets() {
 		wp_enqueue_script(
 			'editor-script',
 			get_theme_file_uri( 'assets/js/editor-script.js' ),
@@ -115,14 +115,14 @@ if ( ! function_exists( 'mos_enqueue_block_editor_assets' ) ) :
 		);
 	}
 endif;
-add_action( 'enqueue_block_editor_assets', 'mos_enqueue_block_editor_assets' );
+add_action( 'enqueue_block_editor_assets', 'mosi_enqueue_block_editor_assets' );
 
 
 // ==============================
 // Menus
 // ==============================
 
-if ( ! function_exists( 'mos_redistar_nav_menu' ) ) :
+if ( ! function_exists( 'mosi_redistar_nav_menu' ) ) :
 	/**
 	 * Define the menus to use within the theme
 	 *
@@ -130,7 +130,7 @@ if ( ! function_exists( 'mos_redistar_nav_menu' ) ) :
 	 *
 	 * @return string
 	 */
-	function mos_redistar_nav_menu() {
+	function mosi_redistar_nav_menu() {
 		register_nav_menus([
 			'header_nav_01' => 'Header: Mega nav.',
 			'header_nav_02' => 'Header: Horizontal nav.',
@@ -144,14 +144,14 @@ if ( ! function_exists( 'mos_redistar_nav_menu' ) ) :
 		]);
 	}
 endif;
-add_action( 'after_setup_theme', 'mos_redistar_nav_menu' );
+add_action( 'after_setup_theme', 'mosi_redistar_nav_menu' );
 
 
 // ==============================
 // Compatible WordPress BlockEditor(Gutenberg)
 // ==============================
 
-if ( ! function_exists( 'mos_wp_block_class' ) ) :
+if ( ! function_exists( 'mosi_wp_block_class' ) ) :
 	/**
 	 * Echo WordPress BlockEditor class name
 	 *
@@ -161,7 +161,7 @@ if ( ! function_exists( 'mos_wp_block_class' ) ) :
 	 * @param string $after The string to append, such as a space.
 	 * @return string
 	 */
-	function mos_wp_block_class( $before = '', $after = '' ) {
+	function mosi_wp_block_class( $before = '', $after = '' ) {
 		echo esc_attr( $before ) . 'wp-block-post-content is-layout-constrained has-global-padding' . esc_attr( $after );
 	}
 endif;
@@ -170,8 +170,8 @@ endif;
 require_once __DIR__ . '/functions/customizer.php';
 
 
-if ( !function_exists( 'mos_widgets_init' ) ) {
-	function mos_widgets_init() {
+if ( !function_exists( 'mosi_widgets_init' ) ) {
+	function mosi_widgets_init() {
 		register_sidebar( array(
 			'name' => 'Sidebar (Post)',
 			'id' => 'widget-sidebar-post',
@@ -201,5 +201,5 @@ if ( !function_exists( 'mos_widgets_init' ) ) {
 		) );
 
 	}
-	add_action( 'widgets_init', 'mos_widgets_init' );
+	add_action( 'widgets_init', 'mosi_widgets_init' );
 }

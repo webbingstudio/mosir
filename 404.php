@@ -17,7 +17,7 @@ get_header();
                 <h2 class="p--error__title c-title c-title--lv3">ページが見つかりません</h2>
             </div>
         </div>
-        <div class="p-error__contents <?php mos_wp_block_class(); ?>">
+        <div class="p-error__contents <?php mosi_wp_block_class(); ?>">
             <p>お探しのURLには、コンテンツがありません。<br>
             コンテンツが移動したか、削除された可能性があります。</p>
             <p>お手数ですが、<a href="<?php echo esc_url( home_url() ); ?>">トップページ</a>から目的のコンテンツをお探しください。</p>

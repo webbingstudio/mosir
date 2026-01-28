@@ -5,8 +5,8 @@
  * @package mosir
  */
 
-$mos_options_drawer_displaying = get_theme_mod( 'mos_options_drawer_displaying', 'always' );
-$mos_options_copyright = get_theme_mod( 'mos_options_copyright', (bool)false );
+$mosi_options_drawer_displaying = get_theme_mod( 'mosi_options_drawer_displaying', 'always' );
+$mosi_options_copyright = get_theme_mod( 'mosi_options_copyright', (bool)false );
 ?>
 
 <?php if ( is_active_sidebar( 'widget-main' ) ) : ?>
@@ -56,13 +56,13 @@ $mos_options_copyright = get_theme_mod( 'mos_options_copyright', (bool)false );
 	</div>
 	<div class="l-footer__copyright">
 		<p class="l-footer__copyright__body">
-			<?php if( $mos_options_copyright ): ?>
-				<?php echo wp_unslash(wp_filter_post_kses($mos_options_copyright)); ?>
+			<?php if( $mosi_options_copyright ): ?>
+				<?php echo wp_unslash(wp_filter_post_kses($mosi_options_copyright)); ?>
 			<?php else: ?>
 				&copy; <?php bloginfo('name'); ?>
 			<?php endif; ?>
 		</p>
-		<?php if( !$mos_options_copyright ): ?>
+		<?php if( !$mosi_options_copyright ): ?>
 		<p class="l-footer__copyright__body u-p--t-sm has-small-font-size"><a href="https://mosir.webbingstudio.com" target="_blank" rel="noopener noreferrer">WordPressテーマ &quot;mosir&quot;</a></p>
 		<?php endif; ?>
 	</div>
@@ -87,7 +87,7 @@ if( has_nav_menu('sticky_nav') ) {
 <?php wp_footer(); ?>
 
 </div>
-<?php if( $mos_options_drawer_displaying !== 'none' ): ?>
+<?php if( $mosi_options_drawer_displaying !== 'none' ): ?>
 <?php get_template_part( 'template-parts/drawer' ); ?>
 <?php endif; ?>
 </body>
