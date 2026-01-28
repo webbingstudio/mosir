@@ -1,16 +1,18 @@
 <?php
 /**
  * pageHeader.php
- * ページヘッダ
+ * header in all pages
  *
  * @package mosir
  */
+
 $mos_post_type = get_post_type() ? get_post_type() : get_query_var( 'post_type' );
 $mos_post_type_obj = $mos_post_type ? get_post_type_object( $mos_post_type ) : (bool)false;
 
 // If "Posts page" is set, the information will be retrieved and reflected in the page header.
-// If not set, the name of the "post" content will be "blog."
 // (Reading Settings > Your homepage displays > Posts page)
+// If not set, the name of the "post" content will be "blog."
+// This is because in Japan, the Japanese translation of "投稿" is not generally used in content titles, so "ブログ" is used instead.
 $mos_p4p_slug = 'page';
 $mos_p4p_title = 'ブログ';
 
