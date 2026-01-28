@@ -24,14 +24,3 @@
 .p-drawerToggle__button {
   @include g.position( absolute, var(--spacing-xs), var(--screen-x-spacing), n, n, 11 ); // top: padding-top of header
 }
-
-// WordPress Admin bar
-.admin-bar .p-drawerToggle {
-  @include g.mq(default) {
-    margin-top: 46px;
-  }
-
-  @include g.mq(xga) {
-    margin-top: 32px;
-  }
-}

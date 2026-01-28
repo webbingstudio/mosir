@@ -25,6 +25,11 @@
   padding-inline: 1em;
 }
 
+
+// ------------------------------
+// not horizontalMenu--arrowed
+// ------------------------------
+
 .p-horizontalMenu:not(.p-horizontalMenu--arrowed) .c-nav__item + .c-nav__item,
 .p-horizontalMenu:not(.p-horizontalMenu--arrowed) .menu-item + .menu-item {
   position: relative;
@@ -38,6 +43,11 @@
   height: 1em;
   border-left: 0.0625rem solid var(--border-default-color);
 }
+
+
+// ------------------------------
+// horizontalMenu--arrowed
+// ------------------------------
 
 .p-horizontalMenu.p-horizontalMenu--arrowed a {
   padding-left: 1.25em;

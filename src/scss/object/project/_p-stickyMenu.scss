@@ -52,3 +52,7 @@
 .p-stickyMenu a:focus {
     outline: none;
 }
+
+.p-stickyMenu .menu-item.current-menu-item a {
+  text-decoration: none;
+}

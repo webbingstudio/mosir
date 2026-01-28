@@ -36,5 +36,9 @@
 }
 
 .p-buttonMenu a:focus {
-    outline: none;
+  outline: none;
+}
+
+.p-buttonMenu .menu-item.current-menu-item a {
+  text-decoration: none;
 }

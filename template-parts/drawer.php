@@ -6,13 +6,14 @@
  * @package mosir
  */
 
-$mos_options_drawer = get_theme_mod( 'mos_options_drawer', 'always' );
+$mos_options_header_layout = get_theme_mod( 'mos_options_header_layout', 'large' );
+$mos_options_drawer_displaying = get_theme_mod( 'mos_options_drawer_displaying', 'always' );
 $mos_options_drawer_size = get_theme_mod( 'mos_options_drawer_size', 'slim' );
 ?>
-<div aria-label="Drawer menu" id="drawer" class="p-drawer p-drawer--<?php echo esc_attr($mos_options_drawer); ?> p-drawer--size-<?php echo esc_attr($mos_options_drawer_size); ?>" aria-hidden="true">
+<div aria-label="Drawer menu" id="drawer" class="p-drawer p-drawer--<?php echo esc_attr($mos_options_drawer_displaying); ?> p-drawer--size-<?php echo esc_attr($mos_options_drawer_size); ?>" aria-hidden="true">
 	<div class="p-drawer__close">
 		<div class="p-drawer__close__contents l-container">
-			<button aria-label="Open/close this menu" id="mosi-drawer-close-top" class="js-mosi-drawer p-drawer__close__button c-toggleButton" data-mosi-drawer-action="toggle" data-mosi-drawer-duration="500" aria-controls="drawer" aria-expanded="false">
+			<button aria-label="Open/close this menu" id="mosi-drawer-close-top" class="js-mosi-drawer p-drawer__close__button c-toggleButton<?php echo $mos_options_header_layout !== 'small' ? ' c-toggleButton--lg' : ''; ?>" data-mosi-drawer-action="toggle" data-mosi-drawer-duration="500" aria-controls="drawer" aria-expanded="false">
 				<span class="c-toggleButton__label">Menu</span>
 				<span class="c-toggleButton__icon"></span>
 			</button>

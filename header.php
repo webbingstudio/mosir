@@ -5,8 +5,9 @@
  * @package mosir
  */
 
-$mos_options_header = get_theme_mod( 'mos_options_header', 'large' );
-$mos_options_drawer = get_theme_mod( 'mos_options_drawer', 'always' );
+$mos_options_header_markup = get_theme_mod( 'mos_options_header_markup', 'h1' );
+$mos_options_header_layout = get_theme_mod( 'mos_options_header_layout', 'large' );
+$mos_options_drawer_displaying = get_theme_mod( 'mos_options_drawer_displaying', 'always' );
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
@@ -21,7 +22,7 @@ $mos_options_drawer = get_theme_mod( 'mos_options_drawer', 'always' );
 <a class="skip-link screen-reader-text" id="wp-skip-link" href="#wp--skip-link--target">内容をスキップ</a>
 
 <?php wp_body_open(); ?>
-<header class="l-header l-header--<?php echo esc_attr($mos_options_header); ?> l-header--drawer-<?php echo esc_attr($mos_options_drawer); ?>">
+<header class="l-header l-header--<?php echo esc_attr($mos_options_header_layout); ?> l-header--drawer-<?php echo esc_attr($mos_options_drawer_displaying); ?>">
 	<div class="l-header__contents l-container">
 
 		<?php
@@ -29,8 +30,10 @@ $mos_options_drawer = get_theme_mod( 'mos_options_drawer', 'always' );
 			$mos_custom_logo_src = wp_get_attachment_image_src( $mos_custom_logo_id, 'full' );
 			$mos_custom_logo_width = isset($mos_custom_logo_src[1]) ? $mos_custom_logo_src[1] : (bool)false;
 		?>
-		<?php if( is_front_page() ): ?>
+		<?php if( is_front_page() && $mos_options_header_markup === 'h1' ): ?>
 			<h1 class="l-header__siteTitle p-siteTitle">
+		<?php elseif( is_front_page() ): ?>
+			<p class="l-header__siteTitle p-siteTitle">
 		<?php else: ?>
 			<p class="l-header__siteTitle p-siteTitle">
 				<a href="<?php bloginfo('url'); ?>">
@@ -44,18 +47,20 @@ $mos_options_drawer = get_theme_mod( 'mos_options_drawer', 'always' );
 			<span class="p-siteTitle__label"><?php bloginfo('name'); ?></span>
 		<?php endif; ?>
 
-		<?php if( is_front_page() ): ?>
+		<?php if( is_front_page() && $mos_options_header_markup === 'h1' ): ?>
 			</h1>
+		<?php elseif( is_front_page() ): ?>
+			</p>
 		<?php else: ?>
 				</a>
 			</p>
 		<?php endif; ?>
 
-		<?php if( $mos_options_header !== 'minimal' ): ?>
+		<?php if( $mos_options_header_layout !== 'simple' ): ?>
 		<div class="l-header__top">
 
 			<?php
-			if( has_nav_menu('header_nav_01') && $mos_options_header !== 'large' ) {
+			if( has_nav_menu('header_nav_01') && $mos_options_header_layout !== 'large' ) {
 				wp_nav_menu(
 					array(
 						'theme_location' => 'header_nav_01',
@@ -72,7 +77,7 @@ $mos_options_drawer = get_theme_mod( 'mos_options_drawer', 'always' );
 			?>
 
 			<?php
-			if( has_nav_menu('header_nav_02') && $mos_options_header === 'large' ) {
+			if( has_nav_menu('header_nav_02') && $mos_options_header_layout === 'large' ) {
 				wp_nav_menu(
 					array(
 						'theme_location' => 'header_nav_02',
@@ -86,6 +91,7 @@ $mos_options_drawer = get_theme_mod( 'mos_options_drawer', 'always' );
 				);
 			}
 			?>
+
 			<?php
 			if( has_nav_menu('header_nav_03') ) {
 				wp_nav_menu(
@@ -101,14 +107,13 @@ $mos_options_drawer = get_theme_mod( 'mos_options_drawer', 'always' );
 				);
 			}
 			?>
-
 		</div>
 		<?php endif; ?>
 
-		<?php if( $mos_options_drawer !== 'none' ): ?>
-		<div class="p-drawerToggle p-drawerToggle--<?php echo esc_attr($mos_options_drawer); ?>">
+		<?php if( $mos_options_drawer_displaying !== 'none' ): ?>
+		<div class="l-header__drawerToggle p-drawerToggle p-drawerToggle--<?php echo esc_attr($mos_options_drawer_displaying); ?>">
 			<div class="p-drawerToggle__contents l-container">
-				<button aria-label="Open/close drawer menu" id="mosi-drawer-toggle" class="js-mosi-drawer p-drawerToggle__button c-toggleButton" data-mosi-drawer-action="toggle" data-mosi-drawer-duration="500" aria-controls="drawer" aria-expanded="false">
+				<button aria-label="Open/close drawer menu" id="mosi-drawer-toggle" class="js-mosi-drawer p-drawerToggle__button c-toggleButton<?php echo $mos_options_header_layout !== 'small' ? ' c-toggleButton--lg' : ''; ?>" data-mosi-drawer-action="toggle" data-mosi-drawer-duration="500" aria-controls="drawer" aria-expanded="false">
 					<span class="c-toggleButton__label">Menu</span>
 					<span class="c-toggleButton__icon"></span>
 				</button>
@@ -116,7 +121,7 @@ $mos_options_drawer = get_theme_mod( 'mos_options_drawer', 'always' );
 		</div>
 		<?php endif; ?>
 
-		<?php if( $mos_options_header === 'large' ): ?>
+		<?php if( $mos_options_header_layout === 'large' ): ?>
 		<div class="l-header__bottom">
 
 			<?php
@@ -126,7 +131,7 @@ $mos_options_drawer = get_theme_mod( 'mos_options_drawer', 'always' );
 						'theme_location' => 'header_nav_01',
 						'container'       => 'nav',
 						'container_aria_label'       => 'Global navigation',
-						'container_class' => 'l-header__menu01 p-megaMenu',
+						'container_class' => 'l-header__menu01 p-megaMenu p-megaMenu--lg',
 						'menu_id' => 'header-nav-01',
 						'menu_class' => 'menu p-megaMenu__nav c-nav',
 						'link_before'      => '<span class="menu-label c-nav__item__label">',

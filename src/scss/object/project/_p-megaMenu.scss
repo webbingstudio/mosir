@@ -25,7 +25,7 @@
 }
 
 .p-megaMenu__nav > .menu-item {
-  font-size: var(--fontSize-lg);
+  font-size: var(--fontSize-md);
   padding-inline: 1.5em;
 }
 
@@ -109,7 +109,7 @@
   height: 100%;
   background-color: var(--body-bg);
   border-top: 0.125rem solid var(--ui-accent-color);
-  box-shadow: var(--shadow--sm);
+  box-shadow: var(--shadow-sm);
   opacity: 0;
   transform: scaleY(0);
   transform-origin: top center;
@@ -123,7 +123,7 @@
   flex-grow: 0;
   flex-basis: 15em;
   transform: translateY(-10%);
-  transition: all 0.5s 0s ease-in;
+  transition: all 0.2s 0s ease-in;
 }
 
 .p-megaMenu__nav > .menu-item:hover > .sub-menu,
@@ -192,3 +192,13 @@
 .p-megaMenu__nav .sub-menu .sub-menu {
   display: none;
 }
+
+
+// ------------------------------
+// megaMenu--lg
+// ------------------------------
+
+.p-megaMenu.p-megaMenu--lg .p-megaMenu__nav > .menu-item {
+  font-size: var(--fontSize-lg);
+}
+

@@ -44,14 +44,6 @@
   transition: var(--transition-slow);
 }
 
-@include g.mq(default) {
-
-  .c-toggleButton__icon {
-    width: 100%;
-  }
-
-}
-
 .c-toggleButton__icon::before,
 .c-toggleButton__icon::after {
   content: "";
@@ -67,18 +59,6 @@
 
 .c-toggleButton__icon::after {
   @include g.position( absolute, n, 0, -0.65rem, n, n );
-}
-
-@include g.mq(default) {
-
-  .c-toggleButton__icon::before {
-    top: -0.875rem;
-  }
-
-  .c-toggleButton__icon::after {
-    bottom: -0.875rem;
-  }
-
 }
 
 .c-toggleButton[aria-expanded="true"] .c-toggleButton__icon {
@@ -99,3 +79,27 @@
   bottom: 0;
   rotate: 90deg;
 }
+
+
+// ------------------------------
+// toggleButton--lg
+// ------------------------------
+
+.c-toggleButton--lg .c-toggleButton__icon {
+  @include g.mq(default) {
+    width: 100%;
+  }
+}
+
+.c-toggleButton--lg .c-toggleButton__icon::before {
+  @include g.mq(default) {
+    top: -0.875rem;
+  }
+}
+
+.c-toggleButton--lg .c-toggleButton__icon::after {
+  @include g.mq(default) {
+    bottom: -0.875rem;
+  }
+}
+

@@ -25,7 +25,7 @@
   content: "";
   @include g.position( fixed, 0, 0, 0, n, 103 );
   background-color: var(--body-bg);
-  box-shadow: var(--shadow--lg-darken);
+  box-shadow: var(--shadow-lg-darken);
 }
 
 .p-drawer:not(.p-drawer--size-wide)::before {
@@ -95,6 +95,10 @@
 
 .p-drawer__close__button {
   @include g.position( absolute, var(--spacing-xs), var(--screen-x-spacing), n, n, 11 ); // top: padding-top of header
+}
+
+body:has(.l-header--small) .p-drawer__close__button {
+  top: 0;
 }
 
 .p-drawer__contents__inner {
@@ -220,10 +224,25 @@ body:has(.p-drawer.-is-closing) {
   overflow: visible;
   height: auto;
   opacity: 0;
-  transition-duration: 0.6s;
-  transition-delay: 0s;
+  transition-duration: 0.3s;
+  transition-delay: 0.3s;
 }
 
 .p-drawer.p-drawer--size-wide.-is-closing .p-drawer__contents {
   transform: translateY(-1rem);
+}
+
+
+// ------------------------------
+// WordPress Admin bar
+// ------------------------------
+
+.admin-bar .p-drawer {
+  @include g.mq(default) {
+    top: 46px;
+  }
+
+  @include g.mq(xga) {
+    top: 32px;
+  }
 }

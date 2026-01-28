@@ -14,18 +14,36 @@ if ( ! function_exists( 'mos_customize_register' ) ){
 		));
 
 
-        $wp_customize->add_setting('mos_options_header', array(
+        $wp_customize->add_setting('mos_options_header_markup', array(
+			'default'           => 'h1',
+			'sanitize_callback' => 'sanitize_text_field',
+		));
+
+        $wp_customize->add_control('mos_options_control_header_markup', array(
+				'settings'    => 'mos_options_header_markup',
+				'label'       => 'Header markup',
+				'description' => 'HTML tag for the header title (logo) when the front page is displayed',
+				'section'     => 'mos_config',
+				'type'        => 'select',
+				'choices'     => array(
+					'h1'   => 'h1 element',
+					'p' => 'p element',
+				)
+		));
+
+
+        $wp_customize->add_setting('mos_options_header_layout', array(
 			'default'           => 'large',
 			'sanitize_callback' => 'sanitize_text_field',
 		));
 
-        $wp_customize->add_control('mos_options_control_header', array(
-				'settings'  => 'mos_options_header',
+        $wp_customize->add_control('mos_options_control_header_layout', array(
+				'settings'  => 'mos_options_header_layout',
 				'label'     => 'Header layout',
 				'section'   => 'mos_config',
 				'type'      => 'select',
 				'choices' => array(
-					'minimal' => 'minimal (logo only)',
+					'simple' => 'simple (logo only)',
 					'small' => 'small (navbar)',
 					'medium' => 'medium (one rows)',
 					'large' => 'large (two rows)',
@@ -33,12 +51,12 @@ if ( ! function_exists( 'mos_customize_register' ) ){
 		));
 
 
-		$wp_customize->add_setting('mos_options_drawer', array(
+		$wp_customize->add_setting('mos_options_drawer_displaying', array(
 			'default'           => 'always',
 			'sanitize_callback' => 'sanitize_text_field',
 		));
 		$wp_customize->add_control('mos_options_control_drawer', array(
-				'settings'  => 'mos_options_drawer',
+				'settings'  => 'mos_options_drawer_displaying',
 				'label'     => 'Drawer displaying',
 				'section'   => 'mos_config',
 				'type'      => 'select',

@@ -2,6 +2,10 @@
 @use "sass:math";
 
 // Top spacing = header height
+body:has(.l-header--small) .l-main > *:first-child {
+    padding-top: var(--drawer-toggle-size);
+}
+
 body:has(.l-header--medium) .l-main > *:first-child {
     padding-top: calc( ( var(--spacing-xs) * 2 ) + var(--drawer-toggle-size) );
 }
