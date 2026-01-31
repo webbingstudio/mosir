@@ -102,10 +102,21 @@ body:has(.l-header--small) .p-drawer__close__button {
 }
 
 .p-drawer__contents__inner {
-  @include g.flex(column, n, n, flex-start);
-  gap: var(--spacing-md);
   padding-top: calc( var(--drawer-toggle-size) + var(--spacing-sm) );
   padding-bottom: var(--spacing-xl);
+}
+
+.p-drawer__contents__inner > * + * {
+  margin-top: var(--spacing-md);
+}
+
+.p-drawer__footer.p-buttons {
+  margin-top: var(--spacing-xl);
+}
+
+.p-drawer.p-drawer--size-slim .p-drawer__footer.p-buttons {
+  width: fit-content;
+  align-items: flex-start;
 }
 
 

@@ -9,7 +9,7 @@
 
 .p-widgetArea {
     container-type: inline-size;
-    container-name: widget-area;
+    container-name: widgetarea;
 }
 
 .p-widgetArea__inner {
@@ -26,13 +26,13 @@
     flex-basis: 100%;
 }
 
-@container widget-area ( width >= 47rem ) {
+@container widgetarea ( width >= 46rem ) {
     .p-widgetArea.p-widgetArea--sidebar .p-widgetArea__inner > * {
         flex-basis: calc( 50% - ( var(--spacing-md) / 2 ) );
     }
 }
 
-@container widget-area ( width >= 63rem ) {
+@container widgetarea ( width >= 62rem ) {
     .p-widgetArea.p-widgetArea--sidebar .p-widgetArea__inner > * {
         flex-basis: calc( 33.33% - ( var(--spacing-md) * 2 / 3 ) );
     }

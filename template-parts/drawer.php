@@ -61,7 +61,7 @@ $mosi_options_drawer_size = get_theme_mod( 'mosi_options_drawer_size', 'slim' );
 			</div>
 			<?php endif; ?>
 
-			<div class="p-drawer__footer">
+			<div class="p-drawer__footer p-buttons">
 				<button aria-label="Close this menu" id="mosi-drawer-close-bottom" class="js-mosi-drawer p-drawer__footer__button c-button" data-mosi-drawer-action="close" data-mosi-drawer-duration="500" aria-controls="drawer">
 					✕ Close menu
 				</button>

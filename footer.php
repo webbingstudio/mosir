@@ -28,7 +28,7 @@ $mosi_options_copyright = get_theme_mod( 'mosi_options_copyright', (bool)false )
 					'theme_location' => 'footer_nav_01',
 					'container'       => 'nav',
 					'container_aria_label'       => 'Footer sitemap',
-					'container_class' => 'l-footer__menu01 p-sitemap p-sitemap--wide',
+					'container_class' => 'l-footer__menu01 p-sitemap',
 					'menu_id' => 'footer-nav-01',
 					'menu_class' => 'menu p-sitemap__nav c-nav',
 					'link_before'      => '<span class="menu-label c-nav__item__label">',
