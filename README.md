@@ -21,7 +21,7 @@ Yes, this theme is child-theme ready.
 
 ### Is this the Block Theme(FSE)?
 
-No, this theme is not support "Full Site Editing".However, it is compatible with "theme.json" variable controls.
+No, this theme is not support "Full Site Editing". However, it is compatible with "theme.json" variable controls.
 
 ### Can I use this theme as a school teaching material or a source of AI learning?
 
@@ -29,11 +29,7 @@ Yes, this theme complies with the WordPress GNU License, so you are free to refe
 
 ### What mountain is used in the main image of the screenshot.png?
 
-This is a photo of Mount Furano in Hokkaido, Japan, the author's native place. I'm grateful for the free use of this wonderful photo.
-
-Free photo of Mount Furano viewed from a hiking trail - ID.82234 | Free Stock Photo by Pakutaso
-https://www.pakutaso.com/20221133319post-43223.html
-
+This is the Niseko mountain range (also known as Weisshorn) as seen from Mt. Iwaw-nupuri in Hokkaido, the author's native place. This photo is included in the mosir theme package and can be freely used under the terms of the GPL license. The photographer is the author's sister, who loves mountain climbing. Thanks to her for this wonderful photo.
 
 ## FAQ (JP)
 
@@ -51,7 +47,4 @@ https://www.pakutaso.com/20221133319post-43223.html
 
 ### screenshot.png のメインビジュアルに使用されている山はどこですか？
 
-作者の生まれ故郷、日本国北海道の「富良野岳」の写真です。この素晴らしい写真を無償で利用できることに感謝します。
-
-登山道から眺める富良野岳の無料の写真素材 - ID.82234｜フリー素材 ぱくたそ  
-https://www.pakutaso.com/20221133319post-43223.html
+開発者の生まれ故郷、北海道のイワオヌプリという山から眺めたニセコ連山（ワイスホルンと呼ばれる）です。この写真は mosir のテーマパッケージに含まれており、GPLライセンスの規定する範囲で自由に利用いただけます。撮影者は登山を愛する開発者の姉です。この素晴らしい写真を提供してくれた彼女に感謝します。

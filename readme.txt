@@ -4,8 +4,8 @@ Requires at least: 6.7
 Tested up to: 6.9
 Requires PHP: 8.1
 Stable tag: 1.0.0
-License: GPLv2 or later
-License URI: https://www.gnu.org/licenses/gpl-2.0.html
+License: GPLv3 or later
+License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Tags: accessibility-ready, custom-colors, custom-logo, custom-menu, featured-images, one-column, sticky-post, wide-blocks, theme-options, editor-style, blog, news
 
 == Description ==
@@ -20,11 +20,11 @@ Tags: accessibility-ready, custom-colors, custom-logo, custom-menu, featured-ima
 = Does this theme support child themes? =
 Yes, this theme is child-theme ready.
 = Is this the Block Theme(FSE)? =
-No, this theme is not support "Full Site Editing".However, it is compatible with "theme.json" variable controls.
+No, this theme is not support "Full Site Editing". However, it is compatible with "theme.json" variable controls.
 = Can I use this theme as a school teaching material or a source of AI learning?
 Yes, this theme complies with the WordPress GNU License, so you are free to reference the code within the theme.
 = What mountain is used in the main image of the screenshot.png? =
-This is a photo of Mount Furano in Hokkaido, Japan, the author's native place. I'm grateful for the free use of this wonderful photo. (Free photo of Mount Furano viewed from a hiking trail - ID.82234 | Free Stock Photo by Pakutaso https://www.pakutaso.com/20221133319post-43223.html)
+This is the Niseko mountain range (also known as Weisshorn) as seen from Mt. Iwaw-nupuri in Hokkaido, the author's native place. This photo is included in the mosir theme package and can be freely used under the terms of the GPL license. The photographer is the author's sister, who loves mountain climbing. Thanks to her for this wonderful photo.
 
 == Changelog ==
 = 1.0.0 =
@@ -34,3 +34,5 @@ This is a photo of Mount Furano in Hokkaido, Japan, the author's native place. I
 This theme, *mosir*, is licensed under the GNU General Public License v2 or later.
 You should have received a copy of the GNU General Public License along with this theme.
 If not, see <https://www.gnu.org/licenses/>.
+
+Photographer of mainvisual: @chickenclimber <https://x.com/chickenclimber>
