@@ -7,6 +7,7 @@
  */
 
 $mosi_post_type = get_post_type() ? get_post_type() : get_query_var( 'post_type' );
+
 get_header();
 ?>
 <?php get_template_part( 'template-parts/pageHeader' ); ?>

@@ -8,14 +8,35 @@
 if ( ! function_exists( 'mosi_customize_register' ) ){
 	function mosi_customize_register( $wp_customize ) {
 
+		$active_post_types = get_post_types(
+			array(
+				'public' => true
+			),
+			'objects',
+			'and'
+		);
+		$active_post_types_choices = [];
+
+		foreach( $active_post_types as $post_type ) {
+			if( ( $post_type->name !== 'page' ) && ( $post_type->name !== 'attachment' ) ) {
+				$active_post_types_choices[$post_type->name] = $post_type->label;
+			}
+		}
+
+
 		$wp_customize->add_section( 'mosi_config_basic', array(
-			'title'    => 'mosir: basic settings',
+			'title'    => 'mosir: Basic settings',
 			'priority' => 191,
 		));
 
 		$wp_customize->add_section( 'mosi_config_mv', array(
-			'title'    => 'mosir: main visual settings',
+			'title'    => 'mosir: Main visual settings',
 			'priority' => 192,
+		));
+
+		$wp_customize->add_section( 'mosi_config_home', array(
+			'title'    => 'mosir: Front page settings',
+			'priority' => 193,
 		));
 
 
@@ -186,6 +207,165 @@ if ( ! function_exists( 'mosi_customize_register' ) ){
 				'section'     => 'mosi_config_mv',
 				'type'        => 'text',
 		));
+
+
+		$wp_customize->add_setting( 'mosi_options_home_posts_position', array(
+			'default'           => 'after',
+			'sanitize_callback' => 'sanitize_text_field',
+		));
+		$wp_customize->add_control( 'mosi_options_control_home_posts_position', array(
+				'settings'    => 'mosi_options_home_posts_position',
+				'label'       => 'Posts position',
+				'description' => 'Choose where on the front page you want to display the two query posts.',
+				'section'     => 'mosi_config_home',
+				'type'        => 'select',
+				'choices' => array(
+					'none'   => 'None',
+					'before' => 'Before content: 1, 2',
+					'after'  => 'After content: 1, 2',
+					'both'   => 'Both: Before 1 - After 2',
+				)
+		));
+
+
+		$wp_customize->add_setting( 'mosi_options_home_posts_layout', array(
+			'default'           => 'one',
+			'sanitize_callback' => 'sanitize_text_field',
+		));
+		$wp_customize->add_control( 'mosi_options_control_home_posts_layout', array(
+			'settings'    => 'mosi_options_home_posts_layout',
+			'label'       => 'Layout of posts',
+			'description' => 'Select the layout of posts when displayed on a wide screen. If you select "Both" for post position, "One column" will be forced.',
+			'section'     => 'mosi_config_home',
+			'type'        => 'select',
+			'choices' => array(
+				'one' => 'One column',
+				'two' => 'Two columns',
+			)
+		));
+
+
+		$wp_customize->add_setting( 'mosi_options_home_posts_post_type_01', array(
+			'default'           => 'post',
+			'sanitize_callback' => 'sanitize_text_field',
+		));
+		$wp_customize->add_control( 'mosi_options_control_home_posts_post_type_01', array(
+			'settings' => 'mosi_options_home_posts_post_type_01',
+			'label'    => '1: Post type',
+			'section'  => 'mosi_config_home',
+			'type'     => 'select',
+			'choices'  => $active_post_types_choices
+		));
+
+
+		$wp_customize->add_setting( 'mosi_options_home_posts_post_limit_01', array(
+			'default'           => '5',
+			'sanitize_callback' => 'sanitize_text_field',
+		));
+		$wp_customize->add_control( 'mosi_options_control_home_posts_post_limit_01', array(
+			'settings' => 'mosi_options_home_posts_post_limit_01',
+			'label'    => '1: Limit of posts',
+			'section'  => 'mosi_config_home',
+			'type'     => 'number',
+		));
+
+
+		$wp_customize->add_setting( 'mosi_options_home_posts_post_order_01', array(
+			'default'           => 'DESC',
+			'sanitize_callback' => 'sanitize_text_field',
+		));
+		$wp_customize->add_control( 'mosi_options_control_home_posts_post_order_01', array(
+			'settings' => 'mosi_options_home_posts_post_order_01',
+			'label'    => '1: Order of posts',
+			'section'  => 'mosi_config_home',
+			'type'        => 'select',
+			'choices' => array(
+				'DESC' => 'Descending',
+				'ASC' => 'Ascending',
+			)
+		));
+
+
+		$wp_customize->add_setting( 'mosi_options_home_posts_post_loop_01', array(
+			'default'           => 'headline',
+			'sanitize_callback' => 'sanitize_text_field',
+		));
+		$wp_customize->add_control( 'mosi_options_control_home_posts_post_loop_01', array(
+			'settings' => 'mosi_options_home_posts_post_loop_01',
+			'label'    => '1: Loop design of posts',
+			'section'  => 'mosi_config_home',
+			'type'        => 'select',
+			'choices' => array(
+				'headline' => 'Headline',
+				'headline-no-meta' => 'Headline (no meta)',
+				'card' => 'Card',
+				'card-no-meta' => 'Card (no meta)',
+				'media' => 'Media',
+				'media-no-meta' => 'Media (no meta)',
+			)
+		));
+
+
+		$wp_customize->add_setting( 'mosi_options_home_posts_post_type_02', array(
+			'default'           => 'post',
+			'sanitize_callback' => 'sanitize_text_field',
+		));
+		$wp_customize->add_control( 'mosi_options_control_home_posts_post_type_02', array(
+			'settings' => 'mosi_options_home_posts_post_type_02',
+			'label'    => '2: Post type',
+			'section'  => 'mosi_config_home',
+			'type'     => 'select',
+			'choices'  => $active_post_types_choices
+		));
+
+
+		$wp_customize->add_setting( 'mosi_options_home_posts_post_limit_02', array(
+			'default'           => '5',
+			'sanitize_callback' => 'sanitize_text_field',
+		));
+		$wp_customize->add_control( 'mosi_options_control_home_posts_post_limit_02', array(
+			'settings' => 'mosi_options_home_posts_post_limit_02',
+			'label'    => '2: Limit of posts',
+			'section'  => 'mosi_config_home',
+			'type'     => 'number',
+		));
+
+
+		$wp_customize->add_setting( 'mosi_options_home_posts_post_order_02', array(
+			'default'           => 'DESC',
+			'sanitize_callback' => 'sanitize_text_field',
+		));
+		$wp_customize->add_control( 'mosi_options_control_home_posts_post_order_02', array(
+			'settings' => 'mosi_options_home_posts_post_order_02',
+			'label'    => '2: Order of posts',
+			'section'  => 'mosi_config_home',
+			'type'        => 'select',
+			'choices' => array(
+				'DESC' => 'Descending',
+				'ASC' => 'Ascending',
+			)
+		));
+
+
+		$wp_customize->add_setting( 'mosi_options_home_posts_post_loop_02', array(
+			'default'           => 'headline',
+			'sanitize_callback' => 'sanitize_text_field',
+		));
+		$wp_customize->add_control( 'mosi_options_control_home_posts_post_loop_02', array(
+			'settings' => 'mosi_options_home_posts_post_loop_02',
+			'label'    => '2: Loop design of posts',
+			'section'  => 'mosi_config_home',
+			'type'        => 'select',
+			'choices' => array(
+				'headline' => 'Headline',
+				'headline-no-meta' => 'Headline (no meta)',
+				'card' => 'Card',
+				'card-no-meta' => 'Card (no meta)',
+				'media' => 'Media',
+				'media-no-meta' => 'Media (no meta)',
+			)
+		));
+
 
 	}
 

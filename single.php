@@ -5,8 +5,6 @@
  *
  * @package mosir
  */
-
-get_header();
 $mosi_post_type = get_post_type();
 
 $mosi_categories = get_the_terms( $post->ID, 'category' );
@@ -18,6 +16,8 @@ $mosi_time_format = get_option('time_format');
 
 $mosi_prev_link = get_previous_post_link( '%link', '前: %title' );
 $mosi_next_link = get_next_post_link( '%link', '次: %title' );
+
+get_header();
 ?>
 <?php get_template_part( 'template-parts/pageHeader' ); ?>
 <div class="l-content">

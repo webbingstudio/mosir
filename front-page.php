@@ -7,11 +7,26 @@
  */
 
 $mosi_options_mv_visible = get_theme_mod( 'mosi_options_mv_visible', 'show' );
+$mosi_options_home_posts_position = get_theme_mod( 'mosi_options_home_posts_position', 'after' );
+$mosi_options_home_posts_layout = get_theme_mod( 'mosi_options_home_posts_layout', 'one' );
 
 get_header();
 ?>
 <?php if( $mosi_options_mv_visible === 'show' ): ?>
 <?php get_template_part( 'template-parts/mv' ); ?>
+<?php endif; ?>
+
+<?php if( $mosi_options_home_posts_position === 'both' ): ?>
+<div class="l-container">
+	<?php get_template_part( 'template-parts/recent', '', array( 'group' => '1' ) ); ?>
+</div>
+<?php endif; ?>
+
+<?php if( $mosi_options_home_posts_position === 'before' ): ?>
+<div class="<?php echo $mosi_options_home_posts_layout === 'two' ? 'l-columns' : 'l-container' ?>">
+	<?php get_template_part( 'template-parts/recent', '', array( 'group' => '1' ) ); ?>
+	<?php get_template_part( 'template-parts/recent', '', array( 'group' => '2' ) ); ?>
+</div>
 <?php endif; ?>
 
 <?php
@@ -34,13 +49,18 @@ if( have_posts() ) :
 <?php endwhile; ?>
 <?php endif; ?>
 
-<?php get_template_part( 'template-parts/recent', 'headline' ); ?>
-<?php get_template_part( 'template-parts/recent', 'headline-2col' ); ?>
-<?php get_template_part( 'template-parts/recent', 'headline-no-meta' ); ?>
-<?php get_template_part( 'template-parts/recent', 'media' ); ?>
-<?php get_template_part( 'template-parts/recent', 'media-2col' ); ?>
-<?php get_template_part( 'template-parts/recent', 'card' ); ?>
-<?php get_template_part( 'template-parts/recent', 'card-2col' ); ?>
+<?php if( $mosi_options_home_posts_position === 'both' ): ?>
+<div class="l-container">
+	<?php get_template_part( 'template-parts/recent', '', array( 'group' => '2' ) ); ?>
+</div>
+<?php endif; ?>
+
+<?php if( $mosi_options_home_posts_position === 'after' ): ?>
+<div class="<?php echo $mosi_options_home_posts_layout === 'two' ? 'l-columns' : 'l-container' ?>">
+	<?php get_template_part( 'template-parts/recent', '', array( 'group' => '1' ) ); ?>
+	<?php get_template_part( 'template-parts/recent', '', array( 'group' => '2' ) ); ?>
+</div>
+<?php endif; ?>
 
 <?php
 get_footer();

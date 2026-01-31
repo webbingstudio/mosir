@@ -140,19 +140,25 @@ pre {
 }
 
 .l-columns {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
+  align-items: stretch;
   gap: var(--spacing-xl) var(--spacing-lg);
   width: 100%;
   max-width: calc(var(--container-wide-width) + var(--screen-x-spacing) * 2);
   padding-inline: var(--screen-x-spacing);
   margin-inline: auto;
 }
+
+.l-columns > * {
+  flex-grow: 1;
+}
 @media screen and (min-width: 1024px) {
-  .l-columns {
-    grid-template-columns: repeat(2, 1fr);
+  .l-columns > * {
+    flex-grow: 0;
+    flex-basis: calc(50% - var(--spacing-lg) / 2);
   }
 }
 

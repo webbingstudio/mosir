@@ -6,8 +6,9 @@
  * @package mosir
  */
 
-get_header();
 $mosi_post_type = get_post_type();
+
+get_header();
 ?>
 <?php get_template_part( 'template-parts/pageHeader' ); ?>
 <div class="l-content">

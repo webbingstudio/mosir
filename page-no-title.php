@@ -8,8 +8,9 @@
  * @package mosir
  */
 
-get_header();
 $mosi_post_type = get_post_type();
+
+get_header();
 ?>
 <?php if( have_posts() ) : ?>
 <div class="p-<?php echo esc_attr($mosi_post_type); ?>-contents p-post p-post--<?php echo esc_attr($mosi_post_type); ?>">
