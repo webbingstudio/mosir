@@ -6,8 +6,14 @@
  * @package mosir
  */
 
+$mosi_options_mv_visible = get_theme_mod( 'mosi_options_mv_visible', 'show' );
+
 get_header();
 ?>
+<?php if( $mosi_options_mv_visible === 'show' ): ?>
+<?php get_template_part( 'template-parts/mv' ); ?>
+<?php endif; ?>
+
 <?php
 // ==============================
 // Contents of front page

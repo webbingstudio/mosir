@@ -1,0 +1,200 @@
+@use "../../global" as g;
+@use "sass:math";
+
+// ------------------------------
+// project > mv
+//  - The main visual of the site, intended to be displayed across the entire screen.
+//  - Separate images are provided for desktop and mobile.
+// ------------------------------
+
+.p-mv {
+    position: relative;
+    color: var(--color-white);
+    background-color: var(--color-default);
+}
+
+.p-mv__cover {
+    @include g.position( relative, n, n, n, n, 11 );
+    aspect-ratio: 2 / 3;
+
+    @include g.mq(default) {
+        aspect-ratio: 1 / 1;
+    }
+
+    @include g.mq(xga) {
+        aspect-ratio: 3 / 2;
+    }
+
+    @include g.mq(wide) {
+        aspect-ratio: 16 / 9;
+    }
+
+    @media screen and (min-width: 1600px) {
+        aspect-ratio: auto;
+        height: 75dvh;
+    }
+}
+
+.p-mv__image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.p-mv__stage {
+    overflow: hidden;
+    @include g.position( absolute, 0, 0, 0, 0, 14 );
+    @include g.flex( column, nowrap, center, center );
+}
+
+body:has(.l-header--small) .p-mv__stage {
+    padding-top: var(--nav-height-md);
+}
+
+body:has(.l-header--medium) .p-mv__stage {
+    padding-top: calc( var(--nav-height-md) + ( var(--spacing-xs) * 2 ) );
+}
+
+body:has(.l-header--large) .p-mv__stage {
+    padding-top: calc( ( var(--nav-height-md) * 2 ) + ( var(--spacing-xs) * 3 ) );
+}
+
+.p-mv__stage::before {
+    content: "";
+    @include g.position( absolute, 0, 0, 0, 0, 21 );
+}
+
+.p-mv__contents {
+    position: relative;
+    @include g.flex( column, nowrap, center, flex-start );
+    width: 100%;
+    max-width: calc( var(--container-default-width) + ( var(--screen-x-spacing) * 2 ) );
+    padding-inline: var(--screen-x-spacing);
+    margin-inline: auto;
+    z-index: 22;
+
+    @media screen and (min-width: 1024px) and (max-width: 1439.9px) {
+        max-width: calc( 100dvw - ( var(--spacing-lg) * 2 ) );
+    }
+
+    @media screen and (min-width: 1440px) {
+        max-width: calc( var(--container-wide-width) + ( var(--screen-x-spacing) * 2 ) );
+    }
+
+}
+
+.p-mv__body {
+    position: relative;
+    @include g.flex( column, nowrap, center, stretch );
+    row-gap: var(--spacing-sm);
+    margin-left: -50dvw;
+    padding: var(--spacing-md) var(--spacing-sm) var(--spacing-md) 50vw;
+
+    @include g.mq(default) {
+        padding-block: var(--spacing-sm);
+        padding-right: var(--spacing-lg);
+    }
+}
+
+.p-mv__body > * {
+    position: relative;
+    animation: mosiMvFadeIn 2s 0s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+    z-index: 32;
+}
+
+.p-mv__body::before {
+    content: "";
+    @include g.position( absolute, 0, 0, 0, 0, 31 );
+    background-color: rgba(0, 0, 0, 0.3);
+    animation: mosiMvSlideIn 1.5s 0s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+.p-mv__catch {
+    margin: 0;
+    font-size: var(--fontSize-5xl);
+    font-weight: var(--fontWeight-bold);
+    line-height: var(--lineHeight-xs);
+    text-shadow: 0.1em 0.1em 0.1em rgba(0, 0, 0, 0.5), 0 0 0.4em rgba(0, 0, 0, 1);
+}
+
+.p-mv__text {
+    margin: 0;
+    font-size: var(--fontSize-md);
+    font-weight: var(--fontWeight-bold);
+    line-height: var(--lineHeight-xs);
+    text-shadow: 0.1em 0.1em 0.1em rgba(0, 0, 0, 0.5), 0 0 0.4em rgba(0, 0, 0, 1);
+
+    @include g.mq(default) {
+        font-size: var(--fontSize-xl);
+    }
+}
+
+
+// ------------------------------
+// filter
+// ------------------------------
+
+.p-mv.p-mv--filter-darken .p-mv__stage::before {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.p-mv.p-mv--filter-lighten .p-mv__stage::before {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.p-mv.p-mv--filter-monochrome .p-mv__image {
+    filter: grayscale(1);
+}
+
+.p-mv.p-mv--filter-duotone .p-mv__cover {
+    background-color: var(--color-primary-dark);
+}
+
+.p-mv.p-mv--filter-duotone .p-mv__image {
+    filter: grayscale(1);
+    mix-blend-mode: luminosity;
+}
+
+.p-mv.p-mv--filter-duotone .p-mv__catch {
+    text-shadow: 0.1em 0.1em 0.1em rgba(0, 0, 0, 0.25), 0 0 0.4em rgba(0, 0, 0, 0.5);
+}
+
+.p-mv.p-mv--filter-duotone .p-mv__text {
+    text-shadow: 0.1em 0.1em 0.1em rgba(0, 0, 0, 0.25), 0 0 0.4em rgba(0, 0, 0, 0.5);
+}
+
+
+// ------------------------------
+// animation
+// ------------------------------
+
+@keyframes mosiMvSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-120%);
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes mosiMvFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%);
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
