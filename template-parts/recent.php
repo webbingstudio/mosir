@@ -28,6 +28,15 @@ if( $args['group'] !== '1' ) {
     $mosi_options_home_posts_post_limit = get_theme_mod( 'mosi_options_home_posts_post_limit_01', '5' );
 }
 
+// If you have set an "Alternative Post Name" in customization, that name will be reflected when displaying archives.
+// If you have not set, it will remain "Blog".
+if( $mosi_options_home_posts_post_type === 'post' ) {
+    $mosi_posts_label = get_theme_mod( 'mosi_options_post_alt_label', esc_html( get_post_type_object('post')->label ) );
+    $mosi_posts_slug = get_theme_mod( 'mosi_options_post_alt_slug', esc_html( get_post_type_object('post')->name ) );
+}
+$mosi_posts_label = empty( $mosi_posts_label ) ? 'ブログ' : $mosi_posts_label;
+$mosi_posts_slug = empty( $mosi_posts_slug ) ? 'blog' : $mosi_posts_slug;
+
 if( $mosi_options_home_posts_layout === 'two' && $mosi_options_home_posts_header === 'left' ) {
     $mosi_options_home_posts_header = 'top';
 }
@@ -37,11 +46,6 @@ if( $mosi_options_home_posts_layout === 'two' && $mosi_options_home_posts_header
 
     <?php
     $mosi_posts_type_obj = get_post_type_object( $mosi_options_home_posts_post_type );
-
-    // If post type is "post", the name of the "post" content will be "blog."
-    // This is because in Japan, the Japanese translation of "投稿" is not generally used in content titles, so "ブログ" is used instead.
-    $mosi_posts_slug = $mosi_options_home_posts_post_type === 'post' ? 'blog' : $mosi_options_home_posts_post_type;
-    $mosi_posts_title = $mosi_options_home_posts_post_type === 'post' ? 'ブログ' : $mosi_posts_type_obj->label;
 
     $mosi_query_args = array(
         'post_type'  => $mosi_options_home_posts_post_type,
@@ -56,7 +60,7 @@ if( $mosi_options_home_posts_layout === 'two' && $mosi_options_home_posts_header
 
         <?php if( $mosi_options_home_posts_header !== 'none' ): ?>
         <div class="p-section__header">
-            <p class="p-section__title c-title c-title--center c-title--lv2" <?php language_attributes(); ?>><?php echo esc_attr($mosi_posts_title); ?></p>
+            <p class="p-section__title c-title c-title--center c-title--lv2" <?php language_attributes(); ?>><?php echo esc_attr($mosi_posts_label); ?></p>
             <?php
                 // In Japan, it is customary to include the English translation (here, the slug) at the bottom of the main heading.
                 // This is not necessary in English-speaking languages, so it is hidden.
