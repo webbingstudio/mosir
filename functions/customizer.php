@@ -15,7 +15,9 @@ if ( ! function_exists( 'mosi_customize_register' ) ){
 			'objects',
 			'and'
 		);
-		$active_post_types_choices = [];
+		$active_post_types_choices = array(
+			'none' => 'None'
+		);
 
 		foreach( $active_post_types as $post_type ) {
 			if( ( $post_type->name !== 'page' ) && ( $post_type->name !== 'attachment' ) ) {
@@ -220,7 +222,6 @@ if ( ! function_exists( 'mosi_customize_register' ) ){
 				'section'     => 'mosi_config_home',
 				'type'        => 'select',
 				'choices' => array(
-					'none'   => 'None',
 					'before' => 'Before content: 1, 2',
 					'after'  => 'After content: 1, 2',
 					'both'   => 'Both: Before 1 - After 2',
@@ -255,6 +256,24 @@ if ( ! function_exists( 'mosi_customize_register' ) ){
 			'section'  => 'mosi_config_home',
 			'type'     => 'select',
 			'choices'  => $active_post_types_choices
+		));
+
+
+		$wp_customize->add_setting( 'mosi_options_home_posts_header_01', array(
+			'default'           => 'top',
+			'sanitize_callback' => 'sanitize_text_field',
+		));
+		$wp_customize->add_control( 'mosi_options_control_home_posts_header_01', array(
+			'settings' => 'mosi_options_home_posts_header_01',
+			'label'    => '1: Display of header',
+			'description' => 'If you select "Two column" for post layout, "Left when on desktop" will be ignore.',
+			'section'  => 'mosi_config_home',
+			'type'        => 'select',
+			'choices' => array(
+				'none' => 'None',
+				'top' => 'Always top',
+				'left' => 'Left when on desktop',
+			)
 		));
 
 
@@ -316,6 +335,24 @@ if ( ! function_exists( 'mosi_customize_register' ) ){
 			'section'  => 'mosi_config_home',
 			'type'     => 'select',
 			'choices'  => $active_post_types_choices
+		));
+
+
+		$wp_customize->add_setting( 'mosi_options_home_posts_header_02', array(
+			'default'           => 'top',
+			'sanitize_callback' => 'sanitize_text_field',
+		));
+		$wp_customize->add_control( 'mosi_options_control_home_posts_header_02', array(
+			'settings' => 'mosi_options_home_posts_header_02',
+			'label'    => '2: Display of header',
+			'description' => 'If you select "Two column" for post layout, "Left when on desktop" will be ignore.',
+			'section'  => 'mosi_config_home',
+			'type'        => 'select',
+			'choices' => array(
+				'none' => 'None',
+				'top' => 'Always top',
+				'left' => 'Left when on desktop',
+			)
 		));
 
 

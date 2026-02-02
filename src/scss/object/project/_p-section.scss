@@ -38,10 +38,6 @@
   grid-template-rows: auto;
   justify-content: center;
   gap: var(--spacing-md) var(--spacing-lg);
-  width: 100%;
-  max-width: calc( var(--container-default-width) + ( var(--screen-x-spacing) * 2 ) );
-  padding-inline: var(--screen-x-spacing);
-  margin-inline: auto;
 
   @include g.mq(xga) {
     max-width: calc( var(--container-wide-width) + ( var(--screen-x-spacing) * 2 ) );

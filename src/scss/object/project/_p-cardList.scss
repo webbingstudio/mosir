@@ -24,12 +24,17 @@
 .p-cardList > * {
 
   @include g.mq(default-max) {
+    width: 100%;
     max-width: ( math.div( 480, 16 ) * 1rem );
     margin-inline: auto;
   }
 
   @include g.mq(default) {
     flex-grow: 0;
+    width: calc( 50% - ( var(--spacing-md) / 2 ) );
+  }
+
+  @include g.mq(xga) {
     width: calc( 33.3333% - ( var(--spacing-md) * 2 / 3 ) );
   }
 

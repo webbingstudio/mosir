@@ -62,7 +62,7 @@ a.p-card__inner .p-card__title {
   position: relative;
   @include g.flex( column, n, flex-start, stretch );
   gap: var(--spacing-xs);
-  padding: var(--spacing-sm) var(--spacing-xs) var(--spacing-xs);
+  padding-block: var(--spacing-xs);
   container-type: inline-size;
 }
 

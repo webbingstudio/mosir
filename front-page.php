@@ -17,13 +17,13 @@ get_header();
 <?php endif; ?>
 
 <?php if( $mosi_options_home_posts_position === 'both' ): ?>
-<div class="l-container">
+<div class="p-sectionArea p-sectionArea--top">
 	<?php get_template_part( 'template-parts/recent', '', array( 'group' => '1' ) ); ?>
 </div>
 <?php endif; ?>
 
 <?php if( $mosi_options_home_posts_position === 'before' ): ?>
-<div class="<?php echo $mosi_options_home_posts_layout === 'two' ? 'l-columns' : 'l-container' ?>">
+<div class="p-sectionArea p-sectionArea--top<?php echo $mosi_options_home_posts_layout === 'two' ? ' p-sectionArea--2col' : '' ?>">
 	<?php get_template_part( 'template-parts/recent', '', array( 'group' => '1' ) ); ?>
 	<?php get_template_part( 'template-parts/recent', '', array( 'group' => '2' ) ); ?>
 </div>
@@ -50,13 +50,13 @@ if( have_posts() ) :
 <?php endif; ?>
 
 <?php if( $mosi_options_home_posts_position === 'both' ): ?>
-<div class="l-container">
+<div class="p-sectionArea p-sectionArea--bottom">
 	<?php get_template_part( 'template-parts/recent', '', array( 'group' => '2' ) ); ?>
 </div>
 <?php endif; ?>
 
 <?php if( $mosi_options_home_posts_position === 'after' ): ?>
-<div class="<?php echo $mosi_options_home_posts_layout === 'two' ? 'l-columns' : 'l-container' ?>">
+<div class="p-sectionArea p-sectionArea--bottom<?php echo $mosi_options_home_posts_layout === 'two' ? ' p-sectionArea--2col' : '' ?>">
 	<?php get_template_part( 'template-parts/recent', '', array( 'group' => '1' ) ); ?>
 	<?php get_template_part( 'template-parts/recent', '', array( 'group' => '2' ) ); ?>
 </div>

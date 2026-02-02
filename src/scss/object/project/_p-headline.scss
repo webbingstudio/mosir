@@ -76,6 +76,9 @@ a.p-headline__inner:focus {
 }
 
 .p-headline__title.c-title {
+  overflow-wrap: anywhere;
+  word-break: normal;
+  line-break: strict;
   overflow: hidden;
   display: -webkit-box;
   text-overflow: ellipsis;

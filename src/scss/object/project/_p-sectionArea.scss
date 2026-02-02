@@ -1,0 +1,54 @@
+@use "../../global" as g;
+@use "sass:math";
+
+// ------------------------------
+// project > sectionArea
+//  - Repeatedly displaying an unspecified number of sections.
+//  - When the window size increases, .p-sectionArea--2col becomes a multi-column layout.
+// ------------------------------
+
+.p-sectionArea {
+    @include g.flex( n, wrap, center, stretch );
+    gap: var(--spacing-xl) var(--spacing-lg);
+    width: 100%;
+    max-width: calc( var(--container-wide-width) + ( var(--screen-x-spacing) * 2 ) );
+    margin-inline: auto;
+    padding: var(--spacing-xl) var(--screen-x-spacing);
+}
+
+.p-sectionArea > * {
+    flex-grow: 1;
+    flex-basis: 100%;
+}
+
+
+// ------------------------------
+// p-sectionArea--2col
+// ------------------------------
+
+.p-sectionArea.p-sectionArea--2col > * {
+    @include g.mq(xga) {
+        flex-basis: calc( 50% - ( var(--spacing-lg) / 2 ) );
+    }
+}
+
+
+// In a layout without a main visual, p-sectionArea will be the first child and will require some space for the header.
+body:has(.l-header--small) .l-main .p-sectionArea:first-child {
+    padding-top: calc( var(--nav-height-md) + var(--spacing-md) );
+}
+
+body:has(.l-header--medium) .l-main .p-sectionArea:first-child {
+    padding-top: calc( var(--nav-height-md) + ( var(--spacing-xs) * 2 ) + var(--spacing-md) );
+}
+
+body:has(.l-header--large) .l-main .p-sectionArea:first-child {
+    padding-top: calc( ( var(--nav-height-md) * 2 ) + ( var(--spacing-xs) * 3 ) + var(--spacing-md) );
+}
+
+
+// .p-sectionArea.p-sectionArea--top {
+// }
+
+// .p-sectionArea.p-sectionArea--bottom {
+// }
