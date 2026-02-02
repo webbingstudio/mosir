@@ -2113,7 +2113,6 @@ body:has(.l-header--large) .p-mv__stage {
 
 .p-mv__body > * {
   position: relative;
-  animation: mosiMvFadeIn 2s 0s cubic-bezier(0.25, 1, 0.5, 1) forwards;
   z-index: 32;
 }
 
@@ -2126,7 +2125,6 @@ body:has(.l-header--large) .p-mv__stage {
   left: 0;
   z-index: 31;
   background-color: rgba(0, 0, 0, 0.3);
-  animation: mosiMvSlideIn 1.5s 0s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }
 
 .p-mv__catch {
@@ -2179,32 +2177,6 @@ body:has(.l-header--large) .p-mv__stage {
   text-shadow: 0.1em 0.1em 0.1em rgba(0, 0, 0, 0.25), 0 0 0.4em rgba(0, 0, 0, 0.5);
 }
 
-@keyframes mosiMvSlideIn {
-  0% {
-    opacity: 0;
-    transform: translateX(-120%);
-  }
-  40% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-@keyframes mosiMvFadeIn {
-  0% {
-    opacity: 0;
-    transform: translateX(-50%);
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0%);
-  }
-}
 .p-pageHeader__contents.l-container {
   display: flex;
   flex-direction: column;
