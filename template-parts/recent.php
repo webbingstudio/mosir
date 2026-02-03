@@ -19,10 +19,6 @@ if( $args['group'] !== '1' ) {
 } else {
     $mosi_options_home_posts_post_type = get_theme_mod( 'mosi_options_home_posts_post_type_01', 'post' );
 }
-
-if( $mosi_options_home_posts_layout === 'two' && $mosi_options_home_posts_header === 'left' ) {
-    $mosi_options_home_posts_header = 'top';
-}
 ?>
 
 <?php if( $mosi_options_home_posts_post_type !== 'none' ): ?>
@@ -44,6 +40,10 @@ if( $mosi_options_home_posts_layout === 'two' && $mosi_options_home_posts_header
         $mosi_options_home_posts_post_loop = get_theme_mod( 'mosi_options_home_posts_post_loop_01', 'headline' );
         $mosi_options_home_posts_post_order = get_theme_mod( 'mosi_options_home_posts_post_order_01', 'DESC' );
         $mosi_options_home_posts_post_limit = get_theme_mod( 'mosi_options_home_posts_post_limit_01', '5' );
+    }
+
+    if( $mosi_options_home_posts_layout === 'two' && $mosi_options_home_posts_header === 'left' ) {
+        $mosi_options_home_posts_header = 'top';
     }
 
     // Why do we do this?
@@ -70,16 +70,21 @@ if( $mosi_options_home_posts_layout === 'two' && $mosi_options_home_posts_header
 
         <?php if( $mosi_options_home_posts_header !== 'none' ): ?>
         <div class="p-section__header">
-            <p class="p-section__title c-title c-title--center c-title--lv2" <?php language_attributes(); ?>><?php echo esc_attr($mosi_posts_title); ?></p>
+            <p class="p-section__title c-title c-title--center c-title--lv2"><?php echo esc_attr($mosi_posts_title); ?></p>
             <p class="p-section__subTitle c-title c-title--center c-title--lv5"><?php echo esc_html($mosi_posts_subtitle); ?></p>
         </div>
         <?php endif; ?>
         <div class="p-section__contents">
             <div class="p-<?php echo esc_attr( str_replace( '-no-meta', '', $mosi_options_home_posts_post_loop ) )?>List">
-            <?php while( $mosi_query->have_posts() ) : $mosi_query->the_post(); ?>
-                <?php get_template_part( 'template-parts/loop', $mosi_options_home_posts_post_loop ); ?>
-            <?php endwhile; ?>
+                <div class="p-<?php echo esc_attr( str_replace( '-no-meta', '', $mosi_options_home_posts_post_loop ) )?>List__inner">
+                    <?php while( $mosi_query->have_posts() ) : $mosi_query->the_post(); ?>
+                    <?php get_template_part( 'template-parts/loop', $mosi_options_home_posts_post_loop ); ?>
+                <?php endwhile; ?>
+                </div>
             </div>
+        </div>
+        <div class="p-section__footer">
+            <p class="p-section__link"><a href="#" aria-label="「<?php echo esc_attr($mosi_posts_title); ?>」の一覧ページへ">一覧ページへ</a></p>
         </div>
     </div>
     <?php endif; wp_reset_query(); unset( $mosi_query, $mosi_query_args ); ?>

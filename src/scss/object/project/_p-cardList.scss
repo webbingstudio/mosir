@@ -4,49 +4,45 @@
 // ------------------------------
 // project > cardList
 //  - Repeatedly display .p-card.
+//  - The breakpoint at which it becomes two columns is different from the others.
 // ------------------------------
 
 .p-cardList {
-  @include g.flex(column, n, flex-start, stretch);
-  gap: var(--spacing-md);
   container-type: inline-size;
-
-  @include g.mq(default) {
-    @include g.flex( n, wrap, flex-start, n );
-  }
-
 }
 
 .p-sectionHeader + .p-cardList {
   margin-top: var(--spacing-md);
 }
 
-.p-cardList > * {
+.p-cardList__inner {
+  @include g.flex( n, wrap, flex-start, n );
+  gap: var(--spacing-md) var(--spacing-sm);
+}
 
-  @include g.mq(default-max) {
-    width: 100%;
-    max-width: ( math.div( 480, 16 ) * 1rem );
-    margin-inline: auto;
-  }
-
-  @include g.mq(default) {
-    flex-grow: 0;
-    width: calc( 50% - ( var(--spacing-md) / 2 ) );
-  }
-
-  @include g.mq(xga) {
-    width: calc( 33.3333% - ( var(--spacing-md) * 2 / 3 ) );
-  }
-
+.p-cardList__inner > * {
+  width: 100%;
+  max-width: ( math.div( 480, 16 ) * 1rem );
+  margin-inline: auto;
 }
 
 .p-cardList .p-card__inner {
   height: 100%;
 }
 
-@container ( width <= 40rem ) {
-  .p-cardList > * {
-    flex-grow: 1;
-    width: 100%;
+@container ( width >= 27rem ) {
+  .p-cardList__inner > * {
+    max-width: none;
+    width: calc( 50% - ( var(--spacing-sm) / 2 ) );
+  }
+}
+
+@container ( width >= 38rem ) {
+  .p-cardList__inner {
+    column-gap: var(--spacing-md);
+  }
+
+  .p-cardList__inner > * {
+    width: calc( 33.33% - ( var(--spacing-md) * 2 / 3 ) );
   }
 }

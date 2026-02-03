@@ -6,7 +6,10 @@
 //  - Repeatedly display .p-headline.
 // ------------------------------
 
-.p-headlineList {
+// .p-headlineList {
+// }
+
+.p-headlineList__inner {
   @include g.flex(column, n, flex-start, stretch);
   border-top: 0.0625rem solid var(--ui-border-light-color);
 }
@@ -15,6 +18,6 @@
   margin-top: var(--spacing-md);
 }
 
-.p-headlineList > * {
+.p-headlineList__inner > * {
   border-bottom: 0.0625rem solid var(--ui-border-light-color);
 }
