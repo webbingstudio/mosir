@@ -46,7 +46,11 @@
 .p-mv__stage {
     overflow: hidden;
     @include g.position( absolute, 0, 0, 0, 0, 14 );
-    @include g.flex( column, nowrap, center, center );
+    @include g.flex( column, nowrap, flex-end, center );
+
+    @include g.mq(default) {
+        justify-content: center;
+    }
 }
 
 body:has(.l-header--small) .p-mv__stage {
@@ -72,8 +76,13 @@ body:has(.l-header--large) .p-mv__stage {
     width: 100%;
     max-width: calc( var(--container-default-width) + ( var(--screen-x-spacing) * 2 ) );
     padding-inline: var(--screen-x-spacing);
+    margin-bottom: var(--spacing-lg);
     margin-inline: auto;
     z-index: 22;
+
+    @include g.mq(default) {
+        margin-bottom: 0;
+    }
 
     @media screen and (min-width: 1024px) and (max-width: 1439.9px) {
         max-width: calc( 100dvw - ( var(--spacing-lg) * 2 ) );
@@ -111,9 +120,9 @@ body:has(.l-header--large) .p-mv__stage {
 
 .p-mv__catch {
     margin: 0;
-    font-size: var(--font-size-5xl);
+    font-size: var(--font-size-6xl);
     font-weight: var(--fontWeight-bold);
-    line-height: var(--lineHeight-xs);
+    line-height: var(--lineHeight-none);
     text-shadow: 0.1em 0.1em 0.1em rgba(0, 0, 0, 0.5), 0 0 0.4em rgba(0, 0, 0, 1);
 }
 

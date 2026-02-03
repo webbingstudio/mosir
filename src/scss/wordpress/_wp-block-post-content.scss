@@ -80,8 +80,9 @@
     > pre {
         font-size: var(--font-size-sm);
         padding: var(--spacing-xs);
-        border: 0.0625rem solid var(--color-default-lighter);
-        background-color: var(--color-default-fade);
+        border: 0.0625rem solid var(--ui-border-color);
+        color: var(--body-color);
+        background-color: var(--ui-fade-color);
         line-height: var(--lineHeight-xs);
     }
 

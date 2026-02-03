@@ -30,6 +30,7 @@
   --font-size-3xl: var(--wp--preset--font-size--3-x-large);
   --font-size-4xl: var(--wp--preset--font-size--4-x-large);
   --font-size-5xl: var(--wp--preset--font-size--5-x-large);
+  --font-size-6xl: var(--wp--preset--font-size--6-x-large);
   --spacing-2xs: var(--wp--preset--spacing--2-x-small);
   --spacing-xs: var(--wp--preset--spacing--x-small);
   --spacing-sm: var(--wp--preset--spacing--small);
@@ -65,8 +66,10 @@
   --ui-default-color: var(--body-color);
   --ui-inverse-color: var(--color-white);
   --ui-accent-color: var(--link-default-color);
+  --ui-error-color: var(--color-important);
   --ui-mute-color: var(--color-default-light);
   --ui-fade-color: var(--color-default-fade);
+  --ui-fade-error-color: var(--color-important-fade);
   --ui-border-color: var(--color-default-lighter);
   --ui-border-light-color: rgb( 0 0 0 / 0.2 );
   --ui-cover-default-color: rgb( 255 255 255 / 0.8 );
@@ -2012,8 +2015,13 @@ a.p-media__inner:focus {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .p-mv__stage {
+    justify-content: center;
+  }
 }
 
 body:has(.l-header--small) .p-mv__stage {
@@ -2048,8 +2056,14 @@ body:has(.l-header--large) .p-mv__stage {
   width: 100%;
   max-width: calc(var(--container-default-width) + var(--screen-x-spacing) * 2);
   padding-inline: var(--screen-x-spacing);
+  margin-bottom: var(--spacing-lg);
   margin-inline: auto;
   z-index: 22;
+}
+@media screen and (min-width: 768px) {
+  .p-mv__contents {
+    margin-bottom: 0;
+  }
 }
 @media screen and (min-width: 1024px) and (max-width: 1439.9px) {
   .p-mv__contents {
@@ -2098,9 +2112,9 @@ body:has(.l-header--large) .p-mv__stage {
 
 .p-mv__catch {
   margin: 0;
-  font-size: var(--font-size-5xl);
+  font-size: var(--font-size-6xl);
   font-weight: var(--fontWeight-bold);
-  line-height: var(--lineHeight-xs);
+  line-height: var(--lineHeight-none);
   text-shadow: 0.1em 0.1em 0.1em rgba(0, 0, 0, 0.5), 0 0 0.4em rgb(0, 0, 0);
 }
 
@@ -3657,6 +3671,10 @@ body:has(.l-header--large) .l-main .p-sectionArea:first-child {
   font-size: var(--font-size-5xl) !important;
 }
 
+.u-text--6xl {
+  font-size: var(--font-size-6xl) !important;
+}
+
 .post-password-form > *:has(label[for*=pwbox]) {
   display: flex;
   flex-direction: row;
@@ -3726,22 +3744,22 @@ body:has(.l-header--large) .l-main .p-sectionArea:first-child {
 }
 
 .post-password-form input[type=password]::-moz-placeholder {
-  color: var(--color-default-light);
+  color: var(--ui-mute-color);
 }
 
 .post-password-form input[type=password]::placeholder {
-  color: var(--color-default-light);
+  color: var(--ui-mute-color);
 }
 
 .post-password-form input[type=password]:focus {
-  border-color: var(--color-border-primary);
-  color: var(--color-text-default);
+  border-color: var(--ui-accent-color);
+  color: var(--body-color);
 }
 
 .post-password-form-invalid-password {
   font-weight: var(--fontWeight-bold);
-  color: var(--color-important);
-  background-color: var(--color-important-fade);
+  color: var(--ui-error-color);
+  background-color: var(--ui-fade-error-color);
   padding: 0.5em;
 }
 
@@ -3797,7 +3815,8 @@ body:has(.l-header--large) .l-main .p-sectionArea:first-child {
   text-decoration: none;
 }
 
-.search-field {
+.search-field,
+.wp-block-search__input {
   position: relative;
   display: flex;
   flex-direction: row;
@@ -3815,17 +3834,19 @@ body:has(.l-header--large) .l-main .p-sectionArea:first-child {
   line-height: var(--lineHeight-none);
 }
 
-.search-field::-moz-placeholder {
-  color: var(--color-default-light);
+.search-field::-moz-placeholder, .wp-block-search__input::-moz-placeholder {
+  color: var(--ui-mute-color);
 }
 
-.search-field::placeholder {
-  color: var(--color-default-light);
+.search-field::placeholder,
+.wp-block-search__input::placeholder {
+  color: var(--ui-mute-color);
 }
 
-.search-field:focus {
-  border-color: var(--color-border-primary);
-  color: var(--color-text-default);
+.search-field:focus,
+.wp-block-search__input:focus {
+  border-color: var(--ui-accent-color);
+  color: var(--body-color);
 }
 
 .skip-link.screen-reader-text {
@@ -4100,8 +4121,9 @@ body:has(.l-header--large) .l-main .p-sectionArea:first-child {
 .comment-content > pre {
   font-size: var(--font-size-sm);
   padding: var(--spacing-xs);
-  border: 0.0625rem solid var(--color-default-lighter);
-  background-color: var(--color-default-fade);
+  border: 0.0625rem solid var(--ui-border-color);
+  color: var(--body-color);
+  background-color: var(--ui-fade-color);
   line-height: var(--lineHeight-xs);
 }
 .wp-block-post-content > table,

@@ -44,7 +44,8 @@
     text-decoration: none;
 }
 
-.search-field {
+.search-field,
+.wp-block-search__input {
     position: relative;
     @include g.flex( n, n, flex-start, center );
     width: 100%;
@@ -58,11 +59,13 @@
     line-height: var(--lineHeight-none);
 }
 
-.search-field::placeholder {
-    color: var(--color-default-light);
+.search-field::placeholder,
+.wp-block-search__input::placeholder {
+    color: var(--ui-mute-color);
 }
 
-.search-field:focus {
-    border-color: var(--color-border-primary);
-    color: var(--color-text-default);
+.search-field:focus,
+.wp-block-search__input:focus {
+    border-color: var(--ui-accent-color);
+    color: var(--body-color);
 }
