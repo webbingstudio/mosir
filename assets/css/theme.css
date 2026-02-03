@@ -14,16 +14,6 @@
   --color-secondary-light: var(--wp--preset--color--secondary-light);
   --color-secondary-lighter: var(--wp--preset--color--secondary-lighter);
   --color-secondary-fade: var(--wp--preset--color--secondary-fade);
-  --color-tertiary-dark: var(--wp--preset--color--tertiary-dark);
-  --color-tertiary: var(--wp--preset--color--tertiary);
-  --color-tertiary-light: var(--wp--preset--color--tertiary-light);
-  --color-tertiary-lighter: var(--wp--preset--color--tertiary-lighter);
-  --color-tertiary-fade: var(--wp--preset--color--tertiary-fade);
-  --color-tertiary-dark: var(--wp--preset--color--tertiary-dark);
-  --color-tertiary: var(--wp--preset--color--tertiary);
-  --color-tertiary-light: var(--wp--preset--color--tertiary-light);
-  --color-tertiary-lighter: var(--wp--preset--color--tertiary-lighter);
-  --color-tertiary-fade: var(--wp--preset--color--tertiary-fade);
   --color-important-dark: var(--wp--preset--color--important-dark);
   --color-important: var(--wp--preset--color--important);
   --color-important-light: var(--wp--preset--color--important-light);
@@ -2881,46 +2871,6 @@ body:has(.l-header--large) .l-main .p-sectionArea:first-child {
   background-color: var(--color-secondary-fade) !important;
 }
 
-.u-bg--tertiary-dark {
-  background-color: var(--color-tertiary-dark) !important;
-}
-
-.u-bg--tertiary {
-  background-color: var(--color-tertiary) !important;
-}
-
-.u-bg--tertiary-light {
-  background-color: var(--color-tertiary-light) !important;
-}
-
-.u-bg--tertiary-lighter {
-  background-color: var(--color-tertiary-lighter) !important;
-}
-
-.u-bg--tertiary-fade {
-  background-color: var(--color-tertiary-fade) !important;
-}
-
-.u-bg--tertiary-dark {
-  background-color: var(--color-tertiary-dark) !important;
-}
-
-.u-bg--tertiary {
-  background-color: var(--color-tertiary) !important;
-}
-
-.u-bg--tertiary-light {
-  background-color: var(--color-tertiary-light) !important;
-}
-
-.u-bg--tertiary-lighter {
-  background-color: var(--color-tertiary-lighter) !important;
-}
-
-.u-bg--tertiary-fade {
-  background-color: var(--color-tertiary-fade) !important;
-}
-
 .u-bg--important-dark {
   background-color: var(--color-important-dark) !important;
 }
@@ -3009,46 +2959,6 @@ body:has(.l-header--large) .l-main .p-sectionArea:first-child {
   color: var(--color-secondary-fade) !important;
 }
 
-.u-color--tertiary-dark {
-  color: var(--color-tertiary-dark) !important;
-}
-
-.u-color--tertiary {
-  color: var(--color-tertiary) !important;
-}
-
-.u-color--tertiary-light {
-  color: var(--color-tertiary-light) !important;
-}
-
-.u-color--tertiary-lighter {
-  color: var(--color-tertiary-lighter) !important;
-}
-
-.u-color--tertiary-fade {
-  color: var(--color-tertiary-fade) !important;
-}
-
-.u-color--tertiary-dark {
-  color: var(--color-tertiary-dark) !important;
-}
-
-.u-color--tertiary {
-  color: var(--color-tertiary) !important;
-}
-
-.u-color--tertiary-light {
-  color: var(--color-tertiary-light) !important;
-}
-
-.u-color--tertiary-lighter {
-  color: var(--color-tertiary-lighter) !important;
-}
-
-.u-color--tertiary-fade {
-  color: var(--color-tertiary-fade) !important;
-}
-
 .u-color--important-dark {
   color: var(--color-important-dark) !important;
 }
@@ -3075,42 +2985,6 @@ body:has(.l-header--large) .l-main .p-sectionArea:first-child {
 
 .u-color--black {
   color: var(--color-black) !important;
-}
-
-.u-fontSize--xs {
-  font-size: var(--font-size-xs) !important;
-}
-
-.u-fontSize--sm {
-  font-size: var(--font-size-sm) !important;
-}
-
-.u-fontSize--md {
-  font-size: var(--font-size-md) !important;
-}
-
-.u-fontSize--lg {
-  font-size: var(--font-size-lg) !important;
-}
-
-.u-fontSize--xl {
-  font-size: var(--font-size-xl) !important;
-}
-
-.u-fontSize--2xl {
-  font-size: var(--font-size-2xl) !important;
-}
-
-.u-fontSize--3xl {
-  font-size: var(--font-size-3xl) !important;
-}
-
-.u-fontSize--4xl {
-  font-size: var(--font-size-4xl) !important;
-}
-
-.u-fontSize--5xl {
-  font-size: var(--font-size-5xl) !important;
 }
 
 @media screen and (min-width: 1280px) {
@@ -3742,6 +3616,47 @@ body:has(.l-header--large) .l-main .p-sectionArea:first-child {
     padding-right: var(--spacing-xl) !important;
   }
 }
+.u-text--2xs {
+  font-size: var(--font-size-2xs) !important;
+}
+
+.u-text--xs {
+  font-size: var(--font-size-xs) !important;
+}
+
+.u-text--sm {
+  font-size: var(--font-size-sm) !important;
+}
+
+.u-text--md,
+.u-text--base {
+  font-size: var(--font-size-md) !important;
+}
+
+.u-text--lg {
+  font-size: var(--font-size-lg) !important;
+}
+
+.u-text--xl {
+  font-size: var(--font-size-xl) !important;
+}
+
+.u-text--2xl {
+  font-size: var(--font-size-2xl) !important;
+}
+
+.u-text--3xl {
+  font-size: var(--font-size-3xl) !important;
+}
+
+.u-text--4xl {
+  font-size: var(--font-size-4xl) !important;
+}
+
+.u-text--5xl {
+  font-size: var(--font-size-5xl) !important;
+}
+
 .post-password-form > *:has(label[for*=pwbox]) {
   display: flex;
   flex-direction: row;

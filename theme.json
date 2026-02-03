@@ -14,8 +14,8 @@
 				},
 				{
 					"colors": [
-						"#4A4540",
-						"#EFEDEB"
+						"#4C4C49",
+						"#EFEFEC"
 					],
 					"name": "default",
 					"slug": "default"
@@ -30,44 +30,36 @@
 				},
 				{
 					"colors": [
-						"#407C26",
-						"#B2D19E"
-					],
-					"name": "secondary",
-					"slug": "secondary"
-				},
-				{
-					"colors": [
 						"#BC9310",
 						"#F9F0C3"
 					],
-					"name": "tertiary",
-					"slug": "tertiary"
+					"name": "secondary",
+					"slug": "secondary"
 				}
 			],
 			"palette": [
 				{
-					"color": "#261C19",
+					"color": "#262623",
 					"name": "default-dark",
 					"slug": "default-dark"
 				},
 				{
-					"color": "#4C4640",
+					"color": "#4C4C49",
 					"name": "default",
 					"slug": "default"
 				},
 				{
-					"color": "#7A7672",
+					"color": "#767673",
 					"name": "default-light",
 					"slug": "default-light"
 				},
 				{
-					"color": "#B6B0AC",
+					"color": "#B6B6B3",
 					"name": "default-lighter",
 					"slug": "default-lighter"
 				},
 				{
-					"color": "#EFEDEB",
+					"color": "#EFEFEC",
 					"name": "default-fade",
 					"slug": "default-fade"
 				},
@@ -97,54 +89,29 @@
 					"slug": "primary-fade"
 				},
 				{
-					"color": "#33601C",
+					"color": "#BC9310",
 					"name": "secondary-dark",
 					"slug": "secondary-dark"
 				},
 				{
-					"color": "#407C26",
+					"color": "#D6AC26",
 					"name": "secondary",
 					"slug": "secondary"
 				},
 				{
-					"color": "#50902C",
+					"color": "#EDCC46",
 					"name": "secondary-light",
 					"slug": "secondary-light"
 				},
 				{
-					"color": "#75AC50",
+					"color": "#F4DE79",
 					"name": "secondary-lighter",
 					"slug": "secondary-lighter"
 				},
 				{
-					"color": "#BCDCA6",
+					"color": "#F9F0B3",
 					"name": "secondary-fade",
 					"slug": "secondary-fade"
-				},
-				{
-					"color": "#BC9310",
-					"name": "tertiary-dark",
-					"slug": "tertiary-dark"
-				},
-				{
-					"color": "#D6AC26",
-					"name": "tertiary",
-					"slug": "tertiary"
-				},
-				{
-					"color": "#EDCC46",
-					"name": "tertiary-light",
-					"slug": "tertiary-light"
-				},
-				{
-					"color": "#F4DE79",
-					"name": "tertiary-lighter",
-					"slug": "tertiary-lighter"
-				},
-				{
-					"color": "#F9F0B3",
-					"name": "tertiary-fade",
-					"slug": "tertiary-fade"
 				},
 				{
 					"color": "#AC2620",

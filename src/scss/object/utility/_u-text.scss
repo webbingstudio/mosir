@@ -1,39 +1,44 @@
 @use "../../global" as g;
 @use "sass:math";
 
-.u-fontSize--xs {
+.u-text--2xs {
+    font-size: var(--font-size-2xs) !important;
+}
+
+.u-text--xs {
     font-size: var(--font-size-xs) !important;
 }
 
-.u-fontSize--sm {
+.u-text--sm {
     font-size: var(--font-size-sm) !important;
 }
 
-.u-fontSize--md {
+.u-text--md,
+.u-text--base {
     font-size: var(--font-size-md) !important;
 }
 
-.u-fontSize--lg {
+.u-text--lg {
     font-size: var(--font-size-lg) !important;
 }
 
-.u-fontSize--xl {
+.u-text--xl {
     font-size: var(--font-size-xl) !important;
 }
 
-.u-fontSize--2xl {
+.u-text--2xl {
     font-size: var(--font-size-2xl) !important;
 }
 
-.u-fontSize--3xl {
+.u-text--3xl {
     font-size: var(--font-size-3xl) !important;
 }
 
-.u-fontSize--4xl {
+.u-text--4xl {
     font-size: var(--font-size-4xl) !important;
 }
 
-.u-fontSize--5xl {
+.u-text--5xl {
     font-size: var(--font-size-5xl) !important;
 }
 
