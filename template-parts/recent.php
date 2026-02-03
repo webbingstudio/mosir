@@ -8,34 +8,17 @@
  *
  */
 
-$mosi_options_home_posts_layout = get_theme_mod( 'mosi_options_home_posts_layout', 'one' );
-
 if( !isset( $args['group'] ) ) {
 	$args = array( 'group' => '1' );
 }
 
+$mosi_options_home_posts_layout = get_theme_mod( 'mosi_options_home_posts_layout', 'one' );
+
 if( $args['group'] !== '1' ) {
     $mosi_options_home_posts_post_type = get_theme_mod( 'mosi_options_home_posts_post_type_02', 'post' );
-    $mosi_options_home_posts_header = get_theme_mod( 'mosi_options_home_posts_header_02', 'top' );
-    $mosi_options_home_posts_post_loop = get_theme_mod( 'mosi_options_home_posts_post_loop_02', 'headline' );
-    $mosi_options_home_posts_post_order = get_theme_mod( 'mosi_options_home_posts_post_order_02', 'DESC' );
-    $mosi_options_home_posts_post_limit = get_theme_mod( 'mosi_options_home_posts_post_limit_02', '5' );
 } else {
     $mosi_options_home_posts_post_type = get_theme_mod( 'mosi_options_home_posts_post_type_01', 'post' );
-    $mosi_options_home_posts_header = get_theme_mod( 'mosi_options_home_posts_header_01', 'top' );
-    $mosi_options_home_posts_post_loop = get_theme_mod( 'mosi_options_home_posts_post_loop_01', 'headline' );
-    $mosi_options_home_posts_post_order = get_theme_mod( 'mosi_options_home_posts_post_order_01', 'DESC' );
-    $mosi_options_home_posts_post_limit = get_theme_mod( 'mosi_options_home_posts_post_limit_01', '5' );
 }
-
-// If you have set an "Alternative Post Name" in customization, that name will be reflected when displaying archives.
-// If you have not set, it will remain "Blog".
-if( $mosi_options_home_posts_post_type === 'post' ) {
-    $mosi_posts_label = get_theme_mod( 'mosi_options_post_alt_label', esc_html( get_post_type_object('post')->label ) );
-    $mosi_posts_slug = get_theme_mod( 'mosi_options_post_alt_slug', esc_html( get_post_type_object('post')->name ) );
-}
-$mosi_posts_label = empty( $mosi_posts_label ) ? 'ブログ' : $mosi_posts_label;
-$mosi_posts_slug = empty( $mosi_posts_slug ) ? 'blog' : $mosi_posts_slug;
 
 if( $mosi_options_home_posts_layout === 'two' && $mosi_options_home_posts_header === 'left' ) {
     $mosi_options_home_posts_header = 'top';
@@ -46,6 +29,33 @@ if( $mosi_options_home_posts_layout === 'two' && $mosi_options_home_posts_header
 
     <?php
     $mosi_posts_type_obj = get_post_type_object( $mosi_options_home_posts_post_type );
+
+    if( $args['group'] !== '1' ) {
+        $mosi_options_home_posts_header = get_theme_mod( 'mosi_options_home_posts_header_02', 'top' );
+        $mosi_posts_title = get_theme_mod( 'mosi_options_home_posts_title_02', '' );
+        $mosi_posts_subtitle = get_theme_mod( 'mosi_options_home_posts_subtitle_02', '' );
+        $mosi_options_home_posts_post_loop = get_theme_mod( 'mosi_options_home_posts_post_loop_02', 'headline' );
+        $mosi_options_home_posts_post_order = get_theme_mod( 'mosi_options_home_posts_post_order_02', 'DESC' );
+        $mosi_options_home_posts_post_limit = get_theme_mod( 'mosi_options_home_posts_post_limit_02', '5' );
+    } else {
+        $mosi_options_home_posts_header = get_theme_mod( 'mosi_options_home_posts_header_01', 'top' );
+        $mosi_posts_title = get_theme_mod( 'mosi_options_home_posts_title_01', '' );
+        $mosi_posts_subtitle = get_theme_mod( 'mosi_options_home_posts_subtitle_01', '' );
+        $mosi_options_home_posts_post_loop = get_theme_mod( 'mosi_options_home_posts_post_loop_01', 'headline' );
+        $mosi_options_home_posts_post_order = get_theme_mod( 'mosi_options_home_posts_post_order_01', 'DESC' );
+        $mosi_options_home_posts_post_limit = get_theme_mod( 'mosi_options_home_posts_post_limit_01', '5' );
+    }
+
+    // Why do we do this?
+    // In Japan and some other countries, the word "Post（投稿）" is a concept and is not used in conversation.
+    // For this reason, we default to the common expression used on blogs, etc.
+    if( $mosi_options_home_posts_post_type === 'post' ) {
+        $mosi_posts_title = empty( $mosi_posts_title ) ? 'Latest Posts' : $mosi_posts_title;
+        $mosi_posts_subtitle = empty( $mosi_posts_subtitle ) ? 'Blog' : $mosi_posts_subtitle;
+    } else {
+        $mosi_posts_title = empty( $mosi_posts_title ) ? esc_html( $mosi_posts_type_obj->label ) : $mosi_posts_title;
+        $mosi_posts_subtitle = empty( $mosi_posts_subtitle ) ? esc_html( $mosi_posts_type_obj->name ) : $mosi_posts_subtitle;
+    }
 
     $mosi_query_args = array(
         'post_type'  => $mosi_options_home_posts_post_type,
@@ -60,14 +70,8 @@ if( $mosi_options_home_posts_layout === 'two' && $mosi_options_home_posts_header
 
         <?php if( $mosi_options_home_posts_header !== 'none' ): ?>
         <div class="p-section__header">
-            <p class="p-section__title c-title c-title--center c-title--lv2" <?php language_attributes(); ?>><?php echo esc_attr($mosi_posts_label); ?></p>
-            <?php
-                // In Japan, it is customary to include the English translation (here, the slug) at the bottom of the main heading.
-                // This is not necessary in English-speaking languages, so it is hidden.
-                if( !preg_match('/^en_/', get_locale() ) ):
-            ?>
-                <p class="p-section__subTitle c-title c-title--center c-title--lv5" lang="en-US"><?php echo ucfirst( esc_html($mosi_posts_slug) ); ?></p>
-            <?php endif; ?>
+            <p class="p-section__title c-title c-title--center c-title--lv2" <?php language_attributes(); ?>><?php echo esc_attr($mosi_posts_title); ?></p>
+            <p class="p-section__subTitle c-title c-title--center c-title--lv5"><?php echo esc_html($mosi_posts_subtitle); ?></p>
         </div>
         <?php endif; ?>
         <div class="p-section__contents">

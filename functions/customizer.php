@@ -5,6 +5,26 @@
  * @package mosir
  */
 
+/**
+ * [WP]Mosi_Customize_Control
+ *
+ * Created a custom customizer item that doesn't have an input form to add separation between items.
+ *
+ * @access public
+ * @see WP_Customize_Control
+ */
+
+if ( class_exists( 'WP_Customize_Control' ) && ! class_exists( 'Mosi_Customize_Control' ) ) {
+	class Mosi_Customize_Control extends WP_Customize_Control {
+		public function render_content() {
+			if ( isset( $this->label ) ) {
+				echo '<span class="customize-control-title" style="margin-top:1rem;padding-top:1rem;border-top:1px solid currentColor;">' . $this->label . '</span>';
+			}
+		}
+	}
+}
+
+
 if ( ! function_exists( 'mosi_customize_register' ) ){
 	function mosi_customize_register( $wp_customize ) {
 
@@ -272,6 +292,16 @@ if ( ! function_exists( 'mosi_customize_register' ) ){
 		));
 
 
+		$wp_customize->add_setting( 'mosi_options_home_posts_divider_01', array(
+			'default'           => '',
+			'sanitize_callback' => 'sanitize_text_field',
+		));
+		$wp_customize->add_control( new Mosi_Customize_Control( $wp_customize, 'mosi_options_home_posts_divider_01', array(
+			'section' => 'mosi_config_home',
+			'label' => 'Section 1'
+		)));
+
+
 		$wp_customize->add_setting( 'mosi_options_home_posts_post_type_01', array(
 			'default'           => 'post',
 			'sanitize_callback' => 'sanitize_text_field',
@@ -300,6 +330,32 @@ if ( ! function_exists( 'mosi_customize_register' ) ){
 				'top' => 'Always top',
 				'left' => 'Left when on desktop',
 			)
+		));
+
+
+		$wp_customize->add_setting( 'mosi_options_home_posts_title_01', array(
+			'default'           => '',
+			'sanitize_callback' => 'wp_filter_post_kses',
+		));
+		$wp_customize->add_control( 'mosi_options_control_home_posts_title_01', array(
+				'settings'    => 'mosi_options_home_posts_title_01',
+				'label'       => '1: Title of header',
+				'description' => 'You can change the header title (e.g. Press release). If not set it will be the post type label, or "Latest Posts" as post.',
+				'section'     => 'mosi_config_home',
+				'type'        => 'text',
+		));
+
+
+		$wp_customize->add_setting( 'mosi_options_home_posts_subtitle_01', array(
+			'default'           => '',
+			'sanitize_callback' => 'wp_filter_post_kses',
+		));
+		$wp_customize->add_control( 'mosi_options_control_home_posts_subtitle_01', array(
+				'settings'    => 'mosi_options_home_posts_subtitle_01',
+				'label'       => '1: Subtitle of header',
+				'description' => 'You can change the header sub title (e.g. News). If not set it will be the post type slug, or "Blog" as post.',
+				'section'     => 'mosi_config_home',
+				'type'        => 'text',
 		));
 
 
@@ -351,6 +407,16 @@ if ( ! function_exists( 'mosi_customize_register' ) ){
 		));
 
 
+		$wp_customize->add_setting( 'mosi_options_home_posts_divider_02', array(
+			'default'           => '',
+			'sanitize_callback' => 'sanitize_text_field',
+		));
+		$wp_customize->add_control( new Mosi_Customize_Control( $wp_customize, 'mosi_options_home_posts_divider_02', array(
+			'section' => 'mosi_config_home',
+			'label' => 'Section 2'
+		)));
+
+
 		$wp_customize->add_setting( 'mosi_options_home_posts_post_type_02', array(
 			'default'           => 'post',
 			'sanitize_callback' => 'sanitize_text_field',
@@ -379,6 +445,32 @@ if ( ! function_exists( 'mosi_customize_register' ) ){
 				'top' => 'Always top',
 				'left' => 'Left when on desktop',
 			)
+		));
+
+
+		$wp_customize->add_setting( 'mosi_options_home_posts_title_02', array(
+			'default'           => '',
+			'sanitize_callback' => 'wp_filter_post_kses',
+		));
+		$wp_customize->add_control( 'mosi_options_control_home_posts_title_02', array(
+				'settings'    => 'mosi_options_home_posts_title_02',
+				'label'       => '2: Title of header',
+				'description' => 'You can change the header title (e.g. Latest Posts). If not set it will be the post type label.',
+				'section'     => 'mosi_config_home',
+				'type'        => 'text',
+		));
+
+
+		$wp_customize->add_setting( 'mosi_options_home_posts_subtitle_02', array(
+			'default'           => '',
+			'sanitize_callback' => 'wp_filter_post_kses',
+		));
+		$wp_customize->add_control( 'mosi_options_control_home_posts_subtitle_02', array(
+				'settings'    => 'mosi_options_home_posts_subtitle_02',
+				'label'       => '2: Subtitle of header',
+				'description' => 'You can change the header sub title (e.g. News). If not set it will be the post type slug.',
+				'section'     => 'mosi_config_home',
+				'type'        => 'text',
 		));
 
 
