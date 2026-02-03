@@ -12,10 +12,10 @@ if( !isset( $args['group'] ) ) {
 	$args = array( 'group' => '1' );
 }
 
-$mosi_options_home_posts_layout = get_theme_mod( 'mosi_options_home_posts_layout', 'one' );
+$mosi_options_home_posts_layout = get_theme_mod( 'mosi_options_home_posts_layout', 'two' );
 
 if( $args['group'] !== '1' ) {
-    $mosi_options_home_posts_post_type = get_theme_mod( 'mosi_options_home_posts_post_type_02', 'post' );
+    $mosi_options_home_posts_post_type = get_theme_mod( 'mosi_options_home_posts_post_type_02', 'none' );
 } else {
     $mosi_options_home_posts_post_type = get_theme_mod( 'mosi_options_home_posts_post_type_01', 'post' );
 }
@@ -30,17 +30,17 @@ if( $args['group'] !== '1' ) {
         $mosi_options_home_posts_header = get_theme_mod( 'mosi_options_home_posts_header_02', 'top' );
         $mosi_posts_title = get_theme_mod( 'mosi_options_home_posts_title_02', '' );
         $mosi_posts_subtitle = get_theme_mod( 'mosi_options_home_posts_subtitle_02', '' );
-        $mosi_options_home_posts_post_loop = get_theme_mod( 'mosi_options_home_posts_post_loop_02', 'headline' );
+        $mosi_options_home_posts_post_loop = get_theme_mod( 'mosi_options_home_posts_post_loop_02', 'card' );
         $mosi_options_home_posts_post_order = get_theme_mod( 'mosi_options_home_posts_post_order_02', 'DESC' );
-        $mosi_options_home_posts_post_limit = get_theme_mod( 'mosi_options_home_posts_post_limit_02', '5' );
+        $mosi_options_home_posts_post_limit = get_theme_mod( 'mosi_options_home_posts_post_limit_02', '6' );
         $mosi_options_home_posts_link = get_theme_mod( 'mosi_options_home_posts_link_02', '' );
     } else {
         $mosi_options_home_posts_header = get_theme_mod( 'mosi_options_home_posts_header_01', 'top' );
         $mosi_posts_title = get_theme_mod( 'mosi_options_home_posts_title_01', '' );
         $mosi_posts_subtitle = get_theme_mod( 'mosi_options_home_posts_subtitle_01', '' );
-        $mosi_options_home_posts_post_loop = get_theme_mod( 'mosi_options_home_posts_post_loop_01', 'headline' );
+        $mosi_options_home_posts_post_loop = get_theme_mod( 'mosi_options_home_posts_post_loop_01', 'card' );
         $mosi_options_home_posts_post_order = get_theme_mod( 'mosi_options_home_posts_post_order_01', 'DESC' );
-        $mosi_options_home_posts_post_limit = get_theme_mod( 'mosi_options_home_posts_post_limit_01', '5' );
+        $mosi_options_home_posts_post_limit = get_theme_mod( 'mosi_options_home_posts_post_limit_01', '6' );
         $mosi_options_home_posts_link = get_theme_mod( 'mosi_options_home_posts_link_01', '' );
     }
 

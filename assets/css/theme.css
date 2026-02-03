@@ -1015,6 +1015,7 @@ a.p-card__inner .p-card__title {
 }
 
 .p-cardList__inner > * {
+  flex-grow: 1;
   width: 100%;
   max-width: 30rem;
   margin-inline: auto;
@@ -1026,8 +1027,9 @@ a.p-card__inner .p-card__title {
 
 @container ( width >= 27rem ) {
   .p-cardList__inner > * {
-    max-width: none;
-    width: calc(50% - var(--spacing-sm) / 2);
+    flex-grow: 0;
+    max-width: calc(50% - var(--spacing-sm) / 2);
+    margin-inline: 0;
   }
 }
 @container ( width >= 38rem ) {
@@ -1036,7 +1038,7 @@ a.p-card__inner .p-card__title {
          column-gap: var(--spacing-md);
   }
   .p-cardList__inner > * {
-    width: calc(33.33% - var(--spacing-md) * 2 / 3);
+    max-width: calc(33.33% - var(--spacing-md) * 2 / 3);
   }
 }
 .p-comments {

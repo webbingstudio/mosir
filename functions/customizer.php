@@ -250,7 +250,7 @@ if ( ! function_exists( 'mosi_customize_register' ) ){
 
 
 		$wp_customize->add_setting( 'mosi_options_home_posts_layout', array(
-			'default'           => 'one',
+			'default'           => 'two',
 			'sanitize_callback' => 'sanitize_text_field',
 		));
 		$wp_customize->add_control( 'mosi_options_control_home_posts_layout', array(
@@ -334,7 +334,7 @@ if ( ! function_exists( 'mosi_customize_register' ) ){
 
 
 		$wp_customize->add_setting( 'mosi_options_home_posts_post_limit_01', array(
-			'default'           => '5',
+			'default'           => '6',
 			'sanitize_callback' => 'sanitize_text_field',
 		));
 		$wp_customize->add_control( 'mosi_options_control_home_posts_post_limit_01', array(
@@ -362,7 +362,7 @@ if ( ! function_exists( 'mosi_customize_register' ) ){
 
 
 		$wp_customize->add_setting( 'mosi_options_home_posts_post_loop_01', array(
-			'default'           => 'headline',
+			'default'           => 'card',
 			'sanitize_callback' => 'sanitize_text_field',
 		));
 		$wp_customize->add_control( 'mosi_options_control_home_posts_post_loop_01', array(
@@ -405,7 +405,7 @@ if ( ! function_exists( 'mosi_customize_register' ) ){
 
 
 		$wp_customize->add_setting( 'mosi_options_home_posts_post_type_02', array(
-			'default'           => 'post',
+			'default'           => 'none',
 			'sanitize_callback' => 'sanitize_text_field',
 		));
 		$wp_customize->add_control( 'mosi_options_control_home_posts_post_type_02', array(
@@ -462,7 +462,7 @@ if ( ! function_exists( 'mosi_customize_register' ) ){
 
 
 		$wp_customize->add_setting( 'mosi_options_home_posts_post_limit_02', array(
-			'default'           => '5',
+			'default'           => '6',
 			'sanitize_callback' => 'sanitize_text_field',
 		));
 		$wp_customize->add_control( 'mosi_options_control_home_posts_post_limit_02', array(
@@ -490,7 +490,7 @@ if ( ! function_exists( 'mosi_customize_register' ) ){
 
 
 		$wp_customize->add_setting( 'mosi_options_home_posts_post_loop_02', array(
-			'default'           => 'headline',
+			'default'           => 'card',
 			'sanitize_callback' => 'sanitize_text_field',
 		));
 		$wp_customize->add_control( 'mosi_options_control_home_posts_post_loop_02', array(
