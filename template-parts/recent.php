@@ -56,7 +56,7 @@ if( $args['group'] !== '1' ) {
         $mosi_posts_subtitle = empty( $mosi_posts_subtitle ) ? 'Blog' : $mosi_posts_subtitle;
     } else {
         $mosi_posts_title = empty( $mosi_posts_title ) ? esc_html( $mosi_posts_type_obj->label ) : $mosi_posts_title;
-        $mosi_posts_subtitle = empty( $mosi_posts_subtitle ) ? esc_html( $mosi_posts_type_obj->name ) : $mosi_posts_subtitle;
+        $mosi_posts_subtitle = empty( $mosi_posts_subtitle ) ? ucfirst( esc_html( $mosi_posts_type_obj->name ) ) : $mosi_posts_subtitle;
     }
 
     $mosi_query_args = array(
