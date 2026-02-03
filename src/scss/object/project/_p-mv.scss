@@ -111,7 +111,7 @@ body:has(.l-header--large) .p-mv__stage {
 
 .p-mv__catch {
     margin: 0;
-    font-size: var(--fontSize-5xl);
+    font-size: var(--font-size-5xl);
     font-weight: var(--fontWeight-bold);
     line-height: var(--lineHeight-xs);
     text-shadow: 0.1em 0.1em 0.1em rgba(0, 0, 0, 0.5), 0 0 0.4em rgba(0, 0, 0, 1);
@@ -119,13 +119,13 @@ body:has(.l-header--large) .p-mv__stage {
 
 .p-mv__text {
     margin: 0;
-    font-size: var(--fontSize-md);
+    font-size: var(--font-size-md);
     font-weight: var(--fontWeight-bold);
     line-height: var(--lineHeight-xs);
     text-shadow: 0.1em 0.1em 0.1em rgba(0, 0, 0, 0.5), 0 0 0.4em rgba(0, 0, 0, 1);
 
     @include g.mq(default) {
-        font-size: var(--fontSize-xl);
+        font-size: var(--font-size-xl);
     }
 }
 

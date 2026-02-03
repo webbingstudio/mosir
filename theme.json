@@ -230,33 +230,38 @@
 			"defaultSpacingSizes": false,
 			"spacingSizes": [
 				{
+					"name": "2XS(4-6)",
+					"size": "calc(clamp(0.25rem, 0.225vw + 0.195rem, 0.375rem))",
+					"slug": "2-x-small"
+				},
+				{
 					"name": "XS(8-12)",
-					"size": "calc(clamp(0.5rem, 0.442vw + 0.396rem, 0.75rem))",
+					"size": "calc(clamp(0.5rem, 0.449vw + 0.39rem, 0.75rem))",
 					"slug": "x-small"
 				},
 				{
 					"name": "S(16-24)",
-					"size": "calc(clamp(1rem, 0.884vw + 0.793rem, 1.5rem))",
+					"size": "calc(clamp(1rem, 0.899vw + 0.781rem, 1.5rem))",
 					"slug": "small"
 				},
 				{
 					"name": "M(32-48)",
-					"size": "calc(clamp(2rem, 1.768vw + 1.586rem, 3rem))",
+					"size": "calc(clamp(2rem, 1.798vw + 1.562rem, 3rem))",
 					"slug": "medium"
 				},
 				{
 					"name": "L(48-72)",
-					"size": "calc(clamp(3rem, 2.652vw + 2.378rem, 4.5rem))",
+					"size": "calc(clamp(3rem, 2.697vw + 2.343rem, 4.5rem))",
 					"slug": "large"
 				},
 				{
 					"name": "XL(64-96)",
-					"size": "calc(clamp(4rem, 3.536vw + 3.171rem, 6rem))",
+					"size": "calc(clamp(4rem, 3.596vw + 3.124rem, 6rem))",
 					"slug": "x-large"
 				},
 				{
-					"name": "2XL(64-128)",
-					"size": "calc(clamp(4rem, 7.072vw + 2.343rem, 8rem))",
+					"name": "2XL(96-144)",
+					"size": "calc(clamp(6rem, 5.393vw + 4.685rem, 9rem))",
 					"slug": "2-x-large"
 				}
 			]
@@ -277,48 +282,48 @@
 			"writingMode": false,
 			"fontSizes": [
 				{
-					"name": "XS (10-12)",
-					"size": "calc(clamp(0.625rem, 0.221vw + 0.573rem, 0.75rem))",
+					"name": "XS (10-11)",
+					"size": "calc(clamp(0.625rem, 0.112vw + 0.598rem, 0.688rem))",
 					"slug": "x-small"
 				},
 				{
 					"name": "S (12-14)",
-					"size": "calc(clamp(0.75rem, 0.221vw + 0.698rem, 0.875rem))",
+					"size": "calc(clamp(0.75rem, 0.225vw + 0.695rem, 0.875rem))",
 					"slug": "small"
 				},
 				{
-					"name": "M (14-16)",
-					"size": "calc(clamp(0.875rem, 0.221vw + 0.823rem, 1rem))",
+					"name": "M (14-17)",
+					"size": "calc(clamp(0.875rem, 0.337vw + 0.793rem, 1.063rem))",
 					"slug": "medium"
 				},
 				{
-					"name": "L (16-18)",
-					"size": "calc(clamp(1rem, 0.221vw + 0.948rem, 1.125rem))",
+					"name": "L (16-20)",
+					"size": "calc(clamp(1rem, 0.449vw + 0.89rem, 1.25rem))",
 					"slug": "large"
 				},
 				{
-					"name": "XL (18-22.5)",
-					"size": "calc(clamp(1.125rem, 0.442vw + 1.021rem, 1.375rem))",
+					"name": "XL (18-23)",
+					"size": "calc(clamp(1.125rem, 0.562vw + 0.988rem, 1.438rem))",
 					"slug": "x-large"
 				},
 				{
-					"name": "2XL (21-26.25)",
-					"size": "calc(clamp(1.313rem, 0.552vw + 1.183rem, 1.625rem))",
+					"name": "2XL (21-28)",
+					"size": "calc(clamp(1.313rem, 0.787vw + 1.121rem, 1.75rem))",
 					"slug": "2-x-large"
 				},
 				{
-					"name": "3XL (24-32)",
-					"size": "calc(clamp(1.5rem, 0.884vw + 1.293rem, 2rem))",
+					"name": "3XL (24-33)",
+					"size": "calc(clamp(1.5rem, 1.011vw + 1.254rem, 2.063rem))",
 					"slug": "3-x-large"
 				},
 				{
-					"name": "4XL (28-42)",
-					"size": "calc(clamp(1.75rem, 1.547vw + 1.387rem, 2.625rem))",
+					"name": "4XL (28-41)",
+					"size": "calc(clamp(1.75rem, 1.461vw + 1.394rem, 2.563rem))",
 					"slug": "4-x-large"
 				},
 				{
-					"name": "5XL (32-48)",
-					"size": "calc(clamp(2rem, 1.768vw + 1.586rem, 3rem))",
+					"name": "5XL (33-50)",
+					"size": "calc(clamp(2.063rem, 1.91vw + 1.597rem, 3.125rem))",
 					"slug": "5-x-large"
 				},
 				{

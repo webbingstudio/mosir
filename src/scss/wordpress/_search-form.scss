@@ -15,7 +15,7 @@
     background-color: var(--ui-inverse-color);
     border: 0.125rem solid var(--ui-accent-color);
     color: var(--ui-default-color);
-    font-size: var(--fontSize-md);
+    font-size: var(--font-size-md);
     letter-spacing: 0.1em;
     font-weight: var(--fontWeight-bold);
     line-height: var(--lineHeight-none);
@@ -54,7 +54,7 @@
     border: 0.0625rem solid var(--ui-border-color);
     border-radius: var(--border-radius-sm);
     color: var(--body-color);
-    font-size: var(--fontSize-md);
+    font-size: var(--font-size-md);
     line-height: var(--lineHeight-none);
 }
 

@@ -76,7 +76,7 @@ a.p-media__inner:focus {
 .p-media__meta {
   @include g.flex( n, wrap, flex-start, center );
   gap: var(--spacing-xs) var(--spacing-sm);
-  font-size: var(--fontSize-sm);
+  font-size: var(--font-size-sm);
 }
 
 .p-media__meta > * {
@@ -97,7 +97,7 @@ a.p-media__inner:focus {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 5;
   max-height: calc( ( var(--lineHeight-md) * 5em ) );
-  font-size: var(--fontSize-lg);
+  font-size: var(--font-size-lg);
 }
 
 @include g.mq(hover) {
@@ -115,7 +115,7 @@ a.p-media__inner:focus {
   .p-media__contents .p-media__title.c-title {
     -webkit-line-clamp: 3;
     max-height: calc( ( var(--lineHeight-md) * 3em ) );
-    font-size: var(--fontSize-md);
+    font-size: var(--font-size-md);
   }
 
 }

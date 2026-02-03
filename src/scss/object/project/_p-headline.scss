@@ -59,7 +59,7 @@ a.p-headline__inner:focus {
 .p-headline__header {
   flex-grow: 0;
   @include g.flex( n, n, n, center );
-  font-size: var(--fontSize-sm);
+  font-size: var(--font-size-sm);
   padding-right: var(--spacing-sm);
 }
 

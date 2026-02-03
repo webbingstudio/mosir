@@ -84,7 +84,7 @@ a.p-card__inner .p-card__title {
 }
 
 .p-card__terms .c-label {
-  font-size: var(--fontSize-sm);
+  font-size: var(--font-size-sm);
 }
 
 @include g.mq(hover) {
@@ -119,11 +119,11 @@ a.p-card__inner .p-card__title {
 
   .p-card__contents .c-date,
   .p-card__contents .c-summary {
-    font-size: var(--fontSize-sm);
+    font-size: var(--font-size-sm);
   }
 
   .p-card__contents .p-card__title.c-title {
-    font-size: var(--fontSize-sm);
+    font-size: var(--font-size-sm);
   }
 
 }

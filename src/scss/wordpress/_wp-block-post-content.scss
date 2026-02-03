@@ -15,27 +15,27 @@
     }
 
     h1 {
-        font-size: var(--fontSize-3xl);
+        font-size: var(--font-size-3xl);
     }
 
     h2 {
-        font-size: var(--fontSize-2xl);
+        font-size: var(--font-size-2xl);
     }
 
     h3 {
-        font-size: var(--fontSize-xl);
+        font-size: var(--font-size-xl);
     }
 
     h4 {
-        font-size: var(--fontSize-lg);
+        font-size: var(--font-size-lg);
     }
 
     h5 {
-        font-size: var(--fontSize-md);
+        font-size: var(--font-size-md);
     }
 
     h6 {
-        font-size: var(--fontSize-md);
+        font-size: var(--font-size-md);
         font-weight: var(--fontWeight-normal);
     }
 
@@ -78,7 +78,7 @@
     }
 
     > pre {
-        font-size: var(--fontSize-sm);
+        font-size: var(--font-size-sm);
         padding: var(--spacing-xs);
         border: 0.0625rem solid var(--color-default-lighter);
         background-color: var(--color-default-fade);
@@ -108,19 +108,19 @@
 .p-post.p-post--post .wp-block-post-content {
 
     h2 {
-        font-size: var(--fontSize-xl);
+        font-size: var(--font-size-xl);
         padding-bottom: 0.25em;
         border-bottom: 0.0625rem solid var(--color-primary);
     }
 
     h3 {
-        font-size: var(--fontSize-lg);
+        font-size: var(--font-size-lg);
         padding-left: 0.5em;
         border-left: 0.125rem solid var(--color-primary);
     }
 
     h4 {
-        font-size: var(--fontSize-lg);
+        font-size: var(--font-size-lg);
     }
 
     > * {
