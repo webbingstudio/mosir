@@ -48,7 +48,7 @@ get_header();
 		<div class="p-post__footer">
 			<div class="p-post__footer__contents l-container l-container--sm">
 				<div class="p-post__footer__meta">
-					<time class="c-date" datetime="<?php the_time('c'); ?>"><?php the_time( $mosi_date_format . ' ' . $mosi_time_format ); ?></time>
+					<span class="c-date">公開: <time datetime="<?php the_time('c'); ?>"><?php the_time( 'Y-m-d H:i:s' ); ?></time></span>
 				</div>
 				<?php if( $mosi_tags ): ?>
 				<div class="p-post__footer__tags">
