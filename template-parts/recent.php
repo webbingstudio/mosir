@@ -33,6 +33,7 @@ if( $args['group'] !== '1' ) {
         $mosi_options_home_posts_post_loop = get_theme_mod( 'mosi_options_home_posts_post_loop_02', 'headline' );
         $mosi_options_home_posts_post_order = get_theme_mod( 'mosi_options_home_posts_post_order_02', 'DESC' );
         $mosi_options_home_posts_post_limit = get_theme_mod( 'mosi_options_home_posts_post_limit_02', '5' );
+        $mosi_options_home_posts_link = get_theme_mod( 'mosi_options_home_posts_link_02', '' );
     } else {
         $mosi_options_home_posts_header = get_theme_mod( 'mosi_options_home_posts_header_01', 'top' );
         $mosi_posts_title = get_theme_mod( 'mosi_options_home_posts_title_01', '' );
@@ -40,6 +41,7 @@ if( $args['group'] !== '1' ) {
         $mosi_options_home_posts_post_loop = get_theme_mod( 'mosi_options_home_posts_post_loop_01', 'headline' );
         $mosi_options_home_posts_post_order = get_theme_mod( 'mosi_options_home_posts_post_order_01', 'DESC' );
         $mosi_options_home_posts_post_limit = get_theme_mod( 'mosi_options_home_posts_post_limit_01', '5' );
+        $mosi_options_home_posts_link = get_theme_mod( 'mosi_options_home_posts_link_01', '' );
     }
 
     if( $mosi_options_home_posts_layout === 'two' && $mosi_options_home_posts_header === 'left' ) {
@@ -83,9 +85,11 @@ if( $args['group'] !== '1' ) {
                 </div>
             </div>
         </div>
+        <?php if( $mosi_options_home_posts_link ): ?>
         <div class="p-section__footer">
-            <p class="p-section__link"><a href="#" aria-label="「<?php echo esc_attr($mosi_posts_title); ?>」の一覧ページへ">一覧ページへ</a></p>
+            <p class="p-section__link"><a href="<?php echo esc_url($mosi_options_home_posts_link); ?>" aria-label="「<?php echo esc_attr($mosi_posts_title); ?>」の一覧ページへ">一覧ページへ</a></p>
         </div>
+        <?php endif; ?>
     </div>
     <?php endif; wp_reset_query(); unset( $mosi_query, $mosi_query_args ); ?>
 <?php endif; ?>

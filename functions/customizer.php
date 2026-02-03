@@ -272,7 +272,7 @@ if ( ! function_exists( 'mosi_customize_register' ) ){
 		));
 		$wp_customize->add_control( new Mosi_Customize_Control( $wp_customize, 'mosi_options_home_posts_divider_01', array(
 			'section' => 'mosi_config_home',
-			'label' => 'Section 1'
+			'label' => 'Posts - section 1'
 		)));
 
 
@@ -381,13 +381,26 @@ if ( ! function_exists( 'mosi_customize_register' ) ){
 		));
 
 
+		$wp_customize->add_setting( 'mosi_options_home_posts_link_01', array(
+			'default'           => '',
+			'sanitize_callback' => 'esc_url_raw',
+		));
+		$wp_customize->add_control( 'mosi_options_control_home_posts_link_01', array(
+				'settings'    => 'mosi_options_home_posts_link_01',
+				'label'       => '1: Link path to index page',
+				'description' => '',
+				'section'     => 'mosi_config_home',
+				'type'        => 'url',
+		));
+
+
 		$wp_customize->add_setting( 'mosi_options_home_posts_divider_02', array(
 			'default'           => '',
 			'sanitize_callback' => 'sanitize_text_field',
 		));
 		$wp_customize->add_control( new Mosi_Customize_Control( $wp_customize, 'mosi_options_home_posts_divider_02', array(
 			'section' => 'mosi_config_home',
-			'label' => 'Section 2'
+			'label' => 'Posts - section 2'
 		)));
 
 
@@ -493,6 +506,19 @@ if ( ! function_exists( 'mosi_customize_register' ) ){
 				'media' => 'Media',
 				'media-no-meta' => 'Media (no meta)',
 			)
+		));
+
+
+		$wp_customize->add_setting( 'mosi_options_home_posts_link_02', array(
+			'default'           => '',
+			'sanitize_callback' => 'esc_url_raw',
+		));
+		$wp_customize->add_control( 'mosi_options_control_home_posts_link_02', array(
+				'settings'    => 'mosi_options_home_posts_link_02',
+				'label'       => '2: Link path to index page',
+				'description' => '',
+				'section'     => 'mosi_config_home',
+				'type'        => 'url',
 		));
 
 
