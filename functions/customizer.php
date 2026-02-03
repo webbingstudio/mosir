@@ -132,32 +132,6 @@ if ( ! function_exists( 'mosi_customize_register' ) ){
 		));
 
 
-		$wp_customize->add_setting( 'mosi_options_post_alt_label', array(
-			'default'           => '',
-			'sanitize_callback' => 'wp_filter_post_kses',
-		));
-		$wp_customize->add_control( 'mosi_options_control_post_alt_label', array(
-				'settings'    => 'mosi_options_post_alt_label',
-				'label'       => 'Alternative slug for the "Post"',
-				'description' => 'You can set the alternative label for the "Posts". For example: Blog, Information, Press Release...',
-				'section'     => 'mosi_config_basic',
-				'type'        => 'text',
-		));
-
-
-		$wp_customize->add_setting( 'mosi_options_post_alt_slug', array(
-			'default'           => '',
-			'sanitize_callback' => 'wp_filter_post_kses',
-		));
-		$wp_customize->add_control( 'mosi_options_control_post_alt_slug', array(
-				'settings'    => 'mosi_options_post_alt_slug',
-				'label'       => 'Alternative label for the "Post"',
-				'description' => '(Non-English speaking countries) You can set the alternative slug for the "post". For example: blog, info, press-release...',
-				'section'     => 'mosi_config_basic',
-				'type'        => 'text',
-		));
-
-
 		$wp_customize->add_setting( 'mosi_options_copyright', array(
 			'default'           => '',
 			'sanitize_callback' => 'wp_filter_post_kses',

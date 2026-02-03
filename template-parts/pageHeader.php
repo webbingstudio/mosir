@@ -9,14 +9,11 @@
 $mosi_post_type = get_post_type() ? get_post_type() : get_query_var( 'post_type' );
 $mosi_post_type_obj = $mosi_post_type ? get_post_type_object( $mosi_post_type ) : (bool)false;
 
-// If you have set an "Alternative Post Name" in customization, that name will be reflected when displaying archives.
-// If you have not set, it will remain "Blog".
-$mosi_posts_page_label = get_theme_mod( 'mosi_options_post_alt_label', '' );
-$mosi_posts_page_label = empty( $mosi_posts_page_label ) ? 'ブログ' : $mosi_posts_page_label;
-$mosi_posts_page_slug = get_theme_mod( 'mosi_options_post_alt_slug', '' );
-$mosi_posts_page_slug = empty( $mosi_posts_page_slug ) ? 'blog' : $mosi_posts_page_slug;
-
-// If you have set "Page for posts", it will inherit the title and slug of that page.
+// If "Posts page" is set, the information will be retrieved and reflected in the page header.
+// (Reading Settings > Your homepage displays > Posts page)
+// If not set or the page is unpublished, this header will not be displayed.
+$mosi_posts_page_label = (bool)false;
+$mosi_posts_page_slug = (bool)false;
 $mosi_posts_page_id = get_option('page_for_posts') ? get_option('page_for_posts') : (bool)false;
 $mosi_posts_page = $mosi_posts_page_id ? get_post($mosi_posts_page_id) : (bool)false;
 if( $mosi_posts_page && $mosi_posts_page->post_status === 'publish' ){
@@ -24,7 +21,7 @@ if( $mosi_posts_page && $mosi_posts_page->post_status === 'publish' ){
     $mosi_posts_page_slug = $mosi_posts_page->post_name;
 }
 ?>
-<?php if ( $mosi_post_type_obj && is_single() && $mosi_post_type_obj->name === 'post' ): ?>
+<?php if ( is_single() && $mosi_post_type_obj->name === 'post' && $mosi_posts_page_label ): ?>
 <div class="p-pageHeader p-pageHeader--<?php echo esc_attr($mosi_posts_page_slug); ?>">
     <div class="p-pageHeader__contents l-container">
         <p class="p-pageHeader__title c-title c-title--lv2" <?php language_attributes(); ?>><?php echo esc_attr($mosi_posts_page_label); ?></p>
@@ -37,7 +34,7 @@ if( $mosi_posts_page && $mosi_posts_page->post_status === 'publish' ){
         <?php endif; ?>
     </div>
 </div>
-<?php elseif ( $mosi_post_type_obj && !is_page() && is_single() ): ?>
+<?php elseif ( !is_page() && $mosi_post_type_obj->name !== 'post' && is_single() ): ?>
 <div class="p-pageHeader p-pageHeader--<?php echo esc_attr($mosi_post_type_obj->name) ?>">
     <div class="p-pageHeader__contents l-container">
         <p class="p-pageHeader__title c-title c-title--lv2" <?php language_attributes(); ?>><?php esc_html_e($mosi_post_type_obj->labels->name); ?></p>
@@ -48,7 +45,14 @@ if( $mosi_posts_page && $mosi_posts_page->post_status === 'publish' ){
 </div>
 <?php elseif (
     $mosi_post_type_obj
-    && ( is_home() || ( is_archive() && $mosi_post_type_obj->name === 'post' ) )
+    && (
+        is_home()
+        || (
+            is_archive()
+            && $mosi_post_type_obj->name === 'post'
+            && $mosi_posts_page_label
+        )
+    )
 ): ?>
 <div class="p-pageHeader p-pageHeader--<?php echo esc_attr($mosi_posts_page_slug); ?>">
     <div class="p-pageHeader__contents l-container">
@@ -58,7 +62,16 @@ if( $mosi_posts_page && $mosi_posts_page->post_status === 'publish' ){
         <?php endif; ?>
     </div>
 </div>
-<?php elseif ( $mosi_post_type_obj && is_archive() ): ?>
+<?php elseif ( $mosi_post_type_obj && is_archive() && $mosi_post_type_obj->name === 'post' && $mosi_posts_page_label ): ?>
+<div class="p-pageHeader p-pageHeader--<?php echo esc_attr($mosi_posts_page_slug); ?>">
+    <div class="p-pageHeader__contents l-container">
+        <p class="p-pageHeader__title c-title c-title--lv2" <?php language_attributes(); ?>><?php echo esc_attr($mosi_posts_page_label); ?></p>
+        <?php if( !preg_match('/^en_/', get_locale() ) ): ?>
+            <p class="p-pageHeader__caption" lang="en-US"><?php echo ucfirst( esc_html($mosi_posts_page_slug) ); ?></p>
+        <?php endif; ?>
+    </div>
+</div>
+<?php elseif ( $mosi_post_type_obj && is_archive() && $mosi_post_type_obj->name !== 'post' ): ?>
 <div class="p-pageHeader p-pageHeader--<?php echo esc_attr($mosi_post_type_obj->name) ?>">
     <div class="p-pageHeader__contents l-container">
         <h1 class="p-pageHeader__title c-title c-title--lv2" <?php language_attributes(); ?>><?php esc_html_e($mosi_post_type_obj->labels->name); ?></h1>
