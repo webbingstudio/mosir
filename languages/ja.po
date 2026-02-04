@@ -1,0 +1,74 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: mosir 1.0.0\n"
+"Report-Msgid-Bugs-To: https://github.com/webbingstudio/mosir\n"
+"POT-Creation-Date: 2026-02-04T01:48:38+00:00\n"
+"PO-Revision-Date: 2026-02-04 11:57+0900\n"
+"Last-Translator: Seiko Kuchida <mail@webbingstudio.com>\n"
+"Language-Team: \n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.8\n"
+"X-Domain: mosir\n"
+
+# Menu: Theme Location name
+# functions.php:131
+msgid "Header: Mega nav."
+msgstr "ヘッダ: メガメニュー付きナビ"
+
+# Menu: Theme Location name
+# functions.php:132
+msgid "Header: Horizontal nav."
+msgstr "ヘッダ: 水平ナビ"
+
+# Menu: Theme Location name
+# functions.php:133
+msgid "Header: Piped nav."
+msgstr "ヘッダ: パイプ区切りナビ"
+
+# Menu: Theme Location name
+# functions.php:134
+msgid "Header: Buttons"
+msgstr "ヘッダ: ボタン群"
+
+# Menu: Theme Location name
+# functions.php:135
+msgid "Footer: Sitemap"
+msgstr "フッタ: サイトマップ"
+
+# Menu: Theme Location name
+# functions.php:136
+msgid "Footer: Horizontal nav."
+msgstr "フッタ: 水平ナビ"
+
+# Menu: Theme Location name
+# functions.php:137
+msgid "Drawer: Vertical nav."
+msgstr "ドロワー: 垂直ナビ"
+
+# Menu: Theme Location name
+# functions.php:138
+msgid "Drawer: Sitemap"
+msgstr "ドロワー: サイトマップ"
+
+# Menu: Theme Location name
+# functions.php:139
+msgid "Sticky nav."
+msgstr "画面下部固定ナビ"
+
+# Custom query in front page - default alt text for heading
+# template-parts/recent.php:55
+msgid "Latest Posts"
+msgstr "最新記事"
+
+# Custom query in front page - default subtitle mainly for decoration
+# template-parts/recent.php:56
+msgid "Blog"
+msgstr ""
+
+# Custom queries on the front page - the initial label text for the link that view all
+# template-parts/recent.php:90
+msgid "View All"
+msgstr "一覧を見る"

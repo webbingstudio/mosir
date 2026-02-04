@@ -1,0 +1,75 @@
+# Copyright (C) 2026 WebbingStudio
+# This file is distributed under the GPL3 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: mosir 1.0.0\n"
+"Report-Msgid-Bugs-To: https://github.com/webbingstudio/mosir\n"
+"Last-Translator: Seiko Kuchida <mail@webbingstudio.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-02-04T01:48:38+00:00\n"
+"PO-Revision-Date: 2026-02-04T11:00:00+09:00\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: mosir\n"
+
+# Menu: Theme Location name
+# functions.php:131
+msgid "Header: Mega nav."
+msgstr ""
+
+# Menu: Theme Location name
+# functions.php:132
+msgid "Header: Horizontal nav."
+msgstr ""
+
+# Menu: Theme Location name
+# functions.php:133
+msgid "Header: Piped nav."
+msgstr ""
+
+# Menu: Theme Location name
+# functions.php:134
+msgid "Header: Buttons"
+msgstr ""
+
+# Menu: Theme Location name
+# functions.php:135
+msgid "Footer: Sitemap"
+msgstr ""
+
+# Menu: Theme Location name
+# functions.php:136
+msgid "Footer: Horizontal nav."
+msgstr ""
+
+# Menu: Theme Location name
+# functions.php:137
+msgid "Drawer: Vertical nav."
+msgstr ""
+
+# Menu: Theme Location name
+# functions.php:138
+msgid "Drawer: Sitemap"
+msgstr ""
+
+# Menu: Theme Location name
+# functions.php:139
+msgid "Sticky nav."
+msgstr ""
+
+# Custom query in front page - default alt text for heading
+# template-parts/recent.php:55
+msgid "Latest Posts"
+msgstr ""
+
+# Custom query in front page - default subtitle mainly for decoration
+# template-parts/recent.php:56
+msgid "Blog"
+msgstr ""
+
+# Custom queries on the front page - the initial label text for the link that view all
+# template-parts/recent.php:90
+msgid "View All"
+msgstr ""

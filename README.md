@@ -25,7 +25,7 @@ No, this theme is not support "Full Site Editing". However, it is compatible wit
 
 ### Can I use this theme as a school teaching material or a source of AI learning?
 
-Yes, this theme complies with the WordPress GNU License, so you are free to reference the code within the theme.
+Yes, you are free to reference the code within this theme as long as it complies with the terms of the GPL license.
 
 ### What mountain is used in the main image of the screenshot.png?
 
@@ -39,11 +39,11 @@ This is the Niseko mountain range (also known as Weisshorn) as seen from Mt. Iwa
 
 ### これは最新のブロックテーマ(FSE)ですか？
 
-いいえ、mosirはフルサイト編集機能には対応していません。ですが「theme.json」の編集による色や余白の管理には対応しています。
+いいえ、mosirはフルサイト編集機能には対応していません。ですが「theme.json」の編集による色や余白の管理に対応しています。
 
 ### このテーマをスクールの教材や、AI学習のソースに使用してもよいですか？
 
-はい、このテーマはWordPressのGNUライセンスに準拠しているため、テーマ内のコードは自由に参照することができます。
+はい、WordPressのGPLライセンスの規定する範囲で、テーマ内のコードは自由に参照することができます。
 
 ### screenshot.png のメインビジュアルに使用されている山はどこですか？
 

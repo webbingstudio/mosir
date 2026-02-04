@@ -31,7 +31,7 @@ This is the Niseko mountain range (also known as Weisshorn) as seen from Mt. Iwa
 * Initial release.
 
 == License ==
-This theme, *mosir*, is licensed under the GNU General Public License v2 or later.
+This theme, *mosir*, is licensed under the GNU General Public License v3 or later.
 You should have received a copy of the GNU General Public License along with this theme.
 If not, see <https://www.gnu.org/licenses/>.
 

@@ -5,10 +5,6 @@
  * @package mosir
  */
 
-if ( ! defined( '_S_VERSION' ) ) {
-	define( '_S_VERSION', '1.0.0' );
-}
-
 // ==============================
 // Theme setup
 // ==============================
@@ -44,7 +40,7 @@ if ( ! function_exists( 'mosi_enqueue_styles' ) ) :
 	/**
 	 * Enqueues theme.css on the front.
 	 *
-	 * @since mosir 1.0
+	 * @since mosir 1.0.0
 	 *
 	 * @return void
 	 */
@@ -64,7 +60,7 @@ if ( ! function_exists( 'mosi_enqueue_scripts' ) ) :
 	/**
 	 * Enqueues theme.css on the front.
 	 *
-	 * @since mosir 1.0
+	 * @since mosir 1.0.0
 	 *
 	 * @return void
 	 */
@@ -85,7 +81,7 @@ if ( ! function_exists( 'mosi_editor_style' ) ) :
 	/**
 	 * Enqueues editor-style.css in the editors.
 	 *
-	 * @since mosir 1.0
+	 * @since mosir 1.0.0
 	 *
 	 * @return void
 	 */
@@ -101,7 +97,7 @@ if ( ! function_exists( 'mosi_enqueue_block_editor_assets' ) ) :
 	/**
 	 * Enqueues editor-script.js in the editors.
 	 *
-	 * @since mosir 1.0
+	 * @since mosir 1.0.0
 	 *
 	 * @return void
 	 */
@@ -126,21 +122,21 @@ if ( ! function_exists( 'mosi_redistar_nav_menu' ) ) :
 	/**
 	 * Define the menus to use within the theme
 	 *
-	 * @since mosir 1.0
+	 * @since mosir 1.0.0
 	 *
 	 * @return string
 	 */
 	function mosi_redistar_nav_menu() {
 		register_nav_menus([
-			'header_nav_01' => 'Header: Mega nav.',
-			'header_nav_02' => 'Header: Horizontal nav.',
-			'header_nav_03' => 'Header: Piped nav.',
-			'header_nav_04' => 'Header: Buttons.',
-			'footer_nav_01' => 'Footer: Sitemap',
-			'footer_nav_02' => 'Footer: Horizontal nav.',
-			'drawer_nav_01' => 'Drawer: Vertical nav.',
-			'drawer_nav_02' => 'Drawer: Sitemap',
-			'sticky_nav' => 'Sticky nav.',
+			'header_nav_01' => __( 'Header: Mega nav.', 'mosir' ),
+			'header_nav_02' => __( 'Header: Horizontal nav.', 'mosir' ),
+			'header_nav_03' => __( 'Header: Piped nav.', 'mosir' ),
+			'header_nav_04' => __( 'Header: Buttons', 'mosir' ),
+			'footer_nav_01' => __( 'Footer: Sitemap', 'mosir' ),
+			'footer_nav_02' => __( 'Footer: Horizontal nav.', 'mosir' ),
+			'drawer_nav_01' => __( 'Drawer: Vertical nav.', 'mosir' ),
+			'drawer_nav_02' => __( 'Drawer: Sitemap', 'mosir' ),
+			'sticky_nav'    => __( 'Sticky nav.', 'mosir' ),
 		]);
 	}
 endif;
@@ -155,7 +151,7 @@ if ( ! function_exists( 'mosi_wp_block_class' ) ) :
 	/**
 	 * Echo WordPress BlockEditor class name
 	 *
-	 * @since mosir 1.0
+	 * @since mosir 1.0.0
 	 *
 	 * @param string $before The string to prepend, such as a space.
 	 * @param string $after The string to append, such as a space.
