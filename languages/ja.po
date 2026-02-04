@@ -70,13 +70,13 @@ msgstr "mosir: 基本設定"
 
 # Customizer: section label
 # functions/customizer.php:55
-msgid "mosir: Main visual settings"
-msgstr "mosir: メインビジュアル設定"
+msgid "mosir: Main visual"
+msgstr "mosir: メインビジュアル"
 
 # Customizer: section label
 # functions/customizer.php:60
-msgid "mosir: Front page settings"
-msgstr "mosir: フロントページ設定"
+msgid "mosir: Front page"
+msgstr "mosir: フロントページ"
 
 # Customizer: Header markup - label
 # functions/customizer.php:72
@@ -140,6 +140,10 @@ msgstr "モバイルのみ"
 
 # Customizer: Drawer displaying - choices
 # functions/customizer.php:114
+# Customizer: 1: Display of header - choices
+# functions/customizer.php:303
+# Customizer: 2: Display of header - choices
+# functions/customizer.php:431
 msgid "None"
 msgstr "表示しない"
 
@@ -165,8 +169,194 @@ msgstr "フッタのコピーライト"
 
 # Customizer: Footer copyright - description
 # functions/customizer.php:142
-msgid "You can hide the ads under the copyright by entering text. You can use simple HTML tags for the string."
+msgid "You can hide the ads under the copyright by entering a text. You can use simple HTML tags for the string."
 msgstr "テキストを入力すると、コピーライト下の広告を非表示にすることができます。テキストには基本的なHTMLタグを使用できます。"
+
+# Customizer: Main visual displaying - label
+# functions/customizer.php:154
+msgid "Main visual displaying"
+msgstr "メインビジュアルの表示"
+
+# Customizer: Main visual displaying - description
+# functions/customizer.php:155
+msgid "The main visual of this theme is very simple. Also check out Cover Block and other great block-adding plugins!"
+msgstr "このテーマのメインビジュアルはとてもシンプルです。カバーブロックや、その他の素晴らしいブロック追加プラグインも、ぜひチェックしてみてください！"
+
+# Customizer: Main visual displaying - choices
+# functions/customizer.php:159
+msgid "Show"
+msgstr "表示する"
+
+# Customizer: Main visual displaying - choices
+# functions/customizer.php:160
+msgid "Hide"
+msgstr "表示しない"
+
+# Customizer: Image　Desktop - label
+# functions/customizer.php:171
+msgid "Image (Desktop, Tablet landscape)"
+msgstr "画像（デスクトップ、タブレット横向き）"
+
+# Customizer: Image　Desktop - description
+# functions/customizer.php:172
+msgid "Recommended size: Width 1920px or more / Height 1080px or more"
+msgstr "推薦サイズ: 幅1920px以上 / 高さ1080px以上"
+
+# Customizer: Image　Phone - label
+# functions/customizer.php:183
+msgid "Image (Phone, Tablet portrait)"
+msgstr "画像（スマートフォン、タブレット縦向き）"
+
+# Customizer: Image　Phone - description
+# functions/customizer.php:184
+msgid "Recommended size: Width 1200px or more / Height 1800px or more"
+msgstr "推薦サイズ: 幅1200px以上 / 高さ1800px以上"
+
+# Customizer: Image filter - label
+# functions/customizer.php:195
+msgid "Image filter"
+msgstr "画像フィルター"
+
+# Customizer: Image filter - choices
+# functions/customizer.php:199
+msgid "No filter"
+msgstr "効果なし"
+
+# Customizer: Image filter - choices
+# functions/customizer.php:200
+msgid "Darken"
+msgstr "暗くする"
+
+# Customizer: Image filter - choices
+# functions/customizer.php:201
+msgid "Lighten"
+msgstr "明るくする"
+
+# Customizer: Image filter - choices
+# functions/customizer.php:202
+msgid "Monochrome"
+msgstr "白黒"
+
+# Customizer: Image filter - choices
+# functions/customizer.php:203
+msgid "Primary color duotone"
+msgstr "主要色のデュオトーン"
+
+# Customizer: Catch phrase - label
+# functions/customizer.php:214
+msgid "Catch phrase"
+msgstr "キャッチフレーズ"
+
+# Customizer: Catch phrase - description
+# functions/customizer.php:215
+# Customizer: Subtext - description
+# functions/customizer.php:228
+msgid "You can use simple HTML tags for the string."
+msgstr "テキストには基本的なHTMLタグを使用できます。"
+
+# Customizer: Subtext - label
+# functions/customizer.php:227
+msgid "Subtext"
+msgstr "補足テキスト"
+
+# Customizer: Posts position - label
+# functions/customizer.php:240
+msgid "Posts position"
+msgstr "投稿リストの位置"
+
+# Customizer: Posts position - description
+# functions/customizer.php:241
+msgid "Choose where on the front page you want to display the two posts."
+msgstr "フロントページのどこに、2つの投稿リストを表示するかを選択します。"
+
+# Customizer: Posts position - choices
+# functions/customizer.php:245
+msgid "Before content: 1, 2"
+msgstr "本文の前: 1, 2"
+
+# Customizer: Posts position - choices
+# functions/customizer.php:246
+msgid "After content: 1, 2"
+msgstr "本文の後: 1, 2"
+
+# Customizer: Posts position - choices
+# functions/customizer.php:247
+msgid "Both: Before 1 - After 2"
+msgstr "両方: 前 1 - 後 2"
+
+# Customizer: Layout of posts - label
+# functions/customizer.php:258
+msgid "Layout of posts"
+msgstr "投稿リストのレイアウト"
+
+# Customizer: Layout of posts - description
+# functions/customizer.php:259
+msgid "Select the layout of posts when displayed on a wide screen. If you select \"Both\" for post position, \"One column\" will be forced."
+msgstr "ワイド画面で投稿リストを表示する際のレイアウトを選択します。投稿リストの位置で「両方」を選択した場合は、「1カラム」が強制されます。"
+
+# Customizer: Layout of posts - choices
+# functions/customizer.php:263
+msgid "One column"
+msgstr "1カラム"
+
+# Customizer: Layout of posts - choices
+# functions/customizer.php:264
+msgid "Two columns"
+msgstr "2カラム"
+
+
+# Customizer: Posts - section 1 - label
+# functions/customizer.php:275
+msgid "Posts - section 1"
+msgstr "投稿リスト - セクション 1"
+
+# Customizer: 1: Post type - label
+# functions/customizer.php:285
+msgid "1: Post type"
+msgstr "1: 投稿タイプ"
+
+# Customizer: 1: Display of header - label
+# functions/customizer.php:298
+msgid "1: Display of header"
+msgstr "1: セクションヘッダの表示"
+
+# Customizer: 1: Display of header - description
+# functions/customizer.php:299
+# Customizer: 2: Display of header - description
+# functions/customizer.php:427
+msgid "If you select \"Two column\" for post layout, \"Left when on desktop\" will be ignore."
+msgstr "投稿リストのレイアウトで「2カラム」を選択していた場合は、「デスクトップのときに左」は無視されます。"
+
+# Customizer: 1: Display of header - choices
+# functions/customizer.php:304
+# Customizer: 2: Display of header - choices
+# functions/customizer.php:432
+msgid "Always top"
+msgstr "常に上"
+
+# Customizer: 1: Display of header - choices
+# functions/customizer.php:305
+# Customizer: 2: Display of header - choices
+# functions/customizer.php:433
+msgid "Left when on desktop"
+msgstr "デスクトップのときに左"
+
+
+# Customizer: Posts - section 2 - label
+# functions/customizer.php:403
+msgid "Posts - section 2"
+msgstr "投稿リスト - セクション 2"
+
+# Customizer: 2: Post type - label
+# functions/customizer.php:413
+msgid "2: Post type"
+msgstr "2: 投稿タイプ"
+
+# Customizer: 2: Display of header - label
+# functions/customizer.php:426
+msgid "2: Display of header"
+msgstr "2: セクションヘッダの表示"
+
 
 # Custom query in front page - default alt text for heading
 # template-parts/recent.php:55

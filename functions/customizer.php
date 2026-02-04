@@ -52,12 +52,12 @@ if ( ! function_exists( 'mosi_customize_register' ) ){
 		));
 
 		$wp_customize->add_section( 'mosi_config_mv', array(
-			'title'    => __( 'mosir: Main visual settings', 'mosir' ),
+			'title'    => __( 'mosir: Main visual', 'mosir' ),
 			'priority' => 192,
 		));
 
 		$wp_customize->add_section( 'mosi_config_home', array(
-			'title'    => __( 'mosir: Front page settings', 'mosir' ),
+			'title'    => __( 'mosir: Front page', 'mosir' ),
 			'priority' => 193,
 		));
 
@@ -151,13 +151,13 @@ if ( ! function_exists( 'mosi_customize_register' ) ){
 		));
 		$wp_customize->add_control( 'mosi_options_control_mv_visible', array(
 				'settings'    => 'mosi_options_mv_visible',
-				'label'       => 'Main visual displaying',
-				'description' => 'The main visual of this theme is very simple. Also check out Cover Block and other great block-adding plugins!',
+				'label'       => __( 'Main visual displaying', 'mosir' ),
+				'description' => __( 'The main visual of this theme is very simple. Also check out Cover Block and other great block-adding plugins!', 'mosir' ),
 				'section'     => 'mosi_config_mv',
 				'type'        => 'select',
 				'choices' => array(
-					'show' => 'Show',
-					'hide' => 'Hide',
+					'show' => __( 'Show', 'mosir' ),
+					'hide' => __( 'Hide', 'mosir' ),
 				)
 		));
 
@@ -168,8 +168,8 @@ if ( ! function_exists( 'mosi_customize_register' ) ){
 		));
 		$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'mosi_options_control_mv_image_pc', array(
 				'settings'    => 'mosi_options_mv_image_pc',
-				'label'       => 'Image (Desktop, Tablet landscape)',
-				'description' => 'Recommended size: Width 1920px or more / Height 1080px or more',
+				'label'       => __( 'Image (Desktop, Tablet landscape)', 'mosir' ),
+				'description' => __( 'Recommended size: Width 1920px or more / Height 1080px or more', 'mosir' ),
 				'section'     => 'mosi_config_mv',
 		)));
 
@@ -180,8 +180,8 @@ if ( ! function_exists( 'mosi_customize_register' ) ){
 		));
 		$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'mosi_options_control_mv_image_sp', array(
 				'settings'    => 'mosi_options_mv_image_sp',
-				'label'       => 'Image (Phone, Tablet portrait)',
-				'description' => 'Recommended size: Width 1200px or more / Height 1800px or more',
+				'label'       => __( 'Image (Phone, Tablet portrait)', 'mosir' ),
+				'description' => __( 'Recommended size: Width 1200px or more / Height 1800px or more', 'mosir' ),
 				'section'     => 'mosi_config_mv',
 		)));
 
@@ -192,15 +192,15 @@ if ( ! function_exists( 'mosi_customize_register' ) ){
 		));
 		$wp_customize->add_control( 'mosi_options_control_mv_filter', array(
 				'settings'    => 'mosi_options_mv_filter',
-				'label'       => 'Image filter',
+				'label'       => __( 'Image filter', 'mosir' ),
 				'section'     => 'mosi_config_mv',
 				'type'        => 'select',
 				'choices' => array(
-					'none'       => 'None',
-					'darken'     => 'Darken',
-					'lighten'    => 'Lighten',
-					'monochrome' => 'Monochrome',
-					'duotone'    => 'Accent Color Duotone',
+					'none'       => __( 'No filter', 'mosir' ),
+					'darken'     => __( 'Darken', 'mosir' ),
+					'lighten'    => __( 'Lighten', 'mosir' ),
+					'monochrome' => __( 'Monochrome', 'mosir' ),
+					'duotone'    => __( 'Primary color duotone', 'mosir' ),
 				)
 		));
 
@@ -211,8 +211,8 @@ if ( ! function_exists( 'mosi_customize_register' ) ){
 		));
 		$wp_customize->add_control( 'mosi_options_control_mv_catch', array(
 				'settings'    => 'mosi_options_mv_catch',
-				'label'       => 'Catch phrase',
-				'description' => 'You can use simple HTML tags for the string.',
+				'label'       => __( 'Catch phrase', 'mosir' ),
+				'description' => __( 'You can use simple HTML tags for the string.', 'mosir' ),
 				'section'     => 'mosi_config_mv',
 				'type'        => 'text',
 		));
@@ -224,8 +224,8 @@ if ( ! function_exists( 'mosi_customize_register' ) ){
 		));
 		$wp_customize->add_control( 'mosi_options_control_mv_text', array(
 				'settings'    => 'mosi_options_mv_text',
-				'label'       => 'Sub text',
-				'description' => 'You can use simple HTML tags for the string.',
+				'label'       => __( 'Subtext', 'mosir' ),
+				'description' => __( 'You can use simple HTML tags for the string.', 'mosir' ),
 				'section'     => 'mosi_config_mv',
 				'type'        => 'text',
 		));
@@ -237,14 +237,14 @@ if ( ! function_exists( 'mosi_customize_register' ) ){
 		));
 		$wp_customize->add_control( 'mosi_options_control_home_posts_position', array(
 				'settings'    => 'mosi_options_home_posts_position',
-				'label'       => 'Posts position',
-				'description' => 'Choose where on the front page you want to display the two query posts.',
+				'label'       => __( 'Posts position', 'mosir' ),
+				'description' => __( 'Choose where on the front page you want to display the two posts.', 'mosir' ),
 				'section'     => 'mosi_config_home',
 				'type'        => 'select',
 				'choices' => array(
-					'before' => 'Before content: 1, 2',
-					'after'  => 'After content: 1, 2',
-					'both'   => 'Both: Before 1 - After 2',
+					'before' => __( 'Before content: 1, 2', 'mosir' ),
+					'after'  => __( 'After content: 1, 2', 'mosir' ),
+					'both'   => __( 'Both: Before 1 - After 2', 'mosir' ),
 				)
 		));
 
@@ -255,13 +255,13 @@ if ( ! function_exists( 'mosi_customize_register' ) ){
 		));
 		$wp_customize->add_control( 'mosi_options_control_home_posts_layout', array(
 			'settings'    => 'mosi_options_home_posts_layout',
-			'label'       => 'Layout of posts',
-			'description' => 'Select the layout of posts when displayed on a wide screen. If you select "Both" for post position, "One column" will be forced.',
+			'label'       => __( 'Layout of posts', 'mosir' ),
+			'description' => __( 'Select the layout of posts when displayed on a wide screen. If you select "Both" for post position, "One column" will be forced.', 'mosir' ),
 			'section'     => 'mosi_config_home',
 			'type'        => 'select',
 			'choices' => array(
-				'one' => 'One column',
-				'two' => 'Two columns',
+				'one' => __( 'One column', 'mosir' ),
+				'two' => __( 'Two columns', 'mosir' ),
 			)
 		));
 
@@ -272,7 +272,7 @@ if ( ! function_exists( 'mosi_customize_register' ) ){
 		));
 		$wp_customize->add_control( new Mosi_Customize_Control( $wp_customize, 'mosi_options_home_posts_divider_01', array(
 			'section' => 'mosi_config_home',
-			'label' => 'Posts - section 1'
+			'label' => __( 'Posts - section 1', 'mosir' ),
 		)));
 
 
@@ -282,7 +282,7 @@ if ( ! function_exists( 'mosi_customize_register' ) ){
 		));
 		$wp_customize->add_control( 'mosi_options_control_home_posts_post_type_01', array(
 			'settings' => 'mosi_options_home_posts_post_type_01',
-			'label'    => '1: Post type',
+			'label'    => __( '1: Post type', 'mosir' ),
 			'section'  => 'mosi_config_home',
 			'type'     => 'select',
 			'choices'  => $active_post_types_choices
@@ -294,15 +294,15 @@ if ( ! function_exists( 'mosi_customize_register' ) ){
 			'sanitize_callback' => 'sanitize_text_field',
 		));
 		$wp_customize->add_control( 'mosi_options_control_home_posts_header_01', array(
-			'settings' => 'mosi_options_home_posts_header_01',
-			'label'    => '1: Display of header',
-			'description' => 'If you select "Two column" for post layout, "Left when on desktop" will be ignore.',
-			'section'  => 'mosi_config_home',
+			'settings'    => 'mosi_options_home_posts_header_01',
+			'label'       => __( '1: Display of header', 'mosir' ),
+			'description' => __( 'If you select "Two column" for post layout, "Left when on desktop" will be ignore.', 'mosir' ),
+			'section'     => 'mosi_config_home',
 			'type'        => 'select',
 			'choices' => array(
-				'none' => 'None',
-				'top' => 'Always top',
-				'left' => 'Left when on desktop',
+				'none' => __( 'None', 'mosir' ),
+				'top'  => __( 'Always top', 'mosir' ),
+				'left' => __( 'Left when on desktop', 'mosir' ),
 			)
 		));
 
@@ -400,7 +400,7 @@ if ( ! function_exists( 'mosi_customize_register' ) ){
 		));
 		$wp_customize->add_control( new Mosi_Customize_Control( $wp_customize, 'mosi_options_home_posts_divider_02', array(
 			'section' => 'mosi_config_home',
-			'label' => 'Posts - section 2'
+			'label' => __( 'Posts - section 2', 'mosir' )
 		)));
 
 
@@ -410,7 +410,7 @@ if ( ! function_exists( 'mosi_customize_register' ) ){
 		));
 		$wp_customize->add_control( 'mosi_options_control_home_posts_post_type_02', array(
 			'settings' => 'mosi_options_home_posts_post_type_02',
-			'label'    => '2: Post type',
+			'label'    => __( '2: Post type', 'mosir' ),
 			'section'  => 'mosi_config_home',
 			'type'     => 'select',
 			'choices'  => $active_post_types_choices
@@ -422,15 +422,15 @@ if ( ! function_exists( 'mosi_customize_register' ) ){
 			'sanitize_callback' => 'sanitize_text_field',
 		));
 		$wp_customize->add_control( 'mosi_options_control_home_posts_header_02', array(
-			'settings' => 'mosi_options_home_posts_header_02',
-			'label'    => '2: Display of header',
-			'description' => 'If you select "Two column" for post layout, "Left when on desktop" will be ignore.',
-			'section'  => 'mosi_config_home',
+			'settings'    => 'mosi_options_home_posts_header_02',
+			'label'       => __( '2: Display of header', 'mosir' ),
+			'description' => __( 'If you select "Two column" for post layout, "Left when on desktop" will be ignore.', 'mosir' ),
+			'section'     => 'mosi_config_home',
 			'type'        => 'select',
 			'choices' => array(
-				'none' => 'None',
-				'top' => 'Always top',
-				'left' => 'Left when on desktop',
+				'none' => __( 'None', 'mosir' ),
+				'top'  => __( 'Always top', 'mosir' ),
+				'left' => __( 'Left when on desktop', 'mosir' ),
 			)
 		));
 

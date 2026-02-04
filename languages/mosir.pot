@@ -72,12 +72,12 @@ msgstr ""
 
 # Customizer: section label
 # functions/customizer.php:55
-msgid "mosir: Main visual settings"
+msgid "mosir: Main visual"
 msgstr ""
 
 # Customizer: section label
 # functions/customizer.php:60
-msgid "mosir: Front page settings"
+msgid "mosir: Front page"
 msgstr ""
 
 # Customizer: Header markup - label
@@ -142,6 +142,10 @@ msgstr ""
 
 # Customizer: Drawer displaying - choices
 # functions/customizer.php:114
+# Customizer: 1: Display of header - choices
+# functions/customizer.php:303
+# Customizer: 2: Display of header - choices
+# functions/customizer.php:431
 msgid "None"
 msgstr ""
 
@@ -167,7 +171,242 @@ msgstr ""
 
 # Customizer: Footer copyright - description
 # functions/customizer.php:142
-msgid "You can hide the ads under the copyright by entering a string. You can use simple HTML tags for the string."
+msgid "You can hide the ads under the copyright by entering a text. You can use simple HTML tags for the string."
+msgstr ""
+
+# Customizer: Main visual displaying - label
+# functions/customizer.php:154
+msgid "Main visual displaying"
+msgstr ""
+
+# Customizer: Main visual displaying - description
+# functions/customizer.php:155
+msgid "The main visual of this theme is very simple. Also check out Cover Block and other great block-adding plugins!"
+msgstr ""
+
+# Customizer: Main visual displaying - choices
+# functions/customizer.php:159
+msgid "Show"
+msgstr ""
+
+# Customizer: Main visual displaying - choices
+# functions/customizer.php:160
+msgid "Hide"
+msgstr ""
+
+# Customizer: Image　Desktop - label
+# functions/customizer.php:171
+msgid "Image (Desktop, Tablet landscape)"
+msgstr ""
+
+# Customizer: Image　Desktop - description
+# functions/customizer.php:172
+msgid "Recommended size: Width 1920px or more / Height 1080px or more"
+msgstr ""
+
+# Customizer: Image　Phone - label
+# functions/customizer.php:183
+msgid "Image (Phone, Tablet portrait)"
+msgstr ""
+
+# Customizer: Image　Phone - description
+# functions/customizer.php:184
+msgid "Recommended size: Width 1200px or more / Height 1800px or more"
+msgstr ""
+
+# Customizer: Image filter - label
+# functions/customizer.php:195
+msgid "Image filter"
+msgstr ""
+
+# Customizer: Image filter - choices
+# functions/customizer.php:199
+msgid "No filter"
+msgstr ""
+
+# Customizer: Image filter - choices
+# functions/customizer.php:200
+msgid "Darken"
+msgstr ""
+
+# Customizer: Image filter - choices
+# functions/customizer.php:201
+msgid "Lighten"
+msgstr ""
+
+# Customizer: Image filter - choices
+# functions/customizer.php:202
+msgid "Monochrome"
+msgstr ""
+
+# Customizer: Image filter - choices
+# functions/customizer.php:203
+msgid "Primary color duotone"
+msgstr ""
+
+# Customizer: Catch phrase - label
+# functions/customizer.php:214
+msgid "Catch phrase"
+msgstr ""
+
+# Customizer: Catch phrase - description
+# functions/customizer.php:215
+# Customizer: Sub text - description
+# functions/customizer.php:228
+msgid "You can use simple HTML tags for the string."
+msgstr ""
+
+# Customizer: Sub text - label
+# functions/customizer.php:227
+msgid "Sub text"
+msgstr ""
+
+# Customizer: Posts position - label
+# functions/customizer.php:240
+msgid "Posts position"
+msgstr ""
+
+# Customizer: Posts position - description
+# functions/customizer.php:241
+msgid "Choose where on the front page you want to display the two posts."
+msgstr ""
+
+# Customizer: Posts position - choices
+# functions/customizer.php:245
+msgid "Before content: 1, 2"
+msgstr ""
+
+# Customizer: Posts position - choices
+# functions/customizer.php:246
+msgid "After content: 1, 2"
+msgstr ""
+
+# Customizer: Posts position - choices
+# functions/customizer.php:247
+msgid "Both: Before 1 - After 2"
+msgstr ""
+
+# Customizer: Layout of posts - label
+# functions/customizer.php:258
+msgid "Layout of posts"
+msgstr ""
+
+# Customizer: Layout of posts - description
+# functions/customizer.php:259
+msgid "Select the layout of posts when displayed on a wide screen. If you select \"Both\" for post position, \"One column\" will be forced."
+msgstr ""
+
+# Customizer: Layout of posts - choices
+# functions/customizer.php:263
+msgid "One column"
+msgstr ""
+
+# Customizer: Layout of posts - choices
+# functions/customizer.php:264
+msgid "Two columns"
+msgstr ""
+
+
+# Customizer: Posts - section 1 - label
+# functions/customizer.php:275
+msgid "Posts - section 1"
+msgstr ""
+
+# Customizer: 1: Post type - label
+# functions/customizer.php:285
+msgid "1: Post type"
+msgstr ""
+
+# Customizer: 1: Display of header - label
+# functions/customizer.php:298
+msgid "1: Display of header"
+msgstr ""
+
+# Customizer: 1: Display of header - description
+# functions/customizer.php:299
+# Customizer: 2: Display of header - description
+# functions/customizer.php:427
+msgid "If you select \"Two column\" for post layout, \"Left when on desktop\" will be ignore."
+msgstr ""
+
+# Customizer: 1: Display of header - choices
+# functions/customizer.php:304
+# Customizer: 2: Display of header - choices
+# functions/customizer.php:432
+msgid "Always top"
+msgstr ""
+
+# Customizer: 1: Display of header - choices
+# functions/customizer.php:305
+# Customizer: 2: Display of header - choices
+# functions/customizer.php:433
+msgid "Left when on desktop"
+msgstr ""
+
+
+
+
+
+# Customizer: Posts - section 2 - label
+# functions/customizer.php:403
+msgid "Posts - section 2"
+msgstr ""
+
+# Customizer: 2: Post type - label
+# functions/customizer.php:413
+msgid "2: Post type"
+msgstr ""
+
+# Customizer: 2: Display of header - label
+# functions/customizer.php:426
+msgid "2: Display of header"
+msgstr ""
+
+
+
+# Customizer: 
+# functions/customizer.php:
+msgid ""
+msgstr ""
+
+# Customizer: 
+# functions/customizer.php:
+msgid ""
+msgstr ""
+
+# Customizer: 
+# functions/customizer.php:
+msgid ""
+msgstr ""
+
+# Customizer: 
+# functions/customizer.php:
+msgid ""
+msgstr ""
+
+# Customizer: 
+# functions/customizer.php:
+msgid ""
+msgstr ""
+
+# Customizer: 
+# functions/customizer.php:
+msgid ""
+msgstr ""
+
+# Customizer: 
+# functions/customizer.php:
+msgid ""
+msgstr ""
+
+# Customizer: 
+# functions/customizer.php:
+msgid ""
+msgstr ""
+
+# Customizer: 
+# functions/customizer.php:
+msgid ""
 msgstr ""
 
 # Customizer: 
