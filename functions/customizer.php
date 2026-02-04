@@ -36,7 +36,7 @@ if ( ! function_exists( 'mosi_customize_register' ) ){
 			'and'
 		);
 		$active_post_types_choices = array(
-			'none' => 'None'
+			'none' => __( 'Not use', 'mosir' )
 		);
 
 		foreach( $active_post_types as $post_type ) {
@@ -47,17 +47,17 @@ if ( ! function_exists( 'mosi_customize_register' ) ){
 
 
 		$wp_customize->add_section( 'mosi_config_basic', array(
-			'title'    => 'mosir: Basic settings',
+			'title'    => __( 'mosir: Basic settings', 'mosir' ),
 			'priority' => 191,
 		));
 
 		$wp_customize->add_section( 'mosi_config_mv', array(
-			'title'    => 'mosir: Main visual settings',
+			'title'    => __( 'mosir: Main visual settings', 'mosir' ),
 			'priority' => 192,
 		));
 
 		$wp_customize->add_section( 'mosi_config_home', array(
-			'title'    => 'mosir: Front page settings',
+			'title'    => __( 'mosir: Front page settings', 'mosir' ),
 			'priority' => 193,
 		));
 
@@ -69,13 +69,13 @@ if ( ! function_exists( 'mosi_customize_register' ) ){
 
         $wp_customize->add_control( 'mosi_options_control_header_markup', array(
 			'settings'    => 'mosi_options_header_markup',
-			'label'       => 'Header markup',
-			'description' => 'HTML tag for the header title (logo) when the front page is displayed',
+			'label'       => __( 'Header markup', 'mosir' ),
+			'description' => __( 'HTML tag for the header title (logo) when the front page is displayed', 'mosir' ),
 			'section'     => 'mosi_config_basic',
 			'type'        => 'select',
 			'choices'     => array(
-				'h1' => 'h1 element',
-				'p'  => 'p element',
+				'h1' => __( 'h1 element', 'mosir' ),
+				'p'  => __( 'p element', 'mosir' ),
 			)
 		));
 
@@ -87,14 +87,14 @@ if ( ! function_exists( 'mosi_customize_register' ) ){
 
         $wp_customize->add_control( 'mosi_options_control_header_layout', array(
 				'settings' => 'mosi_options_header_layout',
-				'label'    => 'Header layout',
+				'label'    => __( 'Header layout', 'mosir' ),
 				'section'  => 'mosi_config_basic',
 				'type'     => 'select',
 				'choices' => array(
-					'simple' => 'simple (logo only)',
-					'small'  => 'small (navbar)',
-					'medium' => 'medium (one rows)',
-					'large'  => 'large (two rows)',
+					'simple' => __( 'simple (logo only)', 'mosir' ),
+					'small'  => __( 'small (navbar)', 'mosir' ),
+					'medium' => __( 'medium (one rows)', 'mosir' ),
+					'large'  => __( 'large (two rows)', 'mosir' ),
 				)
 		));
 
@@ -105,13 +105,13 @@ if ( ! function_exists( 'mosi_customize_register' ) ){
 		));
 		$wp_customize->add_control( 'mosi_options_control_drawer', array(
 				'settings'  => 'mosi_options_drawer_displaying',
-				'label'     => 'Drawer displaying',
+				'label'     => __( 'Drawer displaying', 'mosir' ),
 				'section'   => 'mosi_config_basic',
 				'type'      => 'select',
 				'choices' => array(
-					'always' => 'Always show',
-					'mobile' => 'Mobile only',
-					'none'   => 'None',
+					'always' => __( 'Always show', 'mosir' ),
+					'mobile' => __( 'Mobile only', 'mosir' ),
+					'none'   => __( 'None', 'mosir' ),
 				)
 		));
 
@@ -122,12 +122,12 @@ if ( ! function_exists( 'mosi_customize_register' ) ){
 		));
 		$wp_customize->add_control( 'mosi_options_control_drawer_size', array(
 				'settings' => 'mosi_options_drawer_size',
-				'label'    => 'Drawer displaying',
+				'label'    => __( 'Drawer size', 'mosir' ),
 				'section'  => 'mosi_config_basic',
 				'type'     => 'select',
 				'choices' => array(
-					'slim' => 'Slim',
-					'wide' => 'Wide',
+					'slim' => __( 'Slim', 'mosir' ),
+					'wide' => __( 'Wide', 'mosir' ),
 				)
 		));
 
@@ -138,8 +138,8 @@ if ( ! function_exists( 'mosi_customize_register' ) ){
 		));
 		$wp_customize->add_control( 'mosi_options_control_copyright', array(
 				'settings'    => 'mosi_options_copyright',
-				'label'       => 'Footer copyright',
-				'description' => 'You can hide the ads under the copyright by entering a string. You can use simple HTML tags for the string.',
+				'label'       => __( 'Footer copyright', 'mosir' ),
+				'description' => __( 'You can hide the ads under the copyright by entering a text. You can use simple HTML tags for the string.', 'mosir' ),
 				'section'     => 'mosi_config_basic',
 				'type'        => 'text',
 		));

@@ -59,6 +59,144 @@ msgstr ""
 msgid "Sticky nav."
 msgstr ""
 
+
+# Customizer: "Not use" in the post type selection
+# functions/customizer.php:39
+msgid "Not use"
+msgstr ""
+
+# Customizer: section label
+# functions/customizer.php:50
+msgid "mosir: Basic settings"
+msgstr ""
+
+# Customizer: section label
+# functions/customizer.php:55
+msgid "mosir: Main visual settings"
+msgstr ""
+
+# Customizer: section label
+# functions/customizer.php:60
+msgid "mosir: Front page settings"
+msgstr ""
+
+# Customizer: Header markup - label
+# functions/customizer.php:72
+msgid "Header markup"
+msgstr ""
+
+# Customizer: Header markup - description
+# functions/customizer.php:73
+msgid "HTML tag for the header title (logo) when the front page is displayed"
+msgstr ""
+
+# Customizer: Header markup - choices
+# functions/customizer.php:77
+msgid "h1 element"
+msgstr ""
+
+# Customizer: Header markup - choices
+# functions/customizer.php:78
+msgid "p element"
+msgstr ""
+
+# Customizer: Header layout - label
+# functions/customizer.php:90
+msgid "Header layout"
+msgstr ""
+
+# Customizer: Header layout - choices
+# functions/customizer.php:94
+msgid "simple (logo only)"
+msgstr ""
+
+# Customizer: Header layout - choices
+# functions/customizer.php:95
+msgid "small (navbar)"
+msgstr ""
+
+# Customizer: Header layout - choices
+# functions/customizer.php:96
+msgid "medium (one rows)"
+msgstr ""
+
+# Customizer: Header layout - choices
+# functions/customizer.php:97
+msgid "large (two rows)"
+msgstr ""
+
+# Customizer: Drawer displaying - label
+# functions/customizer.php:108
+msgid "Drawer displaying"
+msgstr ""
+
+# Customizer: Drawer displaying - choices
+# functions/customizer.php:112
+msgid "Always show"
+msgstr ""
+
+# Customizer: Drawer displaying - choices
+# functions/customizer.php:113
+msgid "Mobile only"
+msgstr ""
+
+# Customizer: Drawer displaying - choices
+# functions/customizer.php:114
+msgid "None"
+msgstr ""
+
+# Customizer: Drawer size - label
+# functions/customizer.php:125
+msgid "Drawer size"
+msgstr ""
+
+# Customizer: Drawer size - choices
+# functions/customizer.php:129
+msgid "Slim"
+msgstr ""
+
+# Customizer: Drawer size - choices
+# functions/customizer.php:130
+msgid "Wide"
+msgstr ""
+
+# Customizer: Footer copyright - label
+# functions/customizer.php:141
+msgid "Footer copyright"
+msgstr ""
+
+# Customizer: Footer copyright - description
+# functions/customizer.php:142
+msgid "You can hide the ads under the copyright by entering a string. You can use simple HTML tags for the string."
+msgstr ""
+
+# Customizer: 
+# functions/customizer.php:
+msgid ""
+msgstr ""
+
+# Customizer: 
+# functions/customizer.php:
+msgid ""
+msgstr ""
+
+# Customizer: 
+# functions/customizer.php:
+msgid ""
+msgstr ""
+
+# Customizer: 
+# functions/customizer.php:
+msgid ""
+msgstr ""
+
+# Customizer: 
+# functions/customizer.php:
+msgid ""
+msgstr ""
+
+
+
 # Custom query in front page - default alt text for heading
 # template-parts/recent.php:55
 msgid "Latest Posts"

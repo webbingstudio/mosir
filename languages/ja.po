@@ -3,15 +3,15 @@ msgstr ""
 "Project-Id-Version: mosir 1.0.0\n"
 "Report-Msgid-Bugs-To: https://github.com/webbingstudio/mosir\n"
 "POT-Creation-Date: 2026-02-04T01:48:38+00:00\n"
-"PO-Revision-Date: 2026-02-04 11:57+0900\n"
+"PO-Revision-Date: 2026-02-04 13:34+0900\n"
 "Last-Translator: Seiko Kuchida <mail@webbingstudio.com>\n"
 "Language-Team: \n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.8\n"
 "X-Domain: mosir\n"
+"X-Generator: Poedit 3.8\n"
 
 # Menu: Theme Location name
 # functions.php:131
@@ -58,6 +58,116 @@ msgstr "ドロワー: サイトマップ"
 msgid "Sticky nav."
 msgstr "画面下部固定ナビ"
 
+# Customizer: "Not use" in the post type selection
+# functions/customizer.php:39
+msgid "Not use"
+msgstr "使用しない"
+
+# Customizer: section label
+# functions/customizer.php:50
+msgid "mosir: Basic settings"
+msgstr "mosir: 基本設定"
+
+# Customizer: section label
+# functions/customizer.php:55
+msgid "mosir: Main visual settings"
+msgstr "mosir: メインビジュアル設定"
+
+# Customizer: section label
+# functions/customizer.php:60
+msgid "mosir: Front page settings"
+msgstr "mosir: フロントページ設定"
+
+# Customizer: Header markup - label
+# functions/customizer.php:72
+msgid "Header markup"
+msgstr "ヘッダのマークアップ"
+
+# Customizer: Header markup - description
+# functions/customizer.php:73
+msgid "HTML tag for the header title (logo) when the front page is displayed"
+msgstr "フロントページが有効になっているときの、ヘッダタイトル（ロゴ）のHTMLタグ"
+
+# Customizer: Header markup - choices
+# functions/customizer.php:77
+msgid "h1 element"
+msgstr "h1 要素"
+
+# Customizer: Header markup - choices
+# functions/customizer.php:78
+msgid "p element"
+msgstr "p 要素"
+
+# Customizer: Header layout - label
+# functions/customizer.php:90
+msgid "Header layout"
+msgstr "ヘッダのレイアウト"
+
+# Customizer: Header layout - choices
+# functions/customizer.php:94
+msgid "simple (logo only)"
+msgstr "シンプル（ロゴのみ）"
+
+# Customizer: Header layout - choices
+# functions/customizer.php:95
+msgid "small (navbar)"
+msgstr "小（ナビバー）"
+
+# Customizer: Header layout - choices
+# functions/customizer.php:96
+msgid "medium (one rows)"
+msgstr "中（1段）"
+
+# Customizer: Header layout - choices
+# functions/customizer.php:97
+msgid "large (two rows)"
+msgstr "大（2段）"
+
+# Customizer: Drawer displaying - label
+# functions/customizer.php:108
+msgid "Drawer displaying"
+msgstr "ドロワーの表示"
+
+# Customizer: Drawer displaying - choices
+# functions/customizer.php:112
+msgid "Always show"
+msgstr "常に表示"
+
+# Customizer: Drawer displaying - choices
+# functions/customizer.php:113
+msgid "Mobile only"
+msgstr "モバイルのみ"
+
+# Customizer: Drawer displaying - choices
+# functions/customizer.php:114
+msgid "None"
+msgstr "表示しない"
+
+# Customizer: Drawer size - label
+# functions/customizer.php:125
+msgid "Drawer size"
+msgstr "ドロワーの大きさ"
+
+# Customizer: Drawer size - choices
+# functions/customizer.php:129
+msgid "Slim"
+msgstr "スリム"
+
+# Customizer: Drawer size - choices
+# functions/customizer.php:130
+msgid "Wide"
+msgstr "ワイド"
+
+# Customizer: Footer copyright - label
+# functions/customizer.php:141
+msgid "Footer copyright"
+msgstr "フッタのコピーライト"
+
+# Customizer: Footer copyright - description
+# functions/customizer.php:142
+msgid "You can hide the ads under the copyright by entering text. You can use simple HTML tags for the string."
+msgstr "テキストを入力すると、コピーライト下の広告を非表示にすることができます。テキストには基本的なHTMLタグを使用できます。"
+
 # Custom query in front page - default alt text for heading
 # template-parts/recent.php:55
 msgid "Latest Posts"
@@ -66,7 +176,7 @@ msgstr "最新記事"
 # Custom query in front page - default subtitle mainly for decoration
 # template-parts/recent.php:56
 msgid "Blog"
-msgstr ""
+msgstr "Blog"
 
 # Custom queries on the front page - the initial label text for the link that view all
 # template-parts/recent.php:90
