@@ -1284,11 +1284,7 @@ body:has(.l-header--small) .p-drawer__close__button {
 }
 
 .p-drawer__contents__inner > * + * {
-  margin-top: var(--spacing-md);
-}
-
-.p-drawer__footer.p-buttons {
-  margin-top: var(--spacing-xl);
+  margin-top: var(--spacing-lg);
 }
 
 .p-drawer.p-drawer--size-slim .p-drawer__footer.p-buttons {
@@ -2815,6 +2811,19 @@ body:has(.l-header--large) .l-main .p-sectionArea:first-child {
   flex-basis: 100%;
 }
 
+.p-widgetArea.p-widgetArea--main {
+  padding-block: var(--spacing-xl);
+}
+
+.p-widgetArea.p-widgetArea--main.p-widgetArea--main-post {
+  padding-top: 0;
+}
+
+.p-widgetArea.p-widgetArea--drawer .p-widgetArea__inner {
+  row-gap: var(--spacing-md);
+  padding-inline: 0;
+}
+
 @container widgetarea ( width >= 46rem ) {
   .p-widgetArea.p-widgetArea--sidebar .p-widgetArea__inner > * {
     flex-basis: calc(50% - var(--spacing-md) / 2);
@@ -3877,6 +3886,7 @@ body:has(.l-header--large) .l-main .p-sectionArea:first-child {
   z-index: 100000;
 }
 
+.widgettitle,
 .widget > .wp-block-group > p:first-child,
 .widget > .wp-block-group > h2:first-child,
 .widget > .wp-block-group > h3:first-child,
@@ -4183,6 +4193,58 @@ body:has(.l-header--large) .l-main .p-sectionArea:first-child {
     text-decoration: none;
   }
 }
+:root :where(.wp-block-social-links) {
+  color: var(--ui-default-color);
+  margin: 0;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+:root :where(.wp-block-social-links) .wp-block-social-link-anchor {
+  color: var(--ui-default-color);
+  text-decoration: none;
+}
+
+:root :where(.wp-block-social-links) svg {
+  width: auto;
+  height: var(--font-size-3xl);
+  vertical-align: bottom;
+  fill: currentColor;
+}
+
+:root :where(.wp-block-tag-cloud) {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: baseline;
+  gap: 0.5em 1em;
+}
+
+:root :where(.wp-block-tag-cloud.is-style-outline) a {
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+  gap: var(--spacing-xs);
+  padding: 0.25em;
+  line-height: var(--lineHeight-none);
+  border: 0.0625rem solid var(--ui-accent-color);
+  border-radius: var(--border-radius-sm);
+  color: var(--ui-default-color);
+  text-decoration: none;
+}
+
+:root :where(.wp-block-tag-cloud.is-style-outline) a:hover,
+:root :where(.wp-block-tag-cloud.is-style-outline) a:focus {
+  color: var(--ui-inverse-color);
+  background-color: var(--ui-accent-color);
+  border-color: var(--ui-accent-color);
+  text-decoration: none;
+}
+
 .wp-paginate {
   position: relative;
   display: flex;

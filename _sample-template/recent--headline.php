@@ -31,7 +31,7 @@ $mosi_query = new WP_Query( $mosi_query_args );
         </div>
     </div>
     <div class="p-section__footer">
-        <p class="p-section__link"><a href="/sample/" aria-label="「サンプル」の一覧ページへ">一覧ページへ</a></p>
+        <p class="p-section__link"><a href="/sample/"><?php echo esc_html( __( 'View All', 'mosir' ) ); ?></a></p>
     </div>
 </div>
 <?php endif; wp_reset_query(); unset( $mosi_query, $mosi_query_args ); ?>

@@ -1,6 +1,7 @@
 @use "../global" as g;
 @use "sass:math";
 
+.widgettitle,
 .widget > .wp-block-group > p:first-child,
 .widget > .wp-block-group > h2:first-child,
 .widget > .wp-block-group > h3:first-child,

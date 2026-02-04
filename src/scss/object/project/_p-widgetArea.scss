@@ -26,6 +26,22 @@
     flex-basis: 100%;
 }
 
+.p-widgetArea.p-widgetArea--main {
+    padding-block: var(--spacing-xl);
+}
+
+.p-widgetArea.p-widgetArea--main.p-widgetArea--main-post {
+    padding-top: 0;
+}
+
+// .p-widgetArea.p-widgetArea--drawer {
+// }
+
+.p-widgetArea.p-widgetArea--drawer .p-widgetArea__inner {
+    row-gap: var(--spacing-md);
+    padding-inline: 0;
+}
+
 @container widgetarea ( width >= 46rem ) {
     .p-widgetArea.p-widgetArea--sidebar .p-widgetArea__inner > * {
         flex-basis: calc( 50% - ( var(--spacing-md) / 2 ) );

@@ -107,12 +107,11 @@ body:has(.l-header--small) .p-drawer__close__button {
 }
 
 .p-drawer__contents__inner > * + * {
-  margin-top: var(--spacing-md);
+  margin-top: var(--spacing-lg);
 }
 
-.p-drawer__footer.p-buttons {
-  margin-top: var(--spacing-xl);
-}
+// .p-drawer__footer.p-buttons {
+// }
 
 .p-drawer.p-drawer--size-slim .p-drawer__footer.p-buttons {
   width: fit-content;

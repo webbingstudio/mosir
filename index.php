@@ -88,7 +88,7 @@ get_header();
 
     <?php if ( $mosi_post_type === 'post' ) : ?>
         <?php if ( is_active_sidebar( 'widget-main-post' ) ) : ?>
-            <div class="u-p--b-xl p-widgetArea p-widgetArea--main p-widgetArea--main-post">
+            <div class="p-widgetArea p-widgetArea--main p-widgetArea--main-post">
                 <div class="p-widgetArea__inner">
                     <?php dynamic_sidebar( 'widget-main-post' ); ?>
                 </div>

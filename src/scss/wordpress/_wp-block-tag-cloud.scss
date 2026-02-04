@@ -1,0 +1,26 @@
+@use "../global" as g;
+@use "sass:math";
+
+:root :where(.wp-block-tag-cloud) {
+    @include g.flex( n, wrap, flex-start, baseline );
+    gap: 0.5em 1em;
+}
+
+:root :where(.wp-block-tag-cloud.is-style-outline) a {
+    @include g.iFlex( n, n, center, center );
+    gap: var(--spacing-xs);
+    padding: 0.25em;
+    line-height: var(--lineHeight-none);
+    border: 0.0625rem solid var(--ui-accent-color);
+    border-radius: var(--border-radius-sm);
+    color: var(--ui-default-color);
+    text-decoration: none;
+}
+
+:root :where(.wp-block-tag-cloud.is-style-outline) a:hover,
+:root :where(.wp-block-tag-cloud.is-style-outline) a:focus {
+    color: var(--ui-inverse-color);
+    background-color: var(--ui-accent-color);
+    border-color: var(--ui-accent-color);
+    text-decoration: none;
+}

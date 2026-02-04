@@ -1,0 +1,21 @@
+@use "../global" as g;
+@use "sass:math";
+
+:root :where(.wp-block-social-links) {
+    color: var(--ui-default-color);
+    margin: 0;
+    padding-left: 0;
+    list-style-type: none;
+}
+
+:root :where(.wp-block-social-links) .wp-block-social-link-anchor {
+    color: var(--ui-default-color);
+    text-decoration: none;
+}
+
+:root :where(.wp-block-social-links) svg {
+    width: auto;
+    height: var(--font-size-3xl);
+    vertical-align: bottom;
+    fill: currentColor;
+}
