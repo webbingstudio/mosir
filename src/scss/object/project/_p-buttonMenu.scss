@@ -15,12 +15,13 @@
 .p-buttonMenu a {
   @include g.flex( n, n, center, center );
   min-width: 8em;
-  min-height: var(--nav-height-sm);
+  min-height: var(--nav-height-md);
+  padding-inline: var(--spacing-sm);
   background-color: var(--ui-accent-color);
   border: 0.125rem solid var(--ui-accent-color);
   border-radius: 99em;
   color: var(--ui-inverse-color);
-  font-size: var(--font-size-sm);
+  font-size: var(--font-size-md);
   font-weight: var(--fontWeight-bold);
   line-height: var(--lineHeight-none);
   transition: var(--transition-fast);
