@@ -13,7 +13,7 @@ $mosi_options_drawer_size = get_theme_mod( 'mosi_options_drawer_size', 'slim' );
 <div aria-label="Drawer menu" id="drawer" class="p-drawer p-drawer--<?php echo esc_attr($mosi_options_drawer_displaying); ?> p-drawer--size-<?php echo esc_attr($mosi_options_drawer_size); ?>" aria-hidden="true">
 	<div class="p-drawer__close">
 		<div class="p-drawer__close__contents l-container">
-			<button aria-label="Open/close this menu" id="mosi-drawer-close-top" class="js-mosi-drawer p-drawer__close__button c-toggleButton<?php echo $mosi_options_header_layout !== 'small' ? ' c-toggleButton--lg' : ''; ?>" data-mosi-drawer-action="toggle" data-mosi-drawer-duration="500" aria-controls="drawer" aria-expanded="false">
+			<button aria-label="<?php echo __( 'Close this menu', 'mosir' ); ?>" id="mosi-drawer-close-top" class="js-mosi-drawer p-drawer__close__button c-toggleButton<?php echo $mosi_options_header_layout !== 'small' ? ' c-toggleButton--lg' : ''; ?>" data-mosi-drawer-action="toggle" data-mosi-drawer-duration="500" aria-controls="drawer" aria-expanded="false">
 				<span class="c-toggleButton__label">Menu</span>
 				<span class="c-toggleButton__icon"></span>
 			</button>
@@ -54,7 +54,7 @@ $mosi_options_drawer_size = get_theme_mod( 'mosi_options_drawer_size', 'slim' );
 			?>
 
 			<?php if ( is_active_sidebar( 'widget-drawer' ) ) : ?>
-			<div class="u-p--t-xl p-widgetArea p-widgetArea--drawer">
+			<div class="p-widgetArea p-widgetArea--drawer">
 				<div class="p-widgetArea__inner">
 					<?php dynamic_sidebar( 'widget-drawer' ); ?>
 				</div>
@@ -62,8 +62,8 @@ $mosi_options_drawer_size = get_theme_mod( 'mosi_options_drawer_size', 'slim' );
 			<?php endif; ?>
 
 			<div class="p-drawer__footer p-buttons">
-				<button aria-label="Close this menu" id="mosi-drawer-close-bottom" class="js-mosi-drawer p-drawer__footer__button c-button" data-mosi-drawer-action="close" data-mosi-drawer-duration="500" aria-controls="drawer">
-					✕ Close menu
+				<button aria-label="<?php echo __( 'Close this menu', 'mosir' ); ?>" id="mosi-drawer-close-bottom" class="js-mosi-drawer p-drawer__footer__button c-button" data-mosi-drawer-action="close" data-mosi-drawer-duration="500" aria-controls="drawer">
+					✕ <?php echo __( 'Close menu', 'mosir' ); ?>
 				</button>
 			</div>
 		</div>

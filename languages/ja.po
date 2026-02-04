@@ -13,6 +13,38 @@ msgstr ""
 "X-Domain: mosir\n"
 "X-Generator: Poedit 3.8\n"
 
+# Header: Label of skip link
+# header.php:26
+msgid "Skip to content"
+msgstr "本文までスキップ"
+
+# Header: aria-label of drawer button
+# header.php:116
+msgid "Open/close drawer menu"
+msgstr "メニューを開く/閉じる"
+
+# Footer: ad
+# footer.php:66
+msgid "WordPress theme &quot;mosir&quot;"
+msgstr "WordPressテーマ &quot;mosir&quot;"
+
+# Drawer: aria-label of close button
+# drawer.php:16
+# drawer.php:65
+msgid "Close this menu"
+msgstr "このメニューを閉じる"
+
+# Drawer: aria-label of close button (bottom)
+# drawer.php:66
+msgid "Close menu"
+msgstr "メニューを閉じる"
+
+# Single: Back link
+# single.php:73
+msgid "Back to index"
+msgstr "一覧へもどる"
+
+
 # Menu: Theme Location name
 # functions.php:131
 msgid "Header: Mega nav."
@@ -341,6 +373,106 @@ msgstr "常に上"
 msgid "Left when on desktop"
 msgstr "デスクトップのときに左"
 
+# Customizer: 1: Title of header - label
+# functions/customizer.php:316
+msgid "1: Title of header"
+msgstr "1: セクションヘッダのタイトル"
+
+# Customizer: 1: Title of header - description
+# functions/customizer.php:317
+# Customizer: 2: Title of header - description
+# functions/customizer.php:445
+msgid "You can change the header title (e.g. Press release). If not set it will be the post type label, or \"Latest Posts\" as post."
+msgstr "ヘッダーのタイトルを変更できます（例:プレスリリース）。設定されていない場合は、投稿タイプのラベル、または、投稿タイプが「投稿」の場合「最新記事」が表示されます。"
+
+# Customizer: 1: Subtitle of header - label
+# functions/customizer.php:329
+msgid "1: Subtitle of header"
+msgstr "1: セクションヘッダのサブタイトル"
+
+# Customizer: 1: Subtitle of header - description
+# functions/customizer.php:330
+# Customizer: 2: Subtitle of header - description
+# functions/customizer.php:458
+msgid "You can change the header sub title (e.g. News). If not set it will be the post type slug, or \"Blog\" as post."
+msgstr "ヘッダーのサブタイトルを変更できます（例:News）。設定されていない場合は、投稿タイプのスラッグ、または、投稿タイプが「投稿」の場合「Blog」が表示されます。"
+
+# Customizer: 1: Limit of posts - label
+# functions/customizer.php:342
+msgid "1: Limit of posts"
+msgstr "1: 投稿リストの最大件数"
+
+# Customizer: 1: Order of posts - label
+# functions/customizer.php:354
+msgid "1: Order of posts"
+msgstr "1: 投稿リストの並び順"
+
+# Customizer: 1: Order of posts - choices
+# functions/customizer.php:358
+# Customizer: 2: Order of posts - choices
+# functions/customizer.php:486
+msgid "Published date descending"
+msgstr "公開日降順"
+
+# Customizer: 1: Order of posts - choices
+# functions/customizer.php:359
+# Customizer: 2: Order of posts - choices
+# functions/customizer.php:467
+msgid "Published date ascending"
+msgstr "公開日昇順"
+
+# Customizer: 1: Loop design of posts - label
+# functions/customizer.php:370
+msgid "1: Loop design of posts"
+msgstr "1: 投稿繰り返しのデザイン"
+
+# Customizer: 1: Loop design of posts - choices
+# functions/customizer.php:374
+# Customizer: 2: Loop design of posts - choices
+# functions/customizer.php:502
+msgid "Headline"
+msgstr "ヘッドライン"
+
+# Customizer: 1: Loop design of posts - choices
+# functions/customizer.php:375
+# Customizer: 2: Loop design of posts - choices
+# functions/customizer.php:503
+msgid "Headline (no meta)"
+msgstr "ヘッドライン（メタなし）"
+
+# Customizer: 1: Loop design of posts - choices
+# functions/customizer.php:376
+# Customizer: 2: Loop design of posts - choices
+# functions/customizer.php:504
+msgid "Card"
+msgstr "カード"
+
+# Customizer: 1: Loop design of posts - choices
+# functions/customizer.php:377
+# Customizer: 2: Loop design of posts - choices
+# functions/customizer.php:505
+msgid "Card (no meta)"
+msgstr "カード（メタなし）"
+
+# Customizer: 1: Loop design of posts - choices
+# functions/customizer.php:378
+# Customizer: 2: Loop design of posts - choices
+# functions/customizer.php:506
+msgid "Media"
+msgstr "メディア"
+
+# Customizer: 1: Loop design of posts - choices
+# functions/customizer.php:379
+# Customizer: 2: Loop design of posts - choices
+# functions/customizer.php:507
+msgid "Media (no meta)"
+msgstr "メディア（メタなし）"
+
+# Customizer: 1: Link path to index page - label
+# functions/customizer.php:390
+msgid "1: Link path to index page"
+msgstr "1: 一覧ページへのリンクのパス"
+
 
 # Customizer: Posts - section 2 - label
 # functions/customizer.php:403
@@ -356,6 +488,36 @@ msgstr "2: 投稿タイプ"
 # functions/customizer.php:426
 msgid "2: Display of header"
 msgstr "2: セクションヘッダの表示"
+
+# Customizer: 2: Title of header - label
+# functions/customizer.php:444
+msgid "2: Title of header"
+msgstr "2: セクションヘッダのタイトル"
+
+# Customizer: 2: Subtitle of header - label
+# functions/customizer.php:457
+msgid "2: Subtitle of header"
+msgstr "2: セクションヘッダのサブタイトル"
+
+# Customizer: 2: Limit of posts - label
+# functions/customizer.php:470
+msgid "2: Limit of posts"
+msgstr "2: 投稿リストの最大件数"
+
+# Customizer: 2: Order of posts - label
+# functions/customizer.php:482
+msgid "2: Order of posts"
+msgstr "2: 投稿リストの並び順"
+
+# Customizer: 2: Loop design of posts - label
+# functions/customizer.php:498
+msgid "2: Loop design of posts"
+msgstr "2: 投稿繰り返しのデザイン"
+
+# Customizer: 2: Link path to index page - label
+# functions/customizer.php:517
+msgid "2: Link path to index page"
+msgstr "2: 一覧ページへのリンクのパス"
 
 
 # Custom query in front page - default alt text for heading

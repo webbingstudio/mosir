@@ -10,7 +10,7 @@ $mosi_options_copyright = get_theme_mod( 'mosi_options_copyright', (bool)false )
 ?>
 
 <?php if ( is_active_sidebar( 'widget-main' ) ) : ?>
-<div class="u-p--t-xl u-p--b-xl p-widgetArea p-widgetArea--main">
+<div class="p-widgetArea p-widgetArea--main">
 	<div class="p-widgetArea__inner">
 		<?php dynamic_sidebar( 'widget-main' ); ?>
 	</div>
@@ -63,7 +63,7 @@ $mosi_options_copyright = get_theme_mod( 'mosi_options_copyright', (bool)false )
 			<?php endif; ?>
 		</p>
 		<?php if( !$mosi_options_copyright ): ?>
-		<p class="l-footer__copyright__body u-p--t-sm has-small-font-size"><a href="https://mosir.webbingstudio.com" target="_blank" rel="noopener noreferrer">WordPressテーマ &quot;mosir&quot;</a></p>
+		<p class="l-footer__copyright__body u-p--t-sm has-small-font-size"><a href="https://mosir.webbingstudio.com" target="_blank" rel="noopener noreferrer"><?php echo __( 'WordPress theme &quot;mosir&quot;', 'mosir' ); ?></a></p>
 		<?php endif; ?>
 	</div>
 	

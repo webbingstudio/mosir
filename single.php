@@ -70,7 +70,7 @@ get_header();
 							<?php endif; ?>
 						</li>
 						<li class="p-post__footer__back c-nav__item">
-							<a href="<?php echo esc_url( get_post_type_archive_link($mosi_post_type) ); ?>">一覧へもどる</a>
+							<a href="<?php echo esc_url( get_post_type_archive_link($mosi_post_type) ); ?>"><?php echo esc_html( __( 'Back to index', 'mosir' ) ); ?></a>
 						</li>
 						<li class="p-post__footer__next c-nav__item">
 							<?php if( $mosi_next_link ): ?>
@@ -92,7 +92,7 @@ get_header();
 <?php endif; ?>
 
 <?php if ( is_active_sidebar( 'widget-main-post' ) ) : ?>
-	<div class="u-p--b-xl p-widgetArea p-widgetArea--main p-widgetArea--main-post">
+	<div class="p-widgetArea p-widgetArea--main p-widgetArea--main-post">
 		<div class="p-widgetArea__inner">
 			<?php dynamic_sidebar( 'widget-main-post' ); ?>
 		</div>

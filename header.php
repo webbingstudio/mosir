@@ -8,6 +8,10 @@
 $mosi_options_header_markup = get_theme_mod( 'mosi_options_header_markup', 'h1' );
 $mosi_options_header_layout = get_theme_mod( 'mosi_options_header_layout', 'large' );
 $mosi_options_drawer_displaying = get_theme_mod( 'mosi_options_drawer_displaying', 'always' );
+
+$mosi_custom_logo_id = get_theme_mod( 'custom_logo' );
+$mosi_custom_logo_src = wp_get_attachment_image_src( $mosi_custom_logo_id, 'full' );
+$mosi_custom_logo_width = isset($mosi_custom_logo_src[1]) ? $mosi_custom_logo_src[1] : (bool)false;
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
@@ -19,17 +23,12 @@ $mosi_options_drawer_displaying = get_theme_mod( 'mosi_options_drawer_displaying
 
 <body <?php body_class(); ?>>
 <div id="mosi-drawer-contents" class="l-document">
-<a class="skip-link screen-reader-text" id="wp-skip-link" href="#wp--skip-link--target">内容をスキップ</a>
+<a class="skip-link screen-reader-text" id="wp-skip-link" href="#wp--skip-link--target"><?php echo __( 'Skip to content', 'mosir' ); ?></a>
 
 <?php wp_body_open(); ?>
 <header class="l-header l-header--<?php echo esc_attr($mosi_options_header_layout); ?> l-header--drawer-<?php echo esc_attr($mosi_options_drawer_displaying); ?>">
 	<div class="l-header__contents l-container">
 
-		<?php
-			$mosi_custom_logo_id = get_theme_mod( 'custom_logo' );
-			$mosi_custom_logo_src = wp_get_attachment_image_src( $mosi_custom_logo_id, 'full' );
-			$mosi_custom_logo_width = isset($mosi_custom_logo_src[1]) ? $mosi_custom_logo_src[1] : (bool)false;
-		?>
 		<?php if( is_front_page() && $mosi_options_header_markup === 'h1' ): ?>
 			<h1 class="l-header__siteTitle p-siteTitle">
 		<?php elseif( is_front_page() ): ?>
@@ -113,7 +112,7 @@ $mosi_options_drawer_displaying = get_theme_mod( 'mosi_options_drawer_displaying
 		<?php if( $mosi_options_drawer_displaying !== 'none' ): ?>
 		<div class="l-header__drawerToggle p-drawerToggle p-drawerToggle--<?php echo esc_attr($mosi_options_drawer_displaying); ?>">
 			<div class="p-drawerToggle__contents l-container">
-				<button aria-label="Open/close drawer menu" id="mosi-drawer-toggle" class="js-mosi-drawer p-drawerToggle__button c-toggleButton<?php echo $mosi_options_header_layout !== 'small' ? ' c-toggleButton--lg' : ''; ?>" data-mosi-drawer-action="toggle" data-mosi-drawer-duration="500" aria-controls="drawer" aria-expanded="false">
+				<button aria-label="<?php echo __( 'Open/close drawer menu', 'mosir' ); ?>" id="mosi-drawer-toggle" class="js-mosi-drawer p-drawerToggle__button c-toggleButton<?php echo $mosi_options_header_layout !== 'small' ? ' c-toggleButton--lg' : ''; ?>" data-mosi-drawer-action="toggle" data-mosi-drawer-duration="500" aria-controls="drawer" aria-expanded="false">
 					<span class="c-toggleButton__label">Menu</span>
 					<span class="c-toggleButton__icon"></span>
 				</button>

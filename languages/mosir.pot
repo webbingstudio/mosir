@@ -14,6 +14,38 @@ msgstr ""
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: mosir\n"
 
+# Header: Label of skip link
+# header.php:26
+msgid "Skip to content"
+msgstr ""
+
+# Header: aria-label of drawer button
+# header.php:116
+msgid "Open/close drawer menu"
+msgstr ""
+
+# Footer: ad
+# footer.php:66
+msgid "WordPress theme &quot;mosir&quot;"
+msgstr ""
+
+# Drawer: aria-label of close button
+# drawer.php:16
+# drawer.php:65
+msgid "Close this menu"
+msgstr ""
+
+# Drawer: aria-label of close button (bottom)
+# drawer.php:66
+msgid "Close menu"
+msgstr ""
+
+# Single: Back link
+# single.php:73
+msgid "Back to index"
+msgstr ""
+
+
 # Menu: Theme Location name
 # functions.php:131
 msgid "Header: Mega nav."
@@ -343,8 +375,105 @@ msgstr ""
 msgid "Left when on desktop"
 msgstr ""
 
+# Customizer: 1: Title of header - label
+# functions/customizer.php:316
+msgid "1: Title of header"
+msgstr ""
 
+# Customizer: 1: Title of header - description
+# functions/customizer.php:317
+# Customizer: 2: Title of header - description
+# functions/customizer.php:445
+msgid "You can change the header title (e.g. Press release). If not set it will be the post type label, or \"Latest Posts\" as post."
+msgstr ""
 
+# Customizer: 1: Subtitle of header - label
+# functions/customizer.php:329
+msgid "1: Subtitle of header"
+msgstr ""
+
+# Customizer: 1: Subtitle of header - description
+# functions/customizer.php:330
+# Customizer: 2: Subtitle of header - description
+# functions/customizer.php:458
+msgid "You can change the header sub title (e.g. News). If not set it will be the post type slug, or \"Blog\" as post."
+msgstr ""
+
+# Customizer: 1: Limit of posts - label
+# functions/customizer.php:342
+msgid "1: Limit of posts"
+msgstr ""
+
+# Customizer: 1: Order of posts - label
+# functions/customizer.php:354
+msgid "1: Order of posts"
+msgstr ""
+
+# Customizer: 1: Order of posts - choices
+# functions/customizer.php:358
+# Customizer: 2: Order of posts - choices
+# functions/customizer.php:486
+msgid "Published date descending"
+msgstr ""
+
+# Customizer: 1: Order of posts - choices
+# functions/customizer.php:359
+# Customizer: 2: Order of posts - choices
+# functions/customizer.php:467
+msgid "Published date ascending"
+msgstr ""
+
+# Customizer: 1: Loop design of posts - label
+# functions/customizer.php:370
+msgid "1: Loop design of posts"
+msgstr ""
+
+# Customizer: 1: Loop design of posts - choices
+# functions/customizer.php:374
+# Customizer: 2: Loop design of posts - choices
+# functions/customizer.php:502
+msgid "Headline"
+msgstr ""
+
+# Customizer: 1: Loop design of posts - choices
+# functions/customizer.php:375
+# Customizer: 2: Loop design of posts - choices
+# functions/customizer.php:503
+msgid "Headline (no meta)"
+msgstr ""
+
+# Customizer: 1: Loop design of posts - choices
+# functions/customizer.php:376
+# Customizer: 2: Loop design of posts - choices
+# functions/customizer.php:504
+msgid "Card"
+msgstr ""
+
+# Customizer: 1: Loop design of posts - choices
+# functions/customizer.php:377
+# Customizer: 2: Loop design of posts - choices
+# functions/customizer.php:505
+msgid "Card (no meta)"
+msgstr ""
+
+# Customizer: 1: Loop design of posts - choices
+# functions/customizer.php:378
+# Customizer: 2: Loop design of posts - choices
+# functions/customizer.php:506
+msgid "Media"
+msgstr ""
+
+# Customizer: 1: Loop design of posts - choices
+# functions/customizer.php:379
+# Customizer: 2: Loop design of posts - choices
+# functions/customizer.php:507
+msgid "Media (no meta)"
+msgstr ""
+
+# Customizer: 1: Link path to index page - label
+# functions/customizer.php:390
+msgid "1: Link path to index page"
+msgstr ""
 
 
 # Customizer: Posts - section 2 - label
@@ -362,78 +491,35 @@ msgstr ""
 msgid "2: Display of header"
 msgstr ""
 
-
-
-# Customizer: 
-# functions/customizer.php:
-msgid ""
+# Customizer: 2: Title of header - label
+# functions/customizer.php:444
+msgid "2: Title of header"
 msgstr ""
 
-# Customizer: 
-# functions/customizer.php:
-msgid ""
+# Customizer: 2: Subtitle of header - label
+# functions/customizer.php:457
+msgid "2: Subtitle of header"
 msgstr ""
 
-# Customizer: 
-# functions/customizer.php:
-msgid ""
+# Customizer: 2: Limit of posts - label
+# functions/customizer.php:470
+msgid "2: Limit of posts"
 msgstr ""
 
-# Customizer: 
-# functions/customizer.php:
-msgid ""
+# Customizer: 2: Order of posts - label
+# functions/customizer.php:482
+msgid "2: Order of posts"
 msgstr ""
 
-# Customizer: 
-# functions/customizer.php:
-msgid ""
+# Customizer: 2: Loop design of posts - label
+# functions/customizer.php:498
+msgid "2: Loop design of posts"
 msgstr ""
 
-# Customizer: 
-# functions/customizer.php:
-msgid ""
+# Customizer: 2: Link path to index page - label
+# functions/customizer.php:517
+msgid "2: Link path to index page"
 msgstr ""
-
-# Customizer: 
-# functions/customizer.php:
-msgid ""
-msgstr ""
-
-# Customizer: 
-# functions/customizer.php:
-msgid ""
-msgstr ""
-
-# Customizer: 
-# functions/customizer.php:
-msgid ""
-msgstr ""
-
-# Customizer: 
-# functions/customizer.php:
-msgid ""
-msgstr ""
-
-# Customizer: 
-# functions/customizer.php:
-msgid ""
-msgstr ""
-
-# Customizer: 
-# functions/customizer.php:
-msgid ""
-msgstr ""
-
-# Customizer: 
-# functions/customizer.php:
-msgid ""
-msgstr ""
-
-# Customizer: 
-# functions/customizer.php:
-msgid ""
-msgstr ""
-
 
 
 # Custom query in front page - default alt text for heading
