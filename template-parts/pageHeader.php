@@ -83,7 +83,7 @@ if( $mosi_posts_page && $mosi_posts_page->post_status === 'publish' ){
 <?php elseif ( is_search() ): ?>
 <div class="p-pageHeader p-pageHeader--search">
     <div class="p-pageHeader__contents l-container">
-        <h1 class="p-pageHeader__title c-title c-title--lv2" <?php language_attributes(); ?>>検索結果</h1>
+        <h1 class="p-pageHeader__title c-title c-title--lv2" <?php language_attributes(); ?>>Search result</h1>
         <?php if( !preg_match('/^en_/', get_locale() ) ): ?>
             <p class="p-pageHeader__caption" lang="en-US">Search result</p>
         <?php endif; ?>

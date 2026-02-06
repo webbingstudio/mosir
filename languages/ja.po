@@ -555,3 +555,8 @@ msgstr "コンテンツは準備中です。"
 # index.php:80
 msgid "Back to Home"
 msgstr "トップページへもどる"
+
+# Search result (title)
+# template-parts/pageHeader.php:86
+msgid "Search result"
+msgstr "検索結果"

@@ -556,3 +556,8 @@ msgstr ""
 # index.php:80
 msgid "Back to Home"
 msgstr ""
+
+# Search result (title)
+# template-parts/pageHeader.php:86
+msgid "Search result"
+msgstr ""

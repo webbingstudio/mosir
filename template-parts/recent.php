@@ -1,6 +1,7 @@
 <?php
 /**
  * recent.php
+ * Outputs a list of articles based on the query.
  *
  * @package mosir
  *
