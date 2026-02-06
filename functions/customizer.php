@@ -26,8 +26,10 @@ if ( class_exists( 'WP_Customize_Control' ) && ! class_exists( 'Mosi_Customize_C
 
 
 if ( ! function_exists( 'mosi_customize_register' ) ){
+
 	function mosi_customize_register( $wp_customize ) {
 
+		// Create an array of options from published post types
 		$active_post_types = get_post_types(
 			array(
 				'public' => true
@@ -46,6 +48,7 @@ if ( ! function_exists( 'mosi_customize_register' ) ){
 		}
 
 
+		// Define Customizer Sections
 		$wp_customize->add_section( 'mosi_config_basic', array(
 			'title'    => __( 'mosir: Basic settings', 'mosir' ),
 			'priority' => 191,
@@ -62,6 +65,7 @@ if ( ! function_exists( 'mosi_customize_register' ) ){
 		));
 
 
+		// Define the input fields for the Customizer
         $wp_customize->add_setting( 'mosi_options_header_markup', array(
 			'default'           => 'h1',
 			'sanitize_callback' => 'sanitize_text_field',
@@ -86,16 +90,16 @@ if ( ! function_exists( 'mosi_customize_register' ) ){
 		));
 
         $wp_customize->add_control( 'mosi_options_control_header_layout', array(
-				'settings' => 'mosi_options_header_layout',
-				'label'    => __( 'Header layout', 'mosir' ),
-				'section'  => 'mosi_config_basic',
-				'type'     => 'select',
-				'choices' => array(
-					'simple' => __( 'simple (logo only)', 'mosir' ),
-					'small'  => __( 'small (navbar)', 'mosir' ),
-					'medium' => __( 'medium (one rows)', 'mosir' ),
-					'large'  => __( 'large (two rows)', 'mosir' ),
-				)
+			'settings' => 'mosi_options_header_layout',
+			'label'    => __( 'Header layout', 'mosir' ),
+			'section'  => 'mosi_config_basic',
+			'type'     => 'select',
+			'choices' => array(
+				'simple' => __( 'simple (logo only)', 'mosir' ),
+				'small'  => __( 'small (navbar)', 'mosir' ),
+				'medium' => __( 'medium (one rows)', 'mosir' ),
+				'large'  => __( 'large (two rows)', 'mosir' ),
+			)
 		));
 
 
@@ -104,15 +108,15 @@ if ( ! function_exists( 'mosi_customize_register' ) ){
 			'sanitize_callback' => 'sanitize_text_field',
 		));
 		$wp_customize->add_control( 'mosi_options_control_drawer', array(
-				'settings'  => 'mosi_options_drawer_displaying',
-				'label'     => __( 'Drawer displaying', 'mosir' ),
-				'section'   => 'mosi_config_basic',
-				'type'      => 'select',
-				'choices' => array(
-					'always' => __( 'Always show', 'mosir' ),
-					'mobile' => __( 'Mobile only', 'mosir' ),
-					'none'   => __( 'None', 'mosir' ),
-				)
+			'settings'  => 'mosi_options_drawer_displaying',
+			'label'     => __( 'Drawer displaying', 'mosir' ),
+			'section'   => 'mosi_config_basic',
+			'type'      => 'select',
+			'choices' => array(
+				'always' => __( 'Always show', 'mosir' ),
+				'mobile' => __( 'Mobile only', 'mosir' ),
+				'none'   => __( 'None', 'mosir' ),
+			)
 		));
 
 
@@ -121,14 +125,14 @@ if ( ! function_exists( 'mosi_customize_register' ) ){
 			'sanitize_callback' => 'sanitize_text_field',
 		));
 		$wp_customize->add_control( 'mosi_options_control_drawer_size', array(
-				'settings' => 'mosi_options_drawer_size',
-				'label'    => __( 'Drawer size', 'mosir' ),
-				'section'  => 'mosi_config_basic',
-				'type'     => 'select',
-				'choices' => array(
-					'slim' => __( 'Slim', 'mosir' ),
-					'wide' => __( 'Wide', 'mosir' ),
-				)
+			'settings' => 'mosi_options_drawer_size',
+			'label'    => __( 'Drawer size', 'mosir' ),
+			'section'  => 'mosi_config_basic',
+			'type'     => 'select',
+			'choices' => array(
+				'slim' => __( 'Slim', 'mosir' ),
+				'wide' => __( 'Wide', 'mosir' ),
+			)
 		));
 
 
@@ -137,11 +141,11 @@ if ( ! function_exists( 'mosi_customize_register' ) ){
 			'sanitize_callback' => 'wp_filter_post_kses',
 		));
 		$wp_customize->add_control( 'mosi_options_control_copyright', array(
-				'settings'    => 'mosi_options_copyright',
-				'label'       => __( 'Footer copyright', 'mosir' ),
-				'description' => __( 'You can hide the ads under the copyright by entering a text. You can use simple HTML tags for the string.', 'mosir' ),
-				'section'     => 'mosi_config_basic',
-				'type'        => 'text',
+			'settings'    => 'mosi_options_copyright',
+			'label'       => __( 'Footer copyright', 'mosir' ),
+			'description' => __( 'You can hide the ads under the copyright by entering a text. You can use simple HTML tags for the string.', 'mosir' ),
+			'section'     => 'mosi_config_basic',
+			'type'        => 'text',
 		));
 
 
@@ -150,15 +154,15 @@ if ( ! function_exists( 'mosi_customize_register' ) ){
 			'sanitize_callback' => 'sanitize_text_field',
 		));
 		$wp_customize->add_control( 'mosi_options_control_mv_visible', array(
-				'settings'    => 'mosi_options_mv_visible',
-				'label'       => __( 'Main visual displaying', 'mosir' ),
-				'description' => __( 'The main visual of this theme is very simple. Also check out Cover Block and other great block-adding plugins!', 'mosir' ),
-				'section'     => 'mosi_config_mv',
-				'type'        => 'select',
-				'choices' => array(
-					'show' => __( 'Show', 'mosir' ),
-					'hide' => __( 'Hide', 'mosir' ),
-				)
+			'settings'    => 'mosi_options_mv_visible',
+			'label'       => __( 'Main visual displaying', 'mosir' ),
+			'description' => __( 'The main visual of this theme is very simple. Also check out Cover Block and other great block-adding plugins!', 'mosir' ),
+			'section'     => 'mosi_config_mv',
+			'type'        => 'select',
+			'choices' => array(
+				'show' => __( 'Show', 'mosir' ),
+				'hide' => __( 'Hide', 'mosir' ),
+			)
 		));
 
 
@@ -167,10 +171,10 @@ if ( ! function_exists( 'mosi_customize_register' ) ){
 			'sanitize_callback' => 'esc_url_raw',
 		));
 		$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'mosi_options_control_mv_image_pc', array(
-				'settings'    => 'mosi_options_mv_image_pc',
-				'label'       => __( 'Image (Desktop, Tablet landscape)', 'mosir' ),
-				'description' => __( 'Recommended size: Width 1920px or more / Height 1080px or more', 'mosir' ),
-				'section'     => 'mosi_config_mv',
+			'settings'    => 'mosi_options_mv_image_pc',
+			'label'       => __( 'Image (Desktop, Tablet landscape)', 'mosir' ),
+			'description' => __( 'Recommended size: Width 1920px or more / Height 1080px or more', 'mosir' ),
+			'section'     => 'mosi_config_mv',
 		)));
 
 
@@ -179,10 +183,10 @@ if ( ! function_exists( 'mosi_customize_register' ) ){
 			'sanitize_callback' => 'esc_url_raw',
 		));
 		$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'mosi_options_control_mv_image_sp', array(
-				'settings'    => 'mosi_options_mv_image_sp',
-				'label'       => __( 'Image (Phone, Tablet portrait)', 'mosir' ),
-				'description' => __( 'Recommended size: Width 1200px or more / Height 1800px or more', 'mosir' ),
-				'section'     => 'mosi_config_mv',
+			'settings'    => 'mosi_options_mv_image_sp',
+			'label'       => __( 'Image (Phone, Tablet portrait)', 'mosir' ),
+			'description' => __( 'Recommended size: Width 1200px or more / Height 1800px or more', 'mosir' ),
+			'section'     => 'mosi_config_mv',
 		)));
 
 
@@ -191,17 +195,17 @@ if ( ! function_exists( 'mosi_customize_register' ) ){
 			'sanitize_callback' => 'sanitize_text_field',
 		));
 		$wp_customize->add_control( 'mosi_options_control_mv_filter', array(
-				'settings'    => 'mosi_options_mv_filter',
-				'label'       => __( 'Image filter', 'mosir' ),
-				'section'     => 'mosi_config_mv',
-				'type'        => 'select',
-				'choices' => array(
-					'none'       => __( 'No filter', 'mosir' ),
-					'darken'     => __( 'Darken', 'mosir' ),
-					'lighten'    => __( 'Lighten', 'mosir' ),
-					'monochrome' => __( 'Monochrome', 'mosir' ),
-					'duotone'    => __( 'Primary color duotone', 'mosir' ),
-				)
+			'settings'    => 'mosi_options_mv_filter',
+			'label'       => __( 'Image filter', 'mosir' ),
+			'section'     => 'mosi_config_mv',
+			'type'        => 'select',
+			'choices' => array(
+				'none'       => __( 'No filter', 'mosir' ),
+				'darken'     => __( 'Darken', 'mosir' ),
+				'lighten'    => __( 'Lighten', 'mosir' ),
+				'monochrome' => __( 'Monochrome', 'mosir' ),
+				'duotone'    => __( 'Primary color duotone', 'mosir' ),
+			)
 		));
 
 
@@ -210,11 +214,11 @@ if ( ! function_exists( 'mosi_customize_register' ) ){
 			'sanitize_callback' => 'wp_filter_post_kses',
 		));
 		$wp_customize->add_control( 'mosi_options_control_mv_catch', array(
-				'settings'    => 'mosi_options_mv_catch',
-				'label'       => __( 'Catch phrase', 'mosir' ),
-				'description' => __( 'You can use simple HTML tags for the string.', 'mosir' ),
-				'section'     => 'mosi_config_mv',
-				'type'        => 'text',
+			'settings'    => 'mosi_options_mv_catch',
+			'label'       => __( 'Catch phrase', 'mosir' ),
+			'description' => __( 'You can use simple HTML tags for the string.', 'mosir' ),
+			'section'     => 'mosi_config_mv',
+			'type'        => 'text',
 		));
 
 
@@ -223,11 +227,11 @@ if ( ! function_exists( 'mosi_customize_register' ) ){
 			'sanitize_callback' => 'wp_filter_post_kses',
 		));
 		$wp_customize->add_control( 'mosi_options_control_mv_text', array(
-				'settings'    => 'mosi_options_mv_text',
-				'label'       => __( 'Subtext', 'mosir' ),
-				'description' => __( 'You can use simple HTML tags for the string.', 'mosir' ),
-				'section'     => 'mosi_config_mv',
-				'type'        => 'text',
+			'settings'    => 'mosi_options_mv_text',
+			'label'       => __( 'Subtext', 'mosir' ),
+			'description' => __( 'You can use simple HTML tags for the string.', 'mosir' ),
+			'section'     => 'mosi_config_mv',
+			'type'        => 'text',
 		));
 
 
@@ -236,16 +240,16 @@ if ( ! function_exists( 'mosi_customize_register' ) ){
 			'sanitize_callback' => 'sanitize_text_field',
 		));
 		$wp_customize->add_control( 'mosi_options_control_home_posts_position', array(
-				'settings'    => 'mosi_options_home_posts_position',
-				'label'       => __( 'Posts position', 'mosir' ),
-				'description' => __( 'Choose where on the front page you want to display the two posts.', 'mosir' ),
-				'section'     => 'mosi_config_home',
-				'type'        => 'select',
-				'choices' => array(
-					'before' => __( 'Before content: 1, 2', 'mosir' ),
-					'after'  => __( 'After content: 1, 2', 'mosir' ),
-					'both'   => __( 'Both: Before 1 - After 2', 'mosir' ),
-				)
+			'settings'    => 'mosi_options_home_posts_position',
+			'label'       => __( 'Posts position', 'mosir' ),
+			'description' => __( 'Choose where on the front page you want to display the two posts.', 'mosir' ),
+			'section'     => 'mosi_config_home',
+			'type'        => 'select',
+			'choices' => array(
+				'before' => __( 'Before content: 1, 2', 'mosir' ),
+				'after'  => __( 'After content: 1, 2', 'mosir' ),
+				'both'   => __( 'Both: Before 1 - After 2', 'mosir' ),
+			)
 		));
 
 
@@ -312,11 +316,11 @@ if ( ! function_exists( 'mosi_customize_register' ) ){
 			'sanitize_callback' => 'wp_filter_post_kses',
 		));
 		$wp_customize->add_control( 'mosi_options_control_home_posts_title_01', array(
-				'settings'    => 'mosi_options_home_posts_title_01',
-				'label'       => __( '1: Title of header', 'mosir' ),
-				'description' => __( 'You can change the header title (e.g. Press release). If not set it will be the post type label, or "Latest Posts" as post.', 'mosir' ),
-				'section'     => 'mosi_config_home',
-				'type'        => 'text',
+			'settings'    => 'mosi_options_home_posts_title_01',
+			'label'       => __( '1: Title of header', 'mosir' ),
+			'description' => __( 'You can change the header title (e.g. Press release). If not set it will be the post type label, or "Latest Posts" as post.', 'mosir' ),
+			'section'     => 'mosi_config_home',
+			'type'        => 'text',
 		));
 
 
@@ -325,11 +329,11 @@ if ( ! function_exists( 'mosi_customize_register' ) ){
 			'sanitize_callback' => 'wp_filter_post_kses',
 		));
 		$wp_customize->add_control( 'mosi_options_control_home_posts_subtitle_01', array(
-				'settings'    => 'mosi_options_home_posts_subtitle_01',
-				'label'       => __( '1: Subtitle of header', 'mosir' ),
-				'description' => __( 'You can change the header sub title (e.g. News). If not set it will be the post type slug, or "Blog" as post.', 'mosir' ),
-				'section'     => 'mosi_config_home',
-				'type'        => 'text',
+			'settings'    => 'mosi_options_home_posts_subtitle_01',
+			'label'       => __( '1: Subtitle of header', 'mosir' ),
+			'description' => __( 'You can change the header sub title (e.g. News). If not set it will be the post type slug, or "Blog" as post.', 'mosir' ),
+			'section'     => 'mosi_config_home',
+			'type'        => 'text',
 		));
 
 
@@ -386,10 +390,10 @@ if ( ! function_exists( 'mosi_customize_register' ) ){
 			'sanitize_callback' => 'esc_url_raw',
 		));
 		$wp_customize->add_control( 'mosi_options_control_home_posts_link_01', array(
-				'settings'    => 'mosi_options_home_posts_link_01',
-				'label'       => __( '1: Link path to index page', 'mosir' ),
-				'section'     => 'mosi_config_home',
-				'type'        => 'url',
+			'settings'    => 'mosi_options_home_posts_link_01',
+			'label'       => __( '1: Link path to index page', 'mosir' ),
+			'section'     => 'mosi_config_home',
+			'type'        => 'url',
 		));
 
 
@@ -439,11 +443,11 @@ if ( ! function_exists( 'mosi_customize_register' ) ){
 			'sanitize_callback' => 'wp_filter_post_kses',
 		));
 		$wp_customize->add_control( 'mosi_options_control_home_posts_title_02', array(
-				'settings'    => 'mosi_options_home_posts_title_02',
-				'label'       => __( '2: Title of header', 'mosir' ),
-				'description' => __( 'You can change the header title (e.g. Press release). If not set it will be the post type label, or "Latest Posts" as post.', 'mosir' ),
-				'section'     => 'mosi_config_home',
-				'type'        => 'text',
+			'settings'    => 'mosi_options_home_posts_title_02',
+			'label'       => __( '2: Title of header', 'mosir' ),
+			'description' => __( 'You can change the header title (e.g. Press release). If not set it will be the post type label, or "Latest Posts" as post.', 'mosir' ),
+			'section'     => 'mosi_config_home',
+			'type'        => 'text',
 		));
 
 
@@ -452,11 +456,11 @@ if ( ! function_exists( 'mosi_customize_register' ) ){
 			'sanitize_callback' => 'wp_filter_post_kses',
 		));
 		$wp_customize->add_control( 'mosi_options_control_home_posts_subtitle_02', array(
-				'settings'    => 'mosi_options_home_posts_subtitle_02',
-				'label'       => __( '2: Subtitle of header', 'mosir' ),
-				'description' => __( 'You can change the header sub title (e.g. News). If not set it will be the post type slug, or "Blog" as post.', 'mosir' ),
-				'section'     => 'mosi_config_home',
-				'type'        => 'text',
+			'settings'    => 'mosi_options_home_posts_subtitle_02',
+			'label'       => __( '2: Subtitle of header', 'mosir' ),
+			'description' => __( 'You can change the header sub title (e.g. News). If not set it will be the post type slug, or "Blog" as post.', 'mosir' ),
+			'section'     => 'mosi_config_home',
+			'type'        => 'text',
 		));
 
 
@@ -513,10 +517,10 @@ if ( ! function_exists( 'mosi_customize_register' ) ){
 			'sanitize_callback' => 'esc_url_raw',
 		));
 		$wp_customize->add_control( 'mosi_options_control_home_posts_link_02', array(
-				'settings'    => 'mosi_options_home_posts_link_02',
-				'label'       => __( '2: Link path to index page', 'mosir' ),
-				'section'     => 'mosi_config_home',
-				'type'        => 'url',
+			'settings'    => 'mosi_options_home_posts_link_02',
+			'label'       => __( '2: Link path to index page', 'mosir' ),
+			'section'     => 'mosi_config_home',
+			'type'        => 'url',
 		));
 
 

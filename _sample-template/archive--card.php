@@ -1,7 +1,8 @@
 <?php
 /**
  * archive--card.php
- * サンプル: 一覧ページ用テンプレート（カード）
+ * Sample: List page template (card)
+ * This template is not used in the theme. Please refer to this as sample code when you want to customize it.
  *
  * @package mosir
  */

@@ -1,7 +1,8 @@
 <?php
 /**
- * recent--headline.php
- * サンプル: カスタムクエリ用テンプレート（ヘッドライン）
+ * custom-query-loop--media.php
+ * Sample: Custom query loop template (media)
+ * This template is not used in the theme. Please refer to this as sample code when you want to customize it.
  *
  * @package mosir
  */
@@ -22,10 +23,10 @@ $mosi_query = new WP_Query( $mosi_query_args );
         <p class="p-section__subTitle c-title c-title--center c-title--lv5">Sample posts</p>
     </div>
     <div class="p-section__contents">
-        <div class="p-headlineList">
-            <div class="p-headlineList__inner">
+        <div class="p-mediaList">
+            <div class="p-mediaList__inner">
                 <?php while( $mosi_query->have_posts() ) : $mosi_query->the_post(); ?>
-                <?php get_template_part( 'template-parts/loop', 'headline' ); ?>
+                <?php get_template_part( 'template-parts/loop', 'media' ); ?>
             <?php endwhile; ?>
             </div>
         </div>

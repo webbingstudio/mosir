@@ -1,7 +1,8 @@
 <?php
 /**
  * archive--media.php
- * サンプル: 一覧ページ用テンプレート（メディア）
+ * Sample: List page template (media)
+ * This template is not used in the theme. Please refer to this as sample code when you want to customize it.
  *
  * @package mosir
  */

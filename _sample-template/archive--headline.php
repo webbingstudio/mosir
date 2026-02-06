@@ -1,7 +1,8 @@
 <?php
 /**
  * archive--headline.php
- * サンプル: 一覧ページ用テンプレート（ヘッドライン）
+ * Sample: List page template (headline)
+ * This template is not used in the theme. Please refer to this as sample code when you want to customize it.
  *
  * @package mosir
  */
