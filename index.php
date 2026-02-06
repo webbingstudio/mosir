@@ -1,12 +1,16 @@
 <?php
 /**
  * index.php
- * 一覧ページ用テンプレート
+ * Default index template
  *
  * @package mosir
  */
 
 $mosi_post_type = get_post_type() ? get_post_type() : get_query_var( 'post_type' );
+
+if( is_search() ) {
+    $mosi_s = get_query_var('s') ? get_query_var('s') : '(なし)';
+}
 
 get_header();
 ?>
@@ -14,13 +18,10 @@ get_header();
 <div class="l-content">
     <?php if( have_posts() ): ?>
     <div class="p-posts">
-        <?php
-            if( is_search() ):
-                $mosi_s = get_query_var('s') ? get_query_var('s') : '(なし)';
-        ?>
+        <?php if( is_search() ): ?>
         <div class="p-posts__header">
             <div class="p-posts__header__contents l-container l-container--sm">
-                <p class="p-posts__title c-title c-title--lv3 c-title--center">キーワード: <?php esc_html_e($mosi_s); ?></p>
+                <p class="p-posts__title c-title c-title--lv3 c-title--center"><?php echo __( 'Keyword:', 'mosir' ); ?> <?php esc_html_e( $mosi_s ); ?></p>
             </div>
         </div>
         <?php elseif( !is_home() && !is_post_type_archive() ): ?>
@@ -52,19 +53,16 @@ get_header();
     </div>
     <?php else: ?>
     <div class="p-posts">
-        <?php
-            if( is_search() ):
-                $mosi_s = get_query_var('s') ? get_query_var('s') : '(なし)';
-        ?>
+        <?php if( is_search() ): ?>
         <div class="p-posts__header">
             <div class="p-posts__header__contents l-container l-container--sm">
-                <p class="p-posts__title c-title c-title--lv3 c-title--center">キーワード: <?php esc_html_e($mosi_s); ?></p>
+                <p class="p-posts__title c-title c-title--lv3 c-title--center"><?php echo __( 'Keyword:', 'mosir' ); ?> <?php esc_html_e( $mosi_s ); ?></p>
             </div>
         </div>
         <div class="p-posts__contents l-container l-container--sm u-p--t-lg u-p--b-lg">
             <?php get_search_form(); ?>
 
-            <p>検索条件に一致する結果は見つかりませんでした。</p>
+            <p><?php echo __( 'No results were found matching your search criteria.', 'mosir' ); ?></p>
         </div>
         <?php elseif( !is_home() && !is_post_type_archive() ): ?>
         <div class="p-posts__header">
@@ -73,13 +71,13 @@ get_header();
             </div>
         </div>
         <div class="p-posts__contents l-container l-container--sm u-p--t-lg u-p--b-lg">
-            <p>コンテンツは準備中です。</p>
+            <p><?php echo __( 'Currently in preparation', 'mosir' ); ?></p>
         </div>
         <?php endif; ?>
         <div class="p-posts__footer">
             <div class="u-p--posts__footer__contents l-container l-container--sm">
                 <div class="p-buttons">
-                    <a class="c-button" href="<?php echo esc_url( home_url() ); ?>">トップページへもどる</a>
+                    <a class="c-button" href="<?php echo esc_url( home_url() ); ?>"><?php echo __( 'Back to Home', 'mosir' ); ?></a>
                 </div>
             </div>
         </div>

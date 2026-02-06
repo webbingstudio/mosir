@@ -536,3 +536,23 @@ msgstr ""
 # template-parts/recent.php:90
 msgid "View All"
 msgstr ""
+
+# search - keyword
+# index.php:23
+msgid "Keyword:"
+msgstr ""
+
+# search - No results
+# index.php:65
+msgid "No results were found matching your search criteria."
+msgstr ""
+
+# Currently in preparation (no post)
+# index.php:74
+msgid "Currently in preparation"
+msgstr ""
+
+# Back to Home
+# index.php:80
+msgid "Back to Home"
+msgstr ""
