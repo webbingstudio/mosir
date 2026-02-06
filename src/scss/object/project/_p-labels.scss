@@ -6,17 +6,17 @@
 // ------------------------------
 
 .p-labels {
-  @include g.flex( n, wrap, flex-start, n );
-  gap: var(--spacing-xs);
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  line-height: var(--lineHeight-none);
+    @include g.flex( n, wrap, flex-start, n );
+    gap: var(--spacing-xs);
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    line-height: var(--lineHeight-none);
 }
 
 .p-labels > * {
-    flex-grow: 0;
-    flex-shrink: 1;
-    margin: 0;
-    padding: 0;
+        flex-grow: 0;
+        flex-shrink: 1;
+        margin: 0;
+        padding: 0;
 }

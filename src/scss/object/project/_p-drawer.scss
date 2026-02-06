@@ -10,112 +10,112 @@
 // ------------------------------
 
 .p-drawer {
-  @include g.position( fixed, 0, n, n, 0, 101 );
-  width: 100%;
-  height: 0;
+    @include g.position( fixed, 0, n, n, 0, 101 );
+    width: 100%;
+    height: 0;
 }
 
 .p-drawer.p-drawer--mobile {
-  @include g.mq(xga) {
-    display: none;
-  }
+    @include g.mq(xga) {
+        display: none;
+    }
 }
 
 .p-drawer::before {
-  content: "";
-  @include g.position( fixed, 0, 0, 0, n, 103 );
-  background-color: var(--body-bg);
-  box-shadow: var(--shadow-lg-darken);
+    content: "";
+    @include g.position( fixed, 0, 0, 0, n, 103 );
+    background-color: var(--body-bg);
+    box-shadow: var(--shadow-lg-darken);
 }
 
 .p-drawer:not(.p-drawer--size-wide)::before {
-  width: 30rem;
-  max-width: 80dvw;
-  transform: scaleX(0);
-  transform-origin: top right;
+    width: 30rem;
+    max-width: 80dvw;
+    transform: scaleX(0);
+    transform-origin: top right;
 
-  @include g.mq(default) {
-    width: 45dvw;
-  }
+    @include g.mq(default) {
+        width: 45dvw;
+    }
 }
 
 .p-drawer.p-drawer--size-wide::before {
-  left: 0;
-  transform: scaleY(0);
-  transform-origin: top center;
+    left: 0;
+    transform: scaleY(0);
+    transform-origin: top center;
 }
 
 .p-drawer::after {
-  content: "";
-  @include g.position( fixed, 0, 0, n, 0, 102 );
-  background-color: var(--ui-cover-inverse-color);
-  width: 100dvw;
-  opacity: 0;
+    content: "";
+    @include g.position( fixed, 0, 0, n, 0, 102 );
+    background-color: var(--ui-cover-inverse-color);
+    width: 100dvw;
+    opacity: 0;
 }
 
 .p-drawer__contents {
-  overflow-x: hidden;
-  overflow-y: auto;
-  @include g.position( relative, n, n, n, n, 103 );
-  height: 0;
-  background-color: var(--body-bg);
-  opacity: 0;
-  transform: translateX(1rem);
-  transform-origin: center center;
+    overflow-x: hidden;
+    overflow-y: auto;
+    @include g.position( relative, n, n, n, n, 103 );
+    height: 0;
+    background-color: var(--body-bg);
+    opacity: 0;
+    transform: translateX(1rem);
+    transform-origin: center center;
 }
 
 .p-drawer:not(.p-drawer--size-wide) .p-drawer__contents {
-  width: 30rem;
-  max-width: 80dvw;
-  margin-left: auto;
-  margin-right: 0;
+    width: 30rem;
+    max-width: 80dvw;
+    margin-left: auto;
+    margin-right: 0;
 
-  @include g.mq(default) {
-    width: 45dvw;
-  }
+    @include g.mq(default) {
+        width: 45dvw;
+    }
 
-  @include g.mq(wide) {
-    padding-left: var(--spacing-md);
-  }
+    @include g.mq(wide) {
+        padding-left: var(--spacing-md);
+    }
 }
 
 .p-drawer.p-drawer--size-wide .p-drawer__contents {
-  transform: translateY(-1rem);
+    transform: translateY(-1rem);
 }
 
 .p-drawer__close {
-  overflow: hidden;
-  @include g.position( absolute, 0, 0, n, 0, 104 );
-  height: 0;
+    overflow: hidden;
+    @include g.position( absolute, 0, 0, n, 0, 104 );
+    height: 0;
 }
 
 .p-drawer__close__contents.l-container {
-  position: relative;
+    position: relative;
 }
 
 .p-drawer__close__button {
-  @include g.position( absolute, var(--spacing-xs), var(--screen-x-spacing), n, n, 11 ); // top: padding-top of header
+    @include g.position( absolute, var(--spacing-xs), var(--screen-x-spacing), n, n, 11 ); // top: padding-top of header
 }
 
 body:has(.l-header--small) .p-drawer__close__button {
-  top: 0;
+    top: 0;
 }
 
 .p-drawer__contents__inner {
-  padding-top: calc( var(--drawer-toggle-size) + var(--spacing-sm) );
-  padding-bottom: var(--spacing-xl);
+    padding-top: calc( var(--drawer-toggle-size) + var(--spacing-sm) );
+    padding-bottom: var(--spacing-xl);
 }
 
 .p-drawer__contents__inner > * + * {
-  margin-top: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
 }
 
 // .p-drawer__footer.p-buttons {
 // }
 
 .p-drawer.p-drawer--size-slim .p-drawer__footer.p-buttons {
-  width: fit-content;
-  align-items: flex-start;
+    width: fit-content;
+    align-items: flex-start;
 }
 
 
@@ -124,34 +124,34 @@ body:has(.l-header--small) .p-drawer__close__button {
 // ------------------------------
 
 .p-drawer.-is-opening {
-  height: auto;
+    height: auto;
 }
 
 .p-drawer.-is-opening::before {
-  opacity: 1;
-  transform: scaleX(1);
-  transition: transform 0.5s 0s ease-out;
+    opacity: 1;
+    transform: scaleX(1);
+    transition: transform 0.5s 0s ease-out;
 }
 
 .p-drawer.-is-opening::after {
-  bottom: 0;
-  opacity: 1;
-  transition: opacity 0.25s 0s ease-out;
+    bottom: 0;
+    opacity: 1;
+    transition: opacity 0.25s 0s ease-out;
 }
 
 .p-drawer.p-drawer--size-wide.-is-opening::before {
-  transform: scaleY(1);
+    transform: scaleY(1);
 }
 
 .p-drawer.-is-opening .p-drawer__close {
-  overflow: visible;
-  height: auto;
-  opacity: 1;
-  transition: all 0.3s 0.3s ease-out;
+    overflow: visible;
+    height: auto;
+    opacity: 1;
+    transition: all 0.3s 0.3s ease-out;
 }
 
 .p-drawer.p-drawer--size-wide.-is-opening .p-drawer__contents {
-  transform: translateY(0);
+    transform: translateY(0);
 }
 
 
@@ -163,43 +163,43 @@ body:has(.l-header--small) .p-drawer__close__button {
 body:has(.p-drawer[aria-hidden="false"]),
 body:has(.p-drawer.-is-opening),
 body:has(.p-drawer.-is-closing) {
-  overflow: hidden;
-  height: 100dvh;
+    overflow: hidden;
+    height: 100dvh;
 }
 
 // need `:not(.-is-closing)`
 .p-drawer[aria-hidden="false"]:not(.-is-closing) {
-  height: auto;
+    height: auto;
 }
 
 .p-drawer[aria-hidden="false"]:not(.-is-closing)::before {
-  opacity: 1;
-  transform: scaleX(1);
+    opacity: 1;
+    transform: scaleX(1);
 }
 
 .p-drawer[aria-hidden="false"]:not(.-is-closing)::after {
-  opacity: 1;
-  bottom: 0;
+    opacity: 1;
+    bottom: 0;
 }
 
 .p-drawer.p-drawer--size-wide[aria-hidden="false"]:not(.-is-closing)::before {
-  transform: scaleY(1);
+    transform: scaleY(1);
 }
 
 .p-drawer[aria-hidden="false"]:not(.-is-closing) .p-drawer__contents {
-  height: 100dvh;
-  opacity: 1;
-  transform: translateX(0);
+    height: 100dvh;
+    opacity: 1;
+    transform: translateX(0);
 }
 
 .p-drawer[aria-hidden="false"]:not(.-is-closing) .p-drawer__close {
-  overflow: visible;
-  height: auto;
-  opacity: 1;
+    overflow: visible;
+    height: auto;
+    opacity: 1;
 }
 
 .p-drawer.p-drawer--size-wide[aria-hidden="false"]:not(.-is-closing) .p-drawer__contents {
-  transform: translateY(0);
+    transform: translateY(0);
 }
 
 // ------------------------------
@@ -207,39 +207,39 @@ body:has(.p-drawer.-is-closing) {
 // ------------------------------
 
 .p-drawer.-is-closing::before {
-  transform: scaleX(0);
-  transition-duration: 0.5s;
-  transition-delay: 0.1s;
+    transform: scaleX(0);
+    transition-duration: 0.5s;
+    transition-delay: 0.1s;
 }
 
 .p-drawer.p-drawer--size-wide.-is-closing::before {
-  transform: scaleY(0);
+    transform: scaleY(0);
 }
 
 .p-drawer.-is-closing::after {
-  bottom: 0;
-  opacity: 0;
-  transition: opacity 0.25s 0.25s ease-out;
+    bottom: 0;
+    opacity: 0;
+    transition: opacity 0.25s 0.25s ease-out;
 }
 
 .p-drawer.-is-closing .p-drawer__contents {
-  opacity: 0;
-  height: auto;
-  transform: translateX(1rem);
-  transition-duration: 0.3s;
-  transition-delay: 0s;
+    opacity: 0;
+    height: auto;
+    transform: translateX(1rem);
+    transition-duration: 0.3s;
+    transition-delay: 0s;
 }
 
 .p-drawer.-is-closing .p-drawer__close {
-  overflow: visible;
-  height: auto;
-  opacity: 0;
-  transition-duration: 0.3s;
-  transition-delay: 0.3s;
+    overflow: visible;
+    height: auto;
+    opacity: 0;
+    transition-duration: 0.3s;
+    transition-delay: 0.3s;
 }
 
 .p-drawer.p-drawer--size-wide.-is-closing .p-drawer__contents {
-  transform: translateY(-1rem);
+    transform: translateY(-1rem);
 }
 
 
@@ -248,11 +248,11 @@ body:has(.p-drawer.-is-closing) {
 // ------------------------------
 
 .admin-bar .p-drawer {
-  @include g.mq(default) {
-    top: 46px;
-  }
+    @include g.mq(default) {
+        top: 46px;
+    }
 
-  @include g.mq(xga) {
-    top: 32px;
-  }
+    @include g.mq(xga) {
+        top: 32px;
+    }
 }

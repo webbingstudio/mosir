@@ -2276,7 +2276,8 @@ body:has(.l-header--large) .p-mv__stage {
 }
 
 @media screen and (max-width: 767.9px) {
-  .p-post__footer__link.p-horizontalMenu .c-nav__item + .c-nav__item::after, .p-horizontalMenu:not(.p-horizontalMenu--arrowed) .c-nav-item + .c-nav-item::after {
+  .p-post__footer__link.p-horizontalMenu .c-nav__item + .c-nav__item::after,
+  .p-horizontalMenu:not(.p-horizontalMenu--arrowed) .c-nav-item + .c-nav-item::after {
     display: none;
   }
 }

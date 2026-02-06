@@ -8,38 +8,38 @@
 // ------------------------------
 
 .p-buttonMenu__nav.c-nav {
-  justify-content: center;
-  column-gap: var(--spacing-xs);
+    justify-content: center;
+    column-gap: var(--spacing-xs);
 }
 
 .p-buttonMenu a {
-  @include g.flex( n, n, center, center );
-  min-width: 8em;
-  min-height: var(--nav-height-md);
-  padding-inline: var(--spacing-sm);
-  background-color: var(--ui-accent-color);
-  border: 0.125rem solid var(--ui-accent-color);
-  border-radius: 99em;
-  color: var(--ui-inverse-color);
-  font-size: var(--font-size-md);
-  font-weight: var(--fontWeight-bold);
-  line-height: var(--lineHeight-none);
-  transition: var(--transition-fast);
-  text-align: center;
-  text-decoration: none;
+    @include g.flex( n, n, center, center );
+    min-width: 8em;
+    min-height: var(--nav-height-md);
+    padding-inline: var(--spacing-sm);
+    background-color: var(--ui-accent-color);
+    border: 0.125rem solid var(--ui-accent-color);
+    border-radius: 99em;
+    color: var(--ui-inverse-color);
+    font-size: var(--font-size-md);
+    font-weight: var(--fontWeight-bold);
+    line-height: var(--lineHeight-none);
+    transition: var(--transition-fast);
+    text-align: center;
+    text-decoration: none;
 }
 
 .p-buttonMenu a:hover,
 .p-buttonMenu a:focus {
-  color: var(--ui-default-color);
-  background-color: var(--ui-inverse-color);
-  text-decoration: none;
+    color: var(--ui-default-color);
+    background-color: var(--ui-inverse-color);
+    text-decoration: none;
 }
 
 .p-buttonMenu a:focus {
-  outline: none;
+    outline: none;
 }
 
 .p-buttonMenu .menu-item.current-menu-item a {
-  text-decoration: none;
+    text-decoration: none;
 }

@@ -10,14 +10,14 @@
 // }
 
 .p-headlineList__inner {
-  @include g.flex(column, n, flex-start, stretch);
-  border-top: 0.0625rem solid var(--ui-border-light-color);
+    @include g.flex(column, n, flex-start, stretch);
+    border-top: 0.0625rem solid var(--ui-border-light-color);
 }
 
 .p-sectionHeader + .p-headlineList {
-  margin-top: var(--spacing-md);
+    margin-top: var(--spacing-md);
 }
 
 .p-headlineList__inner > * {
-  border-bottom: 0.0625rem solid var(--ui-border-light-color);
+    border-bottom: 0.0625rem solid var(--ui-border-light-color);
 }

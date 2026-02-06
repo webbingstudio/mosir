@@ -7,51 +7,51 @@
 // ------------------------------
 
 .c-label {
-  @include g.iFlex(n, n, center, center);
-  padding-inline: 0.25em;
-  min-width: 7em;
-  min-height: calc( var(--lineHeight-md) * 1em );
-  background-color: var(--label-bg);
-  color: var(--label-color);
-  font-size: var(--font-size-sm);
-  line-height: var(--lineHeight-xs);
-  text-align: center;
-  vertical-align: middle;
+    @include g.iFlex(n, n, center, center);
+    padding-inline: 0.25em;
+    min-width: 7em;
+    min-height: calc( var(--lineHeight-md) * 1em );
+    background-color: var(--label-bg);
+    color: var(--label-color);
+    font-size: var(--font-size-sm);
+    line-height: var(--lineHeight-xs);
+    text-align: center;
+    vertical-align: middle;
 }
 
 a.c-label {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 @include g.mq(hover) {
 
-  a.c-label:hover {
-    color: var(--ui-inverse-color);
-    background-color: var(--label-color);
-  }
+    a.c-label:hover {
+        color: var(--ui-inverse-color);
+        background-color: var(--label-color);
+    }
 
 }
 
 a.c-label:focus {
-  color: var(--ui-inverse-color);
-  background-color: var(--label-color);
+    color: var(--ui-inverse-color);
+    background-color: var(--label-color);
 }
 
 .c-label.c-label--primary {
-  background-color: var(--color-primary-fade);
-  border-color: var(--color-primary);
+    background-color: var(--color-primary-fade);
+    border-color: var(--color-primary);
 }
 
 @include g.mq(hover) {
 
-  a.c-label.c-label--primary:hover {
-    color: var(--ui-inverse-color);
-    background-color: var(--color-primary);
-  }
+    a.c-label.c-label--primary:hover {
+        color: var(--ui-inverse-color);
+        background-color: var(--color-primary);
+    }
 
 }
 
 a.c-label.c-label--primary:focus {
-  color: var(--ui-inverse-color);
-  background-color: var(--color-primary);
+    color: var(--ui-inverse-color);
+    background-color: var(--color-primary);
 }

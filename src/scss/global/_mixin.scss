@@ -9,7 +9,7 @@
 // ------------------------------
 // mq (mediaquery)
 // https://zenn.dev/web_tips/articles/095d7419507ca9
-// 
+//
 // ex1. @include g.mq(){};
 // ex2. @include g.mq(xga){};
 // ex3. @include g.mq(max-default){};
@@ -83,45 +83,38 @@
 // - Supports hover states.
 // ------------------------------
 @mixin arrow( $direction: 'right' ) {
+    @at-root {
+        #{&} {
+            position: relative;
+        }
 
-  @at-root {
-    #{&} {
-      position: relative;
+        #{&}::before {
+            position: absolute;
+            content: "";
+            width: 0.55em;
+            height: 0.55em;
+            border-top: 0.125em solid var(--ui-accent-color);
+            border-right: 0.125em solid var(--ui-accent-color);
+            @if $direction == 'left' {
+                rotate: -135deg;
+            } @else if $direction == 'top' {
+                rotate: -45deg;
+            } @else if $direction == 'bottom' {
+                rotate: 135deg;
+            } @else {
+                rotate: 45deg;
+            }
+        }
     }
-
-    #{&}::before {
-      position: absolute;
-      content: "";
-      width: 0.55em;
-      height: 0.55em;
-      border-top: 0.125em solid var(--ui-accent-color);
-      border-right: 0.125em solid var(--ui-accent-color);
-      @if $direction == 'left' {
-        rotate: -135deg;
-      } @else if $direction == 'top' {
-        rotate: -45deg;
-      } @else if $direction == 'bottom' {
-        rotate: 135deg;
-      } @else {
-        rotate: 45deg;
-      }
-
-    }
-
-  }
-
 }
 
 @mixin arrow-current( $direction: 'right' ) {
-
-  @at-root {
-    #{&}::before {
-      opacity: 0.3;
-      border-color: currentColor;
+    @at-root {
+        #{&}::before {
+            opacity: 0.3;
+            border-color: currentColor;
+        }
     }
-
-  }
-
 }
 
 

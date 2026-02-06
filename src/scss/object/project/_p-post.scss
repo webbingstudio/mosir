@@ -7,9 +7,9 @@
 // ------------------------------
 
 .p-post__title {
-  overflow-wrap: anywhere;
-  word-break: normal;
-  line-break: strict;
+    overflow-wrap: anywhere;
+    word-break: normal;
+    line-break: strict;
 }
 
 .p-post__footer__link .c-nav__item {
@@ -20,12 +20,12 @@
 // }
 
 .p-post__header::after {
-  display: block;
-  content: "";
-  width: 100%;
-  margin-top: var(--spacing-md);
-  max-width: var(--container-default-width);
-  margin-inline: auto;
+    display: block;
+    content: "";
+    width: 100%;
+    margin-top: var(--spacing-md);
+    max-width: var(--container-default-width);
+    margin-inline: auto;
 }
 
 .p-post__header__contents {
@@ -33,9 +33,9 @@
 }
 
 .p-post__header__meta {
-  @include g.flex( n, wrap, flex-start, center );
-  gap: var(--spacing-sm);
-  margin-bottom: var(--spacing-xs);
+    @include g.flex( n, wrap, flex-start, center );
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-xs);
 }
 
 .p-post__header__meta > * {
@@ -46,20 +46,20 @@
 // }
 
 .p-post__category {
-  @include g.flex( n, wrap, flex-start, center );
-  gap: var(--spacing-xs);
+    @include g.flex( n, wrap, flex-start, center );
+    gap: var(--spacing-xs);
 }
 
 // .p-post__footer {
 // }
 
 .p-post__footer::before {
-  display: block;
-  content: "";
-  width: 100%;
-  margin-bottom: var(--spacing-md);
-  max-width: var(--container-default-width);
-  margin-inline: auto;
+    display: block;
+    content: "";
+    width: 100%;
+    margin-bottom: var(--spacing-md);
+    max-width: var(--container-default-width);
+    margin-inline: auto;
 }
 
 .p-post__footer__contents {
@@ -107,7 +107,8 @@
     }
 }
 
-.p-post__footer__link.p-horizontalMenu .c-nav__item + .c-nav__item::after, .p-horizontalMenu:not(.p-horizontalMenu--arrowed) .c-nav-item + .c-nav-item::after {
+.p-post__footer__link.p-horizontalMenu .c-nav__item + .c-nav__item::after,
+.p-horizontalMenu:not(.p-horizontalMenu--arrowed) .c-nav-item + .c-nav-item::after {
     @include g.mq(default-max) {
         display: none;
     }
@@ -131,7 +132,7 @@
 // ------------------------------
 
 .p-post.p-post--post .p-post__header::after {
-  border-bottom: 0.0625rem solid var(--ui-border-light-color);
+    border-bottom: 0.0625rem solid var(--ui-border-light-color);
 }
 
 .p-post.p-post--post .p-post__contents {
@@ -139,5 +140,5 @@
 }
 
 .p-post.p-post--post .p-post__footer::before {
-  border-top: 0.0625rem solid var(--ui-border-light-color);
+    border-top: 0.0625rem solid var(--ui-border-light-color);
 }

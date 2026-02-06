@@ -9,41 +9,41 @@
 // ------------------------------
 
 .c-title {
-  display: block;
-  margin: 0;
-  font-weight: var(--fontWeight-bold);
-  font-family: var(--fontFamily-default);
-  line-height: var(--lineHeight-sm);
+    display: block;
+    margin: 0;
+    font-weight: var(--fontWeight-bold);
+    font-family: var(--fontFamily-default);
+    line-height: var(--lineHeight-sm);
 }
 
 .c-title a {
-  color: currentColor;
+    color: currentColor;
 }
 
 .c-title.c-title--center {
-  text-align: center;
+    text-align: center;
 }
 
 .c-title.c-title--lv1 {
-  font-size: var(--font-size-3xl);
+    font-size: var(--font-size-3xl);
 }
 
 .c-title.c-title--lv2 {
-  font-size: var(--font-size-2xl);
+    font-size: var(--font-size-2xl);
 }
 
 .c-title.c-title--lv3 {
-  font-size: var(--font-size-xl);
+    font-size: var(--font-size-xl);
 }
 
 .c-title.c-title--lv4 {
-  font-size: var(--font-size-lg);
+    font-size: var(--font-size-lg);
 }
 
 .c-title.c-title--lv5 {
-  font-size: var(--font-size-md);
+    font-size: var(--font-size-md);
 }
 
 .c-title.c-title--lv6 {
-  font-size: var(--font-size-sm);
+    font-size: var(--font-size-sm);
 }

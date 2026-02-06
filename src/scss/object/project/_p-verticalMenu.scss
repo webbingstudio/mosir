@@ -11,30 +11,30 @@
 // ------------------------------
 
 .p-verticalMenu__nav.c-nav {
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: flex-start;
-  gap: var(--spacing-md);
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: var(--spacing-md);
 }
 
 .p-verticalMenu__nav.c-nav > * {
-  flex: 0;
+    flex: 0;
 }
 
 @include g.mq(default) {
-  .p-verticalMenu__nav.c-nav > * {
-    flex-basis: calc( 50% - ( var(--spacing-md) / 2 ) );
-  }
+    .p-verticalMenu__nav.c-nav > * {
+        flex-basis: calc( 50% - ( var(--spacing-md) / 2 ) );
+    }
 }
 
 @include g.mq(wide) {
-  .p-verticalMenu__nav.c-nav > * {
-    flex-basis: calc( 33.33% - ( ( var(--spacing-md) * 2 ) / 3 ) );
-  }
+    .p-verticalMenu__nav.c-nav > * {
+        flex-basis: calc( 33.33% - ( ( var(--spacing-md) * 2 ) / 3 ) );
+    }
 }
 
 .p-verticalMenu .current-menu-item > a {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
 // ------------------------------
@@ -42,24 +42,24 @@
 // ------------------------------
 
 .p-verticalMenu__nav > .menu-item > a {
-  position: relative;
-  font-size: var(--font-size-xl);
-  font-weight: var(--fontWeight-bold);
-  padding-left: var(--spacing-md );
+    position: relative;
+    font-size: var(--font-size-xl);
+    font-weight: var(--fontWeight-bold);
+    padding-left: var(--spacing-md );
 }
 
 .p-verticalMenu__nav > .menu-item > a::before {
-  @include g.position(absolute, calc( 50% - 0.0625rem ), n, n, 0);
-  content: "";
-  width: calc( var(--spacing-md) - var(--spacing-xs) );
-  height: 0.125rem;
-  background-color: var(--ui-accent-color);
-  opacity: 1;
+    @include g.position(absolute, calc( 50% - 0.0625rem ), n, n, 0);
+    content: "";
+    width: calc( var(--spacing-md) - var(--spacing-xs) );
+    height: 0.125rem;
+    background-color: var(--ui-accent-color);
+    opacity: 1;
 }
 
 .p-verticalMenu__nav > .current-menu-item > a::before {
-  opacity: 0.3;
-  background-color: currentColor;
+    opacity: 0.3;
+    background-color: currentColor;
 }
 
 
@@ -69,29 +69,29 @@
 
 // 1.25em = left spacing of arrowed link
 .p-verticalMenu__nav > .menu-item > .sub-menu {
-  padding-left: calc( var(--spacing-md) - 1.25em );
+    padding-left: calc( var(--spacing-md) - 1.25em );
 }
 
 .p-verticalMenu__nav .sub-menu .menu-item {
-  margin-top: 1.25em;
+    margin-top: 1.25em;
 }
 
 .p-verticalMenu__nav .sub-menu a {
-  padding-left: 1.25em;
-  align-items: flex-start;
-  justify-content: flex-start;
-  @include g.arrow();
+    padding-left: 1.25em;
+    align-items: flex-start;
+    justify-content: flex-start;
+    @include g.arrow();
 }
 
 .p-verticalMenu__nav .sub-menu a::before {
-  // Since the arrow was rotated with rotate, it needs to move diagonally.
-  top: calc( var(--lineHeight-xs) * 1em / 2 );
-  left: 0;
-  transform: translateX(-33%) translateY(-33%);
+    // Since the arrow was rotated with rotate, it needs to move diagonally.
+    top: calc( var(--lineHeight-xs) * 1em / 2 );
+    left: 0;
+    transform: translateX(-33%) translateY(-33%);
 }
 
 .p-verticalMenu__nav .sub-menu .current-menu-item > a {
-  @include g.arrow-current();
+    @include g.arrow-current();
 }
 
 // ------------------------------
@@ -99,9 +99,9 @@
 // ------------------------------
 
 .p-verticalMenu__nav .sub-menu .sub-menu {
-  padding-left: 1.25em;
+    padding-left: 1.25em;
 }
 
 .p-verticalMenu__nav .sub-menu > .menu-item:not(:last-child) .sub-menu {
-  margin-bottom: 1.5em;
+    margin-bottom: 1.5em;
 }

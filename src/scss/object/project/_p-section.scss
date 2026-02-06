@@ -7,61 +7,61 @@
 // ------------------------------
 
 .p-section {
-  @include g.flex( column, n, flex-start, stretch );
+    @include g.flex( column, n, flex-start, stretch );
 }
 
 .p-section__header {
-  margin-bottom: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
 }
 
 // .p-section__title.c-title {
 // }
 
 .p-section__subTitle.c-title {
-  color: var(--ui-accent-color);
-  margin-top: var(--spacing-xs);
+    color: var(--ui-accent-color);
+    margin-top: var(--spacing-xs);
 }
 
 // .p-section__contents {
 // }
 
 .p-section__footer {
-  margin-top: var(--spacing-sm);
+    margin-top: var(--spacing-sm);
 }
 
 .p-section__link {
-  margin: 0;
-  text-align: right;
+    margin: 0;
+    text-align: right;
 }
 
 .p-section__link a {
-  @include g.iFlex(n, n, n, center);
-  gap: var(--spacing-xs);
-  line-height: var(--lineHeight-xs);
-  color: var(--ui-default-color);
-  text-decoration: none;
-  padding-left: 1.25em;
-  @include g.arrow();
+    @include g.iFlex(n, n, n, center);
+    gap: var(--spacing-xs);
+    line-height: var(--lineHeight-xs);
+    color: var(--ui-default-color);
+    text-decoration: none;
+    padding-left: 1.25em;
+    @include g.arrow();
 }
 
 .p-section__link a::before {
-  // Since the arrow was rotated with rotate, it needs to move diagonally.
-  top: calc( var(--lineHeight-xs) * 1em / 2 );
-  left: 0;
-  transform: translateX(-33%) translateY(-33%);
+    // Since the arrow was rotated with rotate, it needs to move diagonally.
+    top: calc( var(--lineHeight-xs) * 1em / 2 );
+    left: 0;
+    transform: translateX(-33%) translateY(-33%);
 }
 
 @include g.mq(hover) {
 
-  .p-section__link a:hover {
-    color: var(--ui-default-color);
-    text-decoration: underline;
-  }
+    .p-section__link a:hover {
+        color: var(--ui-default-color);
+        text-decoration: underline;
+    }
 
 }
 
 .p-section__link a:focus {
-  color: var(--ui-default-color);
+    color: var(--ui-default-color);
 }
 
 
@@ -70,34 +70,34 @@
 // ------------------------------
 
 .p-section.p-section--horizontal {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto;
-  justify-content: center;
-  column-gap: var(--spacing-lg);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    justify-content: center;
+    column-gap: var(--spacing-lg);
 
-  @include g.mq(xga) {
-    max-width: calc( var(--container-wide-width) + ( var(--screen-x-spacing) * 2 ) );
-    grid-template-columns: 15rem 1fr;
-  }
+    @include g.mq(xga) {
+        max-width: calc( var(--container-wide-width) + ( var(--screen-x-spacing) * 2 ) );
+        grid-template-columns: 15rem 1fr;
+    }
 }
 
 .p-section.p-section--horizontal .p-section__header {
-  @include g.mq(xga) {
-    margin-bottom: 0;
-  }
+    @include g.mq(xga) {
+        margin-bottom: 0;
+    }
 }
 
 .p-section.p-section--horizontal .p-section__footer {
-  @include g.mq(xga) {
-    grid-row: 2 / -1;
-    grid-column: 2 / -1;
-  }
+    @include g.mq(xga) {
+        grid-row: 2 / -1;
+        grid-column: 2 / -1;
+    }
 }
 
 .p-section.p-section--horizontal .p-section__title,
 .p-section.p-section--horizontal .p-section__subTitle {
-  @include g.mq(xga) {
-    text-align: right;
-  }
+    @include g.mq(xga) {
+        text-align: right;
+    }
 }

@@ -9,75 +9,75 @@
 // ------------------------------
 
 .c-toggleButton {
-  -webkit-appearance: none;
-  appearance: none;
-  @include g.flex( n, n, center, center );
-  width: var(--drawer-toggle-size);
-  height: var(--drawer-toggle-size);
-  padding: 0;
-  border: 0 none;
-  background-color: transparent;
-  color: var(--body-color);
-  cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
+    @include g.flex( n, n, center, center );
+    width: var(--drawer-toggle-size);
+    height: var(--drawer-toggle-size);
+    padding: 0;
+    border: 0 none;
+    background-color: transparent;
+    color: var(--body-color);
+    cursor: pointer;
 }
 
 .c-toggleButton:focus {
-  outline-color: currentColor;
+    outline-color: currentColor;
 }
 
 .c-toggleButton__label {
-  position: absolute;
-  clip: rect(1px, 1px, 1px, 1px);
-  -webkit-clip-path: inset(0px 0px 99.9% 99.9%);
-  clip-path: inset(0px 0px 99.9% 99.9%);
-  overflow: hidden;
-  height: 1px;
-  width: 1px;
+    position: absolute;
+    clip: rect(1px, 1px, 1px, 1px);
+    -webkit-clip-path: inset(0px 0px 99.9% 99.9%);
+    clip-path: inset(0px 0px 99.9% 99.9%);
+    overflow: hidden;
+    height: 1px;
+    width: 1px;
 }
 
 .c-toggleButton__icon {
-  position: relative;
-  width: 2rem;
-  height: 0.125rem;
-  background-color: currentColor;
-  transform-origin: center center;
-  transition: var(--transition-slow);
+    position: relative;
+    width: 2rem;
+    height: 0.125rem;
+    background-color: currentColor;
+    transform-origin: center center;
+    transition: var(--transition-slow);
 }
 
 .c-toggleButton__icon::before,
 .c-toggleButton__icon::after {
-  content: "";
-  width: 100%;
-  height: 0.125rem;
-  background-color: currentColor;
-  transition: var(--transition-cubic);
+    content: "";
+    width: 100%;
+    height: 0.125rem;
+    background-color: currentColor;
+    transition: var(--transition-cubic);
 }
 
 .c-toggleButton__icon::before {
-  @include g.position( absolute, -0.65rem, n, n, 0, n );
+    @include g.position( absolute, -0.65rem, n, n, 0, n );
 }
 
 .c-toggleButton__icon::after {
-  @include g.position( absolute, n, 0, -0.65rem, n, n );
+    @include g.position( absolute, n, 0, -0.65rem, n, n );
 }
 
 .c-toggleButton[aria-expanded="true"] .c-toggleButton__icon {
-  background-color: transparent;
-  rotate: 45deg;
+    background-color: transparent;
+    rotate: 45deg;
 }
 
 .c-toggleButton[aria-expanded="true"] .c-toggleButton__icon::before,
 .c-toggleButton[aria-expanded="true"] .c-toggleButton__icon::after {
-  transform: scaleX(1.14); // root 2
+    transform: scaleX(1.14); // root 2
 }
 
 .c-toggleButton[aria-expanded="true"] .c-toggleButton__icon::before {
-  top: 0;
+    top: 0;
 }
 
 .c-toggleButton[aria-expanded="true"] .c-toggleButton__icon::after {
-  bottom: 0;
-  rotate: 90deg;
+    bottom: 0;
+    rotate: 90deg;
 }
 
 
@@ -86,20 +86,20 @@
 // ------------------------------
 
 .c-toggleButton--lg .c-toggleButton__icon {
-  @include g.mq(default) {
-    width: 100%;
-  }
+    @include g.mq(default) {
+        width: 100%;
+    }
 }
 
 .c-toggleButton--lg .c-toggleButton__icon::before {
-  @include g.mq(default) {
-    top: -0.875rem;
-  }
+    @include g.mq(default) {
+        top: -0.875rem;
+    }
 }
 
 .c-toggleButton--lg .c-toggleButton__icon::after {
-  @include g.mq(default) {
-    bottom: -0.875rem;
-  }
+    @include g.mq(default) {
+        bottom: -0.875rem;
+    }
 }
 

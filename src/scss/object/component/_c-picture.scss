@@ -7,33 +7,33 @@
 // ------------------------------
 
 .c-picture {
-  overflow: hidden;
-  display: block;
-  width: 100%;
-  margin: 0;
-  background-color: var(--body-bg);
+    overflow: hidden;
+    display: block;
+    width: 100%;
+    margin: 0;
+    background-color: var(--body-bg);
 }
 
 .c-picture img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center center;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
 }
 
 .c-picture.c-picture--1to1 {
-  aspect-ratio: 1 / 1;
+    aspect-ratio: 1 / 1;
 }
 
 .c-picture.c-picture--2to3 {
-  aspect-ratio: 2 / 3;
+    aspect-ratio: 2 / 3;
 }
 
 .c-picture.c-picture--3to2 {
-  aspect-ratio: 3 / 2;
+    aspect-ratio: 3 / 2;
 }
 
 .c-picture.c-picture--16to9 {
-  aspect-ratio: 16 / 9;
+    aspect-ratio: 16 / 9;
 }

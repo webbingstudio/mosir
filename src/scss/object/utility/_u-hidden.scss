@@ -2,26 +2,26 @@
 @use "sass:math";
 
 @include g.mq(wide) {
-  .u-hidden--wide {
-    display: none !important;
-  }
+    .u-hidden--wide {
+        display: none !important;
+    }
 }
 
 @include g.mq(xga) {
-  .u-hidden--xga,
-  .u-hidden--pc {
-    display: none !important;
-  }
+    .u-hidden--xga,
+    .u-hidden--pc {
+        display: none !important;
+    }
 }
 
 @include g.mq(default) {
-  .u-hidden--default {
-    display: none !important;
-  }
+    .u-hidden--default {
+        display: none !important;
+    }
 }
 
 @include g.mq(default-max) {
-  .u-hidden--sp {
-    display: none !important;
-  }
+    .u-hidden--sp {
+        display: none !important;
+    }
 }

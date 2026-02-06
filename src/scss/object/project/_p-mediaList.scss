@@ -10,10 +10,10 @@
 // }
 
 .p-mediaList__inner {
-  @include g.flex(column, n, flex-start, stretch);
-  gap: var(--spacing-md);
+    @include g.flex(column, n, flex-start, stretch);
+    gap: var(--spacing-md);
 }
 
 .p-sectionHeader + .p-mediaList {
-  margin-top: var(--spacing-md);
+    margin-top: var(--spacing-md);
 }

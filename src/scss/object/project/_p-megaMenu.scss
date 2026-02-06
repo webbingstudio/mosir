@@ -12,7 +12,7 @@
 // ------------------------------
 
 .p-megaMenu {
-  position: relative;
+    position: relative;
 }
 
 // ------------------------------
@@ -20,67 +20,67 @@
 // ------------------------------
 
 .p-megaMenu__nav {
-  flex-wrap: nowrap;
-  column-gap: 0;
+    flex-wrap: nowrap;
+    column-gap: 0;
 }
 
 .p-megaMenu__nav > .menu-item {
-  font-size: var(--font-size-md);
-  padding-inline: 1.5em;
+    font-size: var(--font-size-md);
+    padding-inline: 1.5em;
 }
 
 .p-megaMenu__nav > .menu-item:first-child {
-  padding-left: 0;
+    padding-left: 0;
 }
 
 .p-megaMenu__nav > .menu-item:last-child {
-  padding-right: 0;
+    padding-right: 0;
 }
 
 .p-megaMenu__nav > .menu-item > a {
-  position: relative;
-  justify-content: center;
-  width: 100%;
-  min-height: var(--nav-height-md);
-  font-weight: var(--fontWeight-bold);
-  letter-spacing: 0.1em;
-  white-space: nowrap;
-  z-index: 21; // Links overlay submenus on hover or focus.
+    position: relative;
+    justify-content: center;
+    width: 100%;
+    min-height: var(--nav-height-md);
+    font-weight: var(--fontWeight-bold);
+    letter-spacing: 0.1em;
+    white-space: nowrap;
+    z-index: 21; // Links overlay submenus on hover or focus.
 }
 
 .p-megaMenu__nav > .menu-item.current-menu-item > a {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 .p-megaMenu__nav > .menu-item > a::after {
-  content: "";
-  @include g.position(absolute, n, 0, 0, n);
-  width: 100%;
-  height: 0.1875rem;
-  background-color: var(--ui-accent-color);
-  transform-origin: center center;
-  transition: var(--transition-cubic);
-  opacity: 1;
-  transform: translateY(0);
+    content: "";
+    @include g.position(absolute, n, 0, 0, n);
+    width: 100%;
+    height: 0.1875rem;
+    background-color: var(--ui-accent-color);
+    transform-origin: center center;
+    transition: var(--transition-cubic);
+    opacity: 1;
+    transform: translateY(0);
 }
 
 @include g.mq(hover) {
-  .p-megaMenu__nav > .menu-item > a:hover {
-    text-decoration: none;
-  }
+    .p-megaMenu__nav > .menu-item > a:hover {
+        text-decoration: none;
+    }
 
-  // When you hover over a navigation item,
-  // it will remove the decorations from all other items (even your current location!).
-  .p-megaMenu__nav > .menu-item:not([class*="current-menu-"]):not(:hover) > a::after,
-  .p-megaMenu__nav:has(>.menu-item:hover) > .menu-item:not(:hover) > a::after {
-    opacity: 0;
-    transform: translateY(-200%);
-  }
+    // When you hover over a navigation item,
+    // it will remove the decorations from all other items (even your current location!).
+    .p-megaMenu__nav > .menu-item:not([class*="current-menu-"]):not(:hover) > a::after,
+    .p-megaMenu__nav:has(>.menu-item:hover) > .menu-item:not(:hover) > a::after {
+        opacity: 0;
+        transform: translateY(-200%);
+    }
 
 } 
 
 .p-megaMenu__nav > .menu-item > a:focus {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 // ------------------------------
@@ -88,63 +88,63 @@
 // ------------------------------
 
 .p-megaMenu__nav .sub-menu {
-  font-size: var(--font-size-md);
+    font-size: var(--font-size-md);
 }
 
 .p-megaMenu__nav > .menu-item > .sub-menu {
-  @include g.position(fixed, n, n, n, calc( 50% - ( var(--container-wide-width) / 2 ) ), n);
-  @include g.flex(n, wrap, flex-start, flex-start);
-  gap: var(--spacing-sm);
-  width: 100%;
-  max-width: var(--container-wide-width);
-  padding-inline: var(--spacing-md);
-  color: var(--ui-default-color);
-  transition: var(--transition-cubic);
+    @include g.position(fixed, n, n, n, calc( 50% - ( var(--container-wide-width) / 2 ) ), n);
+    @include g.flex(n, wrap, flex-start, flex-start);
+    gap: var(--spacing-sm);
+    width: 100%;
+    max-width: var(--container-wide-width);
+    padding-inline: var(--spacing-md);
+    color: var(--ui-default-color);
+    transition: var(--transition-cubic);
 }
 
 .p-megaMenu__nav > .menu-item > .sub-menu::after {
-  content: "";
-  @include g.position(absolute, 0, n, n, 0, 11);
-  width: 100%;
-  height: 100%;
-  background-color: var(--body-bg);
-  border-top: 0.125rem solid var(--ui-accent-color);
-  box-shadow: var(--shadow-sm);
-  opacity: 0;
-  transform: scaleY(0);
-  transform-origin: top center;
-  transition: all 0.5s 0.3s ease-in;
+    content: "";
+    @include g.position(absolute, 0, n, n, 0, 11);
+    width: 100%;
+    height: 100%;
+    background-color: var(--body-bg);
+    border-top: 0.125rem solid var(--ui-accent-color);
+    box-shadow: var(--shadow-sm);
+    opacity: 0;
+    transform: scaleY(0);
+    transform-origin: top center;
+    transition: all 0.5s 0.3s ease-in;
 }
 
 .p-megaMenu__nav > .menu-item > .sub-menu > * {
-  @include g.position(relative, n, n, n, n, 12);
-  height: 0;
-  opacity: 0;
-  flex-grow: 0;
-  flex-basis: 15em;
-  transform: translateY(-10%);
-  transition: all 0.2s 0s ease-in;
+    @include g.position(relative, n, n, n, n, 12);
+    height: 0;
+    opacity: 0;
+    flex-grow: 0;
+    flex-basis: 15em;
+    transform: translateY(-10%);
+    transition: all 0.2s 0s ease-in;
 }
 
 .p-megaMenu__nav > .menu-item:hover > .sub-menu,
 .p-megaMenu__nav > .menu-item:has(a:focus) > .sub-menu {
-  padding-block: var(--spacing-md);
-  transition: var(--transition-cubic);
+    padding-block: var(--spacing-md);
+    transition: var(--transition-cubic);
 }
 
 .p-megaMenu__nav > .menu-item:hover > .sub-menu::after,
 .p-megaMenu__nav > .menu-item:has(a:focus) > .sub-menu::after {
-  opacity: 1;
-  transform: scaleY(1);
-  transition: var(--transition-cubic);
+    opacity: 1;
+    transform: scaleY(1);
+    transition: var(--transition-cubic);
 }
 
 .p-megaMenu__nav > .menu-item:hover > .sub-menu > *,
 .p-megaMenu__nav > .menu-item:has(a:focus) > .sub-menu > * {
-  height: auto;
-  opacity: 1;
-  transform: translateY(0);
-  transition: var(--transition-cubic);
+    height: auto;
+    opacity: 1;
+    transform: translateY(0);
+    transition: var(--transition-cubic);
 }
 
 
@@ -153,35 +153,35 @@
 // ------------------------------
 
 @include g.mq(default) {
-  .p-megaMenu__nav.c-nav > * {
-    flex-basis: calc( 50% - ( var(--spacing-md) / 2 ) );
-  }
+    .p-megaMenu__nav.c-nav > * {
+        flex-basis: calc( 50% - ( var(--spacing-md) / 2 ) );
+    }
 }
 
 @include g.mq(wide) {
-  .p-megaMenu__nav.c-nav > * {
-    flex-basis: calc( 33.33% - ( ( var(--spacing-md) * 2 ) / 3 ) );
-  }
+    .p-megaMenu__nav.c-nav > * {
+        flex-basis: calc( 33.33% - ( ( var(--spacing-md) * 2 ) / 3 ) );
+    }
 }
 
 .p-megaMenu__nav .sub-menu a {
-  // The height are secured to make it easy to click.
-  padding-left: 1.25em;
-  align-items: flex-start;
-  justify-content: flex-start;
-  @include g.arrow();
+    // The height are secured to make it easy to click.
+    padding-left: 1.25em;
+    align-items: flex-start;
+    justify-content: flex-start;
+    @include g.arrow();
 }
 
 .p-megaMenu__nav .sub-menu a::before {
-  // Since the arrow was rotated with rotate, it needs to move diagonally.
-  top: calc( var(--lineHeight-xs) * 1em / 2 );
-  left: 0;
-  transform: translateX(-33%) translateY(-33%);
+    // Since the arrow was rotated with rotate, it needs to move diagonally.
+    top: calc( var(--lineHeight-xs) * 1em / 2 );
+    left: 0;
+    transform: translateX(-33%) translateY(-33%);
 }
 
 .p-megaMenu__nav .sub-menu .current-menu-item > a {
-  text-decoration: underline;
-  @include g.arrow-current();
+    text-decoration: underline;
+    @include g.arrow-current();
 }
 
 
@@ -190,7 +190,7 @@
 // ------------------------------
 
 .p-megaMenu__nav .sub-menu .sub-menu {
-  display: none;
+    display: none;
 }
 
 
@@ -199,6 +199,6 @@
 // ------------------------------
 
 .p-megaMenu.p-megaMenu--lg .p-megaMenu__nav > .menu-item {
-  font-size: var(--font-size-lg);
+    font-size: var(--font-size-lg);
 }
 

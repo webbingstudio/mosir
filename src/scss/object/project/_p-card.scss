@@ -7,123 +7,123 @@
 // ------------------------------
 
 .p-card {
-  position: relative;
+    position: relative;
 }
 
 .p-card::after {
-  content: "";
-  @include g.position( absolute, -0.25rem, -0.25rem, -0.25rem, -0.25rem, 11 );
-  border: 0.125rem solid var(--ui-accent-color);
-  border-radius: var(--border-radius-sm);
-  opacity: 0;
+    content: "";
+    @include g.position( absolute, -0.25rem, -0.25rem, -0.25rem, -0.25rem, 11 );
+    border: 0.125rem solid var(--ui-accent-color);
+    border-radius: var(--border-radius-sm);
+    opacity: 0;
 }
 
 .p-card__inner {
-  display: block;
-  position: relative;
-  z-index: 12;
+    display: block;
+    position: relative;
+    z-index: 12;
 }
 
 a.p-card__inner {
-  color: currentColor;
-  text-decoration: none;
+    color: currentColor;
+    text-decoration: none;
 }
 
 @include g.mq(hover) {
 
-  .p-card:has(a.p-card__inner:hover)::after {
-    opacity: 1;
-    transition: var(--transition-slow);
-    outline: none;
-  }
+    .p-card:has(a.p-card__inner:hover)::after {
+        opacity: 1;
+        transition: var(--transition-slow);
+        outline: none;
+    }
 
-  a.p-card__inner:hover {
-    text-decoration: none;
-  }
+    a.p-card__inner:hover {
+        text-decoration: none;
+    }
 
 }
 
 a.p-card__inner:focus {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 a.p-card__inner .p-card__title {
-  width: 100%;
+    width: 100%;
 }
 
 // .p-card__image {
 // }
 
 .p-card__image img {
-  transition: var(--transition-slow);
+    transition: var(--transition-slow);
 }
 
 .p-card__contents {
-  position: relative;
-  @include g.flex( column, n, flex-start, stretch );
-  gap: var(--spacing-xs);
-  padding-block: var(--spacing-xs);
-  container-type: inline-size;
+    position: relative;
+    @include g.flex( column, n, flex-start, stretch );
+    gap: var(--spacing-xs);
+    padding-block: var(--spacing-xs);
+    container-type: inline-size;
 }
 
 .p-card__contents > * {
-  margin: 0;
+    margin: 0;
 }
 
 .p-card__meta {
-  @include g.flex( n, wrap, flex-start, center );
-  gap: var(--spacing-xs) var(--spacing-sm);
+    @include g.flex( n, wrap, flex-start, center );
+    gap: var(--spacing-xs) var(--spacing-sm);
 }
 
 .p-card__meta > * {
-  flex-grow: 0;
+    flex-grow: 0;
 }
 
 .p-card__terms {
-  @include g.position( absolute, n, n, 100%, 0, 12 );
+    @include g.position( absolute, n, n, 100%, 0, 12 );
 }
 
 .p-card__terms .c-label {
-  font-size: var(--font-size-sm);
+    font-size: var(--font-size-sm);
 }
 
 @include g.mq(hover) {
 
-  a.p-card__inner:hover .p-card__image img,
-  a.p-card__image:hover img {
-    transform: scale( 1.1 );
-  }
+    a.p-card__inner:hover .p-card__image img,
+    a.p-card__image:hover img {
+        transform: scale( 1.1 );
+    }
 
 }
 
 .p-card__title.c-title {
-    overflow: hidden;
-    display: -webkit-box;
-    text-overflow: ellipsis;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;
-    max-height: calc( ( var(--lineHeight-md) * 3em ) );
+        overflow: hidden;
+        display: -webkit-box;
+        text-overflow: ellipsis;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        max-height: calc( ( var(--lineHeight-md) * 3em ) );
 }
 
 .p-card__contents .c-summary {
-    overflow: hidden;
-    display: -webkit-box;
-    text-overflow: ellipsis;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;
-    max-height: calc( ( var(--lineHeight-md) * 3em ) );
+        overflow: hidden;
+        display: -webkit-box;
+        text-overflow: ellipsis;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        max-height: calc( ( var(--lineHeight-md) * 3em ) );
 }
 
 // If the content width is narrow, the font size will be reduced.
 @container ( width <= 18rem ) {
 
-  .p-card__contents .c-date,
-  .p-card__contents .c-summary {
-    font-size: var(--font-size-sm);
-  }
+    .p-card__contents .c-date,
+    .p-card__contents .c-summary {
+        font-size: var(--font-size-sm);
+    }
 
-  .p-card__contents .p-card__title.c-title {
-    font-size: var(--font-size-sm);
-  }
+    .p-card__contents .p-card__title.c-title {
+        font-size: var(--font-size-sm);
+    }
 
 }

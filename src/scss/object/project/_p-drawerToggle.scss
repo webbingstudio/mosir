@@ -8,19 +8,19 @@
 // ------------------------------
 
 .p-drawerToggle {
-  @include g.position( fixed, 0, 0, n, 0, 112 );
+    @include g.position( fixed, 0, 0, n, 0, 112 );
 }
 
 .p-drawerToggle.p-drawerToggle--mobile {
-  @include g.mq(xga) {
-    display: none;
-  }
+    @include g.mq(xga) {
+        display: none;
+    }
 }
 
 .p-drawerToggle__contents.l-container {
-  position: relative;
+    position: relative;
 }
 
 .p-drawerToggle__button {
-  @include g.position( absolute, var(--spacing-xs), var(--screen-x-spacing), n, n, 11 ); // top: padding-top of header
+    @include g.position( absolute, var(--spacing-xs), var(--screen-x-spacing), n, n, 11 ); // top: padding-top of header
 }

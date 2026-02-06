@@ -11,37 +11,37 @@
 // ------------------------------
 
 .p-sitemap {
-  container-type: inline-size;
-  container-name: sitemap;
+    container-type: inline-size;
+    container-name: sitemap;
 }
 
 .p-sitemap__nav.c-nav {
-  align-items: flex-start;
-  flex-direction: column;
-  gap: var(--spacing-md);
+    align-items: flex-start;
+    flex-direction: column;
+    gap: var(--spacing-md);
 }
 
 .p-sitemap__nav.c-nav > * {
-  flex: 0;
+    flex: 0;
 }
 
 .p-sitemap__nav a {
-  padding-left: 1.25em;
-  align-items: flex-start;
-  justify-content: flex-start;
-  @include g.arrow();
+    padding-left: 1.25em;
+    align-items: flex-start;
+    justify-content: flex-start;
+    @include g.arrow();
 }
 
 .p-sitemap__nav a::before {
-  // Since the arrow was rotated with rotate, it needs to move diagonally.
-  top: calc( var(--lineHeight-xs) * 1em / 2 );
-  left: 0;
-  transform: translateX(-33%) translateY(-33%);
+    // Since the arrow was rotated with rotate, it needs to move diagonally.
+    top: calc( var(--lineHeight-xs) * 1em / 2 );
+    left: 0;
+    transform: translateX(-33%) translateY(-33%);
 }
 
 .p-sitemap__nav .current-menu-item > a {
-  text-decoration: underline;
-  @include g.arrow-current();
+    text-decoration: underline;
+    @include g.arrow-current();
 }
 
 // ------------------------------
@@ -49,8 +49,8 @@
 // ------------------------------
 
 .p-sitemap__nav > .menu-item > a {
-  font-size: var(--font-size-lg);
-  font-weight: var(--fontWeight-bold);
+    font-size: var(--font-size-lg);
+    font-weight: var(--fontWeight-bold);
 }
 
 // ------------------------------
@@ -58,12 +58,12 @@
 // ------------------------------
 
 .p-sitemap__nav .sub-menu {
-  padding-left: 1.25em;
-  font-size: var(--font-size-md);
+    padding-left: 1.25em;
+    font-size: var(--font-size-md);
 }
 
 .p-sitemap__nav .sub-menu .menu-item {
-  margin-top: 1.25em;
+    margin-top: 1.25em;
 }
 
 // ------------------------------
@@ -71,30 +71,30 @@
 // ------------------------------
 
 .p-sitemap__nav .sub-menu > .menu-item:not(:last-child) .sub-menu {
-  margin-bottom: 1.5em;
-  font-size: var(--font-size-sm);
+    margin-bottom: 1.5em;
+    font-size: var(--font-size-sm);
 }
 
 
 @container sitemap ( width >= 46rem ) {
-  .p-sitemap__nav.c-nav {
-    flex-direction: row;
-  }
+    .p-sitemap__nav.c-nav {
+        flex-direction: row;
+    }
 
-  .p-sitemap .p-sitemap__nav.c-nav > * {
-    flex-basis: calc( 50% - ( var(--spacing-md) / 2 ) );
-  }
+    .p-sitemap .p-sitemap__nav.c-nav > * {
+        flex-basis: calc( 50% - ( var(--spacing-md) / 2 ) );
+    }
 
 }
 
 @container sitemap ( width >= 62rem ) {
-  .p-sitemap .p-sitemap__nav.c-nav > * {
-    flex-basis: calc( 33.33% - ( ( var(--spacing-md) * 2 ) / 3 ) );
-  }
+    .p-sitemap .p-sitemap__nav.c-nav > * {
+        flex-basis: calc( 33.33% - ( ( var(--spacing-md) * 2 ) / 3 ) );
+    }
 }
 
 @container sitemap ( width >= 96rem ) {
-  .p-sitemap .p-sitemap__nav.c-nav > * {
-    flex-basis: calc( 25% - ( ( var(--spacing-md) * 3 ) / 4 ) );
-  }
+    .p-sitemap .p-sitemap__nav.c-nav > * {
+        flex-basis: calc( 25% - ( ( var(--spacing-md) * 3 ) / 4 ) );
+    }
 }

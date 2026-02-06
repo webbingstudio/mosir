@@ -7,115 +7,115 @@
 // ------------------------------
 
 .p-comments {
-  margin-top: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
 }
 
 .p-comments > * + * {
-  margin-top: var(--spacing-md);
+    margin-top: var(--spacing-md);
 }
 
 .p-comments__list > * {
-  margin-top: var(--spacing-sm);
-  padding-top: var(--spacing-sm);
-  border-top: 0.0625rem solid var(--ui-border-light-color);
+    margin-top: var(--spacing-sm);
+    padding-top: var(--spacing-sm);
+    border-top: 0.0625rem solid var(--ui-border-light-color);
 }
 
 .p-comments .comment .comment {
-  position: relative;
-  padding-top: var(--spacing-md);
-  padding-left: 1rem;
+    position: relative;
+    padding-top: var(--spacing-md);
+    padding-left: 1rem;
 }
 
 .p-comments .comment .comment::before {
-  content: "";
-  @include g.position(absolute, var(--spacing-xs), n, n, 0);
-  width: 0.5rem;
-  height: var(--spacing-md);
-  border-left: 0.125rem dotted var(--ui-border-color);
-  border-bottom: 0.125rem dotted var(--ui-border-color);
+    content: "";
+    @include g.position(absolute, var(--spacing-xs), n, n, 0);
+    width: 0.5rem;
+    height: var(--spacing-md);
+    border-left: 0.125rem dotted var(--ui-border-color);
+    border-bottom: 0.125rem dotted var(--ui-border-color);
 }
 
 .p-comments .comment-meta > * + * {
-  margin-top: var(--spacing-xs);
+    margin-top: var(--spacing-xs);
 }
 
 .p-comments .comment-author {
-  @include g.flex( n, n, flex-start, center );
+    @include g.flex( n, n, flex-start, center );
 }
 
 .p-comments .comment-author .avatar {
-  margin-right: var(--spacing-sm);
+    margin-right: var(--spacing-sm);
 }
 
 .p-comments .comment-metadata {
-  font-size: var(--font-size-sm);
+    font-size: var(--font-size-sm);
 }
 
 .p-comments .comment-metadata a {
-  color: currentColor;
+    color: currentColor;
 }
 
 .p-comments .comment-form > * + * {
-  margin-top: var(--spacing-sm);
-  margin-bottom: 0;
+    margin-top: var(--spacing-sm);
+    margin-bottom: 0;
 }
 
 .p-comments [class*="comment-form-"] label {
-  display: inline-block;
-  min-width: 5em;
-  vertical-align: middle;
+    display: inline-block;
+    min-width: 5em;
+    vertical-align: middle;
 }
 
 .p-comments [class*="comment-form-"] textarea,
 .p-comments [class*="comment-form-"] input[type="text"],
 .p-comments [class*="comment-form-"] input[type="email"],
 .p-comments [class*="comment-form-"] input[type="url"] {
-  background-color: var(--body-bg);
-  color: var(--body-color);
-  font-size: var(--font-size-md);
-  padding: 0.5em;
-  border: 0.0625rem solid var(--ui-border-color);
-  border-radius: var(--border-radius-sm);
+    background-color: var(--body-bg);
+    color: var(--body-color);
+    font-size: var(--font-size-md);
+    padding: 0.5em;
+    border: 0.0625rem solid var(--ui-border-color);
+    border-radius: var(--border-radius-sm);
 }
 
 .p-comments .comment-form-comment {
-  margin-bottom: 0;
-  @include g.flex( column, n, flex-start, n );
-  gap: var(--spacing-xs);
+    margin-bottom: 0;
+    @include g.flex( column, n, flex-start, n );
+    gap: var(--spacing-xs);
 }
 
 .p-comments .form-submit {
-  text-align: center;
+    text-align: center;
 }
 
 .p-comments .form-submit .submit {
-    @include g.iFlex( n, n, center, center );
-    gap: var(--spacing-xs);
-    width: 15rem;
-    min-height: var(--nav-height-md);
-    padding-inline: var(--spacing-sm);
-    background-color: var(--ui-inverse-color);
-    border: 0.125rem solid var(--ui-accent-color);
-    border-radius: 99em;
-    color: var(--ui-default-color);
-    font-size: var(--font-size-md);
-    letter-spacing: 0.1em;
-    font-weight: var(--fontWeight-bold);
-    line-height: var(--lineHeight-none);
-    transition: var(--transition-fast);
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
+        @include g.iFlex( n, n, center, center );
+        gap: var(--spacing-xs);
+        width: 15rem;
+        min-height: var(--nav-height-md);
+        padding-inline: var(--spacing-sm);
+        background-color: var(--ui-inverse-color);
+        border: 0.125rem solid var(--ui-accent-color);
+        border-radius: 99em;
+        color: var(--ui-default-color);
+        font-size: var(--font-size-md);
+        letter-spacing: 0.1em;
+        font-weight: var(--fontWeight-bold);
+        line-height: var(--lineHeight-none);
+        transition: var(--transition-fast);
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
 }
 
 .p-comments .form-submit .submit:hover,
 .p-comments .form-submit .submit:focus {
-    color: var(--ui-inverse-color);
-    background-color: var(--ui-accent-color);
-    border-color: var(--ui-accent-color);
-    text-decoration: none;
+        color: var(--ui-inverse-color);
+        background-color: var(--ui-accent-color);
+        border-color: var(--ui-accent-color);
+        text-decoration: none;
 }
 
 .p-comments .form-submit .submit:focus {
-    outline: none;
+        outline: none;
 }

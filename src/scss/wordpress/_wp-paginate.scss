@@ -23,9 +23,9 @@
 
 .wp-paginate a.page-numbers:hover,
 .wp-paginate a.page-numbers:focus {
-  color: var(--ui-inverse-color);
-  background-color: var(--ui-accent-color);
-  text-decoration: none;
+    color: var(--ui-inverse-color);
+    background-color: var(--ui-accent-color);
+    text-decoration: none;
 }
 
 .wp-paginate .page-numbers:focus {
@@ -45,11 +45,11 @@
 }
 
 .wp-paginate .prev {
-  @include g.arrow('left');
+    @include g.arrow('left');
 }
 
 .wp-paginate .next {
-  @include g.arrow();
+    @include g.arrow();
 }
 
 .wp-paginate .prev::before,
@@ -88,9 +88,7 @@
 
 // If the content width is narrow, the appearance of the pagination changes.
 @container ( width <= 40rem ) {
-
     .wp-paginate .page-numbers:not(.prev):not(.next):not(.current) {
         display: none;
     }
-
 }

@@ -8,56 +8,56 @@
 // ------------------------------
 
 .c-nav {
-  @include g.flex(n, wrap, flex-start, center);
-  gap: var(--spacing-sm);
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
+    @include g.flex(n, wrap, flex-start, center);
+    gap: var(--spacing-sm);
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
 }
 
 .c-nav > * {
-  flex-grow: 0;
+    flex-grow: 0;
 }
 
 .c-nav li,
 .c-nav .menu-item {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 ul.c-nav,
 .c-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
 .c-nav a {
-  @include g.flex(n, n, n, center);
-  gap: var(--spacing-xs);
-  line-height: var(--lineHeight-xs);
-  color: var(--ui-default-color);
-  text-decoration: none;
+    @include g.flex(n, n, n, center);
+    gap: var(--spacing-xs);
+    line-height: var(--lineHeight-xs);
+    color: var(--ui-default-color);
+    text-decoration: none;
 }
 
 @include g.mq(hover) {
 
-  .c-nav a:hover {
-    color: var(--ui-default-color);
-    text-decoration: underline;
-  }
+    .c-nav a:hover {
+        color: var(--ui-default-color);
+        text-decoration: underline;
+    }
 
 }
 
 .c-nav a:focus {
-  color: var(--ui-default-color);
+    color: var(--ui-default-color);
 }
 
 .c-nav .current-menu-item > a {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
 .c-nav__item__label {
-  flex-grow: 0;
-  flex-shrink: 1;
+    flex-grow: 0;
+    flex-shrink: 1;
 }

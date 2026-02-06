@@ -7,115 +7,115 @@
 // ------------------------------
 
 .p-media {
-  position: relative;
+    position: relative;
 }
 
 .p-media::after {
-  content: "";
-  @include g.position( absolute, -0.25rem, -0.25rem, -0.25rem, -0.25rem, 11 );
-  border: 0.125rem solid var(--ui-accent-color);
-  border-radius: var(--border-radius-sm);
-  opacity: 0;
+    content: "";
+    @include g.position( absolute, -0.25rem, -0.25rem, -0.25rem, -0.25rem, 11 );
+    border: 0.125rem solid var(--ui-accent-color);
+    border-radius: var(--border-radius-sm);
+    opacity: 0;
 }
 
 .p-media__inner {
-  position: relative;
-  display: grid;
-  grid-template-columns: clamp( 5rem, 25%, 30rem ) 1fr;
-  z-index: 12;
+    position: relative;
+    display: grid;
+    grid-template-columns: clamp( 5rem, 25%, 30rem ) 1fr;
+    z-index: 12;
 }
 
 a.p-media__inner {
-  color: currentColor;
-  text-decoration: none;
+    color: currentColor;
+    text-decoration: none;
 }
 
 a.p-media__inner {
-  width: 100%;
+    width: 100%;
 }
 
 @include g.mq(hover) {
 
-  .p-media:has(a.p-media__inner:hover)::after {
-    opacity: 1;
-    transition: var(--transition-slow);
-    outline: none;
-  }
+    .p-media:has(a.p-media__inner:hover)::after {
+        opacity: 1;
+        transition: var(--transition-slow);
+        outline: none;
+    }
 
-  a.p-media__inner:hover {
-    text-decoration: none;
-  }
+    a.p-media__inner:hover {
+        text-decoration: none;
+    }
 
 }
 
 a.p-media__inner:focus {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 .p-media__image {
-  grid-column: 1 / 1;
+    grid-column: 1 / 1;
 }
 
 .p-media__image img {
-  transition: var(--transition-slow);
+    transition: var(--transition-slow);
 }
 
 .p-media__contents {
-  grid-column: 2 / 2;
-  @include g.flex( column, n, center, flex-start );
-  gap: var(--spacing-xs);
-  padding-left: var(--spacing-sm);
-  container-type: inline-size;
+    grid-column: 2 / 2;
+    @include g.flex( column, n, center, flex-start );
+    gap: var(--spacing-xs);
+    padding-left: var(--spacing-sm);
+    container-type: inline-size;
 }
 
 // If meta is included, it is aligned top.
 .p-media__contents:has(.p-media__meta) {
-  justify-content: flex-start;
+    justify-content: flex-start;
 }
 
 .p-media__meta {
-  @include g.flex( n, wrap, flex-start, center );
-  gap: var(--spacing-xs) var(--spacing-sm);
-  font-size: var(--font-size-sm);
+    @include g.flex( n, wrap, flex-start, center );
+    gap: var(--spacing-xs) var(--spacing-sm);
+    font-size: var(--font-size-sm);
 }
 
 .p-media__meta > * {
-  flex-grow: 0;
+    flex-grow: 0;
 }
 
 .p-media__meta .p-labels li {
-  @include g.position(absolute, n, n, 0, 0, n);
+    @include g.position(absolute, n, n, 0, 0, n);
 }
 
 .p-media__title.c-title {
-  overflow-wrap: anywhere;
-  word-break: normal;
-  line-break: strict;
-  overflow: hidden;
-  display: -webkit-box;
-  text-overflow: ellipsis;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 5;
-  max-height: calc( ( var(--lineHeight-md) * 5em ) );
-  font-size: var(--font-size-lg);
+    overflow-wrap: anywhere;
+    word-break: normal;
+    line-break: strict;
+    overflow: hidden;
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    max-height: calc( ( var(--lineHeight-md) * 5em ) );
+    font-size: var(--font-size-lg);
 }
 
 @include g.mq(hover) {
 
-  a.p-media__inner:hover .p-media__image img {
-    opacity: 0.8;
-    transform: scale( 1.1 );
-  }
+    a.p-media__inner:hover .p-media__image img {
+        opacity: 0.8;
+        transform: scale( 1.1 );
+    }
 
 }
 
 // If the content width is narrow, the font size will be reduced.
 @container ( width <= 30rem ) {
 
-  .p-media__contents .p-media__title.c-title {
-    -webkit-line-clamp: 3;
-    max-height: calc( ( var(--lineHeight-md) * 3em ) );
-    font-size: var(--font-size-md);
-  }
+    .p-media__contents .p-media__title.c-title {
+        -webkit-line-clamp: 3;
+        max-height: calc( ( var(--lineHeight-md) * 3em ) );
+        font-size: var(--font-size-md);
+    }
 
 }

@@ -9,50 +9,50 @@
 // ------------------------------
 
 .p-stickyMenu {
-  @include g.position(fixed, n, n, 0, 0, 21);
-  width: 100vw;
-  padding-block: var(--spacing-xs);
-  background-color: var(--ui-cover-inverse-color);
-  color: var(--ui-inverse-color);
-  backdrop-filter: blur(1rem);
-  z-index: 21;
+    @include g.position(fixed, n, n, 0, 0, 21);
+    width: 100vw;
+    padding-block: var(--spacing-xs);
+    background-color: var(--ui-cover-inverse-color);
+    color: var(--ui-inverse-color);
+    backdrop-filter: blur(1rem);
+    z-index: 21;
 
-  @media screen and ( max-height: 767.9px ) {
-    display: none;
-  }
+    @media screen and ( max-height: 767.9px ) {
+        display: none;
+    }
 }
 
 .p-stickyMenu__nav.c-nav {
-  flex-wrap: nowrap;
-  justify-content: center;
+    flex-wrap: nowrap;
+    justify-content: center;
 }
 
 .p-stickyMenu a {
-  @include g.flex( n, n, center, center );
-  min-width: 8em;
-  min-height: var(--nav-height-md);
-  background-color: var(--ui-accent-color);
-  border: 0.125rem solid var(--ui-accent-color);
-  border-radius: 99em;
-  color: var(--ui-inverse-color);
-  font-size: var(--font-size-md);
-  font-weight: var(--fontWeight-bold);
-  line-height: var(--lineHeight-none);
-  transition: var(--transition-fast);
-  text-align: center;
+    @include g.flex( n, n, center, center );
+    min-width: 8em;
+    min-height: var(--nav-height-md);
+    background-color: var(--ui-accent-color);
+    border: 0.125rem solid var(--ui-accent-color);
+    border-radius: 99em;
+    color: var(--ui-inverse-color);
+    font-size: var(--font-size-md);
+    font-weight: var(--fontWeight-bold);
+    line-height: var(--lineHeight-none);
+    transition: var(--transition-fast);
+    text-align: center;
 }
 
 .p-stickyMenu a:hover,
 .p-stickyMenu a:focus {
-  color: var(--ui-default-color);
-  background-color: var(--ui-inverse-color);
-  text-decoration: none;
+    color: var(--ui-default-color);
+    background-color: var(--ui-inverse-color);
+    text-decoration: none;
 }
 
 .p-stickyMenu a:focus {
-    outline: none;
+        outline: none;
 }
 
 .p-stickyMenu .menu-item.current-menu-item a {
-  text-decoration: none;
+    text-decoration: none;
 }

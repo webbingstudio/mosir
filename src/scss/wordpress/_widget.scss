@@ -58,18 +58,16 @@
 }
 
 .widget .wp-block-categories-list li a::before {
-  top: calc( var(--nav-height-xs) / 2 );
-  left: 0;
-  // Since the arrow was rotated with rotate, it needs to move diagonally.
-  transform: translateX(-33%) translateY(-33%);
+    top: calc( var(--nav-height-xs) / 2 );
+    left: 0;
+    // Since the arrow was rotated with rotate, it needs to move diagonally.
+    transform: translateX(-33%) translateY(-33%);
 }
 
 @include g.mq(hover) {
-
     .widget .wp-block-categories-list a:hover {
         text-decoration-line: underline;
     }
-
 }
 
 .widget .wp-block-categories-list a:focus {
