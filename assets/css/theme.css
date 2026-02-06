@@ -133,32 +133,6 @@ pre {
   max-width: calc(var(--container-default-width) + var(--screen-x-spacing) * 2);
 }
 
-.l-flex {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: stretch;
-}
-
-.l-flex > * {
-  flex-grow: 0;
-  flex-shrink: 1;
-}
-
-.l-flex.l-flex--grow {
-  width: 100%;
-}
-
-.l-flex.l-flex--grow > * {
-  flex-grow: 1;
-}
-
-.l-flex.l-flex--center {
-  justify-content: center;
-  align-items: center;
-}
-
 .l-footer {
   position: relative;
   display: flex;
@@ -495,26 +469,6 @@ body.home.page .l-main > *:first-child {
   outline: none;
 }
 
-.c-button.c-button--disabled {
-  background-color: var(--color-default-fade);
-  border-color: var(--ui-border-light-color);
-  opacity: 0.7;
-  pointer-events: none;
-  cursor: default;
-}
-
-.c-button.c-button--primary {
-  background-color: var(--color-primary);
-  border-color: var(--color-primary);
-  color: var(--ui-inverse-color);
-}
-
-.c-button.c-button--primary:hover,
-.c-button.c-button--primary:focus {
-  background-color: var(--ui-inverse-color);
-  color: var(--color-primary);
-}
-
 .c-date {
   display: block;
   margin: 0;
@@ -554,22 +508,6 @@ a.c-label {
 a.c-label:focus {
   color: var(--ui-inverse-color);
   background-color: var(--label-color);
-}
-
-.c-label.c-label--primary {
-  background-color: var(--color-primary-fade);
-  border-color: var(--color-primary);
-}
-
-@media (any-hover: hover) {
-  a.c-label.c-label--primary:hover {
-    color: var(--ui-inverse-color);
-    background-color: var(--color-primary);
-  }
-}
-a.c-label.c-label--primary:focus {
-  color: var(--ui-inverse-color);
-  background-color: var(--color-primary);
 }
 
 .c-nav {

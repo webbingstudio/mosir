@@ -36,22 +36,3 @@ a.c-label:focus {
     color: var(--ui-inverse-color);
     background-color: var(--label-color);
 }
-
-.c-label.c-label--primary {
-    background-color: var(--color-primary-fade);
-    border-color: var(--color-primary);
-}
-
-@include g.mq(hover) {
-
-    a.c-label.c-label--primary:hover {
-        color: var(--ui-inverse-color);
-        background-color: var(--color-primary);
-    }
-
-}
-
-a.c-label.c-label--primary:focus {
-    color: var(--ui-inverse-color);
-    background-color: var(--color-primary);
-}

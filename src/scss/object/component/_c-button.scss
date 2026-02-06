@@ -37,23 +37,3 @@
 .c-button:focus {
     outline: none;
 }
-
-.c-button.c-button--disabled {
-    background-color: var(--color-default-fade);
-    border-color: var(--ui-border-light-color);
-    opacity: 0.7;
-    pointer-events: none;
-    cursor: default;
-}
-
-.c-button.c-button--primary {
-    background-color: var(--color-primary);
-    border-color: var(--color-primary);
-    color: var(--ui-inverse-color);
-}
-
-.c-button.c-button--primary:hover,
-.c-button.c-button--primary:focus {
-    background-color: var(--ui-inverse-color);
-    color: var(--color-primary);
-}
