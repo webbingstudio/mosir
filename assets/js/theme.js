@@ -12,6 +12,13 @@ const mosiDrawerInit = function(toggle, nav) {
     nav.setAttribute('inert', 'inert');
 };
 
+const mosiDrawerClearTimer = function(nav) {
+    if(nav._mosiDrawerTimer) {
+        clearTimeout(nav._mosiDrawerTimer);
+        nav._mosiDrawerTimer = null;
+    }
+};
+
 const mosiDrawerOpen = function(toggles, nav, duration, open_focus) {
     toggles.forEach(toggle => {
         toggle.setAttribute('aria-expanded', 'true');
@@ -20,11 +27,14 @@ const mosiDrawerOpen = function(toggles, nav, duration, open_focus) {
     nav.classList.remove('-is-closing');
 
     // To allow for detailed CSS animations, the `.-is-opening` class is only added while the menu is opening.
-    let queue = setTimeout(() => {
+    mosiDrawerClearTimer(nav);
+    nav._mosiDrawerTimer = setTimeout(() => {
         nav.classList.remove('-is-opening');
         nav.setAttribute('aria-hidden', 'false');
         nav.removeAttribute('inert');
-        open_focus.focus();
+        if(open_focus && typeof open_focus.focus === 'function') {
+            open_focus.focus();
+        }
     },duration);
 };
 
@@ -36,24 +46,24 @@ const mosiDrawerClose = function(toggles, nav, duration, close_focus) {
     nav.classList.remove('-is-opening');
 
     // To allow for detailed CSS animations, the `.-is-closing` class is only added while the menu is closing.
-    let queue = setTimeout(() => {
+    mosiDrawerClearTimer(nav);
+    nav._mosiDrawerTimer = setTimeout(() => {
         nav.classList.remove('-is-closing');
         nav.setAttribute('aria-hidden', 'true');
         nav.setAttribute('inert', 'inert');
-        close_focus.focus();
+        if(close_focus && typeof close_focus.focus === 'function') {
+            close_focus.focus();
+        }
     },duration);
 };
 
 const mosiDrawerWindowResized = function(toggles, nav) {
-    let queue = setTimeout(() => {
-        clearTimeout(queue);
-        toggles.forEach(toggle => {
-            toggle.setAttribute('aria-expanded', 'false');
-        });
-        nav.setAttribute('aria-hidden', 'true');
-        nav.setAttribute('inert', 'inert');
-        nav.classList.remove('-is-closing', '-is-open');
-    },50);
+    toggles.forEach(toggle => {
+        toggle.setAttribute('aria-expanded', 'false');
+    });
+    nav.setAttribute('aria-hidden', 'true');
+    nav.setAttribute('inert', 'inert');
+    nav.classList.remove('-is-closing', '-is-opening', '-is-open');
 };
 
 const mosiDrawerControls = function() {
@@ -68,27 +78,40 @@ const mosiDrawerControls = function() {
         const close_focus = toggles[0];
 
         if(nav != undefined) {
-            const open_focus = nav.querySelector('a, button, input');
+            const open_focus = nav.querySelector('a, button, input') || close_focus;
 
             // If the window is resized, close the drawer.
+            let resize_queue;
             window.addEventListener('resize', function() {
-                mosiDrawerWindowResized(toggles, nav);
-                contents.removeAttribute('inert', 'inert');
+                clearTimeout(resize_queue);
+                resize_queue = setTimeout(() => {
+                    mosiDrawerClearTimer(nav);
+                    mosiDrawerWindowResized(toggles, nav);
+                    if(contents) {
+                        contents.removeAttribute('inert');
+                    }
+                },50);
             }, false);
 
             toggles.forEach(toggle => {
                 const action = toggle.dataset.mosiDrawerAction ? toggle.dataset.mosiDrawerAction : action_default;
                 const duration = toggle.dataset.mosiDrawerDuration ? parseFloat(toggle.dataset.mosiDrawerDuration) : duration_default;
                 mosiDrawerInit(toggle, nav);
-                contents.removeAttribute('inert', 'inert');
+                if(contents) {
+                    contents.removeAttribute('inert');
+                }
 
                 toggle.addEventListener('click', ()=> {
                     if( ( action === 'toggle' ) && ( toggle.getAttribute('aria-expanded') === 'false') ) {
                         mosiDrawerOpen(toggles, nav, duration, open_focus);
-                        contents.setAttribute('inert', 'inert');
+                        if(contents) {
+                            contents.setAttribute('inert', 'inert');
+                        }
                     } else {
                         mosiDrawerClose(toggles, nav, duration, close_focus);
-                        contents.removeAttribute('inert', 'inert');
+                        if(contents) {
+                            contents.removeAttribute('inert');
+                        }
                     }
                 });
 
