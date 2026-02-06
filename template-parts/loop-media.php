@@ -39,7 +39,7 @@
 					<?php endif; ?>
 				<?php endif; ?>
 			</div>
-			<p class="p-media__title c-title"><?php echo get_the_title() ? esc_html( get_the_title() ) : '(タイトルなし)'; ?></p>
+			<p class="p-media__title c-title"><?php echo get_the_title() ? esc_html( get_the_title() ) : '(No title)'; ?></p>
 		</div>
 	</a>
 </article>

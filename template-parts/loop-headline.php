@@ -1,10 +1,10 @@
 <?php
 /**
  * loop-headline.php
- * Repeated sections of a posts without featured image.
- * The entire loop is enclosed in a link.
- * Only the first term label in a post is displayed.
- * Post meta will be aligned in a single line if the window width is wide.
+ * Repeated posts without featured images.
+ * The entire loop is surrounded by a link.
+ * If the post type is "Post", the first term label related to the post is displayed.
+ * If the window width is wider, post meta information is displayed aligned to a single line.
  *
  * @package mosir
  */
@@ -33,7 +33,7 @@
             <?php endif; ?>
         </div>
 		<div class="p-headline__contents">
-			<p class="p-headline__title c-title"><?php echo get_the_title() ? esc_html( get_the_title() ) : '(タイトルなし)'; ?></p>
+			<p class="p-headline__title c-title"><?php echo get_the_title() ? esc_html( get_the_title() ) : '(No title)'; ?></p>
 		</div>
     </a>
 </article>

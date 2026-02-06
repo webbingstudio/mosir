@@ -39,7 +39,7 @@ get_header();
 					</p>
 					<?php endif; ?>
 				</div>
-				<h1 class="p-post__title c-title c-title--lv2"><?php echo get_the_title() ? get_the_title() : '(タイトルなし)'; ?></h1>
+				<h1 class="p-post__title c-title c-title--lv2"><?php echo get_the_title() ? get_the_title() : '(No title)'; ?></h1>
 			</div>
 		</div>
 		<div class="p-post__contents <?php mosi_wp_block_class(); ?>">

@@ -1,7 +1,7 @@
 <?php
 /**
  * drawer.php
- * ドロワーメニュー用テンプレート
+ * Drawer Menu Template
  *
  * @package mosir
  */
