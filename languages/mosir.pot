@@ -568,3 +568,17 @@ msgstr ""
 msgid "We couldn’t seem to find the page you’re looking for.<br>The content may have been moved or deleted. <br>Please take the time to search for the content from the Home."
 msgstr ""
 
+# comments - title (count 1)
+# comments.php:28
+msgid "%1$s thought on &ldquo;%2$s&rdquo;"
+msgstr ""
+
+# comments - title (count 2 more)
+# comments.php:28
+msgid "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr ""
+
+# comments - closed
+# comments.php:57
+msgid "Comments are closed."
+msgstr ""
