@@ -2224,8 +2224,10 @@ body:has(.l-header--large) .p-mv__stage {
   flex-grow: 1;
 }
 
-.p-post__footer__link .c-nav__item.p-post__footer__prev a {
-  justify-content: flex-end;
+@media screen and (min-width: 768px) {
+  .p-post__footer__link .c-nav__item.p-post__footer__prev a {
+    justify-content: flex-end;
+  }
 }
 
 .p-post__footer__back {
