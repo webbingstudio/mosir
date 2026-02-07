@@ -24,7 +24,7 @@ get_header();
 
 <?php if( have_posts() ) : ?>
 <?php while( have_posts() ) : the_post(); ?>
-	<article class="p-<?php echo esc_attr($mosi_post_type); ?>-contents p-post p-post--<?php echo esc_attr($mosi_post_type); ?>">
+	<article class="p-<?php echo esc_attr( $mosi_post_type ); ?>-contents p-post p-post--<?php echo esc_attr( $mosi_post_type ); ?>">
 		<div class="p-post__header">
 			<div class="p-post__header__contents l-container l-container--sm">
 				<div class="p-post__header__meta">
@@ -47,9 +47,6 @@ get_header();
 		</div>
 		<div class="p-post__footer">
 			<div class="p-post__footer__contents l-container l-container--sm">
-				<div class="p-post__footer__meta">
-					<span class="c-date">公開: <time datetime="<?php the_time('c'); ?>"><?php the_time( 'Y-m-d H:i:s' ); ?></time></span>
-				</div>
 				<?php if( $mosi_tags ): ?>
 				<div class="p-post__footer__tags">
 					<ul class="c-nav">
