@@ -63,7 +63,7 @@ $mosi_options_copyright = get_theme_mod( 'mosi_options_copyright', (bool)false )
 			<?php endif; ?>
 		</p>
 		<?php if( !$mosi_options_copyright ): ?>
-		<p class="l-footer__copyright__body u-p--t-sm has-small-font-size"><a href="https://mosir.webbingstudio.com" target="_blank" rel="noopener noreferrer"><?php echo __( 'WordPress theme &quot;mosir&quot;', 'mosir' ); ?></a></p>
+		<p class="l-footer__copyright__body u-p--t-sm has-small-font-size"><a href="https://mosir.webbingstudio.com/" target="_blank" rel="noopener noreferrer"><strong><?php echo __( 'WordPress theme &quot;mosir&quot;', 'mosir' ); ?></strong></a></p>
 		<?php endif; ?>
 	</div>
 	
