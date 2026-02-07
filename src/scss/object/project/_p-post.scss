@@ -119,7 +119,9 @@
 }
 
 .p-post__footer__link .c-nav__item.p-post__footer__prev a {
-    justify-content: flex-end;
+    @include g.mq(default) {
+        justify-content: flex-end;
+    }
 }
 
 .p-post__footer__back {
