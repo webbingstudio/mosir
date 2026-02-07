@@ -24,13 +24,13 @@ if( $mosi_posts_page && $mosi_posts_page->post_status === 'publish' ){
 <?php if ( is_404() ): ?>
 <div class="p-pageHeader p-pageHeader--error">
     <div class="p-pageHeader__contents l-container">
-        <h1 class="p-pageHeader__title c-title c-title--lv2" lang="en">404 Not found</h1>
+        <h1 class="p-pageHeader__title c-title c-title--lv1" lang="en">404 Not found</h1>
     </div>
 </div>
 <?php elseif ( is_single() && $mosi_post_type_obj->name === 'post' && $mosi_posts_page_label ): ?>
 <div class="p-pageHeader p-pageHeader--<?php echo esc_attr($mosi_posts_page_slug); ?>">
     <div class="p-pageHeader__contents l-container">
-        <p class="p-pageHeader__title c-title c-title--lv2" <?php language_attributes(); ?>><?php echo esc_attr($mosi_posts_page_label); ?></p>
+        <p class="p-pageHeader__title c-title c-title--lv1" <?php language_attributes(); ?>><?php echo esc_attr($mosi_posts_page_label); ?></p>
         <?php
             // In Japan, it is customary to include the English translation (here, the slug) at the bottom of the main heading.
             // This is not necessary in English-speaking languages, so it is hidden.
@@ -43,7 +43,7 @@ if( $mosi_posts_page && $mosi_posts_page->post_status === 'publish' ){
 <?php elseif ( !is_page() && $mosi_post_type_obj->name !== 'post' && is_single() ): ?>
 <div class="p-pageHeader p-pageHeader--<?php echo esc_attr($mosi_post_type_obj->name) ?>">
     <div class="p-pageHeader__contents l-container">
-        <p class="p-pageHeader__title c-title c-title--lv2" <?php language_attributes(); ?>><?php esc_html_e($mosi_post_type_obj->labels->name); ?></p>
+        <p class="p-pageHeader__title c-title c-title--lv1" <?php language_attributes(); ?>><?php esc_html_e($mosi_post_type_obj->labels->name); ?></p>
         <?php if( !preg_match('/^en_/', get_locale() ) ): ?>
             <p class="p-pageHeader__caption" lang="en-US"><?php echo ucfirst( esc_html($mosi_post_type_obj->name) ); ?></p>
         <?php endif; ?>
@@ -62,7 +62,7 @@ if( $mosi_posts_page && $mosi_posts_page->post_status === 'publish' ){
 ): ?>
 <div class="p-pageHeader p-pageHeader--<?php echo esc_attr($mosi_posts_page_slug); ?>">
     <div class="p-pageHeader__contents l-container">
-        <p class="p-pageHeader__title c-title c-title--lv2" <?php language_attributes(); ?>><?php echo esc_attr($mosi_posts_page_label); ?></p>
+        <p class="p-pageHeader__title c-title c-title--lv1" <?php language_attributes(); ?>><?php echo esc_attr($mosi_posts_page_label); ?></p>
         <?php if( !preg_match('/^en_/', get_locale() ) ): ?>
             <p class="p-pageHeader__caption" lang="en-US"><?php echo ucfirst( esc_html($mosi_posts_page_slug) ); ?></p>
         <?php endif; ?>
@@ -71,7 +71,7 @@ if( $mosi_posts_page && $mosi_posts_page->post_status === 'publish' ){
 <?php elseif ( $mosi_post_type_obj && is_archive() && $mosi_post_type_obj->name === 'post' && $mosi_posts_page_label ): ?>
 <div class="p-pageHeader p-pageHeader--<?php echo esc_attr($mosi_posts_page_slug); ?>">
     <div class="p-pageHeader__contents l-container">
-        <p class="p-pageHeader__title c-title c-title--lv2" <?php language_attributes(); ?>><?php echo esc_attr($mosi_posts_page_label); ?></p>
+        <p class="p-pageHeader__title c-title c-title--lv1" <?php language_attributes(); ?>><?php echo esc_attr($mosi_posts_page_label); ?></p>
         <?php if( !preg_match('/^en_/', get_locale() ) ): ?>
             <p class="p-pageHeader__caption" lang="en-US"><?php echo ucfirst( esc_html($mosi_posts_page_slug) ); ?></p>
         <?php endif; ?>
@@ -80,7 +80,7 @@ if( $mosi_posts_page && $mosi_posts_page->post_status === 'publish' ){
 <?php elseif ( $mosi_post_type_obj && is_archive() && $mosi_post_type_obj->name !== 'post' ): ?>
 <div class="p-pageHeader p-pageHeader--<?php echo esc_attr($mosi_post_type_obj->name) ?>">
     <div class="p-pageHeader__contents l-container">
-        <h1 class="p-pageHeader__title c-title c-title--lv2" <?php language_attributes(); ?>><?php esc_html_e($mosi_post_type_obj->labels->name); ?></h1>
+        <h1 class="p-pageHeader__title c-title c-title--lv1" <?php language_attributes(); ?>><?php esc_html_e($mosi_post_type_obj->labels->name); ?></h1>
         <?php if( !preg_match('/^en_/', get_locale() ) ): ?>
             <p class="p-pageHeader__caption" lang="en-US"><?php echo ucfirst( esc_html($mosi_post_type_obj->name) ); ?></p>
         <?php endif; ?>
@@ -89,7 +89,7 @@ if( $mosi_posts_page && $mosi_posts_page->post_status === 'publish' ){
 <?php elseif ( is_search() ): ?>
 <div class="p-pageHeader p-pageHeader--search">
     <div class="p-pageHeader__contents l-container">
-        <h1 class="p-pageHeader__title c-title c-title--lv2" <?php language_attributes(); ?>>Search result</h1>
+        <h1 class="p-pageHeader__title c-title c-title--lv1" <?php language_attributes(); ?>>Search result</h1>
         <?php if( !preg_match('/^en_/', get_locale() ) ): ?>
             <p class="p-pageHeader__caption" lang="en-US">Search result</p>
         <?php endif; ?>
@@ -98,7 +98,7 @@ if( $mosi_posts_page && $mosi_posts_page->post_status === 'publish' ){
 <?php elseif ( !is_front_page() && is_page() ): ?>
 <div class="p-pageHeader p-pageHeader--page">
     <div class="p-pageHeader__contents l-container">
-        <h1 class="p-pageHeader__title c-title c-title--lv2" <?php language_attributes(); ?>><?php the_title(); ?></h1>
+        <h1 class="p-pageHeader__title c-title c-title--lv1" <?php language_attributes(); ?>><?php the_title(); ?></h1>
         <?php if( !preg_match('/^en/', get_locale() ) ): ?>
             <p class="p-pageHeader__caption" lang="en-US"><?php echo ucfirst( esc_html($post->post_name) ); ?></p>
         <?php endif; ?>
