@@ -1,7 +1,7 @@
 <?php
 /**
  * index.php
- * Default index template
+ * Default index (archive) template
  *
  * @package mosir
  */
@@ -9,7 +9,7 @@
 $mosi_post_type = get_post_type() ? get_post_type() : get_query_var( 'post_type' );
 
 if( is_search() ) {
-    $mosi_s = get_query_var('s') ? get_query_var('s') : '(なし)';
+    $mosi_s = get_query_var('s') ? get_query_var('s') : __( '(Empty)', 'mosir' );
 }
 
 get_header();

@@ -536,12 +536,17 @@ msgid "View All"
 msgstr "一覧を見る"
 
 
-# search keyword
+# Empty keyword
+# index.php:12
+msgid "(Empty)"
+msgstr "（なし）"
+
+# Search keyword
 # index.php:23
 msgid "Keyword:"
 msgstr "キーワード:"
 
-# search - No results
+# Search - No results
 # index.php:65
 msgid "No results were found matching your search criteria."
 msgstr "検索条件に一致する結果は見つかりませんでした。"
@@ -566,17 +571,17 @@ msgstr "検索結果"
 msgid "We couldn’t seem to find the page you’re looking for.<br>The content may have been moved or deleted. <br>Please take the time to search for the content from the Home."
 msgstr "お探しのページが見つかりませんでした。<br>コンテンツが移動したか、削除された可能性があります。<br>お手数ですが、トップページから目的のコンテンツをお探しください。"
 
-# comments - title (count 1)
+# Comments - title (count 1)
 # comments.php:28
 msgid "%1$s thought on &ldquo;%2$s&rdquo;"
 msgstr "「%2$s」へのコメント: %1$s件"
 
-# comments - title (count 2 more)
+# Comments - title (count 2 more)
 # comments.php:28
 msgid "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr "「%2$s」へのコメント: %1$s件"
 
-# comments - closed
+# Comments - closed
 # comments.php:57
 msgid "Comments are closed."
 msgstr "コメントは停止中です。"

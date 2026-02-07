@@ -5,7 +5,14 @@
  * @package mosir
  */
 
-if ( !function_exists( 'mosi_widgets_init' ) ) {
+if ( ! function_exists( 'mosi_widgets_init' ) ) {
+	/**
+	 * Set up widget area.
+	 *
+	 * @since mosir 1.0.0
+	 *
+	 * @return void
+	 */
 	function mosi_widgets_init() {
 		register_sidebar( array(
 			'name' => 'Sidebar (Post)',

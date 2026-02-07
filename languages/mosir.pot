@@ -537,12 +537,18 @@ msgstr ""
 msgid "View All"
 msgstr ""
 
-# search - keyword
+
+# Empty keyword
+# index.php:12
+msgid "(Empty)"
+msgstr "（なし）"
+
+# Search - keyword
 # index.php:23
 msgid "Keyword:"
 msgstr ""
 
-# search - No results
+# Search - No results
 # index.php:65
 msgid "No results were found matching your search criteria."
 msgstr ""
@@ -568,17 +574,17 @@ msgstr ""
 msgid "We couldn’t seem to find the page you’re looking for.<br>The content may have been moved or deleted. <br>Please take the time to search for the content from the Home."
 msgstr ""
 
-# comments - title (count 1)
+# Comments - title (count 1)
 # comments.php:28
 msgid "%1$s thought on &ldquo;%2$s&rdquo;"
 msgstr ""
 
-# comments - title (count 2 more)
+# Comments - title (count 2 more)
 # comments.php:28
 msgid "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr ""
 
-# comments - closed
+# Comments - closed
 # comments.php:57
 msgid "Comments are closed."
 msgstr ""

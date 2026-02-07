@@ -1,15 +1,18 @@
 <?php
 /**
- * mosir functions and definitions
+ * functions and definitions
  *
  * @package mosir
  */
 
-// ==============================
-// Theme setup
-// ==============================
-
 if ( ! function_exists( 'mosi_setup' ) ) :
+	/**
+	 * Set up theme.
+	 *
+	 * @since mosir 1.0.0
+	 *
+	 * @return void
+	 */
 	function mosi_setup() {
 		add_theme_support( 'wp-block-styles' );
 		add_theme_support( 'title-tag' );
@@ -31,10 +34,6 @@ if ( ! function_exists( 'mosi_setup' ) ) :
 endif;
 add_action( 'after_setup_theme', 'mosi_setup' );
 
-
-// ==============================
-// Enqueues Styles and Scripts
-// ==============================
 
 if ( ! function_exists( 'mosi_enqueue_styles' ) ) :
 	/**
@@ -114,17 +113,13 @@ endif;
 add_action( 'enqueue_block_editor_assets', 'mosi_enqueue_block_editor_assets' );
 
 
-// ==============================
-// Menus
-// ==============================
-
 if ( ! function_exists( 'mosi_redistar_nav_menu' ) ) :
 	/**
 	 * Define the menus to use within the theme
 	 *
 	 * @since mosir 1.0.0
 	 *
-	 * @return string
+	 * @return void
 	 */
 	function mosi_redistar_nav_menu() {
 		register_nav_menus([
@@ -143,13 +138,9 @@ endif;
 add_action( 'after_setup_theme', 'mosi_redistar_nav_menu' );
 
 
-// ==============================
-// Compatible WordPress BlockEditor(Gutenberg)
-// ==============================
-
 if ( ! function_exists( 'mosi_wp_block_class' ) ) :
 	/**
-	 * Echo WordPress BlockEditor class name
+	 * Add WordPress BlockEditor class name
 	 *
 	 * @since mosir 1.0.0
 	 *
