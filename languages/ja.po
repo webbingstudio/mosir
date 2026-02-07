@@ -560,3 +560,8 @@ msgstr "トップページへもどる"
 # template-parts/pageHeader.php:86
 msgid "Search result"
 msgstr "検索結果"
+
+# 404 - message
+# 404.php:21
+msgid "We couldn’t seem to find the page you’re looking for.<br>The content may have been moved or deleted. <br>Please take the time to search for the content from the Home."
+msgstr "お探しのページが見つかりませんでした。<br>コンテンツが移動したか、削除された可能性があります。<br>お手数ですが、トップページから目的のコンテンツをお探しください。"

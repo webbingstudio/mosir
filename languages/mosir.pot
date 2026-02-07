@@ -554,6 +554,7 @@ msgstr ""
 
 # Back to Home
 # index.php:80
+# 404.php:26
 msgid "Back to Home"
 msgstr ""
 
@@ -561,3 +562,9 @@ msgstr ""
 # template-parts/pageHeader.php:86
 msgid "Search result"
 msgstr ""
+
+# 404 - message
+# 404.php:21
+msgid "We couldn’t seem to find the page you’re looking for.<br>The content may have been moved or deleted. <br>Please take the time to search for the content from the Home."
+msgstr ""
+

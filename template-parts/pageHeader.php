@@ -21,7 +21,13 @@ if( $mosi_posts_page && $mosi_posts_page->post_status === 'publish' ){
     $mosi_posts_page_slug = $mosi_posts_page->post_name;
 }
 ?>
-<?php if ( is_single() && $mosi_post_type_obj->name === 'post' && $mosi_posts_page_label ): ?>
+<?php if ( is_404() ): ?>
+<div class="p-pageHeader p-pageHeader--error">
+    <div class="p-pageHeader__contents l-container">
+        <h1 class="p-pageHeader__title c-title c-title--lv2" lang="en">404 Not found</h1>
+    </div>
+</div>
+<?php elseif ( is_single() && $mosi_post_type_obj->name === 'post' && $mosi_posts_page_label ): ?>
 <div class="p-pageHeader p-pageHeader--<?php echo esc_attr($mosi_posts_page_slug); ?>">
     <div class="p-pageHeader__contents l-container">
         <p class="p-pageHeader__title c-title c-title--lv2" <?php language_attributes(); ?>><?php echo esc_attr($mosi_posts_page_label); ?></p>
@@ -87,12 +93,6 @@ if( $mosi_posts_page && $mosi_posts_page->post_status === 'publish' ){
         <?php if( !preg_match('/^en_/', get_locale() ) ): ?>
             <p class="p-pageHeader__caption" lang="en-US">Search result</p>
         <?php endif; ?>
-    </div>
-</div>
-<?php elseif ( is_404() ): ?>
-<div class="p-pageHeader p-pageHeader--error">
-    <div class="p-pageHeader__contents l-container">
-        <h1 class="p-pageHeader__title c-title c-title--lv2" <?php language_attributes(); ?>>404 Not found</h1>
     </div>
 </div>
 <?php elseif ( !is_front_page() && is_page() ): ?>
