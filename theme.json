@@ -317,10 +317,10 @@
 			"padding": {
 				"top": "0",
 				"bottom": "0",
-				"left": "calc(clamp(1rem, 0.884vw + 0.793rem, 1.5rem))",
-				"right": "calc(clamp(1rem, 0.884vw + 0.793rem, 1.5rem))"
+				"left": "calc(clamp(1rem, 0.899vw + 0.781rem, 1.5rem))",
+				"right": "calc(clamp(1rem, 0.899vw + 0.781rem, 1.5rem))"
 			},
-			"blockGap": "calc(clamp(1rem, 0.884vw + 0.793rem, 1.5rem))"
+			"blockGap": "calc(clamp(1rem, 0.899vw + 0.781rem, 1.5rem))"
 		}
 	}
 }
