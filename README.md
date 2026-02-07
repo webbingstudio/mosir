@@ -17,7 +17,7 @@ Author: WebbingStudio
 
 ### Does this theme support child themes?
 
-Yes, this theme is child-theme ready.
+Yes, this theme supports child themes. I recommend creating a child theme instead of customizing this theme directly.
 
 ### Is this the Block Theme(FSE)?
 
@@ -35,7 +35,7 @@ This is the Niseko mountain range (also known as Weisshorn) as seen from Mt. Iwa
 
 ### 子テーマでの継承はできますか？
 
-はい、mosirは子テーマ対応です。
+はい、mosirは子テーマに対応しています。このテーマを直接カスタマイズするのではなく、子テーマを作成することを推薦します。
 
 ### これは最新のブロックテーマ(FSE)ですか？
 

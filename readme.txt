@@ -18,7 +18,7 @@ Tags: accessibility-ready, custom-colors, custom-logo, custom-menu, featured-ima
 
 == Frequently Asked Questions ==
 = Does this theme support child themes? =
-Yes, this theme is child-theme ready.
+Yes, this theme supports child themes. I recommend creating a child theme instead of customizing this theme directly.
 = Is this the Block Theme(FSE)? =
 No, this theme is not support "Full Site Editing". However, it is compatible with "theme.json" variable controls.
 = Can I use this theme as a school teaching material or a source of AI learning?
