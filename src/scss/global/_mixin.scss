@@ -90,6 +90,7 @@
 
         #{&}::before {
             position: absolute;
+            box-sizing: border-box;
             content: "";
             width: 0.55em;
             height: 0.55em;

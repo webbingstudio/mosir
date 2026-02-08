@@ -1544,6 +1544,7 @@ a.p-headline__inner:focus {
 
 .p-horizontalMenu.p-horizontalMenu--arrowed a::before {
   position: absolute;
+  box-sizing: border-box;
   content: "";
   width: 0.55em;
   height: 0.55em;
@@ -1864,6 +1865,7 @@ a.p-media__inner:focus {
 
 .p-megaMenu__nav .sub-menu a::before {
   position: absolute;
+  box-sizing: border-box;
   content: "";
   width: 0.55em;
   height: 0.55em;
@@ -2345,6 +2347,7 @@ body:has(.l-header--large) .p-mv__stage {
 
 .p-section__link a::before {
   position: absolute;
+  box-sizing: border-box;
   content: "";
   width: 0.55em;
   height: 0.55em;
@@ -2466,6 +2469,7 @@ body:has(.l-header--large) .l-main .p-sectionArea:first-child {
 
 .p-sitemap__nav a::before {
   position: absolute;
+  box-sizing: border-box;
   content: "";
   width: 0.55em;
   height: 0.55em;
@@ -2701,6 +2705,7 @@ body:has(.l-header--large) .l-main .p-sectionArea:first-child {
 
 .p-verticalMenu__nav .sub-menu a::before {
   position: absolute;
+  box-sizing: border-box;
   content: "";
   width: 0.55em;
   height: 0.55em;
@@ -3891,6 +3896,7 @@ body:has(.l-header--large) .l-main .p-sectionArea:first-child {
 
 .widget .wp-block-categories-list li a::before {
   position: absolute;
+  box-sizing: border-box;
   content: "";
   width: 0.55em;
   height: 0.55em;
@@ -3905,6 +3911,7 @@ body:has(.l-header--large) .l-main .p-sectionArea:first-child {
 
 .widget .wp-block-archives-list li a::before {
   position: absolute;
+  box-sizing: border-box;
   content: "";
   width: 0.55em;
   height: 0.55em;
@@ -4266,6 +4273,7 @@ body:has(.l-header--large) .l-main .p-sectionArea:first-child {
 
 .wp-paginate .prev::before {
   position: absolute;
+  box-sizing: border-box;
   content: "";
   width: 0.55em;
   height: 0.55em;
@@ -4280,6 +4288,7 @@ body:has(.l-header--large) .l-main .p-sectionArea:first-child {
 
 .wp-paginate .next::before {
   position: absolute;
+  box-sizing: border-box;
   content: "";
   width: 0.55em;
   height: 0.55em;
