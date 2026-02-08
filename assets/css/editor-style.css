@@ -965,7 +965,7 @@ a.p-card__inner .p-card__title {
     margin-inline: 0;
   }
 }
-@container ( width >= 38rem ) {
+@container ( width >= 40rem ) {
   .p-cardList__inner {
     -moz-column-gap: var(--spacing-md);
          column-gap: var(--spacing-md);

@@ -39,7 +39,7 @@
     }
 }
 
-@container ( width >= 38rem ) {
+@container ( width >= 40rem ) {
     .p-cardList__inner {
         column-gap: var(--spacing-md);
     }
