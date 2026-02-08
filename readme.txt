@@ -3,7 +3,7 @@ Contributors: webbingstudio
 Requires at least: 6.7
 Tested up to: 6.9.1
 Requires PHP: 8.0
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Tags: accessibility-ready, custom-colors, custom-logo, custom-menu, featured-images, one-column, sticky-post, wide-blocks, theme-options, editor-style, blog, news
@@ -27,6 +27,8 @@ Yes, this theme complies with the WordPress GNU License, so you are free to refe
 This is the Niseko mountain range (also known as Weisshorn) as seen from Mt. Iwaw-nupuri in Hokkaido, the author's native place. This photo is included in the mosir theme package and can be freely used under the terms of the GPL license. The photographer is the author's sister, who loves mountain climbing. Thanks to her for this wonderful photo.
 
 == Changelog ==
+= 1.0.1 =
+* Fixed incorrect container width calculation / Supports archive list widget
 = 1.0.0 =
 * Initial release.
 

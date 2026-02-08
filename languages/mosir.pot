@@ -2,7 +2,7 @@
 # This file is distributed under the GPL3 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: mosir 1.0.0\n"
+"Project-Id-Version: mosir 1.0.1\n"
 "Report-Msgid-Bugs-To: https://github.com/webbingstudio/mosir\n"
 "Last-Translator: Seiko Kuchida <mail@webbingstudio.com>\n"
 "Language-Team: \n"
