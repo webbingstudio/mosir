@@ -8,7 +8,7 @@
 
 $mosi_options_mv_visible = get_theme_mod( 'mosi_options_mv_visible', 'show' );
 $mosi_options_home_posts_position = get_theme_mod( 'mosi_options_home_posts_position', 'after' );
-$mosi_options_home_posts_layout = get_theme_mod( 'mosi_options_home_posts_layout', 'one' );
+$mosi_options_home_posts_layout = get_theme_mod( 'mosi_options_home_posts_layout', 'two' );
 
 get_header();
 ?>
