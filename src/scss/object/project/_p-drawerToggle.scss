@@ -22,5 +22,5 @@
 }
 
 .p-drawerToggle__button {
-    @include g.position( absolute, var(--spacing-xs), var(--screen-x-spacing), n, n, 11 ); // top: padding-top of header
+    @include g.position( absolute, var(--spacing-xs), 0, n, n, 11 ); // top: padding-top of header
 }

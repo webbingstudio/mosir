@@ -15,8 +15,7 @@
 .p-widgetArea__inner {
     @include g.flex( row, wrap, flex-start, n );
     gap: var(--spacing-xl) var(--spacing-md);
-    width: 100%;
-    max-width: calc( var(--container-wide-width) + ( var(--screen-x-spacing) * 2 ) );
+    max-width: var(--container-wide-width);
     padding-inline: var(--screen-x-spacing);
     margin-inline: auto;
 }

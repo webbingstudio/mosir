@@ -10,10 +10,11 @@
 .p-sectionArea {
     @include g.flex( n, wrap, center, stretch );
     gap: var(--spacing-xl) var(--spacing-lg);
-    width: 100%;
-    max-width: calc( var(--container-wide-width) + ( var(--screen-x-spacing) * 2 ) );
+    // The width must be specified
+    width: calc( 100% - ( var(--screen-x-spacing) * 2 ) );
+    max-width: var(--container-wide-width);
     margin-inline: auto;
-    padding: var(--spacing-xl) var(--screen-x-spacing);
+    padding-block: var(--spacing-xl);
 }
 
 .p-sectionArea > * {

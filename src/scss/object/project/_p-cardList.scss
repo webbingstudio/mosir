@@ -22,7 +22,6 @@
 
 .p-cardList__inner > * {
     flex-grow: 1;
-    width: 100%;
     max-width: ( math.div( 480, 16 ) * 1rem );
     margin-inline: auto;
 }

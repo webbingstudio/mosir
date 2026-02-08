@@ -73,7 +73,8 @@ body:has(.l-header--large) .p-mv__stage {
 .p-mv__contents {
     position: relative;
     @include g.flex( column, nowrap, center, flex-start );
-    width: 100%;
+    // The width must be specified
+    width: calc( 100% - ( var(--screen-x-spacing) * 2 ) );
     max-width: calc( var(--container-default-width) + ( var(--screen-x-spacing) * 2 ) );
     padding-inline: var(--screen-x-spacing);
     margin-bottom: var(--spacing-lg);
@@ -89,7 +90,7 @@ body:has(.l-header--large) .p-mv__stage {
     }
 
     @media screen and (min-width: 1440px) {
-        max-width: calc( var(--container-wide-width) + ( var(--screen-x-spacing) * 2 ) );
+        max-width: var(--container-wide-width);
     }
 
 }

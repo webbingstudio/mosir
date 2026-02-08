@@ -31,6 +31,7 @@
   --font-size-4xl: var(--wp--preset--font-size--4-x-large);
   --font-size-5xl: var(--wp--preset--font-size--5-x-large);
   --font-size-6xl: var(--wp--preset--font-size--6-x-large);
+  --screen-x-spacing: var(--wp--preset--spacing--small);
   --spacing-2xs: var(--wp--preset--spacing--2-x-small);
   --spacing-xs: var(--wp--preset--spacing--x-small);
   --spacing-sm: var(--wp--preset--spacing--small);
@@ -46,7 +47,6 @@
   --shadow-md-darken: var(--wp--preset--shadow--md-darken);
   --shadow-lg: var(--wp--preset--shadow--lg);
   --shadow-lg-darken: var(--wp--preset--shadow--lg-darken);
-  --screen-x-spacing: 1rem;
   --nav-height-md: 2.75rem;
   --nav-height-sm: 2rem;
   --drawer-toggle-size: var(--nav-height-md);
@@ -123,14 +123,13 @@ pre {
 }
 
 .l-container {
-  width: 100%;
-  max-width: calc(var(--container-wide-width) + var(--screen-x-spacing) * 2);
-  padding-inline: var(--screen-x-spacing);
+  width: calc(100% - var(--screen-x-spacing) * 2);
+  max-width: var(--container-wide-width);
   margin-inline: auto;
 }
 
 .l-container--sm {
-  max-width: calc(var(--container-default-width) + var(--screen-x-spacing) * 2);
+  max-width: var(--container-default-width);
 }
 
 .l-footer {
@@ -148,6 +147,7 @@ pre {
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: stretch;
+  width: calc(100% - var(--screen-x-spacing) * 2);
   padding-top: var(--spacing-lg);
 }
 
@@ -155,7 +155,6 @@ pre {
   display: block;
   content: "";
   max-width: var(--container-wide-width);
-  margin-inline: calc(var(--screen-x-spacing) * -1);
   border-bottom: 0.0625rem solid var(--ui-border-light-color);
   margin-bottom: var(--spacing-md);
 }
@@ -949,7 +948,6 @@ a.p-card__inner .p-card__title {
 
 .p-cardList__inner > * {
   flex-grow: 1;
-  width: 100%;
   max-width: 30rem;
   margin-inline: auto;
 }
@@ -1209,7 +1207,7 @@ a.p-card__inner .p-card__title {
 .p-drawer__close__button {
   position: absolute;
   top: var(--spacing-xs);
-  right: var(--screen-x-spacing);
+  right: 0;
   z-index: 11;
 }
 
@@ -1217,7 +1215,7 @@ body:has(.l-header--small) .p-drawer__close__button {
   top: 0;
 }
 
-.p-drawer__contents__inner {
+.p-drawer__contents__inner.l-container {
   padding-top: calc(var(--drawer-toggle-size) + var(--spacing-sm));
   padding-bottom: var(--spacing-xl);
 }
@@ -1372,7 +1370,7 @@ body:has(.p-drawer.-is-closing) {
 .p-drawerToggle__button {
   position: absolute;
   top: var(--spacing-xs);
-  right: var(--screen-x-spacing);
+  right: 0;
   z-index: 11;
 }
 
@@ -1789,7 +1787,7 @@ a.p-media__inner:focus {
   justify-content: flex-start;
   align-items: flex-start;
   gap: var(--spacing-sm);
-  width: 100%;
+  width: calc(100% - var(--screen-x-spacing) * 2);
   max-width: var(--container-wide-width);
   padding-inline: var(--spacing-md);
   color: var(--ui-default-color);
@@ -1988,7 +1986,7 @@ body:has(.l-header--large) .p-mv__stage {
   flex-wrap: nowrap;
   justify-content: center;
   align-items: flex-start;
-  width: 100%;
+  width: calc(100% - var(--screen-x-spacing) * 2);
   max-width: calc(var(--container-default-width) + var(--screen-x-spacing) * 2);
   padding-inline: var(--screen-x-spacing);
   margin-bottom: var(--spacing-lg);
@@ -2007,7 +2005,7 @@ body:has(.l-header--large) .p-mv__stage {
 }
 @media screen and (min-width: 1440px) {
   .p-mv__contents {
-    max-width: calc(var(--container-wide-width) + var(--screen-x-spacing) * 2);
+    max-width: var(--container-wide-width);
   }
 }
 
@@ -2381,7 +2379,7 @@ body:has(.l-header--large) .p-mv__stage {
 }
 @media screen and (min-width: 1024px) {
   .p-section.p-section--horizontal {
-    max-width: calc(var(--container-wide-width) + var(--screen-x-spacing) * 2);
+    max-width: var(--container-wide-width);
     grid-template-columns: 15rem 1fr;
   }
 }
@@ -2413,10 +2411,10 @@ body:has(.l-header--large) .p-mv__stage {
   justify-content: center;
   align-items: stretch;
   gap: var(--spacing-xl) var(--spacing-lg);
-  width: 100%;
-  max-width: calc(var(--container-wide-width) + var(--screen-x-spacing) * 2);
+  width: calc(100% - var(--screen-x-spacing) * 2);
+  max-width: var(--container-wide-width);
   margin-inline: auto;
-  padding: var(--spacing-xl) var(--screen-x-spacing);
+  padding-block: var(--spacing-xl);
 }
 
 .p-sectionArea > * {
@@ -2742,8 +2740,7 @@ body:has(.l-header--large) .l-main .p-sectionArea:first-child {
   justify-content: flex-start;
   align-items: stretch;
   gap: var(--spacing-xl) var(--spacing-md);
-  width: 100%;
-  max-width: calc(var(--container-wide-width) + var(--screen-x-spacing) * 2);
+  max-width: var(--container-wide-width);
   padding-inline: var(--screen-x-spacing);
   margin-inline: auto;
 }

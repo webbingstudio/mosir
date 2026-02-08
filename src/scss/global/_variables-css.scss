@@ -99,6 +99,7 @@
     --font-size-6xl: var(--wp--preset--font-size--6-x-large);
 
     // spacing
+    --screen-x-spacing: var(--wp--preset--spacing--small); // Same value as --wp--style--root--padding-***
     --spacing-2xs: var(--wp--preset--spacing--2-x-small);
     --spacing-xs: var(--wp--preset--spacing--x-small);
     --spacing-sm: var(--wp--preset--spacing--small);
@@ -122,8 +123,6 @@
     // ------------------------------
     // Variables not related to WordPress
     // ------------------------------
-
-    --screen-x-spacing: 1rem; // not responsive spacing
 
     --nav-height-md: 2.75rem;
     --nav-height-sm: 2rem;

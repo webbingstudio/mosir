@@ -2,12 +2,12 @@
 @use "sass:math";
 
 .l-container {
-    width: 100%;
-    max-width: calc( var(--container-wide-width) + ( var(--screen-x-spacing) * 2 ) );
-    padding-inline: var(--screen-x-spacing);
+    // The width must be specified
+    width: calc( 100% - ( var(--screen-x-spacing) * 2 ) );
+    max-width: var(--container-wide-width);
     margin-inline: auto;
 }
 
 .l-container--sm {
-    max-width: calc( var(--container-default-width) + ( var(--screen-x-spacing) * 2 ) );
+    max-width: var(--container-default-width);
 }

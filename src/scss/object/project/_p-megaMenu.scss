@@ -95,7 +95,8 @@
     @include g.position(fixed, n, n, n, calc( 50% - ( var(--container-wide-width) / 2 ) ), n);
     @include g.flex(n, wrap, flex-start, flex-start);
     gap: var(--spacing-sm);
-    width: 100%;
+    // The width must be specified
+    width: calc( 100% - ( var(--screen-x-spacing) * 2 ) );
     max-width: var(--container-wide-width);
     padding-inline: var(--spacing-md);
     color: var(--ui-default-color);

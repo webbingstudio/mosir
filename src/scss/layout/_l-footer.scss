@@ -8,6 +8,8 @@
 
 .l-footer__contents.l-container {
     @include g.flex(column, nowrap, n, stretch);
+    // The width must be specified
+    width: calc( 100% - ( var(--screen-x-spacing) * 2 ) );
     padding-top: var(--spacing-lg);
 }
 
@@ -15,7 +17,6 @@
     display: block;
     content: "";
     max-width: var(--container-wide-width);
-    margin-inline: calc( var(--screen-x-spacing) * -1 );
     border-bottom: 0.0625rem solid var(--ui-border-light-color);
     margin-bottom: var(--spacing-md);
 }

@@ -94,14 +94,14 @@
 }
 
 .p-drawer__close__button {
-    @include g.position( absolute, var(--spacing-xs), var(--screen-x-spacing), n, n, 11 ); // top: padding-top of header
+    @include g.position( absolute, var(--spacing-xs), 0, n, n, 11 ); // top: padding-top of header
 }
 
 body:has(.l-header--small) .p-drawer__close__button {
     top: 0;
 }
 
-.p-drawer__contents__inner {
+.p-drawer__contents__inner.l-container {
     padding-top: calc( var(--drawer-toggle-size) + var(--spacing-sm) );
     padding-bottom: var(--spacing-xl);
 }
