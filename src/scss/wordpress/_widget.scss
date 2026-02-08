@@ -31,50 +31,66 @@
     color: currentColor;
 }
 
-.widget .wp-block-categories-list {
+.widget .wp-block-categories-list,
+.widget .wp-block-archives-list {
     padding-left: 0;
     list-style-type: none;
     line-height: var(--lineHeight-xs);
 }
 
-.widget .wp-block-categories-list ul {
+.widget .wp-block-categories-list ul,
+.widget .wp-block-archives-list ul {
     padding-left: 1.5em;
     list-style-type: none;
 }
 
-.widget .wp-block-categories-list li + li {
+.widget .wp-block-categories-list li + li,
+.widget .wp-block-archives-list li + li {
     margin-top: 1em;
 }
 
 .widget .wp-block-categories-list li ul {
     margin-block: 1em;
+    font-size: var(--font-size-sm);
 }
 
-.widget .wp-block-categories-list li a {
+.widget .wp-block-categories-list li a,
+.widget .wp-block-archives-list li a {
     padding-left: 1.25em;
     color: var(--ui-default-color);
     text-decoration: none;
+}
+
+// Do not run mixins all at once
+.widget .wp-block-categories-list li a {
+    @include g.arrow();
+}
+.widget .wp-block-archives-list li a {
     @include g.arrow();
 }
 
-.widget .wp-block-categories-list li a::before {
-    top: calc( var(--nav-height-xs) / 2 );
+.widget .wp-block-categories-list li a::before,
+.widget .wp-block-archives-list li a::before {
+    top: calc( ( var(--lineHeight-xs) * 1em ) / 2 );
     left: 0;
     // Since the arrow was rotated with rotate, it needs to move diagonally.
-    transform: translateX(-33%) translateY(-33%);
+    transform: translateX(-50%) translateY(-50%);
 }
 
 @include g.mq(hover) {
-    .widget .wp-block-categories-list a:hover {
+    .widget .wp-block-categories-list a:hover,
+    .widget .wp-block-archives-list a:hover {
         text-decoration-line: underline;
     }
 }
 
-.widget .wp-block-categories-list a:focus {
+.widget .wp-block-categories-list a:focus,
+.widget .wp-block-archives-list a:focus {
     text-decoration-line: underline;
 }
 
-.widget .wp-block-categories-list a::before {
+.widget .wp-block-categories-list a::before,
+.widget .wp-block-archives-list a::before {
     top: calc( ( var(--lineHeight-sm) * 1em ) / 2 - 0.275em );
     left: 0;
 }
