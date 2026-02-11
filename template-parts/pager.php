@@ -22,7 +22,7 @@ $mosi_pager_big = 999999999; // need an unlikely integer
 $mosi_pager_sr_label = '';
 $mosi_pager_sr_label .= '<span class="wp-paginate-screen-reader-text">';
 $mosi_pager_sr_label .= is_rtl() ? ' ' : '';
-$mosi_pager_sr_label .= __( 'Page' );
+$mosi_pager_sr_label .= __( 'Page', 'mosir' );
 $mosi_pager_sr_label .= !is_rtl() ? ' ' : '';
 $mosi_pager_sr_label .= '</span>';
 
@@ -33,8 +33,8 @@ $mosi_pager_args = array(
 	'mid_size'           => 2,
 	'end_size'           => 0,
 	'prev_next'          => true,
-	'prev_text'          => '<span class="wp-paginate-label">' . __( '&laquo; Previous' ) . '</span>',
-	'next_text'          => '<span class="wp-paginate-label">' . __( 'Next &raquo;' ) . '</span>',
+	'prev_text'          => '<span class="wp-paginate-label">' . __( '&laquo; Previous', 'mosir' ) . '</span>',
+	'next_text'          => '<span class="wp-paginate-label">' . __( 'Next &raquo;', 'mosir' ) . '</span>',
 	'before_page_number' => $mosi_pager_sr_label,
 );
 

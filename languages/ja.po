@@ -586,3 +586,17 @@ msgstr "「%2$s」へのコメント: %1$s件"
 msgid "Comments are closed."
 msgstr "コメントは停止中です。"
 
+# Pager - Pagination guide text
+# template-parts/pager.php:25
+msgid "Page"
+msgstr "ページ"
+
+# Pager - Pagination guide text
+# template-parts/pager.php:37
+msgid "Next &raquo;"
+msgstr "次へ &raquo;"
+
+# Pager - Pagination guide text
+# template-parts/pager.php:36
+msgid "&laquo; Previous"
+msgstr "&laquo; 前へ"

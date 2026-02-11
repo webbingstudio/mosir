@@ -26,7 +26,7 @@ $mosi_custom_logo_width = isset($mosi_custom_logo_src[1]) ? $mosi_custom_logo_sr
 <a class="skip-link screen-reader-text" id="wp-skip-link" href="#wp--skip-link--target"><?php echo __( 'Skip to content', 'mosir' ); ?></a>
 
 <?php wp_body_open(); ?>
-<header class="l-header l-header--<?php echo esc_attr($mosi_options_header_layout); ?> l-header--drawer-<?php echo esc_attr($mosi_options_drawer_displaying); ?>">
+<header class="l-header l-header--<?php echo esc_attr( $mosi_options_header_layout ); ?> l-header--drawer-<?php echo esc_attr( $mosi_options_drawer_displaying ); ?>">
 	<div class="l-header__contents l-container">
 
 		<?php if( is_front_page() && $mosi_options_header_markup === 'h1' ): ?>
@@ -35,7 +35,7 @@ $mosi_custom_logo_width = isset($mosi_custom_logo_src[1]) ? $mosi_custom_logo_sr
 			<p class="l-header__siteTitle p-siteTitle">
 		<?php else: ?>
 			<p class="l-header__siteTitle p-siteTitle">
-				<a href="<?php bloginfo('url'); ?>">
+				<a href="<?php echo esc_url( home_url() ); ?>">
 		<?php endif; ?>
 
 		<?php if( $mosi_custom_logo_src && $mosi_custom_logo_width ): ?>

@@ -21,7 +21,7 @@ get_header();
         <?php if( is_search() ): ?>
         <div class="p-posts__header">
             <div class="p-posts__header__contents l-container l-container--sm">
-                <p class="p-posts__title c-title c-title--lv3 c-title--center"><?php echo __( 'Keyword:', 'mosir' ); ?> <?php esc_html_e( $mosi_s ); ?></p>
+                <p class="p-posts__title c-title c-title--lv3 c-title--center"><?php echo __( 'Keyword:', 'mosir' ); ?> <?php echo esc_html( $mosi_s ); ?></p>
             </div>
         </div>
         <?php elseif( !is_home() && !is_post_type_archive() ): ?>
@@ -56,7 +56,7 @@ get_header();
         <?php if( is_search() ): ?>
         <div class="p-posts__header">
             <div class="p-posts__header__contents l-container l-container--sm">
-                <p class="p-posts__title c-title c-title--lv3 c-title--center"><?php echo __( 'Keyword:', 'mosir' ); ?> <?php esc_html_e( $mosi_s ); ?></p>
+                <p class="p-posts__title c-title c-title--lv3 c-title--center"><?php echo __( 'Keyword:', 'mosir' ); ?> <?php echo esc_html( $mosi_s ); ?></p>
             </div>
         </div>
         <div class="p-posts__contents l-container l-container--sm u-p--t-lg u-p--b-lg">

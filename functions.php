@@ -14,9 +14,9 @@ if ( ! function_exists( 'mosi_setup' ) ) :
 	 * @return void
 	 */
 	function mosi_setup() {
-		add_theme_support( 'wp-block-styles' );
-		add_theme_support( 'title-tag' );
-		add_theme_support( 'post-thumbnails' );
+		add_theme_support( 'align-wide' );
+		add_theme_support( 'automatic-feed-links' );
+		add_theme_support( 'custom-logo' );
 		add_theme_support(
 			'html5',
 			array(
@@ -29,7 +29,10 @@ if ( ! function_exists( 'mosi_setup' ) ) :
 				'script',
 			)
 		);
-		add_theme_support( 'custom-logo' );
+		add_theme_support( 'post-thumbnails' );
+		add_theme_support( 'responsive-embeds' );
+		add_theme_support( 'title-tag' );
+		add_theme_support( 'wp-block-styles' );
 	}
 endif;
 add_action( 'after_setup_theme', 'mosi_setup' );
@@ -152,6 +155,26 @@ if ( ! function_exists( 'mosi_wp_block_class' ) ) :
 		echo esc_attr( $before ) . 'wp-block-post-content is-layout-constrained has-global-padding' . esc_attr( $after );
 	}
 endif;
+
+
+
+if ( ! function_exists( 'mosi_enqueue_comments_reply' ) ) :
+	/**
+	 * Add .js script if "Enable threaded comments" is activated in Admin
+	 *
+	 * @since mosir 1.1.0
+	 *
+	 * @return void
+	 */
+	function mosi_enqueue_comments_reply() {
+
+		if( is_singular() && comments_open() && ( get_option( 'thread_comments' ) == 1 ) ) {
+			wp_enqueue_script( 'comment-reply', '/wp-includes/js/comment-reply.min.js', array(), false, true );
+		}
+	}
+	add_action( 'wp_enqueue_scripts', 'mosi_enqueue_comments_reply' );
+endif;
+
 
 
 require_once __DIR__ . '/functions/customizer.php';

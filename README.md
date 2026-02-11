@@ -5,6 +5,9 @@ Author: WebbingStudio
 
 <img src="https://raw.githubusercontent.com/webbingstudio/mosir/refs/heads/develop/_resources/images/mosir_logo_vertical.png" alt="mosir logo" width="200" height="200">
 
+- [Official Site](https://mosir.webbingstudio.com/)
+- [GitHub](https://github.com/webbingstudio/mosir)
+
 ## Description (EN)
 
 "mosir" (mo-shi-ri) is a hybrid theme suitable for website management by organized teams. Main features: Coding with long-term operation in mind / High accessibility / Block editor support / Various navigation patterns / CSS variable management linked to "theme.json".

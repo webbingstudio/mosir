@@ -73,7 +73,7 @@ if( $args['group'] !== '1' ) {
 
         <?php if( $mosi_options_home_posts_header !== 'none' ): ?>
         <div class="p-section__header">
-            <p class="p-section__title c-title c-title--center c-title--lv2"><?php echo esc_attr( $mosi_posts_title ); ?></p>
+            <p class="p-section__title c-title c-title--center c-title--lv2"><?php echo esc_html( $mosi_posts_title ); ?></p>
             <p class="p-section__subTitle c-title c-title--center c-title--lv5"><?php echo esc_html( $mosi_posts_subtitle ); ?></p>
         </div>
         <?php endif; ?>

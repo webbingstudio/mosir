@@ -6,6 +6,7 @@
  */
 
 $mosi_post_type = get_post_type();
+$mosi_post_ex_class = 'p-post p-post--' . esc_attr( $mosi_post_type );
 
 get_header();
 ?>
@@ -13,9 +14,10 @@ get_header();
 <div class="l-content">
 <?php if( have_posts() ) : ?>
 <?php while( have_posts() ) : the_post(); ?>
-	<div class="p-<?php echo esc_attr( $mosi_post_type ); ?>-contents p-post p-post--<?php echo esc_attr( $mosi_post_type ); ?>">
+	<div id="post-<?php the_ID(); ?>" <?php post_class( $mosi_post_ex_class ); ?>>
 		<div class="p-post__contents <?php mosi_wp_block_class(); ?>">
 			<?php the_content(); ?>
+			<?php wp_link_pages( ); ?>
 		</div>
 	</div>
 

@@ -588,3 +588,18 @@ msgstr ""
 # comments.php:57
 msgid "Comments are closed."
 msgstr ""
+
+# Pager - Pagination guide text
+# template-parts/pager.php:25
+msgid "Page"
+msgstr ""
+
+# Pager - Pagination guide text
+# template-parts/pager.php:37
+msgid "Next &raquo;"
+msgstr ""
+
+# Pager - Pagination guide text
+# template-parts/pager.php:36
+msgid "&laquo; Previous"
+msgstr ""

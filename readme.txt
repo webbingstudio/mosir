@@ -1,9 +1,10 @@
 === mosir ===
-Contributors: webbingstudio
+mosir WordPress theme, Copyright (C) 2026 WebbingStudio.
+mosir WordPress theme is licensed under the GPL.
 Requires at least: 6.7
-Tested up to: 6.9.1
+Tested up to: 6.9
 Requires PHP: 8.0
-Stable tag: 1.0.1
+Stable tag: 1.0.4
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Tags: accessibility-ready, custom-colors, custom-logo, custom-menu, featured-images, one-column, sticky-post, wide-blocks, theme-options, editor-style, blog, news
@@ -26,21 +27,32 @@ Yes, this theme complies with the WordPress GNU License, so you are free to refe
 = What mountain is used in the main image of the screenshot.png? =
 This is the Niseko mountain range (also known as Weisshorn) as seen from Mt. Iwaw-nupuri in Hokkaido, the author's native place. This photo is included in the mosir theme package and can be freely used under the terms of the GPL license. The photographer is the author's sister, who loves mountain climbing. Thanks to her for this wonderful photo.
 
-== Changelog ==
-= 1.0.4 =
-* Fixed an issue where the drawer would close when scrolling rapidly on a smartphone / Fix widget spacing
-= 1.0.3 =
-* Fixed an error when there were no posts
-= 1.0.2 =
-* Fixed label behavior in media / Fixed incorrect container width for widget areas
-= 1.0.1 =
-* Fixed incorrect container width calculation / Supports archive list widget
-= 1.0.0 =
-* Initial release.
-
 == License ==
 This theme, *mosir*, is licensed under the GNU General Public License v3 or later.
 You should have received a copy of the GNU General Public License along with this theme.
 If not, see <https://www.gnu.org/licenses/>.
 
+== Author ==
+The theme built by WebbingStudio (Seiko Kuchida).
+mail@webbingstudio.com
+
+== Photo ==
 Photographer of mainvisual: @chickenclimber <https://x.com/chickenclimber>
+
+
+== Changelog ==
+
+= 1.0.4 =
+* Fixed an issue where the drawer would close when scrolling rapidly on a smartphone / Fix widget spacing
+
+= 1.0.3 =
+* Fixed an error when there were no posts
+
+= 1.0.2 =
+* Fixed label behavior in media / Fixed incorrect container width for widget areas
+
+= 1.0.1 =
+* Fixed incorrect container width calculation / Supports archive list widget
+
+= 1.0.0 =
+* Initial release.

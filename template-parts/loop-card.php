@@ -33,7 +33,7 @@
 							$mosi_post_terms = array_slice( $mosi_post_terms, 0, 1 );
 							foreach ( $mosi_post_terms as $taxonomy ) :
 						?>
-							<li><span class="c-label c-label--term-<?php esc_html_e( $taxonomy->slug ); ?>"><?php esc_html_e( $taxonomy->name ); ?></span></li>
+							<li><span class="c-label c-label--term-<?php echo esc_html( $taxonomy->slug ); ?>"><?php echo esc_html( $taxonomy->name ); ?></span></li>
 						<?php endforeach; ?>
 					</ul>
 					<?php endif; ?>
