@@ -428,7 +428,7 @@ body.home.page .l-main > *:first-child {
 }
 
 .l-sidebar {
-  padding-top: var(--spacing-lg);
+  padding-block: var(--spacing-lg);
 }
 
 .c-button {
@@ -2761,7 +2761,7 @@ body:has(.l-header--large) .l-main .p-sectionArea:first-child {
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: stretch;
-  gap: var(--spacing-xl) var(--spacing-md);
+  gap: var(--spacing-lg) var(--spacing-md);
   width: calc(100% - var(--screen-x-spacing) * 2);
   max-width: var(--container-wide-width);
   margin-inline: auto;
@@ -2772,12 +2772,8 @@ body:has(.l-header--large) .l-main .p-sectionArea:first-child {
   flex-basis: 100%;
 }
 
-.p-widgetArea.p-widgetArea--main {
-  padding-block: var(--spacing-xl);
-}
-
-.p-widgetArea.p-widgetArea--main.p-widgetArea--main-post {
-  padding-top: 0;
+.p-widgetArea + .p-widgetArea {
+  padding-top: var(--spacing-xl);
 }
 
 .p-widgetArea.p-widgetArea--drawer .p-widgetArea__inner {

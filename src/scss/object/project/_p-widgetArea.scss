@@ -14,7 +14,7 @@
 
 .p-widgetArea__inner {
     @include g.flex( row, wrap, flex-start, n );
-    gap: var(--spacing-xl) var(--spacing-md);
+    gap: var(--spacing-lg) var(--spacing-md);
     // The width must be specified
     width: calc( 100% - ( var(--screen-x-spacing) * 2 ) );
     max-width: var(--container-wide-width);
@@ -26,12 +26,8 @@
     flex-basis: 100%;
 }
 
-.p-widgetArea.p-widgetArea--main {
-    padding-block: var(--spacing-xl);
-}
-
-.p-widgetArea.p-widgetArea--main.p-widgetArea--main-post {
-    padding-top: 0;
+.p-widgetArea + .p-widgetArea {
+    padding-top: var(--spacing-xl);
 }
 
 // .p-widgetArea.p-widgetArea--drawer {
