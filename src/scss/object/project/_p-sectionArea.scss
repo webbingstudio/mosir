@@ -14,12 +14,19 @@
     width: calc( 100% - ( var(--screen-x-spacing) * 2 ) );
     max-width: var(--container-wide-width);
     margin-inline: auto;
-    padding-block: var(--spacing-xl);
 }
 
 .p-sectionArea > * {
     flex-grow: 1;
     flex-basis: 100%;
+}
+
+.p-sectionArea > *:first-child {
+    padding-top: var(--spacing-xl);
+}
+
+.p-sectionArea > *:last-child {
+    padding-bottom: var(--spacing-xl);
 }
 
 
@@ -28,6 +35,8 @@
 // ------------------------------
 
 .p-sectionArea.p-sectionArea--2col > * {
+    padding-block: var(--spacing-xl);
+
     @include g.mq(xga) {
         flex-basis: calc( 50% - ( var(--spacing-lg) / 2 ) );
     }
