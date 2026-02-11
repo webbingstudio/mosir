@@ -80,9 +80,15 @@ const mosiDrawerControls = function() {
         if(nav != undefined) {
             const open_focus = nav.querySelector('a, button, input') || close_focus;
 
-            // If the window is resized, close the drawer.
+            // If the window width is resized, close the drawer.
             let resize_queue;
+            let window_width = window.innerWidth;
             window.addEventListener('resize', function() {
+                const resized_width = window.innerWidth;
+                if(window_width === resized_width) {
+                    return;
+                }
+                window_width = resized_width;
                 clearTimeout(resize_queue);
                 resize_queue = setTimeout(() => {
                     mosiDrawerClearTimer(nav);
