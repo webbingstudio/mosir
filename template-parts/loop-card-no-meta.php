@@ -13,7 +13,7 @@
 	<a class="p-card__inner" href="<?php the_permalink(); ?>">
 		<figure class="p-card__image c-picture c-picture--16to9">
 			<?php if ( has_post_thumbnail() ) : ?>
-				<?php the_post_thumbnail( 'thumbnail' ); ?>
+				<?php the_post_thumbnail( 'medium' ); ?>
 			<?php else : ?>
 				<img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/common/noimage.jpg' ) ); ?>" alt="">
 			<?php endif; ?>
