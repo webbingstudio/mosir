@@ -130,15 +130,4 @@
         }
     }
 
-    > blockquote,
-    > table,
-    > ul,
-    > ol,
-    > dl,
-    > pre {
-        & + * {
-            margin-block-start: var(--spacing-md);
-        }
-    }
-
 }

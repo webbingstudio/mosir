@@ -4154,14 +4154,6 @@ body:has(.l-header--large) .l-main .p-sectionArea:first-child {
 .p-post.p-post--post .wp-block-post-content > * + h2 {
   margin-block-start: var(--spacing-md);
 }
-.p-post.p-post--post .wp-block-post-content > blockquote + *,
-.p-post.p-post--post .wp-block-post-content > table + *,
-.p-post.p-post--post .wp-block-post-content > ul + *,
-.p-post.p-post--post .wp-block-post-content > ol + *,
-.p-post.p-post--post .wp-block-post-content > dl + *,
-.p-post.p-post--post .wp-block-post-content > pre + * {
-  margin-block-start: var(--spacing-md);
-}
 
 .wp-block-query ul {
   list-style-type: none;
