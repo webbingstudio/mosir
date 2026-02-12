@@ -103,10 +103,10 @@
 
 
 // ------------------------------
-// post(blog)
+// blog
 // ------------------------------
 
-.p-post.p-post--post .wp-block-post-content {
+.p-post.p-post--blog .wp-block-post-content {
 
     h2 {
         font-size: var(--font-size-xl);
@@ -115,13 +115,35 @@
     }
 
     h3 {
+        position: relative;
+        padding-left: var(--spacing-xs);
         font-size: var(--font-size-lg);
-        padding-left: 0.5em;
-        border-left: 0.125rem solid var(--color-primary);
+    }
+
+    h3::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 0.125rem;
+        background-color: var(--color-primary);
     }
 
     h4 {
-        font-size: var(--font-size-lg);
+        position: relative;
+        padding-left: var(--spacing-xs);
+        font-size: var(--font-size-md);
+    }
+
+    h4::before {
+        content: "";
+        position: absolute;
+        top: 0.25em;
+        bottom: 0.25em;
+        left: 0;
+        width: 0.0625rem;
+        background-color: var(--color-primary);
     }
 
     > * {
