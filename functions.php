@@ -33,6 +33,8 @@ if ( ! function_exists( 'mosi_setup' ) ) :
 		add_theme_support( 'responsive-embeds' );
 		add_theme_support( 'title-tag' );
 		add_theme_support( 'wp-block-styles' );
+
+		add_image_size( 'mosir-loop', 768, 432 );
 	}
 endif;
 add_action( 'after_setup_theme', 'mosi_setup' );
