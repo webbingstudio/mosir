@@ -1,7 +1,7 @@
 <?php
 /**
  * single.php
- * 投稿詳細ページ用テンプレート
+ * Single post template for post type "post"
  *
  * @package mosir
  */
@@ -14,8 +14,8 @@ $mosi_tags = get_the_tags();
 $mosi_date_format = get_option('date_format');
 $mosi_time_format = get_option('time_format');
 
-$mosi_prev_link = get_previous_post_link( '%link', '前: %title' );
-$mosi_next_link = get_next_post_link( '%link', '次: %title' );
+$mosi_prev_link = get_previous_post_link( '%link', esc_html( __( 'Prev: %title', 'mosir' ) ) );
+$mosi_next_link = get_next_post_link( '%link', esc_html( __( 'Next: %title', 'mosir' ) ) );
 
 $mosi_post_ex_class = 'p-post p-post--blog p-post--' . esc_attr( $mosi_post_type );
 

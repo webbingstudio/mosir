@@ -1,6 +1,7 @@
 <?php
 /**
  * page.php
+ * Single post template for post type "page"
  *
  * @package mosir
  */

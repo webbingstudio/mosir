@@ -1,5 +1,6 @@
 <?php
 /**
+ * sidebar.php
  * Sidebar template
  *
  * @package mosir
