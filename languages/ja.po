@@ -44,6 +44,16 @@ msgstr "メニューを閉じる"
 msgid "Back to index"
 msgstr "一覧へもどる"
 
+# Next link guide text
+# single.php:18
+msgid "Next: %title;"
+msgstr "次: %title;"
+
+# Previous link guide text
+# single.php:17
+msgid "Prev: %title"
+msgstr "前: %title"
+
 
 # Menu: Theme Location name
 # functions.php:131

@@ -45,6 +45,16 @@ msgstr ""
 msgid "Back to index"
 msgstr ""
 
+# Next link guide text
+# single.php:18
+msgid "Next: %title;"
+msgstr ""
+
+# Previous link guide text
+# single.php:17
+msgid "Prev: %title"
+msgstr ""
+
 
 # Menu: Theme Location name
 # functions.php:131
