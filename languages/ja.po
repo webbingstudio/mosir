@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: mosir 1.1.0\n"
+"Project-Id-Version: mosir 1.1.1\n"
 "Report-Msgid-Bugs-To: https://github.com/webbingstudio/mosir\n"
 "POT-Creation-Date: 2026-02-04T01:48:38+00:00\n"
 "PO-Revision-Date: 2026-02-04 13:34+0900\n"

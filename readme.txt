@@ -4,7 +4,7 @@ mosir WordPress theme is licensed under the GPL.
 Requires at least: 6.7
 Tested up to: 6.9
 Requires PHP: 8.0
-Stable tag: 1.1.0
+Stable tag: 1.1.1
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Tags: accessibility-ready, custom-colors, custom-logo, custom-menu, featured-images, one-column, sticky-post, wide-blocks, theme-options, editor-style, blog, news
@@ -41,6 +41,9 @@ Photographer of mainvisual: @chickenclimber <https://x.com/chickenclimber>
 
 
 == Changelog ==
+
+= 1.1.1 =
+* Fixed translation errors / Featured images, add prefix to enqueued CSS and JS
 
 = 1.1.0 =
 * Compliant with official theme guidelines / Fixed post-specific text formatting to be usable with other post types
