@@ -50,7 +50,7 @@ if ( ! function_exists( 'mosi_enqueue_styles' ) ) :
 	 */
 	function mosi_enqueue_styles() {
 		wp_enqueue_style(
-			'theme-style',
+			'mosir-theme-style',
 			get_theme_file_uri( 'assets/css/theme.css' ),
 			array(),
 			wp_get_theme()->get( 'Version' )
@@ -70,7 +70,7 @@ if ( ! function_exists( 'mosi_enqueue_scripts' ) ) :
 	 */
 	function mosi_enqueue_scripts() {
 		wp_enqueue_script(
-			'theme-script',
+			'mosir-theme-script',
 			get_theme_file_uri( 'assets/js/theme.js' ),
 			array(),
 			wp_get_theme()->get( 'Version' ),
@@ -107,7 +107,7 @@ if ( ! function_exists( 'mosi_enqueue_block_editor_assets' ) ) :
 	 */
 	function mosi_enqueue_block_editor_assets() {
 		wp_enqueue_script(
-			'editor-script',
+			'mosir-editor-script',
 			get_theme_file_uri( 'assets/js/editor-script.js' ),
 			array(),
 			wp_get_theme()->get( 'Version' ),
@@ -171,7 +171,7 @@ if ( ! function_exists( 'mosi_enqueue_comments_reply' ) ) :
 	function mosi_enqueue_comments_reply() {
 
 		if( is_singular() && comments_open() && ( get_option( 'thread_comments' ) == 1 ) ) {
-			wp_enqueue_script( 'comment-reply', '/wp-includes/js/comment-reply.min.js', array(), false, true );
+			wp_enqueue_script( 'mosir-comment-reply', '/wp-includes/js/comment-reply.min.js', array(), false, true );
 		}
 	}
 	add_action( 'wp_enqueue_scripts', 'mosi_enqueue_comments_reply' );
