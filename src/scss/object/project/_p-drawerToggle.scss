@@ -11,16 +11,18 @@
     @include g.position( fixed, 0, 0, n, 0, 112 );
 }
 
-.p-drawerToggle.p-drawerToggle--mobile {
-    @include g.mq(xga) {
-        display: none;
-    }
-}
-
 .p-drawerToggle__contents.l-container {
     position: relative;
 }
 
 .p-drawerToggle__button {
     @include g.position( absolute, var(--spacing-xs), 0, n, n, 11 ); // top: padding-top of header
+}
+
+
+
+.p-drawerToggle.p-drawerToggle--mobile {
+    @include g.mq(xga) {
+        display: none;
+    }
 }

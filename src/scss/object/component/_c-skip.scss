@@ -1,7 +1,7 @@
-@use "../global" as g;
+@use "../../global" as g;
 @use "sass:math";
 
-.skip-link.screen-reader-text {
+.c-skip {
     border: 0;
     clip-path: inset(50%);
     height: 1px;
@@ -13,18 +13,20 @@
     word-wrap: normal !important;
 }
 
-.skip-link.screen-reader-text:focus {
-    background-color: #eee;
+.c-skip:focus {
     clip-path: none;
-    color: #444;
+    top: 10px;
+    left: 10px;
     display: block;
-    font-size: 1em;
-    height: auto;
-    left: 5px;
-    line-height: normal;
-    padding: 15px 23px 14px;
-    text-decoration: none;
-    top: 5px;
     width: auto;
+    height: auto;
+    padding: 1em 3em 1em;
+    color: var(--ui-default-color);
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: var(--ui-inverse-color);
+    border: 0.125rem solid var(--ui-default-color);
+    line-height: normal;
+    text-decoration: none;
     z-index: 100000;
 }
