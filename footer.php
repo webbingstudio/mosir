@@ -84,11 +84,12 @@ if( has_nav_menu('sticky_nav') ) {
 	);
 }
 ?>
-<?php wp_footer(); ?>
 
 </div>
 <?php if( $mosi_options_drawer_displaying !== 'none' ): ?>
 <?php get_template_part( 'template-parts/drawer' ); ?>
 <?php endif; ?>
+
+<?php wp_footer(); ?>
 </body>
 </html>
