@@ -19,7 +19,7 @@ $mosi_options_copyright = get_theme_mod( 'mosi_options_copyright', (bool)false )
 
 </main>
 
-<footer class="l-footer">
+<footer id="footer" class="l-footer">
 	<div class="l-footer__contents l-container">
 		<?php
 		if( has_nav_menu('footer_nav_01') ) {
