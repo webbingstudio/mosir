@@ -5,89 +5,32 @@
  * @package mosir
  */
 
-$mosi_options_drawer_displaying = get_theme_mod( 'mosi_options_drawer_displaying', 'always' );
-$mosi_options_copyright = get_theme_mod( 'mosi_options_copyright', (bool)false );
+$mosi_args = array(
+	'mosi_options_header_layout' => get_theme_mod( 'mosi_options_header_layout', 'large' ),
+	'mosi_options_drawer_displaying' => get_theme_mod( 'mosi_options_drawer_displaying', 'always' ),
+	'mosi_options_drawer_size' => get_theme_mod( 'mosi_options_drawer_size', 'slim' ),
+	'mosi_options_copyright' => get_theme_mod( 'mosi_options_copyright', (bool)false )
+);
+
 ?>
 
-<?php if ( is_active_sidebar( 'widget-main' ) ) : ?>
-<div class="p-widgetArea p-widgetArea--main">
-	<div class="p-widgetArea__inner">
-		<?php dynamic_sidebar( 'widget-main' ); ?>
-	</div>
-</div>
-<?php endif; ?>
-
+<?php get_template_part( 'template-parts/main', 'bottom' ); ?>
 </main>
 
 <footer id="footer" class="l-footer">
 	<div class="l-footer__contents l-container">
-		<?php
-		if( has_nav_menu('footer_nav_01') ) {
-			wp_nav_menu(
-				array(
-					'theme_location' => 'footer_nav_01',
-					'container'       => 'nav',
-					'container_aria_label'       => 'Footer sitemap',
-					'container_class' => 'l-footer__menu01 p-sitemap',
-					'menu_id' => 'footer-nav-01',
-					'menu_class' => 'menu p-sitemap__nav c-nav',
-					'link_before'      => '<span class="menu-label c-nav__item__label">',
-					'link_after'      => '</span>',
-				)
-			);
-		}
-		?>
-		<?php
-		if( has_nav_menu('footer_nav_02') ) {
-			wp_nav_menu(
-				array(
-					'theme_location' => 'footer_nav_02',
-					'container'       => 'nav',
-					'container_aria_label'       => 'Footer navigation',
-					'container_class' => 'l-footer__menu02 p-horizontalMenu',
-					'menu_id' => 'footer-nav-02',
-					'menu_class' => 'menu p-horizontalMenu__nav c-nav',
-					'link_before'      => '<span class="menu-label c-nav__item__label">',
-					'link_after'      => '</span>',
-				)
-			);
-		}
-		?>
+		<?php get_template_part( 'template-parts/footer', 'contents', $mosi_args ); ?>
 	</div>
-	<div class="l-footer__copyright">
-		<p class="l-footer__copyright__body">
-			<?php if( $mosi_options_copyright ): ?>
-				<?php echo wp_unslash(wp_filter_post_kses($mosi_options_copyright)); ?>
-			<?php else: ?>
-				&copy; <?php bloginfo('name'); ?>
-			<?php endif; ?>
-		</p>
-		<?php if( !$mosi_options_copyright ): ?>
-		<p class="l-footer__copyright__body u-p--t-sm has-small-font-size"><a href="https://mosir.webbingstudio.com/" target="_blank" rel="noopener noreferrer"><strong><?php echo __( 'WordPress theme &quot;mosir&quot;', 'mosir' ); ?></strong></a></p>
-		<?php endif; ?>
-	</div>
-	
+	<?php get_template_part( 'template-parts/footer', 'copyright', $mosi_args ); ?>
 </footer>
-<?php
-if( has_nav_menu('sticky_nav') ) {
-	wp_nav_menu(
-		array(
-			'theme_location' => 'sticky_nav',
-			'container'       => 'div',
-			'container_class' => 'p-stickyMenu',
-			'menu_id' => 'sticky-nav',
-			'menu_class' => 'menu p-stickyMenu__nav c-nav',
-			'items_wrap'      => '<ul class="%2$s">%3$s</ul>',
-			'link_before'      => '<span class="menu-label c-nav__item__label">',
-			'link_after'      => '</span>',
-		)
-	);
-}
-?>
 
+<?php get_template_part( 'template-parts/sticky' ); ?>
+
+<?php // close tag: div#mosi-drawer-contents.l-document ?>
 </div>
-<?php if( $mosi_options_drawer_displaying !== 'none' ): ?>
-<?php get_template_part( 'template-parts/drawer' ); ?>
+
+<?php if( $mosi_args['mosi_options_drawer_displaying'] !== 'none' ): ?>
+<?php get_template_part( 'template-parts/drawer', '', $mosi_args ); ?>
 <?php endif; ?>
 
 <?php wp_footer(); ?>
