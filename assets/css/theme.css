@@ -61,6 +61,8 @@
   --body-color: var(--color-default-dark);
   --body-bg: var(--color-white);
   --body-letterSpacing: 0.02em;
+  --body-lineHeight: var(--lineHeight-sm);
+  --paragraph-lineHeight: var(--lineHeight-md);
   --link-default-color: var(--color-primary);
   --link-hover-color: var(--color-primary);
   --ui-default-color: var(--body-color);
@@ -93,7 +95,7 @@ body {
   font-size: var(--font-size-md);
   font-weight: var(--fontWeight-normal);
   font-family: var(--fontFamily-default);
-  line-height: var(--lineHeight-md);
+  line-height: var(--body-lineHeight);
   letter-spacing: var(--body-letterSpacing);
 }
 
@@ -115,6 +117,10 @@ a:focus {
   color: var(--link-hover-color);
   outline-color: currentColor;
   text-decoration: none;
+}
+
+p {
+  line-height: var(--paragraph-lineHeight);
 }
 
 pre {

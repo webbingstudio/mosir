@@ -11,7 +11,7 @@ body {
     font-size: var(--font-size-md);
     font-weight: var(--fontWeight-normal);
     font-family: var(--fontFamily-default);
-    line-height: var(--lineHeight-md);
+    line-height: var(--body-lineHeight);
     letter-spacing: var(--body-letterSpacing);
 }
 
@@ -40,6 +40,10 @@ a:focus {
     color: var(--link-hover-color);
     outline-color: currentColor;
     text-decoration: none;
+}
+
+p {
+    line-height: var(--paragraph-lineHeight);
 }
 
 pre {
