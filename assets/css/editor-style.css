@@ -2784,6 +2784,57 @@ body:has(.l-header--large) .l-main .p-sectionArea:first-child {
   margin-bottom: 1.5em;
 }
 
+.p-listMenu__nav.c-nav {
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  gap: 1em;
+}
+
+.p-listMenu__nav .menu-item > a {
+  padding-left: 1.25em;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.p-listMenu__nav .menu-item > a {
+  position: relative;
+}
+
+.p-listMenu__nav .menu-item > a::before {
+  position: absolute;
+  box-sizing: border-box;
+  content: "";
+  width: 0.55em;
+  height: 0.55em;
+  border-top: 0.125em solid var(--ui-accent-color);
+  border-right: 0.125em solid var(--ui-accent-color);
+  rotate: 45deg;
+}
+
+.p-listMenu__nav .menu-item > a::before {
+  top: calc(var(--lineHeight-xs) * 1em / 2);
+  left: 0;
+  transform: translateX(-33%) translateY(-33%);
+}
+
+.p-listMenu__nav .current-menu-item > a {
+  text-decoration: underline;
+}
+.p-listMenu__nav .current-menu-item > a::before {
+  opacity: 0.3;
+  border-color: currentColor;
+}
+
+.p-listMenu__nav .sub-menu {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  margin-top: 1em;
+  gap: 1em;
+}
+
 .p-widgetArea {
   container-type: inline-size;
   container-name: widgetarea;

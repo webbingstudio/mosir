@@ -1,0 +1,42 @@
+@use "../../global" as g;
+@use "sass:math";
+
+// ------------------------------
+// project > listMenu
+//  - Small vertically aligned menu.
+//  - Aligned vertically regardless of the window width.
+//  - All levels are marked with arrows.
+//  - The font size does not change depending on the hierarchy.
+// ------------------------------
+
+.p-listMenu__nav.c-nav {
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 1em;
+}
+
+.p-listMenu__nav .menu-item > a {
+    padding-left: 1.25em;
+    align-items: flex-start;
+    justify-content: flex-start;
+    @include g.arrow();
+}
+
+.p-listMenu__nav .menu-item > a::before {
+    // Since the arrow was rotated with rotate, it needs to move diagonally.
+    top: calc( var(--lineHeight-xs) * 1em / 2 );
+    left: 0;
+    transform: translateX(-33%) translateY(-33%);
+}
+
+.p-listMenu__nav .current-menu-item > a {
+    text-decoration: underline;
+    @include g.arrow-current();
+}
+
+.p-listMenu__nav .sub-menu {
+    @include g.flex(column, n, flex-start, n);
+    margin-top: 1em;
+    gap: 1em;
+}
