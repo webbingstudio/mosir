@@ -50,3 +50,4 @@ $mosi_args = array(
 	</div>
 </header>
 <main id="main-content" class="l-main">
+	<?php get_template_part( 'template-parts/main', 'top' ); ?>
