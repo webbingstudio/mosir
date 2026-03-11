@@ -1,8 +1,8 @@
 @use "../global" as g;
 @use "sass:math";
 
-.wp-block-post-content,
-.comment-content {
+:where(.wp-block-post-content),
+:where(.comment-content) {
     overflow-wrap: anywhere;
     word-break: normal;
     line-break: strict;
@@ -106,7 +106,7 @@
 // blog
 // ------------------------------
 
-.p-post.p-post--blog .wp-block-post-content {
+.p-post.p-post--blog :where(.wp-block-post-content) {
 
     h2 {
         font-size: var(--font-size-xl);

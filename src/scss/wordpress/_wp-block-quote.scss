@@ -1,0 +1,6 @@
+@use "../global" as g;
+@use "sass:math";
+
+.wp-block-quote {
+    border-left-color: var(--color-default-lighter);
+}
