@@ -4,6 +4,53 @@
  * since mosir 1.0
  */
 
+let mosiDrawerBodyScrollY = 0;
+
+const mosiDrawerGetScrollY = function(target) {
+    if(target) {
+        return target.scrollTop || 0;
+    } else {
+        return window.scrollY
+            || window.pageYOffset
+            || document.documentElement.scrollTop
+            || document.body.scrollTop
+            || 0;
+    }
+};
+
+const mosiDrawerLockBodyScroll = function(contents) {
+    if(!document || !document.body || !contents) {
+        return;
+    }
+    mosiDrawerBodyScrollY = mosiDrawerGetScrollY();
+    if(document.body.classList.contains('is-mosi-drawer-scroll-locked')) {
+        return;
+    }
+    document.body.classList.add('is-mosi-drawer-scroll-locked');
+    // lock contents  = #mosi-drawer-contents
+    contents.style.height = '100dvh';
+    contents.style.overflowX = 'hidden';
+    contents.style.overflowY = 'scroll';
+    contents.scrollTo(0, mosiDrawerBodyScrollY);
+};
+
+const mosiDrawerUnlockBodyScroll = function(contents) {
+    if(!document || !document.body || !contents) {
+        return;
+    }
+    mosiDrawerBodyScrollY = mosiDrawerGetScrollY(contents);
+    if(!document.body.classList.contains('is-mosi-drawer-scroll-locked')) {
+        return;
+    }
+    const scrollY = mosiDrawerBodyScrollY || 0;
+    document.body.classList.remove('is-mosi-drawer-scroll-locked');
+    // unlock contents  = #mosi-drawer-contents
+    contents.style.height = '';
+    contents.style.overflowX = '';
+    contents.style.overflowY = '';
+    window.scrollTo(0, scrollY);
+};
+
 const mosiDrawerInit = function(toggle, nav) {
     toggle.setAttribute('aria-expanded', 'false');
     nav.setAttribute('aria-hidden', 'true');
@@ -19,10 +66,11 @@ const mosiDrawerClearTimer = function(nav) {
     }
 };
 
-const mosiDrawerOpen = function(toggles, nav, duration, open_focus) {
+const mosiDrawerOpen = function(toggles, nav, contents, duration, open_focus) {
     toggles.forEach(toggle => {
         toggle.setAttribute('aria-expanded', 'true');
     });
+    mosiDrawerLockBodyScroll(contents);
     nav.classList.add('-is-opening');
     nav.classList.remove('-is-closing');
 
@@ -38,7 +86,7 @@ const mosiDrawerOpen = function(toggles, nav, duration, open_focus) {
     },duration);
 };
 
-const mosiDrawerClose = function(toggles, nav, duration, close_focus) {
+const mosiDrawerClose = function(toggles, nav, contents, duration, close_focus) {
     toggles.forEach(toggle => {
         toggle.setAttribute('aria-expanded', 'false');
     });
@@ -51,19 +99,21 @@ const mosiDrawerClose = function(toggles, nav, duration, close_focus) {
         nav.classList.remove('-is-closing');
         nav.setAttribute('aria-hidden', 'true');
         nav.setAttribute('inert', 'inert');
+        mosiDrawerUnlockBodyScroll(contents);
         if(close_focus && typeof close_focus.focus === 'function') {
             close_focus.focus();
         }
     },duration);
 };
 
-const mosiDrawerWindowResized = function(toggles, nav) {
+const mosiDrawerReset = function(toggles, nav, contents) {
     toggles.forEach(toggle => {
         toggle.setAttribute('aria-expanded', 'false');
     });
     nav.setAttribute('aria-hidden', 'true');
     nav.setAttribute('inert', 'inert');
     nav.classList.remove('-is-closing', '-is-opening', '-is-open');
+    mosiDrawerUnlockBodyScroll(contents);
 };
 
 const mosiDrawerControls = function() {
@@ -79,6 +129,7 @@ const mosiDrawerControls = function() {
 
         if(nav != undefined) {
             const open_focus = nav.querySelector('a, button, input') || close_focus;
+            const drawer_links = nav.querySelectorAll('a[href]');
 
             // If the window width is resized, close the drawer.
             let resize_queue;
@@ -92,7 +143,7 @@ const mosiDrawerControls = function() {
                 clearTimeout(resize_queue);
                 resize_queue = setTimeout(() => {
                     mosiDrawerClearTimer(nav);
-                    mosiDrawerWindowResized(toggles, nav);
+                    mosiDrawerReset(toggles, nav, contents);
                     if(contents) {
                         contents.removeAttribute('inert');
                     }
@@ -109,12 +160,12 @@ const mosiDrawerControls = function() {
 
                 toggle.addEventListener('click', ()=> {
                     if( ( action === 'toggle' ) && ( toggle.getAttribute('aria-expanded') === 'false') ) {
-                        mosiDrawerOpen(toggles, nav, duration, open_focus);
+                        mosiDrawerOpen(toggles, nav, contents, duration, open_focus);
                         if(contents) {
                             contents.setAttribute('inert', 'inert');
                         }
                     } else {
-                        mosiDrawerClose(toggles, nav, duration, close_focus);
+                        mosiDrawerClose(toggles, nav, contents, duration, close_focus);
                         if(contents) {
                             contents.removeAttribute('inert');
                         }
