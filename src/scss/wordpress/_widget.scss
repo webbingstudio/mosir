@@ -108,6 +108,7 @@
 
 .widget .wp-block-archives-dropdown select,
 .widget .wp-block-categories-dropdown select {
+    appearance: none;
     padding-inline: 0.5em;
     width: 100%;
     min-height: var(--nav-height-md);

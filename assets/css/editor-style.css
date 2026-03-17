@@ -4027,6 +4027,9 @@ body:has(.l-header--large) .l-main .p-sectionArea:first-child {
 
 .widget .wp-block-archives-dropdown select,
 .widget .wp-block-categories-dropdown select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   padding-inline: 0.5em;
   width: 100%;
   min-height: var(--nav-height-md);
