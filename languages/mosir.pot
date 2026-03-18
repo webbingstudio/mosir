@@ -58,42 +58,42 @@ msgstr ""
 
 # Menu: Theme Location name
 # functions.php:131
-msgid "Header: Mega nav."
+msgid "Header: Menu 1"
 msgstr ""
 
 # Menu: Theme Location name
 # functions.php:132
-msgid "Header: Horizontal nav."
+msgid "Header: Menu 2"
 msgstr ""
 
 # Menu: Theme Location name
 # functions.php:133
-msgid "Header: Piped nav."
+msgid "Header: Menu 3"
 msgstr ""
 
 # Menu: Theme Location name
 # functions.php:134
-msgid "Header: Buttons"
+msgid "Header: Menu 4"
 msgstr ""
 
 # Menu: Theme Location name
 # functions.php:135
-msgid "Footer: Sitemap"
+msgid "Footer: Menu 1"
 msgstr ""
 
 # Menu: Theme Location name
 # functions.php:136
-msgid "Footer: Horizontal nav."
+msgid "Footer: Menu 2"
 msgstr ""
 
 # Menu: Theme Location name
 # functions.php:137
-msgid "Drawer: Vertical nav."
+msgid "Drawer: Menu 1"
 msgstr ""
 
 # Menu: Theme Location name
 # functions.php:138
-msgid "Drawer: Sitemap"
+msgid "Drawer: Menu 2"
 msgstr ""
 
 # Menu: Theme Location name

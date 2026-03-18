@@ -57,48 +57,49 @@ msgstr "前: %title"
 
 # Menu: Theme Location name
 # functions.php:131
-msgid "Header: Mega nav."
-msgstr "ヘッダ: メガメニュー付きナビ"
+msgid "Header: Menu 1"
+msgstr "ヘッダ: メニュー 1"
 
 # Menu: Theme Location name
 # functions.php:132
-msgid "Header: Horizontal nav."
-msgstr "ヘッダ: 水平ナビ"
+msgid "Header: Menu 2"
+msgstr "ヘッダ: メニュー 2"
 
 # Menu: Theme Location name
 # functions.php:133
-msgid "Header: Piped nav."
-msgstr "ヘッダ: パイプ区切りナビ"
+msgid "Header: Menu 3"
+msgstr "ヘッダ: メニュー 3"
 
 # Menu: Theme Location name
 # functions.php:134
-msgid "Header: Buttons"
-msgstr "ヘッダ: ボタン群"
+msgid "Header: Menu 4"
+msgstr "ヘッダ: メニュー 4"
 
 # Menu: Theme Location name
 # functions.php:135
-msgid "Footer: Sitemap"
-msgstr "フッタ: サイトマップ"
+msgid "Footer: Menu 1"
+msgstr "フッタ: メニュー 1"
 
 # Menu: Theme Location name
 # functions.php:136
-msgid "Footer: Horizontal nav."
-msgstr "フッタ: 水平ナビ"
+msgid "Footer: Menu 2"
+msgstr "フッタ: メニュー 2"
 
 # Menu: Theme Location name
 # functions.php:137
-msgid "Drawer: Vertical nav."
-msgstr "ドロワー: 垂直ナビ"
+msgid "Drawer: Menu 1"
+msgstr "ドロワー: メニュー 1"
 
 # Menu: Theme Location name
 # functions.php:138
-msgid "Drawer: Sitemap"
-msgstr "ドロワー: サイトマップ"
+msgid "Drawer: Menu 2"
+msgstr "ドロワー: メニュー 2"
 
 # Menu: Theme Location name
 # functions.php:139
 msgid "Sticky nav."
 msgstr "画面下部固定ナビ"
+
 
 # Customizer: "Not use" in the post type selection
 # functions/customizer.php:39

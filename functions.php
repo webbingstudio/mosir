@@ -128,14 +128,14 @@ if ( ! function_exists( 'mosi_redistar_nav_menu' ) ) :
 	 */
 	function mosi_redistar_nav_menu() {
 		register_nav_menus([
-			'header_nav_01' => __( 'Header: Mega nav.', 'mosir' ),
-			'header_nav_02' => __( 'Header: Horizontal nav.', 'mosir' ),
-			'header_nav_03' => __( 'Header: Piped nav.', 'mosir' ),
-			'header_nav_04' => __( 'Header: Buttons', 'mosir' ),
-			'footer_nav_01' => __( 'Footer: Sitemap', 'mosir' ),
-			'footer_nav_02' => __( 'Footer: Horizontal nav.', 'mosir' ),
-			'drawer_nav_01' => __( 'Drawer: Vertical nav.', 'mosir' ),
-			'drawer_nav_02' => __( 'Drawer: Sitemap', 'mosir' ),
+			'header_nav_01' => __( 'Header: Menu 1', 'mosir' ),
+			'header_nav_02' => __( 'Header: Menu 2', 'mosir' ),
+			'header_nav_03' => __( 'Header: Menu 3', 'mosir' ),
+			'header_nav_04' => __( 'Header: Menu 4', 'mosir' ),
+			'footer_nav_01' => __( 'Footer: Menu 1', 'mosir' ),
+			'footer_nav_02' => __( 'Footer: Menu 2', 'mosir' ),
+			'drawer_nav_01' => __( 'Drawer: Menu 1', 'mosir' ),
+			'drawer_nav_02' => __( 'Drawer: Menu 2', 'mosir' ),
 			'sticky_nav'    => __( 'Sticky nav.', 'mosir' ),
 		]);
 	}
